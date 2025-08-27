@@ -16,6 +16,7 @@
     {% # Load Lenis smooth scrolling %}
     <script
       src='https://unpkg.com/@studio-freight/lenis@1.0.19/dist/lenis.min.js'
+      defer
     ></script>
 
     {% # Social, title, etc. %}
@@ -44,6 +45,6 @@
     {% sections "footer-group" %}
 
     {% # Initialize Lenis smooth scroll %}
-    <script src='{{ 'lenis-scroll.js' | asset_url }}'></script>
+    <script src='{{ 'lenis-scroll.js' | asset_url }}' defer></script>
   </body>
 </html>
