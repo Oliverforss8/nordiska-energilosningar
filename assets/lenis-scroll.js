@@ -37,17 +37,20 @@ function initLenis() {
     document.body.appendChild(testDiv);
   }
 
-  // Initialize Lenis
+  // Initialize Lenis with ultra-smooth settings
   const lenis = new Lenis({
-    duration: 1.2,
-    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-    direction: 'vertical', // vertical, horizontal
-    gestureDirection: 'vertical', // vertical, horizontal, both
+    duration: 2.5, // Longer duration for smoother feel
+    easing: t => 1 - Math.pow(1 - t, 4), // Smooth ease-out quartic
+    direction: 'vertical',
+    gestureDirection: 'vertical',
     smooth: true,
-    mouseMultiplier: 1,
-    smoothTouch: false,
-    touchMultiplier: 2,
+    mouseMultiplier: 0.8, // Reduced for more controlled scrolling
+    smoothTouch: true, // Enable smooth touch for mobile
+    touchMultiplier: 1.5, // Gentle touch scrolling
     infinite: false,
+    syncTouch: true, // Better touch responsiveness
+    touchInertiaMultiplier: 15, // Smooth touch inertia
+    wheelMultiplier: 0.7, // Gentler wheel scrolling
   });
 
   // Listen for the scroll event and log the event data
@@ -72,8 +75,8 @@ function initLenis() {
       if (target) {
         lenis.scrollTo(target, {
           offset: 0,
-          duration: 1.5,
-          easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          duration: 3.0, // Longer duration for ultra-smooth anchor scrolling
+          easing: t => 1 - Math.pow(1 - t, 4), // Matching main easing
         });
       }
     });
