@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+assets/tailwind.css
+*.min.js
+*.min.css
+
+# Cache directories
+.cache/
+.tmp/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Shopify CLI generated files
+.shopify/
+
+# Git
+.git/
+.gitignore
+
+# Documentation that shouldn't be formatted
+*.md

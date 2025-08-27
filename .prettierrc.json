@@ -1,0 +1,107 @@
+{
+  "plugins": ["@shopify/prettier-plugin-liquid"],
+  "overrides": [
+    {
+      "files": "*.liquid",
+      "options": {
+        "parser": "liquid-html",
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "liquidSingleQuote": false,
+        "embeddedSingleQuote": true,
+        "htmlWhitespaceSensitivity": "ignore",
+        "singleAttributePerLine": false,
+        "bracketSameLine": false,
+        "liquidIndentTags": [
+          "liquid",
+          "echo",
+          "assign",
+          "capture",
+          "increment",
+          "decrement",
+          "cycle",
+          "for",
+          "tablerow",
+          "raw",
+          "comment",
+          "if",
+          "unless",
+          "case",
+          "when",
+          "else",
+          "elsif",
+          "endif",
+          "endunless",
+          "endcase",
+          "endfor",
+          "endtablerow",
+          "endcapture",
+          "endraw",
+          "endcomment",
+          "form",
+          "endform",
+          "paginate",
+          "endpaginate",
+          "javascript",
+          "endjavascript",
+          "stylesheet",
+          "endstylesheet",
+          "schema",
+          "endschema",
+          "style",
+          "endstyle"
+        ]
+      }
+    },
+    {
+      "files": ["*.js", "*.ts", "*.jsx", "*.tsx"],
+      "options": {
+        "parser": "typescript",
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "quoteProps": "as-needed",
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "bracketSameLine": false,
+        "arrowParens": "avoid"
+      }
+    },
+    {
+      "files": ["*.json", "*.jsonc"],
+      "options": {
+        "parser": "json",
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": false,
+        "singleQuote": false,
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": ["*.css", "*.scss", "*.sass"],
+      "options": {
+        "parser": "css",
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true
+      }
+    },
+    {
+      "files": ["*.md", "*.mdx"],
+      "options": {
+        "parser": "markdown",
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "proseWrap": "preserve"
+      }
+    }
+  ]
+}
