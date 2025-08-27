@@ -13,6 +13,9 @@
     {% # Load Tailwind CSS %}
     {{ 'tailwind.css' | asset_url | stylesheet_tag }}
 
+    {% # Load Lenis smooth scrolling %}
+    <script src="{{ 'lenis-scroll.js' | asset_url }}" defer></script>
+
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
 
