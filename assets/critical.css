@@ -6,6 +6,19 @@
   margin: 0;
 }
 
+/* Smooth scroll setup for Lenis */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 .layout {
   padding-left: 120px;
   padding-right: 120px;
