@@ -55,10 +55,31 @@
       ],
       "name": "Länkar sektion",
       "settings": {}
+    },
+    "grid_omraden_zBziiH": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Effektiva energilösningar för framtidens fastigheter",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_image": "shopify://shop_images/bild_nor.png",
+        "card_1_button_text": "Läs mer",
+        "card_1_button_link": "shopify://policies/privacy-policy",
+        "card_2_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
+        "card_2_button_text": "Utforska",
+        "card_2_button_link": "shopify://policies/privacy-policy",
+        "card_3_image": "shopify://shop_images/bild_nor.png",
+        "card_3_button_text": "Upptäck",
+        "card_3_button_link": "shopify://policies/privacy-policy",
+        "card_4_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
+        "card_4_button_text": "Kom igång",
+        "card_4_button_link": "shopify://policies/privacy-policy"
+      }
     }
   },
   "order": [
     "hero_HUEAy6",
-    "lankar_kHPxWD"
+    "lankar_kHPxWD",
+    "grid_omraden_zBziiH"
   ]
 }
