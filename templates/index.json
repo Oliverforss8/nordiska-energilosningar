@@ -19,9 +19,46 @@
         "button_text": "Våra energilösningar",
         "button_url": ""
       }
+    },
+    "lankar_kHPxWD": {
+      "type": "lankar",
+      "blocks": {
+        "card_H4qwkF": {
+          "type": "card",
+          "settings": {
+            "heading": "Solceller",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": ""
+          }
+        },
+        "card_jqt4VF": {
+          "type": "card",
+          "settings": {
+            "heading": "Energilagring",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": ""
+          }
+        },
+        "card_UYi6He": {
+          "type": "card",
+          "settings": {
+            "heading": "Laddbox",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_H4qwkF",
+        "card_jqt4VF",
+        "card_UYi6He"
+      ],
+      "name": "Länkar sektion",
+      "settings": {}
     }
   },
   "order": [
-    "hero_HUEAy6"
+    "hero_HUEAy6",
+    "lankar_kHPxWD"
   ]
 }
