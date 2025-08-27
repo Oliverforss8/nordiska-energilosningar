@@ -119,13 +119,11 @@
         {% endif %}
       </div>
     </div>
-    <p class='pt-[40px] md:pt-[50px] text leading-[110%] text-[16px] text-[#171717]'>
-      Genom att producera egen el, lagra överskottet och möjliggöra smart
-      elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje
-      installation anpassas efter fastighetens unika förutsättningar för att ge
-      maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett
-      modernt och flexibelt energisystem – byggt för framtidens krav.
-    </p>
+    {% if section.settings.bottom_description != blank %}
+      <p class='pt-[40px] md:pt-[50px] text leading-[110%] text-[16px] text-[#171717]'>
+        {{ section.settings.bottom_description | escape }}
+      </p>
+    {% endif %}
   </div>
 </section>
 
@@ -225,6 +223,16 @@
       "type": "url",
       "id": "card_4_button_link",
       "label": "Kort 4 knapplänk"
+    },
+    {
+      "type": "header",
+      "content": "Botten beskrivning"
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_description",
+      "label": "Botten beskrivning",
+      "default": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
     }
   ],
   "presets": [
