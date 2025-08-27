@@ -1,0 +1,110 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = 'section-hero'
+%}
+
+<section
+  class="min-h-screen flex-col w-full h-full flex"
+  
+>
+  <div class="relative flex w-full  h-full">
+    {% render 'image',
+      image: section.settings.background_image,
+      class: 'w-full h-full object-cover',
+      loading: 'lazy'
+    %}
+
+    {% if section.settings.heading != blank %}
+      <div class="absolute inset-0  h-full layout">
+        <div class="h-full flex pb-[100px] flex-col justify-end items-start">
+          <h1 class="headline1 text-white">
+            {{ section.settings.heading }}
+          </h1>
+        <button class="px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[15px] knappetikett " style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;">
+            Våra energilösningar <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+        </button>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+ 
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "class": "section-hero",
+  "blocks": [
+    {"type": "@theme"},
+    {"type": "@app"}
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to our site"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Beskrivning",
+      "default": "Discover amazing products and services"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show overlay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 30,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

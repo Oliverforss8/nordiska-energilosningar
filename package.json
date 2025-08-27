@@ -1,0 +1,22 @@
+{
+  "name": "nordiska-energilosningar-theme",
+  "version": "1.0.0",
+  "description": "Shopify theme for Nordiska Energilösningar",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/tailwind-input.css -o ./assets/tailwind.css --watch",
+    "build:prod": "tailwindcss -i ./assets/tailwind-input.css -o ./assets/tailwind.css --minify",
+    "dev": "tailwindcss -i ./assets/tailwind-input.css -o ./assets/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  },
+  "keywords": [
+    "shopify",
+    "theme",
+    "tailwind"
+  ],
+  "author": "Nordiska Energilösningar",
+  "license": "MIT"
+}
