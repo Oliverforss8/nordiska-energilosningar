@@ -331,6 +331,11 @@
   padding-bottom: 18px
 }
 
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px
+}
+
 .pb-\[110px\] {
   padding-bottom: 110px
 }
@@ -454,6 +459,16 @@
 
   .md\:p-\[30px\] {
     padding: 30px
+  }
+
+  .md\:px-\[30px\] {
+    padding-left: 30px;
+    padding-right: 30px
+  }
+
+  .md\:py-\[18px\] {
+    padding-top: 18px;
+    padding-bottom: 18px
   }
 
   .md\:pb-\[120px\] {
