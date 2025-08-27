@@ -20,30 +20,56 @@
 
     {% if section.settings.heading != blank %}
       <div class='absolute inset-0  h-full layout'>
-        <div class='h-full flex pb-[100px] flex-col justify-end items-start'>
-          <h1 class='headline1 text-white pb-[40px]'>
+        <div class='h-full flex pb-[50px] md:pb-[100px] flex-col justify-end items-start'>
+          <h1 class='headline1 text-white pb-[20px] md:pb-[40px]'>
             {{ section.settings.heading | newline_to_br }}
           </h1>
-          <div class='flex flex-row gap-[40px] items-center'>
+          <div class='flex md:flex-row flex-col md:gap-[40px] gap-[20px] md:items-center'>
             <div class='shrink-0'>
-              <button
-                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett   shrink-0'
-                style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
-              >
-                Våra energilösningar
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='22'
-                  height='18'
-                  viewBox='0 0 22 18'
-                  fill='none'
+              {% if section.settings.button_url != blank %}
+                <a
+                  href='{{ section.settings.button_url }}'
+                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett   shrink-0'
+                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
                 >
-                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
+                  {{
+                    section.settings.button_text
+                    | default: "Våra energilösningar"
+                  }}
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='18'
+                    viewBox='0 0 22 18'
+                    fill='none'
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              {% else %}
+                <button
+                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett   shrink-0'
+                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+                >
+                  {{
+                    section.settings.button_text
+                    | default: "Våra energilösningar"
+                  }}
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='18'
+                    viewBox='0 0 22 18'
+                    fill='none'
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              {% endif %}
             </div>
-            <p class='body1 text-white'>
+            <p class='body1  text-white'>
               {{ section.settings.subheading | newline_to_br }}
             </p>
           </div>

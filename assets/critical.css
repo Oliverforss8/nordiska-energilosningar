@@ -11,8 +11,8 @@ html:has(dialog[scroll-lock][open], details[scroll-lock][open]) {
 }
 
 .layout {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -32,11 +32,22 @@ html:has(dialog[scroll-lock][open], details[scroll-lock][open]) {
   line-height: 90%;
 }
 
+@media (max-width: 768px) {
+  .headline1 {
+    font-size: 40px;
+  }
+}
+
 .body1 {
   font-family: var(--font-halyard--family);
   font-weight: 300;
   font-size: 24px;
   line-height: 110%;
+}
+@media (max-width: 768px) {
+  .body1 {
+    font-size: 16px;
+  }
 }
 
 .knappetikett {
@@ -47,4 +58,9 @@ html:has(dialog[scroll-lock][open], details[scroll-lock][open]) {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
