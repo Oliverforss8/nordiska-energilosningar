@@ -55,10 +55,22 @@
       ],
       "name": "Länkar sektion",
       "settings": {}
+    },
+    "hero_nTV8Ey": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
+        "heading": "Lösningar inom solenergi, \nbatterilagring och laddboxar",
+        "subheading": "Lagra din egen solenergi och använd den när elpriserna är som högst. Perfekt för villaägare som vill sänka sina elkostnader och bli mer självförsörjande – året runt.",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
+      }
     }
   },
   "order": [
     "hero_HUEAy6",
-    "lankar_kHPxWD"
+    "lankar_kHPxWD",
+    "hero_nTV8Ey"
   ]
 }
