@@ -14,7 +14,7 @@
       <!-- First row: Card 1 spans 3 columns -->
       <div class='col-span-1 md:col-span-3'>
         {% if section.settings.card_1_image != blank %}
-          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_1_image | image_url: width: 800 }}'
               alt='{{ section.settings.card_1_image.alt | escape }}'
@@ -27,7 +27,7 @@
             %}
               <a
                 href='{{ section.settings.card_1_button_link }}'
-                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
               >
                 <button class='bg-[#FFF]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_1_button_text | escape }}
@@ -41,7 +41,7 @@
       <!-- First row: Card 2 spans 2 columns -->
       <div class='col-span-1 md:col-span-2'>
         {% if section.settings.card_2_image != blank %}
-          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_2_image | image_url: width: 600 }}'
               alt='{{ section.settings.card_2_image.alt | escape }}'
@@ -54,7 +54,7 @@
             %}
               <a
                 href='{{ section.settings.card_2_button_link }}'
-                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
               >
                 <button class='bg-[#FFF]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_2_button_text | escape }}
@@ -68,7 +68,7 @@
       <!-- Second row: Card 3 spans 2 columns (reversed) -->
       <div class='col-span-1 md:col-span-2'>
         {% if section.settings.card_3_image != blank %}
-          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_2_image | image_url: width: 600 }}'
               alt='{{ section.settings.card_2_image.alt | escape }}'
@@ -81,7 +81,7 @@
             %}
               <a
                 href='{{ section.settings.card_3_button_link }}'
-                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
               >
                 <button class='bg-[#FFF]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_3_button_text | escape }}
@@ -95,7 +95,7 @@
       <!-- Second row: Card 4 spans 3 columns (reversed) -->
       <div class='col-span-1 md:col-span-3'>
         {% if section.settings.card_4_image != blank %}
-          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_4_image | image_url: width: 800 }}'
               alt='{{ section.settings.card_4_image.alt | escape }}'
@@ -108,7 +108,7 @@
             %}
               <a
                 href='{{ section.settings.card_4_button_link }}'
-                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
               >
                 <button class='bg-[#FFF]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_4_button_text | escape }}
