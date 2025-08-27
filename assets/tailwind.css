@@ -397,6 +397,10 @@
   font-size: 16px
 }
 
+.text-\[15px\] {
+  font-size: 15px
+}
+
 .italic {
   font-style: italic
 }
@@ -417,6 +421,10 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\] {
+  color: 
 }
 
 .no-underline {
@@ -531,6 +539,10 @@
 
   .md\:text-\[16px\] {
     font-size: 16px
+  }
+
+  .md\:text-\[20px\] {
+    font-size: 20px
   }
 }
 
