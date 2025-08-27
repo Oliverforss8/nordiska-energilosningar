@@ -509,6 +509,11 @@
   color: rgb(255 255 255 / 0.9);
 }
 
+.text-\[\#171717\] {
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity, 1));
+}
+
 .opacity-30 {
   opacity: 0.3;
 }
