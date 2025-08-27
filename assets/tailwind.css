@@ -333,6 +333,10 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -431,6 +435,11 @@
   background-color: rgb(243 241 232 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#ededb2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 237 178 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }
@@ -454,6 +463,10 @@
 
 .p-\[30px\] {
   padding: 30px;
+}
+
+.p-\[20px\] {
+  padding: 20px;
 }
 
 .px-4 {
@@ -533,6 +546,10 @@
   padding-top: 30px;
 }
 
+.pt-\[20px\] {
+  padding-top: 20px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -554,6 +571,10 @@
 
 .text-\[36px\] {
   font-size: 36px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
 }
 
 .font-bold {
@@ -678,6 +699,10 @@
     gap: 40px;
   }
 
+  .md\:p-\[30px\] {
+    padding: 30px;
+  }
+
   .md\:pb-\[100px\] {
     padding-bottom: 100px;
   }
@@ -690,6 +715,10 @@
     padding-bottom: 120px;
   }
 
+  .md\:pt-\[30px\] {
+    padding-top: 30px;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -699,11 +728,27 @@
     font-size: 3.75rem;
     line-height: 1;
   }
+
+  .md\:text-\[36px\] {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:mt-\[-20px\] {
+    margin-top: -20px;
+  }
+
   .lg\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:pt-\[30px\] {
+    padding-top: 30px;
   }
 
   .lg\:text-7xl {

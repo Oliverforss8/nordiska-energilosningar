@@ -1,15 +1,15 @@
-<section class='relative rounded-t-[25px] bg-[#FDFDFB] mt-[-20px] z-10'>
-  <div class='layout pt-[30px] grid grid-cols-3 gap-[20px]'>
+<section class='relative rounded-t-[25px] bg-[#FDFDFB] lg:mt-[-20px] z-10'>
+  <div class='layout  pt-[20px] lg:pt-[30px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]'>
     {% for block in section.blocks %}
       {% if block.type == "card" %}
         <a
-          class='bg-[#F3F1E8] p-[30px] rounded-[15px] no-underline'
+          class='bg-[#F3F1E8] p-[20px] md:p-[30px] rounded-[15px] no-underline'
           href='{{ block.settings.link }}'
         >
           <div>
             {% if block.settings.heading != blank %}
               <div class=' flex flex-row items-center justify-between'>
-                <h3 class=' headline1 text-[#171717]  decoration-none text-[36px]'>
+                <h3 class=' headline1 text-[#171717]  decoration-none text-[24px] md:text-[36px]'>
                   {{ block.settings.heading }}
                 </h3>
                 <div>
@@ -27,7 +27,7 @@
               </div>
             {% endif %}
             {% if block.settings.description != blank %}
-              <p class='text pt-[30px] text-[#171717]/75'>
+              <p class='text pt-[20px] md:pt-[30px] text-[#171717]/75'>
                 {{ block.settings.description }}
               </p>
             {% endif %}
