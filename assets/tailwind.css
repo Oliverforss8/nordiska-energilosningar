@@ -381,6 +381,10 @@
   padding-bottom: 62px
 }
 
+.pt-\[40px\] {
+  padding-top: 40px
+}
+
 .text-\[24px\] {
   font-size: 24px
 }
@@ -389,8 +393,16 @@
   font-size: 40px
 }
 
+.text-\[16px\] {
+  font-size: 16px
+}
+
 .italic {
   font-style: italic
+}
+
+.leading-\[110\%\] {
+  line-height: 110%
 }
 
 .text-\[\#171717\] {
@@ -509,8 +521,16 @@
     padding-bottom: 87px
   }
 
+  .md\:pt-\[50px\] {
+    padding-top: 50px
+  }
+
   .md\:text-\[36px\] {
     font-size: 36px
+  }
+
+  .md\:text-\[16px\] {
+    font-size: 16px
   }
 }
 
