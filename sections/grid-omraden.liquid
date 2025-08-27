@@ -1,0 +1,229 @@
+<section>
+  <div class='layout'>
+    <div class='grid grid-cols-5 gap-[20px] pb-[50px]'>
+      <h3 class=' col-span-2 headline1 text-[#171717] text-[40px]'>
+        {{ section.settings.title | escape }}
+      </h3>
+      <div class='col-span-1'></div>
+      <p class=' col-span-2 text text-[#171717]'>
+        {{ section.settings.description | escape }}
+      </p>
+    </div>
+
+    <div class='grid grid-cols-5 gap-[20px]'>
+      <!-- First row: Card 1 spans 3 columns -->
+      <div class='col-span-3'>
+        {% if section.settings.card_1_image != blank %}
+          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+            <img
+              src='{{ section.settings.card_1_image | image_url: width: 800 }}'
+              alt='{{ section.settings.card_1_image.alt | escape }}'
+              width='800'
+              height='300'
+              class='w-full h-full object-cover absolute inset-0'
+            >
+            {% if section.settings.card_1_button_text != blank
+              and section.settings.card_1_button_link != blank
+            %}
+              <a
+                href='{{ section.settings.card_1_button_link }}'
+                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+              >
+                <button class='bg-[#FFF] py-[18px] px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                  {{ section.settings.card_1_button_text | escape }}
+                </button>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- First row: Card 2 spans 2 columns -->
+      <div class='col-span-2'>
+        {% if section.settings.card_2_image != blank %}
+          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+            <img
+              src='{{ section.settings.card_2_image | image_url: width: 600 }}'
+              alt='{{ section.settings.card_2_image.alt | escape }}'
+              width='600'
+              height='300'
+              class='w-full h-full object-cover absolute inset-0'
+            >
+            {% if section.settings.card_2_button_text != blank
+              and section.settings.card_2_button_link != blank
+            %}
+              <a
+                href='{{ section.settings.card_2_button_link }}'
+                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+              >
+                <button class='bg-[#FFF] py-[18px] px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                  {{ section.settings.card_2_button_text | escape }}
+                </button>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Second row: Card 3 spans 2 columns (reversed) -->
+      <div class='col-span-2'>
+        {% if section.settings.card_3_image != blank %}
+          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+            <img
+              src='{{ section.settings.card_2_image | image_url: width: 600 }}'
+              alt='{{ section.settings.card_2_image.alt | escape }}'
+              width='600'
+              height='300'
+              class='w-full h-full object-cover absolute inset-0'
+            >
+            {% if section.settings.card_3_button_text != blank
+              and section.settings.card_3_button_link != blank
+            %}
+              <a
+                href='{{ section.settings.card_3_button_link }}'
+                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+              >
+                <button class='bg-[#FFF] py-[18px] px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                  {{ section.settings.card_3_button_text | escape }}
+                </button>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Second row: Card 4 spans 3 columns (reversed) -->
+      <div class='col-span-3'>
+        {% if section.settings.card_4_image != blank %}
+          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+            <img
+              src='{{ section.settings.card_4_image | image_url: width: 800 }}'
+              alt='{{ section.settings.card_4_image.alt | escape }}'
+              width='600'
+              height='300'
+              class='w-full h-full object-cover absolute inset-0'
+            >
+            {% if section.settings.card_4_button_text != blank
+              and section.settings.card_4_button_link != blank
+            %}
+              <a
+                href='{{ section.settings.card_4_button_link }}'
+                class='absolute p-[30px] inset-0 flex items-end justify-start no-underline'
+              >
+                <button class='bg-[#FFF] py-[18px] px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                  {{ section.settings.card_4_button_text | escape }}
+                </button>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Grid areas",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Rubrik",
+      "default": "Effektiva energilösningar för framtidens fastigheter"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Beskrivning",
+      "default": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning."
+    },
+    {
+      "type": "header",
+      "content": "Kort 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_image",
+      "label": "Kort 1 bild"
+    },
+    {
+      "type": "text",
+      "id": "card_1_button_text",
+      "label": "Kort 1 knapptext",
+      "default": "Läs mer"
+    },
+    {
+      "type": "url",
+      "id": "card_1_button_link",
+      "label": "Kort 1 knapplänk"
+    },
+    {
+      "type": "header",
+      "content": "Kort 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "Kort 2 bild"
+    },
+    {
+      "type": "text",
+      "id": "card_2_button_text",
+      "label": "Kort 2 knapptext",
+      "default": "Utforska"
+    },
+    {
+      "type": "url",
+      "id": "card_2_button_link",
+      "label": "Kort 2 knapplänk"
+    },
+    {
+      "type": "header",
+      "content": "Kort 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_3_image",
+      "label": "Kort 3 bild"
+    },
+    {
+      "type": "text",
+      "id": "card_3_button_text",
+      "label": "Kort 3 knapptext",
+      "default": "Upptäck"
+    },
+    {
+      "type": "url",
+      "id": "card_3_button_link",
+      "label": "Kort 3 knapplänk"
+    },
+    {
+      "type": "header",
+      "content": "Kort 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_4_image",
+      "label": "Kort 4 bild"
+    },
+    {
+      "type": "text",
+      "id": "card_4_button_text",
+      "label": "Kort 4 knapptext",
+      "default": "Kom igång"
+    },
+    {
+      "type": "url",
+      "id": "card_4_button_link",
+      "label": "Kort 4 knapplänk"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Grid areas"
+    }
+  ]
+}
+{% endschema %}
