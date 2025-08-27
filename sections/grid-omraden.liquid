@@ -1,20 +1,20 @@
-<section>
+<section class='pt-[62px] md:pt-[87px]'>
   <div class='layout'>
-    <div class='grid grid-cols-5 gap-[20px] pb-[50px]'>
+    <div class='grid grid-cols-1 md:grid-cols-5 gap-[40px] md:gap-[20px] pb-[40px] md:pb-[50px]'>
       <h3 class=' col-span-2 headline1 text-[#171717] text-[40px]'>
         {{ section.settings.title | escape }}
       </h3>
-      <div class='col-span-1'></div>
+      <div class='col-span-1 md:block hidden'></div>
       <p class=' col-span-2 text text-[#171717]'>
         {{ section.settings.description | escape }}
       </p>
     </div>
 
-    <div class='grid grid-cols-5 gap-[20px]'>
+    <div class='grid grid-cols-1 md:grid-cols-5 gap-[20px]'>
       <!-- First row: Card 1 spans 3 columns -->
-      <div class='col-span-3'>
+      <div class='col-span-1 md:col-span-3'>
         {% if section.settings.card_1_image != blank %}
-          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_1_image | image_url: width: 800 }}'
               alt='{{ section.settings.card_1_image.alt | escape }}'
@@ -39,9 +39,9 @@
       </div>
 
       <!-- First row: Card 2 spans 2 columns -->
-      <div class='col-span-2'>
+      <div class='col-span-1 md:col-span-2'>
         {% if section.settings.card_2_image != blank %}
-          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_2_image | image_url: width: 600 }}'
               alt='{{ section.settings.card_2_image.alt | escape }}'
@@ -66,9 +66,9 @@
       </div>
 
       <!-- Second row: Card 3 spans 2 columns (reversed) -->
-      <div class='col-span-2'>
+      <div class='col-span-1 md:col-span-2'>
         {% if section.settings.card_3_image != blank %}
-          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_2_image | image_url: width: 600 }}'
               alt='{{ section.settings.card_2_image.alt | escape }}'
@@ -93,9 +93,9 @@
       </div>
 
       <!-- Second row: Card 4 spans 3 columns (reversed) -->
-      <div class='col-span-3'>
+      <div class='col-span-1 md:col-span-3'>
         {% if section.settings.card_4_image != blank %}
-          <div class='relative h-[300px] overflow-hidden rounded-[15px]'>
+          <div class='relative h-[175px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
               src='{{ section.settings.card_4_image | image_url: width: 800 }}'
               alt='{{ section.settings.card_4_image.alt | escape }}'

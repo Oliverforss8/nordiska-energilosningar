@@ -185,6 +185,10 @@
   height: 100%
 }
 
+.h-\[175px\] {
+  height: 175px
+}
+
 .min-h-screen {
   min-height: 100vh
 }
@@ -247,6 +251,10 @@
 
 .gap-\[20px\] {
   gap: 20px
+}
+
+.gap-\[40px\] {
+  gap: 40px
 }
 
 .overflow-hidden {
@@ -343,6 +351,22 @@
   padding-bottom: 50px
 }
 
+.pb-\[40px\] {
+  padding-bottom: 40px
+}
+
+.pt-\[87px\] {
+  padding-top: 87px
+}
+
+.pt-\[62px\] {
+  padding-top: 62px
+}
+
+.pb-\[62px\] {
+  padding-bottom: 62px
+}
+
 .text-\[24px\] {
   font-size: 24px
 }
@@ -382,12 +406,36 @@
 /* Custom utilities */
 
 @media (min-width: 640px) {
+  .sm\:h-\[300px\] {
+    height: 300px
+  }
+
   .sm\:w-\[70\%\] {
     width: 70%
   }
 }
 
 @media (min-width: 768px) {
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2
+  }
+
+  .md\:block {
+    display: block
+  }
+
+  .md\:h-\[300px\] {
+    height: 300px
+  }
+
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+  }
+
   .md\:flex-row {
     flex-direction: row
   }
@@ -398,6 +446,10 @@
 
   .md\:gap-\[40px\] {
     gap: 40px
+  }
+
+  .md\:gap-\[20px\] {
+    gap: 20px
   }
 
   .md\:p-\[30px\] {
@@ -414,6 +466,18 @@
 
   .md\:pt-\[30px\] {
     padding-top: 30px
+  }
+
+  .md\:pb-\[50px\] {
+    padding-bottom: 50px
+  }
+
+  .md\:pt-\[87px\] {
+    padding-top: 87px
+  }
+
+  .md\:pb-\[87px\] {
+    padding-bottom: 87px
   }
 
   .md\:text-\[36px\] {
