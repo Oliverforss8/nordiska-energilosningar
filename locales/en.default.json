@@ -51,6 +51,13 @@
     "password": "Password",
     "enter": "Enter"
   },
+  "products": {
+    "product": {
+      "media": {
+        "load_image": "Load image"
+      }
+    }
+  },
   "search": {
     "title": "Search",
     "placeholder": "Search articles, pages, or products",
@@ -59,6 +66,94 @@
     "results_for_html": "{{ count }} results found for {{ terms }}"
   },
   "sections": {
+    "banner_with_products": {
+      "name": "Banner with 2 Products",
+      "settings": {
+        "header_content": {
+          "header": "Header Content"
+        },
+        "background_color": {
+          "label": "Background Color"
+        },
+        "background_image": {
+          "label": "Background Image"
+        },
+        "header_button_text": {
+          "label": "Header Button Text"
+        },
+        "header_button_url": {
+          "label": "Header Button URL"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "primary_button_text": {
+          "label": "Primary Button Text"
+        },
+        "primary_button_url": {
+          "label": "Primary Button URL"
+        },
+        "secondary_button_text": {
+          "label": "Secondary Button Text"
+        },
+        "secondary_button_url": {
+          "label": "Secondary Button URL"
+        },
+        "product_1": {
+          "header": "Product 1",
+          "label": "Select Product 1"
+        },
+        "product_1_title": {
+          "label": "Product 1 Title"
+        },
+        "product_1_description": {
+          "label": "Product 1 Description"
+        },
+        "product_1_learn_more_text": {
+          "label": "Product 1 Learn More Text"
+        },
+        "product_1_learn_more_url": {
+          "label": "Product 1 Learn More URL"
+        },
+        "product_1_buy_text": {
+          "label": "Product 1 Buy Text"
+        },
+        "product_1_buy_url": {
+          "label": "Product 1 Buy URL"
+        },
+        "product_2": {
+          "header": "Product 2",
+          "label": "Select Product 2"
+        },
+        "product_2_title": {
+          "label": "Product 2 Title"
+        },
+        "product_2_description": {
+          "label": "Product 2 Description"
+        },
+        "product_2_learn_more_text": {
+          "label": "Product 2 Learn More Text"
+        },
+        "product_2_learn_more_url": {
+          "label": "Product 2 Learn More URL"
+        },
+        "product_2_buy_text": {
+          "label": "Product 2 Buy Text"
+        },
+        "product_2_buy_url": {
+          "label": "Product 2 Buy URL"
+        }
+      },
+      "presets": {
+        "banner_with_products": {
+          "name": "Banner with 2 Products"
+        }
+      },
+      "no_product_selected": "No product selected"
+    },
     "lankar": {
       "name": "Links",
       "blocks": {

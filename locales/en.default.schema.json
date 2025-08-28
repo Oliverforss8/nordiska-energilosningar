@@ -33,6 +33,11 @@
     "theme": "Theme",
     "typography": "Typography"
   },
+  "sections": {
+    "banner_with_products": {
+      "name": "Banner with 2 Products"
+    }
+  },
   "labels": {
     "alignment": "Alignment",
     "background": "Background",
@@ -71,6 +76,6 @@
       "title": "Title",
       "subtitle": "Subtitle",
       "normal": "Normal text"
-    },
+    }
   }
 }

@@ -34,12 +34,24 @@ body {
 }
 
 /* Smooth transitions for all potentially animated elements */
-img, video, iframe {
+img,
+video,
+iframe {
   will-change: transform;
 }
 
 /* Optimize text rendering for smooth scrolling */
-body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
@@ -73,6 +85,25 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div {
 @media (max-width: 768px) {
   .headline1 {
     font-size: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.headline2 {
+  font-family: var(--font-halyard--family);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 90%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .headline2 {
+    font-size: 36px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -117,4 +148,11 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, div {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.knappetikett2 {
+  font-family: var(--font-halyard--family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
 }

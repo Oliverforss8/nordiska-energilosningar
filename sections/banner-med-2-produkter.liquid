@@ -1,0 +1,319 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = "banner-med-2-produkter"
+%}
+
+<section
+  id='{{ section_id }}'
+  class='{{ section_class }} layout py-[62px] md:py-[87px]'
+>
+  <div
+    class='h-[500px] py-[40px] px-[50px] w-full rounded-[10px] bg-cover bg-center bg-no-repeat'
+    style='background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}'
+  >
+    <div class='flex h-full justify-between flex-col'>
+      <div>
+        {% if section.settings.header_button_text != blank %}
+          <a
+            href='{{ section.settings.header_button_url }}'
+            class='knappetikett2 bg-transparent text-white p-[15px] rounded-[10px] z-10 inline-block'
+            style='border: 1px solid #fff;'
+          >
+            {{ section.settings.header_button_text }}
+          </a>
+        {% endif %}
+      </div>
+      <div class='flex w-[840px] flex-col gap-[30px]'>
+        {% if section.settings.heading != blank %}
+          <h2 class='text-white headline2'>
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <p class='text-white knappetikett'>
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
+        <div class='flex flex-row gap-[10px]'>
+          {% if section.settings.primary_button_text != blank %}
+            <a
+              href='{{ section.settings.primary_button_url }}'
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett shrink-0 text-[#171717]'
+              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+            >
+              {{ section.settings.primary_button_text }}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='22'
+                height='18'
+                viewBox='0 0 22 18'
+                fill='none'
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          {% endif %}
+          {% if section.settings.secondary_button_text != blank %}
+            <a
+              href='{{ section.settings.secondary_button_url }}'
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett shrink-0 bg-transparent text-white'
+              style='border: 1px solid #fff;'
+            >
+              {{ section.settings.secondary_button_text }}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='22'
+                height='18'
+                viewBox='0 0 22 18'
+                fill='none'
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='pt-[20px] grid grid-cols-2 gap-[20px]'>
+    {% for block in section.blocks %}
+      <div
+        class='product-card p-[30px] flex flex-row rounded-[10px] transition-colors duration-300 hover:bg-[#F3F1E8]'
+        {{ block.shopify_attributes }}
+      >
+        <div class='flex flex-col justify-between '>
+          <div class='flex flex-col'>
+            {% if block.settings.title != blank %}
+              <div class='headline1 text-[36px] text-[#171717]'>
+                {{ block.settings.title }}
+              </div>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <div class='text-[#171717]/75 text pt-[40px]'>
+                {{ block.settings.description }}
+              </div>
+            {% endif %}
+          </div>
+          <div class='flex gap-[10px] shrink-0'>
+            {% if block.settings.buy_url != blank %}
+              <a
+                href='{{ block.settings.buy_url }}'
+                class='inline-block px-[20px] py-[18px] bg-[#EFD959] knappetikett rounded-[10px] text-[#171717] '
+              >
+                {{ block.settings.buy_text | default: "Köp" }}
+              </a>
+            {% endif %}
+            {% if block.settings.learn_more_url != blank %}
+              <a
+                href='{{ block.settings.learn_more_url }}'
+                class='inline-block px-[20px] py-[18px] bg-transparent  [] knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                style='border: 1px solid #171717;'
+              >
+                {{ block.settings.learn_more_text | default: "Läs mer" }}
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='22'
+                  height='18'
+                  viewBox='0 0 22 18'
+                  fill='none'
+                >
+                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+        <div
+          class=' '
+          style='
+                aspect-ratio: 18/23;
+            height: 285.081px;
+          '
+        >
+          {% if block.settings.product != blank %}
+            {% assign product = block.settings.product %}
+            {% if product.featured_image %}
+              <img
+                src='{{ product.featured_image | image_url: width: 300 }}'
+                alt='{{ product.featured_image.alt | default: product.title }}'
+                width='200'
+                height='200'
+                class=' h-full w-full object-contain rounded-[5px]'
+                loading='lazy'
+              >
+            {% else %}
+              <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                {{
+                  "products.product.media.load_image"
+                  | t
+                  | default: "Load image"
+                }}
+              </div>
+            {% endif %}
+          {% else %}
+            <div class='w-[200px] h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+              {{
+                "sections.banner_with_products.no_product_selected"
+                | t
+                | default: "No product selected"
+              }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .banner-med-2-produkter a {
+    text-decoration: none;
+  }
+
+  .banner-med-2-produkter a:hover {
+    text-decoration: none;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Banner med 2 produkter",
+  "tag": "section",
+  "class": "banner-med-2-produkter",
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title",
+          "default": "Laddbox"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Product Description",
+          "default": "Lagra din egen solenergi och använd den när elpriserna är som högst."
+        },
+        {
+          "type": "text",
+          "id": "learn_more_text",
+          "label": "Learn More Button Text",
+          "default": "Läs mer"
+        },
+        {
+          "type": "url",
+          "id": "learn_more_url",
+          "label": "Learn More Button URL"
+        },
+        {
+          "type": "text",
+          "id": "buy_text",
+          "label": "Buy Button Text",
+          "default": "Köp"
+        },
+        {
+          "type": "url",
+          "id": "buy_url",
+          "label": "Buy Button URL"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Content"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "header_button_text",
+      "label": "Header Button Text",
+      "default": "Läs mer"
+    },
+    {
+      "type": "url",
+      "id": "header_button_url",
+      "label": "Header Button URL"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Smarta elbilsladdare för alla behov"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Privat"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_url",
+      "label": "Primary Button URL"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "Företag"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_url",
+      "label": "Secondary Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner med 2 produkter",
+      "blocks": [
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst."
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
