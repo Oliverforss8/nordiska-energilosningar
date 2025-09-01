@@ -93,12 +93,12 @@
             <div class='flex flex-col justify-between '>
               <div class='flex flex-col'>
                 {% if block.settings.title != blank %}
-                  <div class='headline1 text-[36px] text-[#171717]'>
+                  <div class='headline1 text-[36px] pt-[30px] text-[#171717]'>
                     {{ block.settings.title }}
                   </div>
                 {% endif %}
                 {% if block.settings.description != blank %}
-                  <div class='text-[#171717]/75 text pt-[40px]'>
+                  <div class='text-[#171717]/75 text py-[20px]'>
                     {{ block.settings.description }}
                   </div>
                 {% endif %}
@@ -174,34 +174,6 @@
         {% endfor %}
       </div>
     </div>
-
-    <!-- Navigation arrows -->
-    {% if section.blocks.size > 1 %}
-      <button class='carousel-prev absolute left-[10px] top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-[15px] shadow-lg z-10'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='35'
-          height='11'
-          viewBox='0 0 70 21'
-          fill='none'
-        >
-          <path d="M25 10.3912L1 10.3912L10.3913 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M25 10.3915L1 10.3915L10.3913 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class='carousel-next absolute right-[10px] top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-[15px] shadow-lg z-10'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='35'
-          height='11'
-          viewBox='0 0 70 21'
-          fill='none'
-        >
-          <path d="M45 10.3915H69L59.6087 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M45 10.3912H69L59.6087 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    {% endif %}
   </div>
 
   <!-- Desktop grid (unchanged) -->
@@ -294,19 +266,29 @@
       </div>
     {% endfor %}
   </div>
-  <div class='pl-[20px]'>
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='70'
-      height='21'
-      viewBox='0 0 70 21'
-      fill='none'
-    >
-      <path d="M45 10.3915H69L59.6087 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M45 10.3912H69L59.6087 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M25 10.3912L1 10.3912L10.3913 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M25 10.3915L1 10.3915L10.3913 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+  <div class='flex md:hidden gap-[20px] pt-[20px] flex-row pl-[20px]'>
+    <div class='carousel-prev translate-x-[-1] cursor-pointer'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='26'
+        height='21'
+        viewBox='0 0 26 21'
+        fill='none'
+      >
+        <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class='carousel-next cursor-pointer'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='26'
+        height='21'
+        viewBox='0 0 26 21'
+        fill='none'
+      >
+        <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -330,118 +312,171 @@
   .carousel-prev,
   .carousel-next {
     transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none;
   }
 
   .carousel-prev:hover,
   .carousel-next:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    transform: translateY(-50%) scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .carousel-prev:active,
+  .carousel-next:active {
+    transform: scale(0.95);
+  }
+
+  .carousel-prev:disabled,
+  .carousel-next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .carousel-prev:disabled:hover,
+  .carousel-next:disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 {% endstylesheet %}
 
 {% javascript %}
   document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('.carousel-track');
-    const prevButton = document.querySelector('.carousel-prev');
-    const nextButton = document.querySelector('.carousel-next');
+    // Find all carousel sections and initialize each one
+    const carouselSections = document.querySelectorAll(
+      '.banner-med-2-produkter',
+    );
 
-    if (!carousel) return;
+    carouselSections.forEach(function (section) {
+      const carousel = section.querySelector('.carousel-track');
+      const prevButton = section.querySelector('.carousel-prev');
+      const nextButton = section.querySelector('.carousel-next');
 
-    const slides = carousel.querySelectorAll('.product-card');
-    const totalSlides = slides.length;
-    let currentSlide = 0;
-    let autoChangeInterval;
+      if (!carousel || !prevButton || !nextButton) return;
 
-    function updateCarousel() {
-      const translateX = -currentSlide * 100;
-      carousel.style.transform = `translateX(${translateX}%)`;
-      carousel.setAttribute('data-current', currentSlide);
-    }
+      const slides = carousel.querySelectorAll('.product-card');
+      const totalSlides = slides.length;
+      let currentSlide = 0;
+      let autoChangeInterval;
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateCarousel();
-    }
+      function updateCarousel() {
+        const translateX = -currentSlide * 100;
+        carousel.style.transform = `translateX(${translateX}%)`;
+        carousel.setAttribute('data-current', currentSlide);
 
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    }
+        // Update button states
+        prevButton.disabled = currentSlide === 0;
+        nextButton.disabled = currentSlide === totalSlides - 1;
 
-    function startAutoChange() {
-      if (totalSlides > 1) {
-        autoChangeInterval = setInterval(nextSlide, 8000); // 8 seconds
-      }
-    }
-
-    function stopAutoChange() {
-      if (autoChangeInterval) {
-        clearInterval(autoChangeInterval);
-      }
-    }
-
-    function restartAutoChange() {
-      stopAutoChange();
-      startAutoChange();
-    }
-
-    // Event listeners
-    if (nextButton) {
-      nextButton.addEventListener('click', function () {
-        nextSlide();
-        restartAutoChange(); // Restart timer when user interacts
-      });
-    }
-
-    if (prevButton) {
-      prevButton.addEventListener('click', function () {
-        prevSlide();
-        restartAutoChange(); // Restart timer when user interacts
-      });
-    }
-
-    // Pause auto-change on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-      carouselContainer.addEventListener('mouseenter', stopAutoChange);
-      carouselContainer.addEventListener('mouseleave', startAutoChange);
-    }
-
-    // Start auto-change
-    startAutoChange();
-
-    // Handle touch events for swipe gestures
-    let startX = 0;
-    let isDragging = false;
-
-    carousel.addEventListener('touchstart', function (e) {
-      startX = e.touches[0].clientX;
-      isDragging = true;
-      stopAutoChange();
-    });
-
-    carousel.addEventListener('touchmove', function (e) {
-      if (!isDragging) return;
-      e.preventDefault();
-    });
-
-    carousel.addEventListener('touchend', function (e) {
-      if (!isDragging) return;
-      isDragging = false;
-
-      const endX = e.changedTouches[0].clientX;
-      const diffX = startX - endX;
-
-      if (Math.abs(diffX) > 50) {
-        // Minimum swipe distance
-        if (diffX > 0) {
-          nextSlide();
+        // Add visual feedback for disabled state
+        if (prevButton.disabled) {
+          prevButton.style.opacity = '0.5';
+          prevButton.style.cursor = 'not-allowed';
         } else {
-          prevSlide();
+          prevButton.style.opacity = '1';
+          prevButton.style.cursor = 'pointer';
+        }
+
+        if (nextButton.disabled) {
+          nextButton.style.opacity = '0.5';
+          nextButton.style.cursor = 'not-allowed';
+        } else {
+          nextButton.style.opacity = '1';
+          nextButton.style.cursor = 'pointer';
         }
       }
 
-      restartAutoChange();
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateCarousel();
+        }
+      }
+
+      function prevSlide() {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateCarousel();
+        }
+      }
+
+      function startAutoChange() {
+        if (totalSlides > 1) {
+          autoChangeInterval = setInterval(nextSlide, 8000); // 8 seconds
+        }
+      }
+
+      function stopAutoChange() {
+        if (autoChangeInterval) {
+          clearInterval(autoChangeInterval);
+        }
+      }
+
+      function restartAutoChange() {
+        stopAutoChange();
+        startAutoChange();
+      }
+
+      // Event listeners
+      nextButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        nextSlide();
+        restartAutoChange(); // Restart timer when user interacts
+      });
+
+      prevButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        prevSlide();
+        restartAutoChange(); // Restart timer when user interacts
+      });
+
+      // Pause auto-change on hover
+      const carouselContainer = section.querySelector('.carousel-container');
+      if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoChange);
+        carouselContainer.addEventListener('mouseleave', startAutoChange);
+      }
+
+      // Initialize carousel
+      updateCarousel();
+
+      // Start auto-change
+      startAutoChange();
+
+      // Handle touch events for swipe gestures
+      let startX = 0;
+      let isDragging = false;
+
+      carousel.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        stopAutoChange();
+      });
+
+      carousel.addEventListener('touchmove', function (e) {
+        if (!isDragging) return;
+        e.preventDefault();
+      });
+
+      carousel.addEventListener('touchend', function (e) {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const endX = e.changedTouches[0].clientX;
+        const diffX = startX - endX;
+
+        if (Math.abs(diffX) > 50) {
+          // Minimum swipe distance
+          if (diffX > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+
+        restartAutoChange();
+      });
     });
   });
 {% endjavascript %}
