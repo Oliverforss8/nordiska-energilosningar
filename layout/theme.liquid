@@ -42,7 +42,7 @@
 
     {{ content_for_layout }}
 
-    {% comment %} {% sections "footer-group" %} {% endcomment %}
+    {% sections "footer-group" %}
 
     {% # Initialize Lenis smooth scroll %}
     <script src='{{ 'lenis-scroll.js' | asset_url }}' defer></script>
