@@ -745,6 +745,14 @@
 }
 
 @media (min-width: 768px) {
+  .md\:bottom-\[30px\] {
+    bottom: 30px
+  }
+
+  .md\:left-\[30px\] {
+    left: 30px
+  }
+
   .md\:col-span-2 {
     grid-column: span 2 / span 2
   }
