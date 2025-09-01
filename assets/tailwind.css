@@ -492,6 +492,11 @@
   padding-right: 170px
 }
 
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px
+}
+
 .pb-\[110px\] {
   padding-bottom: 110px
 }
@@ -542,6 +547,10 @@
 
 .text-\[40px\] {
   font-size: 40px
+}
+
+.text-\[18px\] {
+  font-size: 18px
 }
 
 .italic {
@@ -735,6 +744,16 @@
   .md\:py-\[87px\] {
     padding-top: 87px;
     padding-bottom: 87px
+  }
+
+  .md\:px-\[170px\] {
+    padding-left: 170px;
+    padding-right: 170px
+  }
+
+  .md\:py-\[50px\] {
+    padding-top: 50px;
+    padding-bottom: 50px
   }
 
   .md\:pb-\[120px\] {

@@ -149,6 +149,11 @@ div {
   outline: none;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .knappetikett {
+    font-size: 18px;
+  }
+}
 
 .knappetikett2 {
   font-family: var(--font-halyard--family);
