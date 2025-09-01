@@ -108,8 +108,8 @@
                 {% if block.settings.learn_more_url != blank %}
                   <a
                     href='{{ block.settings.learn_more_url }}'
-                    class='learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
-                    style='border: 1px solid #171717; {% if forloop.first %}background: #ebcf2f !important; border-color: #ebcf2f !important;{% endif %}'
+                    class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                    style='border: 1px solid #171717;'
                   >
                     {{ block.settings.learn_more_text | default: "Läs mer" }}
                     <svg
@@ -173,8 +173,7 @@
   <div class='pt-[20px] hidden md:grid grid-cols-3 gap-[20px]'>
     {% for block in section.blocks %}
       <div
-        class='product-card p-[30px] flex flex-col-reverse  rounded-[10px] transition-colors duration-300 hover:bg-[#F3F1E8]'
-        style='{% if forloop.first %}background: #F3F1E8;{% endif %}'
+        class='product-card p-[30px] flex flex-col-reverse  rounded-[10px] transition-colors duration-300'
         {{ block.shopify_attributes }}
       >
         <div class='flex flex-col justify-between '>
@@ -194,8 +193,8 @@
             {% if block.settings.learn_more_url != blank %}
               <a
                 href='{{ block.settings.learn_more_url }}'
-                class='learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
-                style='border: 1px solid #171717; {% if forloop.first %}background: #ebcf2f !important; border-color: #ebcf2f !important;{% endif %}'
+                class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
+                style='border: 1px solid #171717;'
               >
                 {{ block.settings.learn_more_text | default: "Läs mer" }}
                 <svg
@@ -287,20 +286,20 @@
     text-decoration: none;
   }
 
-  .product-card .learn-more-btn {
+  .product-card .banner-3-learn-more-btn {
     border: 1px solid #171717;
     background: transparent;
     color: #171717;
     transition: all 0.3s ease;
   }
 
-  .product-card .learn-more-btn.active {
+  .product-card .banner-3-learn-more-btn.banner-3-active {
     background: #ebcf2f !important;
     border-color: #ebcf2f !important;
     color: #171717 !important;
   }
 
-  .product-card .learn-more-btn.active svg path {
+  .product-card .banner-3-learn-more-btn.banner-3-active svg path {
     stroke: #171717 !important;
   }
 
@@ -487,70 +486,65 @@
       });
     });
 
-    // Handle desktop product card hover behavior
-    const desktopSections = document.querySelectorAll(
-      '.banner-med-3-produkter',
-    );
+    // Handle desktop product card hover behavior - Clean implementation
+    const bannerSections = document.querySelectorAll('.banner-med-3-produkter');
 
-    desktopSections.forEach(function (section) {
-      const productCards = section.querySelectorAll('.product-card');
-      const learnMoreButtons = section.querySelectorAll('.learn-more-btn');
+    bannerSections.forEach(function (section) {
+      // Get desktop grid container
+      const desktopGrid = section.querySelector(
+        '.hidden.md\\:grid, [class*="grid-cols-3"]',
+      );
+      if (!desktopGrid) return;
 
-      if (productCards.length === 0) return;
+      const productCards = desktopGrid.querySelectorAll('.product-card');
+      const learnMoreButtons = desktopGrid.querySelectorAll(
+        '.banner-3-learn-more-btn',
+      );
 
-      // Set first card as active by default
-      if (learnMoreButtons[0]) {
-        learnMoreButtons[0].classList.add('active');
-      }
-      if (productCards[0]) {
-        productCards[0].style.background = '#f3f1e8';
-      }
+      if (productCards.length === 0 || learnMoreButtons.length === 0) return;
 
-      function setFirstCardActive() {
-        // Remove active from all
-        learnMoreButtons.forEach((btn) => btn.classList.remove('active'));
-        productCards.forEach((card) => (card.style.background = 'transparent'));
-        // Set first as active
-        if (learnMoreButtons[0]) {
-          learnMoreButtons[0].classList.add('active');
+      function resetToFirstCard() {
+        // Clear all active states
+        productCards.forEach((card) => (card.style.backgroundColor = ''));
+        learnMoreButtons.forEach((btn) =>
+          btn.classList.remove('banner-3-active'),
+        );
+
+        // Set first card active
+        if (productCards[0] && learnMoreButtons[0]) {
+          productCards[0].style.backgroundColor = '#f3f1e8';
+          learnMoreButtons[0].classList.add('banner-3-active');
         }
-        if (productCards[0]) {
-          productCards[0].style.background = '#f3f1e8';
+      }
+
+      function setCardActive(index) {
+        // Clear all active states
+        productCards.forEach((card) => (card.style.backgroundColor = ''));
+        learnMoreButtons.forEach((btn) =>
+          btn.classList.remove('banner-3-active'),
+        );
+
+        // Set current card active
+        if (productCards[index] && learnMoreButtons[index]) {
+          productCards[index].style.backgroundColor = '#f3f1e8';
+          learnMoreButtons[index].classList.add('banner-3-active');
         }
       }
 
+      // Initialize first card as active
+      resetToFirstCard();
+
+      // Add hover events to each card
       productCards.forEach(function (card, index) {
         card.addEventListener('mouseenter', function () {
-          // Remove active class from all buttons
-          learnMoreButtons.forEach((btn) => btn.classList.remove('active'));
-          // Remove background from all cards
-          productCards.forEach(
-            (card) => (card.style.background = 'transparent'),
-          );
-          // Add active class to current card's button
-          if (learnMoreButtons[index]) {
-            learnMoreButtons[index].classList.add('active');
-          }
-          // Add background to current card
-          card.style.background = '#f3f1e8';
+          setCardActive(index);
         });
       });
 
-      // Add mouseleave to the cards container to reset to first card
-      const cardsContainer = section.querySelector('.hidden.md\\:grid');
-      if (cardsContainer) {
-        cardsContainer.addEventListener('mouseleave', function () {
-          setFirstCardActive();
-        });
-      } else {
-        // Fallback: try a different selector
-        const gridContainer = section.querySelector('div[class*="grid-cols-3"]');
-        if (gridContainer) {
-          gridContainer.addEventListener('mouseleave', function () {
-            setFirstCardActive();
-          });
-        }
-      }
+      // Reset to first card when leaving the entire grid
+      desktopGrid.addEventListener('mouseleave', function () {
+        resetToFirstCard();
+      });
     });
   });
 {% endjavascript %}
