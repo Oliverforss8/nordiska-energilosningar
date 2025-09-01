@@ -180,18 +180,18 @@
   <div class='pt-[20px] hidden md:grid grid-cols-2 gap-[20px]'>
     {% for block in section.blocks %}
       <div
-        class='product-card p-[30px] flex flex-col-reverse md:flex-row rounded-[10px] transition-colors duration-300 hover:bg-[#F3F1E8]'
+        class='product-card p-[30px] flex flex-col-reverse xl:flex-row rounded-[10px] transition-colors duration-300 hover:bg-[#F3F1E8]'
         {{ block.shopify_attributes }}
       >
         <div class='flex flex-col justify-between '>
           <div class='flex flex-col'>
             {% if block.settings.title != blank %}
-              <div class='headline1 text-[36px] text-[#171717]'>
+              <div class='headline1 text-[36px] xl:pt-0 pt-[40px] text-[#171717]'>
                 {{ block.settings.title }}
               </div>
             {% endif %}
             {% if block.settings.description != blank %}
-              <div class='text-[#171717]/75 text pt-[40px]'>
+              <div class='text-[#171717]/75 text py-[20px] xl:pt-[40px]'>
                 {{ block.settings.description }}
               </div>
             {% endif %}
@@ -200,7 +200,7 @@
             {% if block.settings.buy_url != blank %}
               <a
                 href='{{ block.settings.buy_url }}'
-                class='inline-block shrink-0 px-[20px] py-[18px] bg-[#EFD959] knappetikett rounded-[10px] text-[#171717] '
+                class='inline-block shrink-0 px-[20px] py-[18px] bg-[#EFD959] knappetikett rounded-[10px] text-[#171717] whitespace-nowrap'
               >
                 {{ block.settings.buy_text | default: "Köp" }}
               </a>
@@ -208,7 +208,7 @@
             {% if block.settings.learn_more_url != blank %}
               <a
                 href='{{ block.settings.learn_more_url }}'
-                class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
                 style='border: 1px solid #171717;'
               >
                 {{ block.settings.learn_more_text | default: "Läs mer" }}

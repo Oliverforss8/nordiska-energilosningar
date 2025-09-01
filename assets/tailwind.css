@@ -347,6 +347,10 @@
   overflow: visible
 }
 
+.whitespace-nowrap {
+  white-space: nowrap
+}
+
 .rounded-\[10px\] {
   border-radius: 10px
 }
@@ -771,5 +775,27 @@
 
   .lg\:pt-\[30px\] {
     padding-top: 30px
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid {
+    display: grid
+  }
+
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .xl\:flex-row {
+    flex-direction: row
+  }
+
+  .xl\:pt-\[40px\] {
+    padding-top: 40px
+  }
+
+  .xl\:pt-0 {
+    padding-top: 0px
   }
 }
