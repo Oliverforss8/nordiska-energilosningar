@@ -73,13 +73,60 @@
         "card_3_button_link": "shopify://policies/privacy-policy",
         "card_4_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
         "card_4_button_text": "Kom igång",
-        "card_4_button_link": "shopify://policies/privacy-policy"
+        "card_4_button_link": "shopify://policies/privacy-policy",
+        "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+      }
+    },
+    "banner_med_2_produkter_rt6Mmk": {
+      "type": "banner-med-2-produkter",
+      "blocks": {
+        "product_card_gNYVgn": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "",
+            "buy_text": "Köp",
+            "buy_url": ""
+          }
+        },
+        "product_card_4YRa9U": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "",
+            "buy_text": "Köp",
+            "buy_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_gNYVgn",
+        "product_card_4YRa9U"
+      ],
+      "name": "Banner med 2 produkter",
+      "settings": {
+        "background_color": "#f5f5f5",
+        "header_button_text": "Läs mer",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
       }
     }
   },
   "order": [
     "hero_HUEAy6",
     "lankar_kHPxWD",
-    "grid_omraden_zBziiH"
+    "grid_omraden_zBziiH",
+    "banner_med_2_produkter_rt6Mmk"
   ]
 }
