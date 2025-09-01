@@ -115,7 +115,7 @@
                 {% if block.settings.learn_more_url != blank %}
                   <a
                     href='{{ block.settings.learn_more_url }}'
-                    class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                    class='banner-2-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
                     style='border: 1px solid #171717;'
                   >
                     {{ block.settings.learn_more_text | default: "Läs mer" }}
@@ -180,7 +180,7 @@
   <div class='pt-[20px] hidden md:grid grid-cols-2 gap-[20px]'>
     {% for block in section.blocks %}
       <div
-        class='product-card p-[30px] flex flex-col-reverse xl:flex-row rounded-[10px] transition-colors duration-300 hover:bg-[#F3F1E8]'
+        class='product-card p-[30px] flex flex-col-reverse xl:flex-row rounded-[10px] transition-colors duration-300'
         {{ block.shopify_attributes }}
       >
         <div class='flex flex-col justify-between '>
@@ -208,7 +208,7 @@
             {% if block.settings.learn_more_url != blank %}
               <a
                 href='{{ block.settings.learn_more_url }}'
-                class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
+                class='banner-2-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
                 style='border: 1px solid #171717;'
               >
                 {{ block.settings.learn_more_text | default: "Läs mer" }}
@@ -299,6 +299,18 @@
 
   .banner-med-2-produkter a:hover {
     text-decoration: none;
+  }
+
+  .product-card .banner-2-learn-more-btn {
+    border: 1px solid #171717;
+    background: transparent;
+    color: #171717;
+    transition: all 0.3s ease;
+  }
+
+  /* Card background transition */
+  .product-card {
+    transition: background-color 0.3s ease;
   }
 
   .carousel-container {
@@ -476,6 +488,59 @@
         }
 
         restartAutoChange();
+      });
+    });
+
+    // Handle desktop product card hover behavior - Clean implementation
+    const bannerSections = document.querySelectorAll('.banner-med-2-produkter');
+
+    bannerSections.forEach(function (section) {
+      // Get desktop grid container
+      const desktopGrid = section.querySelector(
+        '.hidden.md\\:grid, [class*="grid-cols-2"]',
+      );
+      if (!desktopGrid) return;
+
+      const productCards = desktopGrid.querySelectorAll('.product-card');
+      const learnMoreButtons = desktopGrid.querySelectorAll(
+        '.banner-2-learn-more-btn',
+      );
+
+      if (productCards.length === 0 || learnMoreButtons.length === 0) return;
+
+      function resetToFirstCard() {
+        // Clear all background states
+        productCards.forEach((card) => (card.style.backgroundColor = ''));
+
+        // Set first card background active
+        if (productCards[0]) {
+          productCards[0].style.backgroundColor = '#f3f1e8';
+        }
+      }
+
+      function setCardActive(index) {
+        // Clear all background states
+        productCards.forEach((card) => (card.style.backgroundColor = ''));
+
+        // Set current card background active
+        if (productCards[index]) {
+          productCards[index].style.backgroundColor = '#f3f1e8';
+        }
+      }
+
+      // Initialize first card as active
+      resetToFirstCard();
+
+      // Add hover events to each card
+      productCards.forEach(function (card, index) {
+        card.addEventListener('mouseenter', function () {
+          setCardActive(index);
+        });
+      });
+
+      // Reset to first card when leaving the entire grid
+      desktopGrid.addEventListener('mouseleave', function () {
+        resetToFirstCard();
       });
     });
   });
