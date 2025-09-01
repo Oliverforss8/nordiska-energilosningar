@@ -158,6 +158,59 @@
         "image_button_link": "shopify://pages/contact",
         "custom_id": ""
       }
+    },
+    "banner_med_3_produkter_ThPDRM": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_J3R9TJ": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_wQdkby": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_XGk6eH": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_J3R9TJ",
+        "product_card_wQdkby",
+        "product_card_XGk6eH"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/bild_nor.png",
+        "header_button_text": "Läs mer",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
@@ -167,6 +220,7 @@
     "banner_med_2_produkter_rt6Mmk",
     "text_sektion_RVLtbc",
     "banner_bild_Tr8FhV",
-    "bild_och_text_TMmxYg"
+    "bild_och_text_TMmxYg",
+    "banner_med_3_produkter_ThPDRM"
   ]
 }
