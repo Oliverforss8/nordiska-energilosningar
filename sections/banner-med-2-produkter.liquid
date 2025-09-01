@@ -8,7 +8,7 @@
   class='{{ section_class }} layout py-[62px] md:py-[87px]'
 >
   <div
-    class='h-[500px] py-[40px] px-[50px] w-full rounded-[10px] bg-cover bg-center bg-no-repeat'
+    class='h-[500px] md:py-[40px] p-[20px] md:px-[50px] w-full rounded-[10px] bg-cover bg-center bg-no-repeat'
     style='background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}'
   >
     <div class='flex h-full justify-between flex-col'>
@@ -23,9 +23,9 @@
           </a>
         {% endif %}
       </div>
-      <div class='flex w-[840px] flex-col gap-[30px]'>
+      <div class='flex lg:w-[840px] flex-col gap-[30px]'>
         {% if section.settings.heading != blank %}
-          <h2 class='text-white headline2'>
+          <h2 class='text-white headline2 '>
             {{ section.settings.heading }}
           </h2>
         {% endif %}
@@ -78,10 +78,137 @@
     </div>
   </div>
 
-  <div class='pt-[20px] grid grid-cols-2 gap-[20px]'>
+  <!-- Mobile carousel container -->
+  <div class='pt-[20px] md:hidden relative'>
+    <div class='carousel-container overflow-hidden'>
+      <div
+        class='carousel-track flex transition-transform duration-500 ease-in-out'
+        data-current='0'
+      >
+        {% for block in section.blocks %}
+          <div
+            class='product-card w-full flex-shrink-0 p-[30px] flex flex-col-reverse rounded-[10px] bg-[#F3F1E8]'
+            {{ block.shopify_attributes }}
+          >
+            <div class='flex flex-col justify-between '>
+              <div class='flex flex-col'>
+                {% if block.settings.title != blank %}
+                  <div class='headline1 text-[36px] text-[#171717]'>
+                    {{ block.settings.title }}
+                  </div>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <div class='text-[#171717]/75 text pt-[40px]'>
+                    {{ block.settings.description }}
+                  </div>
+                {% endif %}
+              </div>
+              <div class='flex gap-[10px] shrink-0'>
+                {% if block.settings.buy_url != blank %}
+                  <a
+                    href='{{ block.settings.buy_url }}'
+                    class='inline-block px-[20px] py-[18px] bg-[#EFD959] knappetikett rounded-[10px] text-[#171717] '
+                  >
+                    {{ block.settings.buy_text | default: "Köp" }}
+                  </a>
+                {% endif %}
+                {% if block.settings.learn_more_url != blank %}
+                  <a
+                    href='{{ block.settings.learn_more_url }}'
+                    class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                    style='border: 1px solid #171717;'
+                  >
+                    {{ block.settings.learn_more_text | default: "Läs mer" }}
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='22'
+                      height='18'
+                      viewBox='0 0 22 18'
+                      fill='none'
+                    >
+                      <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+            <div
+              class=' '
+              style='
+                    aspect-ratio: 18/23;
+                height: 285.081px;
+              '
+            >
+              {% if block.settings.product != blank %}
+                {% assign product = block.settings.product %}
+                {% if product.featured_image %}
+                  <img
+                    src='{{ product.featured_image | image_url: width: 300 }}'
+                    alt='{{ product.featured_image.alt | default: product.title }}'
+                    width='200'
+                    height='200'
+                    class=' h-full w-full object-contain rounded-[5px]'
+                    loading='lazy'
+                  >
+                {% else %}
+                  <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                    {{
+                      "products.product.media.load_image"
+                      | t
+                      | default: "Load image"
+                    }}
+                  </div>
+                {% endif %}
+              {% else %}
+                <div class='w-[200px] h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                  {{
+                    "sections.banner_with_products.no_product_selected"
+                    | t
+                    | default: "No product selected"
+                  }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Navigation arrows -->
+    {% if section.blocks.size > 1 %}
+      <button class='carousel-prev absolute left-[10px] top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-[15px] shadow-lg z-10'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='35'
+          height='11'
+          viewBox='0 0 70 21'
+          fill='none'
+        >
+          <path d="M25 10.3912L1 10.3912L10.3913 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M25 10.3915L1 10.3915L10.3913 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class='carousel-next absolute right-[10px] top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-[15px] shadow-lg z-10'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='35'
+          height='11'
+          viewBox='0 0 70 21'
+          fill='none'
+        >
+          <path d="M45 10.3915H69L59.6087 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M45 10.3912H69L59.6087 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    {% endif %}
+  </div>
+
+  <!-- Desktop grid (unchanged) -->
+  <div class='pt-[20px] hidden md:grid grid-cols-2 gap-[20px]'>
     {% for block in section.blocks %}
       <div
-        class='product-card p-[30px] flex flex-row rounded-[10px] transition-colors duration-300 hover:bg-[#F3F1E8]'
+        class='product-card p-[30px] flex flex-col-reverse md:flex-row rounded-[10px] transition-colors duration-300 hover:bg-[#F3F1E8]'
         {{ block.shopify_attributes }}
       >
         <div class='flex flex-col justify-between '>
@@ -109,7 +236,7 @@
             {% if block.settings.learn_more_url != blank %}
               <a
                 href='{{ block.settings.learn_more_url }}'
-                class='inline-block px-[20px] py-[18px] bg-transparent  [] knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
                 style='border: 1px solid #171717;'
               >
                 {{ block.settings.learn_more_text | default: "Läs mer" }}
@@ -167,6 +294,20 @@
       </div>
     {% endfor %}
   </div>
+  <div class='pl-[20px]'>
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='70'
+      height='21'
+      viewBox='0 0 70 21'
+      fill='none'
+    >
+      <path d="M45 10.3915H69L59.6087 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M45 10.3912H69L59.6087 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M25 10.3912L1 10.3912L10.3913 19.7827" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M25 10.3915L1 10.3915L10.3913 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 </section>
 
 {% stylesheet %}
@@ -177,7 +318,133 @@
   .banner-med-2-produkter a:hover {
     text-decoration: none;
   }
+
+  .carousel-container {
+    position: relative;
+  }
+
+  .carousel-track {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-50%) scale(1.05);
+  }
 {% endstylesheet %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.carousel-track');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll('.product-card');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    let autoChangeInterval;
+
+    function updateCarousel() {
+      const translateX = -currentSlide * 100;
+      carousel.style.transform = `translateX(${translateX}%)`;
+      carousel.setAttribute('data-current', currentSlide);
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function startAutoChange() {
+      if (totalSlides > 1) {
+        autoChangeInterval = setInterval(nextSlide, 8000); // 8 seconds
+      }
+    }
+
+    function stopAutoChange() {
+      if (autoChangeInterval) {
+        clearInterval(autoChangeInterval);
+      }
+    }
+
+    function restartAutoChange() {
+      stopAutoChange();
+      startAutoChange();
+    }
+
+    // Event listeners
+    if (nextButton) {
+      nextButton.addEventListener('click', function () {
+        nextSlide();
+        restartAutoChange(); // Restart timer when user interacts
+      });
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener('click', function () {
+        prevSlide();
+        restartAutoChange(); // Restart timer when user interacts
+      });
+    }
+
+    // Pause auto-change on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', stopAutoChange);
+      carouselContainer.addEventListener('mouseleave', startAutoChange);
+    }
+
+    // Start auto-change
+    startAutoChange();
+
+    // Handle touch events for swipe gestures
+    let startX = 0;
+    let isDragging = false;
+
+    carousel.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+      stopAutoChange();
+    });
+
+    carousel.addEventListener('touchmove', function (e) {
+      if (!isDragging) return;
+      e.preventDefault();
+    });
+
+    carousel.addEventListener('touchend', function (e) {
+      if (!isDragging) return;
+      isDragging = false;
+
+      const endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+
+      if (Math.abs(diffX) > 50) {
+        // Minimum swipe distance
+        if (diffX > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+
+      restartAutoChange();
+    });
+  });
+{% endjavascript %}
 
 {% schema %}
 {
