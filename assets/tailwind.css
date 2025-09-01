@@ -710,6 +710,10 @@
   .sm\:w-\[70\%\] {
     width: 70%
   }
+
+  .sm\:flex-row {
+    flex-direction: row
+  }
 }
 
 @media (min-width: 768px) {
