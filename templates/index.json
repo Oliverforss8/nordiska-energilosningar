@@ -146,6 +146,18 @@
         "secondary_button_url": "",
         "custom_id": ""
       }
+    },
+    "bild_och_text_TMmxYg": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vi är experter på storskaliga energilösningar",
+        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.Genom att kombinera solenergi med energilagring och smart laddning skapar vi system som optimerar elförbrukningen, sänker energikostnaderna och minskar klimatpåverkan. Våra lösningar är skalbara och anpassade för fastigheter, industri, logistik och andra verksamheter med höga energibehov.</p>",
+        "image": "shopify://shop_images/bild_nor.png",
+        "image_button_text": "test",
+        "image_button_link": "shopify://pages/contact",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -154,6 +166,7 @@
     "grid_omraden_zBziiH",
     "banner_med_2_produkter_rt6Mmk",
     "text_sektion_RVLtbc",
-    "banner_bild_Tr8FhV"
+    "banner_bild_Tr8FhV",
+    "bild_och_text_TMmxYg"
   ]
 }
