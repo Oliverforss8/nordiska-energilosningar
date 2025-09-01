@@ -8,23 +8,23 @@
   :root {
     /* Halyard Display Font Family */
     --font-halyard--family: "halyard-display", sans-serif;
-    
+
     /* Halyard Display Font Weights */
     --font-halyard--book: 300;
     --font-halyard--regular: 400;
     --font-halyard--medium: 500;
     --font-halyard--semibold: 600;
     --font-halyard--bold: 700;
-    
+
     /* Primary Font Variables */
     --font-primary--family: {{ settings.type_primary_font.family }}, {{ settings.type_primary_font.fallback_families }};
     --font-primary--style: {{ settings.type_primary_font.style }};
     --font-primary--weight: {{ settings.type_primary_font.weight }};
-    
+
     /* Layout Variables */
     --page-width: {{ settings.max_page_width }};
     --page-margin: {{ settings.min_page_margin }}px;
-    
+
 
   }
 {% endstyle %}

@@ -482,6 +482,16 @@
   padding-bottom: 20px
 }
 
+.py-\[50px\] {
+  padding-top: 50px;
+  padding-bottom: 50px
+}
+
+.px-\[170px\] {
+  padding-left: 170px;
+  padding-right: 170px
+}
+
 .pb-\[110px\] {
   padding-bottom: 110px
 }
@@ -559,6 +569,10 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#171717\]\/80 {
+  color: rgb(23 23 23 / 0.8)
 }
 
 .no-underline {

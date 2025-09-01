@@ -156,3 +156,21 @@ div {
   font-size: 15px;
   line-height: 100%;
 }
+
+button {
+  padding: 0;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}

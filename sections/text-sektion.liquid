@@ -1,0 +1,87 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = "section-text-sektion"
+%}
+
+<section
+  id='{{ section_id }}'
+  class='{{ section_class }} layout px-[170px] py-[62px] md:py-[87px]'
+>
+  {% if section.settings.title != blank %}
+    <div class='headline1 text-[#171717]'>{{ section.settings.title }}</div>
+  {% endif %}
+
+  {% if section.settings.text != blank %}
+    <div class='text text-[#171717]/80 py-[50px]'>
+      {{ section.settings.text }}
+    </div>
+  {% endif %}
+
+  {% if section.settings.button_text != blank
+    and section.settings.button_link != blank
+  %}
+    <button>
+      <a
+        href='{{ section.settings.button_link }}'
+        class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+        style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+      >
+        {{ section.settings.button_text }}
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='22'
+          height='18'
+          viewBox='0 0 22 18'
+          fill='none'
+        >
+          <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </button>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Text sektion",
+  "tag": "section",
+  "class": "section-text-sektion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Titel"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Text</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Knapp text",
+      "default": "Knapp text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Knapp länk"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Anpassat ID",
+      "info": "Lämna tomt för att använda standard ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text sektion"
+    }
+  ]
+}
+{% endschema %}
