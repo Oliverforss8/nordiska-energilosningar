@@ -87,9 +87,7 @@
             "title": "Laddbox 1",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "",
-            "buy_text": "Köp",
-            "buy_url": ""
+            "learn_more_url": ""
           }
         },
         "product_card_4YRa9U": {
@@ -99,9 +97,7 @@
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "",
-            "buy_text": "Köp",
-            "buy_url": ""
+            "learn_more_url": ""
           }
         }
       },
@@ -112,6 +108,7 @@
       "name": "Banner med 2 produkter",
       "settings": {
         "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/bild_nor.png",
         "header_button_text": "Läs mer",
         "header_button_url": "",
         "heading": "Smarta elbilsladdare för alla behov",
