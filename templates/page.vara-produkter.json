@@ -108,8 +108,8 @@
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Laddbox 1",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "title": "Solcell 1",
+            "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
@@ -118,7 +118,7 @@
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Laddbox 2",
+            "title": "Solcell 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
@@ -128,7 +128,7 @@
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Laddboxar 3",
+            "title": "Solcell 3",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
@@ -164,7 +164,7 @@
           "settings": {
             "product": "produkt",
             "title": "Laddbox 1",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
