@@ -80,11 +80,53 @@
         "secondary_button_text": "Företag",
         "secondary_button_url": ""
       }
+    },
+    "bild_och_text_fF7gV6": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Undvik höga elnätsavgifter",
+        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_fe37pr": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Teckna serviceavtal",
+        "text": "<p>Serviceavtal för trygg och långsiktig drift. Oavsett om din installation är utförd av oss eller av en annan leverantör kan du teckna ett serviceavtal som säkerställer långsiktig trygghet och optimal funktion i ditt system.<br/><br/>När installationsgarantin löper ut erbjuder vi ett extra skydd – särskilt värdefullt för bostadsrättsföreningar, företag och privata fastighetsägare.<br/>Våra flexibla serviceavtal är utformade för att ge dig ökad säkerhet, driftsäkerhet och maximal avkastning på din investering.</p>",
+        "image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_k67Awi": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Dokumentation för hela projektet",
+        "text": "<p>För att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
+        "image": "shopify://shop_images/bild_nor.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "banner_med_3_produkter_HxVFnP"
+    "banner_med_3_produkter_HxVFnP",
+    "bild_och_text_fF7gV6",
+    "bild_och_text_fe37pr",
+    "bild_och_text_k67Awi"
   ]
 }
