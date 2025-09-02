@@ -1,0 +1,132 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "hero_lower_HxUwkQ": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
+      "settings": {
+        "background_image": "shopify://shop_images/solar-panels-team-inspection-with-people-nature-photovoltaic-grid-renewable-energy-power-generator-sustainability-electric-system-technician-with-engineer-outdoor-project.jpg",
+        "overlay_opacity": 20,
+        "heading": "Våra solceller",
+        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
+        "button_text": "Be om offert",
+        "button_url": ""
+      }
+    },
+    "banner_med_3_produkter_HxVFnP": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_iVqQVd": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_XciY6V": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_gaPRNm": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddboxar 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_iVqQVd",
+        "product_card_XciY6V",
+        "product_card_gaPRNm"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/image_11.png",
+        "overlay_opacity": 0,
+        "header_button_text": "Läs mer",
+        "header_button_url": "",
+        "heading": "Vill du veta mer om solceller?",
+        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
+      }
+    },
+    "bild_och_text_fF7gV6": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Undvik höga elnätsavgifter",
+        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_fe37pr": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Teckna serviceavtal",
+        "text": "<p>Serviceavtal för trygg och långsiktig drift. Oavsett om din installation är utförd av oss eller av en annan leverantör kan du teckna ett serviceavtal som säkerställer långsiktig trygghet och optimal funktion i ditt system.<br/><br/>När installationsgarantin löper ut erbjuder vi ett extra skydd – särskilt värdefullt för bostadsrättsföreningar, företag och privata fastighetsägare.<br/>Våra flexibla serviceavtal är utformade för att ge dig ökad säkerhet, driftsäkerhet och maximal avkastning på din investering.</p>",
+        "image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
+        "image_position": "left",
+        "image_button_text": "Teckna avtal",
+        "image_button_link": "shopify://pages/contact",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_k67Awi": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Dokumentation för hela projektet",
+        "text": "<p>För att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
+        "image": "shopify://shop_images/bild_nor.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_lower_HxUwkQ",
+    "banner_med_3_produkter_HxVFnP",
+    "bild_och_text_fF7gV6",
+    "bild_och_text_fe37pr",
+    "bild_och_text_k67Awi"
+  ]
+}
