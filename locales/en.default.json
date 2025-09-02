@@ -65,6 +65,10 @@
     "no_results_html": "No results found for {{ terms }}",
     "results_for_html": "{{ count }} results found for {{ terms }}"
   },
+  "general": {
+    "page": "Page",
+    "vara_losningar": "Våra lösningar"
+  },
   "sections": {
     "banner_with_products": {
       "name": "Banner with 2 Products",
