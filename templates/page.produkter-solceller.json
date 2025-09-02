@@ -19,6 +19,7 @@
       "name": "Hero Lower",
       "settings": {
         "background_image": "shopify://shop_images/solar-panels-team-inspection-with-people-nature-photovoltaic-grid-renewable-energy-power-generator-sustainability-electric-system-technician-with-engineer-outdoor-project.jpg",
+        "overlay_opacity": 20,
         "heading": "Våra solceller",
         "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
         "button_text": "Be om offert",
@@ -31,7 +32,7 @@
         "product_card_iVqQVd": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
+            "product": "solceller-1",
             "title": "Laddbox 1",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
@@ -41,7 +42,7 @@
         "product_card_XciY6V": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
+            "product": "solceller-1",
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
@@ -51,7 +52,7 @@
         "product_card_gaPRNm": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
+            "product": "solceller-1",
             "title": "Laddboxar 3",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
@@ -66,8 +67,10 @@
       ],
       "name": "Banner med 3 produkter",
       "settings": {
+        "layout_direction": "banner_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/image_11.png",
+        "overlay_opacity": 0,
         "header_button_text": "Läs mer",
         "header_button_url": "",
         "heading": "Vill du veta mer om solceller?",
