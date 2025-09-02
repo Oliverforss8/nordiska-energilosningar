@@ -284,8 +284,8 @@
       "name": "Banner med länkar",
       "settings": {
         "background_color": "#171717",
-        "background_image": "shopify://shop_images/bild_nor.png",
-        "header_button_text": "",
+        "background_image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
+        "header_button_text": "Serviceavtal",
         "header_button_url": "",
         "heading": "Serviceavtal - för din trygghet",
         "description": "Genom att teckna ett serviceavtal med oss kan du känna dig trygg i att vi hjälper dig om något krånglar med din anläggning – för ett mycket bättre pris dessutom.",
