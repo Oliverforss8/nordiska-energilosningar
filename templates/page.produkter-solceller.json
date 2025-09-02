@@ -18,10 +18,10 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
-        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
-        "heading": "Welcome to our site",
-        "subheading": "Discover amazing products and services",
-        "button_text": "Våra energilösningar",
+        "background_image": "shopify://shop_images/solar-panels-team-inspection-with-people-nature-photovoltaic-grid-renewable-energy-power-generator-sustainability-electric-system-technician-with-engineer-outdoor-project.jpg",
+        "heading": "Våra solceller",
+        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
+        "button_text": "Be om offert",
         "button_url": ""
       }
     },
@@ -67,11 +67,11 @@
       "name": "Banner med 3 produkter",
       "settings": {
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
+        "background_image": "shopify://shop_images/image_11.png",
         "header_button_text": "Läs mer",
         "header_button_url": "",
-        "heading": "Smarta elbilsladdare för alla behov",
-        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "heading": "Vill du veta mer om solceller?",
+        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
         "primary_button_text": "Privat",
         "primary_button_url": "",
         "secondary_button_text": "Företag",
