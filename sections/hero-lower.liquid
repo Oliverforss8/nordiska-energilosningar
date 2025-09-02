@@ -4,22 +4,23 @@
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }} min-h-[70vh] overflow-visible flex-col w-full flex'
+  class='overflow-visible flex-col w-full h-full flex'
+  style='min-height: 75vh;'
 >
-  <div class='relative flex w-full h-full'>
+  <div class='relative flex w-full h-full' style='min-height: 75vh;'>
     {% render "image",
       image: section.settings.background_image,
-      class: "w-full h-full object-cover absolute inset-0"
+      class: "w-full h-full object-cover absolute inset-0",
+      loading: "lazy"
     %}
 
     <div
-      class='absolute inset-0 h-full'
-      style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)'
+      class='absolute inset-0  h-full'
+      style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%'
     ></div>
 
     {% if section.settings.heading != blank %}
-      <div class='absolute inset-0 h-full layout'>
+      <div class='absolute inset-0  h-full layout'>
         <div class='h-full flex pb-[110px] md:pb-[120px] flex-col justify-end items-start'>
           <h1 class='headline1 text-white pb-[20px] md:pb-[40px]'>
             {{ section.settings.heading | newline_to_br }}
@@ -29,7 +30,7 @@
               {% if section.settings.button_url != blank %}
                 <a
                   href='{{ section.settings.button_url }}'
-                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett shrink-0'
+                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett   shrink-0'
                   style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
                 >
                   {{
@@ -49,7 +50,7 @@
                 </a>
               {% else %}
                 <button
-                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
+                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]  shrink-0'
                   style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
                 >
                   {{
@@ -83,13 +84,13 @@
   .section-banner .image {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 75vh;
     inset: 0;
   }
 
   .section-banner .image > img {
     width: 100%;
-    height: 100%;
+    height: 75vh;
     object-fit: cover;
   }
 {% endstylesheet %}
