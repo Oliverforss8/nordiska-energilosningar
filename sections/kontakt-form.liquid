@@ -1,1 +1,200 @@
-<section></section>
+<section class='contact-form-section layout   py-[62px] md:py-[87px]'>
+  {% if section.settings.header_button_url != blank %}
+    <a
+      href='{{ section.settings.header_button_url }}'
+      class='knappetikett2 bg-transparent text-[#171717] p-[15px] rounded-[10px] z-10 inline-block '
+      style='border: 1px solid #171717;'
+    >
+      {{ section.settings.header_button_text }}
+    </a>
+  {% endif %}
+
+  <h2 class='text-[#171717] headline1 py-[50px]'>
+    {{ section.settings.heading }}
+  </h2>
+
+  <form
+    action='https://formspree.io/f/mdkllzwo'
+    method='POST'
+    class='grid grid-cols-1 md:grid-cols-2 gap-x-[20px]'
+  >
+    <div class='flex flex-col'>
+      <label for='name' class='body1 text-[#171717] mb-[15px]'>
+        För- & efternamn
+      </label>
+      <input
+        type='text'
+        id='name'
+        name='name'
+        required
+        class='h-[40px] bg-[#F6F6F6] px-3 rounded border-0 focus:outline-none focus:ring-2 focus:ring-blue-500'
+      >
+    </div>
+
+    <div class='flex flex-col'>
+      <label for='company' class='body1 text-[#171717] mb-[15px]'>
+        Företagsnamn
+      </label>
+      <input
+        type='text'
+        id='company'
+        name='company'
+        class='h-[40px] bg-[#F6F6F6] px-3 rounded border-0 focus:outline-none focus:ring-2 focus:ring-blue-500'
+      >
+    </div>
+
+    <div class='flex flex-col pt-[30px]'>
+      <label for='phone' class='body1 text-[#171717] mb-[15px]'>
+        Telefonnummer
+      </label>
+      <input
+        type='tel'
+        id='phone'
+        name='phone'
+        class='h-[40px] bg-[#F6F6F6] px-3 rounded border-0 focus:outline-none focus:ring-2 focus:ring-blue-500'
+      >
+    </div>
+
+    <div class='flex flex-col pt-[30px]'>
+      <label for='email' class='body1 text-[#171717] mb-[15px]'>
+        Mailadress
+      </label>
+      <input
+        type='email'
+        id='email'
+        name='email'
+        required
+        class='h-[40px] bg-[#F6F6F6] px-3 rounded border-0 focus:outline-none focus:ring-2 focus:ring-blue-500'
+      >
+    </div>
+    <div class='col-span-2 flex flex-col py-[50px]'>
+      <div class=' flex flex-row gap-[5px] body1 text-[25px] text-[#171717]'>
+        Hur kan vi hjälpa dig?
+        <span class=' text-[15px]  text-[#171717]/80 mt-[5px]'>
+          Klicka för att välja*
+        </span>
+      </div>
+      <div class=' gap-[10px] pt-[15px] flex flex-row flex-wrap'>
+        <button
+          type='button'
+          class='service-btn knappetikett font-[300] text-[#171717] p-[13px] rounded-[10px] bg-[#F6F6F6]'
+          data-service='Solceller'
+        >
+          Solceller
+        </button>
+        <button
+          type='button'
+          class='service-btn knappetikett font-[300] text-[#171717] p-[13px] rounded-[10px] bg-[#F6F6F6]'
+          data-service='Energilagring'
+        >
+          Energilagring
+        </button>
+        <button
+          type='button'
+          class='service-btn knappetikett font-[300] text-[#171717] p-[13px] rounded-[10px] bg-[#F6F6F6]'
+          data-service='Laddbox'
+        >
+          Laddbox
+        </button>
+        <button
+          type='button'
+          class='service-btn knappetikett font-[300] text-[#171717] p-[13px] rounded-[10px] bg-[#F6F6F6]'
+          data-service='Serviceavtal'
+        >
+          Serviceavtal
+        </button>
+      </div>
+      <input
+        type='hidden'
+        name='services'
+        id='selected-services'
+        value=''
+      >
+    </div>
+    <div class='flex flex-col col-span-2'>
+      <label for='message' class='body1 text-[#171717] mb-[15px]'>
+        Meddelande
+      </label>
+      <textarea
+        id='message'
+        name='message'
+        rows='4'
+        class='h-[80px] bg-[#F6F6F6] px-3 py-2 rounded border-0 focus:outline-none focus:ring-2 focus:ring-blue-500'
+      ></textarea>
+    </div>
+    <button
+      type='submit'
+      class='knappetikett mt-[30px] bg-[#EFD959] col-span-2 w-full py-[13px] rounded-[10px]'
+    >
+      Skicka in
+    </button>
+  </form>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const serviceButtons = document.querySelectorAll('.service-btn');
+    const hiddenInput = document.getElementById('selected-services');
+    let selectedServices = []; // Start with no services selected
+
+    serviceButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        const service = this.getAttribute('data-service');
+
+        if (this.classList.contains('active')) {
+          // Remove from selection
+          this.classList.remove('active');
+          this.classList.remove('bg-[#EFD959]');
+          this.classList.add('bg-[#F6F6F6]');
+          this.classList.remove('font-[400]');
+          this.classList.add('font-[300]');
+
+          selectedServices = selectedServices.filter((s) => s !== service);
+        } else {
+          // Add to selection
+          this.classList.add('active');
+          this.classList.add('bg-[#EFD959]');
+          this.classList.remove('bg-[#F6F6F6]');
+          this.classList.add('font-[400]');
+          this.classList.remove('font-[300]');
+
+          selectedServices.push(service);
+        }
+
+        // Update hidden input
+        hiddenInput.value = selectedServices.join(', ');
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "tag": "section",
+  "class": "contact-form-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Kontakta oss"
+    },
+    {
+      "type": "text",
+      "id": "header_button_text",
+      "label": "Header Button Text"
+    },
+    {
+      "type": "url",
+      "id": "header_button_url",
+      "label": "Header Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Form"
+    }
+  ]
+}
+{% endschema %}
