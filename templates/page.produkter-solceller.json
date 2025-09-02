@@ -35,7 +35,7 @@
             "title": "Laddbox 1",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/produkt"
           }
         },
         "product_card_XciY6V": {
@@ -45,7 +45,7 @@
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/produkt"
           }
         },
         "product_card_gaPRNm": {
@@ -55,7 +55,7 @@
             "title": "Laddboxar 3",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/produkt"
           }
         }
       },
