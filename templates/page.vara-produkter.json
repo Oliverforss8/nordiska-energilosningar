@@ -157,6 +157,61 @@
         "secondary_button_url": ""
       }
     },
+    "banner_med_3_produkter_Va3ajQ": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_jija74": {
+          "type": "product_card",
+          "settings": {
+            "product": "batteri-1",
+            "title": "Batteri 1",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_wGVBt4": {
+          "type": "product_card",
+          "settings": {
+            "product": "batteri-1",
+            "title": "Batteri 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_Fh46Hy": {
+          "type": "product_card",
+          "settings": {
+            "product": "batteri-1",
+            "title": "Batteri 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_jija74",
+        "product_card_wGVBt4",
+        "product_card_Fh46Hy"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/image_16.png",
+        "overlay_opacity": 30,
+        "header_button_text": "Värmepumpar",
+        "header_button_url": "",
+        "heading": "Letar du efter värmepump?",
+        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
+        "primary_button_text": "Läs mer",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
+    },
     "banner_med_3_produkter_DFAaCk": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -164,7 +219,7 @@
           "type": "product_card",
           "settings": {
             "product": "varmepump-1",
-            "title": "Laddbox 1",
+            "title": "Värmepump 1",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
@@ -174,7 +229,7 @@
           "type": "product_card",
           "settings": {
             "product": "varmepump-1",
-            "title": "Laddbox 2",
+            "title": "Värmepump 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
@@ -184,7 +239,7 @@
           "type": "product_card",
           "settings": {
             "product": "varmepump-1",
-            "title": "Laddboxar 3",
+            "title": "Värmepump 3",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
@@ -219,6 +274,7 @@
     "grid_omraden_VThqFD",
     "banner_med_3_produkter_AhTjN7",
     "banner_med_3_produkter_rGEkTD",
+    "banner_med_3_produkter_Va3ajQ",
     "banner_med_3_produkter_DFAaCk"
   ]
 }
