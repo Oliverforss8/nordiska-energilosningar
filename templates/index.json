@@ -248,7 +248,7 @@
         "card_zAPKeQ": {
           "type": "card",
           "settings": {
-            "heading": "Kort rubrik",
+            "heading": "6 mån",
             "description": "Kort beskrivning",
             "link": "",
             "card_bg_color": "#f3f1e8",
@@ -258,7 +258,7 @@
         "card_yJV9er": {
           "type": "card",
           "settings": {
-            "heading": "Kort rubrik",
+            "heading": "12 mån",
             "description": "Kort beskrivning",
             "link": "",
             "card_bg_color": "#f3f1e8",
@@ -268,7 +268,7 @@
         "card_jk6Wgp": {
           "type": "card",
           "settings": {
-            "heading": "Kort rubrik",
+            "heading": "24 mån",
             "description": "Kort beskrivning",
             "link": "",
             "card_bg_color": "#f3f1e8",
@@ -287,8 +287,8 @@
         "background_image": "shopify://shop_images/bild_nor.png",
         "header_button_text": "",
         "header_button_url": "",
-        "heading": "Rubrik",
-        "description": "Beskrivning",
+        "heading": "Serviceavtal - för din trygghet",
+        "description": "Genom att teckna ett serviceavtal med oss kan du känna dig trygg i att vi hjälper dig om något krånglar med din anläggning – för ett mycket bättre pris dessutom.",
         "primary_button_text": "",
         "primary_button_url": "",
         "secondary_button_text": "",
