@@ -31,7 +31,7 @@
         "product_card_iVqQVd": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "produkt",
             "title": "Laddbox 1",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
@@ -41,7 +41,7 @@
         "product_card_XciY6V": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "produkt",
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
@@ -51,8 +51,8 @@
         "product_card_gaPRNm": {
           "type": "product_card",
           "settings": {
-            "product": "",
-            "title": "Laddbox 3",
+            "product": "produkt",
+            "title": "Laddboxar",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": ""
@@ -67,6 +67,7 @@
       "name": "Banner med 3 produkter",
       "settings": {
         "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
         "header_button_text": "Läs mer",
         "header_button_url": "",
         "heading": "Smarta elbilsladdare för alla behov",
