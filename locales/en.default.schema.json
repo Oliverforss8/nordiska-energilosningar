@@ -1,90 +1,34 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin language editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
-  "general": {
-    "404": "Not found",
-    "article": "Article",
-    "block": "Block",
-    "blog": "Blog",
-    "cart": "Cart",
-    "collection": "Collection",
-    "collections": "Collections",
-    "collection_card": "Collection card",
-    "collections_grid": "Collections grid",
-    "colors": "Colors",
-    "column": "Column",
-    "content": "Content",
-    "custom_section": "Custom section",
-    "fonts": "Fonts",
-    "footer": "Footer",
-    "group": "Group",
-    "header": "Header",
-    "layout": "Layout",
-    "main": "Main",
-    "page": "Page",
-    "password": "Password",
-    "primary": "Primary",
-    "product": "Product",
-    "row": "Row",
-    "search": "Search",
-    "secondary": "Secondary",
-    "section": "Section",
-    "settings": "Settings",
-    "sidebar": "Sidebar",
-    "text": "Text",
-    "theme": "Theme",
-    "typography": "Typography"
-  },
   "sections": {
-    "banner_with_products": {
-      "name": "Banner with 2 Products"
-    }
-  },
-  "labels": {
-    "alignment": "Alignment",
-    "background": "Background",
-    "foreground": "Foreground",
-    "grid_gap": "Grid spacing",
-    "grid_item_width": "Grid item width",
-    "input_corner_radius": "Input corner radius",
-    "layout_direction": "Layout direction",
-    "menu": "Menu",
-    "padding": "Padding",
-    "page_margin": "Page margin",
-    "page_width": "Page width",
-    "show_payment_icons": "Show payment icons",
-    "text_style": "Text style",
-    "text": "Text"
-  },
-  "options": {
-    "alignment": {
-      "left": "Left",
-      "center": "Center",
-      "right": "Right"
-    },
-    "direction": {
-      "horizontal": "Horizontal",
-      "vertical": "Vertical"
-    },
-    "page_width": {
-      "narrow": "Narrow",
-      "wide": "Wide"
-    },
-    "size": {
-      "large": "Large",
-      "small": "Small"
-    },
-    "text_style": {
-      "title": "Title",
-      "subtitle": "Subtitle",
-      "normal": "Normal text"
+    "header": {
+      "name": "Header",
+      "settings": {
+        "navigation": {
+          "header": "Navigation Settings"
+        },
+        "menu": {
+          "label": "Main menu",
+          "info": "Select the menu to display in the header"
+        },
+        "dropdown_config": {
+          "header": "Dropdown Configuration",
+          "info": "Configure which navigation items should have dropdown menus"
+        },
+        "nav_item_1_dropdown": {
+          "label": "Enable dropdown for first menu item"
+        },
+        "nav_item_2_dropdown": {
+          "label": "Enable dropdown for second menu item"
+        },
+        "nav_item_3_dropdown": {
+          "label": "Enable dropdown for third menu item"
+        },
+        "nav_item_4_dropdown": {
+          "label": "Enable dropdown for fourth menu item"
+        },
+        "dropdown_link_title": "Dropdown link title",
+        "dropdown_link_url": "Dropdown link URL"
+      }
     }
   }
 }

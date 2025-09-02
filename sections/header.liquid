@@ -1,48 +1,168 @@
-<div
-  class='fixed   w-full  z-50'
+{% liquid
+  assign section_id = "header-" | append: section.id
+%}
+
+<header
+  id='{{ section_id }}'
+  class='header-section fixed w-full z-50 transition-all duration-300'
+  data-header
 >
-  <div class='bg-[#F3F1E8] px-[50px] w-full py-[15px] '>
+  <!-- Top bar -->
+  <div class='header-topbar bg-[#F3F1E8] px-[50px] w-full py-[15px]'>
     <div class='flex text text-[#171717] text-[16px] flex-row gap-[15px] px-[50px]'>
-      <div>Privatperson</div>
-      <div>Företag</div>
+      <div>{{ "general.privatperson" | t | default: "Privatperson" }}</div>
+      <div>{{ "general.foretag" | t | default: "Företag" }}</div>
     </div>
   </div>
-  <div
-    class='py-[15px] w-full'
-    style='background: linear-gradient(0deg, rgba(23, 23, 23, 0.00) 0%, #171717 100%);'
-  >
-    <div
-      class='layout w-full   flex flex-row justify-between items-center'
-    >
-      <div>
+
+  <!-- Main header -->
+  <div class='header-main py-[15px] w-full header-gradient'>
+    <div class='layout w-full flex flex-row justify-between items-center'>
+      <!-- Logo -->
+      <div class='header-logo'>
         <img
           src='{{ 'logga-vit.svg' | asset_url }}'
-          alt='Logo'
-          class='w-auto h-[53px]'
+          alt='{{ shop.name }}'
+          width='auto'
+          height='53'
+          class='logo-white w-auto h-[53px] transition-opacity duration-300'
+        >
+        <img
+          src='{{ 'logga.svg' | asset_url }}'
+          alt='{{ shop.name }}'
+          width='auto'
+          height='53'
+          class='logo-dark w-auto h-[53px] transition-opacity duration-300 opacity-0 absolute top-0 left-0'
         >
       </div>
-      <div class='flex header text-white flex-row gap-[50px]'>
-        <div>Start</div>
-        <div>Våra lösningar</div>
-        <div class='flex flex-row gap-[10px] items-center'>
-          Våra produkter
-          <img
-            src='{{ 'dropdown.svg' | asset_url }}'
-            alt='Logo'
-            class='w-[8px] h-[14px]'
-          >
-        </div>
-        <div class='flex flex-row gap-[10px] items-center'>
-          Support
-          <img
-            src='{{ 'dropdown.svg' | asset_url }}'
-            alt='Logo'
-            class='w-[8px] h-[14px]'
-          >
-        </div>
-      </div>
-      <button class='flex flex-row gap-[20px] bg-white knappetikett text-[#171717] p-[20px] py-[15px] rounded-[10px]'>
-        Kundvagn
+
+      <!-- Navigation -->
+      <nav class='header-nav flex text-white flex-row gap-[50px]'>
+        {% for link in section.settings.menu.links %}
+          {% liquid
+            case forloop.index
+              when 1
+                assign has_dropdown = section.settings.nav_item_1_dropdown
+                assign dropdown_link_1_title = section.settings.nav_item_1_dropdown_link_1_title
+                assign dropdown_link_1_url = section.settings.nav_item_1_dropdown_link_1_url
+                assign dropdown_link_2_title = section.settings.nav_item_1_dropdown_link_2_title
+                assign dropdown_link_2_url = section.settings.nav_item_1_dropdown_link_2_url
+                assign dropdown_link_3_title = ""
+                assign dropdown_link_3_url = ""
+                assign dropdown_link_4_title = ""
+                assign dropdown_link_4_url = ""
+              when 2
+                assign has_dropdown = section.settings.nav_item_2_dropdown
+                assign dropdown_link_1_title = section.settings.nav_item_2_dropdown_link_1_title
+                assign dropdown_link_1_url = section.settings.nav_item_2_dropdown_link_1_url
+                assign dropdown_link_2_title = section.settings.nav_item_2_dropdown_link_2_title
+                assign dropdown_link_2_url = section.settings.nav_item_2_dropdown_link_2_url
+                assign dropdown_link_3_title = ""
+                assign dropdown_link_3_url = ""
+                assign dropdown_link_4_title = ""
+                assign dropdown_link_4_url = ""
+              when 3
+                assign has_dropdown = section.settings.nav_item_3_dropdown
+                assign dropdown_link_1_title = section.settings.nav_item_3_dropdown_link_1_title
+                assign dropdown_link_1_url = section.settings.nav_item_3_dropdown_link_1_url
+                assign dropdown_link_2_title = section.settings.nav_item_3_dropdown_link_2_title
+                assign dropdown_link_2_url = section.settings.nav_item_3_dropdown_link_2_url
+                assign dropdown_link_3_title = section.settings.nav_item_3_dropdown_link_3_title
+                assign dropdown_link_3_url = section.settings.nav_item_3_dropdown_link_3_url
+                assign dropdown_link_4_title = section.settings.nav_item_3_dropdown_link_4_title
+                assign dropdown_link_4_url = section.settings.nav_item_3_dropdown_link_4_url
+              when 4
+                assign has_dropdown = section.settings.nav_item_4_dropdown
+                assign dropdown_link_1_title = section.settings.nav_item_4_dropdown_link_1_title
+                assign dropdown_link_1_url = section.settings.nav_item_4_dropdown_link_1_url
+                assign dropdown_link_2_title = section.settings.nav_item_4_dropdown_link_2_title
+                assign dropdown_link_2_url = section.settings.nav_item_4_dropdown_link_2_url
+                assign dropdown_link_3_title = ""
+                assign dropdown_link_3_url = ""
+                assign dropdown_link_4_title = ""
+                assign dropdown_link_4_url = ""
+              else
+                assign has_dropdown = false
+            endcase
+          %}
+
+          {% if has_dropdown %}
+            <div class='nav-item dropdown-item relative'>
+              <button
+                class='nav-link header-text flex flex-row gap-[10px] items-center hover:opacity-80 transition-opacity'
+                data-dropdown-toggle
+              >
+                {{ link.title }}
+                <img
+                  src='{{ 'dropdown.svg' | asset_url }}'
+                  alt='Dropdown'
+                  width='8'
+                  height='14'
+                  class='dropdown-icon w-[8px] h-[14px] transition-transform duration-200'
+                >
+              </button>
+
+              <!-- Dropdown menu -->
+              <div class='dropdown-menu absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg py-2 min-w-[200px] opacity-0 invisible transform translate-y-2 transition-all duration-200'>
+                {% if dropdown_link_1_title != blank
+                  and dropdown_link_1_url != blank
+                %}
+                  <a
+                    href='{{ dropdown_link_1_url }}'
+                    class='dropdown-link block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
+                  >
+                    {{ dropdown_link_1_title }}
+                  </a>
+                {% endif %}
+                {% if dropdown_link_2_title != blank
+                  and dropdown_link_2_url != blank
+                %}
+                  <a
+                    href='{{ dropdown_link_2_url }}'
+                    class='dropdown-link block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
+                  >
+                    {{ dropdown_link_2_title }}
+                  </a>
+                {% endif %}
+                {% if dropdown_link_3_title != blank
+                  and dropdown_link_3_url != blank
+                %}
+                  <a
+                    href='{{ dropdown_link_3_url }}'
+                    class='dropdown-link block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
+                  >
+                    {{ dropdown_link_3_title }}
+                  </a>
+                {% endif %}
+                {% if dropdown_link_4_title != blank
+                  and dropdown_link_4_url != blank
+                %}
+                  <a
+                    href='{{ dropdown_link_4_url }}'
+                    class='dropdown-link block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
+                  >
+                    {{ dropdown_link_4_title }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          {% else %}
+            <a
+              href='{{ link.url }}'
+              class='nav-link header-text hover:opacity-80 transition-opacity'
+            >
+              {{ link.title }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+
+      <!-- Cart button -->
+      <button
+        class='cart-btn flex flex-row gap-[20px] bg-white knappetikett text-[#171717] p-[20px] py-[15px] rounded-[10px] hover:bg-gray-100 transition-colors relative'
+        data-cart-toggle
+      >
+        kundvagn
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='21'
@@ -52,22 +172,725 @@
         >
           <path d="M2.37325 16.02L1.16926 8.84C0.98726 7.754 0.896261 7.212 1.18826 6.856C1.47926 6.5 2.01525 6.5 3.08624 6.5H17.9141C18.9851 6.5 19.5211 6.5 19.8121 6.856C20.1041 7.212 20.0121 7.754 19.8311 8.84L18.6271 16.02C18.2281 18.4 18.0291 19.589 17.2141 20.295C16.4001 21 15.2261 21 12.8782 21H8.12219C5.77422 21 4.60023 21 3.78623 20.294C2.97124 19.589 2.77224 18.399 2.37325 16.019M16.0001 6.5C16.0001 5.04131 15.4207 3.64236 14.3892 2.61091C13.3578 1.57946 11.9588 1 10.5002 1C9.0415 1 7.64256 1.57946 6.61112 2.61091C5.57968 3.64236 5.00022 5.04131 5.00022 6.5" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        <!-- Cart count badge -->
+        <span
+          class='cart-count absolute -top-2 -right-2 bg-[#171717] text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold opacity-0 scale-0 transition-all duration-200'
+          data-cart-count
+        >
+          0
+        </span>
       </button>
+    </div>
+  </div>
+</header>
+
+<!-- Cart Drawer -->
+<div
+  class='cart-drawer fixed top-0 right-0 h-full w-[450px] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-[9999]'
+  data-cart-drawer
+>
+  <!-- Cart Header -->
+  <div class='cart-header flex items-center justify-between p-6 border-b border-gray-200'>
+    <h2 class='text-2xl font-bold text-[#171717]'>
+      {{ "cart.title" | t | default: "Kundvagn" }}
+    </h2>
+    <button
+      class='cart-close text-gray-500 hover:text-[#171717] transition-colors p-2'
+      data-cart-close
+    >
+      <svg
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path d='M18 6L6 18M6 6L18 18' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Cart Content -->
+  <div class='cart-content flex flex-col h-full'>
+    <!-- Cart Items -->
+    <div class='cart-items flex-1 overflow-y-auto p-6' data-cart-items>
+      <!-- Empty State -->
+      <div class='cart-empty text-center py-12' data-cart-empty>
+        <svg
+          class='mx-auto mb-4 text-gray-300'
+          width='64'
+          height='64'
+          viewBox='0 0 24 24'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path d='M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M17 13H7' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+        </svg>
+        <h3 class='text-lg font-semibold text-gray-600 mb-2'>
+          {{ "cart.empty" | t | default: "Din kundvagn är tom" }}
+        </h3>
+        <p class='text-gray-500 mb-6'>
+          {{
+            "cart.empty_text"
+            | t
+            | default: "Lägg till produkter för att komma igång"
+          }}
+        </p>
+        <button
+          class='cart-continue bg-[#171717] text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors'
+          data-cart-close
+        >
+          {{ "cart.continue_shopping" | t | default: "Fortsätt handla" }}
+        </button>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class='cart-items-list space-y-4' data-cart-items-list>
+        <!-- Items will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Cart Footer -->
+    <div class='cart-footer border-t border-gray-200 p-6 bg-gray-50'>
+      <!-- Subtotal -->
+      <div class='flex justify-between items-center mb-4'>
+        <span class='text-lg font-semibold text-[#171717]'>
+          {{ "cart.subtotal" | t | default: "Delsumma" }}
+        </span>
+        <span class='text-lg font-bold text-[#171717]' data-cart-total>
+          0 kr
+        </span>
+      </div>
+
+      <!-- Checkout Button -->
+      <button
+        class='checkout-btn w-full bg-[#171717] text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors mb-3'
+        onclick="window.location.href='/checkout'"
+      >
+        {{ "cart.checkout" | t | default: "Gå till kassan" }}
+      </button>
+
+      <!-- View Cart Link -->
+      <a
+        href='{{ routes.cart_url }}'
+        class='view-cart-link block text-center text-[#171717] hover:underline transition-colors'
+      >
+        {{ "cart.view_cart" | t | default: "Visa kundvagn" }}
+      </a>
     </div>
   </div>
 </div>
 
+<!-- Cart Overlay -->
+<div
+  class='cart-overlay fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 z-[9998]'
+  data-cart-overlay
+></div>
+
 {% stylesheet %}
+  .header-section {
+    --header-text-color: white;
+    --header-bg: linear-gradient(0deg, rgba(23, 23, 23, 0) 0%, #171717 100%);
+    --logo-white-opacity: 1;
+    --logo-dark-opacity: 0;
+  }
+
+  .header-section.scrolled {
+    --header-text-color: #171717;
+    --header-bg: white;
+    --logo-white-opacity: 0;
+    --logo-dark-opacity: 1;
+  }
+
+  .header-gradient {
+    background: var(--header-bg);
+  }
+
+  .header-nav {
+    color: var(--header-text-color);
+  }
+
+  .header-text {
+    color: var(--header-text-color) !important;
+  }
+
+  .logo-white {
+    opacity: var(--logo-white-opacity);
+  }
+
+  .logo-dark {
+    opacity: var(--logo-dark-opacity);
+  }
+
+  .header-logo {
+    position: relative;
+  }
+
+  /* Dropdown styles */
+  .dropdown-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-item:hover .dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-link:hover {
+    background-color: #f3f4f6;
+  }
+
+  /* Cart Drawer Styles */
+  .cart-drawer.open {
+    transform: translateX(0);
+  }
+
+  .cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .cart-count.show {
+    opacity: 1;
+    scale: 1;
+  }
+
+  /* Cart Item Styles */
+  .cart-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f9fafb;
+  }
+
+  .cart-item-details {
+    flex: 1;
+  }
+
+  .cart-item-title {
+    font-weight: 600;
+    color: #171717;
+    margin-bottom: 4px;
+  }
+
+  .cart-item-variant {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+
+  .cart-item-price {
+    font-weight: 600;
+    color: #171717;
+  }
+
+  .cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .quantity-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .quantity-btn:hover {
+    border-color: #171717;
+    background: #f9fafb;
+  }
+
+  .quantity-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: 600;
+  }
+
+  .cart-item-remove {
+    color: #ef4444;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  .cart-item-remove:hover {
+    color: #dc2626;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .header-topbar {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .header-topbar .flex {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .header-nav {
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    .layout {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .header-nav {
+      display: none;
+    }
+
+    .cart-btn {
+      padding: 15px;
+      gap: 15px;
+    }
+
+    .cart-drawer {
+      width: 100vw;
+      max-width: 400px;
+    }
+  }
 {% endstylesheet %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('[data-header]');
+    let lastScrollY = window.scrollY;
+
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
+
+      // Add scrolled class when user scrolls down
+      if (currentScrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    // Throttle scroll events for performance
+    let ticking = false;
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(handleScroll);
+        ticking = true;
+        setTimeout(() => {
+          ticking = false;
+        }, 10);
+      }
+    }
+
+    window.addEventListener('scroll', requestTick);
+
+    // Handle dropdown interactions
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    dropdownItems.forEach((item) => {
+      const button = item.querySelector('[data-dropdown-toggle]');
+      const menu = item.querySelector('.dropdown-menu');
+
+      // Handle keyboard navigation
+      button.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.classList.toggle('active');
+        }
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!item.contains(e.target)) {
+          item.classList.remove('active');
+        }
+      });
+    });
+
+    // Cart functionality
+    const cartToggle = document.querySelector('[data-cart-toggle]');
+    const cartDrawer = document.querySelector('[data-cart-drawer]');
+    const cartOverlay = document.querySelector('[data-cart-overlay]');
+    const cartClose = document.querySelector('[data-cart-close]');
+    const cartCount = document.querySelector('[data-cart-count]');
+    const cartTotal = document.querySelector('[data-cart-total]');
+    const cartEmpty = document.querySelector('[data-cart-empty]');
+    const cartItemsList = document.querySelector('[data-cart-items-list]');
+
+    // Open cart drawer
+    function openCart() {
+      console.log('Opening cart drawer');
+      cartDrawer.classList.add('open');
+      cartOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      loadCartData();
+    }
+
+    // Close cart drawer
+    function closeCart() {
+      cartDrawer.classList.remove('open');
+      cartOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Load cart data from Shopify
+    async function loadCartData() {
+      try {
+        const response = await fetch('/cart.js');
+        const cart = await response.json();
+        updateCartUI(cart);
+      } catch (error) {
+        console.error('Error loading cart:', error);
+      }
+    }
+
+    // Update cart UI
+    function updateCartUI(cart) {
+      // Update cart count
+      const itemCount = cart.item_count;
+      cartCount.textContent = itemCount;
+
+      if (itemCount > 0) {
+        cartCount.classList.add('show');
+        cartEmpty.style.display = 'none';
+        cartItemsList.style.display = 'block';
+      } else {
+        cartCount.classList.remove('show');
+        cartEmpty.style.display = 'block';
+        cartItemsList.style.display = 'none';
+      }
+
+      // Update total
+      cartTotal.textContent = formatMoney(cart.total_price);
+
+      // Update items list
+      cartItemsList.innerHTML = cart.items
+        .map((item) => createCartItemHTML(item))
+        .join('');
+
+      // Add event listeners to quantity buttons
+      addQuantityListeners();
+    }
+
+    // Create cart item HTML
+    function createCartItemHTML(item) {
+      return `
+         <div class="cart-item" data-key="${item.key}">
+           <img src="${item.image}" alt="${item.title}" class="cart-item-image" width="80" height="80">
+           <div class="cart-item-details">
+             <div class="cart-item-title">${item.product_title}</div>
+             ${item.variant_title ? `<div class="cart-item-variant">${item.variant_title}</div>` : ''}
+             <div class="cart-item-price">${formatMoney(item.final_line_price)}</div>
+             <div class="cart-item-quantity">
+               <button class="quantity-btn" data-action="decrease" data-key="${item.key}">−</button>
+               <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-key="${item.key}">
+               <button class="quantity-btn" data-action="increase" data-key="${item.key}">+</button>
+             </div>
+             <button class="cart-item-remove" data-key="${item.key}">Ta bort</button>
+           </div>
+         </div>
+       `;
+    }
+
+    // Add quantity change listeners
+    function addQuantityListeners() {
+      const quantityBtns = cartItemsList.querySelectorAll('.quantity-btn');
+      const quantityInputs = cartItemsList.querySelectorAll('.quantity-input');
+      const removeBtns = cartItemsList.querySelectorAll('.cart-item-remove');
+
+      quantityBtns.forEach((btn) => {
+        btn.addEventListener('click', async (e) => {
+          const key = e.target.dataset.key;
+          const action = e.target.dataset.action;
+          const input = cartItemsList.querySelector(`input[data-key="${key}"]`);
+          let quantity = parseInt(input.value);
+
+          if (action === 'increase') {
+            quantity++;
+          } else if (action === 'decrease' && quantity > 1) {
+            quantity--;
+          }
+
+          await updateCartItem(key, quantity);
+        });
+      });
+
+      quantityInputs.forEach((input) => {
+        input.addEventListener('change', async (e) => {
+          const key = e.target.dataset.key;
+          const quantity = Math.max(1, parseInt(e.target.value));
+          await updateCartItem(key, quantity);
+        });
+      });
+
+      removeBtns.forEach((btn) => {
+        btn.addEventListener('click', async (e) => {
+          const key = e.target.dataset.key;
+          await updateCartItem(key, 0);
+        });
+      });
+    }
+
+    // Update cart item quantity
+    async function updateCartItem(key, quantity) {
+      try {
+        const response = await fetch('/cart/change.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            id: key,
+            quantity: quantity,
+          }),
+        });
+
+        const cart = await response.json();
+        updateCartUI(cart);
+      } catch (error) {
+        console.error('Error updating cart:', error);
+      }
+    }
+
+    // Format money
+    function formatMoney(cents) {
+      return (cents / 100).toLocaleString('sv-SE', {
+        style: 'currency',
+        currency: 'SEK',
+      });
+    }
+
+    // Event listeners
+    cartToggle.addEventListener('click', openCart);
+    cartClose.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    // Close cart with escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && cartDrawer.classList.contains('open')) {
+        closeCart();
+      }
+    });
+
+    // Load initial cart data
+    loadCartData();
+  });
+{% endjavascript %}
 
 {% schema %}
 {
-  "name": "t:general.header",
+  "name": "t:sections.header.name",
+  "tag": "header",
+  "class": "header-section",
   "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.navigation.header"
+    },
     {
       "type": "link_list",
       "id": "menu",
-      "label": "t:labels.menu"
+      "label": "t:sections.header.settings.menu.label",
+      "info": "t:sections.header.settings.menu.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.dropdown_config.header"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.header.settings.dropdown_config.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_item_1_dropdown",
+      "label": "t:sections.header.settings.nav_item_1_dropdown.label",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "nav_item_1_dropdown_link_1_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_1_dropdown_link_1_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
+    },
+    {
+      "type": "text",
+      "id": "nav_item_1_dropdown_link_2_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_1_dropdown_link_2_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_item_2_dropdown",
+      "label": "t:sections.header.settings.nav_item_2_dropdown.label",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "nav_item_2_dropdown_link_1_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_2_dropdown_link_1_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
+    },
+    {
+      "type": "text",
+      "id": "nav_item_2_dropdown_link_2_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_2_dropdown_link_2_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_item_3_dropdown",
+      "label": "t:sections.header.settings.nav_item_3_dropdown.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "nav_item_3_dropdown_link_1_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "default": "Solceller",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_3_dropdown_link_1_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "text",
+      "id": "nav_item_3_dropdown_link_2_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "default": "Batterilösningar",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_3_dropdown_link_2_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "text",
+      "id": "nav_item_3_dropdown_link_3_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "default": "Värmepumpar",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_3_dropdown_link_3_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "text",
+      "id": "nav_item_3_dropdown_link_4_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "default": "Laddboxar",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_3_dropdown_link_4_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_item_4_dropdown",
+      "label": "t:sections.header.settings.nav_item_4_dropdown.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "nav_item_4_dropdown_link_1_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "default": "FAQ",
+      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_4_dropdown_link_1_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
+    },
+    {
+      "type": "text",
+      "id": "nav_item_4_dropdown_link_2_title",
+      "label": "t:sections.header.settings.dropdown_link_title",
+      "default": "Kontakt",
+      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_4_dropdown_link_2_url",
+      "label": "t:sections.header.settings.dropdown_link_url",
+      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
     }
   ]
 }

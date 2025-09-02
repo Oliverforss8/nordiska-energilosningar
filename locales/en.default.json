@@ -26,7 +26,12 @@
     "checkout": "Checkout",
     "title": "Cart",
     "update": "Update",
-    "remove": "Remove"
+    "remove": "Remove",
+    "empty": "Your cart is empty",
+    "empty_text": "Add products to get started",
+    "continue_shopping": "Continue shopping",
+    "subtotal": "Subtotal",
+    "view_cart": "View cart"
   },
   "customers": {
     "login": {
@@ -67,7 +72,10 @@
   },
   "general": {
     "page": "Page",
-    "vara_losningar": "Våra lösningar"
+    "vara_losningar": "Våra lösningar",
+    "privatperson": "Privatperson",
+    "foretag": "Företag",
+    "header": "Header"
   },
   "sections": {
     "banner_with_products": {
@@ -175,6 +183,36 @@
             }
           }
         }
+      }
+    },
+    "header": {
+      "name": "Header",
+      "settings": {
+        "navigation": {
+          "header": "Navigation Settings"
+        },
+        "menu": {
+          "label": "Main menu",
+          "info": "Select the menu to display in the header"
+        },
+        "dropdown_config": {
+          "header": "Dropdown Configuration",
+          "info": "Configure which navigation items should have dropdown menus"
+        },
+        "nav_item_1_dropdown": {
+          "label": "Enable dropdown for first menu item"
+        },
+        "nav_item_2_dropdown": {
+          "label": "Enable dropdown for second menu item"
+        },
+        "nav_item_3_dropdown": {
+          "label": "Enable dropdown for third menu item"
+        },
+        "nav_item_4_dropdown": {
+          "label": "Enable dropdown for fourth menu item"
+        },
+        "dropdown_link_title": "Dropdown link title",
+        "dropdown_link_url": "Dropdown link URL"
       }
     }
   }
