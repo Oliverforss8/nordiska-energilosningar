@@ -88,7 +88,7 @@
             "title": "Laddbox 1",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/produkt"
           }
         },
         "product_card_PCcc9L": {
@@ -98,7 +98,7 @@
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/produkt"
           }
         },
         "product_card_CwcHAR": {
@@ -108,7 +108,7 @@
             "title": "Laddbox 3",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/produkt"
           }
         }
       },
