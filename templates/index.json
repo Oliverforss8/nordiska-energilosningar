@@ -28,14 +28,14 @@
           "type": "card",
           "settings": {
             "heading": "Solceller",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "description": "Installera solceller som ger dig billig och ren el direkt från solen.",
             "link": ""
           }
         },
         "card_jqt4VF": {
           "type": "card",
           "settings": {
-            "heading": "Energilagring",
+            "heading": "Batteri",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "link": ""
           }
@@ -44,7 +44,7 @@
           "type": "card",
           "settings": {
             "heading": "Laddbox",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "description": "Ladda din fullt el eller hybrid drivna bil hemma utan krångel.",
             "link": ""
           }
         }
