@@ -12,9 +12,21 @@
     "main": {
       "type": "page",
       "settings": {}
+    },
+    "hero_Fxj8XJ": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/bild_nor.png",
+        "heading": "Welcome to our site",
+        "subheading": "Discover amazing products and services",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_Fxj8XJ"
   ]
 }
