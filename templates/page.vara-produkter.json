@@ -11,10 +11,157 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
+    },
+    "hero_lower_UegThw": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
+      "settings": {
+        "background_image": "shopify://shop_images/image_13.png",
+        "overlay_opacity": 10,
+        "heading": "Upptäck våra produkter",
+        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
+        "button_text": "Se våra paket",
+        "button_url": ""
+      }
+    },
+    "grid_omraden_VThqFD": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Effektiva energilösningar för framtidens fastigheter",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_image": "shopify://shop_images/image_16.png",
+        "card_1_button_text": "Batterilösningar",
+        "card_1_button_link": "shopify://pages/vara-batterilosningar",
+        "card_2_image": "shopify://shop_images/image_15.png",
+        "card_2_button_text": "Solceller",
+        "card_2_button_link": "shopify://pages/vara-solceller",
+        "card_3_image": "shopify://shop_images/image_7.png",
+        "card_3_button_text": "Värmepumpar",
+        "card_3_button_link": "shopify://pages/vara-varmepumpar",
+        "card_4_image": "shopify://shop_images/image_14.png",
+        "card_4_button_text": "Laddboxar",
+        "card_4_button_link": "shopify://pages/vara-laddboxar",
+        "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+      }
+    },
+    "banner_med_3_produkter_irmhGn": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_rbGF7n": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": ""
+          }
+        },
+        "product_card_TL6MhL": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": ""
+          }
+        },
+        "product_card_TVGjXb": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "Laddbox 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_rbGF7n",
+        "product_card_TL6MhL",
+        "product_card_TVGjXb"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "overlay_opacity": 0,
+        "header_button_text": "Läs mer",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
+      }
+    },
+    "banner_med_3_produkter_AhTjN7": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_FyyC7A": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_tMxjy9": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_rwDpXn": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddboxar 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_FyyC7A",
+        "product_card_tMxjy9",
+        "product_card_rwDpXn"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/image_11.png",
+        "overlay_opacity": 30,
+        "header_button_text": "Solceller",
+        "header_button_url": "",
+        "heading": "Vill du veta mer om solceller?",
+        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
+        "primary_button_text": "Läs mer",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_lower_UegThw",
+    "grid_omraden_VThqFD",
+    "banner_med_3_produkter_irmhGn",
+    "banner_med_3_produkter_AhTjN7"
   ]
 }
