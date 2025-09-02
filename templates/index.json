@@ -78,46 +78,58 @@
         "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
       }
     },
-    "banner_med_2_produkter_rt6Mmk": {
-      "type": "banner-med-2-produkter",
+    "banner_med_3_produkter_D79ei6": {
+      "type": "banner-med-3-produkter",
       "blocks": {
-        "product_card_gNYVgn": {
+        "product_card_HAB8jq": {
           "type": "product_card",
           "settings": {
             "product": "produkt",
             "title": "Laddbox 1",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://pages/contact"
+            "learn_more_url": ""
           }
         },
-        "product_card_4YRa9U": {
+        "product_card_PCcc9L": {
           "type": "product_card",
           "settings": {
             "product": "produkt",
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://pages/contact"
+            "learn_more_url": ""
+          }
+        },
+        "product_card_CwcHAR": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": ""
           }
         }
       },
       "block_order": [
-        "product_card_gNYVgn",
-        "product_card_4YRa9U"
+        "product_card_HAB8jq",
+        "product_card_PCcc9L",
+        "product_card_CwcHAR"
       ],
-      "name": "Banner med 2 produkter",
+      "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "banner_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/bild_nor.png",
-        "header_button_text": "Läs mer",
+        "background_image": "shopify://shop_images/image_14.png",
+        "overlay_opacity": 25,
+        "header_button_text": "Laddboxar",
         "header_button_url": "",
         "heading": "Smarta elbilsladdare för alla behov",
         "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Privat",
+        "primary_button_text": "Upptäck",
         "primary_button_url": "",
-        "secondary_button_text": "Företag",
+        "secondary_button_text": "Läs mer",
         "secondary_button_url": ""
       }
     },
@@ -297,7 +309,7 @@
     "hero_HUEAy6",
     "lankar_kHPxWD",
     "grid_omraden_zBziiH",
-    "banner_med_2_produkter_rt6Mmk",
+    "banner_med_3_produkter_D79ei6",
     "text_sektion_RVLtbc",
     "banner_bild_Tr8FhV",
     "bild_och_text_TMmxYg",
