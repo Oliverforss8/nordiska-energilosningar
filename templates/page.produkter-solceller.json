@@ -102,8 +102,8 @@
         "text": "<p>Serviceavtal för trygg och långsiktig drift. Oavsett om din installation är utförd av oss eller av en annan leverantör kan du teckna ett serviceavtal som säkerställer långsiktig trygghet och optimal funktion i ditt system.<br/><br/>När installationsgarantin löper ut erbjuder vi ett extra skydd – särskilt värdefullt för bostadsrättsföreningar, företag och privata fastighetsägare.<br/>Våra flexibla serviceavtal är utformade för att ge dig ökad säkerhet, driftsäkerhet och maximal avkastning på din investering.</p>",
         "image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
         "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
+        "image_button_text": "Teckna avtal",
+        "image_button_link": "shopify://pages/contact",
         "custom_id": ""
       }
     },
