@@ -7,9 +7,6 @@
 }
 
 /* Smooth scroll setup for Lenis */
-html.lenis {
-  height: auto;
-}
 
 .lenis.lenis-smooth {
   scroll-behavior: auto;
@@ -20,12 +17,6 @@ html.lenis {
 }
 
 /* Enhanced smoothness optimizations */
-* {
-  /* Ensure all elements use hardware acceleration for smoother animations */
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
 
 body {
   /* Remove any default scroll behavior that might interfere */
@@ -178,4 +169,18 @@ p {
   outline: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+.header {
+  font-family: var(--font-halyard--family);
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .header {
+    font-size: 16px;
+  }
 }

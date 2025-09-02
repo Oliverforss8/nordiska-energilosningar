@@ -33,16 +33,16 @@
   endunless
 
   if url
-    assign wrapper = 'a'
+    assign wrapper = "a"
   else
-    assign wrapper = 'div'
+    assign wrapper = "div"
   endif
 %}
 
 <{{ wrapper }}
-  class="image {{ class }}"
+  class='image {{ class }}'
   {% if url %}
-    href="{{ url }}"
+    href='{{ url }}'
   {% endif %}
 >
   {{ image | image_url: width: width, height: height, crop: crop | image_tag }}
