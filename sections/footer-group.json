@@ -29,37 +29,37 @@
         "link_column_c8LkD9": {
           "type": "link_column",
           "settings": {
-            "heading": "",
-            "link_1_text": "",
-            "link_1_url": "",
-            "link_2_text": "",
-            "link_2_url": "",
-            "link_3_text": "",
-            "link_3_url": ""
+            "heading": "Energilagring",
+            "link_1_text": "Varför energilagra?",
+            "link_1_url": "shopify://products/produkt",
+            "link_2_text": "Privatperson",
+            "link_2_url": "shopify://products/produkt",
+            "link_3_text": "Företag",
+            "link_3_url": "shopify://products/produkt"
           }
         },
         "link_column_hnndN3": {
           "type": "link_column",
           "settings": {
-            "heading": "",
-            "link_1_text": "",
-            "link_1_url": "",
-            "link_2_text": "",
-            "link_2_url": "",
-            "link_3_text": "",
-            "link_3_url": ""
+            "heading": "Laddbox",
+            "link_1_text": "Beställ laddbox",
+            "link_1_url": "shopify://products/produkt",
+            "link_2_text": "Laddbox villa",
+            "link_2_url": "shopify://pages/contact",
+            "link_3_text": "Laddbox förerag",
+            "link_3_url": "shopify://pages/contact"
           }
         },
         "link_column_DmRxLw": {
           "type": "link_column",
           "settings": {
-            "heading": "",
-            "link_1_text": "",
-            "link_1_url": "",
-            "link_2_text": "",
-            "link_2_url": "",
-            "link_3_text": "",
-            "link_3_url": ""
+            "heading": "Serviceavtal",
+            "link_1_text": "3 mån",
+            "link_1_url": "shopify://pages/contact",
+            "link_2_text": "12 mån",
+            "link_2_url": "shopify://products/produkt",
+            "link_3_text": "24 mån",
+            "link_3_url": "shopify://products/produkt"
           }
         },
         "bottom_link_column_FTKD9V": {
