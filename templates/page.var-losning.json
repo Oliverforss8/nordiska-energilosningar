@@ -11,11 +11,12 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
     },
-    "hero_Fxj8XJ": {
-      "type": "hero",
-      "name": "Hero",
+    "hero_lower_pKeggt": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
       "settings": {
         "background_image": "shopify://shop_images/bild_nor.png",
         "heading": "Welcome to our site",
@@ -23,10 +24,165 @@
         "button_text": "Våra energilösningar",
         "button_url": ""
       }
+    },
+    "lankar_Jk8pJC": {
+      "type": "lankar",
+      "blocks": {
+        "card_p8CYWC": {
+          "type": "card",
+          "settings": {
+            "heading": "Solceller",
+            "description": "Kort beskrivning",
+            "link": ""
+          }
+        },
+        "card_JPXbyV": {
+          "type": "card",
+          "settings": {
+            "heading": "Kort rubrik",
+            "description": "Kort beskrivning",
+            "link": ""
+          }
+        },
+        "card_EcK4xB": {
+          "type": "card",
+          "settings": {
+            "heading": "Kort rubrik",
+            "description": "Kort beskrivning",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_p8CYWC",
+        "card_JPXbyV",
+        "card_EcK4xB"
+      ],
+      "name": "Länkar sektion",
+      "settings": {}
+    },
+    "text_sektion_HDUJAE": {
+      "type": "text-sektion",
+      "name": "Text sektion",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "button_text": "Knapp text",
+        "button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_DpEExF": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "background_color": "#000000",
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_irHa6L": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_3Vj8Aw": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_med_lankar_yK4YkV": {
+      "type": "banner-med-lankar",
+      "blocks": {
+        "card_LKcQbi": {
+          "type": "card",
+          "settings": {
+            "heading": "Kort rubrik",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_YWNwd6": {
+          "type": "card",
+          "settings": {
+            "heading": "Kort rubrik",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_MA7Rbi": {
+          "type": "card",
+          "settings": {
+            "heading": "Kort rubrik",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "card_LKcQbi",
+        "card_YWNwd6",
+        "card_MA7Rbi"
+      ],
+      "name": "Banner med länkar",
+      "settings": {
+        "background_color": "#171717",
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Rubrik",
+        "description": "Beskrivning",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
+    },
+    "kontakt_form_394yiU": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
-    "hero_Fxj8XJ"
+    "hero_lower_pKeggt",
+    "lankar_Jk8pJC",
+    "text_sektion_HDUJAE",
+    "banner_bild_DpEExF",
+    "bild_och_text_irHa6L",
+    "bild_och_text_3Vj8Aw",
+    "banner_med_lankar_yK4YkV",
+    "kontakt_form_394yiU"
   ]
 }
