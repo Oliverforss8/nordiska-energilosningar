@@ -3,7 +3,7 @@
 {% endcomment %}
 
 <footer
-  class='w-full rounded-t-[25px] bg-[#F3F1E8'
+  class='w-full bg-[#F3F1E8] rounded-t-[25px] '
 >
   <div class='w-full layout py-[80px]'>
     <div class='grid w-full grid-cols-4 gap-[40px]'>
@@ -56,6 +56,71 @@
             </div>
         {% endcase %}
       {% endfor %}
+    </div>
+    <div class=' h-[1px] bg-[#171717] w-full my-[50px]'></div>
+    <div class='grid w-full grid-cols-4 gap-[40px]'>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when "bottom_link_column" %}
+            <div
+              class='col-span-2 flex flex-col'
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.heading != blank %}
+                <div
+                  class='headline1 text-[#171717] text-[40px]'
+                >
+                  {{ block.settings.heading }}
+                </div>
+              {% endif %}
+              <div class=' grid grid-cols-2 gap-[20px] pt-[50px] '>
+                {% for i in (1..4) %}
+                  {% assign link_text = "link_" | append: i | append: "_text" %}
+                  {% assign link_url = "link_" | append: i | append: "_url" %}
+                  {% if block.settings[link_text] != blank
+                    and block.settings[link_url] != blank
+                  %}
+                    <div>
+                      <a
+                        href='{{ block.settings[link_url] }}'
+                        class='flex items-center flex-row gap-[20px] no-underline'
+                      >
+                        <div class='flex items-center justify-center'>
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='23'
+                            height='18'
+                            viewBox='0 0 23 18'
+                            fill='none'
+                          >
+                            <path d="M1.33337 8.82609H21.3334M21.3334 8.82609L13.5073 1M21.3334 8.82609L13.5073 16.6522" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div
+                          class='body1 text-[#171717] text-[20px]'
+                        >
+                          {{ block.settings[link_text] }}
+                        </div>
+                      </a>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    <div class=' justify-between items-center flex flex-row pt-[60px]'>
+      <div>
+        <img
+          src='{{ 'logga.svg' | asset_url }}'
+          alt='Logo'
+          class='w-auto h-[53px]'
+        >
+      </div>
+      <div class=' headline1 text-[#171717] text-[24px]'>
+        Nordiska Energilösningar Sverige AB I 559510-6690
+      </div>
     </div>
   </div>
 </footer>
@@ -122,9 +187,60 @@
           "label": "Länk 3 - URL"
         }
       ]
+    },
+    {
+      "type": "bottom_link_column",
+      "name": "Nedre länk kolumn",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Titel"
+        },
+        {
+          "type": "text",
+          "id": "link_1_text",
+          "label": "Länk 1 - Text"
+        },
+        {
+          "type": "url",
+          "id": "link_1_url",
+          "label": "Länk 1 - URL"
+        },
+        {
+          "type": "text",
+          "id": "link_2_text",
+          "label": "Länk 2 - Text"
+        },
+        {
+          "type": "url",
+          "id": "link_2_url",
+          "label": "Länk 2 - URL"
+        },
+        {
+          "type": "text",
+          "id": "link_3_text",
+          "label": "Länk 3 - Text"
+        },
+        {
+          "type": "url",
+          "id": "link_3_url",
+          "label": "Länk 3 - URL"
+        },
+        {
+          "type": "text",
+          "id": "link_4_text",
+          "label": "Länk 4 - Text"
+        },
+        {
+          "type": "url",
+          "id": "link_4_url",
+          "label": "Länk 4 - URL"
+        }
+      ]
     }
   ],
-  "max_blocks": 4,
+  "max_blocks": 6,
   "presets": [
     {
       "name": "Footer, Över länkar",
@@ -132,7 +248,9 @@
         { "type": "link_column" },
         { "type": "link_column" },
         { "type": "link_column" },
-        { "type": "link_column" }
+        { "type": "link_column" },
+        { "type": "bottom_link_column" },
+        { "type": "bottom_link_column" }
       ]
     }
   ]
