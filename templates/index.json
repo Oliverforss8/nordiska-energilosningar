@@ -235,7 +235,7 @@
             "heading": "Kort rubrik",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         },
@@ -245,7 +245,7 @@
             "heading": "Kort rubrik",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         },
@@ -255,7 +255,7 @@
             "heading": "Kort rubrik",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         }
@@ -278,6 +278,15 @@
         "secondary_button_text": "",
         "secondary_button_url": ""
       }
+    },
+    "kontakt_form_Ae7RmC": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "Kontaktformulär",
+        "header_button_url": "shopify://products/produkt"
+      }
     }
   },
   "order": [
@@ -290,6 +299,7 @@
     "bild_och_text_TMmxYg",
     "banner_med_3_produkter_ThPDRM",
     "bild_och_text_NQhHiK",
-    "banner_med_lankar_Vx7qa6"
+    "banner_med_lankar_Vx7qa6",
+    "kontakt_form_Ae7RmC"
   ]
 }
