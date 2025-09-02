@@ -29,7 +29,7 @@
           "settings": {
             "heading": "Solceller",
             "description": "Installera solceller som ger dig billig och ren el direkt från solen.",
-            "link": ""
+            "link": "shopify://pages/vara-solceller"
           }
         },
         "card_jqt4VF": {
@@ -37,7 +37,7 @@
           "settings": {
             "heading": "Batteri",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": ""
+            "link": "shopify://pages/vara-batterilosningar"
           }
         },
         "card_UYi6He": {
@@ -45,7 +45,7 @@
           "settings": {
             "heading": "Laddbox",
             "description": "Ladda din fullt el eller hybrid drivna bil hemma utan krångel.",
-            "link": ""
+            "link": "shopify://pages/vara-laddboxar"
           }
         }
       },
