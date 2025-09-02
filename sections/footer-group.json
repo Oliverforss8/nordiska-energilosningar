@@ -65,15 +65,15 @@
         "bottom_link_column_FTKD9V": {
           "type": "bottom_link_column",
           "settings": {
-            "heading": "",
-            "link_1_text": "",
-            "link_1_url": "",
-            "link_2_text": "",
-            "link_2_url": "",
-            "link_3_text": "",
-            "link_3_url": "",
-            "link_4_text": "",
-            "link_4_url": ""
+            "heading": "Meny",
+            "link_1_text": "Varför energilagra?",
+            "link_1_url": "shopify://products/produkt",
+            "link_2_text": "Varför energilagra?",
+            "link_2_url": "shopify://products/produkt",
+            "link_3_text": "Privatperson",
+            "link_3_url": "shopify://products/produkt",
+            "link_4_text": "Privatperson",
+            "link_4_url": "shopify://products/produkt"
           }
         },
         "bottom_link_column_QNGA3G": {
