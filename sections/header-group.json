@@ -14,7 +14,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "menu": "",
+        "menu": "meny-privat",
         "nav_item_1_dropdown": false,
         "nav_item_1_dropdown_link_1_title": "",
         "nav_item_1_dropdown_link_1_url": "",
