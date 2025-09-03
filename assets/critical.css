@@ -22,6 +22,7 @@ body {
   /* Remove any default scroll behavior that might interfere */
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
 }
 
 /* Smooth transitions for all potentially animated elements */
