@@ -35,10 +35,10 @@
         "nav_item_3_dropdown_link_4_title": "Värmepumpar",
         "nav_item_3_dropdown_link_4_url": "shopify://pages/vara-varmepumpar",
         "nav_item_4_dropdown": true,
-        "nav_item_4_dropdown_link_1_title": "FAQ",
-        "nav_item_4_dropdown_link_1_url": "",
-        "nav_item_4_dropdown_link_2_title": "Kontakt",
-        "nav_item_4_dropdown_link_2_url": ""
+        "nav_item_4_dropdown_link_1_title": "Support",
+        "nav_item_4_dropdown_link_1_url": "shopify://pages/support-om-oss",
+        "nav_item_4_dropdown_link_2_title": "Om oss",
+        "nav_item_4_dropdown_link_2_url": "shopify://pages/support-om-oss"
       }
     }
   },
