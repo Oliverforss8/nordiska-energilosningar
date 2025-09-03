@@ -180,8 +180,8 @@
         "product_card_J3R9TJ": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
-            "title": "Laddbox 1",
+            "product": "solceller-1",
+            "title": "Solcell 1",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
@@ -190,8 +190,8 @@
         "product_card_wQdkby": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
-            "title": "Laddbox 2",
+            "product": "solceller-1",
+            "title": "Solcell 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
@@ -200,8 +200,8 @@
         "product_card_XGk6eH": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
-            "title": "Laddbox 3",
+            "product": "solceller-1",
+            "title": "Solcell 3",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
