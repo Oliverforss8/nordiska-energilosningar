@@ -18,7 +18,7 @@
       "type": "hero",
       "name": "Hero",
       "settings": {
-        "background_image": "shopify://shop_images/image_17.png",
+        "background_image": "shopify://shop_images/test_for_hero.png",
         "overlay_opacity": 20,
         "heading": "Nu hamnade du fel...",
         "subheading": "Du hittade en sida som än inte är aktiv",
