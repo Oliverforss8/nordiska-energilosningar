@@ -13,10 +13,36 @@
   "sections": {
     "header": {
       "type": "header",
-      "settings": {}
+      "settings": {
+        "menu": "",
+        "nav_item_1_dropdown": false,
+        "nav_item_1_dropdown_link_1_title": "",
+        "nav_item_1_dropdown_link_1_url": "",
+        "nav_item_1_dropdown_link_2_title": "",
+        "nav_item_1_dropdown_link_2_url": "",
+        "nav_item_2_dropdown": false,
+        "nav_item_2_dropdown_link_1_title": "",
+        "nav_item_2_dropdown_link_1_url": "",
+        "nav_item_2_dropdown_link_2_title": "",
+        "nav_item_2_dropdown_link_2_url": "",
+        "nav_item_3_dropdown": true,
+        "nav_item_3_dropdown_link_1_title": "Solceller",
+        "nav_item_3_dropdown_link_1_url": "shopify://pages/vara-solceller",
+        "nav_item_3_dropdown_link_2_title": "Batterilösningar",
+        "nav_item_3_dropdown_link_2_url": "shopify://pages/vara-batterilosningar",
+        "nav_item_3_dropdown_link_3_title": "Värmepumpar",
+        "nav_item_3_dropdown_link_3_url": "",
+        "nav_item_3_dropdown_link_4_title": "Laddboxar",
+        "nav_item_3_dropdown_link_4_url": "",
+        "nav_item_4_dropdown": true,
+        "nav_item_4_dropdown_link_1_title": "FAQ",
+        "nav_item_4_dropdown_link_1_url": "",
+        "nav_item_4_dropdown_link_2_title": "Kontakt",
+        "nav_item_4_dropdown_link_2_url": ""
+      }
     }
   },
   "order": [
     "header"
-  ],
+  ]
 }
