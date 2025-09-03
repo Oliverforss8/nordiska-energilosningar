@@ -366,6 +366,14 @@
   margin-top: 0.75rem
 }
 
+.mt-\[50px\] {
+  margin-top: 50px
+}
+
+.mt-\[-50px\] {
+  margin-top: -50px
+}
+
 .block {
   display: block
 }
@@ -468,6 +476,14 @@
 
 .h-3 {
   height: 0.75rem
+}
+
+.h-\[50px\] {
+  height: 50px
+}
+
+.h-\[30px\] {
+  height: 30px
 }
 
 .min-h-screen {
@@ -894,6 +910,16 @@
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover
+}
+
+.object-left-top {
+  -o-object-position: left top;
+     object-position: left top
+}
+
+.object-top {
+  -o-object-position: top;
+     object-position: top
 }
 
 .p-6 {
