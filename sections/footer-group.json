@@ -17,37 +17,37 @@
         "link_column_atybCq": {
           "type": "link_column",
           "settings": {
-            "heading": "Solceller",
-            "link_1_text": "Beställ solceller",
-            "link_1_url": "shopify://products/produkt",
-            "link_2_text": "Våra solceller",
-            "link_2_url": "shopify://products/produkt",
-            "link_3_text": "Varför ha solceller?",
-            "link_3_url": "shopify://products/produkt"
-          }
-        },
-        "link_column_c8LkD9": {
-          "type": "link_column",
-          "settings": {
-            "heading": "Energilagring",
-            "link_1_text": "Varför energilagra?",
-            "link_1_url": "shopify://products/produkt",
-            "link_2_text": "Privatperson",
-            "link_2_url": "shopify://products/produkt",
-            "link_3_text": "Företag",
-            "link_3_url": "shopify://products/produkt"
+            "heading": "Vår lösning",
+            "link_1_text": "Solenergi",
+            "link_1_url": "shopify://pages/var-losning",
+            "link_2_text": "Lagra energi",
+            "link_2_url": "shopify://pages/vara-batterilosningar",
+            "link_3_text": "Värmelösning",
+            "link_3_url": "shopify://pages/vara-varmepumpar"
           }
         },
         "link_column_hnndN3": {
           "type": "link_column",
           "settings": {
-            "heading": "Laddbox",
-            "link_1_text": "Beställ laddbox",
+            "heading": "Privatperson",
+            "link_1_text": "Solceller",
             "link_1_url": "shopify://products/produkt",
-            "link_2_text": "Laddbox villa",
+            "link_2_text": "Batteri",
             "link_2_url": "shopify://pages/contact",
-            "link_3_text": "Laddbox förerag",
+            "link_3_text": "Laddbox",
             "link_3_url": "shopify://pages/contact"
+          }
+        },
+        "link_column_c8LkD9": {
+          "type": "link_column",
+          "settings": {
+            "heading": "Företag",
+            "link_1_text": "Företagsfastighet",
+            "link_1_url": "shopify://pages/vara-solceller",
+            "link_2_text": "Bostadsrättsförening",
+            "link_2_url": "shopify://pages/vara-batterilosningar",
+            "link_3_text": "Lantbruk",
+            "link_3_url": "shopify://pages/vara-varmepumpar"
           }
         },
         "link_column_DmRxLw": {
@@ -65,39 +65,39 @@
         "bottom_link_column_FTKD9V": {
           "type": "bottom_link_column",
           "settings": {
-            "heading": "Meny",
-            "link_1_text": "Varför energilagra?",
-            "link_1_url": "shopify://products/produkt",
-            "link_2_text": "Varför energilagra?",
-            "link_2_url": "shopify://products/produkt",
-            "link_3_text": "Privatperson",
-            "link_3_url": "shopify://products/produkt",
-            "link_4_text": "Privatperson",
-            "link_4_url": "shopify://products/produkt"
+            "heading": "Våra produkter",
+            "link_1_text": "Solceller",
+            "link_1_url": "shopify://pages/vara-solceller",
+            "link_2_text": "Batterilösningar",
+            "link_2_url": "shopify://pages/vara-batterilosningar",
+            "link_3_text": "Laddboxar",
+            "link_3_url": "shopify://pages/vara-laddboxar",
+            "link_4_text": "Värmepumpar",
+            "link_4_url": "shopify://pages/vara-varmepumpar"
           }
         },
-        "bottom_link_column_QNGA3G": {
+        "bottom_link_column_RpkRmN": {
           "type": "bottom_link_column",
           "settings": {
-            "heading": "",
-            "link_1_text": "",
-            "link_1_url": "",
-            "link_2_text": "",
-            "link_2_url": "",
+            "heading": "Om oss",
+            "link_1_text": "Support",
+            "link_1_url": "shopify://pages/support-om-oss",
+            "link_2_text": "Medarbetare",
+            "link_2_url": "shopify://pages/medarbetare",
             "link_3_text": "",
-            "link_3_url": "",
+            "link_3_url": "shopify://products/produkt",
             "link_4_text": "",
-            "link_4_url": ""
+            "link_4_url": "shopify://products/produkt"
           }
         }
       },
       "block_order": [
         "link_column_atybCq",
-        "link_column_c8LkD9",
         "link_column_hnndN3",
+        "link_column_c8LkD9",
         "link_column_DmRxLw",
         "bottom_link_column_FTKD9V",
-        "bottom_link_column_QNGA3G"
+        "bottom_link_column_RpkRmN"
       ],
       "settings": {
         "background_color": "#000000",
