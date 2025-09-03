@@ -25,10 +25,32 @@
         "button_text": "Tillbaka till hemsidan",
         "button_url": "shopify://pages/vara-produkter"
       }
+    },
+    "grid_omraden_fRjgff": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Effektiva energilösningar för framtidens fastigheter",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_image": "shopify://shop_images/image_16.png",
+        "card_1_button_text": "Batterilösningar",
+        "card_1_button_link": "shopify://pages/vara-batterilosningar",
+        "card_2_image": "shopify://shop_images/image_15.png",
+        "card_2_button_text": "Solceller",
+        "card_2_button_link": "shopify://pages/vara-solceller",
+        "card_3_image": "shopify://shop_images/image_7.png",
+        "card_3_button_text": "Värmepumpar",
+        "card_3_button_link": "shopify://pages/vara-varmepumpar",
+        "card_4_image": "shopify://shop_images/image_14.png",
+        "card_4_button_text": "Laddboxar",
+        "card_4_button_link": "shopify://pages/vara-laddboxar",
+        "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+      }
     }
   },
   "order": [
     "main",
-    "hero_iYFRCT"
+    "hero_iYFRCT",
+    "grid_omraden_fRjgff"
   ]
 }
