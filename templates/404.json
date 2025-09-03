@@ -7,14 +7,28 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "404",
+      "disabled": true,
       "settings": {}
+    },
+    "hero_lower_fkQG69": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
+      "settings": {
+        "background_image": "shopify://shop_images/image_17.png",
+        "overlay_opacity": 20,
+        "heading": "Nu hamnade du fel...",
+        "subheading": "404... Du hittade en sida som än inte är aktiv",
+        "button_text": "Tillbaka till hemsidan",
+        "button_url": "shopify://pages/vara-produkter"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_lower_fkQG69"
   ]
 }
