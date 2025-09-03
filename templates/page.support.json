@@ -24,10 +24,52 @@
         "button_text": "Mer om oss",
         "button_url": ""
       }
+    },
+    "bild_och_text_xgmUNz": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vår historira",
+        "text": "<p>Nordiska Energilösningar grundades 2024 av Robert och Emilia Karlsson.  Robert har lång erfarenhet inom solenergi, batterilagring och smarta energisystem, med djup teknisk kompetens och ett starkt branschnätverk. Emilia har en bakgrund inom ekonomi och ett tydligt fokus på affärsmässiga och hållbara lösningar.Tillsammans erbjuder de trygga, effektiva och framtidssäkrade energilösningar för både privatpersoner och företag, som kombinerar teknisk spetskompetens med personligt bemötande och ett genuint engagemang.</p>",
+        "image": "shopify://shop_images/test_for_hero_2.png",
+        "image_position": "right",
+        "image_button_text": "Upptäck våra lösningar",
+        "image_button_link": "shopify://pages/vara-produkter",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_pUBNQ3": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vi är auktoriserade hos Elsäkerhetsverket",
+        "text": "<p>Som registrerade hos Elsäkerhetsverket har vi rätt att utföra elinstallationsarbeten enligt gällande regler och säkerhetskrav. Det innebär att våra tekniker har rätt kompetens, att vi följer branschens föreskrifter och att vi tar fullt ansvar för säkerheten i din anläggning. När du anlitar oss kan du känna dig trygg med att jobbet blir rätt gjort – från start till färdig installation.</p>",
+        "image": "shopify://shop_images/Easee_Elsaekerhetsverket_e11c00ebb8.png",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_CPXJh3": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vi är en del av installatörsföretagen",
+        "text": "<p>Att vi är medlemmar i Installatörsföretagen innebär att vi följer branschens regler för solcellsinstallationer och alltid arbetar enligt aktuella standarder. Det ger oss tillgång till den senaste tekniken, branschpraxis och riktlinjer – vilket säkerställer korrekt och säker installation.</p><p>Medlemskapet innebär också att våra anställda omfattas av kollektivavtal, med trygga villkor, löpande utbildning och en säker arbetsmiljö.</p>",
+        "image": "shopify://shop_images/527c3c48-1188-48c8-8afa-59bc4766c4ef-w_720.webp",
+        "image_position": "right",
+        "image_button_text": "Läs mer",
+        "image_button_link": "https://www.in.se/om-oss/#/",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
-    "hero_lower_jDy7dL"
+    "hero_lower_jDy7dL",
+    "bild_och_text_xgmUNz",
+    "bild_och_text_pUBNQ3",
+    "bild_och_text_CPXJh3"
   ]
 }
