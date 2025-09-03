@@ -249,7 +249,7 @@
           "type": "card",
           "settings": {
             "heading": "6 mån",
-            "description": "Kort beskrivning",
+            "description": "Serviceavtal hos oss kommande 6 månader",
             "link": "",
             "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
@@ -259,7 +259,7 @@
           "type": "card",
           "settings": {
             "heading": "12 mån",
-            "description": "Kort beskrivning",
+            "description": "Serviceavtal hos oss kommande 12 månader",
             "link": "",
             "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
@@ -269,7 +269,7 @@
           "type": "card",
           "settings": {
             "heading": "24 mån",
-            "description": "Kort beskrivning",
+            "description": "Serviceavtal hos oss kommande 24 månader",
             "link": "",
             "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
