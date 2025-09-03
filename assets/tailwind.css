@@ -301,6 +301,11 @@
   margin-bottom: 50px
 }
 
+.my-\[30px\] {
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
 .mb-2 {
   margin-bottom: 0.5rem
 }
@@ -1079,6 +1084,10 @@
   padding-top: 60px
 }
 
+.pb-\[30px\] {
+  padding-bottom: 30px
+}
+
 .text-center {
   text-align: center
 }
@@ -1431,6 +1440,11 @@
     grid-column: span 3 / span 3
   }
 
+  .md\:my-\[50px\] {
+    margin-top: 50px;
+    margin-bottom: 50px
+  }
+
   .md\:mt-\[87px\] {
     margin-top: 87px
   }
@@ -1459,6 +1473,10 @@
     height: 150px
   }
 
+  .md\:h-\[53px\] {
+    height: 53px
+  }
+
   .md\:w-\[2500px\] {
     width: 2500px
   }
@@ -1473,6 +1491,10 @@
 
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr))
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
   }
 
   .md\:flex-row {
@@ -1517,6 +1539,14 @@
 
   .md\:gap-\[60px\] {
     gap: 60px
+  }
+
+  .md\:gap-\[30px\] {
+    gap: 30px
+  }
+
+  .md\:gap-0 {
+    gap: 0px
   }
 
   .md\:p-\[30px\] {
@@ -1590,6 +1620,14 @@
 
   .md\:pt-\[50px\] {
     padding-top: 50px
+  }
+
+  .md\:pt-\[60px\] {
+    padding-top: 60px
+  }
+
+  .md\:text-left {
+    text-align: left
   }
 
   .md\:text-\[20px\] {
