@@ -22,12 +22,18 @@
               height='300'
               class='w-full h-full object-cover absolute inset-0'
             >
+            {% if section.settings.card_1_overlay_opacity > 0 %}
+              <div
+                class='absolute inset-0 rounded-[15px]'
+                style='background-color: rgba(0, 0, 0, {{ section.settings.card_1_overlay_opacity | divided_by: 100.0 }});'
+              ></div>
+            {% endif %}
             {% if section.settings.card_1_button_text != blank
               and section.settings.card_1_button_link != blank
             %}
               <a
                 href='{{ section.settings.card_1_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
               >
                 <button class='bg-[#FFF] text-[15px] md:text-[20px] py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_1_button_text | escape }}
@@ -49,12 +55,18 @@
               height='300'
               class='w-full h-full object-cover absolute inset-0'
             >
+            {% if section.settings.card_2_overlay_opacity > 0 %}
+              <div
+                class='absolute inset-0 rounded-[15px]'
+                style='background-color: rgba(0, 0, 0, {{ section.settings.card_2_overlay_opacity | divided_by: 100.0 }});'
+              ></div>
+            {% endif %}
             {% if section.settings.card_2_button_text != blank
               and section.settings.card_2_button_link != blank
             %}
               <a
                 href='{{ section.settings.card_2_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
               >
                 <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_2_button_text | escape }}
@@ -70,18 +82,24 @@
         {% if section.settings.card_3_image != blank %}
           <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
             <img
-              src='{{ section.settings.card_2_image | image_url: width: 600 }}'
-              alt='{{ section.settings.card_2_image.alt | escape }}'
+              src='{{ section.settings.card_3_image | image_url: width: 600 }}'
+              alt='{{ section.settings.card_3_image.alt | escape }}'
               width='600'
               height='300'
               class='w-full h-full object-cover absolute inset-0'
             >
+            {% if section.settings.card_3_overlay_opacity > 0 %}
+              <div
+                class='absolute inset-0 rounded-[15px]'
+                style='background-color: rgba(0, 0, 0, {{ section.settings.card_3_overlay_opacity | divided_by: 100.0 }});'
+              ></div>
+            {% endif %}
             {% if section.settings.card_3_button_text != blank
               and section.settings.card_3_button_link != blank
             %}
               <a
                 href='{{ section.settings.card_3_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
               >
                 <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_3_button_text | escape }}
@@ -99,16 +117,22 @@
             <img
               src='{{ section.settings.card_4_image | image_url: width: 800 }}'
               alt='{{ section.settings.card_4_image.alt | escape }}'
-              width='600'
+              width='800'
               height='300'
               class='w-full h-full object-cover absolute inset-0'
             >
+            {% if section.settings.card_4_overlay_opacity > 0 %}
+              <div
+                class='absolute inset-0 rounded-[15px]'
+                style='background-color: rgba(0, 0, 0, {{ section.settings.card_4_overlay_opacity | divided_by: 100.0 }});'
+              ></div>
+            {% endif %}
             {% if section.settings.card_4_button_text != blank
               and section.settings.card_4_button_link != blank
             %}
               <a
                 href='{{ section.settings.card_4_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
               >
                 <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
                   {{ section.settings.card_4_button_text | escape }}
@@ -165,6 +189,17 @@
       "label": "Kort 1 knapplänk"
     },
     {
+      "type": "range",
+      "id": "card_1_overlay_opacity",
+      "label": "Kort 1 overlay opacitet",
+      "info": "Lägg till en mörk overlay över bilden för bättre läsbarhet",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
       "type": "header",
       "content": "Kort 2"
     },
@@ -183,6 +218,17 @@
       "type": "url",
       "id": "card_2_button_link",
       "label": "Kort 2 knapplänk"
+    },
+    {
+      "type": "range",
+      "id": "card_2_overlay_opacity",
+      "label": "Kort 2 overlay opacitet",
+      "info": "Lägg till en mörk overlay över bilden för bättre läsbarhet",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
     },
     {
       "type": "header",
@@ -205,6 +251,17 @@
       "label": "Kort 3 knapplänk"
     },
     {
+      "type": "range",
+      "id": "card_3_overlay_opacity",
+      "label": "Kort 3 overlay opacitet",
+      "info": "Lägg till en mörk overlay över bilden för bättre läsbarhet",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
       "type": "header",
       "content": "Kort 4"
     },
@@ -223,6 +280,17 @@
       "type": "url",
       "id": "card_4_button_link",
       "label": "Kort 4 knapplänk"
+    },
+    {
+      "type": "range",
+      "id": "card_4_overlay_opacity",
+      "label": "Kort 4 overlay opacitet",
+      "info": "Lägg till en mörk overlay över bilden för bättre läsbarhet",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
     },
     {
       "type": "header",
