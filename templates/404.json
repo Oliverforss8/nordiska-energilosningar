@@ -14,14 +14,14 @@
       "disabled": true,
       "settings": {}
     },
-    "hero_lower_fkQG69": {
-      "type": "hero-lower",
-      "name": "Hero Lower",
+    "hero_iYFRCT": {
+      "type": "hero",
+      "name": "Hero",
       "settings": {
         "background_image": "shopify://shop_images/image_17.png",
         "overlay_opacity": 20,
         "heading": "Nu hamnade du fel...",
-        "subheading": "404... Du hittade en sida som än inte är aktiv",
+        "subheading": "Du hittade en sida som än inte är aktiv",
         "button_text": "Tillbaka till hemsidan",
         "button_url": "shopify://pages/vara-produkter"
       }
@@ -29,6 +29,6 @@
   },
   "order": [
     "main",
-    "hero_lower_fkQG69"
+    "hero_iYFRCT"
   ]
 }
