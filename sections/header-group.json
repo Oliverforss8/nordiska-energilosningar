@@ -40,9 +40,78 @@
         "nav_item_4_dropdown_link_2_title": "Medarbetare",
         "nav_item_4_dropdown_link_2_url": "shopify://pages/medarbetare"
       }
+    },
+    "hero_lower_N7VfEy": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
+      "settings": {
+        "background_image": "shopify://shop_images/solar-panels-team-inspection-with-people-nature-photovoltaic-grid-renewable-energy-power-generator-sustainability-electric-system-technician-with-engineer-outdoor-project.jpg",
+        "overlay_opacity": 20,
+        "heading": "Welcome to our site",
+        "subheading": "Discover amazing products and services",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
+      }
+    },
+    "banner_med_3_produkter_HUwkXW": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_TCx6LU": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 1",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_3QD4Fz": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        },
+        "product_card_KrRjfK": {
+          "type": "product_card",
+          "settings": {
+            "product": "produkt",
+            "title": "Laddbox 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/produkt"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_TCx6LU",
+        "product_card_3QD4Fz",
+        "product_card_KrRjfK"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/image_14.png",
+        "overlay_opacity": 25,
+        "header_button_text": "Laddboxar",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Upptäck",
+        "primary_button_url": "",
+        "secondary_button_text": "Läs mer",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "hero_lower_N7VfEy",
+    "banner_med_3_produkter_HUwkXW"
   ]
 }
