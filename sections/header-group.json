@@ -107,11 +107,25 @@
         "secondary_button_text": "Läs mer",
         "secondary_button_url": ""
       }
+    },
+    "bild_och_text_gPfDAx": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "right",
+        "image_button_text": "Knapp",
+        "image_button_link": "shopify://pages/contact",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "header",
     "hero_lower_N7VfEy",
-    "banner_med_3_produkter_HUwkXW"
+    "banner_med_3_produkter_HUwkXW",
+    "bild_och_text_gPfDAx"
   ]
 }
