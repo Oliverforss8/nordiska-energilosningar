@@ -11,10 +11,24 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
+    },
+    "hero_lower_CyimrP": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
+      "settings": {
+        "background_image": "shopify://shop_images/test_for_hero_2.png",
+        "overlay_opacity": 20,
+        "heading": "Våra medarbetare",
+        "subheading": "Discover amazing products and services",
+        "button_text": "Ta kontakt",
+        "button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_lower_CyimrP"
   ]
 }
