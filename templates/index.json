@@ -291,7 +291,7 @@
         "background_color": "#171717",
         "background_image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
         "overlay_color": "#000000",
-        "overlay_opacity": 0,
+        "overlay_opacity": 25,
         "header_button_text": "Serviceavtal",
         "header_button_url": "",
         "heading": "Serviceavtal - för din trygghet",
