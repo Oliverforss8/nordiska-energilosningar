@@ -11,10 +11,24 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
+    },
+    "hero_lower_UadDG8": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
+      "settings": {
+        "background_image": "shopify://shop_images/image_14.png",
+        "overlay_opacity": 20,
+        "heading": "Våra laddboxar",
+        "subheading": "Discover amazing products and services",
+        "button_text": "Vårt utbud",
+        "button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_lower_UadDG8"
   ]
 }
