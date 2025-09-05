@@ -25,10 +25,66 @@
         "button_text": "Våra energilösningar",
         "button_url": ""
       }
+    },
+    "banner_med_3_produkter_JdJbDT": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_7tGUtQ": {
+          "type": "product_card",
+          "settings": {
+            "product": "varmepump-1",
+            "title": "Värmepump 1",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/varmepump-1"
+          }
+        },
+        "product_card_LWGEtn": {
+          "type": "product_card",
+          "settings": {
+            "product": "varmepump-1",
+            "title": "Värmepump 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/varmepump-1"
+          }
+        },
+        "product_card_LxXipk": {
+          "type": "product_card",
+          "settings": {
+            "product": "varmepump-1",
+            "title": "Värmepump 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/varmepump-1"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_7tGUtQ",
+        "product_card_LWGEtn",
+        "product_card_LxXipk"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/image_7.png",
+        "overlay_opacity": 20,
+        "header_button_text": "Värmepumpar",
+        "header_button_url": "",
+        "heading": "Upptäck våra värmepumpar",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
     "main",
-    "hero_lower_FNPfHG"
+    "hero_lower_FNPfHG",
+    "banner_med_3_produkter_JdJbDT"
   ]
 }
