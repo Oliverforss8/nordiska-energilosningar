@@ -18,11 +18,12 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
-        "background_image": "shopify://shop_images/bild_nor.png",
-        "heading": "Welcome to our site",
+        "background_image": "shopify://shop_images/image_11.png",
+        "overlay_opacity": 20,
+        "heading": "Vår lösning",
         "subheading": "Discover amazing products and services",
-        "button_text": "Våra energilösningar",
-        "button_url": ""
+        "button_text": "Våra produkter",
+        "button_url": "shopify://pages/vara-produkter"
       }
     },
     "lankar_Jk8pJC": {
@@ -77,6 +78,7 @@
       "name": "Banner bild",
       "settings": {
         "background_color": "#000000",
+        "overlay_opacity": 0,
         "header_button_text": "",
         "header_button_url": "",
         "heading": "Banner rubrik",
@@ -121,7 +123,7 @@
             "heading": "Kort rubrik",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         },
@@ -131,7 +133,7 @@
             "heading": "Kort rubrik",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         },
@@ -141,7 +143,7 @@
             "heading": "Kort rubrik",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         }
@@ -154,6 +156,8 @@
       "name": "Banner med länkar",
       "settings": {
         "background_color": "#171717",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
         "header_button_text": "",
         "header_button_url": "",
         "heading": "Rubrik",
