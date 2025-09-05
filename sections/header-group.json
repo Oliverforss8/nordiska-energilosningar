@@ -45,9 +45,9 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
-        "background_image": "shopify://shop_images/solar-panels-team-inspection-with-people-nature-photovoltaic-grid-renewable-energy-power-generator-sustainability-electric-system-technician-with-engineer-outdoor-project.jpg",
+        "background_image": "shopify://shop_images/image_14.png",
         "overlay_opacity": 20,
-        "heading": "Welcome to our site",
+        "heading": "Laddboxar",
         "subheading": "Discover amazing products and services",
         "button_text": "Våra energilösningar",
         "button_url": ""
