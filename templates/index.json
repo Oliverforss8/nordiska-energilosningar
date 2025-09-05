@@ -154,7 +154,7 @@
       "settings": {
         "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
-        "overlay_opacity": 0,
+        "overlay_opacity": 25,
         "header_button_text": "Batterilösningar",
         "header_button_url": "",
         "heading": "Komplettera med ett energilager",
