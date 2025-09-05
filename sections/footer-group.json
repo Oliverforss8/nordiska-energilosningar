@@ -31,11 +31,11 @@
           "settings": {
             "heading": "Privatperson",
             "link_1_text": "Solceller",
-            "link_1_url": "shopify://products/produkt",
+            "link_1_url": "shopify://pages/vara-solceller",
             "link_2_text": "Batteri",
-            "link_2_url": "shopify://pages/contact",
+            "link_2_url": "shopify://pages/vara-batterilosningar",
             "link_3_text": "Laddbox",
-            "link_3_url": "shopify://pages/contact"
+            "link_3_url": "shopify://pages/vara-laddboxar"
           }
         },
         "link_column_c8LkD9": {
