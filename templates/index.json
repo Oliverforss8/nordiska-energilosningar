@@ -17,7 +17,7 @@
         "overlay_opacity": 20,
         "heading": "Lösningar inom solenergi, \nbatterilagring och laddboxar",
         "subheading": "Lagra din egen solenergi och använd den när elpriserna är som högst. Perfekt för villaägare som vill sänka sina elkostnader och bli mer självförsörjande – året runt.",
-        "button_text": "Våra energilösningar",
+        "button_text": "Få offert",
         "button_url": "shopify://pages/vara-produkter"
       }
     },
@@ -57,6 +57,24 @@
       "name": "Länkar sektion",
       "settings": {}
     },
+    "banner_bild_Tr8FhV": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "background_image": "shopify://shop_images/image_16.png",
+        "background_color": "#000000",
+        "overlay_opacity": 25,
+        "header_button_text": "Batterilösningar",
+        "header_button_url": "",
+        "heading": "Batterilager från 29 900:-",
+        "description": "Dynamisk lastbalansering, fjärrstyrning och integrering med solceller och energilager – framtidens laddning redan idag.",
+        "primary_button_text": "Upptäck",
+        "primary_button_url": "shopify://pages/vara-batterilosningar",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "grid_omraden_zBziiH": {
       "type": "grid-omraden",
       "name": "Grid areas",
@@ -80,6 +98,23 @@
         "card_4_button_link": "shopify://pages/vara-laddboxar",
         "card_4_overlay_opacity": 20,
         "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+      }
+    },
+    "banner_bild_xRHf34": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "Kampanj",
+        "header_button_url": "",
+        "heading": "Luftvärmepump för 9 995:-",
+        "description": "Just nu får du en luftvärmepump för 9 995:- vid köp av solceller och batteri från oss",
+        "primary_button_text": "Jag vill veta mer",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
       }
     },
     "banner_med_3_produkter_D79ei6": {
@@ -148,37 +183,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_Tr8FhV": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "background_image": "shopify://shop_images/image_16.png",
-        "background_color": "#000000",
-        "overlay_opacity": 25,
-        "header_button_text": "Batterilösningar",
-        "header_button_url": "",
-        "heading": "Komplettera med ett energilager",
-        "description": "Dynamisk lastbalansering, fjärrstyrning och integrering med solceller och energilager – framtidens laddning redan idag.",
-        "primary_button_text": "Upptäck",
-        "primary_button_url": "shopify://pages/vara-batterilosningar",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_TMmxYg": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Vi är experter på storskaliga energilösningar",
-        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.Genom att kombinera solenergi med energilagring och smart laddning skapar vi system som optimerar elförbrukningen, sänker energikostnaderna och minskar klimatpåverkan. Våra lösningar är skalbara och anpassade för fastigheter, industri, logistik och andra verksamheter med höga energibehov.</p>",
-        "image": "shopify://shop_images/2149192693.jpg",
-        "image_position": "right",
-        "image_button_text": "Våra produkter",
-        "image_button_link": "shopify://pages/vara-produkter",
-        "custom_id": ""
-      }
-    },
     "banner_med_3_produkter_ThPDRM": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -232,6 +236,19 @@
         "primary_button_url": "shopify://pages/vara-solceller",
         "secondary_button_text": "",
         "secondary_button_url": ""
+      }
+    },
+    "bild_och_text_TMmxYg": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vi är experter på storskaliga energilösningar",
+        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.Genom att kombinera solenergi med energilagring och smart laddning skapar vi system som optimerar elförbrukningen, sänker energikostnaderna och minskar klimatpåverkan. Våra lösningar är skalbara och anpassade för fastigheter, industri, logistik och andra verksamheter med höga energibehov.</p>",
+        "image": "shopify://shop_images/2149192693.jpg",
+        "image_position": "right",
+        "image_button_text": "Våra produkter",
+        "image_button_link": "shopify://pages/vara-produkter",
+        "custom_id": ""
       }
     },
     "bild_och_text_NQhHiK": {
@@ -315,12 +332,13 @@
   "order": [
     "hero_HUEAy6",
     "lankar_kHPxWD",
+    "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
+    "banner_bild_xRHf34",
     "banner_med_3_produkter_D79ei6",
     "text_sektion_RVLtbc",
-    "banner_bild_Tr8FhV",
-    "bild_och_text_TMmxYg",
     "banner_med_3_produkter_ThPDRM",
+    "bild_och_text_TMmxYg",
     "bild_och_text_NQhHiK",
     "banner_med_lankar_Vx7qa6",
     "kontakt_form_Ae7RmC"
