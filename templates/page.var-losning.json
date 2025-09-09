@@ -20,8 +20,8 @@
       "settings": {
         "background_image": "shopify://shop_images/image_11.png",
         "overlay_opacity": 20,
-        "heading": "Vår lösning",
-        "subheading": "Discover amazing products and services",
+        "heading": "Trött på höga elräkningar? Här är vår lösning.",
+        "subheading": "Vi vet hur det känns när elräkningen blir onödigt hög. Därför har vi skapat en enkel och smart helhetslösning som gör att du får kontroll över dina kostnader – och slipper oron över nästa faktura.",
         "button_text": "Våra produkter",
         "button_url": "shopify://pages/vara-produkter"
       }
