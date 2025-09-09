@@ -26,6 +26,39 @@
         "button_url": ""
       }
     },
+    "grid_omraden_byA8MR": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Våra utvalda batterier",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_button_text": "Läs mer",
+        "card_1_button_link": "",
+        "card_1_overlay_opacity": 0,
+        "card_2_button_text": "Utforska",
+        "card_2_button_link": "",
+        "card_2_overlay_opacity": 0,
+        "card_3_button_text": "Upptäck",
+        "card_3_button_link": "",
+        "card_3_overlay_opacity": 0,
+        "card_4_button_text": "Kom igång",
+        "card_4_button_link": "",
+        "card_4_overlay_opacity": 0,
+        "bottom_description": ""
+      }
+    },
+    "bild_och_text_apXeiG": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Därför väljer 9 av 10 batteri till sina solceller",
+        "text": "<p><br/>När du kombinerar solceller med batteri och smart styrning får du maximal nytta av din investering. Våra batterilösningar är byggda för både dagens och morgondagens behov – med energioptimering, stödtjänster och smarta funktioner som gör att du sparar mer och blir mindre beroende av elnätet.</p><p></p><p>Undvik effekttoppar</p><p>Smartare energianvändning med AI-styrning</p><p>Köp och sälj el med fördel</p><p>Blir självöfrsörjande</p><p><br/><br/><br/></p>",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "banner_med_3_produkter_HxVFnP": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -124,6 +157,8 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
+    "grid_omraden_byA8MR",
+    "bild_och_text_apXeiG",
     "banner_med_3_produkter_HxVFnP",
     "bild_och_text_fF7gV6",
     "bild_och_text_fe37pr",
