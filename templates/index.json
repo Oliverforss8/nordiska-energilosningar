@@ -172,17 +172,6 @@
         "secondary_button_url": ""
       }
     },
-    "text_sektion_RVLtbc": {
-      "type": "text-sektion",
-      "name": "Text sektion",
-      "settings": {
-        "title": "Vi installerar solceller åt Affärsverken i Karlskrona",
-        "text": "<p>Nordiska Energilösningar är stolt installationspartner till Affärsverken i Karlskrona. Tillsammans levererar vi framtidens energilösningar i regionen. Genom vårt partnerskap omvandlar vi solens strålar till ren, förnybar energi som minskar koldioxidutsläppen och stärker energieffektiviteten – för både företag och hushåll.<br/><br/>Nordiska Energilösningar och Affärsverken bidrar gemensamt till att stärka Karlskronas energiinfrastruktur och skapa förutsättningar för långsiktig regional utveckling. Samarbetet är ett tydligt exempel på hur lokala aktörer tillsammans kan driva klimatomställningen framåt mot en fossilfri framtid.</p>",
-        "button_text": "Läs mer om sammabetet",
-        "button_link": "shopify://blogs/news",
-        "custom_id": ""
-      }
-    },
     "banner_med_3_produkter_ThPDRM": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -336,7 +325,6 @@
     "grid_omraden_zBziiH",
     "banner_bild_xRHf34",
     "banner_med_3_produkter_D79ei6",
-    "text_sektion_RVLtbc",
     "banner_med_3_produkter_ThPDRM",
     "bild_och_text_TMmxYg",
     "bild_och_text_NQhHiK",
