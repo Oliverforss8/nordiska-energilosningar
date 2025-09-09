@@ -26,42 +26,6 @@
         "button_url": "shopify://pages/vara-produkter"
       }
     },
-    "lankar_Jk8pJC": {
-      "type": "lankar",
-      "blocks": {
-        "card_p8CYWC": {
-          "type": "card",
-          "settings": {
-            "heading": "Solceller",
-            "description": "Kort beskrivning",
-            "link": ""
-          }
-        },
-        "card_JPXbyV": {
-          "type": "card",
-          "settings": {
-            "heading": "Kort rubrik",
-            "description": "Kort beskrivning",
-            "link": ""
-          }
-        },
-        "card_EcK4xB": {
-          "type": "card",
-          "settings": {
-            "heading": "Kort rubrik",
-            "description": "Kort beskrivning",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "card_p8CYWC",
-        "card_JPXbyV",
-        "card_EcK4xB"
-      ],
-      "name": "Länkar sektion",
-      "settings": {}
-    },
     "bild_och_text_irHa6L": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -79,7 +43,7 @@
       "name": "Bild och text",
       "settings": {
         "title": "Våra kunder halverar sina elräkningar direkt",
-        "text": "<p>Med vår smarta AI-styrning används din el alltid på det mest lönsamma sättet. När solen producerar el ser systemet till att du först använder den i hemmet, sedan laddar batteriet och till sist säljer överskottet till nätet. När elpriserna är höga styr AI:n så att du kan ta energi från batteriet istället för att köpa dyr el.</p><p>Resultatet blir att du får ut maximalt värde av varje kilowattimme – helt automatiskt, utan att du behöver göra någonting själv.</p>",
+        "text": "<p><br/>Vår smarta AI ser till att du alltid använder elen när den är som billigast och lagrar den när den är som mest värd – så halverar du elräkningen utan att lyfta ett finger.<br/><br/></p><p>Resultatet blir att du får ut maximalt värde av varje kilowattimme – helt automatiskt, utan att du behöver göra någonting själv.</p>",
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
@@ -103,60 +67,6 @@
         "custom_id": ""
       }
     },
-    "banner_med_lankar_yK4YkV": {
-      "type": "banner-med-lankar",
-      "blocks": {
-        "card_LKcQbi": {
-          "type": "card",
-          "settings": {
-            "heading": "Kort rubrik",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        },
-        "card_YWNwd6": {
-          "type": "card",
-          "settings": {
-            "heading": "Kort rubrik",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        },
-        "card_MA7Rbi": {
-          "type": "card",
-          "settings": {
-            "heading": "Kort rubrik",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        }
-      },
-      "block_order": [
-        "card_LKcQbi",
-        "card_YWNwd6",
-        "card_MA7Rbi"
-      ],
-      "name": "Banner med länkar",
-      "settings": {
-        "background_color": "#171717",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Rubrik",
-        "description": "Beskrivning",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
-      }
-    },
     "kontakt_form_394yiU": {
       "type": "kontakt-form",
       "name": "Contact Form",
@@ -170,11 +80,9 @@
   "order": [
     "main",
     "hero_lower_pKeggt",
-    "lankar_Jk8pJC",
     "bild_och_text_irHa6L",
     "bild_och_text_3Vj8Aw",
     "banner_bild_d78jQM",
-    "banner_med_lankar_yK4YkV",
     "kontakt_form_394yiU"
   ]
 }
