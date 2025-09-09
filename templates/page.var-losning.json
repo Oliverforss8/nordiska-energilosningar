@@ -62,34 +62,6 @@
       "name": "Länkar sektion",
       "settings": {}
     },
-    "text_sektion_HDUJAE": {
-      "type": "text-sektion",
-      "name": "Text sektion",
-      "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
-        "button_text": "Knapp text",
-        "button_link": "",
-        "custom_id": ""
-      }
-    },
-    "banner_bild_DpEExF": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "Primär knapp",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_irHa6L": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -107,7 +79,7 @@
       "name": "Bild och text",
       "settings": {
         "title": "Våra kunder halverar sina elräkningar direkt",
-        "text": "<p>Text</p>",
+        "text": "<p>Med vår smarta AI-styrning används din el alltid på det mest lönsamma sättet. När solen producerar el ser systemet till att du först använder den i hemmet, sedan laddar batteriet och till sist säljer överskottet till nätet. När elpriserna är höga styr AI:n så att du kan ta energi från batteriet istället för att köpa dyr el.</p><p>Resultatet blir att du får ut maximalt värde av varje kilowattimme – helt automatiskt, utan att du behöver göra någonting själv.</p>",
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
@@ -199,8 +171,6 @@
     "main",
     "hero_lower_pKeggt",
     "lankar_Jk8pJC",
-    "text_sektion_HDUJAE",
-    "banner_bild_DpEExF",
     "bild_och_text_irHa6L",
     "bild_och_text_3Vj8Aw",
     "banner_bild_d78jQM",
