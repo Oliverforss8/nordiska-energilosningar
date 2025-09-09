@@ -94,8 +94,8 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
+        "title": "Välj en heltäckande lösning för maximal energibesparing",
+        "text": "<p><strong>Vi gör energi enkelt och lönsamt.</strong><br/><br/>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.</p><p></p><ul><li>Solceller gör att du producerar din egen el</li><li>Batteriet lagrar din el tills du behöver den</li><li>Laddboxen ger dig billig och trygg laddning hemma</li><li>Värmepumpen minskar dina värmekostnader rejält</li><li>Grönt bolån sänker dina räntekostnader</li><li>Allt i ett paket ger dig kontroll och lägre elräkning<br/></li></ul><p><br/></p>",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
@@ -111,6 +111,23 @@
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_d78jQM": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "Räntefri avbetlaning",
+        "header_button_url": "",
+        "heading": "Flexibel finansiering – 24 månaders räntefri avbetalning",
+        "description": "Spara på elräkningen redan idag, betala av i lugn och ro på 24 månader",
+        "primary_button_text": "Läs mer",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -186,6 +203,7 @@
     "banner_bild_DpEExF",
     "bild_och_text_irHa6L",
     "bild_och_text_3Vj8Aw",
+    "banner_bild_d78jQM",
     "banner_med_lankar_yK4YkV",
     "kontakt_form_394yiU"
   ]
