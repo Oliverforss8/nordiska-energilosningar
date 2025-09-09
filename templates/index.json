@@ -57,6 +57,18 @@
       "name": "Länkar sektion",
       "settings": {}
     },
+    "bild_och_text_nY9Rik": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Din väg till lägre elkostnader",
+        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/>KNAPP \"Så fungerar det\"</p>",
+        "image_position": "right",
+        "image_button_text": "Så fungerar det",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
+    },
     "banner_bild_Tr8FhV": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -219,8 +231,8 @@
         "overlay_opacity": 30,
         "header_button_text": "Solceller",
         "header_button_url": "",
-        "heading": "Vill du veta mer om solenergi?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi.",
+        "heading": "Börja producera din egen el direkt från ditt eget tak",
+        "description": "Egenproducerad el ger dig trygghet, lönsamhet och frihet från höga elpriser",
         "primary_button_text": "Upptäck",
         "primary_button_url": "shopify://pages/vara-solceller",
         "secondary_button_text": "",
@@ -321,6 +333,7 @@
   "order": [
     "hero_HUEAy6",
     "lankar_kHPxWD",
+    "bild_och_text_nY9Rik",
     "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
     "banner_bild_xRHf34",
