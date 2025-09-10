@@ -239,32 +239,6 @@
         "secondary_button_url": ""
       }
     },
-    "bild_och_text_TMmxYg": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Vi är experter på storskaliga energilösningar",
-        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.Genom att kombinera solenergi med energilagring och smart laddning skapar vi system som optimerar elförbrukningen, sänker energikostnaderna och minskar klimatpåverkan. Våra lösningar är skalbara och anpassade för fastigheter, industri, logistik och andra verksamheter med höga energibehov.</p>",
-        "image": "shopify://shop_images/2149192693.jpg",
-        "image_position": "right",
-        "image_button_text": "Våra produkter",
-        "image_button_link": "shopify://pages/vara-produkter",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_NQhHiK": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Vi är en del av installatörsföretagen",
-        "text": "<p>Att vi är medlemmar i Installatörsföretagen innebär att vi följer branschens regler för solcellsinstallationer och alltid arbetar enligt aktuella standarder. Det ger oss tillgång till den senaste tekniken, branschpraxis och riktlinjer – vilket säkerställer korrekt och säker installation.</p><p>Medlemskapet innebär också att våra anställda omfattas av kollektivavtal, med trygga villkor, löpande utbildning och en säker arbetsmiljö.</p>",
-        "image": "shopify://shop_images/image_17.png",
-        "image_position": "left",
-        "image_button_text": "Läs mer",
-        "image_button_link": "https://www.in.se/om-oss/#/",
-        "custom_id": ""
-      }
-    },
     "banner_med_lankar_Vx7qa6": {
       "type": "banner-med-lankar",
       "blocks": {
@@ -339,8 +313,6 @@
     "banner_bild_xRHf34",
     "banner_med_3_produkter_D79ei6",
     "banner_med_3_produkter_ThPDRM",
-    "bild_och_text_TMmxYg",
-    "bild_och_text_NQhHiK",
     "banner_med_lankar_Vx7qa6",
     "kontakt_form_Ae7RmC"
   ]
