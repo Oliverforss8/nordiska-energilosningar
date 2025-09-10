@@ -214,6 +214,41 @@
         "dropdown_link_title": "Dropdown link title",
         "dropdown_link_url": "Dropdown link URL"
       }
+    },
+    "icon": {
+      "name": "Icon section",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "custom_id": {
+          "label": "Custom ID",
+          "info": "Add a custom ID to this section for styling purposes"
+        },
+        "padding_top": {
+          "label": "Top padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom padding"
+        }
+      },
+      "blocks": {
+        "feature": {
+          "name": "Feature",
+          "settings": {
+            "icon": {
+              "label": "Icon",
+              "info": "Add an emoji or icon character"
+            },
+            "text": {
+              "label": "Text"
+            }
+          }
+        }
+      }
     }
   }
 }
