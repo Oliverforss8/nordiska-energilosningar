@@ -1,0 +1,144 @@
+<section>
+  <div class='layout'>
+    <div class='text-left'>
+      {% if section.settings.heading != blank %}
+        <h2 class='text-[#171717] headline1'>
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class='text text-[#171717]/80 py-[40px] md:py-[50px]'>
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+
+      <div class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[15px]'>
+        {% for block in section.blocks %}
+          <div
+            class='flex  flex-row md:flex-col rounded-[15px] bg-[#F3F1E8] items-center    justify-center p-[20px] gap-[20px] md:p-[30px] md:pt-[50px]'
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.image != blank %}
+              <div class='w-[200px] md:w-auto md:h-[84px] flex items-center justify-center'>
+                <img
+                  src='{{ block.settings.image | image_url: width: 139 }}'
+                  alt='{{ block.settings.image.alt | default: block.settings.text }}'
+                  width='139'
+                  height='84'
+                  loading='lazy'
+                  class='w-auto h-[65px] md:h-[90px]  object-contain'
+                >
+              </div>
+            {% endif %}
+            <div class='flex flex-col w-full'>
+              {% if block.settings.title != blank %}
+                <div class='md:pt-[60px] text-[#171717] text-[24px] md:text-[30px] headline1 items-start md:ml-[10px] justify-start flex w-full leading-[90%]'>
+                  {{ block.settings.title }}
+                </div>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <div class='pt-[10px] text text-[20px] text-[#171717]/80'>
+                  {{ block.settings.description }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class='pt-[50px] flex flex-row gap-[10px]'>
+      <button
+        class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]  shrink-0'
+        style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+      >
+        {{ section.settings.button_text | default: "Våra energilösningar" }}
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='22'
+          height='18'
+          viewBox='0 0 22 18'
+          fill='none'
+        >
+          <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button
+        class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] bg-transparent shrink-0'
+        style='border: 1px solid #171717;'
+      >
+        {{ section.settings.button_text | default: "Våra energilösningar" }}
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='22'
+          height='18'
+          viewBox='0 0 22 18'
+          fill='none'
+        >
+          <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "How it works",
+  "tag": "section",
+  "class": "hur-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Så här fungerar det"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Lägg till en kort beskrivning här.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Steg titel"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Beskrivande text för steget.</p>"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "How it works",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Steg 1" } },
+        { "type": "step", "settings": { "title": "Steg 2" } },
+        { "type": "step", "settings": { "title": "Steg 3" } },
+        { "type": "step", "settings": { "title": "Steg 4" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
