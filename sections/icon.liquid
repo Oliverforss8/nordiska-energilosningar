@@ -4,11 +4,7 @@
 
 <section
   id='{{ section_id }}'
-  class='py-10 md:py-16'
-  style='
-    --section-padding-top: {{ section.settings.padding_top }}px;
-    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
-  '
+  class='py-[62px] md:py-[87px]'
 >
   <div class='layout'>
     <div class='text-left'>
@@ -19,31 +15,31 @@
       {% endif %}
 
       {% if section.settings.description != blank %}
-        <div class='text text-[#171717]/80 py-[50px]'>
+        <div class='text text-[#171717]/80 py-[40px] md:py-[50px]'>
           {{ section.settings.description }}
         </div>
       {% endif %}
 
-      <div class='grid grid-cols-4 gap-[15px]'>
+      <div class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[15px]'>
         {% for block in section.blocks %}
           <div
-            class='flex flex-col rounded-[15px] bg-[#F3F1E8] items-center justify-center p-[30px] pt-[50px]'
+            class='flex  flex-row md:flex-col rounded-[15px] bg-[#F3F1E8] items-center    md:justify-center p-[20px] gap-[20px] md:p-[30px] md:pt-[50px]'
             {{ block.shopify_attributes }}
           >
             {% if block.settings.image != blank %}
-              <div class='w-auto h-[84px] flex items-center justify-center'>
+              <div class='w-[200px] md:w-auto md:h-[84px] flex items-center justify-center'>
                 <img
                   src='{{ block.settings.image | image_url: width: 139 }}'
                   alt='{{ block.settings.image.alt | default: block.settings.text }}'
                   width='139'
                   height='84'
                   loading='lazy'
-                  class='w-auto h-[90px]  object-contain'
+                  class='w-auto h-[65px] md:h-[90px]  object-contain'
                 >
               </div>
             {% endif %}
             {% if block.settings.text != blank %}
-              <div class='pt-[60px] text-[#171717] text-[30px] headline1 justify-start flex w-full leading-[90%]'>
+              <div class='md:pt-[60px] text-[#171717] text-[24px] md:text-[30px] headline1  items-center justify-center md:items-start md:justify-start flex w-full leading-[90%] '>
                 {{ block.settings.text }}
               </div>
             {% endif %}
