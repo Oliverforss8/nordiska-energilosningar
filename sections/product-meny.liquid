@@ -80,7 +80,7 @@
     'product-1': {
       {% if section.settings.product_1 != blank %}
         title: "{{ section.settings.product_1.title | escape }}",
-        description: "{{ section.settings.product_1.description | escape }}",
+        description: `{{ section.settings.product_1.description | strip_html }}`,
         url: "{{ section.settings.product_1.url }}",
         image: "{{ section.settings.product_1.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_1.featured_image.alt | default: section.settings.product_1.title | escape }}"
@@ -89,7 +89,7 @@
     'product-2': {
       {% if section.settings.product_2 != blank %}
         title: "{{ section.settings.product_2.title | escape }}",
-        description: "{{ section.settings.product_2.description | escape }}",
+        description: `{{ section.settings.product_2.description | strip_html }}`,
         url: "{{ section.settings.product_2.url }}",
         image: "{{ section.settings.product_2.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_2.featured_image.alt | default: section.settings.product_2.title | escape }}"
@@ -98,7 +98,7 @@
     'product-3': {
       {% if section.settings.product_3 != blank %}
         title: "{{ section.settings.product_3.title | escape }}",
-        description: "{{ section.settings.product_3.description | escape }}",
+        description: `{{ section.settings.product_3.description | strip_html }}`,
         url: "{{ section.settings.product_3.url }}",
         image: "{{ section.settings.product_3.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_3.featured_image.alt | default: section.settings.product_3.title | escape }}"
