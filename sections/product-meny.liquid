@@ -6,10 +6,10 @@
   </div>
 
   <!-- Product Menu Tabs -->
-  <div class='flex flex-wrap gap-[30px] justify-center mt-[40px] mb-[40px]'>
+  <div class='flex flex-wrap gap-[15px] md:gap-[30px] justify-center mt-[30px] md:mt-[40px] mb-[30px] md:mb-[40px] px-[20px]'>
     {% if section.settings.product_1 != blank %}
       <button
-        class='product-tab px-[10px] py-[15px] transition-colors text-[25px] text  relative'
+        class='product-tab px-[8px] md:px-[10px] py-[12px] md:py-[15px] transition-colors text-[18px] md:text-[25px] text relative'
         data-product='product-1'
         style='color: #171717; opacity: 0.3; background: none; border: none;'
       >
@@ -19,7 +19,7 @@
 
     {% if section.settings.product_2 != blank %}
       <button
-        class='product-tab px-[10px] py-[15px] transition-colors text-[25px] text   relative'
+        class='product-tab px-[8px] md:px-[10px] py-[12px] md:py-[15px] transition-colors text-[18px] md:text-[25px] text relative'
         data-product='product-2'
         style='color: #171717; opacity: 0.3; background: none; border: none;'
       >
@@ -29,7 +29,7 @@
 
     {% if section.settings.product_3 != blank %}
       <button
-        class='product-tab px-[10px] py-[15px] transition-colors text-[25px] text  relative'
+        class='product-tab px-[8px] md:px-[10px] py-[12px] md:py-[15px] transition-colors text-[18px] md:text-[25px] text relative'
         data-product='product-3'
         style='color: #171717; opacity: 0.3; background: none; border: none;'
       >
@@ -41,11 +41,11 @@
   <!-- Product Content Area -->
   <div class='layout'>
     <div class='product-content-container'>
-      <div class='gap-[40px] md:gap-[50px] justify-between items-center flex flex-col md:flex-row'>
-        <div class='relative w-full md:w-[2500px] lg:shrink-0 h-[350px] md:h-[450px] lg:w-[450px]'>
+      <div class='gap-[25px] md:gap-[50px] justify-between items-center flex flex-col md:flex-row'>
+        <div class='relative w-full md:w-[2500px] lg:shrink-0 h-[250px] sm:h-[300px] md:h-[450px] lg:w-[450px]'>
           <img
             id='product-image'
-            class='w-full h-full object-contain rounded-[15px]'
+            class='w-full h-full object-contain rounded-[10px] md:rounded-[15px]'
             width='450'
             height='450'
             loading='lazy'
@@ -53,16 +53,19 @@
           >
         </div>
 
-        <div class='flex flex-col'>
-          <div class='headline1 text-[#171717]' id='product-title'></div>
+        <div class='flex flex-col w-full md:w-auto'>
           <div
-            class='text text-[#171717]/80 pt-[40px] md:pt-[50px]'
+            class='headline1 text-[#171717]text-left'
+            id='product-title'
+          ></div>
+          <div
+            class='text text-[#171717]/80 pt-[20px] md:pt-[50px] text-center md:text-left'
             id='product-description'
           ></div>
-          <div class='pt-[40px] md:pt-[50px]'>
+          <div class='pt-[25px] md:pt-[50px] flex justify-start'>
             <button
               id='product-link'
-              class=' px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett  text-[#171717] '
+              class='px-[18px] md:px-[20px] flex flex-row gap-[15px] md:gap-[20px] items-center rounded-[8px] md:rounded-[10px] py-[14px] md:py-[17px] knappetikett text-[#171717] text-[14px] md:text-[16px]'
               style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
             >
               Läs mer

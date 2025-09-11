@@ -325,6 +325,10 @@
   margin-top: 62px
 }
 
+.mb-\[30px\] {
+  margin-bottom: 30px
+}
+
 .block {
   display: block
 }
@@ -415,6 +419,10 @@
 
 .h-screen {
   height: 100vh
+}
+
+.h-\[250px\] {
+  height: 250px
 }
 
 .min-h-screen {
@@ -586,6 +594,10 @@
   gap: 5px
 }
 
+.gap-\[25px\] {
+  gap: 25px
+}
+
 .gap-x-\[20px\] {
   -moz-column-gap: 20px;
        column-gap: 20px
@@ -641,6 +653,10 @@
 
 .rounded-lg {
   border-radius: 0.5rem
+}
+
+.rounded-\[8px\] {
+  border-radius: 8px
 }
 
 .rounded-t-\[25px\] {
@@ -874,6 +890,26 @@
   padding-right: 10px
 }
 
+.px-\[8px\] {
+  padding-left: 8px;
+  padding-right: 8px
+}
+
+.py-\[12px\] {
+  padding-top: 12px;
+  padding-bottom: 12px
+}
+
+.px-\[18px\] {
+  padding-left: 18px;
+  padding-right: 18px
+}
+
+.py-\[14px\] {
+  padding-top: 14px;
+  padding-bottom: 14px
+}
+
 .pb-\[110px\] {
   padding-bottom: 110px
 }
@@ -920,6 +956,10 @@
 
 .pt-\[50px\] {
   padding-top: 50px
+}
+
+.pt-\[25px\] {
+  padding-top: 25px
 }
 
 .text-left {
@@ -985,6 +1025,10 @@
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem
+}
+
+.text-\[18px\] {
+  font-size: 18px
 }
 
 .font-\[300\] {
@@ -1199,6 +1243,14 @@
     margin-top: 87px
   }
 
+  .md\:mb-\[40px\] {
+    margin-bottom: 40px
+  }
+
+  .md\:mt-\[40px\] {
+    margin-top: 40px
+  }
+
   .md\:block {
     display: block
   }
@@ -1303,6 +1355,14 @@
     gap: 50px
   }
 
+  .md\:rounded-\[10px\] {
+    border-radius: 10px
+  }
+
+  .md\:rounded-\[15px\] {
+    border-radius: 15px
+  }
+
   .md\:p-\[30px\] {
     padding: 30px
   }
@@ -1345,6 +1405,26 @@
   .md\:py-\[87px\] {
     padding-top: 87px;
     padding-bottom: 87px
+  }
+
+  .md\:px-\[10px\] {
+    padding-left: 10px;
+    padding-right: 10px
+  }
+
+  .md\:py-\[15px\] {
+    padding-top: 15px;
+    padding-bottom: 15px
+  }
+
+  .md\:px-\[20px\] {
+    padding-left: 20px;
+    padding-right: 20px
+  }
+
+  .md\:py-\[17px\] {
+    padding-top: 17px;
+    padding-bottom: 17px
   }
 
   .md\:pb-\[120px\] {
@@ -1397,6 +1477,14 @@
 
   .md\:text-\[40px\] {
     font-size: 40px
+  }
+
+  .md\:text-\[25px\] {
+    font-size: 25px
+  }
+
+  .md\:text-\[16px\] {
+    font-size: 16px
   }
 }
 
