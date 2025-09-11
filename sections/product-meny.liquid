@@ -1,0 +1,189 @@
+<section>
+  <div class='layout flex flex-col'>
+    <h2 class='text-[#171717] text-center headline1'>
+      {{ section.settings.heading }}
+    </h2>
+  </div>
+
+  <!-- Product Menu Tabs -->
+  <div class='flex flex-wrap gap-[30px] justify-center mt-[40px] mb-[40px]'>
+    {% if section.settings.product_1 != blank %}
+      <button
+        class='product-tab px-[10px] py-[15px] transition-colors text-[25px] text  relative'
+        data-product='product-1'
+        style='color: #171717; opacity: 0.3; background: none; border: none;'
+      >
+        {{ section.settings.product_1.title }}
+      </button>
+    {% endif %}
+
+    {% if section.settings.product_2 != blank %}
+      <button
+        class='product-tab px-[10px] py-[15px] transition-colors text-[25px] text   relative'
+        data-product='product-2'
+        style='color: #171717; opacity: 0.3; background: none; border: none;'
+      >
+        {{ section.settings.product_2.title }}
+      </button>
+    {% endif %}
+
+    {% if section.settings.product_3 != blank %}
+      <button
+        class='product-tab px-[10px] py-[15px] transition-colors text-[25px] text  relative'
+        data-product='product-3'
+        style='color: #171717; opacity: 0.3; background: none; border: none;'
+      >
+        {{ section.settings.product_3.title }}
+      </button>
+    {% endif %}
+  </div>
+
+  <!-- Product Content Area -->
+  <div class='layout'>
+    <div class='product-content-container'>
+      <div class='gap-[40px] md:gap-[50px] justify-between items-center flex flex-col md:flex-row'>
+        <div class='relative w-full md:w-[2500px] lg:shrink-0 h-[350px] md:h-[450px] lg:w-[450px]'>
+          <img
+            id='product-image'
+            class='w-full h-full object-contain rounded-[15px]'
+            width='450'
+            height='450'
+            loading='lazy'
+            alt=''
+          >
+        </div>
+
+        <div class='flex flex-col'>
+          <div class='headline1 text-[#171717]' id='product-title'></div>
+          <div
+            class='text text-[#171717]/80 pt-[40px] md:pt-[50px]'
+            id='product-description'
+          ></div>
+          <div class='pt-[40px] md:pt-[50px]'>
+            <button
+              id='product-link'
+              class=' px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett  text-[#171717] '
+              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+            >
+              Läs mer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Product data from Shopify
+  const products = {
+    'product-1': {
+      {% if section.settings.product_1 != blank %}
+        title: "{{ section.settings.product_1.title | escape }}",
+        description: "{{ section.settings.product_1.description | escape }}",
+        url: "{{ section.settings.product_1.url }}",
+        image: "{{ section.settings.product_1.featured_image | image_url: width: 450 }}",
+        alt: "{{ section.settings.product_1.featured_image.alt | default: section.settings.product_1.title | escape }}"
+      {% endif %}
+    },
+    'product-2': {
+      {% if section.settings.product_2 != blank %}
+        title: "{{ section.settings.product_2.title | escape }}",
+        description: "{{ section.settings.product_2.description | escape }}",
+        url: "{{ section.settings.product_2.url }}",
+        image: "{{ section.settings.product_2.featured_image | image_url: width: 450 }}",
+        alt: "{{ section.settings.product_2.featured_image.alt | default: section.settings.product_2.title | escape }}"
+      {% endif %}
+    },
+    'product-3': {
+      {% if section.settings.product_3 != blank %}
+        title: "{{ section.settings.product_3.title | escape }}",
+        description: "{{ section.settings.product_3.description | escape }}",
+        url: "{{ section.settings.product_3.url }}",
+        image: "{{ section.settings.product_3.featured_image | image_url: width: 450 }}",
+        alt: "{{ section.settings.product_3.featured_image.alt | default: section.settings.product_3.title | escape }}"
+      {% endif %}
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.product-tab');
+    const productImage = document.getElementById('product-image');
+    const productTitle = document.getElementById('product-title');
+    const productDescription = document.getElementById('product-description');
+    const productLink = document.getElementById('product-link');
+
+    // Show first product by default
+    if (tabs.length > 0) {
+      const firstProduct = tabs[0].getAttribute('data-product');
+      updateProductContent(firstProduct);
+      // Set active tab styling
+      tabs[0].style.opacity = '1';
+      tabs[0].style.borderBottom = '2px solid #EBCF2F';
+    }
+
+    function updateProductContent(productId) {
+      const product = products[productId];
+      if (product) {
+        productImage.src = product.image;
+        productImage.alt = product.alt;
+        productTitle.textContent = product.title;
+        productDescription.textContent = product.description;
+        productLink.href = product.url;
+      }
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', function () {
+        const targetProduct = this.getAttribute('data-product');
+
+        // Reset all tab styles
+        tabs.forEach((t) => {
+          t.style.opacity = '0.3';
+          t.style.borderBottom = 'none';
+        });
+
+        // Update content and highlight active tab
+        updateProductContent(targetProduct);
+        this.style.opacity = '1';
+        this.style.borderBottom = '2px solid #EBCF2F';
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Menu",
+  "tag": "section",
+  "class": "section-product-menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our products"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product 1"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Product 2"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Product 3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Menu"
+    }
+  ]
+}
+{% endschema %}
