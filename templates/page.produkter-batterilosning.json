@@ -26,25 +26,14 @@
         "button_url": ""
       }
     },
-    "grid_omraden_byA8MR": {
-      "type": "grid-omraden",
-      "name": "Grid areas",
+    "product_meny_XPnyQq": {
+      "type": "product-meny",
+      "name": "Product Menu",
       "settings": {
-        "title": "Våra utvalda batterier",
-        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
-        "card_1_button_text": "Läs mer",
-        "card_1_button_link": "",
-        "card_1_overlay_opacity": 0,
-        "card_2_button_text": "Utforska",
-        "card_2_button_link": "",
-        "card_2_overlay_opacity": 0,
-        "card_3_button_text": "Upptäck",
-        "card_3_button_link": "",
-        "card_3_overlay_opacity": 0,
-        "card_4_button_text": "Kom igång",
-        "card_4_button_link": "",
-        "card_4_overlay_opacity": 0,
-        "bottom_description": ""
+        "heading": "Våra batterier",
+        "product_1": "dyness-tower-pro",
+        "product_2": "",
+        "product_3": ""
       }
     },
     "bild_och_text_apXeiG": {
@@ -118,7 +107,7 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "grid_omraden_byA8MR",
+    "product_meny_XPnyQq",
     "bild_och_text_apXeiG",
     "banner_med_3_produkter_HxVFnP"
   ]
