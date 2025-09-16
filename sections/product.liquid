@@ -13,7 +13,7 @@
       <div class='space-y-4'>
         <div class='px-[90px] py-[40px] rounded-[15px] flex bg-[#F6F6F6]'>
           {% if product.featured_media %}
-            <div class='flex w-[300px] h-[300px]'>
+            <div class='flex w-[300px] h-[300px]' id='main-product-image'>
               {%
                 render 'image',
                 image: product.featured_media,
@@ -27,7 +27,11 @@
         {% if product.media.size > 1 %}
           <div class='flex gap-3 overflow-x-auto'>
             {% for media in product.media offset: 1 limit: 4 %}
-              <div class='flex-shrink-0 w-[80px] h-[80px] rounded-[10px] overflow-hidden bg-[#F6F6F6] cursor-pointer hover:opacity-80 transition-opacity'>
+              <div
+                class='flex-shrink-0 w-[80px] h-[80px] rounded-[10px] overflow-hidden bg-[#F6F6F6] cursor-pointer hover:opacity-80 transition-opacity'
+                data-thumbnail
+                data-media-id='{{ media.id }}'
+              >
                 {%
                   render 'image',
                   image: media,
@@ -118,7 +122,97 @@
     height: 100% !important;
     object-fit: cover !important;
   }
+
+  /* Thumbnail active state */
+  [data-thumbnail].active {
+    opacity: 1 !important;
+    border: 3px solid #171717 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.2) !important;
+  }
+
+  /* Thumbnail hover state */
+  [data-thumbnail]:hover:not(.active) {
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(23, 23, 23, 0.15);
+  }
+
+  /* Smooth transitions for all thumbnail states */
+  [data-thumbnail] {
+    transition: all 0.3s ease;
+  }
+
+  /* Override hover opacity when active */
+  [data-thumbnail].active:hover {
+    opacity: 1 !important;
+  }
 {% endstylesheet %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function() {
+    const mainImageContainer = document.getElementById('main-product-image');
+    const thumbnails = document.querySelectorAll('[data-thumbnail]');
+
+    if (!mainImageContainer || thumbnails.length === 0) return;
+
+    // Store all product media for easy access
+    const productMedia = [
+      {% for media in product.media %}
+        {
+          id: {{ media.id }},
+          alt: {{ media.alt | default: product.title | json }},
+          src: {{ media | image_url: width: 600 | json }},
+          {% if forloop.first %}isFeatured: true{% else %}isFeatured: false{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+
+    // Function to update main image
+    function updateMainImage(mediaId) {
+      const media = productMedia.find(m => m.id === mediaId);
+      if (!media) return;
+
+      // Update the image source
+      const img = mainImageContainer.querySelector('img');
+      if (img) {
+        img.src = media.src;
+        img.alt = media.alt;
+      }
+
+      // Update active thumbnail
+      thumbnails.forEach(thumb => {
+        thumb.classList.remove('active');
+        if (parseInt(thumb.dataset.mediaId) === mediaId) {
+          thumb.classList.add('active');
+          console.log('Added active class to thumbnail:', thumb); // Debug
+        }
+      });
+    }
+
+    // Add click listeners to thumbnails
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', function() {
+        const mediaId = parseInt(this.dataset.mediaId);
+        updateMainImage(mediaId);
+      });
+    });
+
+    // Set initial active state for featured image
+    if (productMedia.length > 0) {
+      const featuredMedia = productMedia.find(m => m.isFeatured);
+      if (featuredMedia) {
+        // Find the thumbnail that corresponds to the featured image
+        const featuredThumbnail = Array.from(thumbnails).find(thumb =>
+          parseInt(thumb.dataset.mediaId) === featuredMedia.id
+        );
+
+        if (featuredThumbnail) {
+          featuredThumbnail.classList.add('active');
+        }
+      }
+    }
+  });
+{% endjavascript %}
 
 {% schema %}
 {
