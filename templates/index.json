@@ -294,6 +294,46 @@
         "secondary_button_url": ""
       }
     },
+    "review_7jfwE6": {
+      "type": "review",
+      "blocks": {
+        "review_fMhRqw": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_WnJfgk": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_rqBKMd": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_fMhRqw",
+        "review_WnJfgk",
+        "review_rqBKMd"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
+      }
+    },
     "kontakt_form_Ae7RmC": {
       "type": "kontakt-form",
       "name": "Contact Form",
@@ -364,6 +404,7 @@
     "banner_med_3_produkter_D79ei6",
     "banner_med_3_produkter_ThPDRM",
     "banner_med_lankar_Vx7qa6",
+    "review_7jfwE6",
     "kontakt_form_Ae7RmC",
     "review_wyUm7C",
     "product_meny_yfnazx"
