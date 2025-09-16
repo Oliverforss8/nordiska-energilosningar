@@ -163,6 +163,91 @@
               {% endif %}
             </div>
           {% endif %}
+
+          <div class='pt-[50px]'>
+            <!-- Tekniska specifikationer Dropdown -->
+            <div class='dropdown-section'>
+              <div
+                class='flex flex-row w-full py-[20px] justify-between items-center cursor-pointer dropdown-trigger'
+                style='border-top: 1px solid #171717; border-bottom: 1px solid #171717;'
+                onclick='toggleDropdown("specs-content", this)'
+              >
+                <div class=' body1'>Tekniska specifikationer</div>
+                <div class='dropdown-icon'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='16'
+                    height='16'
+                    viewBox='0 0 16 16'
+                    fill='none'
+                  >
+                    <path d="M1 8H15M8 1V15" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class='dropdown-content'
+                id='specs-content'
+                style='display: none;'
+              >
+                <div class='py-[20px]'>
+                  {% if product.metafields.custom.tekniska_specifikationer
+                      != blank
+                  %}
+                    <div class='prose prose-sm max-w-none'>
+                      {{
+                        product.metafields.custom.tekniska_specifikationer
+                        | metafield_text
+                      }}
+                    </div>
+                  {% else %}
+                    <p class='text-gray-500'>
+                      Inga tekniska specifikationer tillgängliga.
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <!-- Mer information Dropdown -->
+            <div class='dropdown-section'>
+              <div
+                class='flex flex-row w-full py-[20px] justify-between items-center cursor-pointer dropdown-trigger'
+                style='border-bottom: 1px solid #171717;'
+                onclick='toggleDropdown("info-content", this)'
+              >
+                <div class=' body1'>Mer information</div>
+                <div class='dropdown-icon'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='16'
+                    height='16'
+                    viewBox='0 0 16 16'
+                    fill='none'
+                  >
+                    <path d="M1 8H15M8 1V15" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class='dropdown-content'
+                id='info-content'
+                style='display: none;'
+              >
+                <div class='py-[20px]'>
+                  {% if product.metafields.custom.mer_text != blank %}
+                    <div class='prose prose-sm max-w-none'>
+                      {{ product.metafields.custom.mer_text | metafield_text }}
+                    </div>
+                  {% else %}
+                    <p class='text-gray-500'>
+                      Ingen ytterligare information tillgänglig.
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -250,6 +335,33 @@
   .metafield-content > *:last-child {
     margin-bottom: 0 !important;
   }
+
+  /* Dropdown styling */
+  .dropdown-trigger {
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-trigger:hover {
+    background-color: rgba(23, 23, 23, 0.05);
+  }
+
+  .dropdown-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-trigger.active .dropdown-icon {
+    transform: rotate(45deg);
+  }
+
+  .dropdown-content {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #171717;
+  }
+
+  .dropdown-content.show {
+    display: block !important;
+  }
 {% endstylesheet %}
 
 {% javascript %}
@@ -315,7 +427,36 @@
         }
       }
     }
+
   });
+
+  // Simple dropdown function - must be global for onclick to work
+  window.toggleDropdown = function(contentId, trigger) {
+    console.log('Toggle dropdown called:', contentId); // Debug
+
+    const content = document.getElementById(contentId);
+    const icon = trigger.querySelector('.dropdown-icon');
+
+    if (content) {
+      const isHidden = content.style.display === 'none' || content.style.display === '';
+
+      if (isHidden) {
+        content.style.display = 'block';
+        content.classList.add('show');
+        trigger.classList.add('active');
+        if (icon) icon.style.transform = 'rotate(45deg)';
+        console.log('Opened dropdown:', contentId);
+      } else {
+        content.style.display = 'none';
+        content.classList.remove('show');
+        trigger.classList.remove('active');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+        console.log('Closed dropdown:', contentId);
+      }
+    } else {
+      console.error('Content not found:', contentId);
+    }
+  }
 {% endjavascript %}
 
 {% schema %}

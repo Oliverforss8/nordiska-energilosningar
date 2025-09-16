@@ -840,12 +840,25 @@
   border-width: 1px
 }
 
+.border-y-\[1px\] {
+  border-top-width: 1px;
+  border-bottom-width: 1px
+}
+
 .border-b {
   border-bottom-width: 1px
 }
 
 .border-t {
   border-top-width: 1px
+}
+
+.\!border-b {
+  border-bottom-width: 1px !important
+}
+
+.\!border-t {
+  border-top-width: 1px !important
 }
 
 .border-gray-100 {
@@ -866,6 +879,17 @@
 .border-gray-900 {
   --tw-border-opacity: 1;
   border-color: rgb(17 24 39 / var(--tw-border-opacity, 1))
+}
+
+.\!border-\[\#171717\] {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(23 23 23 / var(--tw-border-opacity, 1)) !important
+}
+
+.border-y-\[\#171717\] {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(23 23 23 / var(--tw-border-opacity, 1));
+  border-bottom-color: rgb(23 23 23 / var(--tw-border-opacity, 1))
 }
 
 .bg-\[\#171717\] {
