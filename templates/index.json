@@ -239,61 +239,6 @@
         "secondary_button_url": ""
       }
     },
-    "banner_med_lankar_Vx7qa6": {
-      "type": "banner-med-lankar",
-      "blocks": {
-        "card_zAPKeQ": {
-          "type": "card",
-          "settings": {
-            "heading": "6 mån",
-            "description": "Serviceavtal hos oss kommande 6 månader",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        },
-        "card_yJV9er": {
-          "type": "card",
-          "settings": {
-            "heading": "12 mån",
-            "description": "Serviceavtal hos oss kommande 12 månader",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        },
-        "card_jk6Wgp": {
-          "type": "card",
-          "settings": {
-            "heading": "24 mån",
-            "description": "Serviceavtal hos oss kommande 24 månader",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        }
-      },
-      "block_order": [
-        "card_zAPKeQ",
-        "card_yJV9er",
-        "card_jk6Wgp"
-      ],
-      "name": "Banner med länkar",
-      "settings": {
-        "background_color": "#171717",
-        "background_image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 25,
-        "header_button_text": "Serviceavtal",
-        "header_button_url": "",
-        "heading": "Serviceavtal - för din trygghet",
-        "description": "Genom att teckna ett serviceavtal med oss kan du känna dig trygg i att vi hjälper dig om något krånglar med din anläggning – för ett mycket bättre pris dessutom.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
-      }
-    },
     "review_7jfwE6": {
       "type": "review",
       "blocks": {
@@ -403,7 +348,6 @@
     "banner_bild_xRHf34",
     "banner_med_3_produkter_D79ei6",
     "banner_med_3_produkter_ThPDRM",
-    "banner_med_lankar_Vx7qa6",
     "review_7jfwE6",
     "kontakt_form_Ae7RmC",
     "review_wyUm7C",
