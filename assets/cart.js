@@ -215,11 +215,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Buy Now functionality - add to cart and go to checkout
   if (buyNowBtn) {
+    console.log('Buy now button found:', buyNowBtn); // Debug
     buyNowBtn.addEventListener('click', async function (e) {
       e.preventDefault();
+      console.log('Buy now button clicked'); // Debug
 
       const variantId = this.getAttribute('data-variant-id');
       const quantity = 1;
+
+      console.log('Variant ID:', variantId); // Debug
 
       // Show loading state
       const originalText = this.innerHTML;
@@ -227,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.disabled = true;
 
       try {
+        console.log('Adding to cart...'); // Debug
         const response = await fetch('/cart/add.js', {
           method: 'POST',
           headers: {
@@ -238,7 +243,10 @@ document.addEventListener('DOMContentLoaded', function () {
           }),
         });
 
+        console.log('Cart add response:', response); // Debug
+
         if (response.ok) {
+          console.log('Success - redirecting to checkout'); // Debug
           // Success - redirect to checkout
           window.location.href = '/checkout';
         } else {
@@ -261,6 +269,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2000);
       }
     });
+  } else {
+    console.log('Buy now button not found'); // Debug
   }
 
   // Add to Cart functionality

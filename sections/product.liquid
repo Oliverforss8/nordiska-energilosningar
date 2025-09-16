@@ -430,6 +430,69 @@
     }
 
   });
+
+  // Buy Now functionality
+  const buyNowBtn = document.querySelector('.buy-now-btn');
+  if (buyNowBtn) {
+    console.log('Buy now button found in product section'); // Debug
+    buyNowBtn.addEventListener('click', async function (e) {
+      e.preventDefault();
+      console.log('Buy now button clicked from product section'); // Debug
+
+      const variantId = this.getAttribute('data-variant-id');
+      const quantity = 1;
+
+      console.log('Variant ID:', variantId); // Debug
+
+      // Show loading state
+      const originalText = this.innerHTML;
+      this.innerHTML = 'Behandlar...';
+      this.disabled = true;
+
+      try {
+        console.log('Adding to cart...'); // Debug
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            id: variantId,
+            quantity: quantity,
+          }),
+        });
+
+        console.log('Cart add response:', response); // Debug
+
+        if (response.ok) {
+          console.log('Success - redirecting to checkout'); // Debug
+          // Success - redirect to checkout
+          window.location.href = '/checkout';
+        } else {
+          const errorData = await response.json();
+          console.error('Cart add error:', errorData);
+          throw new Error('Failed to add to cart');
+        }
+      } catch (error) {
+        console.error('Error with buy now:', error);
+
+        // Show error state
+        this.innerHTML = 'Fel!';
+        this.style.background = '#EF4444';
+        this.style.color = 'white';
+
+        // Reset button after 2 seconds
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.disabled = false;
+          this.style.background = '';
+          this.style.color = '';
+        }, 2000);
+      }
+    });
+  } else {
+    console.log('Buy now button not found in product section'); // Debug
+  }
 {% endjavascript %}
 
 {% schema %}
