@@ -166,10 +166,12 @@
 
           <div class='pt-[50px]'>
             <!-- Tekniska specifikationer Dropdown -->
-            <div class='dropdown-section'>
+            <div
+              class='dropdown-section'
+              style='border-top: 1px solid #171717; border-bottom: 1px solid #171717;'
+            >
               <div
                 class='flex flex-row w-full py-[20px] justify-between items-center cursor-pointer dropdown-trigger'
-                style='border-top: 1px solid #171717; border-bottom: 1px solid #171717;'
                 onclick='toggleDropdown("specs-content", this)'
               >
                 <div class=' body1'>Tekniska specifikationer</div>
@@ -188,32 +190,32 @@
               <div
                 class='dropdown-content'
                 id='specs-content'
-                style='display: none;'
+                style='display: none; padding-top: 20px; padding-bottom: 20px;'
               >
-                <div class='py-[20px]'>
-                  {% if product.metafields.custom.tekniska_specifikationer
-                      != blank
-                  %}
-                    <div class='prose prose-sm max-w-none'>
-                      {{
-                        product.metafields.custom.tekniska_specifikationer
-                        | metafield_text
-                      }}
-                    </div>
-                  {% else %}
-                    <p class='text-gray-500'>
-                      Inga tekniska specifikationer tillgängliga.
-                    </p>
-                  {% endif %}
-                </div>
+                {% if product.metafields.custom.tekniska_specifikationer
+                    != blank
+                %}
+                  <div class='body1 text-[16px]'>
+                    {{
+                      product.metafields.custom.tekniska_specifikationer
+                      | metafield_text
+                    }}
+                  </div>
+                {% else %}
+                  <p class='text-gray-500'>
+                    Inga tekniska specifikationer tillgängliga.
+                  </p>
+                {% endif %}
               </div>
             </div>
 
             <!-- Mer information Dropdown -->
-            <div class='dropdown-section'>
+            <div
+              class='dropdown-section'
+              style='border-bottom: 1px solid #171717;'
+            >
               <div
                 class='flex flex-row w-full py-[20px] justify-between items-center cursor-pointer dropdown-trigger'
-                style='border-bottom: 1px solid #171717;'
                 onclick='toggleDropdown("info-content", this)'
               >
                 <div class=' body1'>Mer information</div>
@@ -232,19 +234,17 @@
               <div
                 class='dropdown-content'
                 id='info-content'
-                style='display: none;'
+                style='display: none; padding-top: 20px; padding-bottom: 20px;'
               >
-                <div class='py-[20px]'>
-                  {% if product.metafields.custom.mer_text != blank %}
-                    <div class='prose prose-sm max-w-none'>
-                      {{ product.metafields.custom.mer_text | metafield_text }}
-                    </div>
-                  {% else %}
-                    <p class='text-gray-500'>
-                      Ingen ytterligare information tillgänglig.
-                    </p>
-                  {% endif %}
-                </div>
+                {% if product.metafields.custom.mer_text != blank %}
+                  <div class='body1 text-[16px]'>
+                    {{ product.metafields.custom.mer_text | metafield_text }}
+                  </div>
+                {% else %}
+                  <p class='text-gray-500'>
+                    Ingen ytterligare information tillgänglig.
+                  </p>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -315,6 +315,7 @@
     color: #171717 !important;
     opacity: 0.8;
     display: block !important;
+    font-family: var(--font-halyard--family);
   }
 
   .metafield-content ul,
@@ -341,10 +342,6 @@
     transition: all 0.3s ease;
   }
 
-  .dropdown-trigger:hover {
-    background-color: rgba(23, 23, 23, 0.05);
-  }
-
   .dropdown-icon {
     transition: transform 0.3s ease;
   }
@@ -356,7 +353,6 @@
   .dropdown-content {
     overflow: hidden;
     transition: all 0.3s ease;
-    border-bottom: 1px solid #171717;
   }
 
   .dropdown-content.show {
