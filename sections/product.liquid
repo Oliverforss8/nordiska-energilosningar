@@ -105,6 +105,64 @@
               </svg>
             </button>
           </div>
+
+          <!-- Additional Text Fields -->
+          {% if product.metafields.custom.meta_falt_texter %}
+            {% assign texter_metaobject = product.metafields.custom.meta_falt_texter.value %}
+
+            <div class='pt-[50px] flex flex-row gap-[20px]'>
+              {% if texter_metaobject.text_1 != blank %}
+                <div class='text-field w-full bg-[#F3F1E8] p-[30px] rounded-[15px]'>
+                  <div class='metafield-content'>
+                    {% assign text_1_data = texter_metaobject.text_1.value %}
+                    {% for child in text_1_data.children %}
+                      {% if child.type == "heading" %}
+                        {% if child.level == 2 %}
+                          <h2>{{ child.children[0].value }}</h2>
+                        {% elsif child.level == 3 %}
+                          <h3>{{ child.children[0].value }}</h3>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if texter_metaobject.text_2 != blank %}
+                <div class='text-field w-full bg-[#F3F1E8] p-[30px] rounded-[15px]'>
+                  <div class='metafield-content'>
+                    {% assign text_2_data = texter_metaobject.text_2.value %}
+                    {% for child in text_2_data.children %}
+                      {% if child.type == "heading" %}
+                        {% if child.level == 2 %}
+                          <h2>{{ child.children[0].value }}</h2>
+                        {% elsif child.level == 3 %}
+                          <h3>{{ child.children[0].value }}</h3>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if texter_metaobject.text_3 != blank %}
+                <div class='text-field bg-[#F3F1E8] w-full p-[30px] rounded-[15px]'>
+                  <div class='metafield-content'>
+                    {% assign text_3_data = texter_metaobject.text_3.value %}
+                    {% for child in text_3_data.children %}
+                      {% if child.type == "heading" %}
+                        {% if child.level == 2 %}
+                          <h2>{{ child.children[0].value }}</h2>
+                        {% elsif child.level == 3 %}
+                          <h3>{{ child.children[0].value }}</h3>
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -120,7 +178,7 @@
   .image.image--cover > img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
   }
 
   /* Thumbnail active state */
@@ -145,6 +203,52 @@
   /* Override hover opacity when active */
   [data-thumbnail].active:hover {
     opacity: 1 !important;
+  }
+
+  /* Metafield content styling - target H2 and H3 in rich text */
+  .metafield-content h2 {
+    font-size: 40px !important;
+    line-height: 0.9 !important;
+    margin: 0 0 16px 0 !important;
+    font-weight: 400 !important;
+    color: #171717 !important;
+    display: block !important;
+    font-family: var(--font-halyard--family);
+  }
+
+  .metafield-content h3 {
+    font-size: 20px !important;
+    line-height: 0.9 !important;
+    margin: 0 0 30px 0 !important;
+    font-weight: 400 !important;
+    color: #171717 !important;
+    font-family: var(--font-halyard--family);
+  }
+
+  .metafield-content p {
+    margin: 0 0 12px 0 !important;
+    color: #171717 !important;
+    opacity: 0.8;
+    display: block !important;
+  }
+
+  .metafield-content ul,
+  .metafield-content ol {
+    margin: 0 0 12px 0 !important;
+    padding-left: 20px !important;
+    display: block !important;
+  }
+
+  .metafield-content li {
+    margin: 0 0 6px 0 !important;
+    color: #171717 !important;
+    opacity: 0.8;
+    display: list-item !important;
+  }
+
+  /* Ensure proper spacing between elements */
+  .metafield-content > *:last-child {
+    margin-bottom: 0 !important;
   }
 {% endstylesheet %}
 

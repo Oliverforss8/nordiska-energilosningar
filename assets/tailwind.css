@@ -389,6 +389,10 @@
   display: inline-block
 }
 
+.inline {
+  display: inline
+}
+
 .flex {
   display: flex
 }
@@ -403,6 +407,10 @@
 
 .contents {
   display: contents
+}
+
+.list-item {
+  display: list-item
 }
 
 .hidden {
@@ -1342,6 +1350,10 @@
 
 .text-\[\] {
   color: 
+}
+
+.text-\[\#\] {
+  color: #
 }
 
 .line-through {
