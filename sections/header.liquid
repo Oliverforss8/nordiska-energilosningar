@@ -187,6 +187,9 @@
 <!-- Include Cart Drawer -->
 {% render "cart-drawer" %}
 
+<!-- Load Cart JavaScript -->
+<script src='{{ 'cart.js' | asset_url }}' defer></script>
+
 {% stylesheet %}
   .header-section {
     --header-text-color: white;

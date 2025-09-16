@@ -84,14 +84,16 @@
               </svg>
             </button>
             <button
-              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] '
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] buy-now-btn'
               style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+              data-variant-id='{{ product.selected_or_first_available_variant.id }}'
             >
               Köp nu
             </button>
             <button
-              class='headline1 text-[20px] bg-transparent rounded-[10px]  px-[20px] py-[15px] gap-[10px] flex flex-row items-center'
+              class='headline1 text-[20px] bg-transparent rounded-[10px]  px-[20px] py-[15px] gap-[10px] flex flex-row items-center add-to-cart-btn'
               style='border: 1px solid #171717 !important;'
+              data-variant-id='{{ product.selected_or_first_available_variant.id }}'
             >
               Lägg i varukorg
               <svg
@@ -253,6 +255,9 @@
     </div>
   </div>
 </section>
+
+<!-- Cart Drawer -->
+{% render "cart-drawer" %}
 
 {% stylesheet %}
   /* Make images passed with class image--cover fill and cover wrappers */
