@@ -1,52 +1,138 @@
-{% comment %}
-  This section is used in the product template to render product page with
-  media, content, and add-to-cart form.
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = "section-" | append: section.type
+%}
 
-  https://shopify.dev/docs/storefronts/themes/architecture/templates/product
-{% endcomment %}
-
-<div class='product-images'>
-  {% for image in product.images %}
-    {% render "image", class: "product-image", image: image %}
-  {% endfor %}
-</div>
-
-<div class='product-info'>
-  <h1>{{ product.title }}</h1>
-  <p>{{ product.price | money }}</p>
-  <p>{{ product.description }}</p>
-</div>
-
-<div class='product-form'>
-  {% form "product", product %}
-    {% assign current_variant = product.selected_or_first_available_variant %}
-
-    <select name='id'>
-      {% for variant in product.variants %}
-        <option
-          value='{{ variant.id }}'
-          {% if variant == current_variant %}
-            selected='selected'
+<section
+  id='{{ section_id }}'
+  class='{{ section_class }} '
+>
+  <div class='layout pt-[150px]'>
+    <div class=' flex flex-row gap-[50px]'>
+      <!-- Product Images -->
+      <div>
+        <div class='px-[90px] py-[40px] rounded-[15px] flex bg-[#F6F6F6]'>
+          {% if product.featured_media %}
+            <div class='flex w-[300px]'>
+              {%
+                render 'image',
+                image: product.featured_media,
+                alt: product.featured_media.alt | default: product.title,
+                class: 'w-full h-full object-contain '
+              %}
+            </div>
           {% endif %}
-        >
-          {{ variant.title }} - {{ variant.price | money }}
-        </option>
-      {% endfor %}
-    </select>
+        </div>
+      </div>
 
-    <input type='text' name='quantity' min='1' value='1'>
+      <!-- Product Details -->
+      <div class='product-details '>
+        <div class=''>
+          <h1 class=' headline2'>
+            {{ product.title }}
+          </h1>
 
-    <input type='submit' value='Add to cart'>
-    {{ form | payment_button }}
-  {% endform %}
-</div>
+          {% if product.description != blank %}
+            <div class='body1 py-[50px] text-[#171717]/80'>
+              {{ product.description }}
+            </div>
+          {% endif %}
+
+          <div class='flex items-center space-x-3'>
+            {% if product.compare_at_price > product.price %}
+              <span class='text-lg text-gray-500 line-through'>
+                {{ product.compare_at_price | money }}
+              </span>
+            {% endif %}
+            <span class=' headline2'>
+              {{ product.price | money }}
+            </span>
+          </div>
+          <div class='pt-[50px] flex flex-row gap-[10px]'>
+            <button
+              class='headline1 text-[20px] bg-transparent rounded-[10px]  pl-[20px] pr-[15px] py-[15px] gap-[10px] flex flex-row items-center'
+              style='border: 1px solid #171717 !important;'
+            >
+              1
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='13'
+                height='18'
+                viewBox='0 0 13 18'
+                fill='none'
+              >
+                <path d="M11.7159 6.71C11.8096 6.61704 11.884 6.50644 11.9348 6.38458C11.9856 6.26272 12.0117 6.13201 12.0117 6C12.0117 5.86799 11.9856 5.73728 11.9348 5.61542C11.884 5.49356 11.8096 5.38296 11.7159 5.29L6.71592 0.29C6.62296 0.196272 6.51236 0.121877 6.3905 0.0711086C6.26864 0.0203399 6.13793 -0.00579834 6.00592 -0.00579834C5.87391 -0.00579834 5.7432 0.0203399 5.62134 0.0711086C5.49948 0.121877 5.38888 0.196272 5.29592 0.29L0.295921 5.29C0.202193 5.38296 0.127797 5.49356 0.0770283 5.61542C0.0262594 5.73728 0.00012207 5.86799 0.00012207 6C0.00012207 6.13201 0.0262594 6.26272 0.0770283 6.38458C0.127797 6.50644 0.202193 6.61704 0.295921 6.71C0.388885 6.80373 0.499484 6.87812 0.621344 6.92889C0.743203 6.97966 0.873909 7.0058 1.00592 7.0058C1.13793 7.0058 1.26864 6.97966 1.3905 6.92889C1.51236 6.87812 1.62296 6.80373 1.71592 6.71L6.00592 2.41L10.2959 6.71C10.3889 6.80373 10.4995 6.87812 10.6213 6.92889C10.7432 6.97966 10.8739 7.0058 11.0059 7.0058C11.1379 7.0058 11.2686 6.97966 11.3905 6.92889C11.5124 6.87812 11.623 6.80373 11.7159 6.71ZM6.71592 17.71L11.7159 12.71C11.8092 12.6168 11.8831 12.5061 11.9336 12.3842C11.984 12.2624 12.01 12.1319 12.01 12C12.01 11.7337 11.9042 11.4783 11.7159 11.29C11.6227 11.1968 11.512 11.1228 11.3902 11.0723C11.2683 11.0219 11.1378 10.9959 11.0059 10.9959C10.7396 10.9959 10.4842 11.1017 10.2959 11.29L6.00592 15.59L1.71592 11.29C1.62296 11.1963 1.51236 11.1219 1.3905 11.0711C1.26864 11.0203 1.13793 10.9942 1.00592 10.9942C0.873909 10.9942 0.743203 11.0203 0.621344 11.0711C0.499484 11.1219 0.388885 11.1963 0.295921 11.29C0.202193 11.383 0.127797 11.4936 0.0770283 11.6154C0.0262594 11.7373 0.00012207 11.868 0.00012207 12C0.00012207 12.132 0.0262594 12.2627 0.0770283 12.3846C0.127797 12.5064 0.202193 12.617 0.295921 12.71L5.29592 17.71C5.38888 17.8037 5.49948 17.8781 5.62134 17.9289C5.7432 17.9797 5.87391 18.0058 6.00592 18.0058C6.13793 18.0058 6.26864 17.9797 6.3905 17.9289C6.51236 17.8781 6.62296 17.8037 6.71592 17.71Z" fill="#171717"/>
+              </svg>
+            </button>
+            <button
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] '
+              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+            >
+              Köp nu
+            </button>
+            <button
+              class='headline1 text-[20px] bg-transparent rounded-[10px]  px-[20px] py-[15px] gap-[10px] flex flex-row items-center'
+              style='border: 1px solid #171717 !important;'
+            >
+              Lägg i varukorg
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='25'
+                height='22'
+                viewBox='0 0 25 22'
+                fill='none'
+              >
+                <path d="M11.4617 6.55556H21.0268C21.7143 6.55556 22.0575 6.55556 22.3094 6.66667C23.4225 7.16333 22.9253 8.41111 22.7383 9.30889C22.7209 9.39 22.685 9.46588 22.6334 9.5305C22.5819 9.59512 22.5161 9.64669 22.4413 9.68111C22.0849 9.85113 21.7802 10.1148 21.5592 10.4444M7.06199 6.55556H2.99662C2.30915 6.55556 1.96597 6.55556 1.71409 6.66667C0.600948 7.16333 1.09812 8.41111 1.28511 9.30889C1.30331 9.38967 1.33953 9.46519 1.39099 9.52969C1.44246 9.59419 1.50782 9.64598 1.58209 9.68111C1.89053 9.82463 2.16039 10.0408 2.36901 10.3115C2.57763 10.5821 2.71892 10.8994 2.78103 11.2367L3.43329 14.9867C3.71928 16.6367 3.81827 18.9933 5.24819 20.1556C6.29863 21 7.81105 21 10.837 21H13.6616M16.4115 16C16.9515 15.4378 18.3914 13.2222 19.1613 13.2222M19.1613 13.2222C19.9313 13.2222 21.3711 15.4378 21.9112 16M19.1613 13.2222V21M5.96205 9.88889L9.81184 1M15.3115 1L18.0614 6.55556" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+{% endstylesheet %}
 
 {% schema %}
 {
-  "name": "general.product",
-  "settings": [],
+  "name": "sections.product.name",
+  "tag": "section",
+  "class": "product-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "t:settings.custom_id",
+      "info": "t:settings.custom_id_info"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "t:settings.padding_top",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "t:settings.padding_bottom",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
   "disabled_on": {
     "groups": ["header", "footer"]
-  }
+  },
+  "presets": [
+    {
+      "name": "t:sections.product.name"
+    }
+  ]
 }
 {% endschema %}
