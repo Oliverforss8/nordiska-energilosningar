@@ -342,6 +342,14 @@
   margin-left: 1rem
 }
 
+.mt-\[50px\] {
+  margin-top: 50px
+}
+
+.mt-\[20px\] {
+  margin-top: 20px
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -461,6 +469,10 @@
   height: 60px
 }
 
+.h-\[45px\] {
+  height: 45px
+}
+
 .max-h-0 {
   max-height: 0px
 }
@@ -523,6 +535,11 @@
 
 .w-16 {
   width: 4rem
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content
 }
 
 .min-w-\[200px\] {
@@ -784,6 +801,10 @@
   border-radius: 0.375rem
 }
 
+.rounded-\[\] {
+  border-radius: 
+}
+
 .rounded-t-\[25px\] {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px
@@ -946,6 +967,10 @@
   padding: 0.5rem
 }
 
+.p-\[50px\] {
+  padding: 50px
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem
@@ -1096,6 +1121,11 @@
   padding-bottom: 10px
 }
 
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px
+}
+
 .pb-\[110px\] {
   padding-bottom: 110px
 }
@@ -1174,6 +1204,10 @@
 
 .pt-\[100px\] {
   padding-top: 100px
+}
+
+.pl-\[15px\] {
+  padding-left: 15px
 }
 
 .text-left {
@@ -1255,6 +1289,14 @@
   font-size: 19px
 }
 
+.text-\[13px\] {
+  font-size: 13px
+}
+
+.text-\[30px\] {
+  font-size: 30px
+}
+
 .font-\[300\] {
   font-weight: 300
 }
@@ -1328,6 +1370,10 @@
   color: 
 }
 
+.text-\[\#171717\]\/85 {
+  color: rgb(23 23 23 / 0.85)
+}
+
 .line-through {
   text-decoration-line: line-through
 }
@@ -1342,6 +1388,14 @@
 
 .opacity-50 {
   opacity: 0.5
+}
+
+.opacity-80 {
+  opacity: 0.8
+}
+
+.opacity-70 {
+  opacity: 0.7
 }
 
 .shadow-2xl {
@@ -1533,6 +1587,10 @@
     margin-bottom: 0px
   }
 
+  .md\:mt-\[30px\] {
+    margin-top: 30px
+  }
+
   .md\:block {
     display: block
   }
@@ -1687,6 +1745,10 @@
     padding: 30px
   }
 
+  .md\:p-\[50px\] {
+    padding: 50px
+  }
+
   .md\:px-\[10px\] {
     padding-left: 10px;
     padding-right: 10px
@@ -1762,6 +1824,11 @@
     padding-bottom: 20px
   }
 
+  .md\:py-\[30px\] {
+    padding-top: 30px;
+    padding-bottom: 30px
+  }
+
   .md\:pb-\[120px\] {
     padding-bottom: 120px
   }
@@ -1824,6 +1891,14 @@
 
   .md\:text-\[40px\] {
     font-size: 40px
+  }
+
+  .md\:text-\[15px\] {
+    font-size: 15px
+  }
+
+  .md\:text-\[18px\] {
+    font-size: 18px
   }
 }
 
