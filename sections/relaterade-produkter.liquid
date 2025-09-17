@@ -15,15 +15,86 @@
     for collection in current_product.collections limit: 1
       for related_product in collection.products limit: 6
         unless related_product.id == current_product.id
-          assign related_products_array = related_products_array | concat: related_product
+          if related_products_array.size == 0
+            assign related_products_array = related_products_array | push: related_product
+          else
+            assign related_products_array = related_products_array | push: related_product
+          endif
         endunless
       endfor
     endfor
 
     # Method 2: If not enough products, get by same vendor
+    if related_products_array.size < 3 and current_product.vendor != blank
+      for related_product in collections.all.products limit: 20
+        if related_product.vendor == current_product.vendor and related_product.id != current_product.id
+          assign product_exists = false
+          for existing_product in related_products_array
+            if existing_product.id == related_product.id
+              assign product_exists = true
+              break
+            endif
+          endfor
+          unless product_exists
+            assign related_products_array = related_products_array | push: related_product
+            if related_products_array.size >= 3
+              break
+            endif
+          endunless
+        endif
+      endfor
+    endif
+
+    # Method 3: If still not enough, get by similar tags
     if related_products_array.size < 3
-      assign vendor_products = collections.all.products | where: "vendor", current_product.vendor
-      for related_product in vendor_products limit: 6
+      for product_tag in current_product.tags limit: 3
+        for related_product in collections.all.products limit: 20
+          if related_product.tags contains product_tag and related_product.id != current_product.id
+            assign product_exists = false
+            for existing_product in related_products_array
+              if existing_product.id == related_product.id
+                assign product_exists = true
+                break
+              endif
+            endfor
+            unless product_exists
+              assign related_products_array = related_products_array | push: related_product
+              if related_products_array.size >= 3
+                break
+              endif
+            endunless
+          endif
+        endfor
+        if related_products_array.size >= 3
+          break
+        endif
+      endfor
+    endif
+
+    # Method 4: If still not enough, get any products from same product type
+    if related_products_array.size < 3 and current_product.type != blank
+      for related_product in collections.all.products limit: 20
+        if related_product.type == current_product.type and related_product.id != current_product.id
+          assign product_exists = false
+          for existing_product in related_products_array
+            if existing_product.id == related_product.id
+              assign product_exists = true
+              break
+            endif
+          endfor
+          unless product_exists
+            assign related_products_array = related_products_array | push: related_product
+            if related_products_array.size >= 3
+              break
+            endif
+          endunless
+        endif
+      endfor
+    endif
+
+    # Method 5: Fallback - get any products (last resort)
+    if related_products_array.size < 3
+      for related_product in collections.all.products limit: 10
         unless related_product.id == current_product.id
           assign product_exists = false
           for existing_product in related_products_array
@@ -33,37 +104,16 @@
             endif
           endfor
           unless product_exists
-            assign related_products_array = related_products_array | concat: related_product
+            assign related_products_array = related_products_array | push: related_product
+            if related_products_array.size >= 3
+              break
+            endif
           endunless
         endunless
       endfor
     endif
 
-    # Method 3: If still not enough, get by same type/tags
-    if related_products_array.size < 3
-      for product_tag in current_product.tags limit: 3
-        assign tagged_products = collections.all.products | where: "tags", product_tag
-        for related_product in tagged_products limit: 6
-          unless related_product.id == current_product.id
-            assign product_exists = false
-            for existing_product in related_products_array
-              if existing_product.id == related_product.id
-                assign product_exists = true
-                break
-              endif
-            endfor
-            unless product_exists
-              assign related_products_array = related_products_array | concat: related_product
-            endunless
-          endunless
-        endfor
-        if related_products_array.size >= 3
-          break
-        endif
-      endfor
-    endif
-
-    # Limit to 3 products
+    # Final assignment - limit to 3 products
     assign related_products = related_products_array | slice: 0, 3
   endif
 %}
