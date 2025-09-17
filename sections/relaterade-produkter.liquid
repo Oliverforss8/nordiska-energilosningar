@@ -2,69 +2,34 @@
   assign section_id = section.settings.custom_id | default: section.id
   assign section_class = "section-" | append: section.type
 
-  # Get the current product (if on product page)
-  assign current_product = product
+  # Get exactly 3 products using a simple slice method
+  assign all_products = collections.all.products
 
-  # Initialize related products array
-  assign related_products = blank
-  assign related_products_array = "" | split: ","
+  # Create a string of handles, then convert back to products
+  assign product_handles = ""
+  assign count = 0
 
-  # Algorithm to find related products
-  if current_product != blank
-    # Method 1: Products from same collection
-    for collection in current_product.collections limit: 1
-      for related_product in collection.products limit: 6
-        unless related_product.id == current_product.id
-          assign related_products_array = related_products_array | concat: related_product
-        endunless
-      endfor
-    endfor
-
-    # Method 2: If not enough products, get by same vendor
-    if related_products_array.size < 3
-      assign vendor_products = collections.all.products | where: "vendor", current_product.vendor
-      for related_product in vendor_products limit: 6
-        unless related_product.id == current_product.id
-          assign product_exists = false
-          for existing_product in related_products_array
-            if existing_product.id == related_product.id
-              assign product_exists = true
-              break
-            endif
-          endfor
-          unless product_exists
-            assign related_products_array = related_products_array | concat: related_product
-          endunless
-        endunless
-      endfor
+  for prod in all_products
+    if count < 3
+      if count == 0
+        assign product_handles = prod.handle
+      else
+        assign product_handles = product_handles | append: "," | append: prod.handle
+      endif
+      assign count = count | plus: 1
     endif
+  endfor
 
-    # Method 3: If still not enough, get by same type/tags
-    if related_products_array.size < 3
-      for product_tag in current_product.tags limit: 3
-        assign tagged_products = collections.all.products | where: "tags", product_tag
-        for related_product in tagged_products limit: 6
-          unless related_product.id == current_product.id
-            assign product_exists = false
-            for existing_product in related_products_array
-              if existing_product.id == related_product.id
-                assign product_exists = true
-                break
-              endif
-            endfor
-            unless product_exists
-              assign related_products_array = related_products_array | concat: related_product
-            endunless
-          endunless
-        endfor
-        if related_products_array.size >= 3
-          break
-        endif
-      endfor
-    endif
-
-    # Limit to 3 products
-    assign related_products = related_products_array | slice: 0, 3
+  # Now convert handles back to product array
+  assign handle_array = product_handles | split: ","
+  assign related_products = all_products | where: "handle", handle_array[0]
+  if handle_array.size > 1
+    assign product_2 = all_products | where: "handle", handle_array[1]
+    assign related_products = related_products | concat: product_2
+  endif
+  if handle_array.size > 2
+    assign product_3 = all_products | where: "handle", handle_array[2]
+    assign related_products = related_products | concat: product_3
   endif
 %}
 
@@ -81,7 +46,7 @@
 
     {% if related_products.size > 0 %}
       <!-- Mobile carousel container -->
-      <div class='md:hidden relative'>
+      <div class=' md:hidden relative'>
         <div class='carousel-container overflow-hidden'>
           <div
             class='carousel-track flex transition-transform duration-500 ease-in-out'
@@ -92,28 +57,46 @@
                 class='product-card w-full flex-shrink-0 p-[30px] flex flex-col-reverse rounded-[10px]'
                 style='background: #F3F1E8;'
               >
-                <div class='flex flex-col justify-between'>
+                <div class='flex flex-col justify-between '>
                   <div class='flex flex-col'>
                     <div class='headline1 text-[36px] pt-[30px] text-[#171717]'>
                       {{ related_product.title }}
                     </div>
                     {% if related_product.description != blank %}
-                      <div class='text-[#171717]/75 text py-[20px]'>
+                      <div class='text-[#171717]/75 text py-[20px] line-clamp-2'>
                         {{
                           related_product.description
                           | strip_html
-                          | truncate: 150
+                          | truncatewords: 12
+                          | truncate: 68
                         }}
                       </div>
                     {% endif %}
                   </div>
                   <div class='flex gap-[10px] shrink-0'>
+                    <button
+                      class='buy-now-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                      style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;'
+                      data-variant-id='{{ related_product.selected_or_first_available_variant.id }}'
+                    >
+                      Köp nu
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='22'
+                        height='18'
+                        viewBox='0 0 22 18'
+                        fill='none'
+                      >
+                        <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
                     <a
                       href='{{ related_product.url }}'
-                      class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
-                      style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;'
+                      class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                      style='border: 1px solid #171717;'
                     >
-                      {{ section.settings.button_text | default: "Se produkt" }}
+                      Läs mer
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         width='22'
@@ -128,8 +111,11 @@
                   </div>
                 </div>
                 <div
-                  class=''
-                  style='aspect-ratio: 18/23; height: 285.081px;'
+                  class=' '
+                  style='
+                        aspect-ratio: 18/23;
+                    height: 285.081px;
+                  '
                 >
                   {% if related_product.featured_image %}
                     <img
@@ -137,7 +123,7 @@
                       alt='{{ related_product.featured_image.alt | default: related_product.title }}'
                       width='200'
                       height='200'
-                      class='h-full w-full object-contain rounded-[5px]'
+                      class=' h-full w-full object-contain rounded-[5px]'
                       loading='lazy'
                     >
                   {% else %}
@@ -157,31 +143,51 @@
       </div>
 
       <!-- Desktop grid -->
-      <div class='hidden md:grid grid-cols-3 gap-[20px]'>
+      <div class=' hidden md:grid  grid-cols-3 gap-[20px]'>
         {% for related_product in related_products %}
-          <div class='product-card p-[30px] flex flex-col-reverse rounded-[10px] transition-colors duration-300'>
-            <div class='flex flex-col justify-between'>
+          <div
+            class='product-card p-[30px] flex flex-col-reverse  rounded-[10px] transition-colors duration-300'
+          >
+            <div class='flex flex-col justify-between '>
               <div class='flex flex-col'>
                 <div class='headline1 text-[36px] xl:pt-0 pt-[40px] text-[#171717]'>
                   {{ related_product.title }}
                 </div>
                 {% if related_product.description != blank %}
-                  <div class='text-[#171717]/75 text py-[20px] xl:pt-[40px]'>
+                  <div class='text-[#171717]/75 text py-[20px] xl:pt-[40px] line-clamp-2'>
                     {{
                       related_product.description
                       | strip_html
-                      | truncate: 150
+                      | truncatewords: 12
+                      | truncate: 68
                     }}
                   </div>
                 {% endif %}
               </div>
               <div class='flex gap-[10px] shrink-0'>
+                <button
+                  class='buy-now-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
+                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;'
+                  data-variant-id='{{ related_product.selected_or_first_available_variant.id }}'
+                >
+                  Köp nu
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='18'
+                    viewBox='0 0 22 18'
+                    fill='none'
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
                 <a
                   href='{{ related_product.url }}'
-                  class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
+                  class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
                   style='border: 1px solid #171717;'
                 >
-                  {{ section.settings.button_text | default: "Se produkt" }}
+                  Läs mer
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='22'
@@ -196,8 +202,11 @@
               </div>
             </div>
             <div
-              class=''
-              style='aspect-ratio: 18/23; height: 285.081px;'
+              class=' '
+              style='
+                    aspect-ratio: 18/23;
+                height: 285.081px;
+              '
             >
               {% if related_product.featured_image %}
                 <img
@@ -205,11 +214,11 @@
                   alt='{{ related_product.featured_image.alt | default: related_product.title }}'
                   width='200'
                   height='200'
-                  class='h-full w-full object-contain rounded-[5px]'
+                  class=' h-full w-full object-contain rounded-[5px]'
                   loading='lazy'
                 >
               {% else %}
-                <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                <div class='w-[200px] h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
                   {{
                     "products.product.media.load_image"
                     | t
@@ -223,32 +232,30 @@
       </div>
 
       <!-- Carousel navigation (only show on mobile) -->
-      {% if related_products.size > 1 %}
-        <div class='flex md:hidden gap-[20px] pt-[20px] flex-row pl-[20px]'>
-          <div class='carousel-prev translate-x-[-1] cursor-pointer'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='26'
-              height='21'
-              viewBox='0 0 26 21'
-              fill='none'
-            >
-              <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class='carousel-next cursor-pointer'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='26'
-              height='21'
-              viewBox='0 0 26 21'
-              fill='none'
-            >
-              <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
+      <div class='flex md:hidden gap-[20px] pt-[20px] flex-row pl-[20px]'>
+        <div class='carousel-prev translate-x-[-1] cursor-pointer'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='26'
+            height='21'
+            viewBox='0 0 26 21'
+            fill='none'
+          >
+            <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-      {% endif %}
+        <div class='carousel-next cursor-pointer'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='26'
+            height='21'
+            viewBox='0 0 26 21'
+            fill='none'
+          >
+            <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
     {% else %}
       <div class='text-center py-8 text-gray-500'>
         {{
@@ -260,7 +267,386 @@
   </div>
 </section>
 
-{{ "related-products-carousel.js" | asset_url | script_tag }}
+{% stylesheet %}
+  .section-relaterade-produkter a {
+    text-decoration: none;
+  }
+
+  .section-relaterade-produkter a:hover {
+    text-decoration: none;
+  }
+
+  .section-relaterade-produkter .product-card .banner-3-learn-more-btn {
+    border: 1px solid #171717;
+    background: transparent;
+    color: #171717;
+    transition: all 0.3s ease;
+  }
+
+  .section-relaterade-produkter
+    .product-card
+    .banner-3-learn-more-btn.banner-3-active {
+    background: #f3f1e8 !important;
+    border-color: #f3f1e8 !important;
+    color: #171717 !important;
+  }
+
+  .section-relaterade-produkter
+    .product-card
+    .banner-3-learn-more-btn.banner-3-active
+    svg
+    path {
+    stroke: #171717 !important;
+  }
+
+  /* Buy now button styling */
+  .section-relaterade-produkter .product-card .buy-now-btn {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      ),
+      #ebcf2f;
+    border: none;
+    color: #171717;
+    transition: all 0.3s ease;
+  }
+
+  .section-relaterade-produkter .product-card .buy-now-btn.banner-3-active {
+    background: #f3f1e8 !important;
+    border: 1px solid #f3f1e8 !important;
+    color: #171717 !important;
+  }
+
+  .section-relaterade-produkter
+    .product-card
+    .buy-now-btn.banner-3-active
+    svg
+    path {
+    stroke: #171717 !important;
+  }
+
+  /* Card background transition */
+  .section-relaterade-produkter .product-card {
+    transition: background-color 0.3s ease;
+  }
+
+  .section-relaterade-produkter .carousel-container {
+    position: relative;
+  }
+
+  .section-relaterade-produkter .carousel-track {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .section-relaterade-produkter .carousel-prev,
+  .section-relaterade-produkter .carousel-next {
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none;
+  }
+
+  .section-relaterade-produkter .carousel-prev:hover,
+  .section-relaterade-produkter .carousel-next:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .section-relaterade-produkter .carousel-prev:active,
+  .section-relaterade-produkter .carousel-next:active {
+    transform: scale(0.95);
+  }
+
+  .section-relaterade-produkter .carousel-prev:disabled,
+  .section-relaterade-produkter .carousel-next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .section-relaterade-produkter .carousel-prev:disabled:hover,
+  .section-relaterade-produkter .carousel-next:disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Line clamp for 2 lines */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    // Find the related products section
+    const section = document.querySelector('.section-relaterade-produkter');
+    if (!section) return;
+
+    // Carousel functionality
+    const carousel = section.querySelector('.carousel-track');
+    const prevButton = section.querySelector('.carousel-prev');
+    const nextButton = section.querySelector('.carousel-next');
+
+    if (carousel && prevButton && nextButton) {
+      const slides = carousel.querySelectorAll('.product-card');
+      const totalSlides = slides.length;
+      let currentSlide = 0;
+      let autoChangeInterval;
+
+      function updateCarousel() {
+        const translateX = -currentSlide * 100;
+        carousel.style.transform = `translateX(${translateX}%)`;
+        carousel.setAttribute('data-current', currentSlide);
+
+        // Update button states
+        prevButton.disabled = currentSlide === 0;
+        nextButton.disabled = currentSlide === totalSlides - 1;
+
+        // Add visual feedback for disabled state
+        if (prevButton.disabled) {
+          prevButton.style.opacity = '0.5';
+          prevButton.style.cursor = 'not-allowed';
+        } else {
+          prevButton.style.opacity = '1';
+          prevButton.style.cursor = 'pointer';
+        }
+
+        if (nextButton.disabled) {
+          nextButton.style.opacity = '0.5';
+          nextButton.style.cursor = 'not-allowed';
+        } else {
+          nextButton.style.opacity = '1';
+          nextButton.style.cursor = 'pointer';
+        }
+      }
+
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateCarousel();
+        }
+      }
+
+      function prevSlide() {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateCarousel();
+        }
+      }
+
+      function startAutoChange() {
+        if (totalSlides > 1) {
+          autoChangeInterval = setInterval(nextSlide, 8000); // 8 seconds
+        }
+      }
+
+      function stopAutoChange() {
+        if (autoChangeInterval) {
+          clearInterval(autoChangeInterval);
+        }
+      }
+
+      function restartAutoChange() {
+        stopAutoChange();
+        startAutoChange();
+      }
+
+      // Event listeners
+      nextButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        nextSlide();
+        restartAutoChange();
+      });
+
+      prevButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        prevSlide();
+        restartAutoChange();
+      });
+
+      // Pause auto-change on hover
+      const carouselContainer = section.querySelector('.carousel-container');
+      if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoChange);
+        carouselContainer.addEventListener('mouseleave', startAutoChange);
+      }
+
+      // Initialize carousel
+      updateCarousel();
+      startAutoChange();
+
+      // Handle touch events for swipe gestures
+      let startX = 0;
+      let isDragging = false;
+
+      carousel.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        stopAutoChange();
+      });
+
+      carousel.addEventListener('touchmove', function (e) {
+        if (!isDragging) return;
+        e.preventDefault();
+      });
+
+      carousel.addEventListener('touchend', function (e) {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const endX = e.changedTouches[0].clientX;
+        const diffX = startX - endX;
+
+        if (Math.abs(diffX) > 50) {
+          if (diffX > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+
+        restartAutoChange();
+      });
+    }
+
+    // Handle desktop product card hover behavior
+    const desktopGrid = section.querySelector(
+      '.hidden.md\\:grid, [class*="grid-cols-3"]',
+    );
+    if (desktopGrid) {
+      const productCards = desktopGrid.querySelectorAll('.product-card');
+      const learnMoreButtons = desktopGrid.querySelectorAll(
+        '.banner-3-learn-more-btn',
+      );
+      const buyNowButtons = desktopGrid.querySelectorAll('.buy-now-btn');
+
+      if (productCards.length > 0) {
+        function resetToFirstCard() {
+          // Clear all active states
+          productCards.forEach((card) => (card.style.backgroundColor = ''));
+          learnMoreButtons.forEach((btn) =>
+            btn.classList.remove('banner-3-active'),
+          );
+          buyNowButtons.forEach((btn) =>
+            btn.classList.remove('banner-3-active'),
+          );
+
+          // Set first card active
+          if (productCards[0]) {
+            productCards[0].style.backgroundColor = '#f3f1e8';
+            if (learnMoreButtons[0]) {
+              learnMoreButtons[0].classList.add('banner-3-active');
+            }
+            if (buyNowButtons[0]) {
+              buyNowButtons[0].classList.add('banner-3-active');
+            }
+          }
+        }
+
+        function setCardActive(index) {
+          // Clear all active states
+          productCards.forEach((card) => (card.style.backgroundColor = ''));
+          learnMoreButtons.forEach((btn) =>
+            btn.classList.remove('banner-3-active'),
+          );
+          buyNowButtons.forEach((btn) =>
+            btn.classList.remove('banner-3-active'),
+          );
+
+          // Set current card active
+          if (productCards[index]) {
+            productCards[index].style.backgroundColor = '#f3f1e8';
+            if (learnMoreButtons[index]) {
+              learnMoreButtons[index].classList.add('banner-3-active');
+            }
+            if (buyNowButtons[index]) {
+              buyNowButtons[index].classList.add('banner-3-active');
+            }
+          }
+        }
+
+        // Initialize first card as active
+        resetToFirstCard();
+
+        // Add hover events to each card
+        productCards.forEach(function (card, index) {
+          card.addEventListener('mouseenter', function () {
+            setCardActive(index);
+          });
+        });
+
+        // Reset to first card when leaving the entire grid
+        desktopGrid.addEventListener('mouseleave', function () {
+          resetToFirstCard();
+        });
+      }
+    }
+
+    // Buy Now functionality for related products
+    const buyNowButtons = section.querySelectorAll('.buy-now-btn');
+    buyNowButtons.forEach((button) => {
+      button.addEventListener('click', async function (e) {
+        e.preventDefault();
+        console.log('Buy now button clicked from related products'); // Debug
+
+        const variantId = this.getAttribute('data-variant-id');
+        const quantity = 1;
+
+        console.log('Variant ID:', variantId); // Debug
+
+        // Show loading state
+        const originalText = this.innerHTML;
+        this.innerHTML = 'Behandlar...';
+        this.disabled = true;
+
+        try {
+          console.log('Adding to cart...'); // Debug
+          const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              id: variantId,
+              quantity: quantity,
+            }),
+          });
+
+          console.log('Cart add response:', response); // Debug
+
+          if (response.ok) {
+            console.log('Success - redirecting to checkout'); // Debug
+            // Success - redirect to checkout
+            window.location.href = '/checkout';
+          } else {
+            const errorData = await response.json();
+            console.error('Cart add error:', errorData);
+            throw new Error('Failed to add to cart');
+          }
+        } catch (error) {
+          console.error('Error with buy now:', error);
+
+          // Show error state
+          this.innerHTML = 'Fel!';
+          this.style.background = '#EF4444';
+          this.style.color = 'white';
+
+          // Reset button after 2 seconds
+          setTimeout(() => {
+            this.innerHTML = originalText;
+            this.disabled = false;
+            this.style.background = '';
+            this.style.color = '';
+          }, 2000);
+        }
+      });
+    });
+  });
+{% endjavascript %}
 
 {% schema %}
 {
