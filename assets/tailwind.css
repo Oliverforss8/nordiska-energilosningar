@@ -695,6 +695,14 @@
   gap: 2px
 }
 
+.gap-\[1px\] {
+  gap: 1px
+}
+
+.gap-\[0px\] {
+  gap: 0px
+}
+
 .gap-x-\[20px\] {
   -moz-column-gap: 20px;
        column-gap: 20px
@@ -1076,6 +1084,16 @@
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem
+}
+
+.py-\[px\] {
+  padding-top: px;
+  padding-bottom: px
+}
+
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px
 }
 
 .pb-\[110px\] {
@@ -1513,6 +1531,10 @@
 
   .md\:block {
     display: block
+  }
+
+  .md\:flex {
+    display: flex
   }
 
   .md\:grid {
