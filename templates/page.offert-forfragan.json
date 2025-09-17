@@ -12,9 +12,19 @@
     "main": {
       "type": "page",
       "settings": {}
+    },
+    "kontakt_form_YkpCdd": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "kontakt_form_YkpCdd"
   ]
 }
