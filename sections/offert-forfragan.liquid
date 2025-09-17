@@ -1,6 +1,6 @@
 <section class='layout pt-[150px]'>
-  <div class='flex flex-col xl:grid xl:grid-cols-2 gap-[20px]'>
-    <div class='p-[50px] bg-[#F3F1E8] rounded-[15px] flex-shrink-0'>
+  <div class='flex flex-col lg:flex-row  xl:grid xl:grid-cols-2 gap-[20px]'>
+    <div class='p-[20px] md:p-[50px] bg-[#F3F1E8]  rounded-[15px] lg:w-[64%] xl:w-full xl:flex-shrink-0'>
       <div class='flex flex-col'>
         <div class='headline1 text-[40px]'>Offert förfrågan</div>
         <div class=' body1 text-[20px] py-[30px] opacity-80'>
@@ -172,7 +172,7 @@
       </div>
     </div>
     <div class='flex flex-col gap-[10px] flex-1'>
-      <div class='relative h-full overflow-hidden rounded-[15px]'>
+      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
         <img
           src='{{ section.settings.card_1_image | image_url: width: 600 }}'
           alt='{{ section.settings.card_1_image.alt | escape }}'
@@ -200,7 +200,7 @@
         {% endif %}
       </div>
 
-      <div class='relative h-full overflow-hidden rounded-[15px]'>
+      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
         <img
           src='{{ section.settings.card_2_image | image_url: width: 600 }}'
           alt='{{ section.settings.card_2_image.alt | escape }}'
@@ -228,7 +228,7 @@
         {% endif %}
       </div>
 
-      <div class='relative h-full overflow-hidden rounded-[15px]'>
+      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
         <img
           src='{{ section.settings.card_3_image | image_url: width: 600 }}'
           alt='{{ section.settings.card_3_image.alt | escape }}'
@@ -256,7 +256,7 @@
         {% endif %}
       </div>
 
-      <div class='relative h-full overflow-hidden rounded-[15px]'>
+      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
         <img
           src='{{ section.settings.card_4_image | image_url: width: 600 }}'
           alt='{{ section.settings.card_4_image.alt | escape }}'
