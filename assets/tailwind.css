@@ -699,6 +699,12 @@
   overflow-y: auto
 }
 
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
 .whitespace-nowrap {
   white-space: nowrap
 }
@@ -1003,6 +1009,11 @@
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem
 }
 
 .pb-\[110px\] {

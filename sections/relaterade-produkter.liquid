@@ -1,0 +1,301 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = "section-" | append: section.type
+
+  # Get the current product (if on product page)
+  assign current_product = product
+
+  # Initialize related products array
+  assign related_products = blank
+  assign related_products_array = "" | split: ","
+
+  # Algorithm to find related products
+  if current_product != blank
+    # Method 1: Products from same collection
+    for collection in current_product.collections limit: 1
+      for related_product in collection.products limit: 6
+        unless related_product.id == current_product.id
+          assign related_products_array = related_products_array | concat: related_product
+        endunless
+      endfor
+    endfor
+
+    # Method 2: If not enough products, get by same vendor
+    if related_products_array.size < 3
+      assign vendor_products = collections.all.products | where: "vendor", current_product.vendor
+      for related_product in vendor_products limit: 6
+        unless related_product.id == current_product.id
+          assign product_exists = false
+          for existing_product in related_products_array
+            if existing_product.id == related_product.id
+              assign product_exists = true
+              break
+            endif
+          endfor
+          unless product_exists
+            assign related_products_array = related_products_array | concat: related_product
+          endunless
+        endunless
+      endfor
+    endif
+
+    # Method 3: If still not enough, get by same type/tags
+    if related_products_array.size < 3
+      for product_tag in current_product.tags limit: 3
+        assign tagged_products = collections.all.products | where: "tags", product_tag
+        for related_product in tagged_products limit: 6
+          unless related_product.id == current_product.id
+            assign product_exists = false
+            for existing_product in related_products_array
+              if existing_product.id == related_product.id
+                assign product_exists = true
+                break
+              endif
+            endfor
+            unless product_exists
+              assign related_products_array = related_products_array | concat: related_product
+            endunless
+          endunless
+        endfor
+        if related_products_array.size >= 3
+          break
+        endif
+      endfor
+    endif
+
+    # Limit to 3 products
+    assign related_products = related_products_array | slice: 0, 3
+  endif
+%}
+
+<section
+  id='{{ section_id }}'
+  class='{{ section_class }}'
+>
+  <div class='layout'>
+    {% if section.settings.title != blank %}
+      <h2 class='headline1 mb-8'>
+        {{ section.settings.title | escape }}
+      </h2>
+    {% endif %}
+
+    {% if related_products.size > 0 %}
+      <!-- Mobile carousel container -->
+      <div class='md:hidden relative'>
+        <div class='carousel-container overflow-hidden'>
+          <div
+            class='carousel-track flex transition-transform duration-500 ease-in-out'
+            data-current='0'
+          >
+            {% for related_product in related_products %}
+              <div
+                class='product-card w-full flex-shrink-0 p-[30px] flex flex-col-reverse rounded-[10px]'
+                style='background: #F3F1E8;'
+              >
+                <div class='flex flex-col justify-between'>
+                  <div class='flex flex-col'>
+                    <div class='headline1 text-[36px] pt-[30px] text-[#171717]'>
+                      {{ related_product.title }}
+                    </div>
+                    {% if related_product.description != blank %}
+                      <div class='text-[#171717]/75 text py-[20px]'>
+                        {{
+                          related_product.description
+                          | strip_html
+                          | truncate: 150
+                        }}
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class='flex gap-[10px] shrink-0'>
+                    <a
+                      href='{{ related_product.url }}'
+                      class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
+                      style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;'
+                    >
+                      {{ section.settings.button_text | default: "Se produkt" }}
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='22'
+                        height='18'
+                        viewBox='0 0 22 18'
+                        fill='none'
+                      >
+                        <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class=''
+                  style='aspect-ratio: 18/23; height: 285.081px;'
+                >
+                  {% if related_product.featured_image %}
+                    <img
+                      src='{{ related_product.featured_image | image_url: width: 300 }}'
+                      alt='{{ related_product.featured_image.alt | default: related_product.title }}'
+                      width='200'
+                      height='200'
+                      class='h-full w-full object-contain rounded-[5px]'
+                      loading='lazy'
+                    >
+                  {% else %}
+                    <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                      {{
+                        "products.product.media.load_image"
+                        | t
+                        | default: "Load image"
+                      }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop grid -->
+      <div class='hidden md:grid grid-cols-3 gap-[20px]'>
+        {% for related_product in related_products %}
+          <div class='product-card p-[30px] flex flex-col-reverse rounded-[10px] transition-colors duration-300'>
+            <div class='flex flex-col justify-between'>
+              <div class='flex flex-col'>
+                <div class='headline1 text-[36px] xl:pt-0 pt-[40px] text-[#171717]'>
+                  {{ related_product.title }}
+                </div>
+                {% if related_product.description != blank %}
+                  <div class='text-[#171717]/75 text py-[20px] xl:pt-[40px]'>
+                    {{
+                      related_product.description
+                      | strip_html
+                      | truncate: 150
+                    }}
+                  </div>
+                {% endif %}
+              </div>
+              <div class='flex gap-[10px] shrink-0'>
+                <a
+                  href='{{ related_product.url }}'
+                  class='px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
+                  style='border: 1px solid #171717;'
+                >
+                  {{ section.settings.button_text | default: "Se produkt" }}
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='18'
+                    viewBox='0 0 22 18'
+                    fill='none'
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class=''
+              style='aspect-ratio: 18/23; height: 285.081px;'
+            >
+              {% if related_product.featured_image %}
+                <img
+                  src='{{ related_product.featured_image | image_url: width: 300 }}'
+                  alt='{{ related_product.featured_image.alt | default: related_product.title }}'
+                  width='200'
+                  height='200'
+                  class='h-full w-full object-contain rounded-[5px]'
+                  loading='lazy'
+                >
+              {% else %}
+                <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                  {{
+                    "products.product.media.load_image"
+                    | t
+                    | default: "Load image"
+                  }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Carousel navigation (only show on mobile) -->
+      {% if related_products.size > 1 %}
+        <div class='flex md:hidden gap-[20px] pt-[20px] flex-row pl-[20px]'>
+          <div class='carousel-prev translate-x-[-1] cursor-pointer'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='26'
+              height='21'
+              viewBox='0 0 26 21'
+              fill='none'
+            >
+              <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class='carousel-next cursor-pointer'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='26'
+              height='21'
+              viewBox='0 0 26 21'
+              fill='none'
+            >
+              <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class='text-center py-8 text-gray-500'>
+        {{
+          section.settings.no_products_message
+          | default: "Inga relaterade produkter hittades."
+        }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{{ "related-products-carousel.js" | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Relaterade produkter",
+  "tag": "section",
+  "class": "section-related-products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Rubrik",
+      "default": "Relaterade produkter"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Knapptext",
+      "default": "Se produkt"
+    },
+    {
+      "type": "text",
+      "id": "no_products_message",
+      "label": "Meddelande när inga produkter hittas",
+      "default": "Inga relaterade produkter hittades."
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Anpassat ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Relaterade produkter"
+    }
+  ]
+}
+{% endschema %}
