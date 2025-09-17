@@ -1,10 +1,15 @@
 // Quantity selector functionality - Global functions
 window.updateQuantity = function (change) {
   const quantityInput = document.getElementById('quantity-input');
-  const quantityDisplay = document.getElementById('quantity-display');
+  const quantityDisplayMobile = document.getElementById(
+    'quantity-display-mobile'
+  );
+  const quantityDisplayDesktop = document.getElementById(
+    'quantity-display-desktop'
+  );
 
-  if (!quantityInput || !quantityDisplay) {
-    console.log('Quantity elements not found');
+  if (!quantityInput) {
+    console.log('Quantity input not found');
     return;
   }
 
@@ -18,7 +23,14 @@ window.updateQuantity = function (change) {
   console.log('Updating quantity from', currentQuantity, 'to', newQuantity); // Debug
 
   quantityInput.value = newQuantity;
-  quantityDisplay.textContent = newQuantity;
+
+  // Update both displays if they exist
+  if (quantityDisplayMobile) {
+    quantityDisplayMobile.textContent = newQuantity;
+  }
+  if (quantityDisplayDesktop) {
+    quantityDisplayDesktop.textContent = newQuantity;
+  }
 
   // Update button states
   updateQuantityButtons();

@@ -80,7 +80,7 @@
                   class='headline1 text-[18px] md:text-[20px] bg-transparent rounded-[10px] pl-[20px] pr-[15px] py-[10px] gap-[10px] flex flex-row items-center min-h-[48px]'
                   style='border: 1px solid #171717 !important;'
                 >
-                  <span id='quantity-display'>1</span>
+                  <span id='quantity-display-mobile'>1</span>
                   <div class='flex flex-col gap-[0px] cursor-pointer'>
                     <!-- Up arrow (increase) -->
                     <button
@@ -137,7 +137,7 @@
                     class='headline1 text-[18px] md:text-[20px] bg-transparent rounded-[10px] pl-[20px] md:flex hidden pr-[15px] py-[15px] gap-[10px] flex flex-row items-center min-h-[48px]'
                     style='border: 1px solid #171717 !important;'
                   >
-                    <span id='quantity-display'>1</span>
+                    <span id='quantity-display-desktop'>1</span>
                     <div class='flex flex-col gap-[2px] cursor-pointer'>
                       <!-- Up arrow (increase) -->
                       <button
@@ -410,7 +410,7 @@
                     <div class='flex flex-col md:flex-row gap-[10px]'>
                       <button
                         type='button'
-                        class='bg-[#EFD959] headline1 text-[18px] md:text-[20px] px-[15px] py-[10px] rounded-[10px] flex flex-row gap-[10px] items-center justify-center service-option'
+                        class='bg-white headline1 text-[18px] md:text-[20px] px-[15px] py-[10px] rounded-[10px] flex flex-row gap-[10px] items-center justify-center service-option'
                         data-service='solceller'
                       >
                         <svg
@@ -647,6 +647,26 @@
 
   .dropdown-content.show {
     display: block !important;
+  }
+
+  /* Service option button styling */
+  .service-option {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .service-option:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(23, 23, 23, 0.1);
+  }
+
+  .service-option.bg-white {
+    border-color: #e5e5e5;
+  }
+
+  .service-option.bg-\[#EFD959\] {
+    border-color: #efd959;
+    box-shadow: 0 2px 8px rgba(239, 217, 89, 0.3);
   }
 {% endstylesheet %}
 
