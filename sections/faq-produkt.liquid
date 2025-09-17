@@ -1,0 +1,188 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = "section-" | append: section.type
+%}
+
+<section
+  id='{{ section_id }}'
+  class='{{ section_class }} '
+>
+  <div class='layout'>
+    {% if section.settings.title != blank %}
+      <h2 class='headline1'>
+        {{ section.settings.title | escape }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.description != blank %}
+      <div class='body1 py-[50px]'>
+        {{ section.settings.description }}
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class=''>
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when "faq_item" %}
+              <div
+                class='faq-item {% if forloop.first %}pb-[30px]{% else %}py-[30px]{% endif %} cursor-pointer '
+                {% unless forloop.last %}
+                  style='border-bottom: 1px solid #171717;'
+                {% endunless %}
+                aria-expanded='false'
+                aria-controls='faq-answer-{{ block.id }}'
+                {{ block.shopify_attributes }}
+              >
+                <div class='flex flex-row items-center justify-between pointer-events-none'>
+                  <div class='flex flex-row gap-[30px] items-center'>
+                    <div class='body1'>
+                      {{ block.settings.question | escape }}
+                    </div>
+                    <div class='bg-yellow-400 body1 text-[15px]  text-[#171717]  p-[10px] rounded-[5px] flex-shrink-0 py-[8px]'>
+                      {{ block.settings.button_text | default: "Ämne" }}
+                    </div>
+                  </div>
+                  <div>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='16'
+                      height='16'
+                      viewBox='0 0 16 16'
+                      fill='none'
+                      class='faq-icon transition-transform duration-200'
+                    >
+                      <path d="M1 8H15M8 1V15" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class='faq-answer overflow-hidden max-h-0 transition-all duration-300 ease-in-out'
+                  id='faq-answer-{{ block.id }}'
+                  aria-hidden='true'
+                >
+                  <div class='pt-[25px]'>
+                    {% if block.settings.description != blank %}
+                      <div class='body1 !text-[20px] mb-4 text-gray-600'>
+                        {{ block.settings.description }}
+                      </div>
+                    {% endif %}
+                    <div class='body1 body1 !text-[20px]'>
+                      {{ block.settings.answer }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{{ "faq-accordion.js" | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "FAQ produkter",
+  "tag": "section",
+  "class": "section-faq-produkt",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Rubrik",
+      "default": "Vanliga frågor"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Beskrivning",
+      "default": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Anpassat ID"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ fråga",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Fråga",
+          "default": "Vad är din fråga?"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Knapptext",
+          "default": "Ämne"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Beskrivning (visas när FAQ öppnas)",
+          "info": "Valfri beskrivning som visas ovanför svaret"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Svar",
+          "default": "<p>Här skriver du svaret på frågan.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ produkter",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång är garantin på era produkter?",
+            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Vad ingår i installationen?",
+            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur mycket kan jag spara på min elräkning?",
+            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
