@@ -73,23 +73,60 @@
 
           <!-- Mobile-optimized button layout -->
           <div class='pt-[30px] md:pt-[50px] space-y-4 md:space-y-0'>
-            <!-- Quantity selector - full width on mobile -->
+            <!-- Quantity selector -->
             <div class='flex justify-center md:justify-start'>
-              <button
-                class='headline1 text-[18px] md:text-[20px] bg-transparent rounded-[10px] px-[20px] py-[15px] gap-[10px] flex flex-row items-center min-h-[48px]'
+              <div
+                class='headline1 text-[18px] md:text-[20px] bg-transparent rounded-[10px] pl-[20px] pr-[15px] py-[15px] gap-[10px] flex flex-row items-center min-h-[48px]'
                 style='border: 1px solid #171717 !important;'
               >
-                1
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='13'
-                  height='18'
-                  viewBox='0 0 13 18'
-                  fill='none'
+                <span id='quantity-display'>1</span>
+                <div class='flex flex-col gap-[2px] cursor-pointer'>
+                  <!-- Up arrow (increase) -->
+                  <button
+                    type='button'
+                    class='quantity-increase hover:opacity-70 transition-opacity'
+                    onclick='updateQuantity(1)'
+                    style='background: none; border: none; padding: 0; cursor: pointer;'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='13'
+                      height='9'
+                      viewBox='0 0 13 9'
+                      fill='none'
+                    >
+                      <path d="M11.7159 6.71C11.8096 6.61704 11.884 6.50644 11.9348 6.38458C11.9856 6.26272 12.0117 6.13201 12.0117 6C12.0117 5.86799 11.9856 5.73728 11.9348 5.61542C11.884 5.49356 11.8096 5.38296 11.7159 5.29L6.71592 0.29C6.62296 0.196272 6.51236 0.121877 6.3905 0.0711086C6.26864 0.0203399 6.13793 -0.00579834 6.00592 -0.00579834C5.87391 -0.00579834 5.7432 0.0203399 5.62134 0.0711086C5.49948 0.121877 5.38888 0.196272 5.29592 0.29L0.295921 5.29C0.202193 5.38296 0.127797 5.49356 0.0770283 5.61542C0.0262594 5.73728 0.00012207 5.86799 0.00012207 6C0.00012207 6.13201 0.0262594 6.26272 0.0770283 6.38458C0.127797 6.50644 0.202193 6.61704 0.295921 6.71C0.388885 6.80373 0.499484 6.87812 0.621344 6.92889C0.743203 6.97966 0.873909 7.0058 1.00592 7.0058C1.13793 7.0058 1.26864 6.97966 1.3905 6.92889C1.51236 6.87812 1.62296 6.80373 1.71592 6.71L6.00592 2.41L10.2959 6.71C10.3889 6.80373 10.4995 6.87812 10.6213 6.92889C10.7432 6.97966 10.8739 7.0058 11.0059 7.0058C11.1379 7.0058 11.2686 6.97966 11.3905 6.92889C11.5124 6.87812 11.623 6.80373 11.7159 6.71Z" fill="#171717"/>
+                    </svg>
+                  </button>
+
+                  <!-- Down arrow (decrease) -->
+                  <button
+                    type='button'
+                    class='quantity-decrease hover:opacity-70 transition-opacity'
+                    onclick='updateQuantity(-1)'
+                    style='background: none; border: none; padding: 0; cursor: pointer;'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='13'
+                      height='9'
+                      viewBox='0 0 13 9'
+                      fill='none'
+                    >
+                      <path d="M6.71592 8.71L11.7159 3.71C11.8092 3.6168 11.8831 3.5061 11.9336 3.3842C11.984 3.2624 12.01 3.1319 12.01 3C12.01 2.7337 11.9042 2.4783 11.7159 2.29C11.6227 2.1968 11.512 2.1228 11.3902 2.0723C11.2683 2.0219 11.1378 1.9959 11.0059 1.9959C10.7396 1.9959 10.4842 2.1017 10.2959 2.29L6.00592 6.59L1.71592 2.29C1.62296 2.1963 1.51236 2.1219 1.3905 2.0711C1.26864 2.0203 1.13793 1.9942 1.00592 1.9942C0.873909 1.9942 0.743203 2.0203 0.621344 2.0711C0.499484 2.1219 0.388885 2.1963 0.295921 2.29C0.202193 2.383 0.127797 2.4936 0.0770283 2.6154C0.0262594 2.7373 0.00012207 2.868 0.00012207 3C0.00012207 3.132 0.0262594 3.2627 0.0770283 3.3846C0.127797 3.5064 0.202193 3.617 0.295921 3.71L5.29592 8.71C5.38888 8.8037 5.49948 8.8781 5.62134 8.9289C5.7432 8.9797 5.87391 9.0058 6.00592 9.0058C6.13793 9.0058 6.26864 8.9797 6.3905 8.9289C6.51236 8.8781 6.62296 8.8037 6.71592 8.71Z" fill="#171717"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Hidden input to store the actual quantity -->
+                <input
+                  type='hidden'
+                  id='quantity-input'
+                  value='1'
+                  min='1'
+                  max='{{ product.selected_or_first_available_variant.inventory_quantity | default: 99 }}'
                 >
-                  <path d="M11.7159 6.71C11.8096 6.61704 11.884 6.50644 11.9348 6.38458C11.9856 6.26272 12.0117 6.13201 12.0117 6C12.0117 5.86799 11.9856 5.73728 11.9348 5.61542C11.884 5.49356 11.8096 5.38296 11.7159 5.29L6.71592 0.29C6.62296 0.196272 6.51236 0.121877 6.3905 0.0711086C6.26864 0.0203399 6.13793 -0.00579834 6.00592 -0.00579834C5.87391 -0.00579834 5.7432 0.0203399 5.62134 0.0711086C5.49948 0.121877 5.38888 0.196272 5.29592 0.29L0.295921 5.29C0.202193 5.38296 0.127797 5.49356 0.0770283 5.61542C0.0262594 5.73728 0.00012207 5.86799 0.00012207 6C0.00012207 6.13201 0.0262594 6.26272 0.0770283 6.38458C0.127797 6.50644 0.202193 6.61704 0.295921 6.71C0.388885 6.80373 0.499484 6.87812 0.621344 6.92889C0.743203 6.97966 0.873909 7.0058 1.00592 7.0058C1.13793 7.0058 1.26864 6.97966 1.3905 6.92889C1.51236 6.87812 1.62296 6.80373 1.71592 6.71L6.00592 2.41L10.2959 6.71C10.3889 6.80373 10.4995 6.87812 10.6213 6.92889C10.7432 6.97966 10.8739 7.0058 11.0059 7.0058C11.1379 7.0058 11.2686 6.97966 11.3905 6.92889C11.5124 6.87812 11.623 6.80373 11.7159 6.71ZM6.71592 17.71L11.7159 12.71C11.8092 12.6168 11.8831 12.5061 11.9336 12.3842C11.984 12.2624 12.01 12.1319 12.01 12C12.01 11.7337 11.9042 11.4783 11.7159 11.29C11.6227 11.1968 11.512 11.1228 11.3902 11.0723C11.2683 11.0219 11.1378 10.9959 11.0059 10.9959C10.7396 10.9959 10.4842 11.1017 10.2959 11.29L6.00592 15.59L1.71592 11.29C1.62296 11.1963 1.51236 11.1219 1.3905 11.0711C1.26864 11.0203 1.13793 10.9942 1.00592 10.9942C0.873909 10.9942 0.743203 11.0203 0.621344 11.0711C0.499484 11.1219 0.388885 11.1963 0.295921 11.29C0.202193 11.383 0.127797 11.4936 0.0770283 11.6154C0.0262594 11.7373 0.00012207 11.868 0.00012207 12C0.00012207 12.132 0.0262594 12.2627 0.0770283 12.3846C0.127797 12.5064 0.202193 12.617 0.295921 12.71L5.29592 17.71C5.38888 17.8037 5.49948 17.8781 5.62134 17.9289C5.7432 17.9797 5.87391 18.0058 6.00592 18.0058C6.13793 18.0058 6.26864 17.9797 6.3905 17.9289C6.51236 17.8781 6.62296 17.8037 6.71592 17.71Z" fill="#171717"/>
-                </svg>
-              </button>
+              </div>
             </div>
 
             <!-- Action buttons - stacked on mobile, row on desktop -->
@@ -510,6 +547,70 @@
   } else {
     console.log('Buy now button not found in product section'); // Debug
   }
+
+  });
+
+  // Quantity selector functionality - Global functions
+  window.updateQuantity = function(change) {
+    const quantityInput = document.getElementById('quantity-input');
+    const quantityDisplay = document.getElementById('quantity-display');
+
+    if (!quantityInput || !quantityDisplay) {
+      console.log('Quantity elements not found');
+      return;
+    }
+
+    const currentQuantity = parseInt(quantityInput.value) || 1;
+    const maxQuantity = parseInt(quantityInput.max) || 99;
+    const newQuantity = Math.max(1, Math.min(currentQuantity + change, maxQuantity));
+
+    console.log('Updating quantity from', currentQuantity, 'to', newQuantity); // Debug
+
+    quantityInput.value = newQuantity;
+    quantityDisplay.textContent = newQuantity;
+
+    // Update button states
+    updateQuantityButtons();
+  }
+
+  function updateQuantityButtons() {
+    const quantityInput = document.getElementById('quantity-input');
+    const decreaseBtn = document.querySelector('.quantity-decrease');
+    const increaseBtn = document.querySelector('.quantity-increase');
+
+    if (!quantityInput || !decreaseBtn || !increaseBtn) return;
+
+    const currentQuantity = parseInt(quantityInput.value) || 1;
+    const maxQuantity = parseInt(quantityInput.max) || 99;
+
+    // Disable decrease button if at minimum
+    if (currentQuantity <= 1) {
+      decreaseBtn.disabled = true;
+      decreaseBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    } else {
+      decreaseBtn.disabled = false;
+      decreaseBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    }
+
+    // Disable increase button if at maximum
+    if (currentQuantity >= maxQuantity) {
+      increaseBtn.disabled = true;
+      increaseBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    } else {
+      increaseBtn.disabled = false;
+      increaseBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    }
+  }
+
+  function getSelectedQuantity() {
+    const quantityInput = document.getElementById('quantity-input');
+    return parseInt(quantityInput.value) || 1;
+  }
+
+  // Initialize quantity buttons after DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Initializing quantity selector'); // Debug
+    updateQuantityButtons();
 {% endjavascript %}
 
 {% schema %}
