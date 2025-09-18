@@ -17,7 +17,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
-        "background_image": "shopify://shop_images/image_12.png",
+        "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
