@@ -25,6 +25,53 @@
         "button_url": ""
       }
     },
+    "icon_3eKirx": {
+      "type": "icon",
+      "blocks": {
+        "feature_PA8KdK": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Hus.svg",
+            "text": "Ökar värdet på dinbostad"
+          }
+        },
+        "feature_p9CMea": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Blixt.svg",
+            "text": "Sänker dinaelkostnader"
+          }
+        },
+        "feature_NptdVP": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Ladd.svg",
+            "text": "Låg kostnad för attunderhålla"
+          }
+        },
+        "feature_NeCEHe": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Ladd2.svg",
+            "text": "Ökadsjälvförsörjning"
+          }
+        }
+      },
+      "block_order": [
+        "feature_PA8KdK",
+        "feature_p9CMea",
+        "feature_NptdVP",
+        "feature_NeCEHe"
+      ],
+      "name": "Icon section",
+      "settings": {
+        "heading": "Fördelar med solceller",
+        "description": "<p>Solceller ger dig billig och ren el direkt från solen. Du blir mer självförsörjande, minskar dina elkostnader och skyddar dig mot stigande elpriser. Dessutom ökar de värdet på din fastighet och kräver minimalt underhåll.</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "bild_och_text_xgmUNz": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -63,13 +110,24 @@
         "image_button_link": "https://www.in.se/om-oss/#/",
         "custom_id": ""
       }
+    },
+    "kontakt_form_H47hYU": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_jDy7dL",
+    "icon_3eKirx",
     "bild_och_text_xgmUNz",
     "bild_och_text_pUBNQ3",
-    "bild_och_text_CPXJh3"
+    "bild_och_text_CPXJh3",
+    "kontakt_form_H47hYU"
   ]
 }
