@@ -4,44 +4,198 @@
 
   https://shopify.dev/docs/storefronts/themes/architecture/templates/collection
 {% endcomment %}
-
-<h1>{{ collection.title }}</h1>
-
-<div class="collection-products">
-  {% paginate collection.products by 20 %}
-    {% for product in collection.products %}
-      <div class="collection-product">
-        {% if product.featured_image %}
-          {% render 'image',
-            class: 'collection-product__image',
-            image: product.featured_image,
-            url: product.url,
-            width: 400,
-            height: 400,
-            crop: 'center'
-          %}
+<section>
+  <div class='layout pt-[100px] md:pt-[150px]'>
+    <!-- Breadcrumbs -->
+    <div class=' headline1 font-[300] text-[20px]'>
+      <nav aria-label='Breadcrumb'>
+        <a
+          href='{{ routes.root_url }}'
+          class='text-[#171717] hover:opacity-70 transition-opacity'
+        >
+          Hem
+        </a>
+        <span class='mx-2'>/</span>
+        {% if collection %}
+          <span class='font-[400]'>{{ collection.title }}</span>
+        {% else %}
+          <span class='font-[400]'>Produkter</span>
         {% endif %}
-        <div class="collection-product__content">
-          <p>{{ product.title | escape | link_to: product.url }}</p>
-          <p>{{ product.price | money }}</p>
-        </div>
-      </div>
-    {% endfor %}
+      </nav>
+    </div>
 
-    {{ paginate | default_pagination }}
-  {% endpaginate %}
-</div>
+    <!-- Collection Header -->
+    {% if collection %}
+      <div class='pt-[60px] pb-[50px]'>
+        <h1 class='headline1 text-[60px] '>
+          Upptäck våra {{ collection.title }}
+        </h1>
+        {% if collection.description != blank %}
+          <div class='body1 text-[20px] pt-[30px] text-[#171717]/80 max-w-[800px]'>
+            {{ collection.description }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <!-- Products Grid -->
+    {% if collection.products.size > 0 %}
+      <div
+        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]'
+        id='products-grid'
+      >
+        {% for product in collection.products %}
+          <div
+            class='product-card p-[30px] flex flex-col-reverse rounded-[10px] transition-colors duration-300 cursor-pointer{% if forloop.first %} active{% endif %}'
+            onclick="window.location.href='{{ product.url }}'"
+            data-product-index='{{ forloop.index0 }}'
+          >
+            <!-- Product Info (Top when reversed) -->
+            <div class='flex flex-col justify-between'>
+              <div class='flex flex-col'>
+                <div class='headline1 text-[36px] xl:pt-0 pt-[40px] text-[#171717]'>
+                  {{ product.title }}
+                </div>
+                {% if product.description != blank %}
+                  <div class='text-[#171717]/75 text py-[30px]'>
+                    {{ product.description | strip_html | truncate: 120 }}
+                  </div>
+                {% endif %}
+              </div>
+              <div class='flex gap-[10px] shrink-0'>
+                <a
+                  href='{{ product.url }}'
+                  class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
+                  style='border: 1px solid #171717;'
+                  onclick='event.stopPropagation()'
+                >
+                  Läs mer
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='22'
+                    height='18'
+                    viewBox='0 0 22 18'
+                    fill='none'
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product Image (Bottom when reversed) -->
+            <div
+              class='mb-[20px]'
+              style='
+                aspect-ratio: 18/23;
+                height: 285.081px;
+              '
+            >
+              {% if product.featured_image %}
+                <img
+                  src='{{ product.featured_image | image_url: width: 300 }}'
+                  alt='{{ product.featured_image.alt | default: product.title }}'
+                  width='200'
+                  height='200'
+                  class='h-full w-full object-contain rounded-[5px]'
+                  loading='lazy'
+                >
+              {% else %}
+                <div class='w-full h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                  Ingen bild
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <!-- Empty State -->
+      <div class='text-center py-[100px]'>
+        <h2 class='headline1 text-[40px] mb-[20px]'>Inga produkter hittades</h2>
+        <p class='body1 text-[20px] text-[#171717]/80 mb-[30px]'>
+          Det finns för närvarande inga produkter i denna kollektion.
+        </p>
+        <a
+          href='{{ routes.root_url }}'
+          class='inline-flex px-[30px] py-[18px] bg-[#EBCF2F] rounded-[10px] knappetikett text-[#171717] hover:opacity-80 transition-opacity'
+        >
+          Tillbaka till startsidan
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
 
 {% stylesheet %}
-  .collection-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  .product-card .banner-3-learn-more-btn {
+    border: 1px solid #171717;
+    background: transparent;
+    color: #171717;
+    transition: all 0.3s ease;
+  }
+
+  .product-card.active .banner-3-learn-more-btn,
+  .product-card:hover .banner-3-learn-more-btn {
+    background: #ebcf2f !important;
+    border-color: #ebcf2f !important;
+    color: #171717 !important;
+  }
+
+  .product-card.active .banner-3-learn-more-btn svg path,
+  .product-card:hover .banner-3-learn-more-btn svg path {
+    stroke: #171717 !important;
+  }
+
+  /* Card background transition */
+  .product-card {
+    transition: background-color 0.3s ease;
+  }
+
+  .product-card.active,
+  .product-card:hover {
+    background-color: rgba(243, 241, 232, 0.5);
   }
 {% endstylesheet %}
 
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    const productCards = document.querySelectorAll('.product-card');
+
+    productCards.forEach(function (card) {
+      card.addEventListener('mouseenter', function () {
+        // Remove active class from all cards
+        productCards.forEach(function (otherCard) {
+          otherCard.classList.remove('active');
+        });
+
+        // Add active class to hovered card
+        this.classList.add('active');
+      });
+    });
+
+    // Handle mouse leave from the entire grid to reset to first item
+    const productsGrid = document.getElementById('products-grid');
+    if (productsGrid) {
+      productsGrid.addEventListener('mouseleave', function () {
+        // Remove active class from all cards
+        productCards.forEach(function (card) {
+          card.classList.remove('active');
+        });
+
+        // Add active class back to first card
+        if (productCards.length > 0) {
+          productCards[0].classList.add('active');
+        }
+      });
+    }
+  });
+{% endjavascript %}
+
 {% schema %}
 {
-  "name": "t:general.collection",
+  "name": "Kollektion",
   "settings": []
 }
 {% endschema %}
