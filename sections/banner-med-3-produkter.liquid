@@ -193,11 +193,15 @@
       </div>
 
       <!-- Desktop grid -->
-      <div class=' hidden md:grid  grid-cols-3 gap-[20px]'>
+      <div
+        class=' hidden md:grid  grid-cols-3 gap-[20px]'
+        id='desktop-products-grid-{{ section.id }}'
+      >
         {% for block in section.blocks %}
           <div
-            class='product-card p-[30px] flex flex-col-reverse  rounded-[10px] transition-colors duration-300'
+            class='product-card p-[30px] flex flex-col-reverse  rounded-[10px] transition-colors duration-300{% if forloop.first %} active{% endif %}'
             {{ block.shopify_attributes }}
+            data-card-index='{{ forloop.index0 }}'
           >
             <div class='flex flex-col justify-between '>
               <div class='flex flex-col'>
@@ -342,12 +346,16 @@
     transition: all 0.3s ease;
   }
 
+  .product-card.active .banner-3-learn-more-btn,
+  .product-card:hover .banner-3-learn-more-btn,
   .product-card .banner-3-learn-more-btn.banner-3-active {
     background: #ebcf2f !important;
     border-color: #ebcf2f !important;
     color: #171717 !important;
   }
 
+  .product-card.active .banner-3-learn-more-btn svg path,
+  .product-card:hover .banner-3-learn-more-btn svg path,
   .product-card .banner-3-learn-more-btn.banner-3-active svg path {
     stroke: #171717 !important;
   }
@@ -355,6 +363,11 @@
   /* Card background transition */
   .product-card {
     transition: background-color 0.3s ease;
+  }
+
+  .product-card.active,
+  .product-card:hover {
+    background-color: #f3f1e8 !important;
   }
 
   .carousel-container {
@@ -535,64 +548,43 @@
       });
     });
 
-    // Handle desktop product card hover behavior - Clean implementation
+    // Handle desktop product card hover behavior - EXACT same logic as collection page
     const bannerSections = document.querySelectorAll('.banner-med-3-produkter');
 
     bannerSections.forEach(function (section) {
       // Get desktop grid container
       const desktopGrid = section.querySelector(
-        '.hidden.md\\:grid, [class*="grid-cols-3"]',
+        '[id^="desktop-products-grid-"]',
       );
       if (!desktopGrid) return;
 
       const productCards = desktopGrid.querySelectorAll('.product-card');
-      const learnMoreButtons = desktopGrid.querySelectorAll(
-        '.banner-3-learn-more-btn',
-      );
 
-      if (productCards.length === 0 || learnMoreButtons.length === 0) return;
+      if (productCards.length === 0) return;
 
-      function resetToFirstCard() {
-        // Clear all active states
-        productCards.forEach((card) => (card.style.backgroundColor = ''));
-        learnMoreButtons.forEach((btn) =>
-          btn.classList.remove('banner-3-active'),
-        );
-
-        // Set first card active
-        if (productCards[0] && learnMoreButtons[0]) {
-          productCards[0].style.backgroundColor = '#f3f1e8';
-          learnMoreButtons[0].classList.add('banner-3-active');
-        }
-      }
-
-      function setCardActive(index) {
-        // Clear all active states
-        productCards.forEach((card) => (card.style.backgroundColor = ''));
-        learnMoreButtons.forEach((btn) =>
-          btn.classList.remove('banner-3-active'),
-        );
-
-        // Set current card active
-        if (productCards[index] && learnMoreButtons[index]) {
-          productCards[index].style.backgroundColor = '#f3f1e8';
-          learnMoreButtons[index].classList.add('banner-3-active');
-        }
-      }
-
-      // Initialize first card as active
-      resetToFirstCard();
-
-      // Add hover events to each card
-      productCards.forEach(function (card, index) {
+      productCards.forEach(function (card) {
         card.addEventListener('mouseenter', function () {
-          setCardActive(index);
+          // Remove active class from all cards
+          productCards.forEach(function (otherCard) {
+            otherCard.classList.remove('active');
+          });
+
+          // Add active class to hovered card
+          this.classList.add('active');
         });
       });
 
-      // Reset to first card when leaving the entire grid
+      // Handle mouse leave from the entire grid to reset to first item
       desktopGrid.addEventListener('mouseleave', function () {
-        resetToFirstCard();
+        // Remove active class from all cards
+        productCards.forEach(function (card) {
+          card.classList.remove('active');
+        });
+
+        // Add active class back to first card
+        if (productCards.length > 0) {
+          productCards[0].classList.add('active');
+        }
       });
     });
   });

@@ -188,11 +188,12 @@
     </div>
 
     <!-- Desktop grid -->
-    <div class=' hidden md:grid grid-cols-2 gap-[20px]'>
+    <div class=' hidden md:grid grid-cols-2 gap-[20px]' id='desktop-products-grid-{{ section.id }}'>
       {% for block in section.blocks %}
         <div
-          class='product-card p-[30px] flex flex-col-reverse xl:flex-row rounded-[10px] transition-colors duration-300'
+          class='product-card p-[30px] flex flex-col-reverse xl:flex-row rounded-[10px] transition-colors duration-300{% if forloop.first %} active{% endif %}'
           {{ block.shopify_attributes }}
+          data-card-index='{{ forloop.index0 }}'
         >
           <div class='flex flex-col justify-between '>
             <div class='flex flex-col'>
@@ -344,9 +345,26 @@
     transition: all 0.3s ease;
   }
 
+  .product-card.active .banner-2-learn-more-btn,
+  .product-card:hover .banner-2-learn-more-btn {
+    background: #ebcf2f !important;
+    border-color: #ebcf2f !important;
+    color: #171717 !important;
+  }
+
+  .product-card.active .banner-2-learn-more-btn svg path,
+  .product-card:hover .banner-2-learn-more-btn svg path {
+    stroke: #171717 !important;
+  }
+
   /* Card background transition */
   .product-card {
     transition: background-color 0.3s ease;
+  }
+
+  .product-card.active,
+  .product-card:hover {
+    background-color: #f3f1e8 !important;
   }
 
   .carousel-container {

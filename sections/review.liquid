@@ -10,11 +10,11 @@
       <div class='grid grid-cols-1 md:grid-cols-3 gap-[30px] mb-[50px]'>
         {% for block in section.blocks %}
           <div
-            class='bg-[#F3F1E8] rounded-[15px] p-[30px] flex flex-col justify-between'
+            class='bg-[#F3F1E8]  rounded-[15px] p-[30px] flex flex-col justify-between'
             {{ block.shopify_attributes }}
           >
             <!-- Stars -->
-            <div class='flex gap-[5px] mb-[20px]'>
+            <div class='flex gap-[5px]  items-center justify-center  mb-[20px]'>
               {% for i in (1..5) %}
                 {% if i <= block.settings.stars %}
                   <svg width='20' height='20' viewBox='0 0 20 20' fill='none'>
