@@ -140,6 +140,58 @@
         "image_button_link": "shopify://pages/vara-solceller",
         "custom_id": ""
       }
+    },
+    "hur_wwU88T": {
+      "type": "hur",
+      "blocks": {
+        "step_cdyeXy": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/book.svg",
+            "title": "1. Boka tid",
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+          }
+        },
+        "step_J48fxk": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/person.svg",
+            "title": "2. Träffa oss",
+            "description": "<p>Beskrivande text Kontakta oss idag för ett möte där vi analyserarför steget.</p>"
+          }
+        },
+        "step_9nP6Cw": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/install.svg",
+            "title": "3. Installation",
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+          }
+        },
+        "step_kyRdCf": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/radio.svg",
+            "title": "4. Support",
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_cdyeXy",
+        "step_J48fxk",
+        "step_9nP6Cw",
+        "step_kyRdCf"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så här fungerar det",
+        "description": "<p>Lägg till en kort beskrivning här.</p>",
+        "primary_button_text": "Boka tid",
+        "primary_button_url": "shopify://pages/offert-forfragan",
+        "secondary_button_text": "Kontakta oss",
+        "secondary_button_url": "shopify://pages/support-om-oss"
+      }
     }
   },
   "order": [
@@ -147,6 +199,7 @@
     "hero_lower_HxUwkQ",
     "banner_med_3_produkter_tmN89j",
     "icon_ty3fXr",
-    "bild_och_text_HJKBUV"
+    "bild_och_text_HJKBUV",
+    "hur_wwU88T"
   ]
 }
