@@ -252,6 +252,43 @@
           }
         }
       }
+    },
+    "avdrag": {
+      "name": "Tax deductions",
+      "settings": {
+        "custom_id": {
+          "label": "Custom ID",
+          "info": "Use a custom ID for this section"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "description": {
+          "label": "Description"
+        }
+      },
+      "blocks": {
+        "avdrag_item": {
+          "name": "Deduction item",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "image": {
+              "label": "Image"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Tax deductions"
+      }
+    },
+    "all": {
+      "padding": {
+        "padding_top": "Top padding",
+        "padding_bottom": "Bottom padding"
+      }
     }
   }
 }
