@@ -80,11 +80,59 @@
         "secondary_button_text": "Företag",
         "secondary_button_url": ""
       }
+    },
+    "icon_ty3fXr": {
+      "type": "icon",
+      "blocks": {
+        "feature_rbUMVj": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Hus.svg",
+            "text": "Ökar värdet på dinbostad"
+          }
+        },
+        "feature_3L3Ank": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Blixt.svg",
+            "text": "Sänker dinaelkostnader"
+          }
+        },
+        "feature_8hYFnP": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Ladd.svg",
+            "text": "Låg kostnad för attunderhålla"
+          }
+        },
+        "feature_V6rCt7": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Ladd2.svg",
+            "text": "Ökadsjälvförsörjning"
+          }
+        }
+      },
+      "block_order": [
+        "feature_rbUMVj",
+        "feature_3L3Ank",
+        "feature_8hYFnP",
+        "feature_V6rCt7"
+      ],
+      "name": "Icon section",
+      "settings": {
+        "heading": "Fördelar med solceller",
+        "description": "<p>Solceller ger dig billig och ren el direkt från solen. Du blir mer självförsörjande, minskar dina elkostnader och skyddar dig mot stigande elpriser. Dessutom ökar de värdet på din fastighet och kräver minimalt underhåll.</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "banner_med_3_produkter_tmN89j"
+    "banner_med_3_produkter_tmN89j",
+    "icon_ty3fXr"
   ]
 }
