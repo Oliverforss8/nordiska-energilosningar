@@ -13,18 +13,33 @@
       "type": "page",
       "settings": {}
     },
-    "kontakt_form_YkpCdd": {
-      "type": "kontakt-form",
-      "name": "Contact Form",
+    "offert_forfragan_jgH9z9": {
+      "type": "offert-forfragan",
+      "name": "Offertförfrågan",
       "settings": {
-        "heading": "Kontakta oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "title": "Begär offert",
+        "description": "<p>Fyll i formuläret nedan så återkommer vi till dig med en skräddarsydd offert.</p>",
+        "card_1_image": "shopify://shop_images/image_15.png",
+        "card_1_button_text": "Solceller",
+        "card_1_button_link": "shopify://pages/vara-solceller",
+        "card_1_overlay_opacity": 0,
+        "card_2_image": "shopify://shop_images/image_16.png",
+        "card_2_button_text": "Batterilösningar",
+        "card_2_button_link": "shopify://pages/vara-batterilosningar",
+        "card_2_overlay_opacity": 0,
+        "card_3_image": "shopify://shop_images/image_7.png",
+        "card_3_button_text": "Värmepump",
+        "card_3_button_link": "shopify://pages/vara-varmepumpar",
+        "card_3_overlay_opacity": 0,
+        "card_4_image": "shopify://shop_images/image_14.png",
+        "card_4_button_text": "Laddbox",
+        "card_4_button_link": "shopify://pages/vara-laddboxar",
+        "card_4_overlay_opacity": 0
       }
     }
   },
   "order": [
     "main",
-    "kontakt_form_YkpCdd"
+    "offert_forfragan_jgH9z9"
   ]
 }
