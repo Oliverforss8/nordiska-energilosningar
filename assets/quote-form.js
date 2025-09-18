@@ -1,31 +1,63 @@
 // Quote form functionality
+console.log('Quote form script loaded!');
+
 document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM loaded, setting up form...');
+
   const serviceOptions = document.querySelectorAll('.service-option');
   const selectedServiceInput = document.getElementById('selected_service');
   const quoteSubmitBtn = document.querySelector('.quote-submit-btn');
 
-  // Handle service option selection
-  serviceOptions.forEach(option => {
+  console.log('Elements found:');
+  console.log('- Service options:', serviceOptions.length);
+  console.log('- Selected service input:', selectedServiceInput);
+  console.log('- Submit button:', quoteSubmitBtn);
+
+  // Handle service option selection (multiple selection)
+  if (serviceOptions.length === 0) {
+    console.error(
+      'No service options found! Check if .service-option class exists'
+    );
+    return;
+  }
+
+  serviceOptions.forEach((option, index) => {
+    console.log(`Setting up listener for option ${index}:`, option);
+
     option.addEventListener('click', function (e) {
       e.preventDefault();
+      console.log('Button clicked!', this);
 
-      // Remove active state from all options
-      serviceOptions.forEach(opt => {
-        opt.classList.remove('bg-[#EFD959]');
-        opt.classList.add('bg-white');
-      });
-
-      // Add active state to clicked option
-      this.classList.remove('bg-white');
-      this.classList.add('bg-[#EFD959]');
-
-      // Update hidden input
       const service = this.getAttribute('data-service');
-      if (selectedServiceInput) {
-        selectedServiceInput.value = service;
+      const isSelected = this.getAttribute('data-selected') === 'true';
+
+      console.log('Service:', service, 'Is selected:', isSelected);
+
+      if (isSelected) {
+        // Deselect this option
+        this.style.backgroundColor = 'white';
+        this.setAttribute('data-selected', 'false');
+        console.log('Deselected:', service);
+      } else {
+        // Select this option
+        this.style.backgroundColor = '#EFD959';
+        this.setAttribute('data-selected', 'true');
+        console.log('Selected:', service);
       }
 
-      console.log('Selected service:', service);
+      // Update hidden input with all selected services
+      const selectedServices = [];
+      serviceOptions.forEach(opt => {
+        if (opt.getAttribute('data-selected') === 'true') {
+          selectedServices.push(opt.getAttribute('data-service'));
+        }
+      });
+
+      if (selectedServiceInput) {
+        selectedServiceInput.value = selectedServices.join(', ');
+      }
+
+      console.log('All selected services:', selectedServices);
     });
   });
 
@@ -54,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      if (!selectedService) {
-        alert('Vänligen välj en tjänst');
+      if (!selectedService || selectedService.trim() === '') {
+        alert('Vänligen välj minst en tjänst');
         return;
       }
 
@@ -80,7 +112,19 @@ document.addEventListener('DOMContentLoaded', function () {
           });
 
           if (response.ok) {
-            alert('Tack för din förfrågan! Vi återkommer inom kort.');
+            // Hide the form section and show the success section
+            const formSection = document.querySelector('.quote-form-section');
+            const successSection = document.querySelector(
+              '.quote-success-section'
+            );
+
+            if (formSection && successSection) {
+              formSection.style.display = 'none';
+              successSection.style.display = 'block';
+            } else {
+              // Fallback to alert if sections not found
+              alert('Tack för din förfrågan! Vi återkommer inom kort.');
+            }
 
             // Reset form
             this.reset();
@@ -88,8 +132,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Reset service buttons
             serviceOptions.forEach(opt => {
-              opt.classList.remove('bg-[#EFD959]');
-              opt.classList.add('bg-white');
+              opt.style.backgroundColor = 'white';
+              opt.setAttribute('data-selected', 'false');
             });
           } else {
             throw new Error('Form submission failed');
