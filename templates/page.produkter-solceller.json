@@ -218,6 +218,15 @@
         "image_button_link": "",
         "custom_id": ""
       }
+    },
+    "kontakt_form_chLN6N": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
@@ -228,6 +237,7 @@
     "bild_och_text_fF7gV6",
     "hur_KCyVH6",
     "bild_och_text_fe37pr",
-    "bild_och_text_k67Awi"
+    "bild_och_text_k67Awi",
+    "kontakt_form_chLN6N"
   ]
 }
