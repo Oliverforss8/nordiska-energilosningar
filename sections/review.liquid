@@ -46,11 +46,13 @@
       </div>
 
       <!-- Button -->
-      <div class='flex justify-center'>
-        <button class='px-[30px] py-[17px] rounded-[10px] knappetikett text-[#171717] bg-[#EBCF2F] hover:bg-[#D4B82A] transition-colors'>
-          {{ section.settings.button_text | default: "Läs alla recensioner" }}
-        </button>
-      </div>
+      {% comment %}
+        <div class='flex justify-center'>
+          <button class='px-[30px] py-[17px] rounded-[10px] knappetikett text-[#171717] bg-[#EBCF2F] hover:bg-[#D4B82A] transition-colors'>
+            {{ section.settings.button_text | default: "Läs alla recensioner" }}
+          </button>
+        </div>
+      {% endcomment %}
     </div>
   </div>
 </section>
