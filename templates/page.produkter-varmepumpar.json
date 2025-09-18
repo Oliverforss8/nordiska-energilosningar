@@ -26,6 +26,17 @@
         "button_url": ""
       }
     },
+    "text_sektion_Up6yBe": {
+      "type": "text-sektion",
+      "name": "Text sektion",
+      "settings": {
+        "title": "Varför installera värmepump?",
+        "text": "<p>Nordiska Energilösningar är stolt installationspartner till Affärsverken i Karlskrona. Tillsammans levererar vi framtidens energilösningar i regionen. Genom vårt partnerskap omvandlar vi solens strålar till ren, förnybar energi som minskar koldioxidutsläppen och stärker energieffektiviteten – för både företag och hushåll.<br/><br/>Nordiska Energilösningar och Affärsverken bidrar gemensamt till att stärka Karlskronas energiinfrastruktur och skapa förutsättningar för långsiktig regional utveckling. Samarbetet är ett tydligt exempel på hur lokala aktörer tillsammans kan driva klimatomställningen framåt mot en fossilfri framtid.</p>",
+        "button_text": "Be om en offert",
+        "button_link": "shopify://pages/vara-varmepumpar",
+        "custom_id": ""
+      }
+    },
     "banner_med_3_produkter_JdJbDT": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -67,7 +78,7 @@
       ],
       "name": "Banner med 3 produkter",
       "settings": {
-        "layout_direction": "banner_first",
+        "layout_direction": "products_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/image_7.png",
         "overlay_opacity": 20,
@@ -85,6 +96,7 @@
   "order": [
     "main",
     "hero_lower_FNPfHG",
+    "text_sektion_Up6yBe",
     "banner_med_3_produkter_JdJbDT"
   ]
 }
