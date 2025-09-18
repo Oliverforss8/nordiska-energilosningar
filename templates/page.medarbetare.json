@@ -25,10 +25,20 @@
         "button_text": "Ta kontakt",
         "button_url": ""
       }
+    },
+    "kontakt_form_jKjXbN": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
-    "hero_lower_CyimrP"
+    "hero_lower_CyimrP",
+    "kontakt_form_jKjXbN"
   ]
 }
