@@ -293,6 +293,11 @@
   margin-bottom: 30px
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem
+}
+
 .mb-4 {
   margin-bottom: 1rem
 }
@@ -1208,6 +1213,10 @@
 
 .pr-\[20px\] {
   padding-right: 20px
+}
+
+.pb-\[60px\] {
+  padding-bottom: 60px
 }
 
 .text-left {
