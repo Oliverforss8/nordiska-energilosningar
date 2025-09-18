@@ -6,7 +6,7 @@
   <!-- Cart Header -->
   <div class='cart-header  flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white sticky top-0 z-10 rounded-[15px]'>
     <h2 class='headline2 text-[#171717]'>
-      {{ "cart.title" | t | default: "Kundvagn" }}
+      Kundvagn
     </h2>
     <button
       class='cart-close w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors'
@@ -39,7 +39,7 @@
       <!-- Subtotal -->
       <div class='flex justify-between items-center py-2'>
         <span class='body1 text-[16px] text-[#171717]'>
-          {{ "cart.subtotal" | t | default: "Delsumma" }}
+          Delsumma
         </span>
         <span class='knappetikett text-[#171717]' data-cart-total>0 kr</span>
       </div>
@@ -51,14 +51,14 @@
           style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
           onclick="window.location.href='/checkout'"
         >
-          {{ "cart.checkout" | t | default: "Gå till kassan" }}
+          Gå till kassan
         </button>
 
         <a
           href='{{ routes.cart_url }}'
           class='view-cart-link block text-center text-[#171717] hover:text-gray-600 transition-colors body1 text-[16px] py-2'
         >
-          {{ "cart.view_cart" | t | default: "Visa kundvagn" }}
+          Visa kundvagn
         </a>
       </div>
     </div>
