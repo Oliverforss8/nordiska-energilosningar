@@ -11,7 +11,9 @@
     {% render "image",
       image: section.settings.background_image,
       class: "w-full h-full object-cover absolute inset-0",
-      loading: "lazy"
+      loading: "lazy",
+      width: 1920,
+      height: 1080
     %}
 
     {% if section.settings.overlay_opacity > 0 %}
