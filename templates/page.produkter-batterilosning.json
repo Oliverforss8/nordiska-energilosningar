@@ -127,12 +127,26 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "bild_och_text_HJKBUV": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Undvik höga elnätsavgifter",
+        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "right",
+        "image_button_text": "Test",
+        "image_button_link": "shopify://pages/vara-solceller",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_HxUwkQ",
     "banner_med_3_produkter_tmN89j",
-    "icon_ty3fXr"
+    "icon_ty3fXr",
+    "bild_och_text_HJKBUV"
   ]
 }
