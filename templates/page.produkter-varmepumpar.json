@@ -91,12 +91,135 @@
         "secondary_button_text": "Företag",
         "secondary_button_url": ""
       }
+    },
+    "kontakt_form_CfQrPU": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
+    },
+    "bild_och_text_FyUHed": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Undvik höga elnätsavgifter",
+        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "hur_ED7Umq": {
+      "type": "hur",
+      "blocks": {
+        "step_wYwJFN": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/book.svg",
+            "title": "1. Boka tid",
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+          }
+        },
+        "step_QYknLJ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/person.svg",
+            "title": "2. Träffa oss",
+            "description": "<p>Beskrivande text Kontakta oss idag för ett möte där vi analyserarför steget.</p>"
+          }
+        },
+        "step_EfFxwD": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/install.svg",
+            "title": "3. Installation",
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+          }
+        },
+        "step_JWTgPa": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/radio.svg",
+            "title": "4. Support",
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_wYwJFN",
+        "step_QYknLJ",
+        "step_EfFxwD",
+        "step_JWTgPa"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så här fungerar det",
+        "description": "<p>Lägg till en kort beskrivning här.</p>",
+        "primary_button_text": "Boka tid",
+        "primary_button_url": "shopify://pages/offert-forfragan",
+        "secondary_button_text": "Kontakta oss",
+        "secondary_button_url": "shopify://pages/support-om-oss"
+      }
+    },
+    "bild_och_text_aWPKhw": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Undvik höga elnätsavgifter",
+        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "avdrag_3G6NGi": {
+      "type": "avdrag",
+      "blocks": {
+        "avdrag_item_iUAdXa": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "15% avdrag försolcellsinstallationer",
+            "image": "shopify://shop_images/Hus.svg"
+          }
+        },
+        "avdrag_item_mGCc3Y": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag förbatterilagring",
+            "image": "shopify://shop_images/Ladd.svg"
+          }
+        }
+      },
+      "block_order": [
+        "avdrag_item_iUAdXa",
+        "avdrag_item_mGCc3Y"
+      ],
+      "name": "Avdrag",
+      "settings": {
+        "custom_id": "",
+        "heading": "Avdrag för grön teknikt",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_FNPfHG",
     "text_sektion_Up6yBe",
-    "banner_med_3_produkter_JdJbDT"
+    "banner_med_3_produkter_JdJbDT",
+    "bild_och_text_FyUHed",
+    "hur_ED7Umq",
+    "bild_och_text_aWPKhw",
+    "avdrag_3G6NGi",
+    "kontakt_form_CfQrPU"
   ]
 }
