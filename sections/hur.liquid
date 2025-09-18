@@ -48,46 +48,52 @@
       </div>
     </div>
     <div class='pt-[50px] flex md:flex-row flex-col gap-[10px] justify-start'>
-      <button
-        class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] w-auto  md:shrink-0'
+      {% if section.settings.primary_button_text != blank %}
+        <a
+          href='{{ section.settings.primary_button_url | default: "#" }}'
+          class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] w-auto md:shrink-0 no-underline'
+          style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+        >
+          {{ section.settings.primary_button_text }}
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='22'
+            height='18'
+            viewBox='0 0 22 18'
+            fill='none'
+          >
+            <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      {% endif %}
 
-        style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
-      >
-        {{ section.settings.button_text | default: "Våra energilösningar" }}
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='22'
-          height='18'
-          viewBox='0 0 22 18'
-          fill='none'
+      {% if section.settings.secondary_button_text != blank %}
+        <a
+          href='{{ section.settings.secondary_button_url | default: "#" }}'
+          class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] bg-transparent md:shrink-0 no-underline'
+          style='border: 1px solid #171717;'
         >
-          <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button
-        class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] bg-transparent md:shrink-0'
-        style='border: 1px solid #171717;'
-      >
-        {{ section.settings.button_text | default: "Våra energilösningar" }}
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='22'
-          height='18'
-          viewBox='0 0 22 18'
-          fill='none'
-        >
-          <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+          {{ section.settings.secondary_button_text }}
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='22'
+            height='18'
+            viewBox='0 0 22 18'
+            fill='none'
+          >
+            <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      {% endif %}
     </div>
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "How it works",
+  "name": "Hur det funkar",
   "tag": "section",
   "class": "hur-section",
   "settings": [
@@ -102,6 +108,36 @@
       "id": "description",
       "label": "Description",
       "default": "<p>Lägg till en kort beskrivning här.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Primary Button"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary button text",
+      "default": "Våra energilösningar"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_url",
+      "label": "Primary button link"
+    },
+    {
+      "type": "header",
+      "content": "Secondary Button"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary button text",
+      "default": "Våra energilösningar"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_url",
+      "label": "Secondary button link"
     }
   ],
   "blocks": [
