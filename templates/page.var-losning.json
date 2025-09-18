@@ -31,10 +31,11 @@
       "name": "Bild och text",
       "settings": {
         "title": "Välj en heltäckande lösning för maximal energibesparing",
-        "text": "<p><strong>Vi gör energi enkelt och lönsamt.</strong><br/><br/>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.</p><p></p><ul><li>Solceller gör att du producerar din egen el</li><li>Batteriet lagrar din el tills du behöver den</li><li>Laddboxen ger dig billig och trygg laddning hemma</li><li>Värmepumpen minskar dina värmekostnader rejält</li><li>Grönt bolån sänker dina räntekostnader</li><li>Allt i ett paket ger dig kontroll och lägre elräkning<br/></li></ul><p><br/></p>",
+        "text": "<p><strong>Vi gör energi enkelt och lönsamt.</strong><br/><br/>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.<br/><br/></p><ul><li>Solceller gör att du producerar din egen el</li><li>Batteriet lagrar din el tills du behöver den</li><li>Laddboxen ger dig billig och trygg laddning hemma</li><li>Värmepumpen minskar dina värmekostnader rejält</li><li>Grönt bolån sänker dina räntekostnader</li><li>Allt i ett paket ger dig kontroll och lägre elräkning</li></ul><p><br/></p>",
+        "image": "shopify://shop_images/image_11.png",
         "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
+        "image_button_text": "Länka knapp",
+        "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
     },
@@ -44,9 +45,10 @@
       "settings": {
         "title": "Våra kunder halverar sina elräkningar direkt",
         "text": "<p><br/>Vår smarta AI ser till att du alltid använder elen när den är som billigast och lagrar den när den är som mest värd – så halverar du elräkningen utan att lyfta ett finger.<br/><br/></p><p>Resultatet blir att du får ut maximalt värde av varje kilowattimme – helt automatiskt, utan att du behöver göra någonting själv.</p>",
+        "image": "shopify://shop_images/image_15.png",
         "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
+        "image_button_text": "Länka knapp",
+        "image_button_link": "shopify://pages/vara-solceller",
         "custom_id": ""
       }
     },
