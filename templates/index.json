@@ -288,56 +288,6 @@
         "header_button_text": "Kontaktformulär",
         "header_button_url": "shopify://products/produkt"
       }
-    },
-    "review_wyUm7C": {
-      "type": "review",
-      "blocks": {
-        "review_CzecTR": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "",
-            "customer_name": "Anna Andersson"
-          }
-        },
-        "review_MeVb6x": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Rekommenderar varmt! Snabb installation och bra priser.",
-            "customer_name": "Erik Johansson"
-          }
-        },
-        "review_tRQHEx": {
-          "type": "review",
-          "settings": {
-            "stars": 4,
-            "review_text": "Mycket nöjd med resultatet. Kommer definitivt använda er igen.",
-            "customer_name": "Maria Svensson"
-          }
-        }
-      },
-      "block_order": [
-        "review_CzecTR",
-        "review_MeVb6x",
-        "review_tRQHEx"
-      ],
-      "name": "Reviews",
-      "settings": {
-        "heading": "Vad våra kunder säger",
-        "button_text": "Läs alla recensioner",
-        "button_url": ""
-      }
-    },
-    "product_meny_yfnazx": {
-      "type": "product-meny",
-      "name": "Product Menu",
-      "settings": {
-        "heading": "Our products",
-        "product_1": "dyness-tower-pro",
-        "product_2": "dyness-tower-pro",
-        "product_3": "produkt"
-      }
     }
   },
   "order": [
@@ -350,8 +300,6 @@
     "banner_med_3_produkter_D79ei6",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
-    "kontakt_form_Ae7RmC",
-    "review_wyUm7C",
-    "product_meny_yfnazx"
+    "kontakt_form_Ae7RmC"
   ]
 }
