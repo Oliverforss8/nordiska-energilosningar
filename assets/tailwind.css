@@ -729,6 +729,12 @@
   margin-bottom: calc(1rem * var(--tw-space-y-reverse))
 }
 
+.space-y-\[30px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(30px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(30px * var(--tw-space-y-reverse))
+}
+
 .overflow-hidden {
   overflow: hidden
 }
@@ -1347,6 +1353,10 @@
   font-weight: 600
 }
 
+.font-\[500\] {
+  font-weight: 500
+}
+
 .uppercase {
   text-transform: uppercase
 }
@@ -1731,6 +1741,10 @@
 
   .md\:w-auto {
     width: auto
+  }
+
+  .md\:w-1\/2 {
+    width: 50%
   }
 
   .md\:shrink-0 {

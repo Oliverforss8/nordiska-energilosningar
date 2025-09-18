@@ -1,0 +1,159 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = "section-" | append: section.type
+%}
+
+<section
+  id='{{ section_id }}'
+  class='{{ section_class }} layout py-[62px] md:py-[87px]'
+>
+  <div class='flex flex-col md:flex-row gap-[30px] md:gap-[50px] items-center'>
+    <!-- Package Image -->
+    <div class='w-full md:w-1/2'>
+      {% if section.settings.image != blank %}
+        <div class=' rounded-[15px] p-[30px] aspect-square flex items-center justify-center'>
+          <img
+            src='{{ section.settings.image | image_url: width: 2000 }}'
+            alt='{{ section.settings.image.alt | default: section.settings.title }}'
+            class='w-full h-full object-contain'
+            loading='lazy'
+          >
+        </div>
+      {% else %}
+        <div class='bg-[#F6F6F6] rounded-[15px] p-[30px] aspect-square flex items-center justify-center'>
+          <div class='text-gray-500 text-center'>
+            <p>Ingen bild vald</p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Package Details -->
+    <div class='w-full md:w-1/2 '>
+      <!-- Title -->
+      {% if section.settings.title != blank %}
+        <h2 class='headline1 text-[60px]  text-[#171717]'>
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+
+      <!-- Price -->
+      {% if section.settings.price != blank %}
+        <div class='headline1 font-[500] text-[36px] py-[50px] text-[#171717]'>
+          {{ section.settings.price }}
+        </div>
+      {% endif %}
+
+      <!-- Description -->
+      {% if section.settings.description != blank %}
+        <div class='body1 text-[20px] text-[#171717]/80'>
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+
+      <!-- Buttons -->
+      {% if section.blocks.size > 0 %}
+        <div class='flex flex-wrap pt-[50px] gap-[10px]'>
+          {% for block in section.blocks %}
+            {% if block.type == "button" %}
+              <a
+                href='{{ block.settings.url }}'
+                class='px-[15px] py-[15px] rounded-[10px] knappetikett text-[#171717] transition-all duration-300 text-[15px] inline-flex items-center gap-[10px] bg-[#EBCF2F] hover:bg-[#D4B82A]'
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.text }}
+                {% if block.settings.show_arrow %}
+                {% endif %}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Paket",
+  "tag": "section",
+  "class": "section-paket",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Anpassat ID",
+      "info": "Använd ett anpassat ID för denna sektion"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Paketbild"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Rubrik",
+      "default": "Komplett Solcellspaket"
+    },
+    {
+      "type": "text",
+      "id": "price",
+      "label": "Pris",
+      "default": "Från 89 000 kr"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Beskrivning",
+      "default": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Knapp",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Knapptext",
+          "default": "Läs mer"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Länk"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_arrow",
+          "label": "Visa pil",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Paket",
+      "blocks": [
+        {
+          "type": "button",
+          "settings": {
+            "text": "Få offert",
+            "show_arrow": true
+          }
+        },
+        {
+          "type": "button",
+          "settings": {
+            "text": "Läs mer",
+            "show_arrow": true
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
