@@ -11,10 +11,24 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
+    },
+    "hero_lower_FEUqrg": {
+      "type": "hero-lower",
+      "name": "Hero Lower",
+      "settings": {
+        "background_image": "shopify://shop_images/2149192693.jpg",
+        "overlay_opacity": 20,
+        "heading": "Welcome to our site",
+        "subheading": "Discover amazing products and services",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_lower_FEUqrg"
   ]
 }
