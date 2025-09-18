@@ -26,6 +26,63 @@
         "button_url": ""
       }
     },
+    "medarbetare_i7M4Q3": {
+      "type": "medarbetare",
+      "blocks": {
+        "team_member_bCyDNX": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
+            "name": "Anna Andersson",
+            "title": "VD",
+            "email": "",
+            "phone": ""
+          }
+        },
+        "team_member_qF66QF": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
+            "name": "Erik Eriksson",
+            "title": "Säljchef",
+            "email": "",
+            "phone": ""
+          }
+        },
+        "team_member_CHcng6": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
+            "name": "Maria Nilsson",
+            "title": "Projektledare",
+            "email": "",
+            "phone": ""
+          }
+        },
+        "team_member_XnPyW3": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
+            "name": "Johan Svensson",
+            "title": "Tekniker",
+            "email": "",
+            "phone": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_member_bCyDNX",
+        "team_member_qF66QF",
+        "team_member_CHcng6",
+        "team_member_XnPyW3"
+      ],
+      "name": "Medarbetare",
+      "settings": {
+        "custom_id": "",
+        "heading": "Team Nordiska",
+        "description": "<p>Våra kärnvärden är mer än ord – de speglar vilka vi är och hur vi arbetar varje dag. De vägleder oss i mötet med kunder, i samarbetet med kollegor och i hur vi bygger vår företagskultur. Genom våra kärnvärden skapar vi en arbetsmiljö där människor trivs, växer och gör skillnad – tillsammans.</p>"
+      }
+    },
     "kontakt_form_jKjXbN": {
       "type": "kontakt-form",
       "name": "Contact Form",
@@ -39,6 +96,7 @@
   "order": [
     "main",
     "hero_lower_CyimrP",
+    "medarbetare_i7M4Q3",
     "kontakt_form_jKjXbN"
   ]
 }
