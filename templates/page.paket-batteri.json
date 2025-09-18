@@ -58,11 +58,21 @@
         "price": "fr 89 000 kr",
         "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
       }
+    },
+    "kontakt_form_b39beP": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_FEUqrg",
-    "paket_xr8i6t"
+    "paket_xr8i6t",
+    "kontakt_form_b39beP"
   ]
 }
