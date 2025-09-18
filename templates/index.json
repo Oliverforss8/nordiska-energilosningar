@@ -62,7 +62,8 @@
       "name": "Bild och text",
       "settings": {
         "title": "Din väg till lägre elkostnader",
-        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/>KNAPP \"Så fungerar det\"</p>",
+        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
+        "image": "shopify://shop_images/image_15.png",
         "image_position": "right",
         "image_button_text": "Så fungerar det",
         "image_button_link": "shopify://pages/var-losning",
