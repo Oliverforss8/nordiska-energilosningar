@@ -41,8 +41,8 @@
                 onclick="window.location.href='#kontakt'"
               {% endunless %}
             >
-              <!-- Default content - TEMPORARILY HIDDEN FOR STYLING -->
-              <div class='default-content transition-opacity duration-300 {% if has_contact_info %}opacity-0{% endif %}'>
+              <!-- Default content -->
+              <div class='default-content transition-opacity duration-300 {% if has_contact_info %}group-hover:opacity-0{% endif %}'>
                 {% if block.settings.title != blank %}
                   <div class='w-full flex justify-end'>
                     <button class='bg-white headline text-[18px] p-[16px] rounded-bl-[10px]'>
@@ -52,7 +52,7 @@
                 {% endif %}
               </div>
 
-              <div class='pr-[20px] flex flex-col default-content transition-opacity duration-300 {% if has_contact_info %}opacity-0{% endif %}'>
+              <div class='pr-[20px] flex flex-col default-content transition-opacity duration-300 {% if has_contact_info %}group-hover:opacity-0{% endif %}'>
                 {% if block.settings.name != blank %}
                   <h3 class='headline1 text-[40px] text-left text-white'>
                     {{ block.settings.name }}
@@ -78,28 +78,20 @@
                 </div>
               </div>
 
-              <!--
-                Hover overlay with contact info (TEMPORARILY ALWAYS VISIBLE FOR STYLING)
-              -->
+              <!-- Hover overlay with contact info -->
               {% if has_contact_info %}
-                <div class='absolute inset-0 bg-black/70 rounded-[15px] p-[20px] flex flex-col justify-center items-center text-center opacity-100 transition-opacity duration-300'>
+                <div class='absolute inset-0 bg-black/65 rounded-[15px] p-[20px] flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
                   {% if block.settings.name != blank %}
-                    <h3 class='headline1 text-[32px] text-white mb-[20px]'>
+                    <h3 class='headline1 text-[32px] text-white'>
                       {{ block.settings.name }}
                     </h3>
                   {% endif %}
 
-                  {% if block.settings.title != blank %}
-                    <p class='headline1 text-[18px] text-white/80 mb-[30px]'>
-                      {{ block.settings.title }}
-                    </p>
-                  {% endif %}
-
-                  <div class='flex flex-col gap-[15px] w-full'>
+                  <div class='flex flex-col gap-[25px] pt-[50px]  w-full'>
                     {% if block.settings.email != blank %}
                       <a
                         href='mailto:{{ block.settings.email }}'
-                        class='bg-white/20 backdrop-blur-sm px-[20px] py-[15px] rounded-[10px] text-white flex items-center justify-center gap-[10px]'
+                        class='headline1 text-[20px] rounded-[10px] text-white flex items-center justify-center gap-[10px]'
                       >
                         <svg
                           width='20'
@@ -117,7 +109,7 @@
                     {% if block.settings.phone != blank %}
                       <a
                         href='tel:{{ block.settings.phone }}'
-                        class='bg-white/20 backdrop-blur-sm px-[20px] py-[15px] rounded-[10px] text-white hover:bg-white/30 transition-all duration-200 flex items-center justify-center gap-[10px]'
+                        class='headline1 text-[20px] rounded-[10px] text-white flex items-center justify-center gap-[10px]'
                       >
                         <svg
                           width='18'
