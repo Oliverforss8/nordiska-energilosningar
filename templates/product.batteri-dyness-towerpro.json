@@ -34,10 +34,23 @@
     },
     "tekniska_specifikationer_NRgBkG": {
       "type": "tekniska-specifikationer",
+      "blocks": {
+        "specification_E4emyj": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        }
+      },
+      "block_order": [
+        "specification_E4emyj"
+      ],
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
         "image_1": "shopify://shop_images/001.1686.png",
+        "image_2": "shopify://shop_images/001_1_.1694.png",
         "product_name": "Dyness",
         "stack_info": "Stack",
         "description": "Dyness",
