@@ -161,7 +161,7 @@
                             <div class='absolute bottom-[20px] left-[20px] '>
                               <a
                                 href='{{ button_link_1 }}'
-                                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+                                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
                                 style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
                               >
                                 {{ button_text_1 | default: "Knapp" }}
@@ -190,7 +190,7 @@
                             <div class='absolute bottom-[20px] left-[20px] '>
                               <a
                                 href='{{ button_link_2 }}'
-                                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+                                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
                                 style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
                               >
                                 {{ button_text_2 | default: "Knapp" }}
@@ -226,7 +226,7 @@
                           <div class='absolute bottom-[20px] left-[20px] '>
                             <a
                               href='{{ button_link_1 }}'
-                              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+                              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
                               style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
                             >
                               {{ button_text_1 | default: "Knapp" }}
@@ -351,11 +351,11 @@
   }
 
   /* Ensure dropdown category backgrounds work properly */
-  .dropdown-category.bg-\\[\\#F3F1E8\\] {
+  .dropdown-category[class*='bg-[#F3F1E8]'] {
     background-color: #f3f1e8 !important;
   }
 
-  .dropdown-category.bg-white {
+  .dropdown-category[class*='bg-white'] {
     background-color: white !important;
   }
 
