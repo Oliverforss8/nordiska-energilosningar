@@ -140,60 +140,126 @@
               </a>
 
               <!-- Custom Dropdown -->
-              <div class='mega-dropdown pt-[35px] fixed top-[100px] right-0 left-0 w-screen opacity-0 invisible   transition-all duration-300 z-50 layout mx-auto'>
-                <div class='py-[40px] shadow-bg px-[50px] rounded-[15px] grid gap-[30px] grid-cols-2 bg-white w-full '>
-                  <!-- Left Column - Categories -->
-                  <div class='flex flex-col'>
-                    <div class='headline1 text-[50px] text-[#171717] pb-[40px]'>
-                      {{ link.title }}
+              <div class='mega-dropdown pt-[35px] fixed top-[100px] right-0 left-0 w-screen opacity-0 invisible transition-all duration-300 z-50 pointer-events-none'>
+                <div class='layout mx-auto pointer-events-auto'>
+                  <div class='py-[40px] shadow-bg px-[50px] rounded-[15px] grid gap-[30px] grid-cols-2 bg-white w-full '>
+                    <!-- Left Column - Categories -->
+                    <div class='flex flex-col'>
+                      <div class='headline1 text-[50px] text-[#171717] pb-[40px]'>
+                        {{ link.title }}
+                      </div>
+                      <div class='flex flex-col gap-[10px]'>
+                        {% for child_link in link.links %}
+                          <a
+                            href='{{ child_link.url }}'
+                            class='dropdown-category flex flex-row p-[18px] rounded-[15px] justify-between text-[24px] headline1 transition-colors text-[#171717] w-full {% if forloop.first %}bg-[#F3F1E8]{% else %}bg-white{% endif %}'
+                            data-category-item
+                          >
+                            {{ child_link.title }}
+                            <div>
+                              <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                width='23'
+                                height='18'
+                                viewBox='0 0 23 18'
+                                fill='none'
+                              >
+                                <path d="M1.55554 9H22L14 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.55554 8.99994H22L14 16.9999" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                          </a>
+                        {% endfor %}
+                      </div>
                     </div>
-                    <div class='flex flex-col gap-[10px]'>
-                      {% for child_link in link.links %}
-                        <a
-                          href='{{ child_link.url }}'
-                          class='dropdown-category flex flex-row p-[18px] rounded-[15px] justify-between text-[24px] headline1 transition-colors text-[#171717] w-full {% if forloop.first %}bg-[#F3F1E8]{% else %}bg-white{% endif %}'
-                          data-category-item
-                        >
-                          {{ child_link.title }}
-                          <div>
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              width='23'
-                              height='18'
-                              viewBox='0 0 23 18'
-                              fill='none'
-                            >
-                              <path d="M1.55554 9H22L14 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              <path d="M1.55554 8.99994H22L14 16.9999" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                          </div>
-                        </a>
-                      {% endfor %}
-                    </div>
-                  </div>
 
-                  <!-- Right Column - Image(s) -->
-                  <div class='flex items-center h-full justify-center'>
-                    {% if dropdown_image != blank
-                      or dropdown_image_2 != blank
-                    %}
-                      {% liquid
-                        assign has_two_images = false
-                        if dropdown_image != blank and dropdown_image_2 != blank
-                          assign has_two_images = true
-                        endif
+                    <!-- Right Column - Image(s) -->
+                    <div class='flex items-center h-full justify-center'>
+                      {% if dropdown_image != blank
+                        or dropdown_image_2 != blank
                       %}
+                        {% liquid
+                          assign has_two_images = false
+                          if dropdown_image != blank and dropdown_image_2 != blank
+                            assign has_two_images = true
+                          endif
+                        %}
 
-                      {% if has_two_images %}
-                        <!-- Two images side by side -->
-                        <div class='flex flex-row h-full gap-[30px] w-full'>
-                          <div class='flex h-full relative'>
+                        {% if has_two_images %}
+                          <!-- Two images side by side -->
+                          <div class='flex flex-row h-full gap-[30px] w-full'>
+                            <div class='flex h-full relative'>
+                              <img
+                                src='{{ dropdown_image | image_url: width: 600 }}'
+                                alt='{{ link.title }}'
+                                width='600'
+                                height='400'
+                                class='dropdown-image h-full object-cover w-full rounded-[10px]'
+                                loading='lazy'
+                              >
+                              <div class='absolute bottom-[20px] left-[20px] '>
+                                <a
+                                  href='{{ button_link_1 }}'
+                                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
+                                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+                                >
+                                  {{ button_text_1 | default: "Knapp" }}
+                                  <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='22'
+                                    height='18'
+                                    viewBox='0 0 22 18'
+                                    fill='none'
+                                  >
+                                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                            <div class='flex h-full relative'>
+                              <img
+                                src='{{ dropdown_image_2 | image_url: width: 600 }}'
+                                alt='{{ link.title }}'
+                                width='600'
+                                height='400'
+                                class='dropdown-image h-full object-cover w-full rounded-[10px]'
+                                loading='lazy'
+                              >
+                              <div class='absolute bottom-[20px] left-[20px] '>
+                                <a
+                                  href='{{ button_link_2 }}'
+                                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
+                                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+                                >
+                                  {{ button_text_2 | default: "Knapp" }}
+                                  <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='22'
+                                    height='18'
+                                    viewBox='0 0 22 18'
+                                    fill='none'
+                                  >
+                                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        {% else %}
+                          <!-- Single image -->
+                          <div class='relative h-full flex w-full'>
+                            {% assign single_image = dropdown_image %}
+                            {% if dropdown_image == blank %}
+                              {% assign single_image = dropdown_image_2 %}
+                            {% endif %}
                             <img
-                              src='{{ dropdown_image | image_url: width: 600 }}'
+                              src='{{ single_image | image_url: width: 1200 }}'
                               alt='{{ link.title }}'
-                              width='600'
-                              height='400'
-                              class='dropdown-image h-full object-cover w-full rounded-[10px]'
+                              width='1200'
+                              height='800'
+                              class='dropdown-image h-full w-full rounded-[10px]'
                               loading='lazy'
                             >
                             <div class='absolute bottom-[20px] left-[20px] '>
@@ -216,73 +282,9 @@
                               </a>
                             </div>
                           </div>
-                          <div class='flex h-full relative'>
-                            <img
-                              src='{{ dropdown_image_2 | image_url: width: 600 }}'
-                              alt='{{ link.title }}'
-                              width='600'
-                              height='400'
-                              class='dropdown-image h-full object-cover w-full rounded-[10px]'
-                              loading='lazy'
-                            >
-                            <div class='absolute bottom-[20px] left-[20px] '>
-                              <a
-                                href='{{ button_link_2 }}'
-                                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
-                                style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
-                              >
-                                {{ button_text_2 | default: "Knapp" }}
-                                <svg
-                                  xmlns='http://www.w3.org/2000/svg'
-                                  width='22'
-                                  height='18'
-                                  viewBox='0 0 22 18'
-                                  fill='none'
-                                >
-                                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      {% else %}
-                        <!-- Single image -->
-                        <div class='relative h-full flex w-full'>
-                          {% assign single_image = dropdown_image %}
-                          {% if dropdown_image == blank %}
-                            {% assign single_image = dropdown_image_2 %}
-                          {% endif %}
-                          <img
-                            src='{{ single_image | image_url: width: 1200 }}'
-                            alt='{{ link.title }}'
-                            width='1200'
-                            height='800'
-                            class='dropdown-image h-full w-full rounded-[10px]'
-                            loading='lazy'
-                          >
-                          <div class='absolute bottom-[20px] left-[20px] '>
-                            <a
-                              href='{{ button_link_1 }}'
-                              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
-                              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
-                            >
-                              {{ button_text_1 | default: "Knapp" }}
-                              <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                width='22'
-                                height='18'
-                                viewBox='0 0 22 18'
-                                fill='none'
-                              >
-                                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
+                        {% endif %}
                       {% endif %}
-                    {% endif %}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -462,6 +464,11 @@
   .dropdown-item:hover .mega-dropdown {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* Adjust dropdown padding when header is scrolled */
+  .header-section.scrolled .mega-dropdown {
+    padding-top: 50px;
   }
 
   .dropdown-image {

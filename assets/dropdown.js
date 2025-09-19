@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Show current dropdown
       dropdown.style.opacity = '1';
       dropdown.style.visibility = 'visible';
-      document.body.style.overflow = 'hidden'; // Prevent body scroll
+      // Removed overflow hidden - allow page scrolling
       currentActiveDropdown = dropdown;
     });
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
       globalHoverTimeout = setTimeout(() => {
         dropdown.style.opacity = '0';
         dropdown.style.visibility = 'hidden';
-        document.body.style.overflow = ''; // Restore body scroll
+        // Removed overflow restore - no longer needed
         currentActiveDropdown = null;
 
         // Reset to first item highlighted when dropdown closes
@@ -47,29 +47,31 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 150); // Reduced delay for faster transitions
     });
 
-    // Keep dropdown open when hovering over it
-    dropdown.addEventListener('mouseenter', () => {
-      clearTimeout(globalHoverTimeout);
-    });
+    // Keep dropdown open when hovering over the content area
+    const dropdownContent = dropdown.querySelector('.layout');
+    if (dropdownContent) {
+      dropdownContent.addEventListener('mouseenter', () => {
+        clearTimeout(globalHoverTimeout);
+      });
 
-    dropdown.addEventListener('mouseleave', () => {
-      globalHoverTimeout = setTimeout(() => {
-        dropdown.style.opacity = '0';
-        dropdown.style.visibility = 'hidden';
-        document.body.style.overflow = ''; // Restore body scroll
-        currentActiveDropdown = null;
+      dropdownContent.addEventListener('mouseleave', () => {
+        globalHoverTimeout = setTimeout(() => {
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          currentActiveDropdown = null;
 
-        // Reset to first item highlighted when dropdown closes
-        resetToFirstItem(categoryItems);
-      }, 150); // Reduced delay
-    });
+          // Reset to first item highlighted when dropdown closes
+          resetToFirstItem(categoryItems);
+        }, 150); // Reduced delay
+      });
+    }
 
     // Close dropdown when clicking on backdrop
     dropdown.addEventListener('click', e => {
       if (e.target === dropdown) {
         dropdown.style.opacity = '0';
         dropdown.style.visibility = 'hidden';
-        document.body.style.overflow = '';
+        // Removed overflow restore - no longer needed
         currentActiveDropdown = null;
       }
     });

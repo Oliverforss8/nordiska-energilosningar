@@ -144,6 +144,10 @@
   pointer-events: none
 }
 
+.pointer-events-auto {
+  pointer-events: auto
+}
+
 .visible {
   visibility: visible
 }
@@ -211,6 +215,10 @@
 
 .top-\[100px\] {
   top: 100px
+}
+
+.top-\[80px\] {
+  top: 80px
 }
 
 .z-10 {
