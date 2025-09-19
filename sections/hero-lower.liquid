@@ -7,14 +7,42 @@
   class='overflow-visible flex-col w-full h-full flex'
   style='min-height: 75vh;'
 >
-  <div class='relative flex w-full h-full' style='min-height: 75vh;'>
-    {% render "image",
-      image: section.settings.background_image,
-      class: "w-full h-full object-cover absolute inset-0",
-      loading: "lazy",
-      width: 1920,
-      height: 1080
+  <div
+    class='relative flex w-full h-full overflow-hidden'
+    style='min-height: 75vh;'
+  >
+    {% if section.settings.media_type == "video"
+      and section.settings.background_video != blank
     %}
+      <!-- Background Video -->
+      <video
+        class='w-full h-full object-cover absolute inset-0'
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source
+          src='{{ section.settings.background_video.sources[1].url }}'
+          type='video/mp4'
+        >
+        <source
+          src='{{ section.settings.background_video.sources[0].url }}'
+          type='video/webm'
+        >
+      </video>
+    {% elsif section.settings.media_type == "image"
+      and section.settings.background_image != blank
+    %}
+      <!-- Background Image -->
+      {% render "image",
+        image: section.settings.background_image,
+        class: "w-full h-full object-cover absolute inset-0",
+        loading: "lazy",
+        width: 1920,
+        height: 1080
+      %}
+    {% endif %}
 
     {% if section.settings.overlay_opacity > 0 %}
       <div
@@ -105,54 +133,75 @@
 
 {% schema %}
 {
-  "name": "Hero Lower",
+  "name": "Hero nedre",
   "tag": "section",
   "class": "section-banner",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
+      "type": "select",
+      "id": "media_type",
+      "label": "Bakgrundstyp",
+      "options": [
+        {
+          "value": "image",
+          "label": "Bild"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Background image"
+      "label": "Bakgrundsbild"
+    },
+    {
+      "type": "video",
+      "id": "background_video",
+      "label": "Bakgrundsvideo (autoplay, muted, loop)"
     },
     {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "Dark Overlay Opacity",
+      "label": "Mörk overlay opacitet",
       "min": 0,
       "max": 80,
       "step": 5,
       "unit": "%",
       "default": 20,
-      "info": "Add a dark overlay on top of the background image to improve text readability"
+      "info": "Lägg till en mörk overlay över bakgrunden för bättre läsbarhet"
     },
     {
       "type": "textarea",
       "id": "heading",
-      "label": "Heading",
-      "default": "Welcome to our site"
+      "label": "Rubrik",
+      "default": "Välkommen till vår webbplats"
     },
     {
       "type": "textarea",
       "id": "subheading",
       "label": "Beskrivning",
-      "default": "Discover amazing products and services"
+      "default": "Upptäck fantastiska produkter och tjänster"
     },
     {
       "type": "text",
       "id": "button_text",
-      "label": "Button text",
+      "label": "Knapptext",
       "default": "Våra energilösningar"
     },
     {
       "type": "url",
       "id": "button_url",
-      "label": "Button URL"
+      "label": "Knapplänk"
     }
   ],
   "presets": [
     {
-      "name": "Hero Lower"
+      "name": "Hero nedre"
     }
   ]
 }
