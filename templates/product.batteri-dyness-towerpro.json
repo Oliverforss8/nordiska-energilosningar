@@ -32,6 +32,20 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_wA4xfq": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "image",
+        "video": "shopify://files/videos/jichajiyongsuo.mp4",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -89,6 +103,7 @@
   "order": [
     "main",
     "banner_bild_TmQytz",
+    "bild_och_text_wA4xfq",
     "faq_produkt",
     "relaterade_produkter"
   ]
