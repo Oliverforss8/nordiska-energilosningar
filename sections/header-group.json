@@ -9,7 +9,7 @@
  */
 {
   "type": "header",
-  "name": "t:general.header",
+  "name": "Sidhuvud",
   "sections": {
     "header": {
       "type": "header",
