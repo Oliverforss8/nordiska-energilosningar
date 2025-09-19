@@ -13,12 +13,20 @@
       "type": "product",
       "settings": {}
     },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
+    "banner_bild_TmQytz": {
+      "type": "banner-bild",
+      "name": "Banner bild",
       "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -65,10 +73,20 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
+    "banner_bild_TmQytz",
     "faq_produkt",
     "relaterade_produkter"
   ]
