@@ -1,0 +1,244 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = "section-bild-och-text"
+%}
+
+<section
+  id='{{ section_id }}'
+  class='{{ section_class }} layout  py-[62px] md:py-[87px]'
+>
+  <div class='gap-[40px] md:gap-[50px] justify-between items-center flex flex-col {% if section.settings.image_position == 'left' %}md:flex-row-reverse{% else %}md:flex-row{% endif %}'>
+    <div class='flex flex-col'>
+      {% if section.settings.title != blank %}
+        <div class='headline1 text-[#171717]'>{{ section.settings.title }}</div>
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+        <div class='text text-[#171717]/80 pt-[40px] md:pt-[50px]'>
+          {{ section.settings.text }}
+        </div>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+        <div class='flex flex-wrap pt-[50px] gap-[10px]'>
+          {% for block in section.blocks %}
+            {% if block.type == "button" %}
+              <a
+                href='{{ block.settings.url }}'
+                class='px-[15px] py-[15px] rounded-[10px] knappetikett text-[#171717] transition-all duration-300 text-[15px] inline-flex items-center gap-[10px] bg-[#EBCF2F] hover:bg-[#D4B82A]'
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.text }}
+                {% if block.settings.show_arrow %}
+                {% endif %}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class='relative w-full md:w-[2500px]  lg:shrink-0 h-[350px] md:h-[450px] lg:w-[450px]'>
+      {% if section.settings.media_type == "video"
+        and section.settings.video != blank
+      %}
+        <!-- Video -->
+        <video
+          class='w-full h-full object-cover rounded-[15px]'
+          width='450'
+          height='450'
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source
+            src='{{ section.settings.video.sources[1].url }}'
+            type='video/mp4'
+          >
+          <source
+            src='{{ section.settings.video.sources[0].url }}'
+            type='video/webm'
+          >
+        </video>
+
+        {% if section.settings.image_button_text != blank
+          and section.settings.image_button_link != blank
+        %}
+          <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+            <a
+              href='{{ section.settings.image_button_link }}'
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
+              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+            >
+              {{ section.settings.image_button_text }}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='22'
+                height='18'
+                viewBox='0 0 22 18'
+                fill='none'
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        {% endif %}
+      {% elsif section.settings.media_type == "image"
+        and section.settings.image != blank
+      %}
+        <!-- Image -->
+        <img
+          src='{{ section.settings.image | image_url: width: 450 }}'
+          alt='{{ section.settings.image.alt | default: section.settings.title }}'
+          class='w-full h-full object-cover rounded-[15px]'
+          width='450'
+          height='450'
+          loading='lazy'
+        >
+
+        {% if section.settings.image_button_text != blank
+          and section.settings.image_button_link != blank
+        %}
+          <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+            <a
+              href='{{ section.settings.image_button_link }}'
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
+              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+            >
+              {{ section.settings.image_button_text }}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='22'
+                height='18'
+                viewBox='0 0 22 18'
+                fill='none'
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        {% endif %}
+      {% else %}
+        <div class='w-full h-full bg-gray-200 rounded-[10px] flex items-center justify-center text-gray-500'>
+          {% if section.settings.media_type == "video" %}
+            Välj en video
+          {% else %}
+            Välj en bild
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Bild och text med knappar",
+  "tag": "section",
+  "class": "section-bild-och-text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Titel"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Text</p>"
+    },
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Mediatyp",
+      "options": [
+        {
+          "value": "image",
+          "label": "Bild"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bild"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video (autoplay, muted, loop)"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Mediaposition",
+      "options": [
+        {
+          "value": "right",
+          "label": "Höger"
+        },
+        {
+          "value": "left",
+          "label": "Vänster"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "text",
+      "id": "image_button_text",
+      "label": "Knapptext"
+    },
+    {
+      "type": "url",
+      "id": "image_button_link",
+      "label": "Knapplänk"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Anpassat ID",
+      "info": "Lämna tomt för att använda standard ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Knapp",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Knapptext",
+          "default": "Klicka här"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Knapplänk"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_arrow",
+          "label": "Visa pil",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bild och text med knappar"
+    }
+  ]
+}
+{% endschema %}
