@@ -102,7 +102,7 @@
               </a>
 
               <!-- Custom Dropdown -->
-              <div class='mega-dropdown fixed top-[120px] right-0 left-0 w-screen opacity-0 invisible transition-all duration-300 z-50 layout mx-auto'>
+              <div class='mega-dropdown pt-[35px] fixed top-[100px] right-0 left-0 w-screen opacity-0 invisible transition-all duration-300 z-50 layout mx-auto'>
                 <div class='py-[40px] px-[50px] rounded-[15px] grid gap-[30px] grid-cols-2 bg-white w-full '>
                   <!-- Left Column - Categories -->
                   <div class='flex flex-col'>
@@ -113,7 +113,8 @@
                       {% for child_link in link.links %}
                         <a
                           href='{{ child_link.url }}'
-                          class='dropdown-category flex flex-row p-[18px] rounded-[15px] justify-between text-[24px] headline1 bg-[#F3F1E8] hover:bg-[#e8e6dd] transition-colors text-[#171717] w-full'
+                          class='dropdown-category flex flex-row p-[18px] rounded-[15px] justify-between text-[24px] headline1 transition-colors text-[#171717] w-full {% if forloop.first %}bg-[#F3F1E8]{% else %}bg-white{% endif %}'
+                          data-category-item
                         >
                           {{ child_link.title }}
                           <div>
@@ -292,6 +293,9 @@
 <!-- Load Cart JavaScript -->
 <script src='{{ 'cart.js' | asset_url }}' defer></script>
 
+<!-- Load Dropdown JavaScript -->
+<script src='{{ 'dropdown.js' | asset_url }}' defer></script>
+
 {% stylesheet %}
   .header-section {
     --header-text-color: white;
@@ -344,6 +348,15 @@
 
   .dropdown-image {
     transition: transform 0.3s ease;
+  }
+
+  /* Ensure dropdown category backgrounds work properly */
+  .dropdown-category.bg-\\[\\#F3F1E8\\] {
+    background-color: #f3f1e8 !important;
+  }
+
+  .dropdown-category.bg-white {
+    background-color: white !important;
   }
 
   /* Mobile responsive */
@@ -417,52 +430,7 @@
 
     window.addEventListener('scroll', requestTick);
 
-    // Enhanced dropdown interactions
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
-
-    dropdownItems.forEach((item) => {
-      const dropdown = item.querySelector('.mega-dropdown');
-      let hoverTimeout;
-
-      // Show dropdown on mouse enter
-      item.addEventListener('mouseenter', () => {
-        clearTimeout(hoverTimeout);
-        dropdown.style.opacity = '1';
-        dropdown.style.visibility = 'visible';
-        document.body.style.overflow = 'hidden'; // Prevent body scroll
-      });
-
-      // Hide dropdown on mouse leave with delay
-      item.addEventListener('mouseleave', () => {
-        hoverTimeout = setTimeout(() => {
-          dropdown.style.opacity = '0';
-          dropdown.style.visibility = 'hidden';
-          document.body.style.overflow = ''; // Restore body scroll
-        }, 200);
-      });
-
-      // Keep dropdown open when hovering over it
-      dropdown.addEventListener('mouseenter', () => {
-        clearTimeout(hoverTimeout);
-      });
-
-      dropdown.addEventListener('mouseleave', () => {
-        hoverTimeout = setTimeout(() => {
-          dropdown.style.opacity = '0';
-          dropdown.style.visibility = 'hidden';
-          document.body.style.overflow = ''; // Restore body scroll
-        }, 200);
-      });
-
-      // Close dropdown when clicking on backdrop
-      dropdown.addEventListener('click', (e) => {
-        if (e.target === dropdown) {
-          dropdown.style.opacity = '0';
-          dropdown.style.visibility = 'hidden';
-          document.body.style.overflow = '';
-        }
-      });
-    });
+    // Dropdown interactions are handled in dropdown.js
   });
 {% endjavascript %}
 

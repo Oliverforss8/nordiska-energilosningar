@@ -221,6 +221,14 @@
   right: 0px
 }
 
+.top-\[150px\] {
+  top: 150px
+}
+
+.top-\[100px\] {
+  top: 100px
+}
+
 .z-10 {
   z-index: 10
 }
@@ -1147,6 +1155,10 @@
 
 .pt-\[120px\] {
   padding-top: 120px
+}
+
+.pt-\[35px\] {
+  padding-top: 35px
 }
 
 .text-left {
