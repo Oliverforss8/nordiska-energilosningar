@@ -100,7 +100,7 @@
                   </div>
 
                   <!-- Right Column - Image -->
-                  <div class='flex items-center justify-center'>
+                  <div class='flex relative items-center justify-center'>
                     {% if dropdown_image != blank %}
                       <img
                         src='{{ dropdown_image | image_url: width: 1200 }}'
@@ -110,6 +110,25 @@
                         class='dropdown-image h-full w-full rounded-[10px]'
                         loading='lazy'
                       >
+                      <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+                        <a
+                          href='{{ section.settings.image_button_link }}'
+                          class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+                          style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+                        >
+                          Knapp
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='22'
+                            height='18'
+                            viewBox='0 0 22 18'
+                            fill='none'
+                          >
+                            <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                      </div>
                     {% else %}
 
                     {% endif %}
