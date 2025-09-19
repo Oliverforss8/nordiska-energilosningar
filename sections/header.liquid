@@ -1,10 +1,42 @@
 {% liquid
   assign section_id = "header-" | append: section.id
+
+  # Check for page-specific inverted mode
+  assign inverted_mode = false
+
+  # Define which pages should use inverted mode
+  assign inverted_pages = section.settings.inverted_pages | split: ","
+
+  # Check if current page/template should use inverted mode
+  if template.name == "page" and page.handle != blank
+    # Check if current page handle is in the inverted pages list
+    for inverted_page in inverted_pages
+      assign clean_page = inverted_page | strip
+      if page.handle == clean_page
+        assign inverted_mode = true
+        break
+      endif
+    endfor
+  elsif template.name != "page"
+    # Check if current template is in the inverted pages list
+    for inverted_page in inverted_pages
+      assign clean_page = inverted_page | strip
+      if template.name == clean_page
+        assign inverted_mode = true
+        break
+      endif
+    endfor
+  endif
+
+  # Also check global setting as fallback
+  if section.settings.inverted_mode_global == true
+    assign inverted_mode = true
+  endif
 %}
 
 <header
   id='{{ section_id }}'
-  class='header-section fixed w-full z-[100] transition-all duration-300'
+  class='header-section fixed w-full z-[100] transition-all duration-300{% if inverted_mode %} inverted{% endif %}'
   data-header
 >
   <!-- Top bar -->
@@ -311,6 +343,22 @@
     --logo-dark-opacity: 1;
   }
 
+  /* Inverted mode - dark text, no gradient */
+  .header-section.inverted {
+    --header-text-color: #171717;
+    --header-bg: white;
+    --logo-white-opacity: 0;
+    --logo-dark-opacity: 1;
+  }
+
+  /* When inverted mode is active, scrolled state keeps the same styling */
+  .header-section.inverted.scrolled {
+    --header-text-color: #171717;
+    --header-bg: white;
+    --logo-white-opacity: 0;
+    --logo-dark-opacity: 1;
+  }
+
   .header-gradient {
     background: var(--header-bg);
   }
@@ -449,6 +497,28 @@
       "id": "menu",
       "label": "Huvudmeny",
       "info": "Välj vilken meny som ska visas i sidhuvudet"
+    },
+    {
+      "type": "header",
+      "content": "Inverterat läge inställningar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Inverterat läge visar mörk text och vit bakgrund istället för vit text och gradient bakgrund."
+    },
+    {
+      "type": "checkbox",
+      "id": "inverted_mode_global",
+      "label": "Aktivera globalt inverterat läge",
+      "info": "Detta kommer att aktivera inverterat läge på alla sidor",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "inverted_pages",
+      "label": "Specifika sidor för inverterat läge",
+      "info": "Ange sidhandtag eller mallnamn separerade med komma (t.ex: om-oss, kontakt, product, collection). Detta åsidosätter den globala inställningen.",
+      "placeholder": "om-oss, kontakt, support"
     },
     {
       "type": "header",
