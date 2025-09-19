@@ -677,6 +677,10 @@
   gap: 30öx
 }
 
+.gap-\[8px\] {
+  gap: 8px
+}
+
 .gap-x-\[20px\] {
   -moz-column-gap: 20px;
        column-gap: 20px
