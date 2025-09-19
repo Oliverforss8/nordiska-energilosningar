@@ -17,6 +17,8 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "media_type": "image",
+        "background_video": "shopify://files/videos/1C1.mp4",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
@@ -27,6 +29,20 @@
         "primary_button_url": "",
         "secondary_button_text": "",
         "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_wA4xfq": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "image",
+        "video": "shopify://files/videos/jichajiyongsuo.mp4",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
@@ -87,6 +103,7 @@
   "order": [
     "main",
     "banner_bild_TmQytz",
+    "bild_och_text_wA4xfq",
     "faq_produkt",
     "relaterade_produkter"
   ]
