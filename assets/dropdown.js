@@ -1,48 +1,67 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Enhanced dropdown interactions
   const dropdownItems = document.querySelectorAll('.dropdown-item');
+  let globalHoverTimeout;
+  let currentActiveDropdown = null;
 
   dropdownItems.forEach(item => {
     const dropdown = item.querySelector('.mega-dropdown');
     if (!dropdown) return;
 
     const categoryItems = dropdown.querySelectorAll('[data-category-item]');
-    let hoverTimeout;
 
     // Show dropdown on mouse enter
     item.addEventListener('mouseenter', () => {
-      clearTimeout(hoverTimeout);
+      // Clear any existing timeout
+      clearTimeout(globalHoverTimeout);
+
+      // Hide any currently active dropdown immediately
+      if (currentActiveDropdown && currentActiveDropdown !== dropdown) {
+        currentActiveDropdown.style.opacity = '0';
+        currentActiveDropdown.style.visibility = 'hidden';
+
+        // Reset the previous dropdown's categories
+        const prevCategoryItems = currentActiveDropdown.querySelectorAll(
+          '[data-category-item]'
+        );
+        resetToFirstItem(prevCategoryItems);
+      }
+
+      // Show current dropdown
       dropdown.style.opacity = '1';
       dropdown.style.visibility = 'visible';
       document.body.style.overflow = 'hidden'; // Prevent body scroll
+      currentActiveDropdown = dropdown;
     });
 
     // Hide dropdown on mouse leave with delay
     item.addEventListener('mouseleave', () => {
-      hoverTimeout = setTimeout(() => {
+      globalHoverTimeout = setTimeout(() => {
         dropdown.style.opacity = '0';
         dropdown.style.visibility = 'hidden';
         document.body.style.overflow = ''; // Restore body scroll
+        currentActiveDropdown = null;
 
         // Reset to first item highlighted when dropdown closes
         resetToFirstItem(categoryItems);
-      }, 200);
+      }, 150); // Reduced delay for faster transitions
     });
 
     // Keep dropdown open when hovering over it
     dropdown.addEventListener('mouseenter', () => {
-      clearTimeout(hoverTimeout);
+      clearTimeout(globalHoverTimeout);
     });
 
     dropdown.addEventListener('mouseleave', () => {
-      hoverTimeout = setTimeout(() => {
+      globalHoverTimeout = setTimeout(() => {
         dropdown.style.opacity = '0';
         dropdown.style.visibility = 'hidden';
         document.body.style.overflow = ''; // Restore body scroll
+        currentActiveDropdown = null;
 
         // Reset to first item highlighted when dropdown closes
         resetToFirstItem(categoryItems);
-      }, 200);
+      }, 150); // Reduced delay
     });
 
     // Close dropdown when clicking on backdrop
@@ -51,14 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdown.style.opacity = '0';
         dropdown.style.visibility = 'hidden';
         document.body.style.overflow = '';
+        currentActiveDropdown = null;
       }
     });
 
     // Category item hover interactions
     categoryItems.forEach(categoryItem => {
       categoryItem.addEventListener('mouseenter', () => {
-        console.log('Hovering over:', categoryItem.textContent.trim());
-
         // Remove highlight from all items
         categoryItems.forEach(item => {
           item.classList.remove('bg-[#F3F1E8]');
@@ -68,8 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add highlight to hovered item
         categoryItem.classList.remove('bg-white');
         categoryItem.classList.add('bg-[#F3F1E8]');
-
-        console.log('Applied highlight to:', categoryItem.textContent.trim());
       });
     });
 
@@ -85,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ) {
           setTimeout(() => {
             resetToFirstItem(categoryItems);
-          }, 100);
+          }, 50); // Faster reset
         }
       });
     }
@@ -102,6 +118,5 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryItem.classList.add('bg-white');
       }
     });
-    console.log('Reset to first item');
   }
 });
