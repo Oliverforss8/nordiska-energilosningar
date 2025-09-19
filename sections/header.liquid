@@ -56,26 +56,26 @@
       {% if is_foretag_page %}
         <a
           href='{{ routes.root_url }}'
-          class='text-[12px] font-[300] hover:opacity-70 transition-opacity'
+          class='text-[12px] font-[300] text-[#171717] hover:opacity-70 transition-opacity'
         >
           {{ "general.privatperson" | t | default: "Privatperson" }}
         </a>
         <a
           href='/pages/foretag/start'
-          class='text-[16px] font-[400] hover:opacity-70 transition-opacity'
+          class='text-[18px] font-[400] text-[#171717] hover:opacity-70 transition-opacity'
         >
           {{ "general.foretag" | t | default: "Företag" }}
         </a>
       {% else %}
         <a
           href='{{ routes.root_url }}'
-          class='text-[16px] font-[400] hover:opacity-70 transition-opacity'
+          class='text-[18px] font-[400] text-[#171717] hover:opacity-70 transition-opacity'
         >
           {{ "general.privatperson" | t | default: "Privatperson" }}
         </a>
         <a
           href='/pages/foretag/start'
-          class='text-[12px] font-[300] hover:opacity-70 transition-opacity'
+          class='text-[12px] font-[300] text-[#171717] hover:opacity-70 transition-opacity'
         >
           {{ "general.foretag" | t | default: "Företag" }}
         </a>
