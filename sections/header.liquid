@@ -42,18 +42,33 @@
           {% liquid
             assign has_dropdown = false
             assign dropdown_image = blank
+            assign dropdown_image_2 = blank
+            assign button_link_1 = blank
+            assign button_link_2 = blank
 
             if link.links.size > 0
               assign has_dropdown = true
               case forloop.index
                 when 1
                   assign dropdown_image = section.settings.nav_item_1_dropdown_image
+                  assign dropdown_image_2 = section.settings.nav_item_1_dropdown_image_2
+                  assign button_link_1 = section.settings.nav_item_1_button_link_1
+                  assign button_link_2 = section.settings.nav_item_1_button_link_2
                 when 2
                   assign dropdown_image = section.settings.nav_item_2_dropdown_image
+                  assign dropdown_image_2 = section.settings.nav_item_2_dropdown_image_2
+                  assign button_link_1 = section.settings.nav_item_2_button_link_1
+                  assign button_link_2 = section.settings.nav_item_2_button_link_2
                 when 3
                   assign dropdown_image = section.settings.nav_item_3_dropdown_image
+                  assign dropdown_image_2 = section.settings.nav_item_3_dropdown_image_2
+                  assign button_link_1 = section.settings.nav_item_3_button_link_1
+                  assign button_link_2 = section.settings.nav_item_3_button_link_2
                 when 4
                   assign dropdown_image = section.settings.nav_item_4_dropdown_image
+                  assign dropdown_image_2 = section.settings.nav_item_4_dropdown_image_2
+                  assign button_link_1 = section.settings.nav_item_4_button_link_1
+                  assign button_link_2 = section.settings.nav_item_4_button_link_2
               endcase
             endif
           %}
@@ -99,38 +114,116 @@
                     </div>
                   </div>
 
-                  <!-- Right Column - Image -->
-                  <div class='flex relative items-center justify-center'>
-                    {% if dropdown_image != blank %}
-                      <img
-                        src='{{ dropdown_image | image_url: width: 1200 }}'
-                        alt='{{ link.title }}'
-                        width='1920'
-                        height='1080'
-                        class='dropdown-image h-full w-full rounded-[10px]'
-                        loading='lazy'
-                      >
-                      <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
-                        <a
-                          href='{{ section.settings.image_button_link }}'
-                          class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
-                          style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
-                        >
-                          Knapp
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            width='22'
-                            height='18'
-                            viewBox='0 0 22 18'
-                            fill='none'
-                          >
-                            <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </a>
-                      </div>
-                    {% else %}
+                  <!-- Right Column - Image(s) -->
+                  <div class='flex items-center h-full justify-center'>
+                    {% if dropdown_image != blank
+                      or dropdown_image_2 != blank
+                    %}
+                      {% liquid
+                        assign has_two_images = false
+                        if dropdown_image != blank and dropdown_image_2 != blank
+                          assign has_two_images = true
+                        endif
+                      %}
 
+                      {% if has_two_images %}
+                        <!-- Two images side by side -->
+                        <div class='flex flex-row gap-[30px] w-full'>
+                          <div class='flex-1 relative'>
+                            <img
+                              src='{{ dropdown_image | image_url: width: 600 }}'
+                              alt='{{ link.title }}'
+                              width='600'
+                              height='400'
+                              class='dropdown-image h-full w-full rounded-[10px]'
+                              loading='lazy'
+                            >
+                            <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+                              <a
+                                href='{{ button_link_1 }}'
+                                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+                                style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+                              >
+                                Knapp
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  width='22'
+                                  height='18'
+                                  viewBox='0 0 22 18'
+                                  fill='none'
+                                >
+                                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='flex-1 relative'>
+                            <img
+                              src='{{ dropdown_image_2 | image_url: width: 600 }}'
+                              alt='{{ link.title }}'
+                              width='600'
+                              height='400'
+                              class='dropdown-image h-full w-full rounded-[10px]'
+                              loading='lazy'
+                            >
+                            <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+                              <a
+                                href='{{ button_link_2 }}'
+                                class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+                                style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+                              >
+                                Knapp
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  width='22'
+                                  height='18'
+                                  viewBox='0 0 22 18'
+                                  fill='none'
+                                >
+                                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      {% else %}
+                        <!-- Single image -->
+                        <div class='relative h-full flex w-full'>
+                          {% assign single_image = dropdown_image %}
+                          {% if dropdown_image == blank %}
+                            {% assign single_image = dropdown_image_2 %}
+                          {% endif %}
+                          <img
+                            src='{{ single_image | image_url: width: 1200 }}'
+                            alt='{{ link.title }}'
+                            width='1200'
+                            height='800'
+                            class='dropdown-image h-full w-full rounded-[10px]'
+                            loading='lazy'
+                          >
+                          <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+                            <a
+                              href='{{ button_link_1 }}'
+                              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+                              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+                            >
+                              Knapp
+                              <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                width='22'
+                                height='18'
+                                viewBox='0 0 22 18'
+                                fill='none'
+                              >
+                                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      {% endif %}
                     {% endif %}
                   </div>
                 </div>
@@ -376,31 +469,99 @@
     },
     {
       "type": "header",
-      "content": "Mega Dropdown Images"
-    },
-    {
-      "type": "paragraph",
-      "content": "Add images for dropdown menus. Dropdowns automatically appear for menu items that have sub-items configured in Navigation settings."
+      "content": "Första menyobjektets dropdown"
     },
     {
       "type": "image_picker",
       "id": "nav_item_1_dropdown_image",
-      "label": "First nav item dropdown image"
+      "label": "Första bilden"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_1_button_link_1",
+      "label": "Första bildens knapplänk"
+    },
+    {
+      "type": "image_picker",
+      "id": "nav_item_1_dropdown_image_2",
+      "label": "Andra bilden (valfri)"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_1_button_link_2",
+      "label": "Andra bildens knapplänk"
+    },
+    {
+      "type": "header",
+      "content": "Andra menyobjektets dropdown"
     },
     {
       "type": "image_picker",
       "id": "nav_item_2_dropdown_image",
-      "label": "Second nav item dropdown image"
+      "label": "Första bilden"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_2_button_link_1",
+      "label": "Första bildens knapplänk"
+    },
+    {
+      "type": "image_picker",
+      "id": "nav_item_2_dropdown_image_2",
+      "label": "Andra bilden (valfri)"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_2_button_link_2",
+      "label": "Andra bildens knapplänk"
+    },
+    {
+      "type": "header",
+      "content": "Tredje menyobjektets dropdown"
     },
     {
       "type": "image_picker",
       "id": "nav_item_3_dropdown_image",
-      "label": "Third nav item dropdown image"
+      "label": "Första bilden"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_3_button_link_1",
+      "label": "Första bildens knapplänk"
+    },
+    {
+      "type": "image_picker",
+      "id": "nav_item_3_dropdown_image_2",
+      "label": "Andra bilden (valfri)"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_3_button_link_2",
+      "label": "Andra bildens knapplänk"
+    },
+    {
+      "type": "header",
+      "content": "Fjärde menyobjektets dropdown"
     },
     {
       "type": "image_picker",
       "id": "nav_item_4_dropdown_image",
-      "label": "Fourth nav item dropdown image"
+      "label": "Första bilden"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_4_button_link_1",
+      "label": "Första bildens knapplänk"
+    },
+    {
+      "type": "image_picker",
+      "id": "nav_item_4_dropdown_image_2",
+      "label": "Andra bilden (valfri)"
+    },
+    {
+      "type": "url",
+      "id": "nav_item_4_button_link_2",
+      "label": "Andra bildens knapplänk"
     }
   ]
 }
