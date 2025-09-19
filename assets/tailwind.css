@@ -1376,6 +1376,10 @@
     height: 300px
   }
 
+  .sm\:h-\[500px\] {
+    height: 500px
+  }
+
   .sm\:w-\[70\%\] {
     width: 70%
   }
