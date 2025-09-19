@@ -1180,6 +1180,10 @@
   line-height: 1rem
 }
 
+.text-\[12px\] {
+  font-size: 12px
+}
+
 .font-\[300\] {
   font-weight: 300
 }

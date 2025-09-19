@@ -37,6 +37,12 @@
   if section.settings.inverted_mode_global == true
     assign inverted_mode = true
   endif
+
+  # Check if we're on a company/foretag page
+  assign is_foretag_page = false
+  if page.handle contains "foretag" or template.name contains "foretag" or request.page_type contains "foretag"
+    assign is_foretag_page = true
+  endif
 %}
 
 <header
@@ -46,9 +52,34 @@
 >
   <!-- Top bar -->
   <div class='header-topbar bg-[#F3F1E8] px-[50px] w-full py-[15px]'>
-    <div class='flex text text-[#171717] text-[16px] flex-row gap-[15px] px-[50px]'>
-      <div>{{ "general.privatperson" | t | default: "Privatperson" }}</div>
-      <div>{{ "general.foretag" | t | default: "Företag" }}</div>
+    <div class='flex text text-[#171717] flex-row gap-[15px] px-[50px]'>
+      {% if is_foretag_page %}
+        <a
+          href='{{ routes.root_url }}'
+          class='text-[12px] font-[300] hover:opacity-70 transition-opacity'
+        >
+          {{ "general.privatperson" | t | default: "Privatperson" }}
+        </a>
+        <a
+          href='/pages/foretag/start'
+          class='text-[16px] font-[400] hover:opacity-70 transition-opacity'
+        >
+          {{ "general.foretag" | t | default: "Företag" }}
+        </a>
+      {% else %}
+        <a
+          href='{{ routes.root_url }}'
+          class='text-[16px] font-[400] hover:opacity-70 transition-opacity'
+        >
+          {{ "general.privatperson" | t | default: "Privatperson" }}
+        </a>
+        <a
+          href='/pages/foretag/start'
+          class='text-[12px] font-[300] hover:opacity-70 transition-opacity'
+        >
+          {{ "general.foretag" | t | default: "Företag" }}
+        </a>
+      {% endif %}
     </div>
   </div>
 
