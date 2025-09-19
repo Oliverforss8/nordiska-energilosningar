@@ -1,0 +1,244 @@
+<section class='py-[62px] md:py-[87px]'>
+  <div class='layout'>
+    <div class=' gap-[40px] md:gap-[20px] pb-[40px] md:pb-[50px]'>
+      <h3 class='  headline1 text-[#171717] text-[40px]'>
+        {{ section.settings.title | escape }}
+      </h3>
+    </div>
+
+    <div class='grid grid-cols-1 md:grid-cols-3 gap-[20px]'>
+      <!-- Card 1 -->
+      <div class='col-span-1'>
+        {% if section.settings.card_1_image != blank %}
+          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+            <img
+              src='{{ section.settings.card_1_image | image_url: width: 600 }}'
+              alt='{{ section.settings.card_1_image.alt | escape }}'
+              width='600'
+              height='300'
+              class='w-full h-full object-cover absolute inset-0'
+            >
+            {% if section.settings.card_1_overlay_opacity > 0 %}
+              <div
+                class='absolute inset-0 rounded-[15px]'
+                style='background-color: rgba(0, 0, 0, {{ section.settings.card_1_overlay_opacity | divided_by: 100.0 }});'
+              ></div>
+            {% endif %}
+            {% if section.settings.card_1_button_text != blank
+              and section.settings.card_1_button_link != blank
+            %}
+              <a
+                href='{{ section.settings.card_1_button_link }}'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
+              >
+                <button class='bg-[#FFF] text-[15px] md:text-[20px] py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                  {{ section.settings.card_1_button_text | escape }}
+                </button>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Card 2 -->
+      <div class='col-span-1'>
+        {% if section.settings.card_2_image != blank %}
+          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+            <img
+              src='{{ section.settings.card_2_image | image_url: width: 600 }}'
+              alt='{{ section.settings.card_2_image.alt | escape }}'
+              width='600'
+              height='300'
+              class='w-full h-full object-cover absolute inset-0'
+            >
+            {% if section.settings.card_2_overlay_opacity > 0 %}
+              <div
+                class='absolute inset-0 rounded-[15px]'
+                style='background-color: rgba(0, 0, 0, {{ section.settings.card_2_overlay_opacity | divided_by: 100.0 }});'
+              ></div>
+            {% endif %}
+            {% if section.settings.card_2_button_text != blank
+              and section.settings.card_2_button_link != blank
+            %}
+              <a
+                href='{{ section.settings.card_2_button_link }}'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
+              >
+                <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                  {{ section.settings.card_2_button_text | escape }}
+                </button>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Card 3 -->
+      <div class='col-span-1'>
+        {% if section.settings.card_3_image != blank %}
+          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+            <img
+              src='{{ section.settings.card_3_image | image_url: width: 600 }}'
+              alt='{{ section.settings.card_3_image.alt | escape }}'
+              width='600'
+              height='300'
+              class='w-full h-full object-cover absolute inset-0'
+            >
+            {% if section.settings.card_3_overlay_opacity > 0 %}
+              <div
+                class='absolute inset-0 rounded-[15px]'
+                style='background-color: rgba(0, 0, 0, {{ section.settings.card_3_overlay_opacity | divided_by: 100.0 }});'
+              ></div>
+            {% endif %}
+            {% if section.settings.card_3_button_text != blank
+              and section.settings.card_3_button_link != blank
+            %}
+              <a
+                href='{{ section.settings.card_3_button_link }}'
+                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
+              >
+                <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                  {{ section.settings.card_3_button_text | escape }}
+                </button>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    {% if section.settings.bottom_description != blank %}
+      <p class='pt-[40px] md:pt-[50px] text leading-[110%] text-[16px] text-[#171717]'>
+        {{ section.settings.bottom_description | escape }}
+      </p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tre kolumner grid",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Rubrik",
+      "default": "Effektiva energilösningar för framtidens fastigheter"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Beskrivning",
+      "default": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning."
+    },
+    {
+      "type": "header",
+      "content": "Kort 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_image",
+      "label": "Kort 1 bild"
+    },
+    {
+      "type": "text",
+      "id": "card_1_button_text",
+      "label": "Kort 1 knapptext",
+      "default": "Läs mer"
+    },
+    {
+      "type": "url",
+      "id": "card_1_button_link",
+      "label": "Kort 1 knapplänk"
+    },
+    {
+      "type": "range",
+      "id": "card_1_overlay_opacity",
+      "label": "Kort 1 overlay opacitet",
+      "info": "Lägg till en mörk overlay över bilden för bättre läsbarhet",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Kort 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "Kort 2 bild"
+    },
+    {
+      "type": "text",
+      "id": "card_2_button_text",
+      "label": "Kort 2 knapptext",
+      "default": "Utforska"
+    },
+    {
+      "type": "url",
+      "id": "card_2_button_link",
+      "label": "Kort 2 knapplänk"
+    },
+    {
+      "type": "range",
+      "id": "card_2_overlay_opacity",
+      "label": "Kort 2 overlay opacitet",
+      "info": "Lägg till en mörk overlay över bilden för bättre läsbarhet",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Kort 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_3_image",
+      "label": "Kort 3 bild"
+    },
+    {
+      "type": "text",
+      "id": "card_3_button_text",
+      "label": "Kort 3 knapptext",
+      "default": "Upptäck"
+    },
+    {
+      "type": "url",
+      "id": "card_3_button_link",
+      "label": "Kort 3 knapplänk"
+    },
+    {
+      "type": "range",
+      "id": "card_3_overlay_opacity",
+      "label": "Kort 3 overlay opacitet",
+      "info": "Lägg till en mörk overlay över bilden för bättre läsbarhet",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Botten beskrivning"
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_description",
+      "label": "Botten beskrivning",
+      "default": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tre kolumner grid"
+    }
+  ]
+}
+{% endschema %}
