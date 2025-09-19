@@ -1860,6 +1860,10 @@
 }
 
 @media (min-width: 1280px) {
+  .xl\:block {
+    display: block
+  }
+
   .xl\:grid {
     display: grid
   }
