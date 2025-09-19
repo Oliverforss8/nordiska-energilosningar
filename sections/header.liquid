@@ -4,6 +4,11 @@
   # Check for page-specific inverted mode
   assign inverted_mode = false
 
+  # Default inverted mode for collection and product pages
+  if template.name == "collection" or template.name == "product"
+    assign inverted_mode = true
+  endif
+
   # Define which pages should use inverted mode
   assign inverted_pages = section.settings.inverted_pages | split: ","
 
@@ -17,8 +22,8 @@
         break
       endif
     endfor
-  elsif template.name != "page"
-    # Check if current template is in the inverted pages list
+  elsif template.name != "page" and template.name != "collection" and template.name != "product"
+    # Check if current template is in the inverted pages list (excluding collection/product which are already inverted)
     for inverted_page in inverted_pages
       assign clean_page = inverted_page | strip
       if template.name == clean_page
@@ -504,7 +509,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Inverterat läge visar mörk text och vit bakgrund istället för vit text och gradient bakgrund."
+      "content": "Inverterat läge visar mörk text och vit bakgrund istället för vit text och gradient bakgrund. Produkt- och kollektionssidor använder inverterat läge som standard."
     },
     {
       "type": "checkbox",
