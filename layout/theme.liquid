@@ -14,10 +14,6 @@
     {{ "tailwind.css" | asset_url | stylesheet_tag }}
 
     {% # Load Lenis smooth scrolling %}
-    <script
-      src='https://unpkg.com/@studio-freight/lenis@1.0.19/dist/lenis.min.js'
-      defer
-    ></script>
 
     {% # Social, title, etc. %}
     {% render "meta-tags" %}
@@ -45,14 +41,13 @@
     {% sections "footer-group" %}
 
     {% # Initialize Lenis smooth scroll %}
-    <script src='{{ 'lenis-scroll.js' | asset_url }}' defer></script>
 
     {% # Load dropdown functionality %}
     <script src='{{ 'dropdown.js' | asset_url }}' defer></script>
-    
+
     {% # Load product quantity selector functionality %}
     <script src='{{ 'product-quantity.js' | asset_url }}' defer></script>
-    
+
     {% # Load quote form functionality %}
     <script src='{{ 'quote-form.js' | asset_url }}' defer></script>
   </body>

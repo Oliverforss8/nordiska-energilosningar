@@ -4,26 +4,12 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  overscroll-behavior: none;
 }
 
 /* Smooth scroll setup for Lenis */
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
 /* Enhanced smoothness optimizations */
-
-body {
-  /* Remove any default scroll behavior that might interfere */
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
-}
 
 /* Smooth transitions for all potentially animated elements */
 img,
@@ -188,4 +174,5 @@ p {
 
 .shadow-bg {
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
 }

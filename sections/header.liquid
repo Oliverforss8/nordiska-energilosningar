@@ -334,6 +334,9 @@
 <!-- Load Dropdown JavaScript -->
 <script src='{{ 'dropdown.js' | asset_url }}' defer></script>
 
+<!-- Load Header Scroll JavaScript -->
+<script src='{{ 'header-scroll.js' | asset_url }}' defer></script>
+
 {% stylesheet %}
   .header-section {
     --header-text-color: white;
@@ -347,6 +350,37 @@
     --header-bg: white;
     --logo-white-opacity: 0;
     --logo-dark-opacity: 1;
+  }
+
+  /* Ensure white background appears on scroll */
+  .header-section.scrolled .header-gradient {
+    background: white !important;
+  }
+
+  /* Scrolled state gets same cart button styling as inverted mode */
+  .header-section.scrolled .cart-btn {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      ),
+      #ebcf2f;
+    color: #171717;
+  }
+
+  .header-section.scrolled .cart-btn svg path {
+    stroke: #171717;
+  }
+
+  .header-section.scrolled .cart-btn:hover {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      ),
+      #ebcf2f;
   }
 
   /* Inverted mode - dark text, no gradient */
@@ -482,41 +516,10 @@
   }
 {% endstylesheet %}
 
-{% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('[data-header]');
-    let lastScrollY = window.scrollY;
-
-    function handleScroll() {
-      const currentScrollY = window.scrollY;
-
-      // Add scrolled class when user scrolls down
-      if (currentScrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-
-      lastScrollY = currentScrollY;
-    }
-
-    // Throttle scroll events for performance
-    let ticking = false;
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(handleScroll);
-        ticking = true;
-        setTimeout(() => {
-          ticking = false;
-        }, 10);
-      }
-    }
-
-    window.addEventListener('scroll', requestTick);
-
-    // Dropdown interactions are handled in dropdown.js
-  });
-{% endjavascript %}
+{% comment %}
+  Header scroll functionality is handled in header-scroll.js
+  Dropdown interactions are handled in dropdown.js
+{% endcomment %}
 
 {% schema %}
 {
