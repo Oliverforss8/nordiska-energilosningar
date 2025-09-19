@@ -7,7 +7,9 @@
   class='min-h-screen relative overflow-visible flex-col w-full h-full flex'
 >
   <div class='relative flex w-full min-h-screen h-full overflow-hidden'>
-    {% if section.settings.media_type == "video" and section.settings.background_video != blank %}
+    {% if section.settings.media_type == "video"
+      and section.settings.background_video != blank
+    %}
       <!-- Background Video -->
       <video
         class='w-full h-full object-cover object-top absolute inset-0'
@@ -25,7 +27,9 @@
           type='video/webm'
         >
       </video>
-    {% elsif section.settings.media_type == "image" and section.settings.background_image != blank %}
+    {% elsif section.settings.media_type == "image"
+      and section.settings.background_image != blank
+    %}
       <!-- Background Image -->
       {% render "image",
         image: section.settings.background_image,
