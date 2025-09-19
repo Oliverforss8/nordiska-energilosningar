@@ -19,7 +19,7 @@
   <div class='header-main py-[15px] w-full header-gradient'>
     <div class='layout w-full flex flex-row justify-between items-center'>
       <!-- Logo -->
-      <a href='/' class='header-logo'>
+      <a href='{{ routes.root_url }}' class='header-logo'>
         <img
           src='{{ 'logga-vit.svg' | asset_url }}'
           alt='{{ shop.name }}'
@@ -40,110 +40,81 @@
       <nav class='header-nav flex text-white flex-row gap-[50px]'>
         {% for link in section.settings.menu.links %}
           {% liquid
-            case forloop.index
-              when 1
-                assign has_dropdown = section.settings.nav_item_1_dropdown
-                assign dropdown_link_1_title = section.settings.nav_item_1_dropdown_link_1_title
-                assign dropdown_link_1_url = section.settings.nav_item_1_dropdown_link_1_url
-                assign dropdown_link_2_title = section.settings.nav_item_1_dropdown_link_2_title
-                assign dropdown_link_2_url = section.settings.nav_item_1_dropdown_link_2_url
-                assign dropdown_link_3_title = ""
-                assign dropdown_link_3_url = ""
-                assign dropdown_link_4_title = ""
-                assign dropdown_link_4_url = ""
-              when 2
-                assign has_dropdown = section.settings.nav_item_2_dropdown
-                assign dropdown_link_1_title = section.settings.nav_item_2_dropdown_link_1_title
-                assign dropdown_link_1_url = section.settings.nav_item_2_dropdown_link_1_url
-                assign dropdown_link_2_title = section.settings.nav_item_2_dropdown_link_2_title
-                assign dropdown_link_2_url = section.settings.nav_item_2_dropdown_link_2_url
-                assign dropdown_link_3_title = ""
-                assign dropdown_link_3_url = ""
-                assign dropdown_link_4_title = ""
-                assign dropdown_link_4_url = ""
-              when 3
-                assign has_dropdown = section.settings.nav_item_3_dropdown
-                assign dropdown_link_1_title = section.settings.nav_item_3_dropdown_link_1_title
-                assign dropdown_link_1_url = section.settings.nav_item_3_dropdown_link_1_url
-                assign dropdown_link_2_title = section.settings.nav_item_3_dropdown_link_2_title
-                assign dropdown_link_2_url = section.settings.nav_item_3_dropdown_link_2_url
-                assign dropdown_link_3_title = section.settings.nav_item_3_dropdown_link_3_title
-                assign dropdown_link_3_url = section.settings.nav_item_3_dropdown_link_3_url
-                assign dropdown_link_4_title = section.settings.nav_item_3_dropdown_link_4_title
-                assign dropdown_link_4_url = section.settings.nav_item_3_dropdown_link_4_url
-              when 4
-                assign has_dropdown = section.settings.nav_item_4_dropdown
-                assign dropdown_link_1_title = section.settings.nav_item_4_dropdown_link_1_title
-                assign dropdown_link_1_url = section.settings.nav_item_4_dropdown_link_1_url
-                assign dropdown_link_2_title = section.settings.nav_item_4_dropdown_link_2_title
-                assign dropdown_link_2_url = section.settings.nav_item_4_dropdown_link_2_url
-                assign dropdown_link_3_title = ""
-                assign dropdown_link_3_url = ""
-                assign dropdown_link_4_title = ""
-                assign dropdown_link_4_url = ""
-              else
-                assign has_dropdown = false
-            endcase
+            assign has_dropdown = false
+            assign dropdown_image = blank
+
+            if link.links.size > 0
+              assign has_dropdown = true
+              case forloop.index
+                when 1
+                  assign dropdown_image = section.settings.nav_item_1_dropdown_image
+                when 2
+                  assign dropdown_image = section.settings.nav_item_2_dropdown_image
+                when 3
+                  assign dropdown_image = section.settings.nav_item_3_dropdown_image
+                when 4
+                  assign dropdown_image = section.settings.nav_item_4_dropdown_image
+              endcase
+            endif
           %}
 
           {% if has_dropdown %}
-            <div class='nav-item dropdown-item relative'>
-              <button
-                class='bg-transparent nav-link header-text flex flex-row gap-[10px] items-center hover:opacity-80 transition-opacity'
-                data-dropdown-toggle
+            <div class='nav-item  dropdown-item relative'>
+              <a
+                href='{{ link.url }}'
+                class='nav-link header-text hover:opacity-80 transition-opacity'
               >
                 {{ link.title }}
-                <img
-                  src='{{ 'dropdown.svg' | asset_url }}'
-                  alt='Dropdown'
-                  width='8'
-                  height='14'
-                  class='dropdown-icon w-[8px] h-[14px] transition-transform duration-200'
-                >
-              </button>
+              </a>
 
-              <!-- Dropdown menu -->
-              <div class='dropdown-menu absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg py-2 text min-w-[200px] opacity-0 invisible transform translate-y-2 transition-all duration-200'>
-                {% if dropdown_link_1_title != blank
-                  and dropdown_link_1_url != blank
-                %}
-                  <a
-                    href='{{ dropdown_link_1_url }}'
-                    class='dropdown-link  block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
-                  >
-                    {{ dropdown_link_1_title }}
-                  </a>
-                {% endif %}
-                {% if dropdown_link_2_title != blank
-                  and dropdown_link_2_url != blank
-                %}
-                  <a
-                    href='{{ dropdown_link_2_url }}'
-                    class='dropdown-link block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
-                  >
-                    {{ dropdown_link_2_title }}
-                  </a>
-                {% endif %}
-                {% if dropdown_link_3_title != blank
-                  and dropdown_link_3_url != blank
-                %}
-                  <a
-                    href='{{ dropdown_link_3_url }}'
-                    class='dropdown-link block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
-                  >
-                    {{ dropdown_link_3_title }}
-                  </a>
-                {% endif %}
-                {% if dropdown_link_4_title != blank
-                  and dropdown_link_4_url != blank
-                %}
-                  <a
-                    href='{{ dropdown_link_4_url }}'
-                    class='dropdown-link block px-4 py-2 text-[#171717] hover:bg-gray-100 transition-colors'
-                  >
-                    {{ dropdown_link_4_title }}
-                  </a>
-                {% endif %}
+              <!-- Custom Dropdown -->
+              <div class='mega-dropdown fixed top-[120px] right-0 left-0 w-screen opacity-0 invisible transition-all duration-300 z-50 layout mx-auto'>
+                <div class='py-[40px] px-[50px] rounded-[15px] grid gap-[30px] grid-cols-2 bg-white w-full '>
+                  <!-- Left Column - Categories -->
+                  <div class='flex flex-col'>
+                    <div class='headline1 text-[50px] text-[#171717] pb-[40px]'>
+                      {{ link.title }}
+                    </div>
+                    <div class='flex flex-col gap-[10px]'>
+                      {% for child_link in link.links %}
+                        <a
+                          href='{{ child_link.url }}'
+                          class='dropdown-category flex flex-row p-[18px] rounded-[15px] justify-between text-[24px] headline1 bg-[#F3F1E8] hover:bg-[#e8e6dd] transition-colors text-[#171717] w-full'
+                        >
+                          {{ child_link.title }}
+                          <div>
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              width='23'
+                              height='18'
+                              viewBox='0 0 23 18'
+                              fill='none'
+                            >
+                              <path d="M1.55554 9H22L14 1" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.55554 8.99994H22L14 16.9999" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </div>
+                        </a>
+                      {% endfor %}
+                    </div>
+                  </div>
+
+                  <!-- Right Column - Image -->
+                  <div class='flex items-center justify-center'>
+                    {% if dropdown_image != blank %}
+                      <img
+                        src='{{ dropdown_image | image_url: width: 1200 }}'
+                        alt='{{ link.title }}'
+                        width='1920'
+                        height='1080'
+                        class='dropdown-image h-full w-full rounded-[10px]'
+                        loading='lazy'
+                      >
+                    {% else %}
+
+                    {% endif %}
+                  </div>
+                </div>
               </div>
             </div>
           {% else %}
@@ -229,29 +200,23 @@
     position: relative;
   }
 
-  /* Dropdown styles */
-  .dropdown-item:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .dropdown-item:hover .dropdown-icon {
-    transform: rotate(180deg);
-  }
-
-  .dropdown-menu {
-    z-index: 1000;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  }
-
-  .dropdown-link:hover {
-    background-color: #f3f4f6;
-  }
-
   .cart-count.show {
     opacity: 1;
     scale: 1;
+  }
+
+  /* Mega Dropdown Styles */
+  .dropdown-item:hover .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-category:hover {
+    /* Remove transform on hover */
+  }
+
+  .dropdown-image {
+    transition: transform 0.3s ease;
   }
 
   /* Mobile responsive */
@@ -285,6 +250,10 @@
     .cart-btn {
       padding: 15px;
       gap: 15px;
+    }
+
+    .mega-dropdown {
+      display: none;
     }
   }
 {% endstylesheet %}
@@ -321,25 +290,49 @@
 
     window.addEventListener('scroll', requestTick);
 
-    // Handle dropdown interactions
+    // Enhanced dropdown interactions
     const dropdownItems = document.querySelectorAll('.dropdown-item');
 
     dropdownItems.forEach((item) => {
-      const button = item.querySelector('[data-dropdown-toggle]');
-      const menu = item.querySelector('.dropdown-menu');
+      const dropdown = item.querySelector('.mega-dropdown');
+      let hoverTimeout;
 
-      // Handle keyboard navigation
-      button.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          item.classList.toggle('active');
-        }
+      // Show dropdown on mouse enter
+      item.addEventListener('mouseenter', () => {
+        clearTimeout(hoverTimeout);
+        dropdown.style.opacity = '1';
+        dropdown.style.visibility = 'visible';
+        document.body.style.overflow = 'hidden'; // Prevent body scroll
       });
 
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function (e) {
-        if (!item.contains(e.target)) {
-          item.classList.remove('active');
+      // Hide dropdown on mouse leave with delay
+      item.addEventListener('mouseleave', () => {
+        hoverTimeout = setTimeout(() => {
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          document.body.style.overflow = ''; // Restore body scroll
+        }, 200);
+      });
+
+      // Keep dropdown open when hovering over it
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(hoverTimeout);
+      });
+
+      dropdown.addEventListener('mouseleave', () => {
+        hoverTimeout = setTimeout(() => {
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          document.body.style.overflow = ''; // Restore body scroll
+        }, 200);
+      });
+
+      // Close dropdown when clicking on backdrop
+      dropdown.addEventListener('click', (e) => {
+        if (e.target === dropdown) {
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+          document.body.style.overflow = '';
         }
       });
     });
@@ -364,161 +357,31 @@
     },
     {
       "type": "header",
-      "content": "sections.header.settings.dropdown_config.header"
+      "content": "Mega Dropdown Images"
     },
     {
       "type": "paragraph",
-      "content": "sections.header.settings.dropdown_config.info"
+      "content": "Add images for dropdown menus. Dropdowns automatically appear for menu items that have sub-items configured in Navigation settings."
     },
     {
-      "type": "checkbox",
-      "id": "nav_item_1_dropdown",
-      "label": "sections.header.settings.nav_item_1_dropdown.label",
-      "default": false
+      "type": "image_picker",
+      "id": "nav_item_1_dropdown_image",
+      "label": "First nav item dropdown image"
     },
     {
-      "type": "text",
-      "id": "nav_item_1_dropdown_link_1_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
+      "type": "image_picker",
+      "id": "nav_item_2_dropdown_image",
+      "label": "Second nav item dropdown image"
     },
     {
-      "type": "url",
-      "id": "nav_item_1_dropdown_link_1_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
+      "type": "image_picker",
+      "id": "nav_item_3_dropdown_image",
+      "label": "Third nav item dropdown image"
     },
     {
-      "type": "text",
-      "id": "nav_item_1_dropdown_link_2_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_1_dropdown_link_2_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_1_dropdown }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "nav_item_2_dropdown",
-      "label": "sections.header.settings.nav_item_2_dropdown.label",
-      "default": false
-    },
-    {
-      "type": "text",
-      "id": "nav_item_2_dropdown_link_1_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_2_dropdown_link_1_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
-    },
-    {
-      "type": "text",
-      "id": "nav_item_2_dropdown_link_2_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_2_dropdown_link_2_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_2_dropdown }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "nav_item_3_dropdown",
-      "label": "sections.header.settings.nav_item_3_dropdown.label",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "nav_item_3_dropdown_link_1_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "default": "Solceller",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_3_dropdown_link_1_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "text",
-      "id": "nav_item_3_dropdown_link_2_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "default": "Batterilösningar",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_3_dropdown_link_2_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "text",
-      "id": "nav_item_3_dropdown_link_3_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "default": "Värmepumpar",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_3_dropdown_link_3_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "text",
-      "id": "nav_item_3_dropdown_link_4_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "default": "Laddboxar",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_3_dropdown_link_4_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_3_dropdown }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "nav_item_4_dropdown",
-      "label": "sections.header.settings.nav_item_4_dropdown.label",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "nav_item_4_dropdown_link_1_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "default": "FAQ",
-      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_4_dropdown_link_1_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
-    },
-    {
-      "type": "text",
-      "id": "nav_item_4_dropdown_link_2_title",
-      "label": "sections.header.settings.dropdown_link_title",
-      "default": "Kontakt",
-      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
-    },
-    {
-      "type": "url",
-      "id": "nav_item_4_dropdown_link_2_url",
-      "label": "sections.header.settings.dropdown_link_url",
-      "visible_if": "{{ section.settings.nav_item_4_dropdown }}"
+      "type": "image_picker",
+      "id": "nav_item_4_dropdown_image",
+      "label": "Fourth nav item dropdown image"
     }
   ]
 }
