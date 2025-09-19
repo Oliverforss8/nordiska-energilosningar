@@ -1059,6 +1059,11 @@
   padding-bottom: 8px
 }
 
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px
+}
+
 .pb-2 {
   padding-bottom: 0.5rem
 }
@@ -1730,6 +1735,11 @@
     padding-bottom: 87px
   }
 
+  .md\:py-\[85px\] {
+    padding-top: 85px;
+    padding-bottom: 85px
+  }
+
   .md\:pb-\[120px\] {
     padding-bottom: 120px
   }
@@ -1760,6 +1770,10 @@
 
   .md\:pt-\[60px\] {
     padding-top: 60px
+  }
+
+  .md\:pb-\[85px\] {
+    padding-bottom: 85px
   }
 
   .md\:text-left {
