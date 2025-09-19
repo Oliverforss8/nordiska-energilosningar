@@ -8,6 +8,22 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "hero_fRPaYi": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
+        "overlay_opacity": 20,
+        "heading": "Välkommen till vår webbplats",
+        "subheading": "Upptäck fantastiska produkter och tjänster",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
+      }
+    }
+  },
+  "order": [
+    "hero_fRPaYi"
+  ]
 }
