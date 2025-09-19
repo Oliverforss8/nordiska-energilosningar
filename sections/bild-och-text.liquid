@@ -21,7 +21,56 @@
     </div>
 
     <div class='relative w-full md:w-[2500px]  lg:shrink-0 h-[350px] md:h-[450px] lg:w-[450px]'>
-      {% if section.settings.image != blank %}
+      {% if section.settings.media_type == "video"
+        and section.settings.video != blank
+      %}
+        <!-- Video -->
+        <video
+          class='w-full h-full object-cover rounded-[15px]'
+          width='450'
+          height='450'
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source
+            src='{{ section.settings.video.sources[1].url }}'
+            type='video/mp4'
+          >
+          <source
+            src='{{ section.settings.video.sources[0].url }}'
+            type='video/webm'
+          >
+        </video>
+
+        {% if section.settings.image_button_text != blank
+          and section.settings.image_button_link != blank
+        %}
+          <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+            <a
+              href='{{ section.settings.image_button_link }}'
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
+              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+            >
+              {{ section.settings.image_button_text }}
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='22'
+                height='18'
+                viewBox='0 0 22 18'
+                fill='none'
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        {% endif %}
+      {% elsif section.settings.media_type == "image"
+        and section.settings.image != blank
+      %}
+        <!-- Image -->
         <img
           src='{{ section.settings.image | image_url: width: 450 }}'
           alt='{{ section.settings.image.alt | default: section.settings.title }}'
@@ -37,7 +86,7 @@
           <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
             <a
               href='{{ section.settings.image_button_link }}'
-              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0 inline-block'
+              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
               style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
             >
               {{ section.settings.image_button_text }}
@@ -56,7 +105,11 @@
         {% endif %}
       {% else %}
         <div class='w-full h-full bg-gray-200 rounded-[10px] flex items-center justify-center text-gray-500'>
-          Välj en bild
+          {% if section.settings.media_type == "video" %}
+            Välj en video
+          {% else %}
+            Välj en bild
+          {% endif %}
         </div>
       {% endif %}
     </div>
@@ -82,14 +135,35 @@
       "default": "<p>Text</p>"
     },
     {
+      "type": "select",
+      "id": "media_type",
+      "label": "Mediatyp",
+      "options": [
+        {
+          "value": "image",
+          "label": "Bild"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "Bild"
     },
     {
+      "type": "video",
+      "id": "video",
+      "label": "Video (autoplay, muted, loop)"
+    },
+    {
       "type": "select",
       "id": "image_position",
-      "label": "Bildposition",
+      "label": "Mediaposition",
       "options": [
         {
           "value": "right",
@@ -105,12 +179,12 @@
     {
       "type": "text",
       "id": "image_button_text",
-      "label": "Bild knapp text"
+      "label": "Knapptext"
     },
     {
       "type": "url",
       "id": "image_button_link",
-      "label": "Bild knapp länk"
+      "label": "Knapplänk"
     },
     {
       "type": "text",
