@@ -398,6 +398,32 @@
     scale: 1;
   }
 
+  /* Cart button styling for inverted mode */
+  .header-section.inverted .cart-btn {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      ),
+      #ebcf2f;
+    color: #171717;
+  }
+
+  .header-section.inverted .cart-btn svg path {
+    stroke: #171717;
+  }
+
+  .header-section.inverted .cart-btn:hover {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      ),
+      #ebcf2f;
+  }
+
   /* Mega Dropdown Styles */
   .dropdown-item:hover .mega-dropdown {
     opacity: 1;
