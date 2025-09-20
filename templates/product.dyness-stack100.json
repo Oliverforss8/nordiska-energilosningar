@@ -13,6 +13,25 @@
       "type": "product",
       "settings": {}
     },
+    "banner_bild_gnz8mP": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "video",
+        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "tekniska_specifikationer_AdpmjP": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -97,25 +116,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_gnz8mP": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "media_type": "video",
-        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "Primär knapp",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "banner_bild_89kigT": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -191,8 +191,8 @@
   },
   "order": [
     "main",
-    "tekniska_specifikationer_AdpmjP",
     "banner_bild_gnz8mP",
+    "tekniska_specifikationer_AdpmjP",
     "banner_bild_89kigT",
     "faq_produkt",
     "relaterade_produkter"
