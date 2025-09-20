@@ -13,12 +13,57 @@
       "type": "product",
       "settings": {}
     },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
+    "tekniska_specifikationer_AdpmjP": {
+      "type": "tekniska-specifikationer",
+      "name": "Tekniska specifikationer",
       "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
+        "title": "Tekniska specifikationer",
+        "image_1": "shopify://shop_images/1-444.png",
+        "image_2": "shopify://shop_images/2-707.png",
+        "image_3": "shopify://shop_images/3-125.png",
+        "product_name": "Produktnamn",
+        "stack_info": "Stack",
+        "description": "Produktbeskrivning här...",
+        "button_text": "",
+        "button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_gnz8mP": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "video",
+        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_89kigT": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "video",
+        "background_video": "shopify://files/videos/miehuodiaohei.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Snabbt. Säkert. Självklart.",
+        "description": "Varje modul är utrustad med en avancerad aerosolsbrandsläckare som reagerar blixtsnabbt vid hög temperatur. Inom 5 sekunder aktiveras skyddet, minimerar brandrisker och skapar en säker miljö.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -65,10 +110,22 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
+    "tekniska_specifikationer_AdpmjP",
+    "banner_bild_gnz8mP",
+    "banner_bild_89kigT",
     "faq_produkt",
     "relaterade_produkter"
   ]
