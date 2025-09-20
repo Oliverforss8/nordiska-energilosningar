@@ -22,10 +22,66 @@
             "label": "Lagringkapacitet",
             "value": "15.36 - 76.8 kWh"
           }
+        },
+        "specification_GpzCVJ": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh"
+          }
+        },
+        "specification_pQFPk4": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh"
+          }
+        },
+        "specification_H6YUdb": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        },
+        "specification_zX3MCJ": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh"
+          }
+        },
+        "specification_JFJ6Jn": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh"
+          }
+        },
+        "specification_cKwGad": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh"
+          }
+        },
+        "specification_k6xA9k": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh"
+          }
         }
       },
       "block_order": [
-        "specification_ARPRA4"
+        "specification_ARPRA4",
+        "specification_GpzCVJ",
+        "specification_pQFPk4",
+        "specification_H6YUdb",
+        "specification_zX3MCJ",
+        "specification_JFJ6Jn",
+        "specification_cKwGad",
+        "specification_k6xA9k"
       ],
       "name": "Tekniska specifikationer",
       "settings": {
