@@ -66,8 +66,8 @@
         "specification_zX3MCJ": {
           "type": "specification",
           "settings": {
-            "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh"
+            "label": "C-värde",
+            "value": "1 C"
           }
         },
         "specification_JFJ6Jn": {
