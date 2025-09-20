@@ -54,8 +54,8 @@
         "specification_JFJ6Jn": {
           "type": "specification",
           "settings": {
-            "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh"
+            "label": "Driftstemperatur",
+            "value": "- 10 – + 55 °C"
           }
         },
         "specification_cKwGad": {
