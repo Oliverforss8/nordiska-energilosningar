@@ -15,6 +15,18 @@
     },
     "tekniska_specifikationer_AdpmjP": {
       "type": "tekniska-specifikationer",
+      "blocks": {
+        "specification_ARPRA4": {
+          "type": "specification",
+          "settings": {
+            "label": "Produkt",
+            "value": "Dyness STACK100"
+          }
+        }
+      },
+      "block_order": [
+        "specification_ARPRA4"
+      ],
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
