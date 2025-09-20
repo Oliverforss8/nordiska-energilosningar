@@ -33,8 +33,8 @@
         "specification_pQFPk4": {
           "type": "specification",
           "settings": {
-            "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh"
+            "label": "Antal laddcykler",
+            "value": "≥8000 cycles"
           }
         },
         "specification_H6YUdb": {
@@ -68,8 +68,8 @@
         "specification_k6xA9k": {
           "type": "specification",
           "settings": {
-            "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh"
+            "label": "IP-klass",
+            "value": "IP20"
           }
         }
       },
