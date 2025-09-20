@@ -80,8 +80,8 @@
         "specification_cKwGad": {
           "type": "specification",
           "settings": {
-            "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh"
+            "label": "Kompatibel med växelriktare",
+            "value": "Solis, Solinteg"
           }
         },
         "specification_k6xA9k": {
