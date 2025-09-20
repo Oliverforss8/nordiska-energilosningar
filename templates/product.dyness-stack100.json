@@ -13,6 +13,19 @@
       "type": "product",
       "settings": {}
     },
+    "bild_och_text_knappar_LkcadR": {
+      "type": "bild-och-text-knappar",
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "banner_bild_gnz8mP": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -111,7 +124,7 @@
         "product_name": "Produktnamn",
         "stack_info": "Stack",
         "description": "Produktbeskrivning här...",
-        "button_text": "",
+        "button_text": "Produktdatablad",
         "button_link": "",
         "custom_id": ""
       }
@@ -191,6 +204,7 @@
   },
   "order": [
     "main",
+    "bild_och_text_knappar_LkcadR",
     "banner_bild_gnz8mP",
     "tekniska_specifikationer_AdpmjP",
     "banner_bild_89kigT",
