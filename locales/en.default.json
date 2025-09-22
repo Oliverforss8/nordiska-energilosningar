@@ -20,7 +20,10 @@
     "comment_form_email": "Email",
     "comment_form_name": "Name",
     "comment_form_submit": "Post",
-    "comment_form_title": "Add a comment"
+    "comment_form_title": "Add a comment",
+    "read_more": "Read more",
+    "no_articles": "No articles found",
+    "no_articles_description": "Check back later for new content."
   },
   "cart": {
     "checkout": "Checkout",
@@ -288,6 +291,19 @@
       "padding": {
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding"
+      },
+      "custom_id": {
+        "label": "Custom ID",
+        "info": "Use a custom ID for this section"
+      }
+    },
+    "blog": {
+      "name": "Blog",
+      "settings": {
+        "articles_per_page": {
+          "label": "Articles per page",
+          "info": "Number of articles to display per page"
+        }
       }
     }
   }
