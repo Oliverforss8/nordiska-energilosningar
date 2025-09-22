@@ -10,10 +10,17 @@
   '
 >
   <div>
-    <div class='col-span-1 bg-[#F3F1E8] p-[30px] rounded-[15px]'>
-      <h3 class='text-lg font-semibold mb-4'>
-        {{ "articles.table_of_contents" | t }}
-      </h3>
+    <div class='col-span-1 sticky top-[150px] bg-[#F3F1E8] p-[30px] rounded-[15px]'>
+      <h3 class='headline1 text-[30px] pb-[30px]'>Innehåll</h3>
+      <div class='mb-4'>
+        <div class='relative w-full h-[5px] bg-white rounded-full overflow-hidden'>
+          <div
+            class='progress-bar absolute top-0 left-0 h-full bg-[#EFD959] rounded-full transition-all duration-300 ease-out'
+            style='width: 0%'
+          ></div>
+        </div>
+        <div class='progress-text text-sm mt-2 text-gray-600'>0% komplett</div>
+      </div>
       <nav class='space-y-2'>
         {% comment %} Extract headings from article content {% endcomment %}
         {% assign content_lines = article.content | split: "<" %}
@@ -219,6 +226,38 @@
   .section-article .rte p:has(> img) {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  /* Table of contents active link styling */
+  .section-article nav a {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    border-radius: 4px;
+  }
+
+  .section-article nav a.active {
+    color: #efd959 !important;
+    font-weight: 600;
+    transform: translateX(5px);
+    background-color: rgba(239, 217, 89, 0.1);
+  }
+
+  .section-article nav a.active::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background-color: #efd959;
+    border-radius: 2px;
+  }
+
+  /* Progress bar animation */
+  .progress-bar {
+    transition: width 0.3s ease-out;
   }
 {% endstylesheet %}
 

@@ -142,3 +142,95 @@ if (window.MutationObserver) {
     subtree: true,
   });
 }
+
+// Progress tracking and active link highlighting
+function updateProgress() {
+  const articleContent = document.getElementById('article-content');
+  if (!articleContent) return;
+
+  const headings = articleContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  if (headings.length === 0) return;
+
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight - windowHeight;
+
+  // Calculate progress percentage
+  const progress = Math.min((scrollTop / documentHeight) * 100, 100);
+
+  // Update progress bar
+  const progressBar = document.querySelector('.progress-bar');
+  if (progressBar) {
+    progressBar.style.width = progress + '%';
+  }
+
+  // Update progress text
+  const progressText = document.querySelector('.progress-text');
+  if (progressText) {
+    progressText.textContent = Math.round(progress) + '% komplett';
+  }
+
+  // Find current active heading
+  let currentHeading = null;
+  let currentDistance = Infinity;
+
+  headings.forEach(function (heading) {
+    const rect = heading.getBoundingClientRect();
+    const distance = Math.abs(rect.top - 200); // 200px offset from top
+
+    if (rect.top <= 200 && distance < currentDistance) {
+      currentHeading = heading;
+      currentDistance = distance;
+    }
+  });
+
+  // Update active link
+  const tocLinks = document.querySelectorAll('nav a[href^="#"]');
+  tocLinks.forEach(function (link) {
+    link.classList.remove('active');
+    if (
+      currentHeading &&
+      link.getAttribute('href') === '#' + currentHeading.id
+    ) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// Add scroll event listener - update progress bar immediately
+window.addEventListener('scroll', function () {
+  // Update progress bar immediately without delay
+  const articleContent = document.getElementById('article-content');
+  if (!articleContent) return;
+
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight - windowHeight;
+
+  // Calculate progress percentage
+  const progress = Math.min((scrollTop / documentHeight) * 100, 100);
+
+  // Update progress bar immediately
+  const progressBar = document.querySelector('.progress-bar');
+  if (progressBar) {
+    progressBar.style.width = progress + '%';
+  }
+
+  // Update progress text immediately
+  const progressText = document.querySelector('.progress-text');
+  if (progressText) {
+    progressText.textContent = Math.round(progress) + '% komplett';
+  }
+});
+
+// Use throttled update for active link detection (less frequent)
+let scrollTimeout;
+window.addEventListener('scroll', function () {
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout);
+  }
+  scrollTimeout = setTimeout(updateProgress, 50);
+});
+
+// Initial progress update
+setTimeout(updateProgress, 1000);
