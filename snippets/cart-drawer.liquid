@@ -224,8 +224,19 @@
   /* Mobile responsive */
   @media (max-width: 640px) {
     .cart-drawer {
-      width: 100vw;
-      max-width: 100vw;
+      width: auto;
+      max-width: none;
+      right: 10px !important;
+      left: 10px !important;
+      top: 10px !important;
+      bottom: 10px !important;
+      height: auto;
+      border-radius: 15px;
+      transform: translateX(calc(100% + 10px));
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
     }
 
     .cart-item {
