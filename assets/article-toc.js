@@ -80,13 +80,14 @@ function setupTocLinks() {
 
       if (targetElement) {
         // Calculate offset for fixed header or breathing room
-        const headerOffset = 100; // Adjust this value as needed
+        const headerOffset = 160; // Adjust this value as needed
         const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       } else {
         console.log('Target element not found:', targetId);
