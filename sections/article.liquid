@@ -3,7 +3,7 @@
 %}
 
 <article
-  class='{{ section_class }} grid grid-cols-4 gap-[50px] layout pt-[150px]'
+  class='{{ section_class }} grid grid-cols-3 gap-[50px] layout pt-[150px]'
   style='
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -19,9 +19,11 @@
             style='width: 0%'
           ></div>
         </div>
-        <div class='progress-text text-sm mt-2 text-gray-600'>0% komplett</div>
+        <div class='progress-text  headline1 text-[#545454] pt-[15px] !text-[20px]'>
+          0% komplett
+        </div>
       </div>
-      <nav class='space-y-2'>
+      <nav class='flex flex-col gap-[50px] pt-[50px] '>
         {% comment %} Extract headings from article content {% endcomment %}
         {% assign content_lines = article.content | split: "<" %}
         {% for line in content_lines %}
@@ -43,7 +45,7 @@
               {% assign heading_id = heading_text | handleize %}
               <a
                 href='#{{ heading_id }}'
-                class='block text-sm text-gray-700 hover:text-gray-900 transition-colors'
+                class='block headline1 !text-[25px] text-[#171717]'
               >
                 {{ heading_text }}
               </a>
@@ -53,7 +55,7 @@
       </nav>
     </div>
   </div>
-  <div class='col-span-3'>
+  <div class='col-span-2'>
     <header>
       <h1 class='headline1  py-[25px] text-[48px] leading-[90%]'>
         {{ article.title }}

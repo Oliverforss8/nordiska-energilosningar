@@ -784,6 +784,12 @@
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
 }
 
+.space-y-\[50px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(50px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(50px * var(--tw-space-y-reverse))
+}
+
 .overflow-hidden {
   overflow: hidden
 }
@@ -1369,6 +1375,14 @@
   font-size: 48px
 }
 
+.\!text-\[30px\] {
+  font-size: 30px !important
+}
+
+.\!text-\[25px\] {
+  font-size: 25px !important
+}
+
 .font-\[300\] {
   font-weight: 300
 }
@@ -1455,6 +1469,15 @@
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#545454\] {
+  --tw-text-opacity: 1;
+  color: rgb(84 84 84 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\] {
+  color: 
 }
 
 .line-through {
