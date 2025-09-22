@@ -58,11 +58,11 @@
             {{ section.settings.heading | newline_to_br }}
           </h1>
           <div class='flex md:flex-row flex-col md:gap-[40px] gap-[20px] md:items-center'>
-            <div class='shrink-0'>
+            <div class=''>
               {% if section.settings.button_url != blank %}
-                <a
+                <button
                   href='{{ section.settings.button_url }}'
-                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]   shrink-0'
+                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]   '
                   style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
                 >
                   {{
@@ -79,10 +79,10 @@
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                </a>
+                </button>
               {% else %}
                 <button
-                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]  shrink-0'
+                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]  '
                   style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
                 >
                   {{
