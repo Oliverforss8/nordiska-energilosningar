@@ -176,9 +176,11 @@ function updateProgress() {
 
   headings.forEach(function (heading) {
     const rect = heading.getBoundingClientRect();
-    const distance = Math.abs(rect.top - 200); // 200px offset from top
+    // Adjust offset for mobile vs desktop
+    const offset = window.innerWidth <= 768 ? 100 : 200;
+    const distance = Math.abs(rect.top - offset);
 
-    if (rect.top <= 200 && distance < currentDistance) {
+    if (rect.top <= offset && distance < currentDistance) {
       currentHeading = heading;
       currentDistance = distance;
     }

@@ -78,6 +78,9 @@
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding"
       }
+    },
+    "blog": {
+      "name": "Blog"
     }
   }
 }

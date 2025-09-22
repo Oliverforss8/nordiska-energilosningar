@@ -4,8 +4,8 @@
   # Check for page-specific inverted mode
   assign inverted_mode = false
 
-  # Default inverted mode for collection and product pages
-  if template.name == "collection" or template.name == "product"
+  # Default inverted mode for collection, product, blog, and article pages
+  if template.name == "collection" or template.name == "product" or template.name == "blog" or template.name == "article"
     assign inverted_mode = true
   endif
 
@@ -22,8 +22,8 @@
         break
       endif
     endfor
-  elsif template.name != "page" and template.name != "collection" and template.name != "product"
-    # Check if current template is in the inverted pages list (excluding collection/product which are already inverted)
+  elsif template.name != "page" and template.name != "collection" and template.name != "product" and template.name != "blog" and template.name != "article"
+    # Check if current template is in the inverted pages list (excluding collection/product/blog/article which are already inverted)
     for inverted_page in inverted_pages
       assign clean_page = inverted_page | strip
       if template.name == clean_page
@@ -93,14 +93,14 @@
           alt='{{ shop.name }}'
           width='auto'
           height='53'
-          class='logo-white w-[175px] md:w-auto md:h-[53px] transition-opacity duration-300'
+          class='logo-white h-auto  w-[175px] md:w-auto md:h-[53px] transition-opacity duration-300'
         >
         <img
           src='{{ 'logga.svg' | asset_url }}'
           alt='{{ shop.name }}'
           width='auto'
           height='53'
-          class='logo-dark  w-[175px] md:w-auto md:h-[53px] transition-opacity duration-300 opacity-0 absolute top-0 left-0'
+          class='logo-dark h-auto  w-[175px] md:w-auto md:h-[53px] transition-opacity duration-300 opacity-0 absolute top-0 left-0'
         >
       </a>
 
