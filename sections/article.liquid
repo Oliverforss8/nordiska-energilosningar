@@ -9,7 +9,43 @@
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   '
 >
-  <div class='col-span-1 bg-[#F3F1E8] p-[30px] rounded-[15px]'>test</div>
+  <div>
+    <div class='col-span-1 bg-[#F3F1E8] p-[30px] rounded-[15px]'>
+      <h3 class='text-lg font-semibold mb-4'>
+        {{ "articles.table_of_contents" | t }}
+      </h3>
+      <nav class='space-y-2'>
+        {% comment %} Extract headings from article content {% endcomment %}
+        {% assign content_lines = article.content | split: "<" %}
+        {% for line in content_lines %}
+          {% if line contains "h1>"
+            or line contains "h2>"
+            or line contains "h3>"
+            or line contains "h4>"
+            or line contains "h5>"
+            or line contains "h6>"
+          %}
+            {% assign heading_text = line
+              | split: ">"
+              | last
+              | split: "</"
+              | first
+              | strip
+            %}
+            {% if heading_text != blank %}
+              {% assign heading_id = heading_text | handleize %}
+              <a
+                href='#{{ heading_id }}'
+                class='block text-sm text-gray-700 hover:text-gray-900 transition-colors'
+              >
+                {{ heading_text }}
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
   <div class='col-span-3'>
     <header>
       <h1 class='headline1  py-[25px] text-[48px] leading-[90%]'>
@@ -27,8 +63,107 @@
       </figure>
     {% endif %}
 
-    <div class=' rte'>
-      {{ article.content }}
+    <div class='flex flex-col gap-[25px] rte' id='article-content'>
+      {% comment %} Process article content to add IDs to headings using Liquid {% endcomment %}
+      {% assign content = article.content %}
+
+      {% comment %} Replace h1-h6 tags with versions that include IDs {% endcomment %}
+      {% assign processed_content = content %}
+
+      {% comment %} Handle h1 tags {% endcomment %}
+      {% assign h1_parts = processed_content | split: "<h1>" %}
+      {% assign processed_content = h1_parts[0] %}
+      {% for part in h1_parts %}
+        {% unless forloop.first %}
+          {% assign h1_content = part
+            | split: "</h1>"
+            | first
+            | strip_html
+            | strip
+          %}
+          {% if h1_content != blank %}
+            {% assign h1_id = h1_content | handleize %}
+            {% assign h1_rest = part | split: "</h1>" | last %}
+            {% assign processed_content = processed_content
+              | append: '<h1 id="'
+              | append: h1_id
+              | append: '">'
+              | append: h1_content
+              | append: "</h1>"
+              | append: h1_rest
+            %}
+          {% else %}
+            {% assign processed_content = processed_content
+              | append: "<h1>"
+              | append: part
+            %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+
+      {% comment %} Handle h2 tags {% endcomment %}
+      {% assign h2_parts = processed_content | split: "<h2>" %}
+      {% assign processed_content = h2_parts[0] %}
+      {% for part in h2_parts %}
+        {% unless forloop.first %}
+          {% assign h2_content = part
+            | split: "</h2>"
+            | first
+            | strip_html
+            | strip
+          %}
+          {% if h2_content != blank %}
+            {% assign h2_id = h2_content | handleize %}
+            {% assign h2_rest = part | split: "</h2>" | last %}
+            {% assign processed_content = processed_content
+              | append: '<h2 id="'
+              | append: h2_id
+              | append: '">'
+              | append: h2_content
+              | append: "</h2>"
+              | append: h2_rest
+            %}
+          {% else %}
+            {% assign processed_content = processed_content
+              | append: "<h2>"
+              | append: part
+            %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+
+      {% comment %} Handle h3 tags {% endcomment %}
+      {% assign h3_parts = processed_content | split: "<h3>" %}
+      {% assign processed_content = h3_parts[0] %}
+      {% for part in h3_parts %}
+        {% unless forloop.first %}
+          {% assign h3_content = part
+            | split: "</h3>"
+            | first
+            | strip_html
+            | strip
+          %}
+          {% if h3_content != blank %}
+            {% assign h3_id = h3_content | handleize %}
+            {% assign h3_rest = part | split: "</h3>" | last %}
+            {% assign processed_content = processed_content
+              | append: '<h3 id="'
+              | append: h3_id
+              | append: '">'
+              | append: h3_content
+              | append: "</h3>"
+              | append: h3_rest
+            %}
+          {% else %}
+            {% assign processed_content = processed_content
+              | append: "<h3>"
+              | append: part
+            %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+
+      {{ processed_content }}
     </div>
   </div>
 </article>
@@ -43,8 +178,6 @@
   }
   /* Rich text defaults: style p vs headings differently */
   p {
-    padding-top: 25px;
-    padding-bottom: 25px;
     font-family: var(--font-halyard--family);
     font-weight: 300;
     font-size: 20px;
@@ -60,8 +193,6 @@
   h4,
   h5,
   h6 {
-    padding-top: 25px;
-    padding-bottom: 25px;
     font-family: var(--font-halyard--family);
     font-weight: 400;
     font-size: 30px;
@@ -90,3 +221,5 @@
     padding-bottom: 0;
   }
 {% endstylesheet %}
+
+<script src='{{ 'article-toc.js' | asset_url }}' defer></script>

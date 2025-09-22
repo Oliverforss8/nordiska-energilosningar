@@ -25,6 +25,9 @@
     "no_articles": "No articles found",
     "no_articles_description": "Check back later for new content."
   },
+  "articles": {
+    "table_of_contents": "Table of contents"
+  },
   "cart": {
     "checkout": "Checkout",
     "title": "Cart",
