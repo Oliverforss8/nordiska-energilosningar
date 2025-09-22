@@ -18,17 +18,44 @@
       "name": "Banner bild",
       "settings": {
         "media_type": "video",
-        "background_video": "shopify://files/videos/1C1.mp4",
+        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
         "header_button_url": "",
         "heading": "Banner rubrik",
         "description": "Banner beskrivning",
-        "primary_button_text": "Primär knapp",
+        "primary_button_text": "",
         "primary_button_url": "",
         "secondary_button_text": "",
         "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "tekniska_specifikationer_NRgBkG": {
+      "type": "tekniska-specifikationer",
+      "blocks": {
+        "specification_E4emyj": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        }
+      },
+      "block_order": [
+        "specification_E4emyj"
+      ],
+      "name": "Tekniska specifikationer",
+      "settings": {
+        "title": "Tekniska specifikationer",
+        "image_1": "shopify://shop_images/001.1686.png",
+        "image_2": "shopify://shop_images/001_1_.1694.png",
+        "product_name": "Dyness",
+        "stack_info": "Stack",
+        "description": "Dyness",
+        "button_text": "",
+        "button_link": "",
         "custom_id": ""
       }
     },
@@ -38,7 +65,7 @@
       "settings": {
         "title": "Titel",
         "text": "<p>Text</p>",
-        "media_type": "image",
+        "media_type": "video",
         "video": "shopify://files/videos/jichajiyongsuo.mp4",
         "image_position": "left",
         "image_button_text": "",
@@ -103,6 +130,7 @@
   "order": [
     "main",
     "banner_bild_TmQytz",
+    "tekniska_specifikationer_NRgBkG",
     "bild_och_text_wA4xfq",
     "faq_produkt",
     "relaterade_produkter"
