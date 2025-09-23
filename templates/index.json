@@ -90,7 +90,7 @@
         "title": "Din väg till lägre elkostnader",
         "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_15.png",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
         "image_position": "right",
         "image_button_text": "Så fungerar det",
         "image_button_link": "shopify://pages/var-losning",
@@ -116,8 +116,23 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_D9hWE6": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vi är experter på storskaliga energilösningar",
+        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_12.png",
+        "image_position": "left",
+        "image_button_text": "Våra lösningar",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
+    },
     "grid_omraden_zBziiH": {
       "type": "grid-omraden",
+      "disabled": true,
       "name": "Grid areas",
       "settings": {
         "title": "Effektiva energilösningar för framtidens fastigheter",
@@ -326,6 +341,7 @@
     "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
     "banner_bild_Tr8FhV",
+    "bild_och_text_D9hWE6",
     "grid_omraden_zBziiH",
     "banner_bild_xRHf34",
     "banner_med_3_produkter_D79ei6",
