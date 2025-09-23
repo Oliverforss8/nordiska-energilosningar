@@ -26,6 +26,20 @@
         "button_url": ""
       }
     },
+    "bild_och_text_xgmUNz": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vår historira",
+        "text": "<p>Nordiska Energilösningar grundades 2024 av Robert och Emilia Karlsson.  Robert har lång erfarenhet inom solenergi, batterilagring och smarta energisystem, med djup teknisk kompetens och ett starkt branschnätverk. Emilia har en bakgrund inom ekonomi och ett tydligt fokus på affärsmässiga och hållbara lösningar.Tillsammans erbjuder de trygga, effektiva och framtidssäkrade energilösningar för både privatpersoner och företag, som kombinerar teknisk spetskompetens med personligt bemötande och ett genuint engagemang.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/test_for_hero_2.png",
+        "image_position": "right",
+        "image_button_text": "Upptäck våra lösningar",
+        "image_button_link": "shopify://pages/vara-produkter",
+        "custom_id": ""
+      }
+    },
     "icon_3eKirx": {
       "type": "icon",
       "blocks": {
@@ -64,6 +78,7 @@
         "feature_NptdVP",
         "feature_NeCEHe"
       ],
+      "disabled": true,
       "name": "Icon section",
       "settings": {
         "heading": "Fördelar med solceller",
@@ -71,20 +86,6 @@
         "custom_id": "",
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "bild_och_text_xgmUNz": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Vår historira",
-        "text": "<p>Nordiska Energilösningar grundades 2024 av Robert och Emilia Karlsson.  Robert har lång erfarenhet inom solenergi, batterilagring och smarta energisystem, med djup teknisk kompetens och ett starkt branschnätverk. Emilia har en bakgrund inom ekonomi och ett tydligt fokus på affärsmässiga och hållbara lösningar.Tillsammans erbjuder de trygga, effektiva och framtidssäkrade energilösningar för både privatpersoner och företag, som kombinerar teknisk spetskompetens med personligt bemötande och ett genuint engagemang.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/test_for_hero_2.png",
-        "image_position": "right",
-        "image_button_text": "Upptäck våra lösningar",
-        "image_button_link": "shopify://pages/vara-produkter",
-        "custom_id": ""
       }
     },
     "bild_och_text_pUBNQ3": {
@@ -128,8 +129,8 @@
   "order": [
     "main",
     "hero_lower_jDy7dL",
-    "icon_3eKirx",
     "bild_och_text_xgmUNz",
+    "icon_3eKirx",
     "bild_och_text_pUBNQ3",
     "bild_och_text_CPXJh3",
     "kontakt_form_H47hYU"
