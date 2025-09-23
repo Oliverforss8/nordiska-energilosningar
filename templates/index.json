@@ -58,6 +58,31 @@
       "name": "Länkar sektion",
       "settings": {}
     },
+    "grid_omraden_gmji3j": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Effektiva energilösningar för framtidens fastigheter",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_image": "shopify://shop_images/image_11.png",
+        "card_1_button_text": "Solceller",
+        "card_1_button_link": "shopify://collections/solceller",
+        "card_1_overlay_opacity": 20,
+        "card_2_image": "shopify://shop_images/image_7.png",
+        "card_2_button_text": "Värmepumpar",
+        "card_2_button_link": "shopify://collections/varmepumpar",
+        "card_2_overlay_opacity": 20,
+        "card_3_image": "shopify://shop_images/image_14.png",
+        "card_3_button_text": "Laddboxar",
+        "card_3_button_link": "shopify://collections/laddboxar",
+        "card_3_overlay_opacity": 20,
+        "card_4_image": "shopify://shop_images/image_16.png",
+        "card_4_button_text": "Batterier",
+        "card_4_button_link": "shopify://collections/batteri",
+        "card_4_overlay_opacity": 20,
+        "bottom_description": ""
+      }
+    },
     "bild_och_text_nY9Rik": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -293,36 +318,12 @@
         "header_button_text": "Kontaktformulär",
         "header_button_url": "shopify://products/produkt"
       }
-    },
-    "grid_omraden_gmji3j": {
-      "type": "grid-omraden",
-      "name": "Grid areas",
-      "settings": {
-        "title": "Effektiva energilösningar för framtidens fastigheter",
-        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
-        "card_1_image": "shopify://shop_images/image_11.png",
-        "card_1_button_text": "Solceller",
-        "card_1_button_link": "shopify://collections/solceller",
-        "card_1_overlay_opacity": 20,
-        "card_2_image": "shopify://shop_images/image_7.png",
-        "card_2_button_text": "Värmepumpar",
-        "card_2_button_link": "shopify://collections/varmepumpar",
-        "card_2_overlay_opacity": 20,
-        "card_3_image": "shopify://shop_images/image_14.png",
-        "card_3_button_text": "Laddboxar",
-        "card_3_button_link": "shopify://collections/laddboxar",
-        "card_3_overlay_opacity": 20,
-        "card_4_image": "shopify://shop_images/image_16.png",
-        "card_4_button_text": "Batterier",
-        "card_4_button_link": "shopify://collections/batteri",
-        "card_4_overlay_opacity": 20,
-        "bottom_description": ""
-      }
     }
   },
   "order": [
     "hero_HUEAy6",
     "lankar_kHPxWD",
+    "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
     "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
@@ -330,7 +331,6 @@
     "banner_med_3_produkter_D79ei6",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
-    "kontakt_form_Ae7RmC",
-    "grid_omraden_gmji3j"
+    "kontakt_form_Ae7RmC"
   ]
 }
