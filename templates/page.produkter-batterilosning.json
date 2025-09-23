@@ -21,10 +21,10 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
         "overlay_opacity": 20,
-        "heading": "Våra batterier",
+        "heading": "Lagra din solengeri",
         "subheading": "Funderar du på att investera i batterilagring?\nVi hjälper dig hela vägen, från rätt dimensionering till färdig installation!",
-        "button_text": "Be om offert",
-        "button_url": ""
+        "button_text": "Se våra batterier",
+        "button_url": "shopify://collections/batteri"
       }
     },
     "banner_med_3_produkter_tmN89j": {
