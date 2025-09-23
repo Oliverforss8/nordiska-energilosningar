@@ -18,10 +18,11 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
+        "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
         "overlay_opacity": 20,
         "heading": "Våra batterier",
-        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
+        "subheading": "Funderar du på att investera i batterilagring?\nVi hjälper dig hela vägen, från rätt dimensionering till färdig installation!",
         "button_text": "Be om offert",
         "button_url": ""
       }
@@ -32,17 +33,17 @@
         "product_card_h6f6wr": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "dyness-stack100",
             "title": "Laddbox 1",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "learn_more_url": "shopify://products/dyness-stack100"
           }
         },
         "product_card_acNTbf": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "batteri-1",
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
@@ -52,7 +53,7 @@
         "product_card_KmdwjF": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "dyness-tower-pro",
             "title": "Laddboxar 3",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
@@ -134,6 +135,7 @@
       "settings": {
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
         "image_position": "right",
         "image_button_text": "Test",
@@ -230,6 +232,7 @@
       "settings": {
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
         "image_position": "left",
         "image_button_text": "Test",
