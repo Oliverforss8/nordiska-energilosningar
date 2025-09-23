@@ -62,8 +62,8 @@
       "type": "grid-omraden",
       "name": "Grid areas",
       "settings": {
-        "title": "Effektiva energilösningar för framtidens fastigheter",
-        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "title": "Smarta energilösningar för en hållbar vardag",
+        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
         "card_1_image": "shopify://shop_images/image_11.png",
         "card_1_button_text": "Solceller",
         "card_1_button_link": "shopify://collections/solceller",
