@@ -269,6 +269,7 @@
         "product_card_wQdkby",
         "product_card_XGk6eH"
       ],
+      "disabled": true,
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "banner_first",
@@ -327,11 +328,32 @@
     },
     "kontakt_form_Ae7RmC": {
       "type": "kontakt-form",
+      "disabled": true,
       "name": "Contact Form",
       "settings": {
         "heading": "Kontakta oss",
         "header_button_text": "Kontaktformulär",
         "header_button_url": "shopify://products/produkt"
+      }
+    },
+    "offert_forfragan_H8kdLx": {
+      "type": "offert-forfragan",
+      "name": "Offertförfrågan",
+      "settings": {
+        "title": "Begär offert",
+        "description": "<p>Fyll i formuläret nedan så återkommer vi till dig med en skräddarsydd offert.</p>",
+        "card_1_button_text": "",
+        "card_1_button_link": "",
+        "card_1_overlay_opacity": 0,
+        "card_2_button_text": "",
+        "card_2_button_link": "",
+        "card_2_overlay_opacity": 0,
+        "card_3_button_text": "",
+        "card_3_button_link": "",
+        "card_3_overlay_opacity": 0,
+        "card_4_button_text": "",
+        "card_4_button_link": "",
+        "card_4_overlay_opacity": 0
       }
     }
   },
@@ -347,6 +369,7 @@
     "banner_med_3_produkter_D79ei6",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
-    "kontakt_form_Ae7RmC"
+    "kontakt_form_Ae7RmC",
+    "offert_forfragan_H8kdLx"
   ]
 }
