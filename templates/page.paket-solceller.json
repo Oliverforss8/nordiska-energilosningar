@@ -12,9 +12,57 @@
     "main": {
       "type": "page",
       "settings": {}
+    },
+    "hero_lower_ABQrCw": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/image_15.png",
+        "overlay_opacity": 20,
+        "heading": "Våra energipaket",
+        "subheading": "Vi har",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
+      }
+    },
+    "paket_drHUr6": {
+      "type": "paket",
+      "blocks": {
+        "button_9fT37H": {
+          "type": "button",
+          "settings": {
+            "text": "Få offert",
+            "url": "",
+            "show_arrow": true
+          }
+        },
+        "button_FmcHwH": {
+          "type": "button",
+          "settings": {
+            "text": "Läs mer",
+            "url": "",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "button_9fT37H",
+        "button_FmcHwH"
+      ],
+      "name": "Paket",
+      "settings": {
+        "custom_id": "",
+        "image": "shopify://shop_images/Group_4899.png",
+        "title": "Komplett Solcellspaket",
+        "price": "Från 89 000 kr",
+        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_lower_ABQrCw",
+    "paket_drHUr6"
   ]
 }
