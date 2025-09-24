@@ -18,9 +18,10 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
+        "media_type": "image",
         "background_image": "shopify://shop_images/image_14.png",
         "overlay_opacity": 20,
-        "heading": "Våra laddboxar",
+        "heading": "Laddboxar för hemmet",
         "subheading": "Discover amazing products and services",
         "button_text": "Vårt utbud",
         "button_url": ""
@@ -134,6 +135,7 @@
       "settings": {
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
         "image_position": "right",
         "image_button_text": "Knapp",
@@ -147,6 +149,7 @@
       "settings": {
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
         "image_position": "left",
         "image_button_text": "Knapp",
