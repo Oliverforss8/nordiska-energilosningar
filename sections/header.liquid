@@ -43,6 +43,12 @@
   if page.handle contains "foretag" or template.name contains "foretag" or request.page_type contains "foretag"
     assign is_foretag_page = true
   endif
+
+  # Choose which menu to use based on page type
+  assign current_menu = section.settings.menu
+  if is_foretag_page and section.settings.foretag_menu != blank
+    assign current_menu = section.settings.foretag_menu
+  endif
 %}
 
 <header
@@ -106,7 +112,7 @@
 
       <!-- Navigation -->
       <nav class='header-nav flex text-white flex-row gap-[50px]'>
-        {% for link in section.settings.menu.links %}
+        {% for link in current_menu.links %}
           {% liquid
             assign has_dropdown = false
             assign dropdown_image = blank
@@ -578,6 +584,12 @@
       "id": "menu",
       "label": "Huvudmeny",
       "info": "Välj vilken meny som ska visas i sidhuvudet"
+    },
+    {
+      "type": "link_list",
+      "id": "foretag_menu",
+      "label": "Företagsmeny",
+      "info": "Välj vilken meny som ska visas på företagssidor (om inget väljs används huvudmenyn)"
     },
     {
       "type": "header",
