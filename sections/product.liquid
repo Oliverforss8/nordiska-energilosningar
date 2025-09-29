@@ -300,55 +300,12 @@
 
           <div class='pt-[30px] md:pt-[50px]'>
             <!-- Tekniska specifikationer Dropdown -->
-            <div
-              class='dropdown-section'
-              style='border-top: 1px solid #171717; border-bottom: 1px solid #171717;'
-            >
-              <div
-                class='flex flex-row w-full py-[16px] md:py-[20px] justify-between items-center cursor-pointer dropdown-trigger min-h-[48px]'
-                onclick='toggleDropdown("specs-content", this)'
-              >
-                <div class='body1 text-[18px] md:text-[24px]'>
-                  Tekniska specifikationer
-                </div>
-                <div class='dropdown-icon p-2'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='16'
-                    height='16'
-                    viewBox='0 0 16 16'
-                    fill='none'
-                  >
-                    <path d="M1 8H15M8 1V15" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-              <div
-                class='dropdown-content'
-                id='specs-content'
-                style='display: none; padding-top: 16px; padding-bottom: 16px;'
-              >
-                {% if product.metafields.custom.tekniska_specifikationer
-                    != blank
-                %}
-                  <div class='body1 text-[14px] md:text-[16px]'>
-                    {{
-                      product.metafields.custom.tekniska_specifikationer
-                      | metafield_text
-                    }}
-                  </div>
-                {% else %}
-                  <p class='body1 text-[14px] md:text-[16px]'>
-                    Inga tekniska specifikationer tillgängliga.
-                  </p>
-                {% endif %}
-              </div>
-            </div>
+           
 
             <!-- Mer information Dropdown -->
             <div
               class='dropdown-section'
-              style='border-bottom: 1px solid #171717;'
+              style='border-bottom: 1px solid #171717; border-top: 1px solid #171717;'
             >
               <div
                 class='flex flex-row w-full py-[16px] md:py-[20px] justify-between items-center cursor-pointer dropdown-trigger min-h-[48px]'
