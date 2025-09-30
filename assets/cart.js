@@ -199,6 +199,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Load initial cart data
   loadCartData();
+
+  // Listen for cart update events from product page
+  window.addEventListener('cart:update', function() {
+    loadCartData();
+  });
 });
 
 // Add to cart functionality

@@ -979,15 +979,16 @@
     function findMatchingVariant() {
       const selectedOptions = {};
       
+      // Get selected values by position (option1, option2, option3)
       variantSelects.forEach(select => {
-        const optionName = select.dataset.optionName;
-        selectedOptions[optionName] = select.value;
+        const position = select.dataset.optionPosition;
+        selectedOptions['option' + position] = select.value;
       });
 
+      // Find variant where all options match
       return productVariants.find(variant => {
-        return variant.options.every((option, index) => {
-          const optionName = 'option' + (index + 1);
-          return variant[optionName] === selectedOptions[Object.keys(selectedOptions)[index]];
+        return Object.keys(selectedOptions).every(optionKey => {
+          return variant[optionKey] === selectedOptions[optionKey];
         });
       });
     }
@@ -997,6 +998,8 @@
       const selectedVariant = findMatchingVariant();
       
       if (selectedVariant) {
+        console.log('Selected variant:', selectedVariant.id, selectedVariant.title);
+        
         // Update button data attributes
         if (buyNowBtn) {
           buyNowBtn.setAttribute('data-variant-id', selectedVariant.id);
@@ -1030,6 +1033,9 @@
         const newUrl = new URL(window.location.href);
         newUrl.searchParams.set('variant', selectedVariant.id);
         window.history.replaceState({}, '', newUrl);
+        console.log('Updated URL to:', newUrl.toString());
+      } else {
+        console.log('No matching variant found');
       }
     }
 
@@ -1116,7 +1122,9 @@
     // Function to get selected discount code
     function getSelectedDiscountCode() {
       const selectedRadio = document.querySelector('.green-deduction-radio:checked');
-      return selectedRadio ? selectedRadio.dataset.discountCode : null;
+      const code = selectedRadio ? selectedRadio.dataset.discountCode : null;
+      console.log('🔍 Checking for discount code:', code);
+      return code;
     }
 
     // Upsell Products Functionality
@@ -1153,6 +1161,16 @@
         const upsells = getSelectedUpsells();
         const discountCode = getSelectedDiscountCode();
 
+        console.log('🛒 Buy Now clicked!');
+        console.log('📦 Variant ID:', variantId);
+        console.log('🎁 Discount Code:', discountCode || 'None selected');
+
+        // Store discount code in sessionStorage
+        if (discountCode) {
+          sessionStorage.setItem('selectedDiscountCode', discountCode);
+          console.log('💾 Saved discount code to session:', discountCode);
+        }
+        
         // Show loading state
         const originalText = this.innerHTML;
         this.innerHTML = 'Behandlar...';
@@ -1193,8 +1211,11 @@
           if (response.ok) {
             // Go to checkout with discount code if selected
             if (discountCode) {
-              window.location.href = '/checkout?discount=' + discountCode;
+              const checkoutUrl = '/checkout?discount=' + discountCode;
+              console.log('✅ Going to checkout with discount:', checkoutUrl);
+              window.location.href = checkoutUrl;
             } else {
+              console.log('✅ Going to checkout (no discount)');
               window.location.href = '/checkout';
             }
           } else if (response.status === 429) {
@@ -1241,6 +1262,16 @@
         const variantId = this.getAttribute('data-variant-id');
         const quantity = getSelectedQuantity();
         const upsells = getSelectedUpsells();
+        const discountCode = getSelectedDiscountCode();
+
+        console.log('🛒 Add to Cart clicked!');
+        console.log('🎁 Discount Code:', discountCode || 'None selected');
+
+        // Store discount code in sessionStorage so cart drawer can use it
+        if (discountCode) {
+          sessionStorage.setItem('selectedDiscountCode', discountCode);
+          console.log('💾 Saved discount code to session:', discountCode);
+        }
 
         // Show loading state
         const originalText = this.innerHTML;
@@ -1288,10 +1319,18 @@
             this.style.background = '#4ade80';
             this.style.color = 'white';
 
+            // Trigger cart update event for cart.js to reload
+            window.dispatchEvent(new CustomEvent('cart:update'));
+            
             // Open cart drawer if available
             const cartDrawer = document.getElementById('cart-drawer');
+            const cartOverlay = document.querySelector('[data-cart-overlay]');
             if (cartDrawer) {
               cartDrawer.classList.add('open');
+              if (cartOverlay) {
+                cartOverlay.classList.add('active');
+              }
+              document.body.style.overflow = 'hidden';
             }
 
             // Reset button after 2 seconds
