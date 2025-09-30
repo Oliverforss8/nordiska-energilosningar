@@ -5,19 +5,19 @@
 /* Custom component classes */
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-md border border-transparent bg-primary-600 px-6 py-3 text-base font-medium text-white transition-colors duration-200 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-primary-600 text-base font-medium rounded-md text-primary-600 bg-transparent hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-md border border-primary-600 bg-transparent px-6 py-3 text-base font-medium text-primary-600 transition-colors duration-200 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
   .section-padding {
@@ -25,23 +25,23 @@
   }
 
   .heading-1 {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
+    @apply text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl;
   }
 
   .heading-2 {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight;
+    @apply text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl;
   }
 
   .heading-3 {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight;
+    @apply text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl;
   }
 
   .text-body {
-    @apply text-base sm:text-lg text-gray-600 leading-relaxed;
+    @apply text-base leading-relaxed text-gray-600 sm:text-lg;
   }
 
   .text-lead {
-    @apply text-lg sm:text-xl text-gray-600 leading-relaxed;
+    @apply text-lg leading-relaxed text-gray-600 sm:text-xl;
   }
 }
 

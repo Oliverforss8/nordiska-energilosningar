@@ -52,17 +52,17 @@ class RelatedProductsCarousel {
     let startX = 0;
     let isDragging = false;
 
-    carouselTrack.addEventListener('touchstart', e => {
+    carouselTrack.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
       isDragging = true;
     });
 
-    carouselTrack.addEventListener('touchmove', e => {
+    carouselTrack.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
       e.preventDefault();
     });
 
-    carouselTrack.addEventListener('touchend', e => {
+    carouselTrack.addEventListener('touchend', (e) => {
       if (!isDragging) return;
       isDragging = false;
 

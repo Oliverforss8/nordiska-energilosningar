@@ -1,74 +1,74 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-" | append: section.type
+  assign section_class = 'section-' | append: section.type
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }} '
-  class=''
+  id="{{ section_id }}"
+  class="{{ section_class }} "
+  class=""
 >
-  <div class='layout py-[60px] md:py-[85px]'>
+  <div class="layout py-[60px] md:py-[85px]">
     {% if section.settings.title != blank %}
-      <h2 class='headline1'>
+      <h2 class="headline1">
         {{ section.settings.title | escape }}
       </h2>
     {% endif %}
 
     {% if section.settings.description != blank %}
-      <div class='body1 py-[50px]'>
+      <div class="body1 py-[50px]">
         {{ section.settings.description }}
       </div>
     {% endif %}
 
     {% if section.blocks.size > 0 %}
-      <div class=''>
+      <div class="">
         {% for block in section.blocks %}
           {% case block.type %}
-            {% when "faq_item" %}
+            {% when 'faq_item' %}
               <div
-                class='faq-item {% if forloop.first %}pb-[30px]{% else %}py-[30px]{% endif %} cursor-pointer '
+                class="faq-item {% if forloop.first %}pb-[30px]{% else %}py-[30px]{% endif %} cursor-pointer "
                 {% unless forloop.last %}
-                  style='border-bottom: 1px solid #171717;'
+                  style="border-bottom: 1px solid #171717;"
                 {% endunless %}
-                aria-expanded='false'
-                aria-controls='faq-answer-{{ block.id }}'
+                aria-expanded="false"
+                aria-controls="faq-answer-{{ block.id }}"
                 {{ block.shopify_attributes }}
               >
-                <div class='flex flex-row items-center justify-between pointer-events-none'>
-                  <div class='flex flex-row gap-[30px] items-center'>
-                    <div class='body1'>
+                <div class="pointer-events-none flex flex-row items-center justify-between">
+                  <div class="flex flex-row items-center gap-[30px]">
+                    <div class="body1">
                       {{ block.settings.question | escape }}
                     </div>
-                    <div class='bg-yellow-400 body1 text-[15px]  text-[#171717]  p-[10px] rounded-[5px] flex-shrink-0 py-[8px]'>
-                      {{ block.settings.button_text | default: "Ämne" }}
+                    <div class="body1 flex-shrink-0 rounded-[5px]  bg-yellow-400  p-[10px] py-[8px] text-[15px] text-[#171717]">
+                      {{ block.settings.button_text | default: 'Ämne' }}
                     </div>
                   </div>
                   <div>
                     <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
-                      viewBox='0 0 16 16'
-                      fill='none'
-                      class='faq-icon transition-transform duration-200'
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="faq-icon transition-transform duration-200"
                     >
                       <path d="M1 8H15M8 1V15" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
                 </div>
                 <div
-                  class='faq-answer overflow-hidden max-h-0 transition-all duration-300 ease-in-out'
-                  id='faq-answer-{{ block.id }}'
-                  aria-hidden='true'
+                  class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                  id="faq-answer-{{ block.id }}"
+                  aria-hidden="true"
                 >
-                  <div class='pt-[25px]'>
+                  <div class="pt-[25px]">
                     {% if block.settings.description != blank %}
-                      <div class='body1 !text-[20px] mb-4 text-gray-600'>
+                      <div class="body1 mb-4 !text-[20px] text-gray-600">
                         {{ block.settings.description }}
                       </div>
                     {% endif %}
-                    <div class='body1 body1 !text-[20px]'>
+                    <div class="body1 body1 !text-[20px]">
                       {{ block.settings.answer }}
                     </div>
                   </div>
@@ -81,7 +81,7 @@
   </div>
 </section>
 
-{{ "faq-accordion.js" | asset_url | script_tag }}
+{{ 'faq-accordion.js' | asset_url | script_tag }}
 
 {% schema %}
 {

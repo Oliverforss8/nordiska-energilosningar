@@ -6,50 +6,45 @@
 {% endcomment %}
 
 {% liquid
-  assign section_class = "section-" | append: section.type
+  assign section_class = 'section-' | append: section.type
 %}
 
-<section class='{{ section_class }} layout pt-[150px]'>
-  <div class='page-width'>
-    <h1 class='headline1 text-[32px] md:text-[48px] leading-[90%] pb-[40px]'>
+<section class="{{ section_class }} layout pt-[150px]">
+  <div class="page-width">
+    <h1 class="headline1 pb-[40px] text-[32px] leading-[90%] md:text-[48px]">
       {{ blog.title }}
     </h1>
 
     {% paginate blog.articles by 5 %}
-      <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] md:gap-[40px]'>
+      <div class="grid grid-cols-1 gap-[30px] md:grid-cols-2 md:gap-[40px] lg:grid-cols-3">
         {% for article in blog.articles %}
-          <article class='bg-white rounded-[15px] overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300'>
+          <article class="overflow-hidden rounded-[15px] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
             {% if article.image %}
-              <div class='aspect-[4/3] overflow-hidden'>
+              <div class="aspect-[4/3] overflow-hidden">
                 {{
                   article.image
                   | image_url: width: 600
                   | image_tag:
-                    loading: "lazy",
-                    class: "w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading: 'lazy',
+                    class: 'w-full h-full object-cover hover:scale-105 transition-transform duration-300'
                 }}
               </div>
             {% endif %}
-            <div class='p-[20px] md:p-[25px]'>
-              <h2 class='headline1 text-[20px] md:text-[24px] leading-[90%] mb-[15px]'>
+            <div class="p-[20px] md:p-[25px]">
+              <h2 class="headline1 mb-[15px] text-[20px] leading-[90%] md:text-[24px]">
                 <a
-                  href='{{ article.url }}'
-                  class='text-[#171717] hover:text-[#efd959] transition-colors'
+                  href="{{ article.url }}"
+                  class="text-[#171717] transition-colors hover:text-[#efd959]"
                 >
                   {{ article.title }}
                 </a>
               </h2>
-              {% assign date = article.published_at
-                | time_tag: format: "date"
-              %}
-              <p class='text-[#545454] text-[14px] mb-[15px]'>
-                {{
-                  "blog.article_metadata_html"
-                  | t: date: date, author: article.author
-                }}
+              {% assign date = article.published_at | time_tag: format: 'date' %}
+              <p class="mb-[15px] text-[14px] text-[#545454]">
+                {{ 'blog.article_metadata_html' | t: date: date, author: article.author }}
               </p>
               {% if article.excerpt != blank %}
-                <p class='text-[#171717] text-[16px] leading-[140%] opacity-80'>
+                <p class="text-[16px] leading-[140%] text-[#171717] opacity-80">
                   {{ article.excerpt | truncate: 120 }}
                 </p>
               {% endif %}
@@ -59,7 +54,7 @@
       </div>
 
       {%- if paginate.pages > 1 -%}
-        <div class='mt-[50px]'>
+        <div class="mt-[50px]">
           {{- paginate | default_pagination -}}
         </div>
       {%- endif -%}

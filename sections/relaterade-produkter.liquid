@@ -1,12 +1,12 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-" | append: section.type
+  assign section_class = 'section-' | append: section.type
 
   # Get exactly 3 products using a simple slice method
   assign all_products = collections.all.products
 
   # Create a string of handles, then convert back to products
-  assign product_handles = ""
+  assign product_handles = ''
   assign count = 0
 
   for prod in all_products
@@ -14,56 +14,56 @@
       if count == 0
         assign product_handles = prod.handle
       else
-        assign product_handles = product_handles | append: "," | append: prod.handle
+        assign product_handles = product_handles | append: ',' | append: prod.handle
       endif
       assign count = count | plus: 1
     endif
   endfor
 
   # Now convert handles back to product array
-  assign handle_array = product_handles | split: ","
-  assign related_products = all_products | where: "handle", handle_array[0]
+  assign handle_array = product_handles | split: ','
+  assign related_products = all_products | where: 'handle', handle_array[0]
   if handle_array.size > 1
-    assign product_2 = all_products | where: "handle", handle_array[1]
+    assign product_2 = all_products | where: 'handle', handle_array[1]
     assign related_products = related_products | concat: product_2
   endif
   if handle_array.size > 2
-    assign product_3 = all_products | where: "handle", handle_array[2]
+    assign product_3 = all_products | where: 'handle', handle_array[2]
     assign related_products = related_products | concat: product_3
   endif
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }}'
+  id="{{ section_id }}"
+  class="{{ section_class }}"
 >
-  <div class='layout py-[60px] md:py-[85px]'>
+  <div class="layout py-[60px] md:py-[85px]">
     {% if section.settings.title != blank %}
-      <h2 class='headline1 mb-8'>
+      <h2 class="headline1 mb-8">
         {{ section.settings.title | escape }}
       </h2>
     {% endif %}
 
     {% if related_products.size > 0 %}
       <!-- Mobile carousel container -->
-      <div class=' md:hidden relative'>
-        <div class='carousel-container overflow-hidden'>
+      <div class=" relative md:hidden">
+        <div class="carousel-container overflow-hidden">
           <div
-            class='carousel-track flex transition-transform duration-500 ease-in-out'
-            data-current='0'
+            class="carousel-track flex transition-transform duration-500 ease-in-out"
+            data-current="0"
           >
             {% for related_product in related_products %}
               <div
-                class='product-card w-full flex-shrink-0 p-[30px] flex flex-col-reverse rounded-[10px]'
-                style='background: #F3F1E8;'
+                class="product-card flex w-full flex-shrink-0 flex-col-reverse rounded-[10px] p-[30px]"
+                style="background: #F3F1E8;"
               >
-                <div class='flex flex-col justify-between '>
-                  <div class='flex flex-col'>
-                    <div class='headline1 text-[36px] pt-[30px] text-[#171717]'>
+                <div class="flex flex-col justify-between ">
+                  <div class="flex flex-col">
+                    <div class="headline1 pt-[30px] text-[36px] text-[#171717]">
                       {{ related_product.title }}
                     </div>
                     {% if related_product.description != blank %}
-                      <div class='text-[#171717]/75 text py-[20px] line-clamp-2'>
+                      <div class="text line-clamp-2 py-[20px] text-[#171717]/75">
                         {{
                           related_product.description
                           | strip_html
@@ -73,36 +73,36 @@
                       </div>
                     {% endif %}
                   </div>
-                  <div class='flex gap-[10px] shrink-0'>
+                  <div class="flex shrink-0 gap-[10px]">
                     <button
-                      class='buy-now-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
-                      style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;'
-                      data-variant-id='{{ related_product.selected_or_first_available_variant.id }}'
+                      class="buy-now-btn knappetikett flex flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
+                      style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;"
+                      data-variant-id="{{ related_product.selected_or_first_available_variant.id }}"
                     >
                       Köp nu
                       <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='22'
-                        height='18'
-                        viewBox='0 0 22 18'
-                        fill='none'
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="18"
+                        viewBox="0 0 22 18"
+                        fill="none"
                       >
                         <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </button>
                     <a
-                      href='{{ related_product.url }}'
-                      class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
-                      style='border: 1px solid #171717;'
+                      href="{{ related_product.url }}"
+                      class="banner-3-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
+                      style="border: 1px solid #171717;"
                     >
                       Läs mer
                       <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='22'
-                        height='18'
-                        viewBox='0 0 22 18'
-                        fill='none'
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="18"
+                        viewBox="0 0 22 18"
+                        fill="none"
                       >
                         <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -111,28 +111,24 @@
                   </div>
                 </div>
                 <div
-                  class=' '
-                  style='
+                  class=" "
+                  style="
                         aspect-ratio: 18/23;
                     height: 285.081px;
-                  '
+                  "
                 >
                   {% if related_product.featured_image %}
                     <img
-                      src='{{ related_product.featured_image | image_url: width: 300 }}'
-                      alt='{{ related_product.featured_image.alt | default: related_product.title }}'
-                      width='200'
-                      height='200'
-                      class=' h-full w-full object-contain rounded-[5px]'
-                      loading='lazy'
+                      src="{{ related_product.featured_image | image_url: width: 300 }}"
+                      alt="{{ related_product.featured_image.alt | default: related_product.title }}"
+                      width="200"
+                      height="200"
+                      class=" h-full w-full rounded-[5px] object-contain"
+                      loading="lazy"
                     >
                   {% else %}
-                    <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
-                      {{
-                        "products.product.media.load_image"
-                        | t
-                        | default: "Load image"
-                      }}
+                    <div class="flex h-[200px] w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                      {{ 'products.product.media.load_image' | t | default: 'Load image' }}
                     </div>
                   {% endif %}
                 </div>
@@ -143,18 +139,18 @@
       </div>
 
       <!-- Desktop grid -->
-      <div class=' hidden md:grid  grid-cols-3 gap-[20px]'>
+      <div class=" hidden grid-cols-3  gap-[20px] md:grid">
         {% for related_product in related_products %}
           <div
-            class='product-card p-[30px] flex flex-col-reverse  rounded-[10px] transition-colors duration-300'
+            class="product-card flex flex-col-reverse rounded-[10px]  p-[30px] transition-colors duration-300"
           >
-            <div class='flex flex-col justify-between '>
-              <div class='flex flex-col'>
-                <div class='headline1 text-[36px] xl:pt-0 pt-[40px] text-[#171717]'>
+            <div class="flex flex-col justify-between ">
+              <div class="flex flex-col">
+                <div class="headline1 pt-[40px] text-[36px] text-[#171717] xl:pt-0">
                   {{ related_product.title }}
                 </div>
                 {% if related_product.description != blank %}
-                  <div class='text-[#171717]/75 text py-[20px] xl:pt-[40px] line-clamp-2'>
+                  <div class="text line-clamp-2 py-[20px] text-[#171717]/75 xl:pt-[40px]">
                     {{
                       related_product.description
                       | strip_html
@@ -164,36 +160,36 @@
                   </div>
                 {% endif %}
               </div>
-              <div class='flex gap-[10px] shrink-0'>
+              <div class="flex shrink-0 gap-[10px]">
                 <button
-                  class='buy-now-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
-                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;'
-                  data-variant-id='{{ related_product.selected_or_first_available_variant.id }}'
+                  class="buy-now-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;"
+                  data-variant-id="{{ related_product.selected_or_first_available_variant.id }}"
                 >
                   Köp nu
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='18'
-                    viewBox='0 0 22 18'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
                   >
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </button>
                 <a
-                  href='{{ related_product.url }}'
-                  class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
-                  style='border: 1px solid #171717;'
+                  href="{{ related_product.url }}"
+                  class="banner-3-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
+                  style="border: 1px solid #171717;"
                 >
                   Läs mer
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='18'
-                    viewBox='0 0 22 18'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
                   >
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -202,28 +198,24 @@
               </div>
             </div>
             <div
-              class=' '
-              style='
+              class=" "
+              style="
                     aspect-ratio: 18/23;
                 height: 285.081px;
-              '
+              "
             >
               {% if related_product.featured_image %}
                 <img
-                  src='{{ related_product.featured_image | image_url: width: 300 }}'
-                  alt='{{ related_product.featured_image.alt | default: related_product.title }}'
-                  width='200'
-                  height='200'
-                  class=' h-full w-full object-contain rounded-[5px]'
-                  loading='lazy'
+                  src="{{ related_product.featured_image | image_url: width: 300 }}"
+                  alt="{{ related_product.featured_image.alt | default: related_product.title }}"
+                  width="200"
+                  height="200"
+                  class=" h-full w-full rounded-[5px] object-contain"
+                  loading="lazy"
                 >
               {% else %}
-                <div class='w-[200px] h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
-                  {{
-                    "products.product.media.load_image"
-                    | t
-                    | default: "Load image"
-                  }}
+                <div class="flex h-full w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                  {{ 'products.product.media.load_image' | t | default: 'Load image' }}
                 </div>
               {% endif %}
             </div>
@@ -232,36 +224,33 @@
       </div>
 
       <!-- Carousel navigation (only show on mobile) -->
-      <div class='flex md:hidden gap-[20px] pt-[20px] flex-row pl-[20px]'>
-        <div class='carousel-prev translate-x-[-1] cursor-pointer'>
+      <div class="flex flex-row gap-[20px] pl-[20px] pt-[20px] md:hidden">
+        <div class="carousel-prev translate-x-[-1] cursor-pointer">
           <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='26'
-            height='21'
-            viewBox='0 0 26 21'
-            fill='none'
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="21"
+            viewBox="0 0 26 21"
+            fill="none"
           >
             <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div class='carousel-next cursor-pointer'>
+        <div class="carousel-next cursor-pointer">
           <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='26'
-            height='21'
-            viewBox='0 0 26 21'
-            fill='none'
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="21"
+            viewBox="0 0 26 21"
+            fill="none"
           >
             <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
       </div>
     {% else %}
-      <div class='text-center py-8 text-gray-500'>
-        {{
-          section.settings.no_products_message
-          | default: "Inga relaterade produkter hittades."
-        }}
+      <div class="py-8 text-center text-gray-500">
+        {{ section.settings.no_products_message | default: 'Inga relaterade produkter hittades.' }}
       </div>
     {% endif %}
   </div>
@@ -283,31 +272,20 @@
     transition: all 0.3s ease;
   }
 
-  .section-relaterade-produkter
-    .product-card
-    .banner-3-learn-more-btn.banner-3-active {
+  .section-relaterade-produkter .product-card .banner-3-learn-more-btn.banner-3-active {
     background: #f3f1e8 !important;
     border-color: #f3f1e8 !important;
     color: #171717 !important;
   }
 
-  .section-relaterade-produkter
-    .product-card
-    .banner-3-learn-more-btn.banner-3-active
-    svg
-    path {
+  .section-relaterade-produkter .product-card .banner-3-learn-more-btn.banner-3-active svg path {
     stroke: #171717 !important;
   }
 
   /* Buy now button styling */
   .section-relaterade-produkter .product-card .buy-now-btn {
     background:
-      linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0.2) 100%
-      ),
-      #ebcf2f;
+      linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #ebcf2f;
     border: none;
     color: #171717;
     transition: all 0.3s ease;
@@ -319,11 +297,7 @@
     color: #171717 !important;
   }
 
-  .section-relaterade-produkter
-    .product-card
-    .buy-now-btn.banner-3-active
-    svg
-    path {
+  .section-relaterade-produkter .product-card .buy-now-btn.banner-3-active svg path {
     stroke: #171717 !important;
   }
 
@@ -380,7 +354,7 @@
   }
 {% endstylesheet %}
 
-{{ "related-products.js" | asset_url | script_tag }}
+{{ 'related-products.js' | asset_url | script_tag }}
 
 {% schema %}
 {

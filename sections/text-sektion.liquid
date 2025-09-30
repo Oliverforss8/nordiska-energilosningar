@@ -1,38 +1,36 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-text-sektion"
+  assign section_class = 'section-text-sektion'
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }} layout md:px-[170px] py-[62px] md:py-[87px]'
+  id="{{ section_id }}"
+  class="{{ section_class }} layout py-[62px] md:px-[170px] md:py-[87px]"
 >
   {% if section.settings.title != blank %}
-    <div class='headline1 text-[#171717]'>{{ section.settings.title }}</div>
+    <div class="headline1 text-[#171717]">{{ section.settings.title }}</div>
   {% endif %}
 
   {% if section.settings.text != blank %}
-    <div class='text text-[#171717]/80 py-[40px] md:py-[50px]'>
+    <div class="text py-[40px] text-[#171717]/80 md:py-[50px]">
       {{ section.settings.text }}
     </div>
   {% endif %}
 
-  {% if section.settings.button_text != blank
-    and section.settings.button_link != blank
-  %}
+  {% if section.settings.button_text != blank and section.settings.button_link != blank %}
     <button>
       <a
-        href='{{ section.settings.button_link }}'
-        class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett  text-[#171717] shrink-0 inline-block'
-        style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+        href="{{ section.settings.button_link }}"
+        class="knappetikett inline-block flex shrink-0 flex-row items-center gap-[20px] rounded-[10px]  px-[20px] py-[17px] text-[#171717]"
+        style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
       >
         {{ section.settings.button_text }}
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='22'
-          height='18'
-          viewBox='0 0 22 18'
-          fill='none'
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="18"
+          viewBox="0 0 22 18"
+          fill="none"
         >
           <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

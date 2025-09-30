@@ -1,24 +1,24 @@
-<section class='relative pb-[60px] md:pb-[85px] rounded-t-[25px] bg-[#FDFDFB] lg:mt-[-20px] z-10'>
-  <div class='layout  pt-[20px] lg:pt-[30px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]'>
+<section class="relative z-10 rounded-t-[25px] bg-[#FDFDFB] pb-[60px] md:pb-[85px] lg:mt-[-20px]">
+  <div class="layout  grid grid-cols-1 gap-[20px] pt-[20px] lg:grid-cols-3 lg:pt-[30px]">
     {% for block in section.blocks %}
-      {% if block.type == "card" %}
+      {% if block.type == 'card' %}
         <a
-          class='bg-[#F3F1E8] p-[20px] md:p-[30px] rounded-[15px] no-underline'
-          href='{{ block.settings.link }}'
+          class="rounded-[15px] bg-[#F3F1E8] p-[20px] no-underline md:p-[30px]"
+          href="{{ block.settings.link }}"
         >
           <div>
             {% if block.settings.heading != blank %}
-              <div class=' flex flex-row items-center justify-between'>
-                <h3 class=' headline1 text-[#171717]  decoration-none text-[24px] md:text-[36px]'>
+              <div class=" flex flex-row items-center justify-between">
+                <h3 class=" headline1 decoration-none  text-[24px] text-[#171717] md:text-[36px]">
                   {{ block.settings.heading }}
                 </h3>
                 <div>
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='30'
-                    height='24'
-                    viewBox='0 0 30 24'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="24"
+                    viewBox="0 0 30 24"
+                    fill="none"
                   >
                     <path d="M2 12H27.5556L17.5556 2" stroke="#171717" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M2 12H27.5556L17.5556 22" stroke="#171717" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -27,7 +27,7 @@
               </div>
             {% endif %}
             {% if block.settings.description != blank %}
-              <p class='text pt-[20px] md:pt-[30px] text-[#171717]/75'>
+              <p class="text pt-[20px] text-[#171717]/75 md:pt-[30px]">
                 {{ block.settings.description }}
               </p>
             {% endif %}

@@ -1,21 +1,21 @@
 <!-- Cart Drawer -->
 <div
-  class='cart-drawer fixed inset-y-[10px] right-[10px] w-[420px] bg-white shadow-2xl transform translate-x-[calc(100%+10px)] transition-transform duration-300 ease-in-out z-[9999] h-[95%] overflow-hidden rounded-[15px]'
+  class="cart-drawer fixed inset-y-[10px] right-[10px] z-[9999] h-[95%] w-[420px] translate-x-[calc(100%+10px)] transform overflow-hidden rounded-[15px] bg-white shadow-2xl transition-transform duration-300 ease-in-out"
   data-cart-drawer
 >
   <!-- Cart Header -->
-  <div class='cart-header  flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white sticky top-0 z-10 rounded-[15px]'>
-    <h2 class='headline2 text-[#171717]'>Kundvagn</h2>
+  <div class="cart-header  sticky top-0 z-10 flex items-center justify-between rounded-[15px] border-b border-gray-100 bg-white px-6 py-4">
+    <h2 class="headline2 text-[#171717]">Kundvagn</h2>
     <button
-      class='cart-close w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors'
+      class="cart-close flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-gray-100"
       data-cart-close
     >
       <svg
-        width='20'
-        height='20'
-        viewBox='0 0 24 24'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path d='M18 6L6 18M6 6L18 18' stroke='#171717' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
       </svg>
@@ -23,36 +23,36 @@
   </div>
 
   <!-- Cart Content -->
-  <div class='cart-content flex flex-col h-full'>
+  <div class="cart-content flex h-full flex-col">
     <!-- Cart Items -->
-    <div class='cart-items flex-1 overflow-y-auto' data-cart-items>
+    <div class="cart-items flex-1 overflow-y-auto" data-cart-items>
       <!-- Cart Items List -->
-      <div class='cart-items-list px-6 py-4' data-cart-items-list>
+      <div class="cart-items-list px-6 py-4" data-cart-items-list>
         <!-- Items will be populated by JavaScript -->
       </div>
     </div>
 
     <!-- Cart Footer -->
-    <div class='cart-footer border-t border-gray-100 bg-white p-6 space-y-4 mb-[25px]'>
+    <div class="cart-footer mb-[25px] space-y-4 border-t border-gray-100 bg-white p-6">
       <!-- Subtotal -->
-      <div class='flex justify-between items-center py-2'>
-        <span class='body1 text-[16px] text-[#171717]'>Delsumma</span>
-        <span class='knappetikett text-[#171717]' data-cart-total>0 kr</span>
+      <div class="flex items-center justify-between py-2">
+        <span class="body1 text-[16px] text-[#171717]">Delsumma</span>
+        <span class="knappetikett text-[#171717]" data-cart-total>0 kr</span>
       </div>
 
       <!-- Buttons -->
-      <div class='space-y-3'>
+      <div class="space-y-3">
         <button
-          class='checkout-btn w-full py-4 rounded-[10px] knappetikett text-[#171717] hover:bg-[#D4B82A] transition-colors'
-          style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+          class="checkout-btn knappetikett w-full rounded-[10px] py-4 text-[#171717] transition-colors hover:bg-[#D4B82A]"
+          style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
           onclick="window.location.href='/checkout'"
         >
           Gå till kassan
         </button>
 
         <a
-          href='{{ routes.cart_url }}'
-          class='view-cart-link block text-center text-[#171717] hover:text-gray-600 transition-colors body1 text-[16px] py-2'
+          href="{{ routes.cart_url }}"
+          class="view-cart-link body1 block py-2 text-center text-[16px] text-[#171717] transition-colors hover:text-gray-600"
         >
           Visa kundvagn
         </a>
@@ -63,7 +63,7 @@
 
 <!-- Cart Overlay -->
 <div
-  class='cart-overlay fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 z-[9998]'
+  class="cart-overlay invisible fixed inset-0 z-[9998] bg-black bg-opacity-50 opacity-0 transition-all duration-300"
   data-cart-overlay
 ></div>
 

@@ -71,19 +71,13 @@ function setupTocLinks() {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
-      console.log(
-        'Clicking TOC link:',
-        targetId,
-        'Found element:',
-        !!targetElement
-      );
+      console.log('Clicking TOC link:', targetId, 'Found element:', !!targetElement);
 
       if (targetElement) {
         // Calculate offset for fixed header or breathing room
         const headerOffset = 160; // Adjust this value as needed
         const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
@@ -94,7 +88,7 @@ function setupTocLinks() {
         // Try to find it manually
         const allHeadings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
         console.log('All headings with IDs:');
-        allHeadings.forEach(h => {
+        allHeadings.forEach((h) => {
           if (h.id) {
             console.log('- ' + h.textContent.trim() + ' -> ' + h.id);
           }
@@ -190,10 +184,7 @@ function updateProgress() {
   const tocLinks = document.querySelectorAll('nav a[href^="#"]');
   tocLinks.forEach(function (link) {
     link.classList.remove('active');
-    if (
-      currentHeading &&
-      link.getAttribute('href') === '#' + currentHeading.id
-    ) {
+    if (currentHeading && link.getAttribute('href') === '#' + currentHeading.id) {
       link.classList.add('active');
     }
   });

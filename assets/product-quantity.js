@@ -1,12 +1,8 @@
 // Quantity selector functionality - Global functions
 window.updateQuantity = function (change) {
   const quantityInput = document.getElementById('quantity-input');
-  const quantityDisplayMobile = document.getElementById(
-    'quantity-display-mobile'
-  );
-  const quantityDisplayDesktop = document.getElementById(
-    'quantity-display-desktop'
-  );
+  const quantityDisplayMobile = document.getElementById('quantity-display-mobile');
+  const quantityDisplayDesktop = document.getElementById('quantity-display-desktop');
 
   if (!quantityInput) {
     console.log('Quantity input not found');
@@ -15,10 +11,7 @@ window.updateQuantity = function (change) {
 
   const currentQuantity = parseInt(quantityInput.value) || 1;
   const maxQuantity = parseInt(quantityInput.max) || 99;
-  const newQuantity = Math.max(
-    1,
-    Math.min(currentQuantity + change, maxQuantity)
-  );
+  const newQuantity = Math.max(1, Math.min(currentQuantity + change, maxQuantity));
 
   console.log('Updating quantity from', currentQuantity, 'to', newQuantity); // Debug
 

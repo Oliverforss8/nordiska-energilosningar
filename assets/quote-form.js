@@ -15,9 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handle service option selection (multiple selection)
   if (serviceOptions.length === 0) {
-    console.error(
-      'No service options found! Check if .service-option class exists'
-    );
+    console.error('No service options found! Check if .service-option class exists');
     return;
   }
 
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Update hidden input with all selected services
       const selectedServices = [];
-      serviceOptions.forEach(opt => {
+      serviceOptions.forEach((opt) => {
         if (opt.getAttribute('data-selected') === 'true') {
           selectedServices.push(opt.getAttribute('data-service'));
         }
@@ -70,9 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Basic validation
       const name = this.querySelector('input[name="name"]');
       const email = this.querySelector('input[name="email"]');
-      const selectedService = selectedServiceInput
-        ? selectedServiceInput.value
-        : '';
+      const selectedService = selectedServiceInput ? selectedServiceInput.value : '';
 
       if (!name || !name.value.trim()) {
         alert('Vänligen fyll i ditt namn');
@@ -114,9 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (response.ok) {
             // Hide the form section and show the success section
             const formSection = document.querySelector('.quote-form-section');
-            const successSection = document.querySelector(
-              '.quote-success-section'
-            );
+            const successSection = document.querySelector('.quote-success-section');
 
             if (formSection && successSection) {
               formSection.style.display = 'none';
@@ -131,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (selectedServiceInput) selectedServiceInput.value = '';
 
             // Reset service buttons
-            serviceOptions.forEach(opt => {
+            serviceOptions.forEach((opt) => {
               opt.style.backgroundColor = 'white';
               opt.setAttribute('data-selected', 'false');
             });
@@ -140,9 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         } catch (error) {
           console.error('Error submitting form:', error);
-          alert(
-            'Det uppstod ett fel när formuläret skickades. Vänligen försök igen.'
-          );
+          alert('Det uppstod ett fel när formuläret skickades. Vänligen försök igen.');
         } finally {
           // Reset button
           if (submitBtn) {

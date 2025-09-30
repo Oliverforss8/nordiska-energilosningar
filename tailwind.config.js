@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./layout/*.liquid",
-    "./sections/*.liquid",
-    "./snippets/*.liquid",
-    "./templates/*.liquid",
-    "./templates/*.json"
+    './layout/*.liquid',
+    './sections/*.liquid',
+    './snippets/*.liquid',
+    './templates/*.liquid',
+    './templates/*.json',
   ],
   theme: {
     extend: {
@@ -33,16 +33,16 @@ module.exports = {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a',
-        }
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Georgia', 'serif'],
       },
       spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
-        '128': '32rem',
+        18: '4.5rem',
+        88: '22rem',
+        128: '32rem',
       },
       maxWidth: {
         '8xl': '88rem',
@@ -51,11 +51,11 @@ module.exports = {
       minHeight: {
         'screen-75': '75vh',
         'screen-50': '50vh',
-      }
+      },
     },
   },
   plugins: [],
   corePlugins: {
     preflight: false, // Disable Tailwind's base styles to avoid conflicts with Shopify
-  }
-}
+  },
+};

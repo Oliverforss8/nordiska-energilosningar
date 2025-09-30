@@ -1,44 +1,44 @@
 <section>
-  <div class='layout py-[62px] md:py-[87px]'>
-    <div class='text-left'>
+  <div class="layout py-[62px] md:py-[87px]">
+    <div class="text-left">
       {% if section.settings.heading != blank %}
-        <h2 class='text-[#171717] headline1'>
+        <h2 class="headline1 text-[#171717]">
           {{ section.settings.heading }}
         </h2>
       {% endif %}
 
       {% if section.settings.description != blank %}
-        <div class='text text-[#171717]/80 py-[40px] md:py-[50px]'>
+        <div class="text py-[40px] text-[#171717]/80 md:py-[50px]">
           {{ section.settings.description }}
         </div>
       {% endif %}
 
-      <div class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[15px]'>
+      <div class="grid grid-cols-1 gap-[15px] md:grid-cols-2 xl:grid-cols-4">
         {% for block in section.blocks %}
           <div
-            class='flex  flex-row md:flex-col rounded-[15px] bg-[#F3F1E8] items-center    justify-center p-[20px] gap-[20px] md:p-[30px] md:pt-[50px]'
+            class="flex  flex-row items-center justify-center gap-[20px] rounded-[15px]    bg-[#F3F1E8] p-[20px] md:flex-col md:p-[30px] md:pt-[50px]"
             {{ block.shopify_attributes }}
           >
             {% if block.settings.image != blank %}
-              <div class='w-[200px] md:w-auto md:h-[84px] flex items-center justify-center'>
+              <div class="flex w-[200px] items-center justify-center md:h-[84px] md:w-auto">
                 <img
-                  src='{{ block.settings.image | image_url: width: 139 }}'
-                  alt='{{ block.settings.image.alt | default: block.settings.text }}'
-                  width='139'
-                  height='84'
-                  loading='lazy'
-                  class='w-auto h-[65px] md:h-[90px]  object-contain'
+                  src="{{ block.settings.image | image_url: width: 139 }}"
+                  alt="{{ block.settings.image.alt | default: block.settings.text }}"
+                  width="139"
+                  height="84"
+                  loading="lazy"
+                  class="h-[65px] w-auto object-contain  md:h-[90px]"
                 >
               </div>
             {% endif %}
-            <div class='flex flex-col w-full'>
+            <div class="flex w-full flex-col">
               {% if block.settings.title != blank %}
-                <div class='md:pt-[60px] text-[#171717] text-[24px] md:text-[30px] headline1 items-start md:ml-[10px] justify-start flex w-full leading-[90%]'>
+                <div class="headline1 flex w-full items-start justify-start text-[24px] leading-[90%] text-[#171717] md:ml-[10px] md:pt-[60px] md:text-[30px]">
                   {{ block.settings.title }}
                 </div>
               {% endif %}
               {% if block.settings.description != blank %}
-                <div class='pt-[10px] text text-[20px] text-[#171717]/80'>
+                <div class="text pt-[10px] text-[20px] text-[#171717]/80">
                   {{ block.settings.description }}
                 </div>
               {% endif %}
@@ -47,20 +47,20 @@
         {% endfor %}
       </div>
     </div>
-    <div class='pt-[50px] flex md:flex-row flex-col gap-[10px] justify-start'>
+    <div class="flex flex-col justify-start gap-[10px] pt-[50px] md:flex-row">
       {% if section.settings.primary_button_text != blank %}
         <a
-          href='{{ section.settings.primary_button_url | default: "#" }}'
-          class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] w-auto md:shrink-0 no-underline'
-          style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+          href="{{ section.settings.primary_button_url | default: "#" }}"
+          class="knappetikett flex w-auto flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717] no-underline md:shrink-0"
+          style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
         >
           {{ section.settings.primary_button_text }}
           <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='22'
-            height='18'
-            viewBox='0 0 22 18'
-            fill='none'
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="18"
+            viewBox="0 0 22 18"
+            fill="none"
           >
             <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -70,17 +70,17 @@
 
       {% if section.settings.secondary_button_text != blank %}
         <a
-          href='{{ section.settings.secondary_button_url | default: "#" }}'
-          class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] bg-transparent md:shrink-0 no-underline'
-          style='border: 1px solid #171717;'
+          href="{{ section.settings.secondary_button_url | default: "#" }}"
+          class="knappetikett flex flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[17px] text-[#171717] no-underline md:shrink-0"
+          style="border: 1px solid #171717;"
         >
           {{ section.settings.secondary_button_text }}
           <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='22'
-            height='18'
-            viewBox='0 0 22 18'
-            fill='none'
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="18"
+            viewBox="0 0 22 18"
+            fill="none"
           >
             <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

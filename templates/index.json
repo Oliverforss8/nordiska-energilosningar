@@ -51,11 +51,7 @@
           }
         }
       },
-      "block_order": [
-        "card_H4qwkF",
-        "card_jqt4VF",
-        "card_UYi6He"
-      ],
+      "block_order": ["card_H4qwkF", "card_jqt4VF", "card_UYi6He"],
       "name": "Länkar sektion",
       "settings": {}
     },
@@ -191,11 +187,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_HAB8jq",
-        "product_card_PCcc9L",
-        "product_card_CwcHAR"
-      ],
+      "block_order": ["product_card_HAB8jq", "product_card_PCcc9L", "product_card_CwcHAR"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "banner_first",
@@ -265,11 +257,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_J3R9TJ",
-        "product_card_wQdkby",
-        "product_card_XGk6eH"
-      ],
+      "block_order": ["product_card_J3R9TJ", "product_card_wQdkby", "product_card_XGk6eH"],
       "disabled": true,
       "name": "Banner med 3 produkter",
       "settings": {
@@ -315,11 +303,7 @@
           }
         }
       },
-      "block_order": [
-        "review_fMhRqw",
-        "review_WnJfgk",
-        "review_rqBKMd"
-      ],
+      "block_order": ["review_fMhRqw", "review_WnJfgk", "review_rqBKMd"],
       "name": "Reviews",
       "settings": {
         "heading": "Vad våra kunder säger om oss",

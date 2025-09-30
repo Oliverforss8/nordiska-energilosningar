@@ -1,38 +1,38 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-bild-och-text"
+  assign section_class = 'section-bild-och-text'
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }} layout  py-[62px] md:py-[87px]'
+  id="{{ section_id }}"
+  class="{{ section_class }} layout  py-[62px] md:py-[87px]"
 >
-  <div class='gap-[40px] md:gap-[50px] justify-between items-center flex flex-col {% if section.settings.image_position == 'left' %}md:flex-row-reverse{% else %}md:flex-row{% endif %}'>
-    <div class='flex flex-col'>
+  <div class="flex flex-col items-center justify-between gap-[40px] md:gap-[50px] {% if section.settings.image_position == 'left' %}md:flex-row-reverse{% else %}md:flex-row{% endif %}">
+    <div class="flex flex-col">
       {% if section.settings.title != blank %}
-        <div class='headline1 text-[#171717]'>{{ section.settings.title }}</div>
+        <div class="headline1 text-[#171717]">{{ section.settings.title }}</div>
       {% endif %}
 
       {% if section.settings.text != blank %}
-        <div class='text text-[#171717]/80 pt-[40px] md:pt-[50px]'>
+        <div class="text pt-[40px] text-[#171717]/80 md:pt-[50px]">
           {{ section.settings.text }}
         </div>
       {% endif %}
       {% if section.blocks.size > 0 %}
-        <div class='flex flex-wrap pt-[50px] gap-[10px]'>
+        <div class="flex flex-wrap gap-[10px] pt-[50px]">
           {% for block in section.blocks %}
-            {% if block.type == "button" %}
+            {% if block.type == 'button' %}
               <a
-                href='{{ block.settings.url }}'
-                class='px-[15px] py-[15px] rounded-[10px] knappetikett text-[#171717] transition-all duration-300 text-[15px] inline-flex items-center gap-[10px] bg-[#EBCF2F] hover:bg-[#D4B82A]'
+                href="{{ block.settings.url }}"
+                class="knappetikett inline-flex items-center gap-[10px] rounded-[10px] bg-[#EBCF2F] px-[15px] py-[15px] text-[15px] text-[#171717] transition-all duration-300 hover:bg-[#D4B82A]"
                 {{ block.shopify_attributes }}
               >
                 <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='14'
-                  height='11'
-                  viewBox='0 0 14 11'
-                  fill='none'
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="11"
+                  viewBox="0 0 14 11"
+                  fill="none"
                 >
                   <path d="M4.78796 8.31737L12.4609 0.767261C12.642 0.589087 12.8532 0.5 13.0946 0.5C13.3361 0.5 13.5473 0.589087 13.7284 0.767261C13.9095 0.945434 14 1.15716 14 1.40245C14 1.64774 13.9095 1.85917 13.7284 2.03675L5.42171 10.2327C5.24064 10.4109 5.02939 10.5 4.78796 10.5C4.54653 10.5 4.33528 10.4109 4.15421 10.2327L0.261162 6.402C0.0800896 6.22383 -0.00682502 6.0124 0.000417858 5.76771C0.00766074 5.52301 0.10212 5.31128 0.283795 5.13252C0.465471 4.95375 0.680645 4.86466 0.929317 4.86526C1.17799 4.86585 1.39286 4.95494 1.57393 5.13252L4.78796 8.31737Z" fill="#171717"/>
                 </svg>
@@ -46,46 +46,44 @@
       {% endif %}
     </div>
 
-    <div class='relative w-full md:w-[2500px]  lg:shrink-0 h-[350px] md:h-[450px] lg:w-[450px]'>
-      {% if section.settings.media_type == "video"
-        and section.settings.video != blank
-      %}
+    <div class="relative h-[350px] w-full  md:h-[450px] md:w-[2500px] lg:w-[450px] lg:shrink-0">
+      {% if section.settings.media_type == 'video' and section.settings.video != blank %}
         <!-- Video -->
         <video
-          class='w-full h-full object-cover rounded-[15px]'
-          width='450'
-          height='450'
+          class="h-full w-full rounded-[15px] object-cover"
+          width="450"
+          height="450"
           autoplay
           muted
           loop
           playsinline
         >
           <source
-            src='{{ section.settings.video.sources[1].url }}'
-            type='video/mp4'
+            src="{{ section.settings.video.sources[1].url }}"
+            type="video/mp4"
           >
           <source
-            src='{{ section.settings.video.sources[0].url }}'
-            type='video/webm'
+            src="{{ section.settings.video.sources[0].url }}"
+            type="video/webm"
           >
         </video>
 
         {% if section.settings.image_button_text != blank
           and section.settings.image_button_link != blank
         %}
-          <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+          <div class="absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]">
             <a
-              href='{{ section.settings.image_button_link }}'
-              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
-              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+              href="{{ section.settings.image_button_link }}"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717]"
+              style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;"
             >
               {{ section.settings.image_button_text }}
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='22'
-                height='18'
-                viewBox='0 0 22 18'
-                fill='none'
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
               >
                 <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -93,35 +91,33 @@
             </a>
           </div>
         {% endif %}
-      {% elsif section.settings.media_type == "image"
-        and section.settings.image != blank
-      %}
+      {% elsif section.settings.media_type == 'image' and section.settings.image != blank %}
         <!-- Image -->
         <img
-          src='{{ section.settings.image | image_url: width: 450 }}'
-          alt='{{ section.settings.image.alt | default: section.settings.title }}'
-          class='w-full h-full object-cover rounded-[15px]'
-          width='450'
-          height='450'
-          loading='lazy'
+          src="{{ section.settings.image | image_url: width: 450 }}"
+          alt="{{ section.settings.image.alt | default: section.settings.title }}"
+          class="h-full w-full rounded-[15px] object-cover"
+          width="450"
+          height="450"
+          loading="lazy"
         >
 
         {% if section.settings.image_button_text != blank
           and section.settings.image_button_link != blank
         %}
-          <div class='absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]'>
+          <div class="absolute bottom-[20px] left-[20px] md:bottom-[30px] md:left-[30px]">
             <a
-              href='{{ section.settings.image_button_link }}'
-              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717] shrink-0'
-              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;'
+              href="{{ section.settings.image_button_link }}"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717]"
+              style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; text-decoration: none;"
             >
               {{ section.settings.image_button_text }}
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='22'
-                height='18'
-                viewBox='0 0 22 18'
-                fill='none'
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
               >
                 <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -130,8 +126,8 @@
           </div>
         {% endif %}
       {% else %}
-        <div class='w-full h-full bg-gray-200 rounded-[10px] flex items-center justify-center text-gray-500'>
-          {% if section.settings.media_type == "video" %}
+        <div class="flex h-full w-full items-center justify-center rounded-[10px] bg-gray-200 text-gray-500">
+          {% if section.settings.media_type == 'video' %}
             Välj en video
           {% else %}
             Välj en bild

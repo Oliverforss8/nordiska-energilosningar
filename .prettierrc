@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "plugins": ["@shopify/prettier-plugin-liquid", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": ["**/*.liquid"],
+      "options": {
+        "parser": "liquid-html",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["**/*.{css,scss,sass}"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["**/*.{js,jsx,ts,tsx}"],
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": ["**/*.{json,jsonc}"]
+    }
+  ]
+}

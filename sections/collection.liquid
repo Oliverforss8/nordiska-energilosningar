@@ -5,33 +5,31 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/collection
 {% endcomment %}
 <section>
-  <div class='layout pt-[100px] md:pt-[150px]'>
+  <div class="layout pt-[100px] md:pt-[150px]">
     <!-- Breadcrumbs -->
-    <div class=' headline1 font-[300] text-[20px]'>
-      <nav aria-label='Breadcrumb'>
+    <div class=" headline1 text-[20px] font-[300]">
+      <nav aria-label="Breadcrumb">
         <a
-          href='{{ routes.root_url }}'
-          class='text-[#171717] hover:opacity-70 transition-opacity'
+          href="{{ routes.root_url }}"
+          class="text-[#171717] transition-opacity hover:opacity-70"
         >
           Hem
         </a>
-        <span class='mx-2'>/</span>
+        <span class="mx-2">/</span>
         {% if collection %}
-          <span class='font-[400]'>{{ collection.title }}</span>
+          <span class="font-[400]">{{ collection.title }}</span>
         {% else %}
-          <span class='font-[400]'>Produkter</span>
+          <span class="font-[400]">Produkter</span>
         {% endif %}
       </nav>
     </div>
 
     <!-- Collection Header -->
     {% if collection %}
-      <div class='pt-[60px] pb-[50px]'>
-        <h1 class='headline1 text-[60px] '>
-          Upptäck våra {{ collection.title }}
-        </h1>
+      <div class="pb-[50px] pt-[60px]">
+        <h1 class="headline1 text-[60px] ">Upptäck våra {{ collection.title }}</h1>
         {% if collection.description != blank %}
-          <div class='body1 text-[20px] pt-[30px] text-[#171717]/80 max-w-[800px]'>
+          <div class="body1 max-w-[800px] pt-[30px] text-[20px] text-[#171717]/80">
             {{ collection.description }}
           </div>
         {% endif %}
@@ -41,41 +39,41 @@
     <!-- Products Grid -->
     {% if collection.products.size > 0 %}
       <div
-        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]'
-        id='products-grid'
+        class="grid grid-cols-1 gap-[20px] md:grid-cols-2 lg:grid-cols-3"
+        id="products-grid"
       >
         {% for product in collection.products %}
           <div
-            class='product-card p-[30px] flex flex-col-reverse rounded-[10px] transition-colors duration-300 cursor-pointer{% if forloop.first %} active{% endif %}'
+            class="product-card flex flex-col-reverse rounded-[10px] p-[30px] transition-colors duration-300 cursor-pointer{% if forloop.first %} active{% endif %}"
             onclick="window.location.href='{{ product.url }}'"
-            data-product-index='{{ forloop.index0 }}'
+            data-product-index="{{ forloop.index0 }}"
           >
             <!-- Product Info (Top when reversed) -->
-            <div class='flex flex-col justify-between'>
-              <div class='flex flex-col'>
-                <div class='headline1 text-[36px] xl:pt-0 pt-[40px] text-[#171717]'>
+            <div class="flex flex-col justify-between">
+              <div class="flex flex-col">
+                <div class="headline1 pt-[40px] text-[36px] text-[#171717] xl:pt-0">
                   {{ product.title }}
                 </div>
                 {% if product.description != blank %}
-                  <div class='text-[#171717]/75 text py-[30px]'>
+                  <div class="text py-[30px] text-[#171717]/75">
                     {{ product.description | strip_html | truncate: 120 }}
                   </div>
                 {% endif %}
               </div>
-              <div class='flex gap-[10px] shrink-0'>
+              <div class="flex shrink-0 gap-[10px]">
                 <a
-                  href='{{ product.url }}'
-                  class='banner-3-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
-                  style='border: 1px solid #171717;'
-                  onclick='event.stopPropagation()'
+                  href="{{ product.url }}"
+                  class="banner-3-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
+                  style="border: 1px solid #171717;"
+                  onclick="event.stopPropagation()"
                 >
                   Läs mer
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='18'
-                    viewBox='0 0 22 18'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
                   >
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,23 +84,23 @@
 
             <!-- Product Image (Bottom when reversed) -->
             <div
-              class='mb-[20px]'
-              style='
+              class="mb-[20px]"
+              style="
                 aspect-ratio: 18/23;
                 height: 285.081px;
-              '
+              "
             >
               {% if product.featured_image %}
                 <img
-                  src='{{ product.featured_image | image_url: width: 300 }}'
-                  alt='{{ product.featured_image.alt | default: product.title }}'
-                  width='200'
-                  height='200'
-                  class='h-full w-full object-contain rounded-[5px]'
-                  loading='lazy'
+                  src="{{ product.featured_image | image_url: width: 300 }}"
+                  alt="{{ product.featured_image.alt | default: product.title }}"
+                  width="200"
+                  height="200"
+                  class="h-full w-full rounded-[5px] object-contain"
+                  loading="lazy"
                 >
               {% else %}
-                <div class='w-full h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                <div class="flex h-full w-full items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
                   Ingen bild
                 </div>
               {% endif %}
@@ -112,14 +110,14 @@
       </div>
     {% else %}
       <!-- Empty State -->
-      <div class='text-center py-[100px]'>
-        <h2 class='headline1 text-[40px] mb-[20px]'>Inga produkter hittades</h2>
-        <p class='body1 text-[20px] text-[#171717]/80 mb-[30px]'>
+      <div class="py-[100px] text-center">
+        <h2 class="headline1 mb-[20px] text-[40px]">Inga produkter hittades</h2>
+        <p class="body1 mb-[30px] text-[20px] text-[#171717]/80">
           Det finns för närvarande inga produkter i denna kollektion.
         </p>
         <a
-          href='{{ routes.root_url }}'
-          class='inline-flex px-[30px] py-[18px] bg-[#EBCF2F] rounded-[10px] knappetikett text-[#171717] hover:opacity-80 transition-opacity'
+          href="{{ routes.root_url }}"
+          class="knappetikett inline-flex rounded-[10px] bg-[#EBCF2F] px-[30px] py-[18px] text-[#171717] transition-opacity hover:opacity-80"
         >
           Tillbaka till startsidan
         </a>

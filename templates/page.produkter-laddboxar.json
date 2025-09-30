@@ -61,11 +61,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_JMzrXX",
-        "product_card_GiXHfA",
-        "product_card_Jgx9FK"
-      ],
+      "block_order": ["product_card_JMzrXX", "product_card_GiXHfA", "product_card_Jgx9FK"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
@@ -114,12 +110,7 @@
           }
         }
       },
-      "block_order": [
-        "feature_PyHkAP",
-        "feature_7rQTpL",
-        "feature_WeR6dU",
-        "feature_EqQaKA"
-      ],
+      "block_order": ["feature_PyHkAP", "feature_7rQTpL", "feature_WeR6dU", "feature_EqQaKA"],
       "name": "Icon section",
       "settings": {
         "heading": "Fördelar med solceller",

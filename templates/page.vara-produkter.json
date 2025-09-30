@@ -81,11 +81,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_FyyC7A",
-        "product_card_tMxjy9",
-        "product_card_rwDpXn"
-      ],
+      "block_order": ["product_card_FyyC7A", "product_card_tMxjy9", "product_card_rwDpXn"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "banner_first",
@@ -136,11 +132,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_Rxaze4",
-        "product_card_azRKYx",
-        "product_card_azghfh"
-      ],
+      "block_order": ["product_card_Rxaze4", "product_card_azRKYx", "product_card_azghfh"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "banner_first",
@@ -191,11 +183,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_jija74",
-        "product_card_wGVBt4",
-        "product_card_Fh46Hy"
-      ],
+      "block_order": ["product_card_jija74", "product_card_wGVBt4", "product_card_Fh46Hy"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "banner_first",
@@ -246,11 +234,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_cW7hLf",
-        "product_card_miqUqE",
-        "product_card_QBkP4D"
-      ],
+      "block_order": ["product_card_cW7hLf", "product_card_miqUqE", "product_card_QBkP4D"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "banner_first",

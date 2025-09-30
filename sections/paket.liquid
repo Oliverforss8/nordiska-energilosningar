@@ -1,27 +1,27 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-" | append: section.type
+  assign section_class = 'section-' | append: section.type
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }} layout py-[60px] md:py-[85px]'
+  id="{{ section_id }}"
+  class="{{ section_class }} layout py-[60px] md:py-[85px]"
 >
-  <div class='flex flex-col md:flex-row gap-[30px] md:gap-[50px] items-center'>
+  <div class="flex flex-col items-center gap-[30px] md:flex-row md:gap-[50px]">
     <!-- Package Image -->
-    <div class='w-full md:w-1/2'>
+    <div class="w-full md:w-1/2">
       {% if section.settings.image != blank %}
-        <div class=' rounded-[15px] p-[30px] aspect-square flex items-center justify-center'>
+        <div class=" flex aspect-square items-center justify-center rounded-[15px] p-[30px]">
           <img
-            src='{{ section.settings.image | image_url: width: 2000 }}'
-            alt='{{ section.settings.image.alt | default: section.settings.title }}'
-            class='w-full h-full object-contain'
-            loading='lazy'
+            src="{{ section.settings.image | image_url: width: 2000 }}"
+            alt="{{ section.settings.image.alt | default: section.settings.title }}"
+            class="h-full w-full object-contain"
+            loading="lazy"
           >
         </div>
       {% else %}
-        <div class='bg-[#F6F6F6] rounded-[15px] p-[30px] aspect-square flex items-center justify-center'>
-          <div class='text-gray-500 text-center'>
+        <div class="flex aspect-square items-center justify-center rounded-[15px] bg-[#F6F6F6] p-[30px]">
+          <div class="text-center text-gray-500">
             <p>Ingen bild vald</p>
           </div>
         </div>
@@ -29,36 +29,36 @@
     </div>
 
     <!-- Package Details -->
-    <div class='w-full md:w-1/2 '>
+    <div class="w-full md:w-1/2 ">
       <!-- Title -->
       {% if section.settings.title != blank %}
-        <h2 class='headline1 text-[60px]  text-[#171717]'>
+        <h2 class="headline1 text-[60px]  text-[#171717]">
           {{ section.settings.title }}
         </h2>
       {% endif %}
 
       <!-- Price -->
       {% if section.settings.price != blank %}
-        <div class='headline1 font-[500] text-[36px] py-[50px] text-[#171717]'>
+        <div class="headline1 py-[50px] text-[36px] font-[500] text-[#171717]">
           {{ section.settings.price }}
         </div>
       {% endif %}
 
       <!-- Description -->
       {% if section.settings.description != blank %}
-        <div class='body1 text-[20px] text-[#171717]/80'>
+        <div class="body1 text-[20px] text-[#171717]/80">
           {{ section.settings.description }}
         </div>
       {% endif %}
 
       <!-- Buttons -->
       {% if section.blocks.size > 0 %}
-        <div class='flex flex-wrap pt-[50px] gap-[10px]'>
+        <div class="flex flex-wrap gap-[10px] pt-[50px]">
           {% for block in section.blocks %}
-            {% if block.type == "button" %}
+            {% if block.type == 'button' %}
               <a
-                href='{{ block.settings.url }}'
-                class='px-[15px] py-[15px] rounded-[10px] knappetikett text-[#171717] transition-all duration-300 text-[15px] inline-flex items-center gap-[10px] bg-[#EBCF2F] hover:bg-[#D4B82A]'
+                href="{{ block.settings.url }}"
+                class="knappetikett inline-flex items-center gap-[10px] rounded-[10px] bg-[#EBCF2F] px-[15px] py-[15px] text-[15px] text-[#171717] transition-all duration-300 hover:bg-[#D4B82A]"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.text }}

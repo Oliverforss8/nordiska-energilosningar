@@ -1,75 +1,75 @@
-<section class='layout pt-[150px]'>
-  <div class='flex flex-col lg:flex-row  xl:grid xl:grid-cols-2 gap-[20px]'>
+<section class="layout pt-[150px]">
+  <div class="flex flex-col gap-[20px]  lg:flex-row xl:grid xl:grid-cols-2">
     <!-- Form Section -->
-    <div class='quote-form-section p-[20px] md:p-[50px] bg-[#F3F1E8] rounded-[15px] lg:w-[64%] xl:w-full xl:flex-shrink-0'>
-      <div class='flex flex-col'>
-        <div class='headline1 text-[40px]'>
-          {{ section.settings.title | default: "Offert förfrågan" }}
+    <div class="quote-form-section rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[50px] lg:w-[64%] xl:w-full xl:flex-shrink-0">
+      <div class="flex flex-col">
+        <div class="headline1 text-[40px]">
+          {{ section.settings.title | default: 'Offert förfrågan' }}
         </div>
-        <div class=' body1 text-[20px] py-[30px] opacity-80'>
+        <div class=" body1 py-[30px] text-[20px] opacity-80">
           {{
             section.settings.description
-            | default: "<p>Ett solcellssystem med batteri och AI-styrning gör att du inte bara producerar egen el!</p>"
+            | default: '<p>Ett solcellssystem med batteri och AI-styrning gör att du inte bara producerar egen el!</p>'
           }}
         </div>
         <form
-          class='flex flex-col gap-[15px] md:gap-[20px]'
-          id='quote-form'
+          class="flex flex-col gap-[15px] md:gap-[20px]"
+          id="quote-form"
         >
           <input
-            class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-            placeholder='För- & efternamn'
-            type='text'
-            name='name'
+            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+            placeholder="För- & efternamn"
+            type="text"
+            name="name"
             required
           >
           <input
-            class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-            placeholder='E-postadress'
-            type='email'
-            name='email'
+            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+            placeholder="E-postadress"
+            type="email"
+            name="email"
             required
           >
           <input
-            class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-            placeholder='Telefonnummer'
-            type='tel'
-            name='phone'
+            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+            placeholder="Telefonnummer"
+            type="tel"
+            name="phone"
           >
           <input
-            class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-            placeholder='Adress'
-            type='text'
-            name='address'
+            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+            placeholder="Adress"
+            type="text"
+            name="address"
           >
-          <div class='body1 text-[20px] md:text-[25px] flex gap-[5px] flex-col md:flex-row'>
+          <div class="body1 flex flex-col gap-[5px] text-[20px] md:flex-row md:text-[25px]">
             Hur kan vi hjälpa dig?
-            <span class='text-[13px] md:text-[15px] opacity-70'>
+            <span class="text-[13px] opacity-70 md:text-[15px]">
               Klicka för att välja (flera val möjligt)*
             </span>
           </div>
-          <div class='flex flex-row flex-wrap gap-[10px]'>
+          <div class="flex flex-row flex-wrap gap-[10px]">
             {% for block in section.blocks %}
-              {% if block.type == "service_option" %}
+              {% if block.type == 'service_option' %}
                 {% liquid
                   assign service_key = block.settings.service_key | default: block.settings.label | handleize
                 %}
                 <button
-                  type='button'
-                  class='bg-white headline1 text-[18px] md:text-[20px] px-[15px] py-[10px] rounded-[10px] flex flex-row gap-[10px] items-center justify-center service-option'
-                  data-service='{{ service_key }}'
+                  type="button"
+                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                  data-service="{{ service_key }}"
                 >
                   {% if block.settings.icon_svg != blank %}
                     {{ block.settings.icon_svg }}
                   {% elsif block.settings.icon_image != blank %}
                     <img
-                      src='{{ block.settings.icon_image | image_url: width: 40 }}'
-                      alt='{{ block.settings.label | escape }}'
-                      width='40'
-                      height='40'
+                      src="{{ block.settings.icon_image | image_url: width: 40 }}"
+                      alt="{{ block.settings.label | escape }}"
+                      width="40"
+                      height="40"
                     >
                   {% endif %}
-                  {{ block.settings.label | default: "Tjänst" }}
+                  {{ block.settings.label | default: 'Tjänst' }}
                 </button>
               {% endif %}
             {% endfor %}
@@ -77,46 +77,46 @@
 
           <!-- Hidden fields with product information -->
           <input
-            type='hidden'
-            name='selected_service'
-            id='selected_service'
+            type="hidden"
+            name="selected_service"
+            id="selected_service"
           >
           <input
-            type='hidden'
-            name='product_title'
-            value='{{ product.title }}'
+            type="hidden"
+            name="product_title"
+            value="{{ product.title }}"
           >
           <input
-            type='hidden'
-            name='product_handle'
-            value='{{ product.handle }}'
+            type="hidden"
+            name="product_handle"
+            value="{{ product.handle }}"
           >
           <input
-            type='hidden'
-            name='product_id'
-            value='{{ product.id }}'
+            type="hidden"
+            name="product_id"
+            value="{{ product.id }}"
           >
           <input
-            type='hidden'
-            name='product_url'
-            value='{{ shop.secure_url }}{{ product.url }}'
+            type="hidden"
+            name="product_url"
+            value="{{ shop.secure_url }}{{ product.url }}"
           >
           <input
-            type='hidden'
-            name='_subject'
-            value='Offert förfrågan för {{ product.title }}'
+            type="hidden"
+            name="_subject"
+            value="Offert förfrågan för {{ product.title }}"
           >
           <button
-            type='submit'
-            class='w-full headline1 text-[18px] md:text-[20px] bg-[#EFD959] rounded-[10px] py-[14px] flex flex-row gap-[15px] md:gap-[20px] items-center justify-center quote-submit-btn'
+            type="submit"
+            class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-[10px] bg-[#EFD959] py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
           >
             Få ditt förslag
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='18'
-              height='14'
-              viewBox='0 0 18 14'
-              fill='none'
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              fill="none"
             >
               <path d="M1.66699 7.00009H16.667L10.7974 1.13049" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M1.66699 7.00004H16.667L10.7974 12.8696" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -128,43 +128,43 @@
 
     <!-- Success Section (hidden initially) -->
     <div
-      class='quote-success-section p-[20px] md:p-[50px] rounded-[15px] lg:w-[64%] xl:w-full xl:flex-shrink-0 h-full flex flex-col relative hidden'
-      style='background: #EFD959;'
+      class="quote-success-section relative flex hidden h-full flex-col rounded-[15px] p-[20px] md:p-[50px] lg:w-[64%] xl:w-full xl:flex-shrink-0"
+      style="background: #EFD959;"
     >
       <div
-        class='absolute inset-0 rounded-[15px]'
-        style='background: url({{ "Gradient.png" | asset_url }}) center/cover no-repeat; opacity: 0.5;'
+        class="absolute inset-0 rounded-[15px]"
+        style="background: url({{ "Gradient.png" | asset_url }}) center/cover no-repeat; opacity: 0.5;"
       ></div>
-      <div class='relative justify-between gap-[50px] z-10 flex flex-col h-full'>
-        <div class='flex flex-col h-full'>
-          <div class='headline1 text-[40px]'>Tack för din förfrågan!</div>
-          <div class='body1 text-[20px] pt-[30px] opacity-80'>
-            Vi har mottagit din offertförfrågan och återkommer inom kort med ett
-            skräddarsytt förslag.
+      <div class="relative z-10 flex h-full flex-col justify-between gap-[50px]">
+        <div class="flex h-full flex-col">
+          <div class="headline1 text-[40px]">Tack för din förfrågan!</div>
+          <div class="body1 pt-[30px] text-[20px] opacity-80">
+            Vi har mottagit din offertförfrågan och återkommer inom kort med ett skräddarsytt
+            förslag.
           </div>
         </div>
-        <div class='flex flex-col h-full'>
-          <div class='headline1 text-[40px] pb-[30px]'>Vad händer nu?</div>
-          <div class='flex flex-wrap gap-[20px]'>
-            <button class='bg-white items-center gap-[30px] flex flex-row headline1 text-[24px] px-[30px] rounded-[15px] py-[15px]'>
+        <div class="flex h-full flex-col">
+          <div class="headline1 pb-[30px] text-[40px]">Vad händer nu?</div>
+          <div class="flex flex-wrap gap-[20px]">
+            <button class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]">
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='39'
-                height='36'
-                viewBox='0 0 39 36'
-                fill='none'
+                xmlns="http://www.w3.org/2000/svg"
+                width="39"
+                height="36"
+                viewBox="0 0 39 36"
+                fill="none"
               >
                 <path opacity="0.8" d="M4.562 26.5831C2 24.5013 2 22.9262 2 16.2222C2 9.51822 2 6.16533 4.562 4.08356C7.1275 2 11.2505 2 19.5 2C27.7495 2 31.8742 2 34.4362 4.08356C36.9982 6.16711 37 9.51822 37 16.2222C37 22.9262 37 24.5013 34.4362 26.5831C31.876 28.6667 27.7495 28.6667 19.5 28.6667C15.1075 28.6667 12.85 31.7564 9 34V28.2898C7.0855 28 5.67675 27.4898 4.562 26.5831Z" stroke="#171717" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Vi kontaktar dig
             </button>
-            <button class='bg-white items-center gap-[30px] flex flex-row headline1 text-[24px] px-[30px] rounded-[15px] py-[15px]'>
+            <button class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]">
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='36'
-                height='44'
-                viewBox='0 0 36 44'
-                fill='none'
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="44"
+                viewBox="0 0 36 44"
+                fill="none"
               >
                 <g opacity="0.8">
                   <path d="M27.05 5H32C32.5304 5 33.0391 5.21071 33.4142 5.58579C33.7893 5.96086 34 6.46957 34 7V40C34 40.5304 33.7893 41.0391 33.4142 41.4142C33.0391 41.7893 32.5304 42 32 42H4C3.46957 42 2.96086 41.7893 2.58579 41.4142C2.21071 41.0391 2 40.5304 2 40V7C2 6.46957 2.21071 5.96086 2.58579 5.58579C2.96086 5.21071 3.46957 5 4 5H11V8H25V5H27.05Z" stroke="#171717" stroke-width="3" stroke-linejoin="round"/>
@@ -173,13 +173,13 @@
               </svg>
               Du får ett anpassat förslag
             </button>
-            <button class='bg-white items-center gap-[30px] flex flex-row headline1 text-[24px] px-[30px] rounded-[15px] py-[15px]'>
+            <button class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]">
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='33'
-                height='40'
-                viewBox='0 0 33 40'
-                fill='none'
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="40"
+                viewBox="0 0 33 40"
+                fill="none"
               >
                 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M16.5 9.74998e-06C13.8653 -0.00351821 11.3181 0.950489 9.32765 2.68626C7.33723 4.42203 6.03772 6.82261 5.66856 9.44571C5.2994 12.0688 5.88545 14.7377 7.31874 16.9606C8.75203 19.1835 10.936 20.8108 13.4682 21.5424C9.86986 21.9818 6.78383 23.2606 4.45726 25.5667C1.49781 28.497 0 32.8636 0 38.5606C0 38.9424 0.150819 39.3085 0.419278 39.5784C0.687738 39.8484 1.05185 40 1.43151 40C1.81117 40 2.17528 39.8484 2.44373 39.5784C2.71219 39.3085 2.86301 38.9424 2.86301 38.5606C2.86301 33.3485 4.22822 29.8333 6.4674 27.6152C8.70959 25.3939 12.0608 24.2424 16.5 24.2424C20.9392 24.2424 24.2904 25.3939 26.5356 27.6152C28.7718 29.8364 30.137 33.3485 30.137 38.5606C30.137 38.9424 30.2878 39.3085 30.5563 39.5784C30.8247 39.8484 31.1888 40 31.5685 40C31.9482 40 32.3123 39.8484 32.5807 39.5784C32.8492 39.3085 33 38.9424 33 38.5606C33 32.8636 31.5022 28.5 28.5397 25.5667C26.2192 23.2636 23.1301 21.9818 19.5318 21.5424C22.0556 20.8025 24.2296 19.1728 25.6554 16.952C27.0812 14.7313 27.6633 12.0682 27.295 9.45089C26.9266 6.83362 25.6326 4.43749 23.6499 2.7017C21.6672 0.965914 19.1289 0.00674768 16.5 9.74998e-06ZM8.43835 10.9849C8.43835 8.835 9.2877 6.77319 10.7996 5.25301C12.3114 3.73283 14.3619 2.8788 16.5 2.8788C18.6381 2.8788 20.6886 3.73283 22.2004 5.25301C23.7123 6.77319 24.5616 8.835 24.5616 10.9849C24.5616 13.1347 23.7123 15.1965 22.2004 16.7167C20.6886 18.2369 18.6381 19.0909 16.5 19.0909C14.3619 19.0909 12.3114 18.2369 10.7996 16.7167C9.2877 15.1965 8.43835 13.1347 8.43835 10.9849Z" fill="#171717"/>
               </svg>
@@ -189,113 +189,113 @@
         </div>
       </div>
     </div>
-    <div class='flex flex-col gap-[10px] flex-1'>
-      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
+    <div class="flex flex-1 flex-col gap-[10px]">
+      <div class="relative h-[200px] overflow-hidden rounded-[15px] lg:h-full">
         <img
-          src='{{ section.settings.card_1_image | image_url: width: 600 }}'
-          alt='{{ section.settings.card_1_image.alt | escape }}'
-          width='600'
-          height='300'
-          class='w-full h-full object-cover absolute inset-0'
+          src="{{ section.settings.card_1_image | image_url: width: 600 }}"
+          alt="{{ section.settings.card_1_image.alt | escape }}"
+          width="600"
+          height="300"
+          class="absolute inset-0 h-full w-full object-cover"
         >
         {% if section.settings.card_1_overlay_opacity > 0 %}
           <div
-            class='absolute inset-0 rounded-[15px]'
-            style='background-color: rgba(0, 0, 0, {{ section.settings.card_1_overlay_opacity | divided_by: 100.0 }});'
+            class="absolute inset-0 rounded-[15px]"
+            style="background-color: rgba(0, 0, 0, {{ section.settings.card_1_overlay_opacity | divided_by: 100.0 }});"
           ></div>
         {% endif %}
         {% if section.settings.card_1_button_text != blank
           and section.settings.card_1_button_link != blank
         %}
           <a
-            href='{{ section.settings.card_1_button_link }}'
-            class='absolute p-[20px]  inset-0 flex items-end justify-start no-underline z-10'
+            href="{{ section.settings.card_1_button_link }}"
+            class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
-            <button class='bg-[#FFF] text-[15px] md:text-[20px] py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+            <button class="knappetikett rounded-[10px] bg-[#FFF] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
               {{ section.settings.card_1_button_text | escape }}
             </button>
           </a>
         {% endif %}
       </div>
 
-      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
+      <div class="relative h-[200px] overflow-hidden rounded-[15px] lg:h-full">
         <img
-          src='{{ section.settings.card_2_image | image_url: width: 600 }}'
-          alt='{{ section.settings.card_2_image.alt | escape }}'
-          width='600'
-          height='300'
-          class='w-full h-full object-cover absolute inset-0'
+          src="{{ section.settings.card_2_image | image_url: width: 600 }}"
+          alt="{{ section.settings.card_2_image.alt | escape }}"
+          width="600"
+          height="300"
+          class="absolute inset-0 h-full w-full object-cover"
         >
         {% if section.settings.card_2_overlay_opacity > 0 %}
           <div
-            class='absolute inset-0 rounded-[15px]'
-            style='background-color: rgba(0, 0, 0, {{ section.settings.card_2_overlay_opacity | divided_by: 100.0 }});'
+            class="absolute inset-0 rounded-[15px]"
+            style="background-color: rgba(0, 0, 0, {{ section.settings.card_2_overlay_opacity | divided_by: 100.0 }});"
           ></div>
         {% endif %}
         {% if section.settings.card_2_button_text != blank
           and section.settings.card_2_button_link != blank
         %}
           <a
-            href='{{ section.settings.card_2_button_link }}'
-            class='absolute p-[20px]  inset-0 flex items-end justify-start no-underline z-10'
+            href="{{ section.settings.card_2_button_link }}"
+            class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
-            <button class='bg-[#FFF] text-[15px] md:text-[20px] py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+            <button class="knappetikett rounded-[10px] bg-[#FFF] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
               {{ section.settings.card_2_button_text | escape }}
             </button>
           </a>
         {% endif %}
       </div>
 
-      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
+      <div class="relative h-[200px] overflow-hidden rounded-[15px] lg:h-full">
         <img
-          src='{{ section.settings.card_3_image | image_url: width: 600 }}'
-          alt='{{ section.settings.card_3_image.alt | escape }}'
-          width='600'
-          height='300'
-          class='w-full h-full object-cover absolute inset-0'
+          src="{{ section.settings.card_3_image | image_url: width: 600 }}"
+          alt="{{ section.settings.card_3_image.alt | escape }}"
+          width="600"
+          height="300"
+          class="absolute inset-0 h-full w-full object-cover"
         >
         {% if section.settings.card_3_overlay_opacity > 0 %}
           <div
-            class='absolute inset-0 rounded-[15px]'
-            style='background-color: rgba(0, 0, 0, {{ section.settings.card_3_overlay_opacity | divided_by: 100.0 }});'
+            class="absolute inset-0 rounded-[15px]"
+            style="background-color: rgba(0, 0, 0, {{ section.settings.card_3_overlay_opacity | divided_by: 100.0 }});"
           ></div>
         {% endif %}
         {% if section.settings.card_3_button_text != blank
           and section.settings.card_3_button_link != blank
         %}
           <a
-            href='{{ section.settings.card_3_button_link }}'
-            class='absolute p-[20px]  inset-0 flex items-end justify-start no-underline z-10'
+            href="{{ section.settings.card_3_button_link }}"
+            class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
-            <button class='bg-[#FFF] text-[15px] md:text-[20px] py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+            <button class="knappetikett rounded-[10px] bg-[#FFF] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
               {{ section.settings.card_3_button_text | escape }}
             </button>
           </a>
         {% endif %}
       </div>
 
-      <div class='relative h-[200px] lg:h-full overflow-hidden rounded-[15px]'>
+      <div class="relative h-[200px] overflow-hidden rounded-[15px] lg:h-full">
         <img
-          src='{{ section.settings.card_4_image | image_url: width: 600 }}'
-          alt='{{ section.settings.card_4_image.alt | escape }}'
-          width='600'
-          height='300'
-          class='w-full h-full object-cover absolute inset-0'
+          src="{{ section.settings.card_4_image | image_url: width: 600 }}"
+          alt="{{ section.settings.card_4_image.alt | escape }}"
+          width="600"
+          height="300"
+          class="absolute inset-0 h-full w-full object-cover"
         >
         {% if section.settings.card_4_overlay_opacity > 0 %}
           <div
-            class='absolute inset-0 rounded-[15px]'
-            style='background-color: rgba(0, 0, 0, {{ section.settings.card_4_overlay_opacity | divided_by: 100.0 }});'
+            class="absolute inset-0 rounded-[15px]"
+            style="background-color: rgba(0, 0, 0, {{ section.settings.card_4_overlay_opacity | divided_by: 100.0 }});"
           ></div>
         {% endif %}
         {% if section.settings.card_4_button_text != blank
           and section.settings.card_4_button_link != blank
         %}
           <a
-            href='{{ section.settings.card_4_button_link }}'
-            class='absolute p-[20px]  inset-0 flex items-end justify-start no-underline z-10'
+            href="{{ section.settings.card_4_button_link }}"
+            class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
-            <button class='bg-[#FFF] text-[15px] md:text-[20px] py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+            <button class="knappetikett rounded-[10px] bg-[#FFF] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
               {{ section.settings.card_4_button_text | escape }}
             </button>
           </a>
@@ -366,9 +366,7 @@
         // Basic validation
         const name = this.querySelector('input[name="name"]');
         const email = this.querySelector('input[name="email"]');
-        const selectedService = selectedServiceInput
-          ? selectedServiceInput.value
-          : '';
+        const selectedService = selectedServiceInput ? selectedServiceInput.value : '';
 
         if (!name || !name.value.trim()) {
           alert('Vänligen fyll i ditt namn');
@@ -410,9 +408,7 @@
             if (response.ok) {
               // Hide the form section and show the success section
               const formSection = document.querySelector('.quote-form-section');
-              const successSection = document.querySelector(
-                '.quote-success-section',
-              );
+              const successSection = document.querySelector('.quote-success-section');
 
               if (formSection && successSection) {
                 formSection.style.display = 'none';
@@ -436,9 +432,7 @@
             }
           } catch (error) {
             console.error('Error submitting form:', error);
-            alert(
-              'Det uppstod ett fel när formuläret skickades. Vänligen försök igen.',
-            );
+            alert('Det uppstod ett fel när formuläret skickades. Vänligen försök igen.');
           } finally {
             // Reset button
             if (submitBtn) {

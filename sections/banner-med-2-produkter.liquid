@@ -1,59 +1,59 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "banner-med-2-produkter"
+  assign section_class = 'banner-med-2-produkter'
   assign layout_reversed = false
-  if section.settings.layout_direction == "products_first"
+  if section.settings.layout_direction == 'products_first'
     assign layout_reversed = true
   endif
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }} layout py-[60px] md:py-[85px]'
+  id="{{ section_id }}"
+  class="{{ section_class }} layout py-[60px] md:py-[85px]"
 >
   {% comment %} Banner Content {% endcomment %}
   <div
-    class='banner-content h-[500px] md:py-[40px] p-[20px] md:px-[50px] w-full rounded-[10px] bg-cover bg-center bg-no-repeat {% if layout_reversed %}order-2{% else %}order-1{% endif %}'
-    style='background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}'
-    data-debug='layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}'
+    class="banner-content h-[500px] w-full rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
+    style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
+    data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
   >
-    <div class='flex h-full justify-between flex-col'>
+    <div class="flex h-full flex-col justify-between">
       <div>
         {% if section.settings.header_button_text != blank %}
           <a
-            href='{{ section.settings.header_button_url }}'
-            class='knappetikett2 bg-transparent text-white p-[15px] rounded-[10px] z-10 inline-block'
-            style='border: 1px solid #fff;'
+            href="{{ section.settings.header_button_url }}"
+            class="knappetikett2 z-10 inline-block rounded-[10px] bg-transparent p-[15px] text-white"
+            style="border: 1px solid #fff;"
           >
             {{ section.settings.header_button_text }}
           </a>
         {% endif %}
       </div>
-      <div class='flex lg:w-[840px] flex-col gap-[30px]'>
+      <div class="flex flex-col gap-[30px] lg:w-[840px]">
         {% if section.settings.heading != blank %}
-          <h2 class='text-white headline2 '>
+          <h2 class="headline2 text-white ">
             {{ section.settings.heading }}
           </h2>
         {% endif %}
         {% if section.settings.description != blank %}
-          <p class='text-white knappetikett'>
+          <p class="knappetikett text-white">
             {{ section.settings.description }}
           </p>
         {% endif %}
-        <div class='flex flex-row gap-[10px]'>
+        <div class="flex flex-row gap-[10px]">
           {% if section.settings.primary_button_text != blank %}
             <a
-              href='{{ section.settings.primary_button_url }}'
-              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett shrink-0 text-[#171717]'
-              style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+              href="{{ section.settings.primary_button_url }}"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717]"
+              style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
             >
               {{ section.settings.primary_button_text }}
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='22'
-                height='18'
-                viewBox='0 0 22 18'
-                fill='none'
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
               >
                 <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -62,17 +62,17 @@
           {% endif %}
           {% if section.settings.secondary_button_text != blank %}
             <a
-              href='{{ section.settings.secondary_button_url }}'
-              class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett shrink-0 bg-transparent text-white'
-              style='border: 1px solid #fff;'
+              href="{{ section.settings.secondary_button_url }}"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[17px] text-white"
+              style="border: 1px solid #fff;"
             >
               {{ section.settings.secondary_button_text }}
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='22'
-                height='18'
-                viewBox='0 0 22 18'
-                fill='none'
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
               >
                 <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,56 +86,56 @@
 
   {% comment %} Products Content {% endcomment %}
   <div
-    class='products-content {% if layout_reversed %}order-1{% else %}order-2{% endif %}'
-    data-debug='products order: {% if layout_reversed %}1{% else %}2{% endif %}'
+    class="products-content {% if layout_reversed %}order-1{% else %}order-2{% endif %}"
+    data-debug="products order: {% if layout_reversed %}1{% else %}2{% endif %}"
   >
     <!-- Mobile carousel container -->
-    <div class=' md:hidden relative'>
-      <div class='carousel-container overflow-hidden'>
+    <div class=" relative md:hidden">
+      <div class="carousel-container overflow-hidden">
         <div
-          class='carousel-track flex transition-transform duration-500 ease-in-out'
-          data-current='0'
+          class="carousel-track flex transition-transform duration-500 ease-in-out"
+          data-current="0"
         >
           {% for block in section.blocks %}
             <div
-              class='product-card w-full flex-shrink-0 p-[30px] flex flex-col-reverse rounded-[10px] bg-[#F3F1E8]'
+              class="product-card flex w-full flex-shrink-0 flex-col-reverse rounded-[10px] bg-[#F3F1E8] p-[30px]"
               {{ block.shopify_attributes }}
             >
-              <div class='flex flex-col justify-between '>
-                <div class='flex flex-col'>
+              <div class="flex flex-col justify-between ">
+                <div class="flex flex-col">
                   {% if block.settings.title != blank %}
-                    <div class='headline1 text-[36px] pt-[30px] text-[#171717]'>
+                    <div class="headline1 pt-[30px] text-[36px] text-[#171717]">
                       {{ block.settings.title }}
                     </div>
                   {% endif %}
                   {% if block.settings.description != blank %}
-                    <div class='text-[#171717]/75 text py-[20px]'>
+                    <div class="text py-[20px] text-[#171717]/75">
                       {{ block.settings.description }}
                     </div>
                   {% endif %}
                 </div>
-                <div class='flex gap-[10px] shrink-0'>
+                <div class="flex shrink-0 gap-[10px]">
                   {% if block.settings.product != blank %}
                     <a
-                      href='{{ block.settings.product.url }}'
-                      class='inline-block px-[20px] py-[18px] bg-[#EFD959] knappetikett rounded-[10px] text-[#171717] '
+                      href="{{ block.settings.product.url }}"
+                      class="knappetikett inline-block rounded-[10px] bg-[#EFD959] px-[20px] py-[18px] text-[#171717] "
                     >
                       Köp
                     </a>
                   {% endif %}
                   {% if block.settings.learn_more_url != blank %}
                     <a
-                      href='{{ block.settings.learn_more_url }}'
-                      class='banner-2-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center'
-                      style='border: 1px solid #171717;'
+                      href="{{ block.settings.learn_more_url }}"
+                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
+                      style="border: 1px solid #171717;"
                     >
-                      {{ block.settings.learn_more_text | default: "Läs mer" }}
+                      {{ block.settings.learn_more_text | default: 'Läs mer' }}
                       <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='22'
-                        height='18'
-                        viewBox='0 0 22 18'
-                        fill='none'
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="18"
+                        viewBox="0 0 22 18"
+                        fill="none"
                       >
                         <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -145,38 +145,34 @@
                 </div>
               </div>
               <div
-                class=' '
-                style='
+                class=" "
+                style="
                       aspect-ratio: 18/23;
                   height: 285.081px;
-                '
+                "
               >
                 {% if block.settings.product != blank %}
                   {% assign product = block.settings.product %}
                   {% if product.featured_image %}
                     <img
-                      src='{{ product.featured_image | image_url: width: 300 }}'
-                      alt='{{ product.featured_image.alt | default: product.title }}'
-                      width='200'
-                      height='200'
-                      class=' h-full w-full object-contain rounded-[5px]'
-                      loading='lazy'
+                      src="{{ product.featured_image | image_url: width: 300 }}"
+                      alt="{{ product.featured_image.alt | default: product.title }}"
+                      width="200"
+                      height="200"
+                      class=" h-full w-full rounded-[5px] object-contain"
+                      loading="lazy"
                     >
                   {% else %}
-                    <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
-                      {{
-                        "products.product.media.load_image"
-                        | t
-                        | default: "Load image"
-                      }}
+                    <div class="flex h-[200px] w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                      {{ 'products.product.media.load_image' | t | default: 'Load image' }}
                     </div>
                   {% endif %}
                 {% else %}
-                  <div class='w-[200px] h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+                  <div class="flex h-full w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
                     {{
-                      "sections.banner_with_products.no_product_selected"
+                      'sections.banner_with_products.no_product_selected'
                       | t
-                      | default: "No product selected"
+                      | default: 'No product selected'
                     }}
                   </div>
                 {% endif %}
@@ -189,50 +185,50 @@
 
     <!-- Desktop grid -->
     <div
-      class=' hidden md:grid grid-cols-2 gap-[20px]'
-      id='desktop-products-grid-{{ section.id }}'
+      class=" hidden grid-cols-2 gap-[20px] md:grid"
+      id="desktop-products-grid-{{ section.id }}"
     >
       {% for block in section.blocks %}
         <div
-          class='product-card p-[30px] flex flex-col-reverse xl:flex-row rounded-[10px] transition-colors duration-300{% if forloop.first %} active{% endif %}'
+          class="product-card flex flex-col-reverse rounded-[10px] p-[30px] transition-colors xl:flex-row duration-300{% if forloop.first %} active{% endif %}"
           {{ block.shopify_attributes }}
-          data-card-index='{{ forloop.index0 }}'
+          data-card-index="{{ forloop.index0 }}"
         >
-          <div class='flex flex-col justify-between '>
-            <div class='flex flex-col'>
+          <div class="flex flex-col justify-between ">
+            <div class="flex flex-col">
               {% if block.settings.title != blank %}
-                <div class='headline1 text-[36px] xl:pt-0 pt-[40px] text-[#171717]'>
+                <div class="headline1 pt-[40px] text-[36px] text-[#171717] xl:pt-0">
                   {{ block.settings.title }}
                 </div>
               {% endif %}
               {% if block.settings.description != blank %}
-                <div class='text-[#171717]/75 text py-[20px] xl:pt-[40px]'>
+                <div class="text py-[20px] text-[#171717]/75 xl:pt-[40px]">
                   {{ block.settings.description }}
                 </div>
               {% endif %}
             </div>
-            <div class='flex gap-[10px] shrink-0'>
+            <div class="flex shrink-0 gap-[10px]">
               {% if block.settings.product != blank %}
                 <a
-                  href='{{ block.settings.product.url }}'
-                  class='inline-block shrink-0 px-[20px] py-[18px] bg-[#EFD959] knappetikett rounded-[10px] text-[#171717] whitespace-nowrap'
+                  href="{{ block.settings.product.url }}"
+                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-[10px] bg-[#EFD959] px-[20px] py-[18px] text-[#171717]"
                 >
                   Köp
                 </a>
               {% endif %}
               {% if block.settings.learn_more_url != blank %}
                 <a
-                  href='{{ block.settings.learn_more_url }}'
-                  class='banner-2-learn-more-btn px-[20px] py-[18px] bg-transparent knappetikett rounded-[10px] text-[#171717] flex flex-row gap-[20px] items-center shrink-0 whitespace-nowrap'
-                  style='border: 1px solid #171717;'
+                  href="{{ block.settings.learn_more_url }}"
+                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
+                  style="border: 1px solid #171717;"
                 >
-                  {{ block.settings.learn_more_text | default: "Läs mer" }}
+                  {{ block.settings.learn_more_text | default: 'Läs mer' }}
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='18'
-                    viewBox='0 0 22 18'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
                   >
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -242,38 +238,34 @@
             </div>
           </div>
           <div
-            class=' '
-            style='
+            class=" "
+            style="
                   aspect-ratio: 18/23;
               height: 285.081px;
-            '
+            "
           >
             {% if block.settings.product != blank %}
               {% assign product = block.settings.product %}
               {% if product.featured_image %}
                 <img
-                  src='{{ product.featured_image | image_url: width: 300 }}'
-                  alt='{{ product.featured_image.alt | default: product.title }}'
-                  width='200'
-                  height='200'
-                  class=' h-full w-full object-contain rounded-[5px]'
-                  loading='lazy'
+                  src="{{ product.featured_image | image_url: width: 300 }}"
+                  alt="{{ product.featured_image.alt | default: product.title }}"
+                  width="200"
+                  height="200"
+                  class=" h-full w-full rounded-[5px] object-contain"
+                  loading="lazy"
                 >
               {% else %}
-                <div class='w-[200px] h-[200px] bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
-                  {{
-                    "products.product.media.load_image"
-                    | t
-                    | default: "Load image"
-                  }}
+                <div class="flex h-[200px] w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                  {{ 'products.product.media.load_image' | t | default: 'Load image' }}
                 </div>
               {% endif %}
             {% else %}
-              <div class='w-[200px] h-full bg-gray-200 rounded-[5px] flex items-center justify-center text-gray-500'>
+              <div class="flex h-full w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
                 {{
-                  "sections.banner_with_products.no_product_selected"
+                  'sections.banner_with_products.no_product_selected'
                   | t
-                  | default: "No product selected"
+                  | default: 'No product selected'
                 }}
               </div>
             {% endif %}
@@ -283,25 +275,25 @@
     </div>
 
     <!-- Carousel navigation (only show on mobile) -->
-    <div class='flex md:hidden gap-[20px] pt-[20px] flex-row pl-[20px]'>
-      <div class='carousel-prev translate-x-[-1] cursor-pointer'>
+    <div class="flex flex-row gap-[20px] pl-[20px] pt-[20px] md:hidden">
+      <div class="carousel-prev translate-x-[-1] cursor-pointer">
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='26'
-          height='21'
-          viewBox='0 0 26 21'
-          fill='none'
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="21"
+          viewBox="0 0 26 21"
+          fill="none"
         >
           <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class='carousel-next cursor-pointer'>
+      <div class="carousel-next cursor-pointer">
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='26'
-          height='21'
-          viewBox='0 0 26 21'
-          fill='none'
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="21"
+          viewBox="0 0 26 21"
+          fill="none"
         >
           <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -413,9 +405,7 @@
 {% javascript %}
   document.addEventListener('DOMContentLoaded', function () {
     // Find all carousel sections and initialize each one
-    const carouselSections = document.querySelectorAll(
-      '.banner-med-2-produkter',
-    );
+    const carouselSections = document.querySelectorAll('.banner-med-2-produkter');
 
     carouselSections.forEach(function (section) {
       const carousel = section.querySelector('.carousel-track');
@@ -553,9 +543,7 @@
 
     bannerSections.forEach(function (section) {
       // Get desktop grid container
-      const desktopGrid = section.querySelector(
-        '[id^="desktop-products-grid-"]',
-      );
+      const desktopGrid = section.querySelector('[id^="desktop-products-grid-"]');
       if (!desktopGrid) return;
 
       const productCards = desktopGrid.querySelectorAll('.product-card');

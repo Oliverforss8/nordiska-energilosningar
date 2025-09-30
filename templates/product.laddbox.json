@@ -54,11 +54,7 @@
           }
         }
       },
-      "block_order": [
-        "faq_item_NXnA3e",
-        "faq_item_jqaqHJ",
-        "faq_item_mAEtRh"
-      ],
+      "block_order": ["faq_item_NXnA3e", "faq_item_jqaqHJ", "faq_item_mAEtRh"],
       "name": "FAQ produkter",
       "settings": {
         "title": "Vanliga frågor",
@@ -69,9 +65,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "faq_produkt_VBJTrF",
-    "relaterade_produkter_hfFfAB"
-  ]
+  "order": ["main", "faq_produkt_VBJTrF", "relaterade_produkter_hfFfAB"]
 }

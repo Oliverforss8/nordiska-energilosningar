@@ -136,15 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Handle desktop product card hover behavior
-  const desktopGrid = section.querySelector(
-    '.hidden.md\\:grid, [class*="grid-cols-3"]'
-  );
+  const desktopGrid = section.querySelector('.hidden.md\\:grid, [class*="grid-cols-3"]');
   console.log('Desktop grid found:', desktopGrid); // Debug
   if (desktopGrid) {
     const productCards = desktopGrid.querySelectorAll('.product-card');
-    const learnMoreButtons = desktopGrid.querySelectorAll(
-      '.banner-3-learn-more-btn'
-    );
+    const learnMoreButtons = desktopGrid.querySelectorAll('.banner-3-learn-more-btn');
     const buyNowButtons = desktopGrid.querySelectorAll('.buy-now-btn');
 
     console.log('Product cards found:', productCards.length); // Debug
@@ -154,11 +150,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (productCards.length > 0) {
       function resetToFirstCard() {
         // Clear all active states
-        productCards.forEach(card => (card.style.backgroundColor = ''));
-        learnMoreButtons.forEach(btn =>
-          btn.classList.remove('banner-3-active')
-        );
-        buyNowButtons.forEach(btn => btn.classList.remove('banner-3-active'));
+        productCards.forEach((card) => (card.style.backgroundColor = ''));
+        learnMoreButtons.forEach((btn) => btn.classList.remove('banner-3-active'));
+        buyNowButtons.forEach((btn) => btn.classList.remove('banner-3-active'));
 
         // Set first card active
         if (productCards[0]) {
@@ -175,11 +169,9 @@ document.addEventListener('DOMContentLoaded', function () {
       function setCardActive(index) {
         console.log('Setting card active:', index); // Debug
         // Clear all active states
-        productCards.forEach(card => (card.style.backgroundColor = ''));
-        learnMoreButtons.forEach(btn =>
-          btn.classList.remove('banner-3-active')
-        );
-        buyNowButtons.forEach(btn => btn.classList.remove('banner-3-active'));
+        productCards.forEach((card) => (card.style.backgroundColor = ''));
+        learnMoreButtons.forEach((btn) => btn.classList.remove('banner-3-active'));
+        buyNowButtons.forEach((btn) => btn.classList.remove('banner-3-active'));
 
         // Set current card active
         if (productCards[index]) {
@@ -216,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Buy Now functionality for related products
   const buyNowButtons = section.querySelectorAll('.buy-now-btn');
-  buyNowButtons.forEach(button => {
+  buyNowButtons.forEach((button) => {
     button.addEventListener('click', async function (e) {
       e.preventDefault();
       console.log('Buy now button clicked from related products'); // Debug

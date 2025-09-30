@@ -43,9 +43,7 @@
           }
         }
       },
-      "block_order": [
-        "specification_E4emyj"
-      ],
+      "block_order": ["specification_E4emyj"],
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
@@ -104,11 +102,7 @@
           }
         }
       },
-      "block_order": [
-        "faq_item_1",
-        "faq_item_2",
-        "faq_item_3"
-      ],
+      "block_order": ["faq_item_1", "faq_item_2", "faq_item_3"],
       "settings": {
         "title": "Vanliga frågor",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",

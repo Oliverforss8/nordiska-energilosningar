@@ -61,11 +61,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_iVqQVd",
-        "product_card_XciY6V",
-        "product_card_gaPRNm"
-      ],
+      "block_order": ["product_card_iVqQVd", "product_card_XciY6V", "product_card_gaPRNm"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
@@ -114,12 +110,7 @@
           }
         }
       },
-      "block_order": [
-        "feature_YzaeKt",
-        "feature_gBje4F",
-        "feature_EU9MQV",
-        "feature_pEbKNg"
-      ],
+      "block_order": ["feature_YzaeKt", "feature_gBje4F", "feature_EU9MQV", "feature_pEbKNg"],
       "name": "Icon section",
       "settings": {
         "heading": "Fördelar med solceller",
@@ -179,12 +170,7 @@
           }
         }
       },
-      "block_order": [
-        "step_HcbJqz",
-        "step_TxEikq",
-        "step_x9iFjQ",
-        "step_cFgBdG"
-      ],
+      "block_order": ["step_HcbJqz", "step_TxEikq", "step_x9iFjQ", "step_cFgBdG"],
       "name": "How it works",
       "settings": {
         "heading": "Så här fungerar det",
@@ -227,10 +213,7 @@
           }
         }
       },
-      "block_order": [
-        "avdrag_item_CwEPVk",
-        "avdrag_item_VTmMVG"
-      ],
+      "block_order": ["avdrag_item_CwEPVk", "avdrag_item_VTmMVG"],
       "name": "Avdrag",
       "settings": {
         "custom_id": "",

@@ -1,53 +1,45 @@
 {% liquid
-  assign section_class = "section-" | append: section.type
+  assign section_class = 'section-' | append: section.type
 %}
 
 <article
-  class='{{ section_class }} grid grid-cols-1 md:grid-cols-3  md:gap-[50px] layout pt-[150px]'
-  style='
+  class="{{ section_class }} layout grid grid-cols-1  pt-[150px] md:grid-cols-3 md:gap-[50px]"
+  style="
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
-  '
+  "
 >
-  <div class='md:order-1 order-1'>
-    <div class='md:col-span-1  mb-[25px] md:mb-0 sticky top-[100px] md:top-[150px] bg-[#F3F1E8] p-[20px] md:p-[30px] rounded-[15px]'>
-      <h3 class='headline1 text-[24px] md:text-[30px] pb-[20px] md:pb-[30px]'>
-        Innehåll
-      </h3>
-      <div class='mb-4'>
-        <div class='relative w-full h-[5px] bg-white rounded-full overflow-hidden'>
+  <div class="order-1 md:order-1">
+    <div class="sticky  top-[100px] mb-[25px] rounded-[15px] bg-[#F3F1E8] p-[20px] md:top-[150px] md:col-span-1 md:mb-0 md:p-[30px]">
+      <h3 class="headline1 pb-[20px] text-[24px] md:pb-[30px] md:text-[30px]">Innehåll</h3>
+      <div class="mb-4">
+        <div class="relative h-[5px] w-full overflow-hidden rounded-full bg-white">
           <div
-            class='progress-bar absolute top-0 left-0 h-full bg-[#EFD959] rounded-full transition-all duration-300 ease-out'
-            style='width: 0%'
+            class="progress-bar absolute left-0 top-0 h-full rounded-full bg-[#EFD959] transition-all duration-300 ease-out"
+            style="width: 0%"
           ></div>
         </div>
-        <div class='progress-text headline1 text-[#545454] pt-[15px] !text-[16px] md:!text-[20px]'>
+        <div class="progress-text headline1 pt-[15px] !text-[16px] text-[#545454] md:!text-[20px]">
           0% komplett
         </div>
       </div>
-      <nav class='flex flex-col gap-[30px] md:gap-[50px] pt-[30px] md:pt-[50px]'>
+      <nav class="flex flex-col gap-[30px] pt-[30px] md:gap-[50px] md:pt-[50px]">
         {% comment %} Extract headings from article content {% endcomment %}
-        {% assign content_lines = article.content | split: "<" %}
+        {% assign content_lines = article.content | split: '<' %}
         {% for line in content_lines %}
-          {% if line contains "h1>"
-            or line contains "h2>"
-            or line contains "h3>"
-            or line contains "h4>"
-            or line contains "h5>"
-            or line contains "h6>"
+          {% if line contains 'h1>'
+            or line contains 'h2>'
+            or line contains 'h3>'
+            or line contains 'h4>'
+            or line contains 'h5>'
+            or line contains 'h6>'
           %}
-            {% assign heading_text = line
-              | split: ">"
-              | last
-              | split: "</"
-              | first
-              | strip
-            %}
+            {% assign heading_text = line | split: '>' | last | split: '</' | first | strip %}
             {% if heading_text != blank %}
               {% assign heading_id = heading_text | handleize %}
               <a
-                href='#{{ heading_id }}'
-                class='block headline1 !text-[18px] md:!text-[25px] text-[#171717] hover:text-[#efd959] transition-colors'
+                href="#{{ heading_id }}"
+                class="headline1 block !text-[18px] text-[#171717] transition-colors hover:text-[#efd959] md:!text-[25px]"
               >
                 {{ heading_text }}
               </a>
@@ -57,26 +49,24 @@
       </nav>
     </div>
   </div>
-  <div class='md:col-span-2 md:order-2 order-1'>
+  <div class="order-1 md:order-2 md:col-span-2">
     <header>
-      <h1 class='headline1 py-[20px] md:py-[25px] text-[32px] md:text-[48px] leading-[90%]'>
+      <h1 class="headline1 py-[20px] text-[32px] leading-[90%] md:py-[25px] md:text-[48px]">
         {{ article.title }}
       </h1>
     </header>
 
     {% if article.image %}
-      <figure class='rounded-[15px] flex w-full overflow-hidden h-[250px] md:h-[379px]'>
+      <figure class="flex h-[250px] w-full overflow-hidden rounded-[15px] md:h-[379px]">
         {{
           article.image
           | image_url: width: 1600
-          | image_tag:
-            loading: "lazy",
-            class: "w-full h-[250px] md:h-[379px] object-cover"
+          | image_tag: loading: 'lazy', class: 'w-full h-[250px] md:h-[379px] object-cover'
         }}
       </figure>
     {% endif %}
 
-    <div class='flex flex-col gap-[25px] rte' id='article-content'>
+    <div class="rte flex flex-col gap-[25px]" id="article-content">
       {% comment %} Process article content to add IDs to headings using Liquid {% endcomment %}
       {% assign content = article.content %}
 
@@ -84,94 +74,70 @@
       {% assign processed_content = content %}
 
       {% comment %} Handle h1 tags {% endcomment %}
-      {% assign h1_parts = processed_content | split: "<h1>" %}
+      {% assign h1_parts = processed_content | split: '<h1>' %}
       {% assign processed_content = h1_parts[0] %}
       {% for part in h1_parts %}
         {% unless forloop.first %}
-          {% assign h1_content = part
-            | split: "</h1>"
-            | first
-            | strip_html
-            | strip
-          %}
+          {% assign h1_content = part | split: '</h1>' | first | strip_html | strip %}
           {% if h1_content != blank %}
             {% assign h1_id = h1_content | handleize %}
-            {% assign h1_rest = part | split: "</h1>" | last %}
+            {% assign h1_rest = part | split: '</h1>' | last %}
             {% assign processed_content = processed_content
               | append: '<h1 id="'
               | append: h1_id
               | append: '">'
               | append: h1_content
-              | append: "</h1>"
+              | append: '</h1>'
               | append: h1_rest
             %}
           {% else %}
-            {% assign processed_content = processed_content
-              | append: "<h1>"
-              | append: part
-            %}
+            {% assign processed_content = processed_content | append: '<h1>' | append: part %}
           {% endif %}
         {% endunless %}
       {% endfor %}
 
       {% comment %} Handle h2 tags {% endcomment %}
-      {% assign h2_parts = processed_content | split: "<h2>" %}
+      {% assign h2_parts = processed_content | split: '<h2>' %}
       {% assign processed_content = h2_parts[0] %}
       {% for part in h2_parts %}
         {% unless forloop.first %}
-          {% assign h2_content = part
-            | split: "</h2>"
-            | first
-            | strip_html
-            | strip
-          %}
+          {% assign h2_content = part | split: '</h2>' | first | strip_html | strip %}
           {% if h2_content != blank %}
             {% assign h2_id = h2_content | handleize %}
-            {% assign h2_rest = part | split: "</h2>" | last %}
+            {% assign h2_rest = part | split: '</h2>' | last %}
             {% assign processed_content = processed_content
               | append: '<h2 id="'
               | append: h2_id
               | append: '">'
               | append: h2_content
-              | append: "</h2>"
+              | append: '</h2>'
               | append: h2_rest
             %}
           {% else %}
-            {% assign processed_content = processed_content
-              | append: "<h2>"
-              | append: part
-            %}
+            {% assign processed_content = processed_content | append: '<h2>' | append: part %}
           {% endif %}
         {% endunless %}
       {% endfor %}
 
       {% comment %} Handle h3 tags {% endcomment %}
-      {% assign h3_parts = processed_content | split: "<h3>" %}
+      {% assign h3_parts = processed_content | split: '<h3>' %}
       {% assign processed_content = h3_parts[0] %}
       {% for part in h3_parts %}
         {% unless forloop.first %}
-          {% assign h3_content = part
-            | split: "</h3>"
-            | first
-            | strip_html
-            | strip
-          %}
+          {% assign h3_content = part | split: '</h3>' | first | strip_html | strip %}
           {% if h3_content != blank %}
             {% assign h3_id = h3_content | handleize %}
-            {% assign h3_rest = part | split: "</h3>" | last %}
+            {% assign h3_rest = part | split: '</h3>' | last %}
             {% assign processed_content = processed_content
               | append: '<h3 id="'
               | append: h3_id
               | append: '">'
               | append: h3_content
-              | append: "</h3>"
+              | append: '</h3>'
               | append: h3_rest
             %}
           {% else %}
-            {% assign processed_content = processed_content
-              | append: "<h3>"
-              | append: part
-            %}
+            {% assign processed_content = processed_content | append: '<h3>' | append: part %}
           {% endif %}
         {% endunless %}
       {% endfor %}
@@ -314,4 +280,4 @@
   }
 {% endstylesheet %}
 
-<script src='{{ 'article-toc.js' | asset_url }}' defer></script>
+<script src="{{ 'article-toc.js' | asset_url }}" defer></script>

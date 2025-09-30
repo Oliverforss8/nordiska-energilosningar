@@ -72,9 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update items list
     if (cartItemsList) {
-      cartItemsList.innerHTML = cart.items
-        .map(item => createCartItemHTML(item))
-        .join('');
+      cartItemsList.innerHTML = cart.items.map((item) => createCartItemHTML(item)).join('');
 
       // Add event listeners to quantity buttons
       addQuantityListeners();
@@ -113,8 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const quantityInputs = cartItemsList.querySelectorAll('.quantity-input');
     const removeBtns = cartItemsList.querySelectorAll('.cart-item-remove');
 
-    quantityBtns.forEach(btn => {
-      btn.addEventListener('click', async e => {
+    quantityBtns.forEach((btn) => {
+      btn.addEventListener('click', async (e) => {
         const key = e.target.dataset.key;
         const action = e.target.dataset.action;
         const input = cartItemsList.querySelector(`input[data-key="${key}"]`);
@@ -130,16 +128,16 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    quantityInputs.forEach(input => {
-      input.addEventListener('change', async e => {
+    quantityInputs.forEach((input) => {
+      input.addEventListener('change', async (e) => {
         const key = e.target.dataset.key;
         const quantity = Math.max(1, parseInt(e.target.value));
         await updateCartItem(key, quantity);
       });
     });
 
-    removeBtns.forEach(btn => {
-      btn.addEventListener('click', async e => {
+    removeBtns.forEach((btn) => {
+      btn.addEventListener('click', async (e) => {
         const key = e.target.dataset.key;
         await updateCartItem(key, 0);
       });
@@ -193,12 +191,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Close cart with escape key
-  document.addEventListener('keydown', e => {
-    if (
-      e.key === 'Escape' &&
-      cartDrawer &&
-      cartDrawer.classList.contains('open')
-    ) {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && cartDrawer && cartDrawer.classList.contains('open')) {
       closeCart();
     }
   });

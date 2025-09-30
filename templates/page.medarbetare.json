@@ -93,10 +93,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "hero_lower_CyimrP",
-    "medarbetare_i7M4Q3",
-    "kontakt_form_jKjXbN"
-  ]
+  "order": ["main", "hero_lower_CyimrP", "medarbetare_i7M4Q3", "kontakt_form_jKjXbN"]
 }

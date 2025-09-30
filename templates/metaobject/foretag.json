@@ -50,17 +50,10 @@
           }
         }
       },
-      "block_order": [
-        "card_6TwFP8",
-        "card_67XLE3",
-        "card_Ype6Wd"
-      ],
+      "block_order": ["card_6TwFP8", "card_67XLE3", "card_Ype6Wd"],
       "name": "Länkar sektion",
       "settings": {}
     }
   },
-  "order": [
-    "hero_fRPaYi",
-    "lankar_tGAxqY"
-  ]
+  "order": ["hero_fRPaYi", "lankar_tGAxqY"]
 }

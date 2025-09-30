@@ -1,41 +1,41 @@
-<section class='py-[60px] md:py-[85px]'>
-  <div class='layout'>
-    <div class='grid grid-cols-1 md:grid-cols-5 gap-[40px] md:gap-[20px] pb-[40px] md:pb-[50px]'>
-      <h3 class=' col-span-2 headline1 text-[#171717] text-[40px]'>
+<section class="py-[60px] md:py-[85px]">
+  <div class="layout">
+    <div class="grid grid-cols-1 gap-[40px] pb-[40px] md:grid-cols-5 md:gap-[20px] md:pb-[50px]">
+      <h3 class=" headline1 col-span-2 text-[40px] text-[#171717]">
         {{ section.settings.title | escape }}
       </h3>
-      <div class='col-span-1 md:block hidden'></div>
-      <p class=' col-span-2 text text-[#171717]'>
+      <div class="col-span-1 hidden md:block"></div>
+      <p class=" text col-span-2 text-[#171717]">
         {{ section.settings.description | escape }}
       </p>
     </div>
 
-    <div class='grid grid-cols-1 md:grid-cols-5 gap-[20px]'>
+    <div class="grid grid-cols-1 gap-[20px] md:grid-cols-5">
       <!-- First row: Card 1 spans 3 columns -->
-      <div class='col-span-1 md:col-span-3'>
+      <div class="col-span-1 md:col-span-3">
         {% if section.settings.card_1_image != blank %}
-          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class="relative h-[225px] overflow-hidden rounded-[15px] sm:h-[300px]">
             <img
-              src='{{ section.settings.card_1_image | image_url: width: 800 }}'
-              alt='{{ section.settings.card_1_image.alt | escape }}'
-              width='800'
-              height='300'
-              class='w-full h-full object-cover absolute inset-0'
+              src="{{ section.settings.card_1_image | image_url: width: 800 }}"
+              alt="{{ section.settings.card_1_image.alt | escape }}"
+              width="800"
+              height="300"
+              class="absolute inset-0 h-full w-full object-cover"
             >
             {% if section.settings.card_1_overlay_opacity > 0 %}
               <div
-                class='absolute inset-0 rounded-[15px]'
-                style='background-color: rgba(0, 0, 0, {{ section.settings.card_1_overlay_opacity | divided_by: 100.0 }});'
+                class="absolute inset-0 rounded-[15px]"
+                style="background-color: rgba(0, 0, 0, {{ section.settings.card_1_overlay_opacity | divided_by: 100.0 }});"
               ></div>
             {% endif %}
             {% if section.settings.card_1_button_text != blank
               and section.settings.card_1_button_link != blank
             %}
               <a
-                href='{{ section.settings.card_1_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
+                href="{{ section.settings.card_1_button_link }}"
+                class="absolute inset-0 z-10 flex items-end justify-start p-[20px] no-underline md:p-[30px]"
               >
-                <button class='bg-[#FFF] text-[15px] md:text-[20px] py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                <button class="knappetikett rounded-[10px] bg-[#FFF] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
                   {{ section.settings.card_1_button_text | escape }}
                 </button>
               </a>
@@ -45,30 +45,30 @@
       </div>
 
       <!-- First row: Card 2 spans 2 columns -->
-      <div class='col-span-1 md:col-span-2'>
+      <div class="col-span-1 md:col-span-2">
         {% if section.settings.card_2_image != blank %}
-          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class="relative h-[225px] overflow-hidden rounded-[15px] sm:h-[300px]">
             <img
-              src='{{ section.settings.card_2_image | image_url: width: 600 }}'
-              alt='{{ section.settings.card_2_image.alt | escape }}'
-              width='600'
-              height='300'
-              class='w-full h-full object-cover absolute inset-0'
+              src="{{ section.settings.card_2_image | image_url: width: 600 }}"
+              alt="{{ section.settings.card_2_image.alt | escape }}"
+              width="600"
+              height="300"
+              class="absolute inset-0 h-full w-full object-cover"
             >
             {% if section.settings.card_2_overlay_opacity > 0 %}
               <div
-                class='absolute inset-0 rounded-[15px]'
-                style='background-color: rgba(0, 0, 0, {{ section.settings.card_2_overlay_opacity | divided_by: 100.0 }});'
+                class="absolute inset-0 rounded-[15px]"
+                style="background-color: rgba(0, 0, 0, {{ section.settings.card_2_overlay_opacity | divided_by: 100.0 }});"
               ></div>
             {% endif %}
             {% if section.settings.card_2_button_text != blank
               and section.settings.card_2_button_link != blank
             %}
               <a
-                href='{{ section.settings.card_2_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
+                href="{{ section.settings.card_2_button_link }}"
+                class="absolute inset-0 z-10 flex items-end justify-start p-[20px] no-underline md:p-[30px]"
               >
-                <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                <button class="knappetikett rounded-[10px] bg-[#FFF]  px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
                   {{ section.settings.card_2_button_text | escape }}
                 </button>
               </a>
@@ -78,30 +78,30 @@
       </div>
 
       <!-- Second row: Card 3 spans 2 columns (reversed) -->
-      <div class='col-span-1 md:col-span-2'>
+      <div class="col-span-1 md:col-span-2">
         {% if section.settings.card_3_image != blank %}
-          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class="relative h-[225px] overflow-hidden rounded-[15px] sm:h-[300px]">
             <img
-              src='{{ section.settings.card_3_image | image_url: width: 600 }}'
-              alt='{{ section.settings.card_3_image.alt | escape }}'
-              width='600'
-              height='300'
-              class='w-full h-full object-cover absolute inset-0'
+              src="{{ section.settings.card_3_image | image_url: width: 600 }}"
+              alt="{{ section.settings.card_3_image.alt | escape }}"
+              width="600"
+              height="300"
+              class="absolute inset-0 h-full w-full object-cover"
             >
             {% if section.settings.card_3_overlay_opacity > 0 %}
               <div
-                class='absolute inset-0 rounded-[15px]'
-                style='background-color: rgba(0, 0, 0, {{ section.settings.card_3_overlay_opacity | divided_by: 100.0 }});'
+                class="absolute inset-0 rounded-[15px]"
+                style="background-color: rgba(0, 0, 0, {{ section.settings.card_3_overlay_opacity | divided_by: 100.0 }});"
               ></div>
             {% endif %}
             {% if section.settings.card_3_button_text != blank
               and section.settings.card_3_button_link != blank
             %}
               <a
-                href='{{ section.settings.card_3_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
+                href="{{ section.settings.card_3_button_link }}"
+                class="absolute inset-0 z-10 flex items-end justify-start p-[20px] no-underline md:p-[30px]"
               >
-                <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                <button class="knappetikett rounded-[10px] bg-[#FFF]  px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
                   {{ section.settings.card_3_button_text | escape }}
                 </button>
               </a>
@@ -111,30 +111,30 @@
       </div>
 
       <!-- Second row: Card 4 spans 3 columns (reversed) -->
-      <div class='col-span-1 md:col-span-3'>
+      <div class="col-span-1 md:col-span-3">
         {% if section.settings.card_4_image != blank %}
-          <div class='relative h-[225px] sm:h-[300px] overflow-hidden rounded-[15px]'>
+          <div class="relative h-[225px] overflow-hidden rounded-[15px] sm:h-[300px]">
             <img
-              src='{{ section.settings.card_4_image | image_url: width: 800 }}'
-              alt='{{ section.settings.card_4_image.alt | escape }}'
-              width='800'
-              height='300'
-              class='w-full h-full object-cover absolute inset-0'
+              src="{{ section.settings.card_4_image | image_url: width: 800 }}"
+              alt="{{ section.settings.card_4_image.alt | escape }}"
+              width="800"
+              height="300"
+              class="absolute inset-0 h-full w-full object-cover"
             >
             {% if section.settings.card_4_overlay_opacity > 0 %}
               <div
-                class='absolute inset-0 rounded-[15px]'
-                style='background-color: rgba(0, 0, 0, {{ section.settings.card_4_overlay_opacity | divided_by: 100.0 }});'
+                class="absolute inset-0 rounded-[15px]"
+                style="background-color: rgba(0, 0, 0, {{ section.settings.card_4_overlay_opacity | divided_by: 100.0 }});"
               ></div>
             {% endif %}
             {% if section.settings.card_4_button_text != blank
               and section.settings.card_4_button_link != blank
             %}
               <a
-                href='{{ section.settings.card_4_button_link }}'
-                class='absolute p-[20px] md:p-[30px] inset-0 flex items-end justify-start no-underline z-10'
+                href="{{ section.settings.card_4_button_link }}"
+                class="absolute inset-0 z-10 flex items-end justify-start p-[20px] no-underline md:p-[30px]"
               >
-                <button class='bg-[#FFF] text-[15px] md:text-[20px]  py-[15px] md:py-[18px] px-[20px] md:px-[30px] rounded-[10px] knappetikett text-[#171717] no-underline'>
+                <button class="knappetikett rounded-[10px] bg-[#FFF]  px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]">
                   {{ section.settings.card_4_button_text | escape }}
                 </button>
               </a>
@@ -144,7 +144,7 @@
       </div>
     </div>
     {% if section.settings.bottom_description != blank %}
-      <p class='pt-[40px] md:pt-[50px] text leading-[110%] text-[16px] text-[#171717]'>
+      <p class="text pt-[40px] text-[16px] leading-[110%] text-[#171717] md:pt-[50px]">
         {{ section.settings.bottom_description | escape }}
       </p>
     {% endif %}

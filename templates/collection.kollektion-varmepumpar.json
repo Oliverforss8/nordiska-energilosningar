@@ -32,8 +32,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "banner_bild_md6DXq"
-  ]
+  "order": ["main", "banner_bild_md6DXq"]
 }

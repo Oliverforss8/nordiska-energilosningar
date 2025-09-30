@@ -1,44 +1,42 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-banner"
+  assign section_class = 'section-banner'
 %}
 
 <section
-  class='overflow-visible flex-col w-full h-full flex'
-  style='min-height: 75vh;'
+  class="flex h-full w-full flex-col overflow-visible"
+  style="min-height: 75vh;"
 >
   <div
-    class='relative flex w-full h-full overflow-hidden'
-    style='min-height: 75vh;'
+    class="relative flex h-full w-full overflow-hidden"
+    style="min-height: 75vh;"
   >
-    {% if section.settings.media_type == "video"
-      and section.settings.background_video != blank
-    %}
+    {% if section.settings.media_type == 'video' and section.settings.background_video != blank %}
       <!-- Background Video -->
       <video
-        class='w-full h-full object-cover absolute inset-0'
+        class="absolute inset-0 h-full w-full object-cover"
         autoplay
         muted
         loop
         playsinline
       >
         <source
-          src='{{ section.settings.background_video.sources[1].url }}'
-          type='video/mp4'
+          src="{{ section.settings.background_video.sources[1].url }}"
+          type="video/mp4"
         >
         <source
-          src='{{ section.settings.background_video.sources[0].url }}'
-          type='video/webm'
+          src="{{ section.settings.background_video.sources[0].url }}"
+          type="video/webm"
         >
       </video>
-    {% elsif section.settings.media_type == "image"
+    {% elsif section.settings.media_type == 'image'
       and section.settings.background_image != blank
     %}
       <!-- Background Image -->
-      {% render "image",
+      {% render 'image',
         image: section.settings.background_image,
-        class: "w-full h-full object-cover absolute inset-0",
-        loading: "lazy",
+        class: 'w-full h-full object-cover absolute inset-0',
+        loading: 'lazy',
         width: 1920,
         height: 1080
       %}
@@ -46,35 +44,32 @@
 
     {% if section.settings.overlay_opacity > 0 %}
       <div
-        class='absolute inset-0 h-full'
-        style='background: linear-gradient(0deg, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 0%, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 100%'
+        class="absolute inset-0 h-full"
+        style="background: linear-gradient(0deg, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 0%, rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 100%"
       ></div>
     {% endif %}
 
     {% if section.settings.heading != blank %}
-      <div class='absolute inset-0  h-full layout'>
-        <div class='h-full flex pb-[110px] md:pb-[120px] flex-col justify-end items-start'>
-          <h1 class='headline1 text-white pb-[20px] md:pb-[40px]'>
+      <div class="layout absolute  inset-0 h-full">
+        <div class="flex h-full flex-col items-start justify-end pb-[110px] md:pb-[120px]">
+          <h1 class="headline1 pb-[20px] text-white md:pb-[40px]">
             {{ section.settings.heading | newline_to_br }}
           </h1>
-          <div class='flex md:flex-row flex-col md:gap-[40px] gap-[20px] md:items-center'>
-            <div class=' md:shrink-0'>
+          <div class="flex flex-col gap-[20px] md:flex-row md:items-center md:gap-[40px]">
+            <div class=" md:shrink-0">
               {% if section.settings.button_url != blank %}
                 <a
-                  href='{{ section.settings.button_url }}'
-                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]   '
-                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+                  href="{{ section.settings.button_url }}"
+                  class="knappetikett flex flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717]   "
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
                 >
-                  {{
-                    section.settings.button_text
-                    | default: "Våra energilösningar"
-                  }}
+                  {{ section.settings.button_text | default: 'Våra energilösningar' }}
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='18'
-                    viewBox='0 0 22 18'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
                   >
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -82,19 +77,16 @@
                 </a>
               {% else %}
                 <button
-                  class='px-[20px] flex flex-row gap-[20px] items-center rounded-[10px] py-[17px] knappetikett text-[#171717]  '
-                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
+                  class="knappetikett flex flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717]  "
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
                 >
-                  {{
-                    section.settings.button_text
-                    | default: "Våra energilösningar"
-                  }}
+                  {{ section.settings.button_text | default: 'Våra energilösningar' }}
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='18'
-                    viewBox='0 0 22 18'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
                   >
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -102,7 +94,7 @@
                 </button>
               {% endif %}
             </div>
-            <p class='body1 lg:w-[90%] w-full sm:w-[70%] text-white'>
+            <p class="body1 w-full text-white sm:w-[70%] lg:w-[90%]">
               {{ section.settings.subheading | newline_to_br }}
             </p>
           </div>
@@ -111,8 +103,8 @@
     {% endif %}
   </div>
   <div
-    class='bg-white rounded-t-[25px] h-[50px] mt-[-50px]  z-10'
-    style='z-index: 1 !important;'
+    class="z-10 mt-[-50px] h-[50px] rounded-t-[25px]  bg-white"
+    style="z-index: 1 !important;"
   ></div>
 </section>
 

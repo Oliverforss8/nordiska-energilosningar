@@ -3,43 +3,43 @@
 %}
 
 <section
-  id='{{ section_id }}'
-  class='py-[60px] md:py-[85px]'
+  id="{{ section_id }}"
+  class="py-[60px] md:py-[85px]"
 >
-  <div class='layout'>
-    <div class='text-left'>
+  <div class="layout">
+    <div class="text-left">
       {% if section.settings.heading != blank %}
-        <h2 class='text-[#171717] headline1'>
+        <h2 class="headline1 text-[#171717]">
           {{ section.settings.heading }}
         </h2>
       {% endif %}
 
       {% if section.settings.description != blank %}
-        <div class='text text-[#171717]/80 py-[40px] md:py-[50px]'>
+        <div class="text py-[40px] text-[#171717]/80 md:py-[50px]">
           {{ section.settings.description }}
         </div>
       {% endif %}
 
-      <div class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[15px]'>
+      <div class="grid grid-cols-1 gap-[15px] md:grid-cols-2 xl:grid-cols-4">
         {% for block in section.blocks %}
           <div
-            class='flex  flex-row md:flex-col rounded-[15px] bg-[#F3F1E8] items-center    md:justify-center p-[20px] gap-[20px] md:p-[30px] md:pt-[50px]'
+            class="flex  flex-row items-center gap-[20px] rounded-[15px] bg-[#F3F1E8]    p-[20px] md:flex-col md:justify-center md:p-[30px] md:pt-[50px]"
             {{ block.shopify_attributes }}
           >
             {% if block.settings.image != blank %}
-              <div class='w-[200px] md:w-auto md:h-[84px] flex items-center justify-center'>
+              <div class="flex w-[200px] items-center justify-center md:h-[84px] md:w-auto">
                 <img
-                  src='{{ block.settings.image | image_url: width: 139 }}'
-                  alt='{{ block.settings.image.alt | default: block.settings.text }}'
-                  width='139'
-                  height='84'
-                  loading='lazy'
-                  class='w-auto h-[65px] md:h-[90px]  object-contain'
+                  src="{{ block.settings.image | image_url: width: 139 }}"
+                  alt="{{ block.settings.image.alt | default: block.settings.text }}"
+                  width="139"
+                  height="84"
+                  loading="lazy"
+                  class="h-[65px] w-auto object-contain  md:h-[90px]"
                 >
               </div>
             {% endif %}
             {% if block.settings.text != blank %}
-              <div class='md:pt-[60px] text-[#171717] text-[24px] md:text-[30px] headline1  items-center justify-center md:items-start md:justify-start flex w-full leading-[90%] '>
+              <div class="headline1 flex w-full items-center justify-center  text-[24px] leading-[90%] text-[#171717] md:items-start md:justify-start md:pt-[60px] md:text-[30px] ">
                 {{ block.settings.text }}
               </div>
             {% endif %}

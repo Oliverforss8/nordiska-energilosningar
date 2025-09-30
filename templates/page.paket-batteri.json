@@ -46,10 +46,7 @@
           }
         }
       },
-      "block_order": [
-        "button_RjQMiy",
-        "button_GbPC3h"
-      ],
+      "block_order": ["button_RjQMiy", "button_GbPC3h"],
       "name": "Paket",
       "settings": {
         "custom_id": "",
@@ -69,10 +66,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "hero_lower_FEUqrg",
-    "paket_xr8i6t",
-    "kontakt_form_b39beP"
-  ]
+  "order": ["main", "hero_lower_FEUqrg", "paket_xr8i6t", "kontakt_form_b39beP"]
 }

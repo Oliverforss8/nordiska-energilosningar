@@ -1,27 +1,27 @@
-<section class='py-[60px] md:py-[85px]'>
-  <div class='layout'>
-    <div class='text-center'>
+<section class="py-[60px] md:py-[85px]">
+  <div class="layout">
+    <div class="text-center">
       {% if section.settings.heading != blank %}
-        <h2 class='text-[#171717] headline1 mb-[50px]'>
+        <h2 class="headline1 mb-[50px] text-[#171717]">
           {{ section.settings.heading }}
         </h2>
       {% endif %}
- 
-      <div class='grid grid-cols-1 md:grid-cols-3 gap-[30px] mb-[50px]'>
+
+      <div class="mb-[50px] grid grid-cols-1 gap-[30px] md:grid-cols-3">
         {% for block in section.blocks %}
           <div
-            class='bg-[#F3F1E8]  rounded-[15px] p-[30px] flex flex-col justify-between'
+            class="flex  flex-col justify-between rounded-[15px] bg-[#F3F1E8] p-[30px]"
             {{ block.shopify_attributes }}
           >
             <!-- Stars -->
-            <div class='flex gap-[5px]  items-center justify-center  mb-[20px]'>
+            <div class="mb-[20px] flex  items-center justify-center  gap-[5px]">
               {% for i in (1..5) %}
                 {% if i <= block.settings.stars %}
-                  <svg width='20' height='20' viewBox='0 0 20 20' fill='none'>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d='M10 0L12.2451 7.75593H20L13.8775 12.4881L16.1226 20.2441L10 15.5119L3.87744 20.2441L6.12256 12.4881L0 7.75593H7.75493L10 0Z' fill='#EBCF2F'/>
                   </svg>
                 {% else %}
-                  <svg width='20' height='20' viewBox='0 0 20 20' fill='none'>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d='M10 0L12.2451 7.75593H20L13.8775 12.4881L16.1226 20.2441L10 15.5119L3.87744 20.2441L6.12256 12.4881L0 7.75593H7.75493L10 0Z' fill='#E5E5E5'/>
                   </svg>
                 {% endif %}
@@ -30,14 +30,14 @@
 
             <!-- Review text -->
             {% if block.settings.review_text != blank %}
-              <div class='text text-[#171717]/80 mb-[20px] flex-grow'>
+              <div class="text mb-[20px] flex-grow text-[#171717]/80">
                 "{{ block.settings.review_text }}"
               </div>
             {% endif %}
 
             <!-- Name -->
             {% if block.settings.customer_name != blank %}
-              <div class='text-[#171717] body1 text-[16px]'>
+              <div class="body1 text-[16px] text-[#171717]">
                 - {{ block.settings.customer_name }}
               </div>
             {% endif %}

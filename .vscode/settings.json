@@ -1,0 +1,9 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "liquid": "html",
+      "liquid-html": "html"
+    },
+    "[liquid]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "editor.acceptSuggestionOnEnter": "smart"
+  }

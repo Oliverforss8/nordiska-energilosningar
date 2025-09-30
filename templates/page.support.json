@@ -72,12 +72,7 @@
           }
         }
       },
-      "block_order": [
-        "feature_PA8KdK",
-        "feature_p9CMea",
-        "feature_NptdVP",
-        "feature_NeCEHe"
-      ],
+      "block_order": ["feature_PA8KdK", "feature_p9CMea", "feature_NptdVP", "feature_NeCEHe"],
       "disabled": true,
       "name": "Icon section",
       "settings": {

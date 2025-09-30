@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let globalHoverTimeout;
   let currentActiveDropdown = null;
 
-  dropdownItems.forEach(item => {
+  dropdownItems.forEach((item) => {
     const dropdown = item.querySelector('.mega-dropdown');
     if (!dropdown) return;
 
@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentActiveDropdown.style.visibility = 'hidden';
 
         // Reset the previous dropdown's categories
-        const prevCategoryItems = currentActiveDropdown.querySelectorAll(
-          '[data-category-item]'
-        );
+        const prevCategoryItems = currentActiveDropdown.querySelectorAll('[data-category-item]');
         resetToFirstItem(prevCategoryItems);
       }
 
@@ -67,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Close dropdown when clicking on backdrop
-    dropdown.addEventListener('click', e => {
+    dropdown.addEventListener('click', (e) => {
       if (e.target === dropdown) {
         dropdown.style.opacity = '0';
         dropdown.style.visibility = 'hidden';
@@ -77,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Category item hover interactions
-    categoryItems.forEach(categoryItem => {
+    categoryItems.forEach((categoryItem) => {
       categoryItem.addEventListener('mouseenter', () => {
         // Remove highlight from all items
-        categoryItems.forEach(item => {
+        categoryItems.forEach((item) => {
           item.classList.remove('bg-[#F3F1E8]');
           item.classList.add('bg-white');
         });
@@ -94,13 +92,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Reset to first item when mouse leaves category area
     const leftColumn = dropdown.querySelector('.flex.flex-col');
     if (leftColumn) {
-      leftColumn.addEventListener('mouseleave', e => {
+      leftColumn.addEventListener('mouseleave', (e) => {
         // Check if we're not moving to another category item
         const relatedTarget = e.relatedTarget;
-        if (
-          !relatedTarget ||
-          !relatedTarget.hasAttribute('data-category-item')
-        ) {
+        if (!relatedTarget || !relatedTarget.hasAttribute('data-category-item')) {
           setTimeout(() => {
             resetToFirstItem(categoryItems);
           }, 50); // Faster reset

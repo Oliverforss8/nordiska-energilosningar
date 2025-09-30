@@ -1,16 +1,16 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-" | append: section.type
+  assign section_class = 'section-' | append: section.type
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }}'
+  id="{{ section_id }}"
+  class="{{ section_class }}"
 >
-  <div class='layout'>
+  <div class="layout">
     {% if section.settings.heading != blank %}
       <div>
-        <h2 class='text-[#171717] headline1'>
+        <h2 class="headline1 text-[#171717]">
           {{ section.settings.heading }}
         </h2>
       </div>
@@ -18,33 +18,33 @@
 
     {% if section.settings.description != blank %}
       <div>
-        <div class='text text-[#171717]/80 py-[40px] md:py-[50px]'>
+        <div class="text py-[40px] text-[#171717]/80 md:py-[50px]">
           {{ section.settings.description }}
         </div>
       </div>
     {% endif %}
 
     {% if section.blocks.size > 0 %}
-      <div class='grid grid-cols-1 md:grid-cols-2 gap-[20px]'>
+      <div class="grid grid-cols-1 gap-[20px] md:grid-cols-2">
         {% for block in section.blocks %}
           <div
-            class='bg-[#F3F1E8] items-center gap-[25px] rounded-[15px] p-[30px] flex flex-row justify-between'
+            class="flex flex-row items-center justify-between gap-[25px] rounded-[15px] bg-[#F3F1E8] p-[30px]"
             {{ block.shopify_attributes }}
           >
             {% if block.settings.text != blank %}
-              <div class='headline1 text-[30px]'>{{ block.settings.text }}</div>
+              <div class="headline1 text-[30px]">{{ block.settings.text }}</div>
             {% endif %}
 
             {% if block.settings.image != blank %}
               <div>
-                <div class='w-[200px] md:w-auto md:h-[84px] flex items-center justify-center'>
+                <div class="flex w-[200px] items-center justify-center md:h-[84px] md:w-auto">
                   <img
-                    src='{{ block.settings.image | image_url: width: 139 }}'
-                    alt='{{ block.settings.image.alt | default: block.settings.text }}'
-                    width='139'
-                    height='84'
-                    loading='lazy'
-                    class='w-auto h-[65px] md:h-[90px] object-contain'
+                    src="{{ block.settings.image | image_url: width: 139 }}"
+                    alt="{{ block.settings.image.alt | default: block.settings.text }}"
+                    width="139"
+                    height="84"
+                    loading="lazy"
+                    class="h-[65px] w-auto object-contain md:h-[90px]"
                   >
                 </div>
               </div>

@@ -20,8 +20,8 @@ class FAQAccordion {
     const faqItems = document.querySelectorAll('.faq-item');
     console.log('FAQ items found:', faqItems.length);
 
-    faqItems.forEach(faqItem => {
-      faqItem.addEventListener('click', e => this.handleItemClick(e, faqItem));
+    faqItems.forEach((faqItem) => {
+      faqItem.addEventListener('click', (e) => this.handleItemClick(e, faqItem));
     });
   }
 
@@ -51,7 +51,7 @@ class FAQAccordion {
   closeAllFAQs(currentItem) {
     const allItems = document.querySelectorAll('.faq-item');
 
-    allItems.forEach(faqItem => {
+    allItems.forEach((faqItem) => {
       if (faqItem !== currentItem) {
         const answer = faqItem.querySelector('.faq-answer');
         const icon = faqItem.querySelector('.faq-icon');

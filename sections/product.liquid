@@ -1,47 +1,47 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = "section-" | append: section.type
+  assign section_class = 'section-' | append: section.type
 %}
 
 <section
-  id='{{ section_id }}'
-  class='{{ section_class }} '
+  id="{{ section_id }}"
+  class="{{ section_class }} "
 >
-  <div class='layout pt-[100px] md:pt-[150px] '>
-    <div class='pb-[60px] headline1 font-[300] text-[20px]'>
-      <nav aria-label='Breadcrumb'>
-        <a href='{{ routes.root_url }}' class='text-[#171717] hover:opacity-70 transition-opacity'>
+  <div class="layout pt-[100px] md:pt-[150px] ">
+    <div class="headline1 pb-[60px] text-[20px] font-[300]">
+      <nav aria-label="Breadcrumb">
+        <a href="{{ routes.root_url }}" class="text-[#171717] transition-opacity hover:opacity-70">
           Hem
         </a>
-        <span class='mx-2'>/</span>
+        <span class="mx-2">/</span>
         {% if collection %}
           <a
-            href='{{ collection.url }}'
-            class='text-[#171717] hover:opacity-70 transition-opacity'
+            href="{{ collection.url }}"
+            class="text-[#171717] transition-opacity hover:opacity-70"
           >
             {{ collection.title }}
           </a>
-          <span class='mx-2'>/</span>
+          <span class="mx-2">/</span>
         {% elsif product.collections.size > 0 %}
           <a
-            href='{{ product.collections.first.url }}'
-            class='text-[#171717] hover:opacity-70 transition-opacity'
+            href="{{ product.collections.first.url }}"
+            class="text-[#171717] transition-opacity hover:opacity-70"
           >
             {{ product.collections.first.title }}
           </a>
-          <span class='mx-2'>/</span>
+          <span class="mx-2">/</span>
         {% endif %}
-        <span class='font-[400]'>{{ product.title }}</span>
+        <span class="font-[400]">{{ product.title }}</span>
       </nav>
     </div>
-    <div class='flex flex-col md:flex-row gap-[30px] md:gap-[50px]'>
+    <div class="flex flex-col gap-[30px] md:flex-row md:gap-[50px]">
       <!-- Product Images -->
-      <div class='space-y-4 w-full md:w-auto'>
-        <div class='px-[20px] py-[20px] md:px-[90px] md:py-[40px] rounded-[15px] flex bg-[#F6F6F6]'>
+      <div class="w-full space-y-4 md:w-auto">
+        <div class="flex rounded-[15px] bg-[#F6F6F6] px-[20px] py-[20px] md:px-[90px] md:py-[40px]">
           {% if product.featured_media %}
             <div
-              class='flex w-full h-[280px] md:w-[300px] md:h-[300px]'
-              id='main-product-image'
+              class="flex h-[280px] w-full md:h-[300px] md:w-[300px]"
+              id="main-product-image"
             >
               {%
                 render 'image',
@@ -54,12 +54,12 @@
         </div>
 
         {% if product.media.size > 1 %}
-          <div class='flex gap-3 overflow-x-auto pb-2'>
+          <div class="flex gap-3 overflow-x-auto pb-2">
             {% for media in product.media offset: 1 limit: 4 %}
               <div
-                class='flex-shrink-0 w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-[10px] overflow-hidden bg-[#F6F6F6] cursor-pointer hover:opacity-80 transition-opacity'
+                class="h-[60px] w-[60px] flex-shrink-0 cursor-pointer overflow-hidden rounded-[10px] bg-[#F6F6F6] transition-opacity hover:opacity-80 md:h-[80px] md:w-[80px]"
                 data-thumbnail
-                data-media-id='{{ media.id }}'
+                data-media-id="{{ media.id }}"
               >
                 {%
                   render 'image',
@@ -74,53 +74,59 @@
       </div>
 
       <!-- Product Details -->
-      <div class='product-details w-full'>
-        <div class=''>
-          <h1 class=' headline2'>
+      <div class="product-details w-full">
+        <div class="">
+          <h1 class=" headline2">
             {{ product.title }}
           </h1>
 
           {% if product.description != blank %}
-            <div class='body1 py-[30px] md:py-[50px] text-[#171717]/80'>
+            <div class="body1 py-[30px] text-[#171717]/80 md:py-[50px]">
               {{ product.description }}
             </div>
           {% endif %}
 
           {% if product.price > 0 %}
-            <div class='flex items-center space-x-3 mb-[30px] md:mb-0'>
-              {% if product.compare_at_price > product.price %}
-                <span class='text-lg text-gray-500 line-through'>
-                  {{ product.compare_at_price | money }}
+            <!-- Variant Selectors -->
+
+            <!-- Price Display -->
+            <div class="mb-[30px] flex items-center space-x-3 md:mb-0">
+              <div id="variant-price-display">
+                {% assign current_variant = product.selected_or_first_available_variant %}
+                {% if current_variant.compare_at_price > current_variant.price %}
+                  <span class="text-lg text-gray-500 line-through" id="compare-price">
+                    {{ current_variant.compare_at_price | money }}
+                  </span>
+                {% endif %}
+                <span class="headline2" id="current-price">
+                  {{ current_variant.price | money }}
                 </span>
-              {% endif %}
-              <span class='headline2'>
-                {{ product.price | money }}
-              </span>
+              </div>
             </div>
 
             <!-- Mobile-optimized button layout -->
-            <div class=''>
+            <div class="">
               <!-- Quantity selector -->
-              <div class='flex md:hidden justify-start'>
+              <div class="flex justify-start md:hidden">
                 <div
-                  class='headline1 text-[18px] md:text-[20px] bg-transparent rounded-[10px] pl-[20px] pr-[15px] py-[10px] gap-[10px] flex flex-row items-center min-h-[48px]'
-                  style='border: 1px solid #171717 !important;'
+                  class="headline1 flex min-h-[48px] flex-row items-center gap-[10px] rounded-[10px] bg-transparent py-[10px] pl-[20px] pr-[15px] text-[18px] md:text-[20px]"
+                  style="border: 1px solid #171717 !important;"
                 >
-                  <span id='quantity-display-mobile'>1</span>
-                  <div class='flex flex-col gap-[0px] cursor-pointer'>
+                  <span id="quantity-display-mobile">1</span>
+                  <div class="flex cursor-pointer flex-col gap-[0px]">
                     <!-- Up arrow (increase) -->
                     <button
-                      type='button'
-                      class='quantity-increase hover:opacity-70 transition-opacity'
-                      onclick='updateQuantity(1)'
-                      style='background: none; border: none; padding: 0; cursor: pointer;'
+                      type="button"
+                      class="quantity-increase transition-opacity hover:opacity-70"
+                      onclick="updateQuantity(1)"
+                      style="background: none; border: none; padding: 0; cursor: pointer;"
                     >
                       <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='13'
-                        height='9'
-                        viewBox='0 0 13 9'
-                        fill='none'
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="13"
+                        height="9"
+                        viewBox="0 0 13 9"
+                        fill="none"
                       >
                         <path d="M11.7159 6.71C11.8096 6.61704 11.884 6.50644 11.9348 6.38458C11.9856 6.26272 12.0117 6.13201 12.0117 6C12.0117 5.86799 11.9856 5.73728 11.9348 5.61542C11.884 5.49356 11.8096 5.38296 11.7159 5.29L6.71592 0.29C6.62296 0.196272 6.51236 0.121877 6.3905 0.0711086C6.26864 0.0203399 6.13793 -0.00579834 6.00592 -0.00579834C5.87391 -0.00579834 5.7432 0.0203399 5.62134 0.0711086C5.49948 0.121877 5.38888 0.196272 5.29592 0.29L0.295921 5.29C0.202193 5.38296 0.127797 5.49356 0.0770283 5.61542C0.0262594 5.73728 0.00012207 5.86799 0.00012207 6C0.00012207 6.13201 0.0262594 6.26272 0.0770283 6.38458C0.127797 6.50644 0.202193 6.61704 0.295921 6.71C0.388885 6.80373 0.499484 6.87812 0.621344 6.92889C0.743203 6.97966 0.873909 7.0058 1.00592 7.0058C1.13793 7.0058 1.26864 6.97966 1.3905 6.92889C1.51236 6.87812 1.62296 6.80373 1.71592 6.71L6.00592 2.41L10.2959 6.71C10.3889 6.80373 10.4995 6.87812 10.6213 6.92889C10.7432 6.97966 10.8739 7.0058 11.0059 7.0058C11.1379 7.0058 11.2686 6.97966 11.3905 6.92889C11.5124 6.87812 11.623 6.80373 11.7159 6.71Z" fill="#171717"/>
                       </svg>
@@ -128,17 +134,17 @@
 
                     <!-- Down arrow (decrease) -->
                     <button
-                      type='button'
-                      class='quantity-decrease hover:opacity-70 transition-opacity'
-                      onclick='updateQuantity(-1)'
-                      style='background: none; border: none; padding: 0; cursor: pointer;'
+                      type="button"
+                      class="quantity-decrease transition-opacity hover:opacity-70"
+                      onclick="updateQuantity(-1)"
+                      style="background: none; border: none; padding: 0; cursor: pointer;"
                     >
                       <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='13'
-                        height='9'
-                        viewBox='0 0 13 9'
-                        fill='none'
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="13"
+                        height="9"
+                        viewBox="0 0 13 9"
+                        fill="none"
                       >
                         <path d="M6.71592 8.71L11.7159 3.71C11.8092 3.6168 11.8831 3.5061 11.9336 3.3842C11.984 3.2624 12.01 3.1319 12.01 3C12.01 2.7337 11.9042 2.4783 11.7159 2.29C11.6227 2.1968 11.512 2.1228 11.3902 2.0723C11.2683 2.0219 11.1378 1.9959 11.0059 1.9959C10.7396 1.9959 10.4842 2.1017 10.2959 2.29L6.00592 6.59L1.71592 2.29C1.62296 2.1963 1.51236 2.1219 1.3905 2.0711C1.26864 2.0203 1.13793 1.9942 1.00592 1.9942C0.873909 1.9942 0.743203 2.0203 0.621344 2.0711C0.499484 2.1219 0.388885 2.1963 0.295921 2.29C0.202193 2.383 0.127797 2.4936 0.0770283 2.6154C0.0262594 2.7373 0.00012207 2.868 0.00012207 3C0.00012207 3.132 0.0262594 3.2627 0.0770283 3.3846C0.127797 3.5064 0.202193 3.617 0.295921 3.71L5.29592 8.71C5.38888 8.8037 5.49948 8.8781 5.62134 8.9289C5.7432 8.9797 5.87391 9.0058 6.00592 9.0058C6.13793 9.0058 6.26864 8.9797 6.3905 8.9289C6.51236 8.8781 6.62296 8.8037 6.71592 8.71Z" fill="#171717"/>
                       </svg>
@@ -147,37 +153,225 @@
 
                   <!-- Hidden input to store the actual quantity -->
                   <input
-                    type='hidden'
-                    id='quantity-input'
-                    value='1'
-                    min='1'
-                    max='{{ product.selected_or_first_available_variant.inventory_quantity | default: 99 }}'
+                    type="hidden"
+                    id="quantity-input"
+                    value="1"
+                    min="1"
+                    max="{{ product.selected_or_first_available_variant.inventory_quantity | default: 99 }}"
                   >
                 </div>
               </div>
+              {% unless product.has_only_default_variant %}
+                <div class="variant-selectors rounded-[10px]  border  pt-[50px] ">
+                  {% for option in product.options_with_values %}
+                    <div class="variant-option">
+                      <label class="body1 mb-2 block text-[16px] font-medium md:text-[18px]">
+                        {{ option.name }}
+                      </label>
+                      <select
+                        style="  border: 1px solid #171717 !important; "
+                        class="variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[12px] text-[16px] focus:outline-none md:text-[18px] "
+                        data-option-position="{{ option.position }}"
+                        data-option-name="{{ option.name }}"
+                      >
+                        {% for value in option.values %}
+                          <option
+                            value="{{ value }}"
+                            {% if option.selected_value == value %}
+                              selected
+                            {% endif %}
+                          >
+                            {{ value }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  {% endfor %}
+                </div>
+
+                <!-- Upsell Products Section -->
+                {% if section.blocks.size > 0 %}
+                  <div class="upsell-products-wrapper pt-[30px] md:pt-[50px]">
+                    {% for block in section.blocks %}
+                      {% case block.type %}
+                        {% when 'upsell_product' %}
+                          {% if block.settings.upsell_product != blank %}
+                            {% assign upsell_product = block.settings.upsell_product %}
+                            <div class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]" {{ block.shopify_attributes }}>
+                              <div class="flex flex-col gap-[20px]">
+                                <!-- Header with checkbox -->
+                                <div class="flex items-start justify-between gap-[15px]">
+                                  <div class="flex items-start gap-[15px]">
+                                    <input
+                                      type="checkbox"
+                                      id="upsell-{{ upsell_product.id }}"
+                                      class="upsell-checkbox mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                                      data-product-id="{{ upsell_product.id }}"
+                                      data-variant-id="{{ upsell_product.selected_or_first_available_variant.id }}"
+                                      data-price="{{ upsell_product.price }}"
+                                    >
+                                    <label for="upsell-{{ upsell_product.id }}" class="cursor-pointer">
+                                      <div class="headline1 text-[20px] md:text-[24px]">
+                                        {{ block.settings.upsell_title | default: upsell_product.title }}
+                                      </div>
+                                      {% if block.settings.upsell_description != blank %}
+                                        <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
+                                          {{ block.settings.upsell_description }}
+                                        </div>
+                                      {% endif %}
+                                    </label>
+                                  </div>
+                                  <div class="headline1 text-[18px] md:text-[20px]">
+                                    +{{ upsell_product.price | money }}
+                                  </div>
+                                </div>
+
+                                <!-- Product Info -->
+                                <div class="flex items-center gap-[15px] md:gap-[20px]">
+                                  {% if upsell_product.featured_image %}
+                                    <div class="h-[60px] w-[60px] flex-shrink-0 overflow-hidden rounded-[10px] bg-[#F6F6F6] md:h-[80px] md:w-[80px]">
+                                      {%
+                                        render 'image',
+                                        image: upsell_product.featured_image,
+                                        alt: upsell_product.featured_image.alt | default: upsell_product.title,
+                                        class: 'image--cover'
+                                      %}
+                                    </div>
+                                  {% endif %}
+                                  <div class="flex-1">
+                                    <div class="body1 text-[14px] font-medium text-[#171717] md:text-[16px]">
+                                      {{ upsell_product.title }}
+                                    </div>
+                                    {% if upsell_product.description != blank %}
+                                      <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                                        {{ upsell_product.description | strip_html | truncate: 80 }}
+                                      </div>
+                                    {% endif %}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          {% endif %}
+                      {% endcase %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                <!-- Installation Option -->
+                {% if section.settings.show_installation %}
+                  <div class="installation-wrapper pt-[15px]">
+                    <div class="installation-card rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]">
+                      <div class="flex items-start justify-between gap-[15px]">
+                        <div class="flex items-start gap-[15px]">
+                          <input
+                            type="checkbox"
+                            id="installation-checkbox"
+                            class="installation-checkbox mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                            data-price="{{ section.settings.installation_price | times: 100 }}"
+                          >
+                          <label for="installation-checkbox" class="cursor-pointer">
+                            <div class="headline1 text-[20px] md:text-[24px]">
+                              {{ section.settings.installation_title | default: 'Installation' }}
+                            </div>
+                            {% if section.settings.installation_description != blank %}
+                              <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
+                                {{ section.settings.installation_description }}
+                              </div>
+                            {% endif %}
+                          </label>
+                        </div>
+                        <div class="headline1 text-[18px] md:text-[20px]">
+                          +{{ section.settings.installation_price | money }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Green Deduction Options (only visible when installation is selected) -->
+                  <div class="green-deduction-wrapper pt-[15px]" id="green-deduction-wrapper" style="display: none;">
+                    <div class="rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
+                      <div class="headline1 mb-[15px] text-[18px] md:text-[20px]">
+                        Välj grönt avdrag
+                      </div>
+                      
+                      <!-- Grönt avdrag 1 -->
+                      {% if section.settings.green_deduction_1_code != blank %}
+                        <div class="green-deduction-option mb-[15px] flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
+                          <input
+                            type="radio"
+                            id="green-deduction-1"
+                            name="green-deduction"
+                            class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                            data-discount-code="{{ section.settings.green_deduction_1_code }}"
+                          >
+                          <label for="green-deduction-1" class="flex-1 cursor-pointer">
+                            <div class="body1 font-medium text-[16px] md:text-[18px]">
+                              {{ section.settings.green_deduction_1_title | default: 'Grönt avdrag 1' }}
+                            </div>
+                            {% if section.settings.green_deduction_1_description != blank %}
+                              <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                                {{ section.settings.green_deduction_1_description }}
+                              </div>
+                            {% endif %}
+                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
+                              Rabattkod: {{ section.settings.green_deduction_1_code }}
+                            </div>
+                          </label>
+                        </div>
+                      {% endif %}
+
+                      <!-- Grönt avdrag 2 -->
+                      {% if section.settings.green_deduction_2_code != blank %}
+                        <div class="green-deduction-option flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
+                          <input
+                            type="radio"
+                            id="green-deduction-2"
+                            name="green-deduction"
+                            class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                            data-discount-code="{{ section.settings.green_deduction_2_code }}"
+                          >
+                          <label for="green-deduction-2" class="flex-1 cursor-pointer">
+                            <div class="body1 font-medium text-[16px] md:text-[18px]">
+                              {{ section.settings.green_deduction_2_title | default: 'Grönt avdrag 2' }}
+                            </div>
+                            {% if section.settings.green_deduction_2_description != blank %}
+                              <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                                {{ section.settings.green_deduction_2_description }}
+                              </div>
+                            {% endif %}
+                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
+                              Rabattkod: {{ section.settings.green_deduction_2_code }}
+                            </div>
+                          </label>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endunless %}
 
               <!-- Action buttons - stacked on mobile, row on desktop -->
-              <div class='flex md:pt-[50px] flex-col md:flex-row gap-[10px] w-full'>
-                <div class='flex justify-center md:justify-start'>
+              <div class="flex w-full flex-col gap-[10px] md:flex-row md:pt-[25px]">
+                <div class="flex justify-center md:justify-start">
                   <div
-                    class='headline1 text-[18px] md:text-[20px] bg-transparent rounded-[10px] pl-[20px] hidden md:flex pr-[15px] py-[15px] gap-[10px] flex-row items-center min-h-[48px]'
-                    style='border: 1px solid #171717 !important;'
+                    class="headline1 hidden min-h-[48px] flex-row items-center gap-[10px] rounded-[10px] bg-transparent py-[15px] pl-[20px] pr-[15px] text-[18px] md:flex md:text-[20px]"
+                    style="border: 1px solid #171717 !important;"
                   >
-                    <span id='quantity-display-desktop'>1</span>
-                    <div class='flex flex-col gap-[2px] cursor-pointer'>
+                    <span id="quantity-display-desktop">1</span>
+                    <div class="flex cursor-pointer flex-col gap-[2px]">
                       <!-- Up arrow (increase) -->
                       <button
-                        type='button'
-                        class='quantity-increase hover:opacity-70 transition-opacity'
-                        onclick='updateQuantity(1)'
-                        style='background: none; border: none; padding: 0; cursor: pointer;'
+                        type="button"
+                        class="quantity-increase transition-opacity hover:opacity-70"
+                        onclick="updateQuantity(1)"
+                        style="background: none; border: none; padding: 0; cursor: pointer;"
                       >
                         <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='13'
-                          height='9'
-                          viewBox='0 0 13 9'
-                          fill='none'
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="13"
+                          height="9"
+                          viewBox="0 0 13 9"
+                          fill="none"
                         >
                           <path d="M11.7159 6.71C11.8096 6.61704 11.884 6.50644 11.9348 6.38458C11.9856 6.26272 12.0117 6.13201 12.0117 6C12.0117 5.86799 11.9856 5.73728 11.9348 5.61542C11.884 5.49356 11.8096 5.38296 11.7159 5.29L6.71592 0.29C6.62296 0.196272 6.51236 0.121877 6.3905 0.0711086C6.26864 0.0203399 6.13793 -0.00579834 6.00592 -0.00579834C5.87391 -0.00579834 5.7432 0.0203399 5.62134 0.0711086C5.49948 0.121877 5.38888 0.196272 5.29592 0.29L0.295921 5.29C0.202193 5.38296 0.127797 5.49356 0.0770283 5.61542C0.0262594 5.73728 0.00012207 5.86799 0.00012207 6C0.00012207 6.13201 0.0262594 6.26272 0.0770283 6.38458C0.127797 6.50644 0.202193 6.61704 0.295921 6.71C0.388885 6.80373 0.499484 6.87812 0.621344 6.92889C0.743203 6.97966 0.873909 7.0058 1.00592 7.0058C1.13793 7.0058 1.26864 6.97966 1.3905 6.92889C1.51236 6.87812 1.62296 6.80373 1.71592 6.71L6.00592 2.41L10.2959 6.71C10.3889 6.80373 10.4995 6.87812 10.6213 6.92889C10.7432 6.97966 10.8739 7.0058 11.0059 7.0058C11.1379 7.0058 11.2686 6.97966 11.3905 6.92889C11.5124 6.87812 11.623 6.80373 11.7159 6.71Z" fill="#171717"/>
                         </svg>
@@ -185,17 +379,17 @@
 
                       <!-- Down arrow (decrease) -->
                       <button
-                        type='button'
-                        class='quantity-decrease hover:opacity-70 transition-opacity'
-                        onclick='updateQuantity(-1)'
-                        style='background: none; border: none; padding: 0; cursor: pointer;'
+                        type="button"
+                        class="quantity-decrease transition-opacity hover:opacity-70"
+                        onclick="updateQuantity(-1)"
+                        style="background: none; border: none; padding: 0; cursor: pointer;"
                       >
                         <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='13'
-                          height='9'
-                          viewBox='0 0 13 9'
-                          fill='none'
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="13"
+                          height="9"
+                          viewBox="0 0 13 9"
+                          fill="none"
                         >
                           <path d="M6.71592 8.71L11.7159 3.71C11.8092 3.6168 11.8831 3.5061 11.9336 3.3842C11.984 3.2624 12.01 3.1319 12.01 3C12.01 2.7337 11.9042 2.4783 11.7159 2.29C11.6227 2.1968 11.512 2.1228 11.3902 2.0723C11.2683 2.0219 11.1378 1.9959 11.0059 1.9959C10.7396 1.9959 10.4842 2.1017 10.2959 2.29L6.00592 6.59L1.71592 2.29C1.62296 2.1963 1.51236 2.1219 1.3905 2.0711C1.26864 2.0203 1.13793 1.9942 1.00592 1.9942C0.873909 1.9942 0.743203 2.0203 0.621344 2.0711C0.499484 2.1219 0.388885 2.1963 0.295921 2.29C0.202193 2.383 0.127797 2.4936 0.0770283 2.6154C0.0262594 2.7373 0.00012207 2.868 0.00012207 3C0.00012207 3.132 0.0262594 3.2627 0.0770283 3.3846C0.127797 3.5064 0.202193 3.617 0.295921 3.71L5.29592 8.71C5.38888 8.8037 5.49948 8.8781 5.62134 8.9289C5.7432 8.9797 5.87391 9.0058 6.00592 9.0058C6.13793 9.0058 6.26864 8.9797 6.3905 8.9289C6.51236 8.8781 6.62296 8.8037 6.71592 8.71Z" fill="#171717"/>
                         </svg>
@@ -204,34 +398,34 @@
 
                     <!-- Hidden input to store the actual quantity -->
                     <input
-                      type='hidden'
-                      id='quantity-input'
-                      value='1'
-                      min='1'
-                      max='{{ product.selected_or_first_available_variant.inventory_quantity | default: 99 }}'
+                      type="hidden"
+                      id="quantity-input"
+                      value="1"
+                      min="1"
+                      max="{{ product.selected_or_first_available_variant.inventory_quantity | default: 99 }}"
                     >
                   </div>
                 </div>
                 <button
-                  class='w-full md:w-auto px-[20px] flex flex-row gap-[20px] items-center justify-center rounded-[10px] py-[17px] knappetikett text-[#171717] buy-now-btn min-h-[48px]'
-                  style='background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;'
-                  data-variant-id='{{ product.selected_or_first_available_variant.id }}'
+                  class="knappetikett buy-now-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717] md:w-auto"
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
+                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 >
                   Köp nu
                 </button>
                 <button
-                  class='w-full md:w-auto headline1 text-[18px] md:text-[20px] bg-transparent rounded-[10px] px-[20px] py-[15px] gap-[10px] flex flex-row items-center justify-center add-to-cart-btn min-h-[48px]'
-                  style='border: 1px solid #171717 !important;'
-                  data-variant-id='{{ product.selected_or_first_available_variant.id }}'
+                  class="headline1 add-to-cart-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[10px] rounded-[10px] bg-transparent px-[20px] py-[15px] text-[18px] md:w-auto md:text-[20px]"
+                  style="border: 1px solid #171717 !important;"
+                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 >
                   Lägg i varukorg
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='20'
-                    height='18'
-                    viewBox='0 0 25 22'
-                    fill='none'
-                    class='md:w-[25px] md:h-[22px]'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="18"
+                    viewBox="0 0 25 22"
+                    fill="none"
+                    class="md:h-[22px] md:w-[25px]"
                   >
                     <path d="M11.4617 6.55556H21.0268C21.7143 6.55556 22.0575 6.55556 22.3094 6.66667C23.4225 7.16333 22.9253 8.41111 22.7383 9.30889C22.7209 9.39 22.685 9.46588 22.6334 9.5305C22.5819 9.59512 22.5161 9.64669 22.4413 9.68111C22.0849 9.85113 21.7802 10.1148 21.5592 10.4444M7.06199 6.55556H2.99662C2.30915 6.55556 1.96597 6.55556 1.71409 6.66667C0.600948 7.16333 1.09812 8.41111 1.28511 9.30889C1.30331 9.38967 1.33953 9.46519 1.39099 9.52969C1.44246 9.59419 1.50782 9.64598 1.58209 9.68111C1.89053 9.82463 2.16039 10.0408 2.36901 10.3115C2.57763 10.5821 2.71892 10.8994 2.78103 11.2367L3.43329 14.9867C3.71928 16.6367 3.81827 18.9933 5.24819 20.1556C6.29863 21 7.81105 21 10.837 21H13.6616M16.4115 16C16.9515 15.4378 18.3914 13.2222 19.1613 13.2222M19.1613 13.2222C19.9313 13.2222 21.3711 15.4378 21.9112 16M19.1613 13.2222V21M5.96205 9.88889L9.81184 1M15.3115 1L18.0614 6.55556" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -244,13 +438,13 @@
           {% if product.metafields.custom.meta_falt_texter %}
             {% assign texter_metaobject = product.metafields.custom.meta_falt_texter.value %}
 
-            <div class='pt-[30px] md:pt-[50px] flex flex-col md:flex-row gap-[15px] md:gap-[20px]'>
+            <div class="flex flex-col gap-[15px] pt-[30px] md:flex-row md:gap-[20px] md:pt-[50px]">
               {% if texter_metaobject.text_1 != blank %}
-                <div class='text-field w-full bg-[#F3F1E8] p-[20px] md:p-[30px] rounded-[15px]'>
-                  <div class='metafield-content'>
+                <div class="text-field w-full rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
+                  <div class="metafield-content">
                     {% assign text_1_data = texter_metaobject.text_1.value %}
                     {% for child in text_1_data.children %}
-                      {% if child.type == "heading" %}
+                      {% if child.type == 'heading' %}
                         {% if child.level == 2 %}
                           <h2>{{ child.children[0].value }}</h2>
                         {% elsif child.level == 3 %}
@@ -263,11 +457,11 @@
               {% endif %}
 
               {% if texter_metaobject.text_2 != blank %}
-                <div class='text-field w-full bg-[#F3F1E8] p-[20px] md:p-[30px] rounded-[15px]'>
-                  <div class='metafield-content'>
+                <div class="text-field w-full rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
+                  <div class="metafield-content">
                     {% assign text_2_data = texter_metaobject.text_2.value %}
                     {% for child in text_2_data.children %}
-                      {% if child.type == "heading" %}
+                      {% if child.type == 'heading' %}
                         {% if child.level == 2 %}
                           <h2>{{ child.children[0].value }}</h2>
                         {% elsif child.level == 3 %}
@@ -280,11 +474,11 @@
               {% endif %}
 
               {% if texter_metaobject.text_3 != blank %}
-                <div class='text-field bg-[#F3F1E8] w-full p-[20px] md:p-[30px] rounded-[15px]'>
-                  <div class='metafield-content'>
+                <div class="text-field w-full rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
+                  <div class="metafield-content">
                     {% assign text_3_data = texter_metaobject.text_3.value %}
                     {% for child in text_3_data.children %}
-                      {% if child.type == "heading" %}
+                      {% if child.type == 'heading' %}
                         {% if child.level == 2 %}
                           <h2>{{ child.children[0].value }}</h2>
                         {% elsif child.level == 3 %}
@@ -298,45 +492,42 @@
             </div>
           {% endif %}
 
-          <div class='pt-[30px] md:pt-[50px]'>
+          <div class="pt-[30px] md:pt-[50px]">
             <!-- Tekniska specifikationer Dropdown -->
-           
 
             <!-- Mer information Dropdown -->
             <div
-              class='dropdown-section'
-              style='border-bottom: 1px solid #171717; border-top: 1px solid #171717;'
+              class="dropdown-section"
+              style="border-bottom: 1px solid #171717; border-top: 1px solid #171717;"
             >
               <div
-                class='flex flex-row w-full py-[16px] md:py-[20px] justify-between items-center cursor-pointer dropdown-trigger min-h-[48px]'
+                class="dropdown-trigger flex min-h-[48px] w-full cursor-pointer flex-row items-center justify-between py-[16px] md:py-[20px]"
                 onclick='toggleDropdown("info-content", this)'
               >
-                <div class='body1 text-[18px] md:text-[24px]'>
-                  Mer information
-                </div>
-                <div class='dropdown-icon p-2'>
+                <div class="body1 text-[18px] md:text-[24px]">Mer information</div>
+                <div class="dropdown-icon p-2">
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='16'
-                    height='16'
-                    viewBox='0 0 16 16'
-                    fill='none'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
                   >
                     <path d="M1 8H15M8 1V15" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </div>
               </div>
               <div
-                class='dropdown-content'
-                id='info-content'
-                style='display: none; padding-top: 16px; padding-bottom: 16px;'
+                class="dropdown-content"
+                id="info-content"
+                style="display: none; padding-top: 16px; padding-bottom: 16px;"
               >
                 {% if product.metafields.custom.mer_text != blank %}
-                  <div class='body1 text-[14px] md:text-[16px]'>
+                  <div class="body1 text-[14px] md:text-[16px]">
                     {{ product.metafields.custom.mer_text | metafield_text }}
                   </div>
                 {% else %}
-                  <p class='body1 text-[14px] md:text-[16px]'>
+                  <p class="body1 text-[14px] md:text-[16px]">
                     Ingen ytterligare information tillgänglig.
                   </p>
                 {% endif %}
@@ -344,64 +535,64 @@
             </div>
           </div>
           {% if product.price == 0 %}
-            <div class='pt-[50px] '>
-              <div class='p-[50px] bg-[#F3F1E8] rounded-[15px]'>
-                <div class='flex flex-col'>
-                  <div class='headline1 text-[40px]'>Offert förfrågan</div>
-                  <div class=' body1 text-[20px] py-[30px] opacity-80'>
-                    Ett solcellssystem med batteri och AI-styrning gör att du
-                    inte bara producerar egen el!
+            <div class="pt-[50px] ">
+              <div class="rounded-[15px] bg-[#F3F1E8] p-[50px]">
+                <div class="flex flex-col">
+                  <div class="headline1 text-[40px]">Offert förfrågan</div>
+                  <div class=" body1 py-[30px] text-[20px] opacity-80">
+                    Ett solcellssystem med batteri och AI-styrning gör att du inte bara producerar
+                    egen el!
                   </div>
                   <form
-                    class='flex flex-col gap-[15px] md:gap-[20px]'
-                    id='quote-form'
-                    action='https://formspree.io/f/mdkllzwo'
-                    method='POST'
+                    class="flex flex-col gap-[15px] md:gap-[20px]"
+                    id="quote-form"
+                    action="https://formspree.io/f/mdkllzwo"
+                    method="POST"
                   >
                     <input
-                      class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-                      placeholder='För- & efternamn'
-                      type='text'
-                      name='name'
+                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      placeholder="För- & efternamn"
+                      type="text"
+                      name="name"
                       required
                     >
                     <input
-                      class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-                      placeholder='E-postadress'
-                      type='email'
-                      name='email'
+                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      placeholder="E-postadress"
+                      type="email"
+                      name="email"
                       required
                     >
                     <input
-                      class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-                      placeholder='Telefonnummer'
-                      type='tel'
-                      name='phone'
+                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      placeholder="Telefonnummer"
+                      type="tel"
+                      name="phone"
                     >
                     <input
-                      class='body1 pl-[15px] text-[16px] md:text-[18px] text-[#171717]/85 bg-white rounded-[10px] h-[45px]'
-                      placeholder='Adress'
-                      type='text'
-                      name='address'
+                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      placeholder="Adress"
+                      type="text"
+                      name="address"
                     >
-                    <div class='body1 text-[20px] md:text-[25px] flex gap-[5px] flex-col md:flex-row'>
+                    <div class="body1 flex flex-col gap-[5px] text-[20px] md:flex-row md:text-[25px]">
                       Hur kan vi hjälpa dig?
-                      <span class='text-[13px] md:text-[15px] opacity-70'>
+                      <span class="text-[13px] opacity-70 md:text-[15px]">
                         Klicka för att välja*
                       </span>
                     </div>
-                    <div class='flex flex-col md:flex-row gap-[10px]'>
+                    <div class="flex flex-col gap-[10px] md:flex-row">
                       <button
-                        type='button'
-                        class='bg-white headline1 text-[18px] md:text-[20px] px-[15px] py-[10px] rounded-[10px] flex flex-row gap-[10px] items-center justify-center service-option'
-                        data-service='solceller'
+                        type="button"
+                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                        data-service="solceller"
                       >
                         <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='29'
-                          height='18'
-                          viewBox='0 0 29 18'
-                          fill='none'
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="29"
+                          height="18"
+                          viewBox="0 0 29 18"
+                          fill="none"
                         >
                           <path d="M28.158 10.9256H12.7738L6.98633 1H22.3705L28.158 10.9256Z" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M24.0185 8.69895L20.5454 2.77808H11.0137L14.4867 8.69895H24.0185Z" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -415,16 +606,16 @@
                         Solceller
                       </button>
                       <button
-                        type='button'
-                        class='bg-white headline1 text-[18px] md:text-[20px] px-[15px] py-[10px] rounded-[10px] flex flex-row gap-[10px] items-center justify-center service-option'
-                        data-service='laddbox'
+                        type="button"
+                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                        data-service="laddbox"
                       >
                         <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='25'
-                          height='18'
-                          viewBox='0 0 25 18'
-                          fill='none'
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="18"
+                          viewBox="0 0 25 18"
+                          fill="none"
                         >
                           <path d="M7.65948 11.3927C6.14107 11.3927 4.91016 12.6236 4.91016 14.142C4.91016 15.6604 6.14107 16.8914 7.65948 16.8914C9.17789 16.8914 10.4088 15.6604 10.4088 14.142C10.4088 12.6236 9.17785 11.3927 7.65948 11.3927Z" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M4.42336 3.96602L4.2199 6.05353L1.25195 6.35472M1.25195 2.78259C4.65122 2.78259 8.80464 3.18546 8.80464 3.18546L6.82778 5.86428L4.2199 6.05358" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -443,16 +634,16 @@
                         Laddbox
                       </button>
                       <button
-                        type='button'
-                        class='bg-white headline1 text-[18px] md:text-[20px] px-[15px] py-[10px] rounded-[10px] flex flex-row gap-[10px] items-center justify-center service-option'
-                        data-service='batteri'
+                        type="button"
+                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                        data-service="batteri"
                       >
                         <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='11'
-                          height='18'
-                          viewBox='0 0 11 18'
-                          fill='none'
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="11"
+                          height="18"
+                          viewBox="0 0 11 18"
+                          fill="none"
                         >
                           <path d="M8.14291 11.8178V1.48787L5.689 1.0896C4.95299 0.970133 4.20256 0.970133 3.46661 1.0896L1.0127 1.48787V11.8178L3.46661 12.2161C4.20261 12.3355 4.95305 12.3355 5.689 12.2161L8.14291 11.8178Z" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M5.5791 12.448V16.9435" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -468,46 +659,46 @@
 
                     <!-- Hidden fields with product information -->
                     <input
-                      type='hidden'
-                      name='selected_service'
-                      id='selected_service'
+                      type="hidden"
+                      name="selected_service"
+                      id="selected_service"
                     >
                     <input
-                      type='hidden'
-                      name='product_title'
-                      value='{{ product.title }}'
+                      type="hidden"
+                      name="product_title"
+                      value="{{ product.title }}"
                     >
                     <input
-                      type='hidden'
-                      name='product_handle'
-                      value='{{ product.handle }}'
+                      type="hidden"
+                      name="product_handle"
+                      value="{{ product.handle }}"
                     >
                     <input
-                      type='hidden'
-                      name='product_id'
-                      value='{{ product.id }}'
+                      type="hidden"
+                      name="product_id"
+                      value="{{ product.id }}"
                     >
                     <input
-                      type='hidden'
-                      name='product_url'
-                      value='{{ shop.secure_url }}{{ product.url }}'
+                      type="hidden"
+                      name="product_url"
+                      value="{{ shop.secure_url }}{{ product.url }}"
                     >
                     <input
-                      type='hidden'
-                      name='_subject'
-                      value='Offert förfrågan för {{ product.title }}'
+                      type="hidden"
+                      name="_subject"
+                      value="Offert förfrågan för {{ product.title }}"
                     >
                     <button
-                      type='submit'
-                      class='w-full headline1  text-[18px] md:text-[20px] bg-[#EFD959] rounded-[10px] py-[14px] flex flex-row gap-[15px] md:gap-[20px] items-center justify-center quote-submit-btn'
+                      type="submit"
+                      class="headline1 quote-submit-btn  flex w-full flex-row items-center justify-center gap-[15px] rounded-[10px] bg-[#EFD959] py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
                     >
                       Få ditt förslag
                       <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='18'
-                        height='14'
-                        viewBox='0 0 18 14'
-                        fill='none'
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="14"
+                        viewBox="0 0 18 14"
+                        fill="none"
                       >
                         <path d="M1.66699 7.00009H16.667L10.7974 1.13049" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M1.66699 7.00004H16.667L10.7974 12.8696" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -525,7 +716,7 @@
 </section>
 
 <!-- Cart Drawer -->
-{% render "cart-drawer" %}
+{% render 'cart-drawer' %}
 
 {% stylesheet %}
   /* Make images passed with class image--cover fill and cover wrappers */
@@ -651,10 +842,84 @@
     border-color: #efd959;
     box-shadow: 0 2px 8px rgba(239, 217, 89, 0.3);
   }
+
+  /* Upsell Products Styling */
+  .upsell-product-card {
+    transition: all 0.3s ease;
+  }
+
+  .upsell-product-card:hover {
+    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.1);
+  }
+
+  .upsell-checkbox,
+  .installation-checkbox {
+    accent-color: #171717;
+    border-radius: 4px;
+    border: 2px solid #171717;
+  }
+
+  .upsell-checkbox:hover,
+  .installation-checkbox:hover {
+    transform: scale(1.1);
+  }
+
+  .upsell-checkbox:checked,
+  .installation-checkbox:checked {
+    background-color: #171717;
+  }
+
+  .upsell-product-card:has(.upsell-checkbox:checked) {
+    background-color: #f9fafb;
+    border-color: #4ade80;
+    border-width: 2px;
+  }
+
+  /* Installation Card Styling */
+  .installation-card {
+    transition: all 0.3s ease;
+  }
+
+  .installation-card:hover {
+    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.1);
+  }
+
+  .installation-card:has(.installation-checkbox:checked) {
+    background-color: #f9fafb;
+    border-color: #4ade80;
+    border-width: 2px;
+  }
+
+  /* Green Deduction Radio Styling */
+  .green-deduction-radio {
+    accent-color: #4ade80;
+    border-radius: 50%;
+    border: 2px solid #171717;
+    cursor: pointer;
+  }
+
+  .green-deduction-radio:hover {
+    transform: scale(1.1);
+  }
+
+  .green-deduction-option {
+    cursor: pointer;
+  }
+
+  .green-deduction-option:has(.green-deduction-radio:checked) {
+    background: linear-gradient(135deg, #d4f1d4 0%, #e8f5e8 100%);
+    border-color: #4ade80 !important;
+    border-width: 2px;
+  }
+
+  .green-deduction-wrapper {
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
 {% endstylesheet %}
 
 <!-- Generate product media data -->
-{% capture product_media_json %}
+<script type="application/json" id="product-media-data">
 [
   {% for media in product.media %}
     {
@@ -665,7 +930,7 @@
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
-{% endcapture %}
+</script>
 
 {% javascript %}
   // Global dropdown toggle function for mobile-friendly interaction
@@ -690,7 +955,8 @@
 
     if (mainImageContainer && thumbnails.length > 0) {
       // Store all product media for easy access
-      const productMedia = {{ product_media_json | strip }};
+      const productMediaRaw = document.getElementById('product-media-data');
+      const productMedia = productMediaRaw ? JSON.parse(productMediaRaw.textContent) : [];
 
       // Function to update main image
       function updateMainImage(mediaId) {
@@ -736,7 +1002,46 @@
       }
     }
 
-    // Buy Now functionality
+    // Installation and Green Deduction Functionality
+    const installationCheckbox = document.getElementById('installation-checkbox');
+    const greenDeductionWrapper = document.getElementById('green-deduction-wrapper');
+    
+    if (installationCheckbox && greenDeductionWrapper) {
+      // Show/hide green deduction options based on installation checkbox
+      installationCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+          greenDeductionWrapper.style.display = 'block';
+        } else {
+          greenDeductionWrapper.style.display = 'none';
+          // Uncheck any selected green deduction option
+          const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
+          greenDeductionRadios.forEach(radio => radio.checked = false);
+        }
+      });
+    }
+
+    // Upsell Products Functionality
+    function getSelectedUpsells() {
+      const selectedUpsells = [];
+      const upsellCheckboxes = document.querySelectorAll('.upsell-checkbox:checked');
+      
+      upsellCheckboxes.forEach(checkbox => {
+        selectedUpsells.push({
+          id: checkbox.dataset.variantId,
+          quantity: 1
+        });
+      });
+      
+      return selectedUpsells;
+    }
+
+    // Get selected discount code
+    function getSelectedDiscountCode() {
+      const selectedRadio = document.querySelector('.green-deduction-radio:checked');
+      return selectedRadio ? selectedRadio.dataset.discountCode : null;
+    }
+
+    // Buy Now functionality with upsells and installation
     const buyNowBtn = document.querySelector('.buy-now-btn');
     if (buyNowBtn) {
       buyNowBtn.addEventListener('click', async function (e) {
@@ -744,6 +1049,8 @@
 
         const variantId = this.getAttribute('data-variant-id');
         const quantity = getSelectedQuantity();
+        const upsells = getSelectedUpsells();
+        const discountCode = getSelectedDiscountCode();
 
         // Show loading state
         const originalText = this.innerHTML;
@@ -751,24 +1058,152 @@
         this.disabled = true;
 
         try {
+          // Build items array with main product and upsells
+          const items = [
+            {
+              id: variantId,
+              quantity: quantity
+            },
+            ...upsells
+          ];
+
+          // Check if installation is selected
+          const installationCheckbox = document.getElementById('installation-checkbox');
+          if (installationCheckbox && installationCheckbox.checked) {
+            const installationPrice = parseFloat(installationCheckbox.dataset.price);
+            // Create a draft order note or add to properties
+            items[0].properties = items[0].properties || {};
+            items[0].properties['_Installation'] = 'Ja';
+            items[0].properties['_Installation Price'] = installationPrice;
+          }
+
           const response = await fetch('/cart/add.js', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              id: variantId,
-              quantity: quantity,
+              items: items
             }),
           });
 
           if (response.ok) {
-            window.location.href = '/checkout';
+            // Apply discount code if selected
+            if (discountCode) {
+              window.location.href = '/checkout?discount=' + encodeURIComponent(discountCode);
+            } else {
+              window.location.href = '/checkout';
+            }
           } else {
             throw new Error('Failed to add to cart');
           }
         } catch (error) {
           console.error('Error with buy now:', error);
+
+          // Show error state
+          this.innerHTML = 'Fel!';
+          this.style.background = '#EF4444';
+          this.style.color = 'white';
+
+          // Reset button after 2 seconds
+          setTimeout(() => {
+            this.innerHTML = originalText;
+            this.disabled = false;
+            this.style.background = '';
+            this.style.color = '';
+          }, 2000);
+        }
+      });
+    }
+
+    // Add to Cart functionality with upsells and installation
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener('click', async function (e) {
+        e.preventDefault();
+
+        const variantId = this.getAttribute('data-variant-id');
+        const quantity = getSelectedQuantity();
+        const upsells = getSelectedUpsells();
+        const discountCode = getSelectedDiscountCode();
+
+        // Show loading state
+        const originalText = this.innerHTML;
+        this.innerHTML = 'Lägger till...';
+        this.disabled = true;
+
+        try {
+          // Build items array with main product and upsells
+          const items = [
+            {
+              id: variantId,
+              quantity: quantity
+            },
+            ...upsells
+          ];
+
+          // Check if installation is selected
+          const installationCheckbox = document.getElementById('installation-checkbox');
+          if (installationCheckbox && installationCheckbox.checked) {
+            const installationPrice = parseFloat(installationCheckbox.dataset.price);
+            // Add installation as a property to the main product
+            items[0].properties = items[0].properties || {};
+            items[0].properties['_Installation'] = 'Ja';
+            items[0].properties['_Installation Price'] = installationPrice;
+          }
+
+          const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              items: items
+            }),
+          });
+
+          if (response.ok) {
+            // Update cart count and show success
+            const cartData = await response.json();
+            
+            // Apply discount code if selected
+            if (discountCode) {
+              await fetch('/cart/update.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  attributes: {
+                    'discount_code': discountCode
+                  }
+                })
+              });
+            }
+            
+            // Show success state
+            this.innerHTML = 'Tillagd! ✓';
+            this.style.background = '#4ade80';
+            this.style.color = 'white';
+
+            // Open cart drawer if available
+            const cartDrawer = document.getElementById('cart-drawer');
+            if (cartDrawer) {
+              cartDrawer.classList.add('open');
+            }
+
+            // Reset button after 2 seconds
+            setTimeout(() => {
+              this.innerHTML = originalText;
+              this.disabled = false;
+              this.style.background = '';
+              this.style.color = '';
+            }, 2000);
+          } else {
+            throw new Error('Failed to add to cart');
+          }
+        } catch (error) {
+          console.error('Error adding to cart:', error);
 
           // Show error state
           this.innerHTML = 'Fel!';
@@ -791,9 +1226,110 @@
 {% schema %}
 {
   "name": "Produkt",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Installation"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_installation",
+      "label": "Visa installation",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "installation_title",
+      "label": "Installation titel",
+      "default": "Installation"
+    },
+    {
+      "type": "textarea",
+      "id": "installation_description",
+      "label": "Installation beskrivning",
+      "default": "Professionell installation av din produkt"
+    },
+    {
+      "type": "number",
+      "id": "installation_price",
+      "label": "Installation pris (SEK)",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Grönt avdrag 1"
+    },
+    {
+      "type": "text",
+      "id": "green_deduction_1_title",
+      "label": "Titel",
+      "default": "Grönt avdrag 1",
+      "info": "Visas endast om installation är vald"
+    },
+    {
+      "type": "textarea",
+      "id": "green_deduction_1_description",
+      "label": "Beskrivning",
+      "default": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT)."
+    },
+    {
+      "type": "text",
+      "id": "green_deduction_1_code",
+      "label": "Rabattkod",
+      "info": "Skriv in rabattkoden som ska appliceras vid checkout"
+    },
+    {
+      "type": "header",
+      "content": "Grönt avdrag 2"
+    },
+    {
+      "type": "text",
+      "id": "green_deduction_2_title",
+      "label": "Titel",
+      "default": "Grönt avdrag 2",
+      "info": "Visas endast om installation är vald"
+    },
+    {
+      "type": "textarea",
+      "id": "green_deduction_2_description",
+      "label": "Beskrivning",
+      "default": "Alternativ grönt avdrag med andra villkor."
+    },
+    {
+      "type": "text",
+      "id": "green_deduction_2_code",
+      "label": "Rabattkod",
+      "info": "Skriv in rabattkoden som ska appliceras vid checkout"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "upsell_product",
+      "name": "Upsell produkt",
+      "settings": [
+        {
+          "type": "product",
+          "id": "upsell_product",
+          "label": "Välj produkt"
+        },
+        {
+          "type": "text",
+          "id": "upsell_title",
+          "label": "Anpassad titel",
+          "info": "Lämna tom för att använda produkttitel"
+        },
+        {
+          "type": "textarea",
+          "id": "upsell_description",
+          "label": "Beskrivning",
+          "info": "Förklara varför kunden bör lägga till denna produkt"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "sections.product.name"
+      "name": "Produkt"
     }
   ]
 }

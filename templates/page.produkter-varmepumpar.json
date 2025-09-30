@@ -71,11 +71,7 @@
           }
         }
       },
-      "block_order": [
-        "product_card_7tGUtQ",
-        "product_card_LWGEtn",
-        "product_card_LxXipk"
-      ],
+      "block_order": ["product_card_7tGUtQ", "product_card_LWGEtn", "product_card_LxXipk"],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
@@ -150,12 +146,7 @@
           }
         }
       },
-      "block_order": [
-        "step_wYwJFN",
-        "step_QYknLJ",
-        "step_EfFxwD",
-        "step_JWTgPa"
-      ],
+      "block_order": ["step_wYwJFN", "step_QYknLJ", "step_EfFxwD", "step_JWTgPa"],
       "name": "How it works",
       "settings": {
         "heading": "Så här fungerar det",
@@ -197,10 +188,7 @@
           }
         }
       },
-      "block_order": [
-        "avdrag_item_iUAdXa",
-        "avdrag_item_mGCc3Y"
-      ],
+      "block_order": ["avdrag_item_iUAdXa", "avdrag_item_mGCc3Y"],
       "name": "Avdrag",
       "settings": {
         "custom_id": "",

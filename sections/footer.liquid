@@ -3,49 +3,47 @@
 {% endcomment %}
 
 <footer
-  class='w-full bg-[#F3F1E8] rounded-t-[25px] mt-[62px] md:mt-[87px]'
+  class="mt-[62px] w-full rounded-t-[25px] bg-[#F3F1E8] md:mt-[87px]"
 >
-  <div class='w-full layout py-[40px] md:py-[80px] pb-[30px] md:pb-[50px]'>
-    <div class='grid w-full grid-cols-1 md:grid-cols-4 gap-[30px] md:gap-[40px]'>
+  <div class="layout w-full py-[40px] pb-[30px] md:py-[80px] md:pb-[50px]">
+    <div class="grid w-full grid-cols-1 gap-[30px] md:grid-cols-4 md:gap-[40px]">
       {% for block in section.blocks %}
         {% case block.type %}
-          {% when "link_column" %}
+          {% when 'link_column' %}
             <div
-              class='flex flex-col gap-[20px]'
+              class="flex flex-col gap-[20px]"
               {{ block.shopify_attributes }}
             >
               {% if block.settings.heading != blank %}
                 <div
-                  class='headline1 text-[#171717] text-[24px] md:text-[40px]'
+                  class="headline1 text-[24px] text-[#171717] md:text-[40px]"
                 >
                   {{ block.settings.heading }}
                 </div>
               {% endif %}
 
-              <div class='flex pt-[30px] md:pt-[50px] gap-[20px] md:gap-[30px] flex-col'>
+              <div class="flex flex-col gap-[20px] pt-[30px] md:gap-[30px] md:pt-[50px]">
                 {% for i in (1..3) %}
-                  {% assign link_text = "link_" | append: i | append: "_text" %}
-                  {% assign link_url = "link_" | append: i | append: "_url" %}
-                  {% if block.settings[link_text] != blank
-                    and block.settings[link_url] != blank
-                  %}
+                  {% assign link_text = 'link_' | append: i | append: '_text' %}
+                  {% assign link_url = 'link_' | append: i | append: '_url' %}
+                  {% if block.settings[link_text] != blank and block.settings[link_url] != blank %}
                     <a
-                      href='{{ block.settings[link_url] }}'
-                      class='flex items-center flex-row gap-[20px] no-underline'
+                      href="{{ block.settings[link_url] }}"
+                      class="flex flex-row items-center gap-[20px] no-underline"
                     >
-                      <div class='flex items-center justify-center'>
+                      <div class="flex items-center justify-center">
                         <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='23'
-                          height='18'
-                          viewBox='0 0 23 18'
-                          fill='none'
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="23"
+                          height="18"
+                          viewBox="0 0 23 18"
+                          fill="none"
                         >
                           <path d="M1.33337 8.82609H21.3334M21.3334 8.82609L13.5073 1M21.3334 8.82609L13.5073 16.6522" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                       </div>
                       <div
-                        class='body1 text-[#171717] text-[16px] md:text-[20px]'
+                        class="body1 text-[16px] text-[#171717] md:text-[20px]"
                       >
                         {{ block.settings[link_text] }}
                       </div>
@@ -57,47 +55,45 @@
         {% endcase %}
       {% endfor %}
     </div>
-    <div class=' h-[1px] bg-[#171717] w-full my-[30px] md:my-[50px]'></div>
-    <div class='grid w-full grid-cols-1 md:grid-cols-4 gap-[30px] md:gap-[40px]'>
+    <div class=" my-[30px] h-[1px] w-full bg-[#171717] md:my-[50px]"></div>
+    <div class="grid w-full grid-cols-1 gap-[30px] md:grid-cols-4 md:gap-[40px]">
       {% for block in section.blocks %}
         {% case block.type %}
-          {% when "bottom_link_column" %}
+          {% when 'bottom_link_column' %}
             <div
-              class='col-span-1 md:col-span-2 flex flex-col'
+              class="col-span-1 flex flex-col md:col-span-2"
               {{ block.shopify_attributes }}
             >
               {% if block.settings.heading != blank %}
                 <div
-                  class='headline1 text-[#171717] text-[24px] md:text-[40px]'
+                  class="headline1 text-[24px] text-[#171717] md:text-[40px]"
                 >
                   {{ block.settings.heading }}
                 </div>
               {% endif %}
-              <div class=' grid grid-cols-1 md:grid-cols-2 gap-[15px] md:gap-[20px] pt-[30px] md:pt-[50px] '>
+              <div class=" grid grid-cols-1 gap-[15px] pt-[30px] md:grid-cols-2 md:gap-[20px] md:pt-[50px] ">
                 {% for i in (1..4) %}
-                  {% assign link_text = "link_" | append: i | append: "_text" %}
-                  {% assign link_url = "link_" | append: i | append: "_url" %}
-                  {% if block.settings[link_text] != blank
-                    and block.settings[link_url] != blank
-                  %}
+                  {% assign link_text = 'link_' | append: i | append: '_text' %}
+                  {% assign link_url = 'link_' | append: i | append: '_url' %}
+                  {% if block.settings[link_text] != blank and block.settings[link_url] != blank %}
                     <div>
                       <a
-                        href='{{ block.settings[link_url] }}'
-                        class='flex items-center flex-row gap-[20px] no-underline'
+                        href="{{ block.settings[link_url] }}"
+                        class="flex flex-row items-center gap-[20px] no-underline"
                       >
-                        <div class='flex items-center justify-center'>
+                        <div class="flex items-center justify-center">
                           <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            width='23'
-                            height='18'
-                            viewBox='0 0 23 18'
-                            fill='none'
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="23"
+                            height="18"
+                            viewBox="0 0 23 18"
+                            fill="none"
                           >
                             <path d="M1.33337 8.82609H21.3334M21.3334 8.82609L13.5073 1M21.3334 8.82609L13.5073 16.6522" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
                         </div>
                         <div
-                          class='body1 text-[#171717] text-[16px] md:text-[20px]'
+                          class="body1 text-[16px] text-[#171717] md:text-[20px]"
                         >
                           {{ block.settings[link_text] }}
                         </div>
@@ -110,17 +106,17 @@
         {% endcase %}
       {% endfor %}
     </div>
-    <div class=' justify-center md:justify-between items-center flex flex-col md:flex-row gap-[20px] md:gap-0 pt-[40px] md:pt-[60px]'>
+    <div class=" flex flex-col items-center justify-center gap-[20px] pt-[40px] md:flex-row md:justify-between md:gap-0 md:pt-[60px]">
       <div>
         <img
-          src='{{ 'logga.svg' | asset_url }}'
-          alt='Logo'
-          width='auto'
-          height='40'
-          class='w-auto h-[40px] md:h-[53px]'
+          src="{{ 'logga.svg' | asset_url }}"
+          alt="Logo"
+          width="auto"
+          height="40"
+          class="h-[40px] w-auto md:h-[53px]"
         >
       </div>
-      <div class=' headline1 text-[#171717] text-[14px] md:text-[24px] text-center md:text-left'>
+      <div class=" headline1 text-center text-[14px] text-[#171717] md:text-left md:text-[24px]">
         Nordiska Energilösningar Sverige AB I 559510-6690
       </div>
     </div>
