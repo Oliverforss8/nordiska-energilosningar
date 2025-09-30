@@ -26,9 +26,9 @@
       ],
       "settings": {
         "show_installation": true,
+        "installation_product": "solis-s6-eh3p10-kw",
         "installation_title": "Installation",
         "installation_description": "Professionell installation av din produkt",
-        "installation_price": 1000,
         "green_deduction_1_title": "Grönt avdrag 1",
         "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
         "green_deduction_1_code": "Avdrag1",
