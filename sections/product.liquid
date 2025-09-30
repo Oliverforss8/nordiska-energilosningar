@@ -1106,27 +1106,23 @@
           greenDeductionWrapper.style.display = 'block';
         } else {
           greenDeductionWrapper.style.display = 'none';
-          // Uncheck any selected green deduction option and remove discount
+          // Uncheck any selected green deduction option
           const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
           greenDeductionRadios.forEach(radio => {
-            if (radio.checked) {
-              radio.checked = false;
-              // Remove discount code from cart
-              applyDiscountToCart(null);
-            }
+            radio.checked = false;
           });
         }
       });
     }
 
-    // Apply discount code immediately when radio button is selected
+    // Show discount code when radio button is selected
     const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
     greenDeductionRadios.forEach(radio => {
       radio.addEventListener('change', function() {
         if (this.checked) {
           const discountCode = this.dataset.discountCode;
-          // Show confirmation message
-          showDiscountMessage('Rabattkod "' + discountCode + '" kommer att appliceras vid checkout!');
+          // Show informational message with discount code
+          showDiscountMessage('Du har valt rabattkod: ' + discountCode);
         }
       });
     });
@@ -1220,12 +1216,6 @@
       return selectedUpsells;
     }
 
-    // Get selected discount code
-    function getSelectedDiscountCode() {
-      const selectedRadio = document.querySelector('.green-deduction-radio:checked');
-      return selectedRadio ? selectedRadio.dataset.discountCode : null;
-    }
-
     // Buy Now functionality with upsells and installation
     const buyNowBtn = document.querySelector('.buy-now-btn');
     if (buyNowBtn) {
@@ -1235,7 +1225,6 @@
         const variantId = this.getAttribute('data-variant-id');
         const quantity = getSelectedQuantity();
         const upsells = getSelectedUpsells();
-        const discountCode = getSelectedDiscountCode();
 
         // Show loading state
         const originalText = this.innerHTML;
@@ -1274,12 +1263,8 @@
           });
 
           if (response.ok) {
-            // Apply discount code if selected
-            if (discountCode) {
-              window.location.href = '/checkout?discount=' + encodeURIComponent(discountCode);
-            } else {
-              window.location.href = '/checkout';
-            }
+            // Go to checkout without auto-applying discount
+            window.location.href = '/checkout';
           } else {
             throw new Error('Failed to add to cart');
           }
@@ -1311,7 +1296,6 @@
         const variantId = this.getAttribute('data-variant-id');
         const quantity = getSelectedQuantity();
         const upsells = getSelectedUpsells();
-        const discountCode = getSelectedDiscountCode();
 
         // Show loading state
         const originalText = this.innerHTML;
