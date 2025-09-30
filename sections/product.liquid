@@ -295,7 +295,7 @@
                   </div>
 
                   <!-- Green Deduction Options (only visible when installation is selected) -->
-                  <div class="green-deduction-wrapper pt-[15px]" id="green-deduction-wrapper" style="display: none;">
+                  <div class="green-deduction-wrapper pt-[15px]" id="green-deduction-wrapper">
                     <div class="rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
                       <div class="headline1 mb-[15px] text-[18px] md:text-[20px]">
                         Välj grönt avdrag
@@ -1095,10 +1095,8 @@
     const greenDeductionWrapper = document.getElementById('green-deduction-wrapper');
     
     if (installationCheckbox && greenDeductionWrapper) {
-      // Show green deduction options by default since installation is checked
-      if (installationCheckbox.checked) {
-        greenDeductionWrapper.style.display = 'block';
-      }
+      // Set initial visibility based on installation checkbox state
+      greenDeductionWrapper.style.display = installationCheckbox.checked ? 'block' : 'none';
 
       // Show/hide green deduction options based on installation checkbox
       installationCheckbox.addEventListener('change', function() {
@@ -1218,9 +1216,17 @@
 
     // Buy Now functionality with upsells and installation
     const buyNowBtn = document.querySelector('.buy-now-btn');
+    let isBuyNowProcessing = false;
+    
     if (buyNowBtn) {
       buyNowBtn.addEventListener('click', async function (e) {
         e.preventDefault();
+
+        // Prevent duplicate clicks
+        if (isBuyNowProcessing) {
+          console.log('Already processing, please wait...');
+          return;
+        }
 
         const variantId = this.getAttribute('data-variant-id');
         const quantity = getSelectedQuantity();
@@ -1230,6 +1236,7 @@
         const originalText = this.innerHTML;
         this.innerHTML = 'Behandlar...';
         this.disabled = true;
+        isBuyNowProcessing = true;
 
         try {
           // Build items array with main product and upsells
@@ -1265,33 +1272,46 @@
           if (response.ok) {
             // Go to checkout without auto-applying discount
             window.location.href = '/checkout';
+          } else if (response.status === 429) {
+            throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
           } else {
-            throw new Error('Failed to add to cart');
+            const errorData = await response.json();
+            throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
           }
         } catch (error) {
           console.error('Error with buy now:', error);
 
-          // Show error state
-          this.innerHTML = 'Fel!';
+          // Show error state with specific message
+          this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
           this.style.background = '#EF4444';
           this.style.color = 'white';
 
-          // Reset button after 2 seconds
+          // Reset button after appropriate delay
+          const resetDelay = error.message.includes('många') ? 3000 : 2000;
           setTimeout(() => {
             this.innerHTML = originalText;
             this.disabled = false;
             this.style.background = '';
             this.style.color = '';
-          }, 2000);
+            isBuyNowProcessing = false;
+          }, resetDelay);
         }
       });
     }
 
     // Add to Cart functionality with upsells and installation
     const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    let isAddToCartProcessing = false;
+    
     if (addToCartBtn) {
       addToCartBtn.addEventListener('click', async function (e) {
         e.preventDefault();
+
+        // Prevent duplicate clicks
+        if (isAddToCartProcessing) {
+          console.log('Already processing, please wait...');
+          return;
+        }
 
         const variantId = this.getAttribute('data-variant-id');
         const quantity = getSelectedQuantity();
@@ -1301,6 +1321,7 @@
         const originalText = this.innerHTML;
         this.innerHTML = 'Lägger till...';
         this.disabled = true;
+        isAddToCartProcessing = true;
 
         try {
           // Build items array with main product and upsells
@@ -1354,25 +1375,31 @@
               this.disabled = false;
               this.style.background = '';
               this.style.color = '';
+              isAddToCartProcessing = false;
             }, 2000);
+          } else if (response.status === 429) {
+            throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
           } else {
-            throw new Error('Failed to add to cart');
+            const errorData = await response.json();
+            throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
           }
         } catch (error) {
           console.error('Error adding to cart:', error);
 
-          // Show error state
-          this.innerHTML = 'Fel!';
+          // Show error state with specific message
+          this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
           this.style.background = '#EF4444';
           this.style.color = 'white';
 
-          // Reset button after 2 seconds
+          // Reset button after appropriate delay
+          const resetDelay = error.message.includes('många') ? 3000 : 2000;
           setTimeout(() => {
             this.innerHTML = originalText;
             this.disabled = false;
             this.style.background = '';
             this.style.color = '';
-          }, 2000);
+            isAddToCartProcessing = false;
+          }, resetDelay);
         }
       });
     }
