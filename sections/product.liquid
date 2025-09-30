@@ -1113,90 +1113,10 @@
       });
     }
 
-    // Show discount code when radio button is selected
-    const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
-    greenDeductionRadios.forEach(radio => {
-      radio.addEventListener('change', function() {
-        if (this.checked) {
-          const discountCode = this.dataset.discountCode;
-          // Show informational message with discount code
-          showDiscountMessage('Du har valt rabattkod: ' + discountCode);
-        }
-      });
-    });
-
-    // Function to show discount confirmation message
-    function showDiscountMessage(message) {
-      // Check if message element already exists
-      let messageEl = document.getElementById('discount-message');
-      
-      if (!messageEl) {
-        // Create message element
-        messageEl = document.createElement('div');
-        messageEl.id = 'discount-message';
-        messageEl.style.cssText = `
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
-          color: white;
-          padding: 15px 20px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-          z-index: 9999;
-          font-family: var(--font-halyard--family);
-          font-size: 14px;
-          font-weight: 500;
-          animation: slideIn 0.3s ease;
-        `;
-        document.body.appendChild(messageEl);
-        
-        // Add slide-in animation
-        const style = document.createElement('style');
-        style.textContent = `
-          @keyframes slideIn {
-            from {
-              transform: translateX(400px);
-              opacity: 0;
-            }
-            to {
-              transform: translateX(0);
-              opacity: 1;
-            }
-          }
-        `;
-        document.head.appendChild(style);
-      }
-      
-      messageEl.textContent = message;
-      messageEl.style.display = 'block';
-      
-      // Hide message after 3 seconds
-      setTimeout(() => {
-        messageEl.style.animation = 'slideOut 0.3s ease';
-        setTimeout(() => {
-          messageEl.style.display = 'none';
-        }, 300);
-      }, 3000);
-      
-      // Add slide-out animation
-      if (!document.querySelector('#slideOutAnimation')) {
-        const style = document.createElement('style');
-        style.id = 'slideOutAnimation';
-        style.textContent = `
-          @keyframes slideOut {
-            from {
-              transform: translateX(0);
-              opacity: 1;
-            }
-            to {
-              transform: translateX(400px);
-              opacity: 0;
-            }
-          }
-        `;
-        document.head.appendChild(style);
-      }
+    // Function to get selected discount code
+    function getSelectedDiscountCode() {
+      const selectedRadio = document.querySelector('.green-deduction-radio:checked');
+      return selectedRadio ? selectedRadio.dataset.discountCode : null;
     }
 
     // Upsell Products Functionality
@@ -1231,6 +1151,7 @@
         const variantId = this.getAttribute('data-variant-id');
         const quantity = getSelectedQuantity();
         const upsells = getSelectedUpsells();
+        const discountCode = getSelectedDiscountCode();
 
         // Show loading state
         const originalText = this.innerHTML;
@@ -1270,8 +1191,12 @@
           });
 
           if (response.ok) {
-            // Go to checkout without auto-applying discount
-            window.location.href = '/checkout';
+            // Go to checkout with discount code if selected
+            if (discountCode) {
+              window.location.href = '/checkout?discount=' + discountCode;
+            } else {
+              window.location.href = '/checkout';
+            }
           } else if (response.status === 429) {
             throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
           } else {
