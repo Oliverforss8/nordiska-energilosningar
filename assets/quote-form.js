@@ -4,6 +4,13 @@ console.log('Quote form script loaded!');
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM loaded, setting up form...');
 
+  // Check if quote form exists on this page
+  const quoteForm = document.getElementById('quote-form');
+  if (!quoteForm) {
+    console.log('Quote form not found on this page, skipping setup');
+    return;
+  }
+
   const serviceOptions = document.querySelectorAll('.service-option');
   const selectedServiceInput = document.getElementById('selected_service');
   const quoteSubmitBtn = document.querySelector('.quote-submit-btn');
@@ -15,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handle service option selection (multiple selection)
   if (serviceOptions.length === 0) {
-    console.error('No service options found! Check if .service-option class exists');
+    console.log('No service options found on quote form');
     return;
   }
 
@@ -59,8 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Handle form submission
-  const quoteForm = document.getElementById('quote-form');
+  // Handle form submission (quoteForm already exists, checked above)
   if (quoteForm) {
     quoteForm.addEventListener('submit', async function (e) {
       e.preventDefault();

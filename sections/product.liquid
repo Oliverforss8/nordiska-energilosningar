@@ -941,6 +941,11 @@
 ]
 </script>
 
+<!-- Generate product variants data -->
+<script type="application/json" id="product-variants-data">
+{{ product.variants | json }}
+</script>
+
 {% javascript %}
   // Global dropdown toggle function for mobile-friendly interaction
   function toggleDropdown(contentId, trigger) {
@@ -959,6 +964,80 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    // Variant Selection Logic
+    const variantSelects = document.querySelectorAll('.variant-select');
+    const buyNowBtn = document.querySelector('.buy-now-btn');
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    const priceDisplay = document.getElementById('current-price');
+    const comparePriceDisplay = document.getElementById('compare-price');
+
+    // Product variants data
+    const productVariantsRaw = document.getElementById('product-variants-data');
+    const productVariants = productVariantsRaw ? JSON.parse(productVariantsRaw.textContent) : [];
+
+    // Function to find matching variant based on selected options
+    function findMatchingVariant() {
+      const selectedOptions = {};
+      
+      variantSelects.forEach(select => {
+        const optionName = select.dataset.optionName;
+        selectedOptions[optionName] = select.value;
+      });
+
+      return productVariants.find(variant => {
+        return variant.options.every((option, index) => {
+          const optionName = 'option' + (index + 1);
+          return variant[optionName] === selectedOptions[Object.keys(selectedOptions)[index]];
+        });
+      });
+    }
+
+    // Function to update variant
+    function updateVariant() {
+      const selectedVariant = findMatchingVariant();
+      
+      if (selectedVariant) {
+        // Update button data attributes
+        if (buyNowBtn) {
+          buyNowBtn.setAttribute('data-variant-id', selectedVariant.id);
+        }
+        if (addToCartBtn) {
+          addToCartBtn.setAttribute('data-variant-id', selectedVariant.id);
+        }
+
+        // Update price display
+        if (priceDisplay) {
+          priceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
+            style: 'currency',
+            currency: 'SEK'
+          }).format(selectedVariant.price / 100);
+        }
+
+        // Update compare price
+        if (comparePriceDisplay) {
+          if (selectedVariant.compare_at_price && selectedVariant.compare_at_price > selectedVariant.price) {
+            comparePriceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
+              style: 'currency',
+              currency: 'SEK'
+            }).format(selectedVariant.compare_at_price / 100);
+            comparePriceDisplay.style.display = 'inline';
+          } else {
+            comparePriceDisplay.style.display = 'none';
+          }
+        }
+
+        // Update URL
+        const newUrl = new URL(window.location.href);
+        newUrl.searchParams.set('variant', selectedVariant.id);
+        window.history.replaceState({}, '', newUrl);
+      }
+    }
+
+    // Add change listeners to variant selects
+    variantSelects.forEach(select => {
+      select.addEventListener('change', updateVariant);
+    });
+
     const mainImageContainer = document.getElementById('main-product-image');
     const thumbnails = document.querySelectorAll('[data-thumbnail]');
 
