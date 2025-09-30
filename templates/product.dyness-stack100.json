@@ -11,7 +11,31 @@
   "sections": {
     "main": {
       "type": "product",
-      "settings": {}
+      "blocks": {
+        "upsell_product_DY4Qkm": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "charge-amps-luna",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "upsell_product_DY4Qkm"
+      ],
+      "settings": {
+        "show_installation": true,
+        "installation_title": "Installation",
+        "installation_description": "Professionell installation av din produkt",
+        "installation_price": 1000,
+        "green_deduction_1_title": "Grönt avdrag 1",
+        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
+        "green_deduction_1_code": "Avdrag1",
+        "green_deduction_2_title": "Grönt avdrag 2",
+        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor.",
+        "green_deduction_2_code": ""
+      }
     },
     "tekniska_specifikationer_AdpmjP": {
       "type": "tekniska-specifikationer",
@@ -180,7 +204,11 @@
           }
         }
       },
-      "block_order": ["faq_item_1", "faq_item_2", "faq_item_3"],
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ],
       "settings": {
         "title": "Vanliga frågor",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
