@@ -15,7 +15,7 @@
         "upsell_product_DY4Qkm": {
           "type": "upsell_product",
           "settings": {
-            "upsell_product": "charge-amps-luna",
+            "upsell_product": "dyness-stack100",
             "upsell_title": "",
             "upsell_description": ""
           }
