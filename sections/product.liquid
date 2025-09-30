@@ -258,7 +258,8 @@
                 {% endif %}
 
                 <!-- Installation Option -->
-                {% if section.settings.show_installation %}
+                {% if section.settings.show_installation and section.settings.installation_product != blank %}
+                  {% assign installation_product = section.settings.installation_product %}
                   <div class="installation-wrapper pt-[15px]">
                     <div class="installation-card rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]">
                       <div class="flex items-start justify-between gap-[15px]">
@@ -267,21 +268,27 @@
                             type="checkbox"
                             id="installation-checkbox"
                             class="installation-checkbox mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                            data-price="{{ section.settings.installation_price | times: 100 }}"
+                            data-variant-id="{{ installation_product.selected_or_first_available_variant.id }}"
+                            data-price="{{ installation_product.price }}"
+                            checked
                           >
                           <label for="installation-checkbox" class="cursor-pointer">
                             <div class="headline1 text-[20px] md:text-[24px]">
-                              {{ section.settings.installation_title | default: 'Installation' }}
+                              {{ section.settings.installation_title | default: installation_product.title }}
                             </div>
                             {% if section.settings.installation_description != blank %}
                               <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
                                 {{ section.settings.installation_description }}
                               </div>
+                            {% elsif installation_product.description != blank %}
+                              <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
+                                {{ installation_product.description | strip_html | truncate: 150 }}
+                              </div>
                             {% endif %}
                           </label>
                         </div>
                         <div class="headline1 text-[18px] md:text-[20px]">
-                          +{{ section.settings.installation_price | money }}
+                          +{{ installation_product.price | money }}
                         </div>
                       </div>
                     </div>
@@ -878,6 +885,7 @@
   /* Installation Card Styling */
   .installation-card {
     transition: all 0.3s ease;
+    background-color: #F3F1E8;
   }
 
   .installation-card:hover {
@@ -885,9 +893,14 @@
   }
 
   .installation-card:has(.installation-checkbox:checked) {
-    background-color: #f9fafb;
-    border-color: #4ade80;
+    background-color: #F3F1E8;
+    border-color: #EBCF2F;
     border-width: 2px;
+  }
+
+  .installation-card:has(.installation-checkbox:not(:checked)) {
+    background-color: #ffffff;
+    opacity: 0.7;
   }
 
   /* Green Deduction Radio Styling */
@@ -1007,17 +1020,151 @@
     const greenDeductionWrapper = document.getElementById('green-deduction-wrapper');
     
     if (installationCheckbox && greenDeductionWrapper) {
+      // Show green deduction options by default since installation is checked
+      if (installationCheckbox.checked) {
+        greenDeductionWrapper.style.display = 'block';
+      }
+
       // Show/hide green deduction options based on installation checkbox
       installationCheckbox.addEventListener('change', function() {
         if (this.checked) {
           greenDeductionWrapper.style.display = 'block';
         } else {
           greenDeductionWrapper.style.display = 'none';
-          // Uncheck any selected green deduction option
+          // Uncheck any selected green deduction option and remove discount
           const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
-          greenDeductionRadios.forEach(radio => radio.checked = false);
+          greenDeductionRadios.forEach(radio => {
+            if (radio.checked) {
+              radio.checked = false;
+              // Remove discount code from cart
+              applyDiscountToCart(null);
+            }
+          });
         }
       });
+    }
+
+    // Apply discount code immediately when radio button is selected
+    const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
+    greenDeductionRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.checked) {
+          const discountCode = this.dataset.discountCode;
+          applyDiscountToCart(discountCode);
+        }
+      });
+    });
+
+    // Function to apply discount code to cart
+    async function applyDiscountToCart(discountCode) {
+      try {
+        if (discountCode) {
+          // Apply discount code to cart attributes
+          await fetch('/cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              attributes: {
+                'discount_code': discountCode
+              }
+            })
+          });
+          
+          // Show confirmation message
+          showDiscountMessage('Rabattkod "' + discountCode + '" kommer att appliceras vid checkout!');
+        } else {
+          // Remove discount code from cart attributes
+          await fetch('/cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              attributes: {
+                'discount_code': ''
+              }
+            })
+          });
+        }
+      } catch (error) {
+        console.error('Error applying discount:', error);
+      }
+    }
+
+    // Function to show discount confirmation message
+    function showDiscountMessage(message) {
+      // Check if message element already exists
+      let messageEl = document.getElementById('discount-message');
+      
+      if (!messageEl) {
+        // Create message element
+        messageEl = document.createElement('div');
+        messageEl.id = 'discount-message';
+        messageEl.style.cssText = `
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+          color: white;
+          padding: 15px 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+          z-index: 9999;
+          font-family: var(--font-halyard--family);
+          font-size: 14px;
+          font-weight: 500;
+          animation: slideIn 0.3s ease;
+        `;
+        document.body.appendChild(messageEl);
+        
+        // Add slide-in animation
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes slideIn {
+            from {
+              transform: translateX(400px);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+      
+      messageEl.textContent = message;
+      messageEl.style.display = 'block';
+      
+      // Hide message after 3 seconds
+      setTimeout(() => {
+        messageEl.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+          messageEl.style.display = 'none';
+        }, 300);
+      }, 3000);
+      
+      // Add slide-out animation
+      if (!document.querySelector('#slideOutAnimation')) {
+        const style = document.createElement('style');
+        style.id = 'slideOutAnimation';
+        style.textContent = `
+          @keyframes slideOut {
+            from {
+              transform: translateX(0);
+              opacity: 1;
+            }
+            to {
+              transform: translateX(400px);
+              opacity: 0;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      }
     }
 
     // Upsell Products Functionality
@@ -1070,11 +1217,12 @@
           // Check if installation is selected
           const installationCheckbox = document.getElementById('installation-checkbox');
           if (installationCheckbox && installationCheckbox.checked) {
-            const installationPrice = parseFloat(installationCheckbox.dataset.price);
-            // Create a draft order note or add to properties
-            items[0].properties = items[0].properties || {};
-            items[0].properties['_Installation'] = 'Ja';
-            items[0].properties['_Installation Price'] = installationPrice;
+            const installationVariantId = installationCheckbox.dataset.variantId;
+            // Add installation product to cart
+            items.push({
+              id: installationVariantId,
+              quantity: 1
+            });
           }
 
           const response = await fetch('/cart/add.js', {
@@ -1145,11 +1293,12 @@
           // Check if installation is selected
           const installationCheckbox = document.getElementById('installation-checkbox');
           if (installationCheckbox && installationCheckbox.checked) {
-            const installationPrice = parseFloat(installationCheckbox.dataset.price);
-            // Add installation as a property to the main product
-            items[0].properties = items[0].properties || {};
-            items[0].properties['_Installation'] = 'Ja';
-            items[0].properties['_Installation Price'] = installationPrice;
+            const installationVariantId = installationCheckbox.dataset.variantId;
+            // Add installation product to cart
+            items.push({
+              id: installationVariantId,
+              quantity: 1
+            });
           }
 
           const response = await fetch('/cart/add.js', {
@@ -1238,22 +1387,22 @@
       "default": false
     },
     {
+      "type": "product",
+      "id": "installation_product",
+      "label": "Välj installation produkt",
+      "info": "Välj produkten som ska användas för installation"
+    },
+    {
       "type": "text",
       "id": "installation_title",
-      "label": "Installation titel",
-      "default": "Installation"
+      "label": "Anpassad titel (valfri)",
+      "info": "Lämna tom för att använda produkttitel"
     },
     {
       "type": "textarea",
       "id": "installation_description",
-      "label": "Installation beskrivning",
-      "default": "Professionell installation av din produkt"
-    },
-    {
-      "type": "number",
-      "id": "installation_price",
-      "label": "Installation pris (SEK)",
-      "default": 0
+      "label": "Anpassad beskrivning (valfri)",
+      "info": "Lämna tom för att använda produktbeskrivning"
     },
     {
       "type": "header",
