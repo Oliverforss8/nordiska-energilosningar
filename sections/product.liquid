@@ -302,56 +302,52 @@
                       </div>
                       
                       <!-- Grönt avdrag 1 -->
-                      {% if section.settings.green_deduction_1_code != blank %}
-                        <div class="green-deduction-option mb-[15px] flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
-                          <input
-                            type="radio"
-                            id="green-deduction-1"
-                            name="green-deduction"
-                            class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                            data-discount-code="{{ section.settings.green_deduction_1_code }}"
-                          >
-                          <label for="green-deduction-1" class="flex-1 cursor-pointer">
-                            <div class="body1 font-medium text-[16px] md:text-[18px]">
-                              {{ section.settings.green_deduction_1_title | default: 'Grönt avdrag 1' }}
+                      <div class="green-deduction-option mb-[15px] flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
+                        <input
+                          type="radio"
+                          id="green-deduction-1"
+                          name="green-deduction"
+                          class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                          data-discount-code="AVDRAG1"
+                        >
+                        <label for="green-deduction-1" class="flex-1 cursor-pointer">
+                          <div class="body1 font-medium text-[16px] md:text-[18px]">
+                            {{ section.settings.green_deduction_1_title | default: 'Grönt avdrag 1' }}
+                          </div>
+                          {% if section.settings.green_deduction_1_description != blank %}
+                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                              {{ section.settings.green_deduction_1_description }}
                             </div>
-                            {% if section.settings.green_deduction_1_description != blank %}
-                              <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
-                                {{ section.settings.green_deduction_1_description }}
-                              </div>
-                            {% endif %}
-                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
-                              Rabattkod: {{ section.settings.green_deduction_1_code }}
-                            </div>
-                          </label>
-                        </div>
-                      {% endif %}
+                          {% endif %}
+                          <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
+                            Rabattkod: AVDRAG1
+                          </div>
+                        </label>
+                      </div>
 
                       <!-- Grönt avdrag 2 -->
-                      {% if section.settings.green_deduction_2_code != blank %}
-                        <div class="green-deduction-option flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
-                          <input
-                            type="radio"
-                            id="green-deduction-2"
-                            name="green-deduction"
-                            class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                            data-discount-code="{{ section.settings.green_deduction_2_code }}"
-                          >
-                          <label for="green-deduction-2" class="flex-1 cursor-pointer">
-                            <div class="body1 font-medium text-[16px] md:text-[18px]">
-                              {{ section.settings.green_deduction_2_title | default: 'Grönt avdrag 2' }}
+                      <div class="green-deduction-option flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
+                        <input
+                          type="radio"
+                          id="green-deduction-2"
+                          name="green-deduction"
+                          class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                          data-discount-code="AVDRAG2"
+                        >
+                        <label for="green-deduction-2" class="flex-1 cursor-pointer">
+                          <div class="body1 font-medium text-[16px] md:text-[18px]">
+                            {{ section.settings.green_deduction_2_title | default: 'Grönt avdrag 2' }}
+                          </div>
+                          {% if section.settings.green_deduction_2_description != blank %}
+                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                              {{ section.settings.green_deduction_2_description }}
                             </div>
-                            {% if section.settings.green_deduction_2_description != blank %}
-                              <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
-                                {{ section.settings.green_deduction_2_description }}
-                              </div>
-                            {% endif %}
-                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
-                              Rabattkod: {{ section.settings.green_deduction_2_code }}
-                            </div>
-                          </label>
-                        </div>
-                      {% endif %}
+                          {% endif %}
+                          <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
+                            Rabattkod: AVDRAG2
+                          </div>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 {% endif %}
@@ -1050,48 +1046,11 @@
       radio.addEventListener('change', function() {
         if (this.checked) {
           const discountCode = this.dataset.discountCode;
-          applyDiscountToCart(discountCode);
+          // Show confirmation message
+          showDiscountMessage('Rabattkod "' + discountCode + '" kommer att appliceras vid checkout!');
         }
       });
     });
-
-    // Function to apply discount code to cart
-    async function applyDiscountToCart(discountCode) {
-      try {
-        if (discountCode) {
-          // Apply discount code to cart attributes
-          await fetch('/cart/update.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              attributes: {
-                'discount_code': discountCode
-              }
-            })
-          });
-          
-          // Show confirmation message
-          showDiscountMessage('Rabattkod "' + discountCode + '" kommer att appliceras vid checkout!');
-        } else {
-          // Remove discount code from cart attributes
-          await fetch('/cart/update.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              attributes: {
-                'discount_code': ''
-              }
-            })
-          });
-        }
-      } catch (error) {
-        console.error('Error applying discount:', error);
-      }
-    }
 
     // Function to show discount confirmation message
     function showDiscountMessage(message) {
@@ -1315,21 +1274,6 @@
             // Update cart count and show success
             const cartData = await response.json();
             
-            // Apply discount code if selected
-            if (discountCode) {
-              await fetch('/cart/update.js', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  attributes: {
-                    'discount_code': discountCode
-                  }
-                })
-              });
-            }
-            
             // Show success state
             this.innerHTML = 'Tillagd! ✓';
             this.style.background = '#4ade80';
@@ -1413,19 +1357,13 @@
       "id": "green_deduction_1_title",
       "label": "Titel",
       "default": "Grönt avdrag 1",
-      "info": "Visas endast om installation är vald"
+      "info": "Visas endast om installation är vald. Rabattkod: AVDRAG1"
     },
     {
       "type": "textarea",
       "id": "green_deduction_1_description",
       "label": "Beskrivning",
       "default": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT)."
-    },
-    {
-      "type": "text",
-      "id": "green_deduction_1_code",
-      "label": "Rabattkod",
-      "info": "Skriv in rabattkoden som ska appliceras vid checkout"
     },
     {
       "type": "header",
@@ -1436,19 +1374,13 @@
       "id": "green_deduction_2_title",
       "label": "Titel",
       "default": "Grönt avdrag 2",
-      "info": "Visas endast om installation är vald"
+      "info": "Visas endast om installation är vald. Rabattkod: AVDRAG2"
     },
     {
       "type": "textarea",
       "id": "green_deduction_2_description",
       "label": "Beskrivning",
       "default": "Alternativ grönt avdrag med andra villkor."
-    },
-    {
-      "type": "text",
-      "id": "green_deduction_2_code",
-      "label": "Rabattkod",
-      "info": "Skriv in rabattkoden som ska appliceras vid checkout"
     }
   ],
   "blocks": [
