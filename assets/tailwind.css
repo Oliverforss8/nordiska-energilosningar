@@ -696,6 +696,10 @@
   gap: 8px
 }
 
+.gap-2 {
+  gap: 0.5rem
+}
+
 .gap-x-\[20px\] {
   -moz-column-gap: 20px;
        column-gap: 20px
@@ -1366,6 +1370,10 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.underline {
+  text-decoration-line: underline
 }
 
 .line-through {

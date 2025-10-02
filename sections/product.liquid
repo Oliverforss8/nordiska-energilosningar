@@ -1127,6 +1127,25 @@
       return code;
     }
 
+    // Persist discount selection immediately on radio change and notify cart
+    const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
+    if (greenDeductionRadios && greenDeductionRadios.length > 0) {
+      greenDeductionRadios.forEach((radio) => {
+        radio.addEventListener('change', function() {
+          const code = getSelectedDiscountCode();
+          try {
+            if (code) {
+              sessionStorage.setItem('selectedDiscountCode', code);
+            } else {
+              sessionStorage.removeItem('selectedDiscountCode');
+            }
+          } catch (_) {}
+          // Broadcast to cart drawer to update its display
+          window.dispatchEvent(new CustomEvent('discount:update'));
+        });
+      });
+    }
+
     // Upsell Products Functionality
     function getSelectedUpsells() {
       const selectedUpsells = [];

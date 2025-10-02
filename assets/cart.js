@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const cartTotal = document.querySelector('[data-cart-total]');
   // Removed cart empty state
   const cartItemsList = document.querySelector('[data-cart-items-list]');
+  // Discount display elements (may not exist on all pages)
+  const cartDiscountRowSelector = '[data-cart-discount-row]';
+  const cartDiscountCodeSelector = '[data-cart-discount]';
+  const cartDiscountClearSelector = '[data-clear-discount]';
 
   // Debug: Check if elements are found
   console.log('Cart elements found:', {
@@ -96,6 +100,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // Add event listeners to quantity buttons
       addQuantityListeners();
     }
+
+    // Update discount UI based on session storage
+    updateDiscountUI();
   }
 
   // Create cart item HTML
@@ -192,6 +199,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Get discount code from session
+  function getSessionDiscountCode() {
+    try {
+      return sessionStorage.getItem('selectedDiscountCode');
+    } catch (_) {
+      return null;
+    }
+  }
+
+  // Update discount row in cart drawer
+  function updateDiscountUI() {
+    const row = document.querySelector(cartDiscountRowSelector);
+    const codeEl = document.querySelector(cartDiscountCodeSelector);
+    const clearBtn = document.querySelector(cartDiscountClearSelector);
+    const code = getSessionDiscountCode();
+
+    if (row && codeEl) {
+      if (code) {
+        codeEl.textContent = code;
+        row.style.display = 'flex';
+      } else {
+        row.style.display = 'none';
+      }
+    }
+
+    if (clearBtn) {
+      clearBtn.onclick = function () {
+        try { sessionStorage.removeItem('selectedDiscountCode'); } catch (_) {}
+        // Notify others (product page, cart drawer) to refresh discount state
+        window.dispatchEvent(new CustomEvent('discount:update'));
+      };
+    }
+  }
+
   // Event listeners
   if (cartToggle) {
     cartToggle.addEventListener('click', function (e) {
@@ -222,6 +263,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // Listen for cart update events from product page
   window.addEventListener('cart:update', function() {
     loadCartData();
+  });
+
+  // Listen for discount updates to refresh discount UI in cart
+  window.addEventListener('discount:update', function() {
+    updateDiscountUI();
   });
 });
 

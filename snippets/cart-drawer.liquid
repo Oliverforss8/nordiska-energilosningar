@@ -41,6 +41,17 @@
         <span class="knappetikett text-[#171717]" data-cart-total>0 kr</span>
       </div>
 
+      <!-- Applied Discount (from green deduction) -->
+      <div class="flex items-center justify-between py-2" data-cart-discount-row style="display: none;">
+        <div class="flex items-center gap-2">
+          <span class="body1 text-[16px] text-[#171717]">Rabattkod</span>
+          <span class="knappetikett text-[#171717]" data-cart-discount></span>
+        </div>
+        <button type="button" class="body1 text-[14px] text-[#171717] underline hover:opacity-70" data-clear-discount>
+          Rensa
+        </button>
+      </div>
+
       <!-- Buttons -->
       <div class="space-y-3">
         <button
