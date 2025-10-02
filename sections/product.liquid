@@ -946,6 +946,9 @@
 {{ product.variants | json }}
 </script>
 
+{% comment %} Load extracted product.js {% endcomment %}
+<script src="{{ 'product.js' | asset_url }}" defer></script>
+{% comment %}
 {% javascript %}
   // Global dropdown toggle function for mobile-friendly interaction
   function toggleDropdown(contentId, trigger) {
@@ -1143,8 +1146,8 @@
 
     // Persist discount selection immediately on any discount input change and notify cart
     const discountInputs = document.querySelectorAll('.green-deduction-radio, .green-deduction-checkbox, [data-discount-code]');
+    console.log('🧩 Discount inputs init - found count:', discountInputs ? discountInputs.length : 0);
     if (discountInputs && discountInputs.length > 0) {
-      console.log('🧩 Found discount inputs:', discountInputs.length);
       discountInputs.forEach((input) => {
         input.addEventListener('change', function() {
           console.log('🖱️ Discount input changed:', this.type, this.dataset.discountCode, 'checked:', this.checked);
@@ -1410,6 +1413,7 @@
     }
   });
 {% endjavascript %}
+{% endcomment %}
 
 {% schema %}
 {
