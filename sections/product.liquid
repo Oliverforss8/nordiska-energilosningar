@@ -1119,31 +1119,53 @@
       });
     }
 
-    // Function to get selected discount code
+    // Function to get selected discount code (supports radios and checkboxes)
     function getSelectedDiscountCode() {
-      const selectedRadio = document.querySelector('.green-deduction-radio:checked');
-      const code = selectedRadio ? selectedRadio.dataset.discountCode : null;
-      console.log('🔍 Checking for discount code:', code);
-      return code;
+      // Prefer any checked radio
+      const selectedRadio = document.querySelector('.green-deduction-radio:checked, input[type="radio"][data-discount-code]:checked');
+      if (selectedRadio) {
+        const code = selectedRadio.dataset.discountCode || null;
+        console.log('🔍 Discount (radio) selected:', code);
+        return code;
+      }
+
+      // Fallback: any checked checkbox with data-discount-code
+      const checkedCheckbox = document.querySelector('.green-deduction-checkbox:checked, input[type="checkbox"][data-discount-code]:checked');
+      if (checkedCheckbox) {
+        const code = checkedCheckbox.dataset.discountCode || null;
+        console.log('🔍 Discount (checkbox) selected:', code);
+        return code;
+      }
+
+      console.log('🔍 No discount selected');
+      return null;
     }
 
-    // Persist discount selection immediately on radio change and notify cart
-    const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
-    if (greenDeductionRadios && greenDeductionRadios.length > 0) {
-      greenDeductionRadios.forEach((radio) => {
-        radio.addEventListener('change', function() {
+    // Persist discount selection immediately on any discount input change and notify cart
+    const discountInputs = document.querySelectorAll('.green-deduction-radio, .green-deduction-checkbox, [data-discount-code]');
+    if (discountInputs && discountInputs.length > 0) {
+      console.log('🧩 Found discount inputs:', discountInputs.length);
+      discountInputs.forEach((input) => {
+        input.addEventListener('change', function() {
+          console.log('🖱️ Discount input changed:', this.type, this.dataset.discountCode, 'checked:', this.checked);
           const code = getSelectedDiscountCode();
           try {
             if (code) {
               sessionStorage.setItem('selectedDiscountCode', code);
+              console.log('💾 Saved discount code to session:', code);
             } else {
               sessionStorage.removeItem('selectedDiscountCode');
+              console.log('🧹 Cleared discount code from session');
             }
-          } catch (_) {}
+          } catch (e) {
+            console.warn('SessionStorage not available', e);
+          }
           // Broadcast to cart drawer to update its display
           window.dispatchEvent(new CustomEvent('discount:update'));
         });
       });
+    } else {
+      console.log('ℹ️ No discount inputs found on this product');
     }
 
     // Upsell Products Functionality
