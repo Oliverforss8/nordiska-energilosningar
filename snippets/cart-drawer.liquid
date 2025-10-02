@@ -44,6 +44,14 @@
       <!-- Buttons -->
       <div class="space-y-3">
         <button
+          class="knappetikett w-full rounded-[10px] py-3 text-[#171717] transition-colors hover:bg-gray-100 border border-gray-200"
+          onclick="window.clearCart && window.clearCart()"
+          type="button"
+        >
+          Töm kundvagnen
+        </button>
+
+        <button
           class="checkout-btn knappetikett w-full rounded-[10px] py-4 text-[#171717] transition-colors hover:bg-[#D4B82A]"
           style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
           onclick="goToCheckoutWithDiscount()"

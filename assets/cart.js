@@ -40,6 +40,25 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.style.overflow = '';
   }
 
+  // Clear entire cart
+  async function clearCart() {
+    try {
+      await fetch('/cart/clear.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      // Reload cart data and UI after clearing
+      await loadCartData();
+    } catch (error) {
+      console.error('Error clearing cart:', error);
+    }
+  }
+
+  // Expose clearCart globally for UI bindings
+  window.clearCart = clearCart;
+
   // Load cart data from Shopify
   async function loadCartData() {
     try {
