@@ -53,35 +53,35 @@
 
 <header
   id="{{ section_id }}"
-  class="header-section fixed z-[100] w-full transition-all duration-300{% if inverted_mode %} inverted{% endif %}"
+  class="header-section fixed z-[100] w-full transition-all duration-300{% if inverted_mode %} inverted{% endif %}{% if is_foretag_page %} foretag-page{% endif %}"
   data-header
 >
   <!-- Top bar -->
-  <div class="header-topbar w-full bg-[#F3F1E8] px-[50px] py-[15px]">
-    <div class="text flex flex-row gap-[15px] px-[50px] text-[#171717]">
+  <div class="header-topbar w-full px-[50px] py-[15px]{% if is_foretag_page %} bg-[#171717]{% else %} bg-[#F3F1E8]{% endif %}">
+    <div class="text flex flex-row gap-[15px] px-[50px]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %}">
       {% if is_foretag_page %}
         <a
           href="{{ routes.root_url }}"
-          class="text-[12px] font-[300] text-[#171717] transition-opacity hover:opacity-70"
+          class="text-[12px] font-[300]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
         >
           {{ 'general.privatperson' | t | default: 'Privatperson' }}
         </a>
         <a
           href="/pages/foretag/start"
-          class="text-[18px] font-[400] text-[#171717] transition-opacity hover:opacity-70"
+          class="text-[18px] font-[400]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
         >
           {{ 'general.foretag' | t | default: 'Företag' }}
         </a>
       {% else %}
         <a
           href="{{ routes.root_url }}"
-          class="text-[18px] font-[400] text-[#171717] transition-opacity hover:opacity-70"
+          class="text-[18px] font-[400]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
         >
           {{ 'general.privatperson' | t | default: 'Privatperson' }}
         </a>
         <a
           href="/pages/foretag/start"
-          class="text-[12px] font-[300] text-[#171717] transition-opacity hover:opacity-70"
+          class="text-[12px] font-[300]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
         >
           {{ 'general.foretag' | t | default: 'Företag' }}
         </a>
@@ -90,7 +90,7 @@
   </div>
 
   <!-- Main header -->
-  <div class="header-main header-gradient w-full py-[15px]">
+  <div class="header-main{% if is_foretag_page %} w-full py-[15px]{% else %} header-gradient w-full py-[15px]{% endif %}">
     <div class="layout flex w-full flex-row items-center justify-between">
       <!-- Logo -->
       <a href="{{ routes.root_url }}" class="header-logo">
@@ -424,6 +424,22 @@
     --header-bg: white;
     --logo-white-opacity: 0;
     --logo-dark-opacity: 1;
+  }
+
+  /* Företag pages - transparent by default, white background on scroll */
+  .header-section.foretag-page .header-main {
+    background: transparent;
+  }
+
+  .header-section.foretag-page.scrolled {
+    --header-text-color: #171717;
+    --header-bg: white;
+    --logo-white-opacity: 0;
+    --logo-dark-opacity: 1;
+  }
+
+  .header-section.foretag-page.scrolled .header-main {
+    background: white !important;
   }
 
   .header-gradient {
