@@ -700,6 +700,10 @@
   gap: 0.5rem
 }
 
+.gap-1 {
+  gap: 0.25rem
+}
+
 .gap-x-\[20px\] {
   -moz-column-gap: 20px;
        column-gap: 20px
