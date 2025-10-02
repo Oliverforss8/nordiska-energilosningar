@@ -276,6 +276,11 @@
   margin-bottom: 30px
 }
 
+.my-\[20px\] {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
 .mb-2 {
   margin-bottom: 0.5rem
 }
@@ -334,6 +339,14 @@
 
 .mt-\[62px\] {
   margin-top: 62px
+}
+
+.mt-\[20px\] {
+  margin-top: 20px
+}
+
+.mt-\[40px\] {
+  margin-top: 40px
 }
 
 .line-clamp-2 {
@@ -1376,6 +1389,10 @@
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
 }
 
+.text-\[\[30px\]\] {
+  color: [30px]
+}
+
 .underline {
   text-decoration-line: underline
 }
@@ -1777,6 +1794,10 @@
     gap: 50px
   }
 
+  .md\:gap-\[15px\] {
+    gap: 15px
+  }
+
   .md\:rounded-\[10px\] {
     border-radius: 10px
   }
@@ -1975,6 +1996,10 @@
 
   .md\:text-\[48px\] {
     font-size: 48px
+  }
+
+  .md\:text-\[28px\] {
+    font-size: 28px
   }
 }
 
