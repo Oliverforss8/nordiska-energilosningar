@@ -38,11 +38,18 @@
     "tekniska_specifikationer_AdpmjP": {
       "type": "tekniska-specifikationer",
       "blocks": {
+        "specification_BhAQga": {
+          "type": "specification",
+          "settings": {
+            "label": "Batterityp",
+            "value": "LFP (LiFePO4)"
+          }
+        },
         "specification_ARPRA4": {
           "type": "specification",
           "settings": {
             "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh"
+            "value": "15.36 - 76.8 kWh (3-15 moduler)"
           }
         },
         "specification_GpzCVJ": {
@@ -80,30 +87,31 @@
             "value": "- 20 – + 55 °C"
           }
         },
-        "specification_cKwGad": {
-          "type": "specification",
-          "settings": {
-            "label": "Kompatibel med växelriktare",
-            "value": "Solis, Solinteg"
-          }
-        },
         "specification_k6xA9k": {
           "type": "specification",
           "settings": {
             "label": "IP-klass",
             "value": "IP20"
           }
+        },
+        "specification_cKwGad": {
+          "type": "specification",
+          "settings": {
+            "label": "Kompatibel med växelriktare",
+            "value": "Solis, Solinteg"
+          }
         }
       },
       "block_order": [
+        "specification_BhAQga",
         "specification_ARPRA4",
         "specification_GpzCVJ",
         "specification_pQFPk4",
         "specification_H6YUdb",
         "specification_zX3MCJ",
         "specification_JFJ6Jn",
-        "specification_cKwGad",
-        "specification_k6xA9k"
+        "specification_k6xA9k",
+        "specification_cKwGad"
       ],
       "name": "Tekniska specifikationer",
       "settings": {
