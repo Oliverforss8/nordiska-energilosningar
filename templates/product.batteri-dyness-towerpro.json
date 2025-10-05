@@ -122,26 +122,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_TmQytz": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "media_type": "image",
-        "background_image": "shopify://shop_images/Tower_Pro-3_-1200x630.jpg",
-        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_wA4xfq": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -213,7 +193,6 @@
   "order": [
     "main",
     "tekniska_specifikationer_NRgBkG",
-    "banner_bild_TmQytz",
     "bild_och_text_wA4xfq",
     "faq_produkt",
     "relaterade_produkter"
