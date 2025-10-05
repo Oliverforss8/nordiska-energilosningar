@@ -63,29 +63,29 @@
         "specification_C99Mme": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "C-värde",
+            "value": "1 C"
           }
         },
         "specification_hUmEmF": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "Driftstemperatur",
+            "value": "- 20 – + 55 °C"
           }
         },
         "specification_tjm798": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "IP-klass",
+            "value": "IP55"
           }
         },
         "specification_HYy9jM": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "Kompatibel med växelriktare",
+            "value": "Solis, Solinteg"
           }
         },
         "specification_Wb33Wp": {
