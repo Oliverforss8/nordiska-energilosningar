@@ -133,7 +133,7 @@
       "settings": {
         "title": "Titel",
         "text": "<p>Text</p>",
-        "media_type": "image",
+        "media_type": "video",
         "video": "shopify://files/videos/jichajiyongsuo.mp4",
         "image_position": "left",
         "image_button_text": "",
