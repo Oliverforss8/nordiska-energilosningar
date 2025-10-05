@@ -11,25 +11,15 @@
   "sections": {
     "main": {
       "type": "product",
-      "settings": {}
-    },
-    "banner_bild_TmQytz": {
-      "type": "banner-bild",
-      "name": "Banner bild",
       "settings": {
-        "media_type": "video",
-        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
+        "show_installation": false,
+        "installation_product": "",
+        "installation_title": "",
+        "installation_description": "",
+        "green_deduction_1_title": "Grönt avdrag 1",
+        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
+        "green_deduction_2_title": "Grönt avdrag 2",
+        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
     "tekniska_specifikationer_NRgBkG": {
@@ -43,7 +33,9 @@
           }
         }
       },
-      "block_order": ["specification_E4emyj"],
+      "block_order": [
+        "specification_E4emyj"
+      ],
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
@@ -54,6 +46,26 @@
         "description": "Dyness",
         "button_text": "",
         "button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_TmQytz": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Tower_Pro-3_-1200x630.jpg",
+        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -102,7 +114,11 @@
           }
         }
       },
-      "block_order": ["faq_item_1", "faq_item_2", "faq_item_3"],
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ],
       "settings": {
         "title": "Vanliga frågor",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
@@ -123,8 +139,8 @@
   },
   "order": [
     "main",
-    "banner_bild_TmQytz",
     "tekniska_specifikationer_NRgBkG",
+    "banner_bild_TmQytz",
     "bild_och_text_wA4xfq",
     "faq_produkt",
     "relaterade_produkter"
