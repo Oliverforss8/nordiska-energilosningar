@@ -49,8 +49,8 @@
         "specification_HewNBR": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "Antal laddcykler",
+            "value": "≥ 8000 cycles"
           }
         },
         "specification_WABDdY": {
