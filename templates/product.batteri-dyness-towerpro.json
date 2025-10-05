@@ -44,8 +44,8 @@
         "product_name": "Dyness",
         "stack_info": "Stack",
         "description": "Dyness",
-        "button_text": "",
-        "button_link": "",
+        "button_text": "Produktdatablad",
+        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250915/DynessTowerProDatasheetEN20250723.pdf",
         "custom_id": ""
       }
     },
