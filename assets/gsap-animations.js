@@ -10,7 +10,8 @@
   // Minimal configuration: animate hero only by default
   var CONFIG = {
     animateHeroOnly: true,
-    enableFlare: false
+    enableFlare: false,
+    enableLinksSection: true
   };
 
   // Guard: GSAP must be present
@@ -284,12 +285,75 @@
     var scope = root || document;
     try {
       initHeroAnimations(scope);
-      // Scroll and hover animations are disabled for a clean, minimal hero-only setup
+      // Scroll and hover animations are disabled globally for minimalism
+      // Enable targeted animations for specific sections when requested
+      if (CONFIG.enableLinksSection) {
+        initLinksSectionAnimations(scope);
+      }
     } catch (e) {
       // fail-safe: never break the storefront
       if (typeof console !== 'undefined' && console.warn) {
         console.warn('[GSAP Animations] init error:', e);
       }
+    }
+  }
+
+  // LINKS SECTION: fade-and-rise cards on scroll and subtle hover lift
+  function initLinksSectionAnimations(root) {
+    var section = root.querySelector('.section-links');
+    if (!section || !gsapReady() || !motionOK()) return;
+
+    var cards = section.querySelectorAll('a[href]');
+    if (!cards.length) return;
+
+    // Hover lift
+    Array.prototype.forEach.call(cards, function (card) {
+      if (card.__gsapLinksHoverBound) return;
+      card.__gsapLinksHoverBound = true;
+      addWillChangeHints([card], 'transform, filter');
+      var onIn = function () {
+        gsap.to(card, { duration: 0.18, ease: 'power2.out', y: -2, scale: 1.01, filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.05))' });
+      };
+      var onOut = function () {
+        gsap.to(card, { duration: 0.22, ease: 'power3.out', y: 0, scale: 1.0, filter: 'none' });
+      };
+      card.addEventListener('mouseenter', onIn, { passive: true });
+      card.addEventListener('mouseleave', onOut, { passive: true });
+      card.addEventListener('focus', onIn, { passive: true });
+      card.addEventListener('blur', onOut, { passive: true });
+    });
+
+    // Prepare all cards initial state
+    addWillChangeHints(Array.prototype.slice.call(cards), 'opacity, transform');
+    gsap.set(cards, { opacity: 0, y: 20 });
+
+    // Section-level trigger with IntersectionObserver: reveal and stagger when section enters view
+    var sectionObserver;
+    try {
+      sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !section.__gsapLinksRevealed) {
+            section.__gsapLinksRevealed = true;
+            gsap.to(cards, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              ease: 'power2.out',
+              stagger: 0.06
+            });
+            sectionObserver.unobserve(section);
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.2 });
+    } catch (_) {
+      sectionObserver = null;
+    }
+
+    if (sectionObserver) {
+      sectionObserver.observe(section);
+    } else {
+      // Fallback: reveal immediately
+      gsap.to(cards, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', stagger: 0.05 });
     }
   }
 
