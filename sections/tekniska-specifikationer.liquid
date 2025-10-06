@@ -24,34 +24,40 @@
           <div class="image-carousel h-[400px] overflow-hidden rounded-[15px] md:h-[500px]">
             {% if section.settings.image_1 != blank %}
               <img
-                src="{{ section.settings.image_1 | image_url: width: 800 }}"
+                src="{{ section.settings.image_1 | image_url: width: 1600 }}"
+                srcset="{{ section.settings.image_1 | image_url: width: 800 }} 800w, {{ section.settings.image_1 | image_url: width: 1200 }} 1200w, {{ section.settings.image_1 | image_url: width: 1600 }} 1600w, {{ section.settings.image_1 | image_url: width: 2000 }} 2000w"
+                sizes="(min-width: 1024px) 800px, 100vw"
                 alt="{{ section.settings.image_1.alt | default: section.settings.product_name }}"
                 class="carousel-image h-full w-full object-contain transition-opacity duration-500"
                 data-image-index="0"
-                width="800"
-                height="500"
+                width="1600"
+                height="1000"
                 loading="lazy"
               >
             {% endif %}
             {% if section.settings.image_2 != blank %}
               <img
-                src="{{ section.settings.image_2 | image_url: width: 800 }}"
+                src="{{ section.settings.image_2 | image_url: width: 1600 }}"
+                srcset="{{ section.settings.image_2 | image_url: width: 800 }} 800w, {{ section.settings.image_2 | image_url: width: 1200 }} 1200w, {{ section.settings.image_2 | image_url: width: 1600 }} 1600w, {{ section.settings.image_2 | image_url: width: 2000 }} 2000w"
+                sizes="(min-width: 1024px) 800px, 100vw"
                 alt="{{ section.settings.image_2.alt | default: section.settings.product_name }}"
-                class="carousel-image absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500"
+                class="carousel-image absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-500"
                 data-image-index="1"
-                width="800"
-                height="500"
+                width="1600"
+                height="1000"
                 loading="lazy"
               >
             {% endif %}
             {% if section.settings.image_3 != blank %}
               <img
-                src="{{ section.settings.image_3 | image_url: width: 800 }}"
+                src="{{ section.settings.image_3 | image_url: width: 1600 }}"
+                srcset="{{ section.settings.image_3 | image_url: width: 800 }} 800w, {{ section.settings.image_3 | image_url: width: 1200 }} 1200w, {{ section.settings.image_3 | image_url: width: 1600 }} 1600w, {{ section.settings.image_3 | image_url: width: 2000 }} 2000w"
+                sizes="(min-width: 1024px) 800px, 100vw"
                 alt="{{ section.settings.image_3.alt | default: section.settings.product_name }}"
-                class="carousel-image absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500"
+                class="carousel-image absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-500"
                 data-image-index="2"
-                width="800"
-                height="500"
+                width="1600"
+                height="1000"
                 loading="lazy"
               >
             {% endif %}
@@ -138,41 +144,7 @@
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('.image-carousel');
-    if (!carousel) return;
-
-    const images = carousel.querySelectorAll('.carousel-image');
-    const dots = document.querySelectorAll('.carousel-dot');
-    let currentIndex = 0;
-
-    function showImage(index) {
-      images.forEach((img, i) => {
-        img.style.opacity = i === index ? '1' : '0';
-      });
-
-      dots.forEach((dot, i) => {
-        dot.style.opacity = i === index ? '1' : '0.3';
-      });
-    }
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentIndex = index;
-        showImage(currentIndex);
-      });
-    });
-
-    // Auto-rotera var 5:e sekund
-    if (images.length > 1) {
-      setInterval(() => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-      }, 5000);
-    }
-  });
-</script>
+<script src="{{ 'tekniska-specifikationer.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
