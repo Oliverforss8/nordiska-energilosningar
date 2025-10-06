@@ -11,7 +11,7 @@
   var CONFIG = {
     animateHeroOnly: true,
     enableFlare: false,
-    enableLinksSection: true
+    enableLinksSection: false
   };
 
   // Guard: GSAP must be present

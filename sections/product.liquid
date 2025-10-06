@@ -218,10 +218,10 @@
                                 {% endif %}
                               {% endif %}
                             {% endif %}
-                            <div class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]" {{ block.shopify_attributes }}>
+                            <div class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]" {{ block.shopify_attributes }} >
                               <div class="flex flex-col gap-[20px]">
                                 <!-- Header with checkbox -->
-                                <div class="flex items-start justify-between gap-[15px]">
+                                <div class="flex items-start justify-between gap-[15px]" >
                                   <div class="flex items-start gap-[15px]">
                                     <input
                                       type="checkbox"
@@ -243,7 +243,7 @@
                                     </label>
                                   </div>
                                   <div class="headline1 text-[18px] md:text-[20px]">
-                                    <span class="upsell-price" data-currency="SEK" data-product-id="{{ upsell_product.id }}">
+                                    <span class="upsell-price "  data-currency="SEK" data-product-id="{{ upsell_product.id }}">
                                       +{{ target_variant.price | money }}
                                     </span>
                                   </div>
@@ -275,7 +275,7 @@
                                         <label class="sr-only" for="upsell-variant-{{ upsell_product.id }}">Välj variant</label>
                                         <select
                                           id="upsell-variant-{{ upsell_product.id }}"
-                                          class="upsell-variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] md:text-[16px] focus:outline-none"
+                                          class="upsell-variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] md:text-[16px] focus:outline-none"    style="  border: 1px solid #171717 !important; "
                                           data-product-id="{{ upsell_product.id }}"
                                         >
                                           {% for v in upsell_product.variants %}
