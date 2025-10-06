@@ -12,16 +12,25 @@
     "main": {
       "type": "product",
       "blocks": {
+        "upsell_product_GQw9tB": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "solis-s6-eh3p10-kw",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
         "upsell_product_DY4Qkm": {
           "type": "upsell_product",
           "settings": {
-            "upsell_product": "dyness-stack100",
+            "upsell_product": "solinteg",
             "upsell_title": "",
             "upsell_description": ""
           }
         }
       },
       "block_order": [
+        "upsell_product_GQw9tB",
         "upsell_product_DY4Qkm"
       ],
       "settings": {
