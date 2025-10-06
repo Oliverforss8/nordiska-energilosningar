@@ -140,6 +140,18 @@
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0
+}
+
 .pointer-events-none {
   pointer-events: none
 }
@@ -276,11 +288,6 @@
   margin-bottom: 30px
 }
 
-.my-\[20px\] {
-  margin-top: 20px;
-  margin-bottom: 20px
-}
-
 .mb-2 {
   margin-bottom: 0.5rem
 }
@@ -339,14 +346,6 @@
 
 .mt-\[62px\] {
   margin-top: 62px
-}
-
-.mt-\[20px\] {
-  margin-top: 20px
-}
-
-.mt-\[40px\] {
-  margin-top: 40px
 }
 
 .line-clamp-2 {
@@ -661,6 +660,14 @@
   justify-content: space-between
 }
 
+.gap-1 {
+  gap: 0.25rem
+}
+
+.gap-2 {
+  gap: 0.5rem
+}
+
 .gap-3 {
   gap: 0.75rem
 }
@@ -707,14 +714,6 @@
 
 .gap-\[8px\] {
   gap: 8px
-}
-
-.gap-2 {
-  gap: 0.5rem
-}
-
-.gap-1 {
-  gap: 0.25rem
 }
 
 .gap-x-\[20px\] {
@@ -1389,10 +1388,6 @@
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
 }
 
-.text-\[\[30px\]\] {
-  color: [30px]
-}
-
 .underline {
   text-decoration-line: underline
 }
@@ -1794,10 +1789,6 @@
     gap: 50px
   }
 
-  .md\:gap-\[15px\] {
-    gap: 15px
-  }
-
   .md\:rounded-\[10px\] {
     border-radius: 10px
   }
@@ -1996,10 +1987,6 @@
 
   .md\:text-\[48px\] {
     font-size: 48px
-  }
-
-  .md\:text-\[28px\] {
-    font-size: 28px
   }
 }
 

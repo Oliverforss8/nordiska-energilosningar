@@ -205,6 +205,90 @@ document.addEventListener('DOMContentLoaded', function() {
     return selectedUpsells;
   }
 
+  // Upsell Variant Selection Functionality
+  function setupUpsellVariants() {
+    const upsellVariantSelects = document.querySelectorAll('.upsell-variant-select');
+    console.log('Found upsell selects:', upsellVariantSelects.length);
+    
+    upsellVariantSelects.forEach((select) => {
+      const productId = select.dataset.productId;
+      console.log('Processing product ID:', productId);
+      
+      // Find elements using multiple methods
+      const checkbox = document.querySelector('#upsell-' + productId) || 
+                      document.querySelector(`input[data-product-id="${productId}"].upsell-checkbox`);
+      const priceEl = document.querySelector('.upsell-price[data-product-id="' + productId + '"]');
+      
+      console.log('Upsell setup for product', productId, ':', { 
+        checkbox: !!checkbox, 
+        priceEl: !!priceEl,
+        selectValue: select.value,
+        checkboxId: checkbox ? checkbox.id : 'not found',
+        priceElText: priceEl ? priceEl.textContent : 'not found'
+      });
+      
+      // Initialize checkbox variant id from selected option
+      if (checkbox && select.value) {
+        checkbox.dataset.variantId = select.value;
+        const opt = select.selectedOptions && select.selectedOptions[0];
+        if (opt) {
+          checkbox.dataset.price = opt.dataset.price || checkbox.dataset.price;
+          if (priceEl && opt.dataset.price) {
+            try {
+              const price = parseInt(opt.dataset.price, 10) / 100;
+              priceEl.textContent = '+' + new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' }).format(price);
+              console.log('Initial price set to:', priceEl.textContent);
+            } catch (e) {
+              console.error('Error setting initial price:', e);
+            }
+          }
+        }
+      }
+      
+      select.addEventListener('change', (e) => {
+        console.log('Dropdown changed for product:', productId);
+        const selectedOption = e.target.selectedOptions && e.target.selectedOptions[0];
+        if (!selectedOption) {
+          console.log('No selected option found');
+          return;
+        }
+        
+        const variantId = selectedOption.value;
+        const price = selectedOption.dataset.price;
+        
+        console.log('Upsell variant changed:', { 
+          variantId, 
+          price, 
+          checkbox: !!checkbox, 
+          priceEl: !!priceEl,
+          selectedOptionText: selectedOption.textContent
+        });
+        
+        if (checkbox) {
+          checkbox.dataset.variantId = variantId;
+          if (price) checkbox.dataset.price = price;
+          console.log('Checkbox updated with variant:', variantId, 'price:', price);
+        }
+        
+        if (priceEl && price) {
+          try {
+            const priceNum = parseInt(price, 10) / 100;
+            const formattedPrice = '+' + new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' }).format(priceNum);
+            priceEl.textContent = formattedPrice;
+            console.log('Price updated to:', formattedPrice);
+          } catch (e) {
+            console.error('Error updating price:', e);
+          }
+        } else {
+          console.log('Price element not found or no price data. Price element exists:', !!priceEl, 'Price value:', price);
+        }
+      });
+    });
+  }
+  
+  // Setup upsell variants
+  setupUpsellVariants();
+
   // Buy Now functionality with upsells and installation
   let isBuyNowProcessing = false;
   if (buyNowBtn) {

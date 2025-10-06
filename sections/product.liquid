@@ -197,6 +197,27 @@
                         {% when 'upsell_product' %}
                           {% if block.settings.upsell_product != blank %}
                             {% assign upsell_product = block.settings.upsell_product %}
+                            {% comment %} Find the target variant by ID, SKU, or title {% endcomment %}
+                            {% assign target_variant = upsell_product.selected_or_first_available_variant %}
+                            {% if block.settings.upsell_variant_id != blank %}
+                              {% comment %} Try to find by exact ID first {% endcomment %}
+                              {% assign found_variant = upsell_product.variants | where: 'id', block.settings.upsell_variant_id | first %}
+                              {% if found_variant %}
+                                {% assign target_variant = found_variant %}
+                              {% else %}
+                                {% comment %} Try to find by SKU {% endcomment %}
+                                {% assign found_variant = upsell_product.variants | where: 'sku', block.settings.upsell_variant_id | first %}
+                                {% if found_variant %}
+                                  {% assign target_variant = found_variant %}
+                                {% else %}
+                                  {% comment %} Try to find by title {% endcomment %}
+                                  {% assign found_variant = upsell_product.variants | where: 'title', block.settings.upsell_variant_id | first %}
+                                  {% if found_variant %}
+                                    {% assign target_variant = found_variant %}
+                                  {% endif %}
+                                {% endif %}
+                              {% endif %}
+                            {% endif %}
                             <div class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]" {{ block.shopify_attributes }}>
                               <div class="flex flex-col gap-[20px]">
                                 <!-- Header with checkbox -->
@@ -207,8 +228,8 @@
                                       id="upsell-{{ upsell_product.id }}"
                                       class="upsell-checkbox mt-[5px] h-[20px] w-[20px] cursor-pointer"
                                       data-product-id="{{ upsell_product.id }}"
-                                      data-variant-id="{{ upsell_product.selected_or_first_available_variant.id }}"
-                                      data-price="{{ upsell_product.price }}"
+                                      data-variant-id="{{ target_variant.id }}"
+                                      data-price="{{ target_variant.price }}"
                                     >
                                     <label for="upsell-{{ upsell_product.id }}" class="cursor-pointer">
                                       <div class="headline1 text-[20px] md:text-[24px]">
@@ -222,7 +243,9 @@
                                     </label>
                                   </div>
                                   <div class="headline1 text-[18px] md:text-[20px]">
-                                    +{{ upsell_product.price | money }}
+                                    <span class="upsell-price" data-currency="SEK" data-product-id="{{ upsell_product.id }}">
+                                      +{{ target_variant.price | money }}
+                                    </span>
                                   </div>
                                 </div>
 
@@ -247,6 +270,27 @@
                                         {{ upsell_product.description | strip_html | truncate: 80 }}
                                       </div>
                                     {% endif %}
+                                    {% unless upsell_product.has_only_default_variant %}
+                                      <div class="mt-[10px]">
+                                        <label class="sr-only" for="upsell-variant-{{ upsell_product.id }}">Välj variant</label>
+                                        <select
+                                          id="upsell-variant-{{ upsell_product.id }}"
+                                          class="upsell-variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] md:text-[16px] focus:outline-none"
+                                          data-product-id="{{ upsell_product.id }}"
+                                        >
+                                          {% for v in upsell_product.variants %}
+                                            <option
+                                              value="{{ v.id }}"
+                                              data-price="{{ v.price }}"
+                                              {% if v.id == target_variant.id %}selected{% endif %}
+                                              {% unless v.available %}disabled{% endunless %}
+                                            >
+                                              {{ v.title }}{% unless v.available %} - {{ 'products.product.sold_out' | t | default: 'Slut i lager' }}{% endunless %}
+                                            </option>
+                                          {% endfor %}
+                                        </select>
+                                      </div>
+                                    {% endunless %}
                                   </div>
                                 </div>
                               </div>
@@ -1186,6 +1230,7 @@
       return selectedUpsells;
     }
 
+
     // Buy Now functionality with upsells and installation
     const buyNowBtn = document.querySelector('.buy-now-btn');
     let isBuyNowProcessing = false;
@@ -1491,6 +1536,12 @@
           "type": "product",
           "id": "upsell_product",
           "label": "Välj produkt"
+        },
+        {
+          "type": "text",
+          "id": "upsell_variant_id",
+          "label": "Förvald variant (valfritt)",
+          "info": "Ange variant-ID, SKU eller titel att förvälja (lämna tomt för första tillgängliga)"
         },
         {
           "type": "text",
