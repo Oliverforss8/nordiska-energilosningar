@@ -38,6 +38,18 @@
     assign inverted_mode = true
   endif
 
+  # URL-based inversion: match against canonical_url using comma-separated fragments
+  assign inverted_url_fragments = section.settings.inverted_url_fragments | split: ','
+  if inverted_url_fragments.size > 0 and inverted_mode == false
+    for url_fragment in inverted_url_fragments
+      assign clean_fragment = url_fragment | strip
+      if clean_fragment != blank and canonical_url contains clean_fragment
+        assign inverted_mode = true
+        break
+      endif
+    endfor
+  endif
+
   # Check if we're on a company/foretag page
   assign is_foretag_page = false
   if page.handle contains 'foretag' or template.name contains 'foretag' or request.page_type contains 'foretag'
@@ -616,6 +628,13 @@
       "label": "Specifika sidor för inverterat läge",
       "info": "Ange sidhandtag eller mallnamn separerade med komma (t.ex: om-oss, kontakt, product, collection). Detta åsidosätter den globala inställningen.",
       "placeholder": "om-oss, kontakt, support"
+    },
+    {
+      "type": "textarea",
+      "id": "inverted_url_fragments",
+      "label": "Specifika URL-delar för inverterat läge",
+      "info": "Ange delar av URL att matcha (komma-separerat), t.ex. /pages/foretag/offert",
+      "placeholder": "/pages/foretag/offert, /pages/offert-forfragan"
     },
     {
       "type": "url",
