@@ -18,6 +18,7 @@
         "foretag_menu": "meny-f-retag",
         "inverted_mode_global": false,
         "inverted_pages": "offert-forfragan, foretag-offert",
+        "inverted_url_fragments": "/offert",
         "foretag_quote_link": "",
         "nav_item_1_dropdown_image": "shopify://shop_images/image_18.png",
         "nav_item_1_button_link_1": "shopify://collections/solceller",

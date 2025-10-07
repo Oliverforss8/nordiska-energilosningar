@@ -67,19 +67,19 @@
         "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
         "card_1_image": "shopify://shop_images/image_11.png",
         "card_1_button_text": "Solceller",
-        "card_1_button_link": "shopify://collections/solceller",
+        "card_1_button_link": "shopify://pages/vara-solceller",
         "card_1_overlay_opacity": 20,
         "card_2_image": "shopify://shop_images/image_7.png",
         "card_2_button_text": "Värmepumpar",
-        "card_2_button_link": "shopify://collections/varmepumpar",
+        "card_2_button_link": "shopify://pages/vara-varmepumpar",
         "card_2_overlay_opacity": 20,
         "card_3_image": "shopify://shop_images/image_14.png",
         "card_3_button_text": "Laddboxar",
-        "card_3_button_link": "shopify://collections/laddboxar",
+        "card_3_button_link": "shopify://pages/vara-laddboxar",
         "card_3_overlay_opacity": 20,
         "card_4_image": "shopify://shop_images/image_16.png",
         "card_4_button_text": "Batterier",
-        "card_4_button_link": "shopify://collections/batteri",
+        "card_4_button_link": "shopify://pages/vara-laddboxar",
         "card_4_overlay_opacity": 20,
         "bottom_description": ""
       }
@@ -96,6 +96,37 @@
         "image_button_text": "Så fungerar det",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
+      }
+    },
+    "avdrag_UJWkJe": {
+      "type": "avdrag",
+      "blocks": {
+        "avdrag_item_6PfkjR": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "15% avdrag försolcellsinstallationer",
+            "image": "shopify://shop_images/Hus.svg"
+          }
+        },
+        "avdrag_item_8TBtda": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag förbatterilagring",
+            "image": "shopify://shop_images/Ladd.svg"
+          }
+        }
+      },
+      "block_order": [
+        "avdrag_item_6PfkjR",
+        "avdrag_item_8TBtda"
+      ],
+      "name": "Avdrag",
+      "settings": {
+        "custom_id": "",
+        "heading": "Avdrag för grön teknikt",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "banner_bild_Tr8FhV": {
@@ -363,6 +394,7 @@
     "lankar_kHPxWD",
     "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
+    "avdrag_UJWkJe",
     "banner_bild_Tr8FhV",
     "bild_och_text_D9hWE6",
     "grid_omraden_zBziiH",

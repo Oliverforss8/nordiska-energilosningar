@@ -23,15 +23,18 @@
         "overlay_opacity": 0,
         "header_button_text": "",
         "header_button_url": "",
-        "heading": "Funderar du över något kring våra solceller",
+        "heading": "Funderar du över något kring våra solceller?",
         "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi.",
-        "primary_button_text": "Gå vidare",
-        "primary_button_url": "shopify://pages/contact",
+        "primary_button_text": "Kontakta oss",
+        "primary_button_url": "shopify://pages/support-om-oss",
         "secondary_button_text": "",
         "secondary_button_url": "",
         "custom_id": ""
       }
     }
   },
-  "order": ["main", "banner_bild_md6DXq"]
+  "order": [
+    "main",
+    "banner_bild_md6DXq"
+  ]
 }

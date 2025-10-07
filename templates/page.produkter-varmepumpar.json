@@ -18,6 +18,7 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
+        "media_type": "image",
         "background_image": "shopify://shop_images/image_7.png",
         "overlay_opacity": 20,
         "heading": "Våra värmepumpar",
@@ -71,43 +72,25 @@
           }
         }
       },
-      "block_order": ["product_card_7tGUtQ", "product_card_LWGEtn", "product_card_LxXipk"],
+      "block_order": [
+        "product_card_7tGUtQ",
+        "product_card_LWGEtn",
+        "product_card_LxXipk"
+      ],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/image_7.png",
-        "overlay_opacity": 20,
+        "overlay_opacity": 30,
         "header_button_text": "Värmepumpar",
         "header_button_url": "",
         "heading": "Upptäck våra värmepumpar",
-        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Privat",
-        "primary_button_url": "",
-        "secondary_button_text": "Företag",
+        "description": "Våra värmepumpar är utvecklade för att vara enkla att installera och använda, med hög prestanda och effektiv energibesparing.",
+        "primary_button_text": "Vårt utbud",
+        "primary_button_url": "shopify://collections/varmepumpar",
+        "secondary_button_text": "",
         "secondary_button_url": ""
-      }
-    },
-    "kontakt_form_CfQrPU": {
-      "type": "kontakt-form",
-      "name": "Contact Form",
-      "settings": {
-        "heading": "Kontakta oss",
-        "header_button_text": "",
-        "header_button_url": ""
-      }
-    },
-    "bild_och_text_FyUHed": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Undvik höga elnätsavgifter",
-        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
       }
     },
     "hur_ED7Umq": {
@@ -146,7 +129,12 @@
           }
         }
       },
-      "block_order": ["step_wYwJFN", "step_QYknLJ", "step_EfFxwD", "step_JWTgPa"],
+      "block_order": [
+        "step_wYwJFN",
+        "step_QYknLJ",
+        "step_EfFxwD",
+        "step_JWTgPa"
+      ],
       "name": "How it works",
       "settings": {
         "heading": "Så här fungerar det",
@@ -157,45 +145,13 @@
         "secondary_button_url": "shopify://pages/support-om-oss"
       }
     },
-    "bild_och_text_aWPKhw": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "kontakt_form_CfQrPU": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
       "settings": {
-        "title": "Undvik höga elnätsavgifter",
-        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "avdrag_3G6NGi": {
-      "type": "avdrag",
-      "blocks": {
-        "avdrag_item_iUAdXa": {
-          "type": "avdrag_item",
-          "settings": {
-            "text": "15% avdrag försolcellsinstallationer",
-            "image": "shopify://shop_images/Hus.svg"
-          }
-        },
-        "avdrag_item_mGCc3Y": {
-          "type": "avdrag_item",
-          "settings": {
-            "text": "50% avdrag förbatterilagring",
-            "image": "shopify://shop_images/Ladd.svg"
-          }
-        }
-      },
-      "block_order": ["avdrag_item_iUAdXa", "avdrag_item_mGCc3Y"],
-      "name": "Avdrag",
-      "settings": {
-        "custom_id": "",
-        "heading": "Avdrag för grön teknikt",
-        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
       }
     }
   },
@@ -204,10 +160,7 @@
     "hero_lower_FNPfHG",
     "text_sektion_Up6yBe",
     "banner_med_3_produkter_JdJbDT",
-    "bild_och_text_FyUHed",
     "hur_ED7Umq",
-    "bild_och_text_aWPKhw",
-    "avdrag_3G6NGi",
     "kontakt_form_CfQrPU"
   ]
 }
