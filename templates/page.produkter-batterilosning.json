@@ -79,8 +79,8 @@
           "type": "product_card",
           "settings": {
             "product": "dyness-stack100",
-            "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
+            "title": "Batteri 1",
+            "description": "Lagra din solenergi och slipp köpa el varje månad",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/dyness-stack100"
           }
@@ -89,8 +89,8 @@
           "type": "product_card",
           "settings": {
             "product": "batteri-1",
-            "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
+            "title": "Batteri 2",
+            "description": "Lagra din solenergi och slipp köpa el varje månad",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
@@ -99,8 +99,8 @@
           "type": "product_card",
           "settings": {
             "product": "dyness-tower-pro",
-            "title": "Laddboxar 3",
-            "description": "Avancerad laddning för professionella behov.",
+            "title": "Batteri 3",
+            "description": "Lagra din solenergi och slipp köpa el varje månad",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
