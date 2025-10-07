@@ -18,12 +18,12 @@
       "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_15.png",
+        "background_image": "shopify://shop_images/ae172ed2-6217-4349-a71e-7f3f7d029e9b_1.original.jpg",
         "overlay_opacity": 20,
-        "heading": "Våra energipaket",
-        "subheading": "Vi har",
-        "button_text": "Våra energilösningar",
-        "button_url": ""
+        "heading": "Våra paket för solenergi",
+        "subheading": "Våra solenergipaket ger en helhetslösning för ren och kostnadseffektiv el. Vi anpassar varje installation efter fastighetens förutsättningar för att ge maximal effekt och långsiktig lönsamhet.",
+        "button_text": "Vår lösning",
+        "button_url": "shopify://pages/var-losning"
       }
     },
     "paket_drHUr6": {
@@ -46,7 +46,10 @@
           }
         }
       },
-      "block_order": ["button_9fT37H", "button_FmcHwH"],
+      "block_order": [
+        "button_9fT37H",
+        "button_FmcHwH"
+      ],
       "name": "Paket",
       "settings": {
         "custom_id": "",
@@ -57,5 +60,9 @@
       }
     }
   },
-  "order": ["main", "hero_lower_ABQrCw", "paket_drHUr6"]
+  "order": [
+    "main",
+    "hero_lower_ABQrCw",
+    "paket_drHUr6"
+  ]
 }
