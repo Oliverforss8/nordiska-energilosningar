@@ -77,22 +77,39 @@
         "secondary_button_url": ""
       }
     },
-    "bild_och_text_4tzeq9": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Solceller för företag",
-        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/solceller-section3-img-1920.webp",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_knappar_TQdd96": {
       "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_JLaLAc": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_mJ8C6b": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_yfdtqw": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_JLaLAc",
+        "button_mJ8C6b",
+        "button_yfdtqw"
+      ],
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Solceller för företag",
@@ -109,7 +126,6 @@
   "order": [
     "hero_lower_i4AUcN",
     "banner_med_lankar_agkbJm",
-    "bild_och_text_4tzeq9",
     "bild_och_text_knappar_TQdd96"
   ]
 }
