@@ -177,6 +177,25 @@
         "padding_bottom": 40
       }
     },
+    "banner_bild_ErcDiP": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "background_color": "#000000",
+        "overlay_opacity": 20,
+        "header_button_text": "Ditt nästa steg",
+        "header_button_url": "",
+        "heading": "Vi är experter på solceller",
+        "description": "Vill du få riktig experthjälp och hitta en perfekt lösning för ert företag?",
+        "primary_button_text": "Få en offert",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "bild_och_text_knappar_T6tiXq": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -293,6 +312,7 @@
     "banner_med_lankar_agkbJm",
     "bild_och_text_knappar_TQdd96",
     "faq_produkt_WAWGp6",
+    "banner_bild_ErcDiP",
     "bild_och_text_knappar_T6tiXq",
     "faq_produkt_fD68te"
   ]
