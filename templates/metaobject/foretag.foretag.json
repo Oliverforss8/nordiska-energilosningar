@@ -122,6 +122,51 @@
         "custom_id": ""
       }
     },
+    "faq_produkt_WAWGp6": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_YLnPLr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Solceller blir ett krav från år 2026 enligt nya EU-direktiv",
+            "button_text": "Nytt krav",
+            "description": "",
+            "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning.<br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
+          }
+        },
+        "faq_item_ifXwWb": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Vad ingår i installationen?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
+          }
+        },
+        "faq_item_dq7w7y": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur mycket kan jag spara på min elräkning?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_YLnPLr",
+        "faq_item_ifXwWb",
+        "faq_item_dq7w7y"
+      ],
+      "name": "FAQ produkter",
+      "settings": {
+        "title": "Varför installera solceller?",
+        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "bild_och_text_knappar_T6tiXq": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -172,6 +217,7 @@
     "hero_lower_i4AUcN",
     "banner_med_lankar_agkbJm",
     "bild_och_text_knappar_TQdd96",
+    "faq_produkt_WAWGp6",
     "bild_och_text_knappar_T6tiXq"
   ]
 }
