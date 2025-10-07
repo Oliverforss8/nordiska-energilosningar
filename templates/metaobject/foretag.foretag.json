@@ -293,7 +293,7 @@
         "button_t3rhnM": {
           "type": "button",
           "settings": {
-            "text": "Lagra energi",
+            "text": "Matchar EU-krav",
             "url": "",
             "show_arrow": false
           }
@@ -301,7 +301,7 @@
         "button_M4kEnx": {
           "type": "button",
           "settings": {
-            "text": "Sänkta elkostnader",
+            "text": "Statliga bidrag",
             "url": "",
             "show_arrow": false
           }
@@ -309,7 +309,7 @@
         "button_tijfed": {
           "type": "button",
           "settings": {
-            "text": "Optimerar solceller",
+            "text": "Billigare drivmedel",
             "url": "",
             "show_arrow": false
           }
@@ -323,7 +323,7 @@
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Ladda smart och framtidssäkra er verksamhet",
-        "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
+        "text": "<p>Att investera i elbilsladdare är både hållbart och lönsamt. Företag kan skapa intäkter, höja fastighetsvärdet och locka fler kunder och hyresgäster. Den ökande efterfrågan på laddinfrastruktur gör att en genomtänkt laddlösning ökar i värde över tid och ger stabil avkastning.</p>",
         "media_type": "image",
         "image": "shopify://shop_images/qyymok2yfx8.webp",
         "image_position": "left",
@@ -337,12 +337,12 @@
       "name": "Banner bild",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
         "background_color": "#000000",
         "overlay_opacity": 20,
         "header_button_text": "Ditt nästa steg",
         "header_button_url": "",
-        "heading": "Vi är experter på solceller",
+        "heading": "Energieffektivera er verksamhet",
         "description": "Vill du få riktig experthjälp och hitta en perfekt lösning för ert företag?",
         "primary_button_text": "Få en offert",
         "primary_button_url": "",
