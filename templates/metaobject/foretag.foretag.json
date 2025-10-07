@@ -16,7 +16,7 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_12.png",
         "overlay_opacity": 20,
-        "heading": "Maximera företagets lönsamhet med solceller",
+        "heading": "Maximera företagets lönsamhet med energilösningar",
         "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för ert företag.",
         "button_text": "Be om offert",
         "button_url": ""
@@ -118,7 +118,52 @@
         "image": "shopify://shop_images/image_19.png",
         "image_position": "right",
         "image_button_text": "Gå vidare",
-        "image_button_link": "shopify://metaobjects/foretag/foretag",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_T6tiXq": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_rTzwmG": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra energi",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_k3pWWi": {
+          "type": "button",
+          "settings": {
+            "text": "Sänkta elkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_BpEz6U": {
+          "type": "button",
+          "settings": {
+            "text": "Optimerar solceller",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_rTzwmG",
+        "button_k3pWWi",
+        "button_BpEz6U"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Energilagring till företag",
+        "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
         "custom_id": ""
       }
     }
@@ -126,6 +171,7 @@
   "order": [
     "hero_lower_i4AUcN",
     "banner_med_lankar_agkbJm",
-    "bild_och_text_knappar_TQdd96"
+    "bild_och_text_knappar_TQdd96",
+    "bild_och_text_knappar_T6tiXq"
   ]
 }
