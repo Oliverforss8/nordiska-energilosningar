@@ -14,7 +14,7 @@
       "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_12.png",
+        "background_image": "shopify://shop_images/ae172ed2-6217-4349-a71e-7f3f7d029e9b_1.original.jpg",
         "overlay_opacity": 20,
         "heading": "Maximera företagets lönsamhet med energilösningar",
         "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för ert företag.",
@@ -64,7 +64,7 @@
       "name": "Banner med länkar",
       "settings": {
         "background_color": "#171717",
-        "background_image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "background_image": "shopify://shop_images/Svea_Solar_-_Komatsu_Umea_-_2022-.2e16d0ba.fill-1200x630.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "header_button_text": "Energieffektivisering",
@@ -176,6 +176,42 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "lankar_nykFtk": {
+      "type": "lankar",
+      "blocks": {
+        "card_G7dNMw": {
+          "type": "card",
+          "settings": {
+            "heading": "För lantbruk",
+            "description": "Läs mer om våra lösningar för lantbrukare",
+            "link": "shopify://metaobjects/foretag/lantbruk"
+          }
+        },
+        "card_VHWmLM": {
+          "type": "card",
+          "settings": {
+            "heading": "För BRF",
+            "description": "Läs mer om våra lösningar för bostadsrättsföreningar",
+            "link": "shopify://metaobjects/foretag/bostadsrattsforening"
+          }
+        },
+        "card_JDkQ9W": {
+          "type": "card",
+          "settings": {
+            "heading": "Få offert",
+            "description": "Bli kontaktad med ett skräddarsytt erbjudande för ert företag",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_G7dNMw",
+        "card_VHWmLM",
+        "card_JDkQ9W"
+      ],
+      "name": "Länkar sektion",
+      "settings": {}
     },
     "bild_och_text_knappar_T6tiXq": {
       "type": "bild-och-text-knappar",
@@ -357,6 +393,7 @@
     "banner_med_lankar_agkbJm",
     "bild_och_text_knappar_TQdd96",
     "faq_produkt_WAWGp6",
+    "lankar_nykFtk",
     "bild_och_text_knappar_T6tiXq",
     "faq_produkt_fD68te",
     "bild_och_text_knappar_UM7UeR",
