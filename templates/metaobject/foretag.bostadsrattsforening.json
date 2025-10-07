@@ -18,8 +18,8 @@
         "background_video": "shopify://files/videos/1080.mp4",
         "overlay_opacity": 20,
         "heading": "Solenergilösningar\nanpassat till större organisationer",
-        "subheading": "änk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för er organisation",
-        "button_text": "Våra energilösningar",
+        "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för er organisation",
+        "button_text": "För företag",
         "button_url": ""
       }
     },
@@ -58,10 +58,30 @@
       ],
       "name": "Länkar sektion",
       "settings": {}
+    },
+    "3_grid_V7Vqgw": {
+      "type": "3-grid",
+      "name": "Tre kolumner grid",
+      "settings": {
+        "title": "Effektiva energilösningar för framtidens fastigheter",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "card_1_button_text": "Läs mer",
+        "card_1_button_link": "",
+        "card_1_overlay_opacity": 0,
+        "card_2_button_text": "Utforska",
+        "card_2_button_link": "",
+        "card_2_overlay_opacity": 0,
+        "card_3_button_text": "Upptäck",
+        "card_3_button_link": "",
+        "card_3_overlay_opacity": 0,
+        "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+      }
     }
   },
   "order": [
     "hero_fRPaYi",
-    "lankar_tGAxqY"
+    "lankar_tGAxqY",
+    "3_grid_V7Vqgw"
   ]
 }
