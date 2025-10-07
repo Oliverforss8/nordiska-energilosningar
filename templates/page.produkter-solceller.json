@@ -285,6 +285,50 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_knappar_PdkfaH": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_eCrzmD": {
+          "type": "button",
+          "settings": {
+            "text": "Full insyn",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_LtpfGA": {
+          "type": "button",
+          "settings": {
+            "text": "Kvalitetssäkring",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_VnhgfR": {
+          "type": "button",
+          "settings": {
+            "text": "Enklare framtida service",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_eCrzmD",
+        "button_LtpfGA",
+        "button_VnhgfR"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "kontakt_form_chLN6N": {
       "type": "kontakt-form",
       "name": "Contact Form",
@@ -305,6 +349,7 @@
     "bild_och_text_knappar_hd7RJH",
     "avdrag_cwFWrR",
     "bild_och_text_k67Awi",
+    "bild_och_text_knappar_PdkfaH",
     "kontakt_form_chLN6N"
   ]
 }
