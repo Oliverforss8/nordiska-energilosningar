@@ -196,13 +196,21 @@
             "title": "4. Support",
             "description": "<p>Efter ditt köp finns vi tillgängliga för support!</p>"
           }
+        },
+        "step_9H7KQG": {
+          "type": "step",
+          "settings": {
+            "title": "Steg titel",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
         }
       },
       "block_order": [
         "step_HcbJqz",
         "step_TxEikq",
         "step_x9iFjQ",
-        "step_cFgBdG"
+        "step_cFgBdG",
+        "step_9H7KQG"
       ],
       "name": "How it works",
       "settings": {

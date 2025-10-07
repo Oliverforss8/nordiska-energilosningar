@@ -127,17 +127,48 @@
         "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
-    "bild_och_text_HJKBUV": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "bild_och_text_knappar_weYcCP": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_azQfbf": {
+          "type": "button",
+          "settings": {
+            "text": "Lägre elkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_HAdXTH": {
+          "type": "button",
+          "settings": {
+            "text": "Ökad självförsörjning",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_az3aPw": {
+          "type": "button",
+          "settings": {
+            "text": "Skydd mot prisökningar",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_azQfbf",
+        "button_HAdXTH",
+        "button_az3aPw"
+      ],
+      "name": "Bild och text med knappar",
       "settings": {
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "right",
-        "image_button_text": "Test",
-        "image_button_link": "shopify://pages/vara-solceller",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
@@ -202,6 +233,7 @@
         "step_BtBQck",
         "step_pDRYGU"
       ],
+      "disabled": true,
       "name": "How it works",
       "settings": {
         "heading": "Från offert till installation",
@@ -241,20 +273,6 @@
         "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "bild_och_text_DHxVVF": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Undvik höga elnätsavgifter",
-        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "left",
-        "image_button_text": "Test",
-        "image_button_link": "shopify://pages/vara-solceller",
-        "custom_id": ""
       }
     },
     "kontakt_form_WTeQAb": {
@@ -352,11 +370,10 @@
     "hero_lower_HxUwkQ",
     "bild_och_text_knappar_3iKePW",
     "banner_med_3_produkter_tmN89j",
-    "bild_och_text_HJKBUV",
+    "bild_och_text_knappar_weYcCP",
     "banner_bild_gJDBKA",
     "hur_jEzfNm",
     "avdrag_BEUazc",
-    "bild_och_text_DHxVVF",
     "kontakt_form_WTeQAb"
   ]
 }
