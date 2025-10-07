@@ -27,6 +27,51 @@
         "button_url": "shopify://collections/batteri"
       }
     },
+    "bild_och_text_knappar_3iKePW": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_zrtRPF": {
+          "type": "button",
+          "settings": {
+            "text": "Slipper köpa el",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_FhgFh4": {
+          "type": "button",
+          "settings": {
+            "text": "Minskade elkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_wcFWiw": {
+          "type": "button",
+          "settings": {
+            "text": "Mindre beroende av elnätet",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_zrtRPF",
+        "button_FhgFh4",
+        "button_wcFWiw"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Bli självförsörjande under mars till oktober",
+        "text": "<p>Med ett batterilager kan du lagra överskottsel från dina solceller och använda den när solen gått ner. Det innebär att du kan minska ditt beroende av elnätet och i stort sett vara självförsörjande under mars–oktober. Med ett batteri för villan har du alltid tillgång till din egenproducerade el när den behövs som bäst.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "banner_med_3_produkter_tmN89j": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -34,30 +79,30 @@
           "type": "product_card",
           "settings": {
             "product": "dyness-stack100",
-            "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
+            "title": "Batteri 1",
+            "description": "Lagra din solenergi och slipp köpa el varje månad",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/dyness-stack100"
+            "learn_more_url": "shopify://products/dyness-tower-pro"
           }
         },
         "product_card_acNTbf": {
           "type": "product_card",
           "settings": {
             "product": "batteri-1",
-            "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
+            "title": "Batteri 2",
+            "description": "Lagra din solenergi och slipp köpa el varje månad",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "learn_more_url": "shopify://products/batteri-1"
           }
         },
         "product_card_KmdwjF": {
           "type": "product_card",
           "settings": {
             "product": "dyness-tower-pro",
-            "title": "Laddboxar 3",
-            "description": "Avancerad laddning för professionella behov.",
+            "title": "Batteri 3",
+            "description": "Lagra din solenergi och slipp köpa el varje månad",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "learn_more_url": "shopify://products/dyness-stack100"
           }
         }
       },
@@ -70,129 +115,133 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_11.png",
+        "background_image": "shopify://shop_images/pixii-batteri-3.jpg",
         "overlay_opacity": 30,
-        "header_button_text": "Läs mer",
-        "header_button_url": "",
-        "heading": "Vill du veta mer om solceller?",
+        "header_button_text": "Batterier",
+        "header_button_url": "shopify://collections/batteri",
+        "heading": "Vill du kontakta våra experter på batterier?",
         "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
         "primary_button_text": "Privat",
-        "primary_button_url": "",
+        "primary_button_url": "shopify://pages/support-om-oss",
         "secondary_button_text": "Företag",
-        "secondary_button_url": ""
+        "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
-    "icon_ty3fXr": {
-      "type": "icon",
+    "bild_och_text_knappar_weYcCP": {
+      "type": "bild-och-text-knappar",
       "blocks": {
-        "feature_rbUMVj": {
-          "type": "feature",
+        "button_azQfbf": {
+          "type": "button",
           "settings": {
-            "image": "shopify://shop_images/Hus.svg",
-            "text": "Ökar värdet på dinbostad"
+            "text": "Lägre elkostnader",
+            "url": "",
+            "show_arrow": false
           }
         },
-        "feature_3L3Ank": {
-          "type": "feature",
+        "button_HAdXTH": {
+          "type": "button",
           "settings": {
-            "image": "shopify://shop_images/Blixt.svg",
-            "text": "Sänker dinaelkostnader"
+            "text": "Ökad självförsörjning",
+            "url": "",
+            "show_arrow": false
           }
         },
-        "feature_8hYFnP": {
-          "type": "feature",
+        "button_az3aPw": {
+          "type": "button",
           "settings": {
-            "image": "shopify://shop_images/Ladd.svg",
-            "text": "Låg kostnad för attunderhålla"
-          }
-        },
-        "feature_V6rCt7": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Ladd2.svg",
-            "text": "Ökadsjälvförsörjning"
+            "text": "Skydd mot prisökningar",
+            "url": "",
+            "show_arrow": false
           }
         }
       },
       "block_order": [
-        "feature_rbUMVj",
-        "feature_3L3Ank",
-        "feature_8hYFnP",
-        "feature_V6rCt7"
+        "button_azQfbf",
+        "button_HAdXTH",
+        "button_az3aPw"
       ],
-      "name": "Icon section",
-      "settings": {
-        "heading": "Fördelar med solceller",
-        "description": "<p>Solceller ger dig billig och ren el direkt från solen. Du blir mer självförsörjande, minskar dina elkostnader och skyddar dig mot stigande elpriser. Dessutom ökar de värdet på din fastighet och kräver minimalt underhåll.</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "bild_och_text_HJKBUV": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+      "name": "Bild och text med knappar",
       "settings": {
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "right",
-        "image_button_text": "Test",
-        "image_button_link": "shopify://pages/vara-solceller",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
-    "hur_wwU88T": {
+    "banner_bild_gJDBKA": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/image_16.png",
+        "background_color": "#000000",
+        "overlay_opacity": 25,
+        "header_button_text": "Batterilösningar",
+        "header_button_url": "shopify://pages/vara-batterilosningar",
+        "heading": "Batterilager från 29 900:-",
+        "description": "Lagra din egen solel och använd den när du behöver den. Ett batterilager ger lägre elkostnader och ökad självständighet.",
+        "primary_button_text": "Produkter",
+        "primary_button_url": "shopify://collections/batteri",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "hur_jEzfNm": {
       "type": "hur",
       "blocks": {
-        "step_cdyeXy": {
+        "step_d7i8cP": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/book.svg",
+            "image": "shopify://shop_images/Vector_7.svg",
             "title": "1. Boka tid",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
           }
         },
-        "step_J48fxk": {
+        "step_Q3Lkiy": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/person.svg",
             "title": "2. Träffa oss",
-            "description": "<p>Beskrivande text Kontakta oss idag för ett möte där vi analyserarför steget.</p>"
+            "description": "<p>Våra experter skräddarsyr en lösning och presenterar en offert.</p>"
           }
         },
-        "step_9nP6Cw": {
+        "step_BtBQck": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/install.svg",
+            "image": "shopify://shop_images/Vector.svg",
             "title": "3. Installation",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Vi hanterar allt – från montering till färdig anläggning.</p>"
           }
         },
-        "step_kyRdCf": {
+        "step_pDRYGU": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/radio.svg",
+            "image": "shopify://shop_images/Group.svg",
             "title": "4. Support",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Efter ditt köp finns vi tillgängliga för support!</p>"
           }
         }
       },
       "block_order": [
-        "step_cdyeXy",
-        "step_J48fxk",
-        "step_9nP6Cw",
-        "step_kyRdCf"
+        "step_d7i8cP",
+        "step_Q3Lkiy",
+        "step_BtBQck",
+        "step_pDRYGU"
       ],
+      "disabled": true,
       "name": "How it works",
       "settings": {
-        "heading": "Så här fungerar det",
-        "description": "<p>Lägg till en kort beskrivning här.</p>",
-        "primary_button_text": "Boka tid",
+        "heading": "Från offert till installation",
+        "description": "<p>Hela vår process är enkel när du väljer att köpa och installera batterier med oss!</p>",
+        "primary_button_text": "Boka en tid",
         "primary_button_url": "shopify://pages/offert-forfragan",
-        "secondary_button_text": "Kontakta oss",
-        "secondary_button_url": "shopify://pages/support-om-oss"
+        "secondary_button_text": "",
+        "secondary_button_url": ""
       }
     },
     "avdrag_BEUazc": {
@@ -221,30 +270,96 @@
       "settings": {
         "custom_id": "",
         "heading": "Avdrag för grön teknikt",
-        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
       }
     },
-    "bild_och_text_DHxVVF": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Undvik höga elnätsavgifter",
-        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "left",
-        "image_button_text": "Test",
-        "image_button_link": "shopify://pages/vara-solceller",
-        "custom_id": ""
-      }
-    },
-    "kontakt_form_MHTrzc": {
+    "kontakt_form_WTeQAb": {
       "type": "kontakt-form",
+      "blocks": {
+        "form_field_GNzBkf": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_6CaaLT": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_wnmpTp": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_JAbXM6": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_ELVxeL": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_zWCkAX": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        },
+        "service_option_BNyfAw": {
+          "type": "service_option",
+          "settings": {
+            "label": "Serviceavtal",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_GNzBkf",
+        "form_field_6CaaLT",
+        "form_field_wnmpTp",
+        "form_field_JAbXM6",
+        "service_option_ELVxeL",
+        "service_option_zWCkAX",
+        "service_option_BNyfAw"
+      ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
+        "heading": "Ta kontakt med oss",
         "header_button_text": "",
         "header_button_url": ""
       }
@@ -253,12 +368,12 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
+    "bild_och_text_knappar_3iKePW",
     "banner_med_3_produkter_tmN89j",
-    "icon_ty3fXr",
-    "bild_och_text_HJKBUV",
-    "hur_wwU88T",
+    "bild_och_text_knappar_weYcCP",
+    "banner_bild_gJDBKA",
+    "hur_jEzfNm",
     "avdrag_BEUazc",
-    "bild_och_text_DHxVVF",
-    "kontakt_form_MHTrzc"
+    "kontakt_form_WTeQAb"
   ]
 }

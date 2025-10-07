@@ -21,61 +21,10 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_18.png",
         "overlay_opacity": 20,
-        "heading": "Våra solcellslösningar",
-        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
+        "heading": "Funderar du på att investera i solceller?",
+        "subheading": "Vi hjälper dig hela vägen! Från projektering till färdig installation",
         "button_text": "Våra solceller",
         "button_url": "shopify://collections/solceller"
-      }
-    },
-    "banner_med_3_produkter_HxVFnP": {
-      "type": "banner-med-3-produkter",
-      "blocks": {
-        "product_card_iVqQVd": {
-          "type": "product_card",
-          "settings": {
-            "product": "solceller-1",
-            "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_XciY6V": {
-          "type": "product_card",
-          "settings": {
-            "product": "solceller-1",
-            "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_gaPRNm": {
-          "type": "product_card",
-          "settings": {
-            "product": "solceller-1",
-            "title": "Laddboxar 3",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        }
-      },
-      "block_order": ["product_card_iVqQVd", "product_card_XciY6V", "product_card_gaPRNm"],
-      "name": "Banner med 3 produkter",
-      "settings": {
-        "layout_direction": "products_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_11.png",
-        "overlay_opacity": 30,
-        "header_button_text": "Läs mer",
-        "header_button_url": "",
-        "heading": "Vill du veta mer om solceller?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
-        "primary_button_text": "Privat",
-        "primary_button_url": "",
-        "secondary_button_text": "Företag",
-        "secondary_button_url": ""
       }
     },
     "icon_NDwUyT": {
@@ -85,32 +34,37 @@
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Hus.svg",
-            "text": "Ökar värdet på dinbostad"
+            "text": "Ökar värdet på din bostad"
           }
         },
         "feature_gBje4F": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Blixt.svg",
-            "text": "Sänker dinaelkostnader"
+            "text": "Sänker dina elkostnader"
           }
         },
         "feature_EU9MQV": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Ladd.svg",
-            "text": "Låg kostnad för attunderhålla"
+            "text": "Låga underhållskostnader"
           }
         },
         "feature_pEbKNg": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Ladd2.svg",
-            "text": "Ökadsjälvförsörjning"
+            "text": "Ökad självförsörjning"
           }
         }
       },
-      "block_order": ["feature_YzaeKt", "feature_gBje4F", "feature_EU9MQV", "feature_pEbKNg"],
+      "block_order": [
+        "feature_YzaeKt",
+        "feature_gBje4F",
+        "feature_EU9MQV",
+        "feature_pEbKNg"
+      ],
       "name": "Icon section",
       "settings": {
         "heading": "Fördelar med solceller",
@@ -120,6 +74,61 @@
         "padding_bottom": 40
       }
     },
+    "banner_med_3_produkter_k9TmHH": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_yXAFHr": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddbox 1",
+            "description": "Perfekt för din villa, stuga eller garage",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/solceller-1"
+          }
+        },
+        "product_card_nzfXwq": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddbox 2",
+            "description": "Perfekt för din villa, stuga eller garage",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/solceller-1"
+          }
+        },
+        "product_card_C6rRmK": {
+          "type": "product_card",
+          "settings": {
+            "product": "solceller-1",
+            "title": "Laddboxar 3",
+            "description": "Perfekt för din villa, stuga eller garage",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": "shopify://products/solceller-1"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_yXAFHr",
+        "product_card_nzfXwq",
+        "product_card_C6rRmK"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "products_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/image_11.png",
+        "overlay_opacity": 30,
+        "header_button_text": "Solceller",
+        "header_button_url": "shopify://collections/solceller",
+        "heading": "Vill du kontakta våra experter på solceller?",
+        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "shopify://pages/support-om-oss",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": "shopify://metaobjects/foretag/foretag"
+      }
+    },
     "bild_och_text_fF7gV6": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -127,10 +136,29 @@
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_cwiWWd": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/image_16.png",
+        "background_color": "#000000",
+        "overlay_opacity": 25,
+        "header_button_text": "Batterilösningar",
+        "header_button_url": "shopify://pages/vara-batterilosningar",
+        "heading": "Batterilager från 29 900:-",
+        "description": "Lagra din egen solel och använd den när du behöver den. Ett batterilager ger lägre elkostnader och ökad självständighet.",
+        "primary_button_text": "Läs mer",
+        "primary_button_url": "shopify://pages/vara-batterilosningar",
+        "secondary_button_text": "Produkter",
+        "secondary_button_url": "shopify://collections/laddboxar",
         "custom_id": ""
       }
     },
@@ -140,9 +168,9 @@
         "step_HcbJqz": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/book.svg",
+            "image": "shopify://shop_images/Vector_7.svg",
             "title": "1. Boka tid",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
           }
         },
         "step_TxEikq": {
@@ -150,48 +178,92 @@
           "settings": {
             "image": "shopify://shop_images/person.svg",
             "title": "2. Träffa oss",
-            "description": "<p>Beskrivande text Kontakta oss idag för ett möte där vi analyserarför steget.</p>"
+            "description": "<p>Våra experter skräddarsyr en lösning och presenterar en offert.</p>"
           }
         },
         "step_x9iFjQ": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/install.svg",
+            "image": "shopify://shop_images/Vector.svg",
             "title": "3. Installation",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Vi hanterar allt – från montering till färdig anläggning.</p>"
           }
         },
         "step_cFgBdG": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/radio.svg",
+            "image": "shopify://shop_images/Group.svg",
             "title": "4. Support",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Efter ditt köp finns vi tillgängliga för support!</p>"
+          }
+        },
+        "step_9H7KQG": {
+          "type": "step",
+          "settings": {
+            "title": "Steg titel",
+            "description": "<p>Beskrivande text för steget.</p>"
           }
         }
       },
-      "block_order": ["step_HcbJqz", "step_TxEikq", "step_x9iFjQ", "step_cFgBdG"],
+      "block_order": [
+        "step_HcbJqz",
+        "step_TxEikq",
+        "step_x9iFjQ",
+        "step_cFgBdG",
+        "step_9H7KQG"
+      ],
       "name": "How it works",
       "settings": {
-        "heading": "Så här fungerar det",
-        "description": "<p>Lägg till en kort beskrivning här.</p>",
-        "primary_button_text": "Boka tid",
+        "heading": "Från offert till installation",
+        "description": "<p>Hela vår process är enkel när du väljer att köpa och installera solceller med oss!</p>",
+        "primary_button_text": "Boka en tid",
         "primary_button_url": "shopify://pages/offert-forfragan",
-        "secondary_button_text": "Kontakta oss",
-        "secondary_button_url": "shopify://pages/support-om-oss"
+        "secondary_button_text": "",
+        "secondary_button_url": ""
       }
     },
-    "bild_och_text_fe37pr": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "bild_och_text_knappar_hd7RJH": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_7m9wVQ": {
+          "type": "button",
+          "settings": {
+            "text": "Trygg drift",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_NanPdi": {
+          "type": "button",
+          "settings": {
+            "text": "Lägre driftkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_fjXmVE": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_7m9wVQ",
+        "button_NanPdi",
+        "button_fjXmVE"
+      ],
+      "name": "Bild och text med knappar",
       "settings": {
         "title": "Teckna serviceavtal",
-        "text": "<p>Serviceavtal för trygg och långsiktig drift. Oavsett om din installation är utförd av oss eller av en annan leverantör kan du teckna ett serviceavtal som säkerställer långsiktig trygghet och optimal funktion i ditt system.<br/><br/>När installationsgarantin löper ut erbjuder vi ett extra skydd – särskilt värdefullt för bostadsrättsföreningar, företag och privata fastighetsägare.<br/>Våra flexibla serviceavtal är utformade för att ge dig ökad säkerhet, driftsäkerhet och maximal avkastning på din investering.</p>",
+        "text": "<p>Teckna serviceavtal för trygg och effektiv drift. Oavsett vem som installerat ditt system ger våra avtal långsiktig säkerhet och optimal funktion. När garantin löper ut erbjuder vi extra skydd, särskilt för företag, bostadsrättsföreningar och fastighetsägare. Våra flexibla avtal maximerar både driftsäkerhet och avkastning.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
+        "image": "shopify://shop_images/solceller-section3-img-1920.webp",
         "image_position": "left",
         "image_button_text": "Teckna avtal",
-        "image_button_link": "shopify://pages/contact",
+        "image_button_link": "shopify://pages/offert-forfragan",
         "custom_id": ""
       }
     },
@@ -201,36 +273,70 @@
         "avdrag_item_CwEPVk": {
           "type": "avdrag_item",
           "settings": {
-            "text": "15% avdrag försolcellsinstallationer",
+            "text": "15% avdrag för installation av solceller",
             "image": "shopify://shop_images/Hus.svg"
           }
         },
         "avdrag_item_VTmMVG": {
           "type": "avdrag_item",
           "settings": {
-            "text": "50% avdrag förbatterilagring",
+            "text": "50% avdrag vid köp av batterilagring",
             "image": "shopify://shop_images/Ladd.svg"
           }
         }
       },
-      "block_order": ["avdrag_item_CwEPVk", "avdrag_item_VTmMVG"],
+      "block_order": [
+        "avdrag_item_CwEPVk",
+        "avdrag_item_VTmMVG"
+      ],
       "name": "Avdrag",
       "settings": {
         "custom_id": "",
         "heading": "Avdrag för grön teknikt",
-        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
       }
     },
-    "bild_och_text_k67Awi": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "bild_och_text_knappar_PdkfaH": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_eCrzmD": {
+          "type": "button",
+          "settings": {
+            "text": "Full insyn",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_LtpfGA": {
+          "type": "button",
+          "settings": {
+            "text": "Trygghet",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_VnhgfR": {
+          "type": "button",
+          "settings": {
+            "text": "Enklare framtida service",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_eCrzmD",
+        "button_LtpfGA",
+        "button_VnhgfR"
+      ],
+      "name": "Bild och text med knappar",
       "settings": {
-        "title": "Dokumentation för hela projektet",
-        "text": "<p>För att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
+        "title": "Dokumentation under hela projektet",
+        "text": "<p>TextFör att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/bild_nor.png",
+        "image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
@@ -239,9 +345,89 @@
     },
     "kontakt_form_chLN6N": {
       "type": "kontakt-form",
+      "blocks": {
+        "form_field_PVqaRa": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_LQHnCq": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_Dj3rJM": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_XpFhUy": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_gaYnE3": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_zK7bLV": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        },
+        "service_option_YKEwa6": {
+          "type": "service_option",
+          "settings": {
+            "label": "Serviceavtal",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_PVqaRa",
+        "form_field_LQHnCq",
+        "form_field_Dj3rJM",
+        "form_field_XpFhUy",
+        "service_option_gaYnE3",
+        "service_option_zK7bLV",
+        "service_option_YKEwa6"
+      ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
+        "heading": "Ta kontakt med oss",
         "header_button_text": "",
         "header_button_url": ""
       }
@@ -250,13 +436,14 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "banner_med_3_produkter_HxVFnP",
     "icon_NDwUyT",
+    "banner_med_3_produkter_k9TmHH",
     "bild_och_text_fF7gV6",
+    "banner_bild_cwiWWd",
     "hur_KCyVH6",
-    "bild_och_text_fe37pr",
+    "bild_och_text_knappar_hd7RJH",
     "avdrag_cwFWrR",
-    "bild_och_text_k67Awi",
+    "bild_och_text_knappar_PdkfaH",
     "kontakt_form_chLN6N"
   ]
 }

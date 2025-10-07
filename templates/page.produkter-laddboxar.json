@@ -19,114 +19,103 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_14.png",
+        "background_image": "shopify://shop_images/qyymok2yfx8.webp",
         "overlay_opacity": 20,
-        "heading": "Laddboxar för hemmet",
-        "subheading": "Behöver du ladda bilen hemma? \nVi har laddboxen som passar just ditt hem och din bil.",
+        "heading": "Ladda elbilen hemma - enkelt snabbt och smart",
+        "subheading": "Att installera en elbilsladdare hemma ger dig full kontroll över din laddning – du laddar snabbt, säkert och när det passar dig bäst.",
         "button_text": "Våra laddboxar",
         "button_url": ""
       }
     },
-    "banner_med_3_produkter_iN36dT": {
+    "bild_och_text_knappar_Ya3NQr": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_AtFPKi": {
+          "type": "button",
+          "settings": {
+            "text": "Lägre kostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_rzjbLt": {
+          "type": "button",
+          "settings": {
+            "text": "Tidsbesparing",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_AtFPKi",
+        "button_rzjbLt"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Alltid redo att köra",
+        "text": "<p>Med en egen laddare hemma slipper du onödiga stopp vid laddstationer. Du pluggar enkelt in bilen när du kommer hem, och den laddas medan du sover. På morgonen är bilen fulladdad och redo för dagen – oavsett om du ska till jobbet, hämta barnen eller åka på weekendresa. Bekvämligare än så blir det inte.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/charging_ev.webp",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_med_3_produkter_NwVfdk": {
       "type": "banner-med-3-produkter",
       "blocks": {
-        "product_card_JMzrXX": {
+        "product_card_UD9G6B": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "produkt",
             "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
+            "description": "Laddbox med 3-fas, färdiga för installation",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
         },
-        "product_card_GiXHfA": {
+        "product_card_AertQY": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "produkt",
             "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
+            "description": "Laddbox med 3-fas, färdiga för installation",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
         },
-        "product_card_Jgx9FK": {
+        "product_card_JERkdE": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "produkt",
             "title": "Laddboxar 3",
-            "description": "Avancerad laddning för professionella behov.",
+            "description": "Laddbox med 3-fas, färdiga för installation",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
         }
       },
       "block_order": [
-        "product_card_JMzrXX",
-        "product_card_GiXHfA",
-        "product_card_Jgx9FK"
+        "product_card_UD9G6B",
+        "product_card_AertQY",
+        "product_card_JERkdE"
       ],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_11.png",
+        "background_image": "shopify://shop_images/image_14.png",
         "overlay_opacity": 30,
-        "header_button_text": "Läs mer",
-        "header_button_url": "",
-        "heading": "Vill du veta mer om solceller?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
-        "primary_button_text": "Privat",
-        "primary_button_url": "",
-        "secondary_button_text": "Företag",
+        "header_button_text": "Laddoxar",
+        "header_button_url": "shopify://collections/laddboxar",
+        "heading": "Upptäck vårt utbud av laddboxar",
+        "description": "Vi har garanterat en laddbox som passar både ditt hem och bilen perfekt!",
+        "primary_button_text": "Våra laddboxar",
+        "primary_button_url": "shopify://collections/laddboxar",
+        "secondary_button_text": "",
         "secondary_button_url": ""
-      }
-    },
-    "icon_RN8CC6": {
-      "type": "icon",
-      "blocks": {
-        "feature_PyHkAP": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Hus.svg",
-            "text": "Ökar värdet på din bostad"
-          }
-        },
-        "feature_7rQTpL": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Blixt.svg",
-            "text": "Sänker dina elkostnader"
-          }
-        },
-        "feature_WeR6dU": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Ladd.svg",
-            "text": "Låg kostnad för att underhålla"
-          }
-        },
-        "feature_EqQaKA": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Ladd2.svg",
-            "text": "Ökad självförsörjning"
-          }
-        }
-      },
-      "block_order": [
-        "feature_PyHkAP",
-        "feature_7rQTpL",
-        "feature_WeR6dU",
-        "feature_EqQaKA"
-      ],
-      "name": "Icon section",
-      "settings": {
-        "heading": "Fördelar med solceller",
-        "description": "<p>Solceller ger dig billig och ren el direkt från solen. Du blir mer självförsörjande, minskar dina elkostnader och skyddar dig mot stigande elpriser. Dessutom ökar de värdet på din fastighet och kräver minimalt underhåll.</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "bild_och_text_3Kjt7B": {
@@ -156,14 +145,104 @@
         "image_button_link": "shopify://products/solceller-1",
         "custom_id": ""
       }
+    },
+    "kontakt_form_MEdRdB": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_7LpkGt": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_YM9MR8": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_tJhNbF": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_6ximdV": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_3aCw3e": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_UD6agY": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        },
+        "service_option_zAdVtf": {
+          "type": "service_option",
+          "settings": {
+            "label": "Frågor",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_7LpkGt",
+        "form_field_YM9MR8",
+        "form_field_tJhNbF",
+        "form_field_6ximdV",
+        "service_option_3aCw3e",
+        "service_option_UD6agY",
+        "service_option_zAdVtf"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta kontakt med oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_UadDG8",
-    "banner_med_3_produkter_iN36dT",
-    "icon_RN8CC6",
+    "bild_och_text_knappar_Ya3NQr",
+    "banner_med_3_produkter_NwVfdk",
     "bild_och_text_3Kjt7B",
-    "bild_och_text_G3CaL6"
+    "bild_och_text_G3CaL6",
+    "kontakt_form_MEdRdB"
   ]
 }

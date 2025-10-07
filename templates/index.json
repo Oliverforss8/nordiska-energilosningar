@@ -141,10 +141,10 @@
         "header_button_url": "shopify://pages/vara-batterilosningar",
         "heading": "Batterilager från 29 900:-",
         "description": "Lagra din egen solel och använd den när du behöver den. Ett batterilager ger lägre elkostnader och ökad självständighet.",
-        "primary_button_text": "Produkter",
-        "primary_button_url": "shopify://collections/batteri",
-        "secondary_button_text": "Läs mer",
-        "secondary_button_url": "shopify://pages/vara-batterilosningar",
+        "primary_button_text": "Läs mer",
+        "primary_button_url": "shopify://pages/vara-batterilosningar",
+        "secondary_button_text": "Produkter",
+        "secondary_button_url": "shopify://collections/laddboxar",
         "custom_id": ""
       }
     },
