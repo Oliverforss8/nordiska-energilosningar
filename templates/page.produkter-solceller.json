@@ -299,7 +299,7 @@
         "button_LtpfGA": {
           "type": "button",
           "settings": {
-            "text": "Kvalitetssäkring",
+            "text": "Trygghet",
             "url": "",
             "show_arrow": false
           }
@@ -320,8 +320,8 @@
       ],
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
+        "title": "Dokumentation under hela projektet",
+        "text": "<p>TextFör att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
         "media_type": "image",
         "image_position": "right",
         "image_button_text": "",
