@@ -138,7 +138,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Solceller blir ett krav från år 2026 enligt nya EU-direktiv",
-            "button_text": "Nytt krav",
+            "button_text": "EU-krav",
             "description": "",
             "answer": "<p><strong>De nya EU-direktiven innebär:</strong><br/><br/></p><ul><li>Från 2026 måste alla nya kommersiella och offentliga byggnader ha integrerade solceller för ökad förnybar energi och minskad klimatpåverkan.<br/><br/></li><li>Från 2027 omfattas även befintliga kommersiella och offentliga fastigheter som genomgår renovering, förutsatt att solcellsinstallation är tekniskt möjlig.<br/><br/></li><li>År 2029 omfattar kravet även befintliga offentliga och kommersiella byggnader.</li></ul>"
           }
@@ -147,7 +147,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Skydd mot effekttariffer",
-            "button_text": "Skydd",
+            "button_text": "Ekonomi",
             "description": "",
             "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning.<br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
           }
@@ -368,6 +368,71 @@
         "custom_id": ""
       }
     },
+    "faq_produkt_EJBe43": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_wfXyz6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Högre fastighetsvärde",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p><strong>Gör fastigheten mer attraktiv för kunder och köpare</strong><br/><br/>Fastigheter med elbilsladdare blir allt mer efterfrågade då behovet av laddmöjligheter ökar i takt med elbilsutvecklingen. Att investera i laddinfrastruktur gör inte bara fastigheten mer konkurrenskraftig på marknaden, utan kan också bidra till högre hyresintäkter och en bättre uthyrningsgrad. Samtidigt skapar företaget en modern och hållbar arbetsplats som stödjer grön mobilitet och framtidssäkrar verksamheten inför kommande krav och behov.</p>"
+          }
+        },
+        "faq_item_PzKenf": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Framtidssäkra företaget",
+            "button_text": "Framtid",
+            "description": "",
+            "answer": "<p><strong>Undvik dyra efterinstallationer genom att agera i tid.</strong><br/><br/>Laddinfrastruktur blir allt mer en standard snarare än en lyx, och med nya lagkrav och ökad efterfrågan på elbilsladdning är det klokt att agera tidigt. Genom att installera laddboxar nu slipper företag dyra efterinstallationer och kan säkerställa att de uppfyller kommande krav. Detta gör verksamheten mer flexibel och redo för framtidens mobilitet.</p>"
+          }
+        },
+        "faq_item_WNt3nA": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Företag får lägre energikostnader",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p>Genom att kombinera solceller med batterilagring kan er verksamhet både producera sin egen el och kapa effekttoppar, vilket minskar elkostnaderna avsevärt. Detta ger en mer hållbar och kostnadseffektiv energiförsörjning samtidigt som beroendet av elnätet minskar.</p>"
+          }
+        },
+        "faq_item_VQ4xNh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Lägre drivmedelskostnader - billigare än fossila bränslen",
+            "button_text": "Drivmedel",
+            "description": "",
+            "answer": "<p><strong>Minska kostnaderna för tjänstebilar och fordonsflottan</strong><br/><br/>Att ladda elbilar är betydligt billigare än att tanka bensin eller diesel. Företag med en eldriven fordonsflotta kan sänka sina bränslekostnader avsevärt genom att investera i egna laddstationer och undvika dyra publika laddplatser.</p>"
+          }
+        },
+        "faq_item_PBBr68": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Från 2025 är laddstolpar obligatoriska",
+            "button_text": "EU-krav",
+            "description": "",
+            "answer": "<p><strong>Optimera elkostnader med batterilagring</strong><br/><br/>Genom att utnyttja prisvariationer på elmarknaden kan företag med batterilagring köpa el när priserna är låga och använda eller sälja den när priserna är höga. Detta kallas arbitrage och möjliggör direkta kostnadsbesparingar och intäktsmöjligheter.<br/><br/>Batterilagring ger flexibilitet att anpassa energiförbrukningen efter elmarknadens svängningar och minskar beroendet av dyra elpriser under högbelastningstimmar. Lösningen är särskilt lönsam för verksamheter med hög energiförbrukning och dynamiska energibehov. Dessutom kan den kombineras med egen elproduktion för ytterligare ekonomiska och miljömässiga fördelar.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_wfXyz6",
+        "faq_item_PzKenf",
+        "faq_item_WNt3nA",
+        "faq_item_VQ4xNh",
+        "faq_item_PBBr68"
+      ],
+      "name": "FAQ produkter",
+      "settings": {
+        "title": "Laddboxar till företag",
+        "description": "<p>Har ditt företag redan solceller eller planerar att installera det? Då är det viktigt att veta hur ni kan optimera din solenergi med batterier</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "banner_bild_ErcDiP": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -397,6 +462,7 @@
     "bild_och_text_knappar_T6tiXq",
     "faq_produkt_fD68te",
     "bild_och_text_knappar_UM7UeR",
+    "faq_produkt_EJBe43",
     "banner_bild_ErcDiP"
   ]
 }
