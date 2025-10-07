@@ -31,7 +31,7 @@
           "settings": {
             "heading": "Företag",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://pages/vara-solceller"
+            "link": "shopify://metaobjects/foretag/foretag"
           }
         },
         "card_67XLE3": {
@@ -39,7 +39,7 @@
           "settings": {
             "heading": "BRF",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://pages/vara-batterilosningar"
+            "link": "shopify://metaobjects/foretag/bostadsrattsforening"
           }
         },
         "card_Ype6Wd": {
@@ -47,7 +47,7 @@
           "settings": {
             "heading": "Lantbruk",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://pages/vara-laddboxar"
+            "link": "shopify://metaobjects/foretag/lantbruk"
           }
         }
       },
