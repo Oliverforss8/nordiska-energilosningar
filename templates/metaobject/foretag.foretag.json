@@ -35,10 +35,66 @@
         "image_button_link": "",
         "custom_id": ""
       }
+    },
+    "banner_med_lankar_agkbJm": {
+      "type": "banner-med-lankar",
+      "blocks": {
+        "card_BwHac7": {
+          "type": "card",
+          "settings": {
+            "heading": "Solceller",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_3i3xAJ": {
+          "type": "card",
+          "settings": {
+            "heading": "Batterier",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_gfAVUq": {
+          "type": "card",
+          "settings": {
+            "heading": "Laddboxar",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "card_BwHac7",
+        "card_3i3xAJ",
+        "card_gfAVUq"
+      ],
+      "name": "Banner med länkar",
+      "settings": {
+        "background_color": "#171717",
+        "background_image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "header_button_text": "Energieffektivisering",
+        "header_button_url": "",
+        "heading": "Vi är experter på helhetslösningar inom energieffektivisering",
+        "description": "Vi hjälper företag att optimera sin energianvändning. Med vår expertis skapar vi hållbara och kostnadseffektiva lösningar som minskar driftkostnader och ökar lönsamheten.",
+        "primary_button_text": "Be om offert",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
     "hero_lower_i4AUcN",
-    "bild_och_text_4tzeq9"
+    "bild_och_text_4tzeq9",
+    "banner_med_lankar_agkbJm"
   ]
 }
