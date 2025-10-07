@@ -240,11 +240,91 @@
         "custom_id": ""
       }
     },
-    "kontakt_form_MHTrzc": {
+    "kontakt_form_WTeQAb": {
       "type": "kontakt-form",
+      "blocks": {
+        "form_field_GNzBkf": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_6CaaLT": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_wnmpTp": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_JAbXM6": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_ELVxeL": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_zWCkAX": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        },
+        "service_option_BNyfAw": {
+          "type": "service_option",
+          "settings": {
+            "label": "Serviceavtal",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_GNzBkf",
+        "form_field_6CaaLT",
+        "form_field_wnmpTp",
+        "form_field_JAbXM6",
+        "service_option_ELVxeL",
+        "service_option_zWCkAX",
+        "service_option_BNyfAw"
+      ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
+        "heading": "Ta kontakt med oss",
         "header_button_text": "",
         "header_button_url": ""
       }
@@ -259,6 +339,6 @@
     "hur_wwU88T",
     "avdrag_BEUazc",
     "bild_och_text_DHxVVF",
-    "kontakt_form_MHTrzc"
+    "kontakt_form_WTeQAb"
   ]
 }
