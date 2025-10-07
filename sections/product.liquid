@@ -53,8 +53,6 @@
           {% endif %}
         </div>
 
-        
-
         {% if product.media.size > 1 %}
           <div class="flex gap-3 overflow-x-auto pb-2">
             {% for media in product.media offset: 1 limit: 4 %}
@@ -98,10 +96,14 @@
                       {% endfor %}
                     </div>
                     {% if block.settings.review_text != blank %}
-                      <div class="body1 mb-[6px] text-[14px] text-[#171717]/80">“{{ block.settings.review_text }}”</div>
+                      <div class="body1 mb-[6px] text-[14px] text-[#171717]/80">
+                        “{{ block.settings.review_text }}”
+                      </div>
                     {% endif %}
                     {% if block.settings.customer_name != blank %}
-                      <div class="body1 text-[14px] text-[#171717]">- {{ block.settings.customer_name }}</div>
+                      <div class="body1 text-[14px] text-[#171717]">
+                        - {{ block.settings.customer_name }}
+                      </div>
                     {% endif %}
                   </div>
               {% endcase %}
