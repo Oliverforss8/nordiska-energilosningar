@@ -181,6 +181,86 @@
     },
     "kontakt_form_CfQrPU": {
       "type": "kontakt-form",
+      "blocks": {
+        "form_field_gBzGPY": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_UdJG3Q": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_HY6kMk": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_hfqq4t": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_RtzDfq": {
+          "type": "service_option",
+          "settings": {
+            "label": "Frågor",
+            "service_key": ""
+          }
+        },
+        "service_option_UGntXX": {
+          "type": "service_option",
+          "settings": {
+            "label": "Offert",
+            "service_key": ""
+          }
+        },
+        "service_option_Qa9bmP": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_gBzGPY",
+        "form_field_UdJG3Q",
+        "form_field_HY6kMk",
+        "form_field_hfqq4t",
+        "service_option_RtzDfq",
+        "service_option_UGntXX",
+        "service_option_Qa9bmP"
+      ],
       "name": "Contact Form",
       "settings": {
         "heading": "Kontakta oss",
