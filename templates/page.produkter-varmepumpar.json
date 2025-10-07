@@ -19,22 +19,25 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_7.png",
-        "overlay_opacity": 20,
-        "heading": "Våra värmepumpar",
-        "subheading": "Discover amazing products and services",
-        "button_text": "Våra energilösningar",
+        "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
+        "overlay_opacity": 30,
+        "heading": "Våra värmepumpslöningar",
+        "subheading": "Överväger du att installera värmepump?\nVi tar hand om hela processen från planering till driftsatt anläggning!",
+        "button_text": "Våra värmepumpar",
         "button_url": ""
       }
     },
-    "text_sektion_Up6yBe": {
-      "type": "text-sektion",
-      "name": "Text sektion",
+    "bild_och_text_knappar_gVCNFB": {
+      "type": "bild-och-text-knappar",
+      "name": "Bild och text med knappar",
       "settings": {
         "title": "Varför installera värmepump?",
-        "text": "<p>Nordiska Energilösningar är stolt installationspartner till Affärsverken i Karlskrona. Tillsammans levererar vi framtidens energilösningar i regionen. Genom vårt partnerskap omvandlar vi solens strålar till ren, förnybar energi som minskar koldioxidutsläppen och stärker energieffektiviteten – för både företag och hushåll.<br/><br/>Nordiska Energilösningar och Affärsverken bidrar gemensamt till att stärka Karlskronas energiinfrastruktur och skapa förutsättningar för långsiktig regional utveckling. Samarbetet är ett tydligt exempel på hur lokala aktörer tillsammans kan driva klimatomställningen framåt mot en fossilfri framtid.</p>",
-        "button_text": "Be om en offert",
-        "button_link": "shopify://pages/vara-varmepumpar",
+        "text": "<p>Nordiska Energilösningar är stolt installationspartner till Affärsverken i Karlskrona. Tillsammans levererar vi framtidens energilösningar och omvandlar solens strålar till ren, förnybar energi som minskar utsläpp och ökar effektiviteten. Samarbetet stärker Karlskronas energiinfrastruktur och driver regionen mot en fossilfri framtid.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Aero-innedel_miljo_koncept2024.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
@@ -158,7 +161,7 @@
   "order": [
     "main",
     "hero_lower_FNPfHG",
-    "text_sektion_Up6yBe",
+    "bild_och_text_knappar_gVCNFB",
     "banner_med_3_produkter_JdJbDT",
     "hur_ED7Umq",
     "kontakt_form_CfQrPU"
