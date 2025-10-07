@@ -9,16 +9,16 @@
  */
 {
   "sections": {
-    "hero_fRPaYi": {
-      "type": "hero",
-      "name": "Hero",
+    "hero_lower_6X9dhE": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
+        "background_image": "shopify://shop_images/images.webp",
         "overlay_opacity": 20,
-        "heading": "Välkommen till vår webbplats",
-        "subheading": "Upptäck fantastiska produkter och tjänster",
-        "button_text": "Våra energilösningar",
+        "heading": "Minska elkostnaderna och stärk föreningens framtid",
+        "subheading": "Att installera energilösningar är inte bara ett sätt att sänka elräkningen – det är ett strategiskt beslut som gör föreningen mer ekonomiskt stabil, energismart och framtidsorienterad.",
+        "button_text": "Be om offert",
         "button_url": ""
       }
     },
@@ -60,7 +60,7 @@
     }
   },
   "order": [
-    "hero_fRPaYi",
+    "hero_lower_6X9dhE",
     "lankar_tGAxqY"
   ]
 }
