@@ -79,11 +79,25 @@
         "card_3_overlay_opacity": 0,
         "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
       }
+    },
+    "bild_och_text_PUEpYf": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Vi är experter på storskaliga lösningar",
+        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "hero_L9AzVL",
     "lankar_tGAxqY",
-    "3_grid_GT9efL"
+    "3_grid_GT9efL",
+    "bild_och_text_PUEpYf"
   ]
 }
