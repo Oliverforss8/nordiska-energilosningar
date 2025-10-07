@@ -118,6 +118,37 @@
         "secondary_button_url": ""
       }
     },
+    "avdrag_47f9Td": {
+      "type": "avdrag",
+      "blocks": {
+        "avdrag_item_7PLgzk": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag för köp av laddbox",
+            "image": "shopify://shop_images/Ladd2.svg"
+          }
+        },
+        "avdrag_item_ihprFL": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag vid installation",
+            "image": "shopify://shop_images/Vector.svg"
+          }
+        }
+      },
+      "block_order": [
+        "avdrag_item_7PLgzk",
+        "avdrag_item_ihprFL"
+      ],
+      "name": "Avdrag",
+      "settings": {
+        "custom_id": "",
+        "heading": "Avdrag för grön teknikt",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "bild_och_text_3Kjt7B": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -241,6 +272,7 @@
     "hero_lower_UadDG8",
     "bild_och_text_knappar_Ya3NQr",
     "banner_med_3_produkter_NwVfdk",
+    "avdrag_47f9Td",
     "bild_och_text_3Kjt7B",
     "bild_och_text_G3CaL6",
     "kontakt_form_MEdRdB"
