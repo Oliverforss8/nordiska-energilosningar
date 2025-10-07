@@ -283,7 +283,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Optimera energikostnaderna tillsammans med solceller",
-            "button_text": "Minskade kostander",
+            "button_text": "Ekonomi",
             "description": "",
             "answer": "<p>Genom att kombinera solceller med batterilagring kan er verksamhet både producera sin egen el och kapa effekttoppar, vilket minskar elkostnaderna avsevärt. Detta ger en mer hållbar och kostnadseffektiv energiförsörjning samtidigt som beroendet av elnätet minskar.</p>"
           }
