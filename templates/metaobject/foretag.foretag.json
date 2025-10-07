@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_lower_i4AUcN": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/image_12.png",
+        "overlay_opacity": 20,
+        "heading": "Maximera företagets lönsamhet med solceller",
+        "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för ert företag.",
+        "button_text": "Be om offert",
+        "button_url": ""
+      }
+    },
+    "bild_och_text_4tzeq9": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Solceller för företag",
+        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "hero_lower_i4AUcN",
+    "bild_och_text_4tzeq9"
+  ]
+}
