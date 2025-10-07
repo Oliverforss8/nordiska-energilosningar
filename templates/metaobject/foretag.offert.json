@@ -60,18 +60,26 @@
             "rows": 4
           }
         },
-        "service_option_RrpJ9b": {
-          "type": "service_option",
-          "settings": {
-            "label": "Lantbruk",
-            "service_key": "",
-            "icon_svg": ""
-          }
-        },
         "service_option_MW9Egf": {
           "type": "service_option",
           "settings": {
             "label": "Företag",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        },
+        "service_option_3gm48i": {
+          "type": "service_option",
+          "settings": {
+            "label": "Bostadsrättförening",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        },
+        "service_option_RrpJ9b": {
+          "type": "service_option",
+          "settings": {
+            "label": "Lantbruk",
             "service_key": "",
             "icon_svg": ""
           }
@@ -82,8 +90,9 @@
         "form_field_TLi6yU",
         "form_field_yRQYXh",
         "form_field_Dy63fQ",
-        "service_option_RrpJ9b",
-        "service_option_MW9Egf"
+        "service_option_MW9Egf",
+        "service_option_3gm48i",
+        "service_option_RrpJ9b"
       ],
       "name": "Offertförfrågan",
       "settings": {
