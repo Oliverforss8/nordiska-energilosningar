@@ -205,10 +205,28 @@
             "url": "",
             "show_arrow": false
           }
+        },
+        "button_NanPdi": {
+          "type": "button",
+          "settings": {
+            "text": "Lägre driftkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_fjXmVE": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
         }
       },
       "block_order": [
-        "button_7m9wVQ"
+        "button_7m9wVQ",
+        "button_NanPdi",
+        "button_fjXmVE"
       ],
       "name": "Bild och text med knappar",
       "settings": {
