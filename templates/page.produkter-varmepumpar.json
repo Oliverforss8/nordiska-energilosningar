@@ -20,10 +20,10 @@
       "settings": {
         "media_type": "image",
         "background_image": "shopify://shop_images/image_7.png",
-        "overlay_opacity": 20,
-        "heading": "Våra värmepumpar",
+        "overlay_opacity": 30,
+        "heading": "Våra värmepumpslöningar",
         "subheading": "Discover amazing products and services",
-        "button_text": "Våra energilösningar",
+        "button_text": "Våra värmepumpar",
         "button_url": ""
       }
     },
