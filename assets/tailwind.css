@@ -380,6 +380,14 @@
   margin-bottom: 16px
 }
 
+.mb-\[24px\] {
+  margin-bottom: 24px
+}
+
+.mt-auto {
+  margin-top: auto
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -542,6 +550,10 @@
   height: 3rem
 }
 
+.h-16 {
+  height: 4rem
+}
+
 .max-h-0 {
   max-height: 0px
 }
@@ -620,6 +632,10 @@
 
 .w-12 {
   width: 3rem
+}
+
+.w-16 {
+  width: 4rem
 }
 
 .max-w-7xl {
@@ -2344,6 +2360,10 @@
 
   .md\:text-\[28px\] {
     font-size: 28px
+  }
+
+  .md\:text-\[22px\] {
+    font-size: 22px
   }
 }
 
