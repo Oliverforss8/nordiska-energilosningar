@@ -87,6 +87,42 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
+      // Update price summary section
+      const comparePriceSummary = document.getElementById('compare-price-summary');
+      const currentPriceSummary = document.getElementById('current-price-summary');
+
+      if (comparePriceSummary) {
+        if (
+          selectedVariant.compare_at_price &&
+          selectedVariant.compare_at_price > selectedVariant.price
+        ) {
+          comparePriceSummary.textContent = new Intl.NumberFormat('sv-SE', {
+            style: 'currency',
+            currency: 'SEK',
+          }).format(selectedVariant.compare_at_price / 100);
+          comparePriceSummary.style.display = 'inline';
+        } else {
+          comparePriceSummary.style.display = 'none';
+        }
+      }
+
+      if (currentPriceSummary) {
+        currentPriceSummary.textContent = new Intl.NumberFormat('sv-SE', {
+          style: 'currency',
+          currency: 'SEK',
+        }).format(selectedVariant.price / 100);
+      }
+
+      // Update discounted price display if it exists
+      const discountedPriceDisplay = document.getElementById('discounted-price-display');
+      const discountedPrice = document.getElementById('discounted-price');
+      if (discountedPriceDisplay && discountedPrice) {
+        discountedPrice.textContent = new Intl.NumberFormat('sv-SE', {
+          style: 'currency',
+          currency: 'SEK',
+        }).format(selectedVariant.price / 100);
+      }
+
       // Update URL
       const newUrl = new URL(window.location.href);
       newUrl.searchParams.set('variant', selectedVariant.id);
@@ -167,6 +203,13 @@ document.addEventListener('DOMContentLoaded', function () {
     installationCheckbox.addEventListener('change', function () {
       if (this.checked) {
         greenDeductionWrapper.style.display = 'block';
+        // Auto-select first green deduction option if none selected
+        const anySelected = document.querySelector('.green-deduction-radio:checked');
+        const firstOption = document.getElementById('green-deduction-1');
+        if (!anySelected && firstOption) {
+          firstOption.checked = true;
+          firstOption.dispatchEvent(new Event('change', { bubbles: true }));
+        }
       } else {
         greenDeductionWrapper.style.display = 'none';
         // Uncheck any selected green deduction option
@@ -176,6 +219,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
     });
+
+    // If installation starts checked, ensure a default green deduction is selected
+    if (installationCheckbox.checked) {
+      const anySelected = document.querySelector('.green-deduction-radio:checked');
+      const firstOption = document.getElementById('green-deduction-1');
+      if (!anySelected && firstOption) {
+        firstOption.checked = true;
+        firstOption.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    }
   }
 
   // Function to get selected discount code (supports radios and checkboxes)
@@ -347,6 +400,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    // Update all other price displays on the page
+    updateAllPriceDisplays(totalPrice, showDiscount, finalPrice);
+
     // Update discount display
     if (showDiscount) {
       console.log('✅ Showing discount display');
@@ -362,12 +418,153 @@ document.addEventListener('DOMContentLoaded', function () {
       afterDiscount.style.display = 'none';
     }
 
-    // Update button data attributes
+    // Update button data attributes and styling
     const addToCartBtnBottom = document.querySelector('.add-to-cart-btn-bottom');
 
     if (addToCartBtnBottom) {
       addToCartBtnBottom.setAttribute('data-variant-id', selectedVariant.id);
+
+      // Update button color and border based on discount state
+      if (showDiscount) {
+        addToCartBtnBottom.style.color = '#3e753e';
+        addToCartBtnBottom.style.border = '1px solid #3e753e !important';
+      } else {
+        addToCartBtnBottom.style.color = '#171717';
+        addToCartBtnBottom.style.border = '1px solid #171717 !important';
+      }
     }
+  }
+
+  // Function to update all price displays on the page
+  function updateAllPriceDisplays(totalPrice, showDiscount, finalPrice) {
+    // Update main product price display - NO discount effects on main price
+    const currentPriceDisplay = document.getElementById('current-price');
+    if (currentPriceDisplay) {
+      const selectedVariant = findMatchingVariant();
+      if (selectedVariant) {
+        const variantPrice = selectedVariant.price * getSelectedQuantity();
+        currentPriceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
+          style: 'currency',
+          currency: 'SEK',
+        }).format(variantPrice / 100);
+        // Never apply strikethrough to main product price
+        currentPriceDisplay.classList.remove('strikethrough');
+      }
+    }
+
+    // Apply discount effects ONLY to upsell prices
+    const upsellPrices = document.querySelectorAll('.upsell-price');
+    upsellPrices.forEach((priceElement) => {
+      if (showDiscount) {
+        // Only apply discount if not already applied
+        if (!priceElement.classList.contains('discount-applied')) {
+          priceElement.classList.add('strikethrough', 'discount-applied');
+          // Calculate discounted upsell price
+          const upsellCheckbox = document.querySelector(
+            `[data-product-id="${priceElement.dataset.productId}"]`
+          );
+          if (upsellCheckbox) {
+            const originalPrice = parseInt(upsellCheckbox.dataset.price);
+            const discountRate = 0.5551; // 55.51%
+            const discountedPrice = originalPrice * (1 - discountRate);
+
+            // Get original text from stored data or clean textContent
+            const originalText = priceElement.dataset.originalText || priceElement.textContent;
+            const discountedText =
+              '+' +
+              new Intl.NumberFormat('sv-SE', {
+                style: 'currency',
+                currency: 'SEK',
+              }).format(discountedPrice / 100);
+
+            // Store original text for restoration
+            if (!priceElement.dataset.originalText) {
+              priceElement.dataset.originalText = originalText;
+            }
+
+            priceElement.innerHTML = `
+              <span class="line-through">${originalText}</span>
+              <span class="ml-3" style="color: #3e753e;">${discountedText}</span>
+            `;
+          }
+        }
+      } else {
+        priceElement.classList.remove('strikethrough', 'discount-applied');
+        // Restore original upsell price display - clean up any existing HTML
+        const upsellCheckbox = document.querySelector(
+          `[data-product-id="${priceElement.dataset.productId}"]`
+        );
+        if (upsellCheckbox) {
+          const price = upsellCheckbox.dataset.price;
+          // Clear any existing HTML and set clean text content
+          priceElement.innerHTML = '';
+          priceElement.textContent =
+            '+' +
+            new Intl.NumberFormat('sv-SE', {
+              style: 'currency',
+              currency: 'SEK',
+            }).format(price / 100);
+          // Clear stored original text
+          delete priceElement.dataset.originalText;
+        }
+      }
+    });
+
+    // Apply discount effects ONLY to installation price
+    const installationPriceElements = document.querySelectorAll('.installation-card .headline1');
+    installationPriceElements.forEach((element) => {
+      if (element.textContent.includes('+') && element.textContent.includes('kr')) {
+        if (showDiscount) {
+          // Only apply discount if not already applied
+          if (!element.classList.contains('discount-applied')) {
+            element.classList.add('strikethrough', 'discount-applied');
+            // Calculate discounted installation price
+            const installationCheckbox = document.getElementById('installation-checkbox');
+            if (installationCheckbox) {
+              const originalPrice = parseInt(installationCheckbox.dataset.price);
+              const discountRate = 0.5551; // 55.51%
+              const discountedPrice = originalPrice * (1 - discountRate);
+
+              // Get original text from stored data or clean textContent
+              const originalText = element.dataset.originalText || element.textContent;
+              const discountedText =
+                '+' +
+                new Intl.NumberFormat('sv-SE', {
+                  style: 'currency',
+                  currency: 'SEK',
+                }).format(discountedPrice / 100);
+
+              // Store original text for restoration
+              if (!element.dataset.originalText) {
+                element.dataset.originalText = originalText;
+              }
+
+              element.innerHTML = `
+                <span class="line-through">${originalText}</span>
+                <span class="ml-3" style="color: #3e753e;">${discountedText}</span>
+              `;
+            }
+          }
+        } else {
+          element.classList.remove('strikethrough', 'discount-applied');
+          // Restore original installation price display - clean up any existing HTML
+          const installationCheckbox = document.getElementById('installation-checkbox');
+          if (installationCheckbox) {
+            const price = installationCheckbox.dataset.price;
+            // Clear any existing HTML and set clean text content
+            element.innerHTML = '';
+            element.textContent =
+              '+' +
+              new Intl.NumberFormat('sv-SE', {
+                style: 'currency',
+                currency: 'SEK',
+              }).format(price / 100);
+            // Clear stored original text
+            delete element.dataset.originalText;
+          }
+        }
+      }
+    });
   }
 
   // Function to show/hide price bar based on scroll position
@@ -395,6 +592,9 @@ document.addEventListener('DOMContentLoaded', function () {
       fixedPriceBar.classList.add('visible');
     }
   }, 1000);
+
+  // Ensure initial visibility evaluation runs once on load
+  togglePriceBarVisibility();
 
   // Initial update and event listeners
   updateFixedPriceBar();
@@ -662,6 +862,76 @@ document.addEventListener('DOMContentLoaded', function () {
 
   addToCartButtons.forEach((button) => {
     button.addEventListener('click', handleAddToCart(button));
+  });
+
+  // Upsell variant selection handling: update displayed price and checkbox data
+  function formatCurrencySEK(amountInCents) {
+    return new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' }).format(
+      amountInCents / 100
+    );
+  }
+
+  document.querySelectorAll('.upsell-variant-select').forEach((select) => {
+    select.addEventListener('change', function () {
+      const productId = this.dataset.productId;
+      const selectedOption = this.options[this.selectedIndex];
+      const newVariantId = selectedOption.value;
+      const newPrice = parseInt(selectedOption.dataset.price || '0', 10);
+
+      console.log('🔄 Upsell variant changed:', {
+        productId,
+        newVariantId,
+        newPrice: newPrice / 100,
+      });
+
+      // Update the upsell price text for this product
+      const priceEl = document.querySelector('.upsell-price[data-product-id="' + productId + '"]');
+      if (priceEl) {
+        // Clear any existing discount state and restore original price
+        priceEl.classList.remove('strikethrough', 'discount-applied');
+        priceEl.innerHTML = '';
+        delete priceEl.dataset.originalText;
+
+        priceEl.textContent = '+' + formatCurrencySEK(newPrice);
+        console.log('✅ Updated upsell price display:', priceEl.textContent);
+
+        // If discount is currently active, reapply discount effects to the new price
+        const discountCheckbox = document.getElementById('green-deduction-checkbox');
+        if (discountCheckbox && discountCheckbox.checked) {
+          // Reapply discount logic for the new variant price
+          const discountRate = 0.5551; // 55.51%
+          const discountedPrice = newPrice * (1 - discountRate);
+
+          const originalText = priceEl.textContent;
+          const discountedText = '+' + formatCurrencySEK(discountedPrice);
+
+          // Store original text and apply discount
+          priceEl.dataset.originalText = originalText;
+          priceEl.classList.add('strikethrough', 'discount-applied');
+          priceEl.innerHTML = `
+            <span class="line-through">${originalText}</span>
+            <span class="ml-3" style="color: #3e753e;">${discountedText}</span>
+          `;
+          console.log('✅ Reapplied discount to new variant:', discountedText);
+        }
+      }
+
+      // Update the corresponding checkbox data attributes used for totals
+      const checkbox = document.querySelector(
+        '.upsell-checkbox[data-product-id="' + productId + '"]'
+      );
+      if (checkbox) {
+        checkbox.setAttribute('data-variant-id', newVariantId);
+        checkbox.setAttribute('data-price', String(newPrice));
+        console.log('✅ Updated checkbox data attributes:', {
+          variantId: newVariantId,
+          price: newPrice,
+        });
+      }
+
+      // Recalculate totals for the fixed price bar
+      updateFixedPriceBar();
+    });
   });
 
   // Quantity update function
