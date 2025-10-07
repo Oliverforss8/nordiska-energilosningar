@@ -372,11 +372,26 @@
   margin-top: 16px
 }
 
+.mb-\[12px\] {
+  margin-bottom: 12px
+}
+
+.mb-\[16px\] {
+  margin-bottom: 16px
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3
 }
 
 .block {
@@ -421,6 +436,10 @@
 
 .aspect-square {
   aspect-ratio: 1 / 1
+}
+
+.aspect-\[16\/10\] {
+  aspect-ratio: 16/10
 }
 
 .h-10 {
@@ -519,6 +538,10 @@
   height: 90px
 }
 
+.h-12 {
+  height: 3rem
+}
+
 .max-h-0 {
   max-height: 0px
 }
@@ -593,6 +616,10 @@
 
 .w-\[100px\] {
   width: 100px
+}
+
+.w-12 {
+  width: 3rem
 }
 
 .max-w-7xl {
@@ -772,6 +799,10 @@
   gap: 8px
 }
 
+.gap-\[12px\] {
+  gap: 12px
+}
+
 .gap-x-\[20px\] {
   -moz-column-gap: 20px;
        column-gap: 20px
@@ -793,6 +824,12 @@
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse))
+}
+
+.space-y-\[40px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(40px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(40px * var(--tw-space-y-reverse))
 }
 
 .overflow-hidden {
@@ -851,6 +888,10 @@
 
 .rounded-\[20px\] {
   border-radius: 20px
+}
+
+.rounded-\[12px\] {
+  border-radius: 12px
 }
 
 .rounded-t-\[25px\] {
@@ -970,6 +1011,16 @@
   background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1))
 }
 
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5
 }
@@ -982,6 +1033,23 @@
   --tw-gradient-from: rgb(0 0 0 / 0.1) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
+.from-black\/20 {
+  --tw-gradient-from: rgb(0 0 0 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
+.from-black\/30 {
+  --tw-gradient-from: rgb(0 0 0 / 0.3) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
+.via-transparent {
+  --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)
 }
 
 .to-transparent {
@@ -1057,6 +1125,10 @@
 
 .p-\[50px\] {
   padding: 50px
+}
+
+.p-\[24px\] {
+  padding: 24px
 }
 
 .px-3 {
@@ -1212,6 +1284,26 @@
 .px-\[14px\] {
   padding-left: 14px;
   padding-right: 14px
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+.py-\[4px\] {
+  padding-top: 4px;
+  padding-bottom: 4px
+}
+
+.px-\[16px\] {
+  padding-left: 16px;
+  padding-right: 16px
+}
+
+.py-\[2px\] {
+  padding-top: 2px;
+  padding-bottom: 2px
 }
 
 .pb-2 {
@@ -1400,6 +1492,10 @@
   line-height: 1rem
 }
 
+.text-\[11px\] {
+  font-size: 11px
+}
+
 .font-\[300\] {
   font-weight: 300
 }
@@ -1446,6 +1542,22 @@
 
 .leading-none {
   line-height: 1
+}
+
+.leading-\[1\.2\] {
+  line-height: 1.2
+}
+
+.leading-\[1\.6\] {
+  line-height: 1.6
+}
+
+.leading-\[1\.3\] {
+  line-height: 1.3
+}
+
+.leading-\[1\.5\] {
+  line-height: 1.5
 }
 
 .text-\[\#171717\] {
@@ -1520,6 +1632,11 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1))
 }
 
 .underline {
@@ -1672,6 +1789,11 @@
   border-color: rgb(23 23 23 / var(--tw-border-opacity, 1))
 }
 
+.hover\:border-gray-200:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1))
+}
+
 .hover\:bg-\[\#D4B82A\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(212 184 42 / var(--tw-bg-opacity, 1))
@@ -1731,6 +1853,18 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.hover\:shadow-xl:hover {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px
@@ -1747,9 +1881,20 @@
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1))
 }
 
+.group:hover .group-hover\:translate-x-1 {
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
 .group:hover .group-hover\:scale-105 {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.group:hover .group-hover\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
@@ -2196,6 +2341,10 @@
   .md\:text-\[48px\] {
     font-size: 48px
   }
+
+  .md\:text-\[28px\] {
+    font-size: 28px
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2221,6 +2370,10 @@
 
   .lg\:w-\[90\%\] {
     width: 90%
+  }
+
+  .lg\:w-\[350px\] {
+    width: 350px
   }
 
   .lg\:shrink-0 {
