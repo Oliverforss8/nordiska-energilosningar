@@ -94,11 +94,48 @@
         "image_button_link": "",
         "custom_id": ""
       }
+    },
+    "bild_och_text_knappar_fdzFA4": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_6WaUJa": {
+          "type": "button",
+          "settings": {
+            "text": "Självförsörjande",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_VmbgPN": {
+          "type": "button",
+          "settings": {
+            "text": "Miljökrav",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_6WaUJa",
+        "button_VmbgPN"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Energilagring för lantbruket",
+        "text": "<p>Energilagring låter lantbruket använda egen el när den behövs, minskar köpt el och sänker kostnader. Batterier kapar effekttoppar, ger reservkraft och ökar självförsörjning samt energieffektivitet.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "hero_lower_6X9dhE",
     "lankar_tGAxqY",
-    "bild_och_text_knappar_wwTPne"
+    "bild_och_text_knappar_wwTPne",
+    "bild_och_text_knappar_fdzFA4"
   ]
 }
