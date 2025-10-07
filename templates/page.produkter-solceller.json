@@ -323,6 +323,7 @@
         "title": "Dokumentation under hela projektet",
         "text": "<p>TextFör att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
         "media_type": "image",
+        "image": "shopify://shop_images/image_18.png",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
