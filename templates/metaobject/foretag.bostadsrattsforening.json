@@ -14,10 +14,11 @@
       "name": "Hero",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
+        "background_image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "background_video": "shopify://files/videos/1080.mp4",
         "overlay_opacity": 20,
-        "heading": "Välkommen till vår webbplats",
-        "subheading": "Upptäck fantastiska produkter och tjänster",
+        "heading": "Solenergilösningar\nanpassat till större organisationer",
+        "subheading": "änk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för er organisation",
         "button_text": "Våra energilösningar",
         "button_url": ""
       }
