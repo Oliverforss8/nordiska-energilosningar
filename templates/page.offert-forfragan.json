@@ -56,7 +56,19 @@
         "form_field_eJ8QfB": {
           "type": "form_field",
           "settings": {
-            "label": "Adress",
+            "label": "Gatuadress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_7C9xYp": {
+          "type": "form_field",
+          "settings": {
+            "label": "Postnummer",
             "name": "",
             "field_type": "text",
             "placeholder": "",
@@ -70,7 +82,8 @@
         "form_field_zjkD36",
         "form_field_7yPiPV",
         "form_field_xm978t",
-        "form_field_eJ8QfB"
+        "form_field_eJ8QfB",
+        "form_field_7C9xYp"
       ],
       "name": "Offertförfrågan",
       "settings": {
