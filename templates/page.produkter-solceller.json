@@ -146,28 +146,28 @@
     "hur_KCyVH6": {
       "type": "hur",
       "blocks": {
-        "step_HcbJqz": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/book.svg",
-            "title": "1. Boka tid",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
-          }
-        },
         "step_TxEikq": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/person.svg",
-            "title": "2. Träffa oss",
-            "description": "<p>Beskrivande text Kontakta oss idag för ett möte där vi analyserarför steget.</p>"
+            "title": "1. Offert",
+            "description": "<p>Du ber om en offert och inväntar ett erbjudande</p>"
+          }
+        },
+        "step_HcbJqz": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector-1.svg",
+            "title": "2. Godkännande",
+            "description": "<p>Vi inväntar ditt beslut innan vi påbörjar arbetet</p>"
           }
         },
         "step_x9iFjQ": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/install.svg",
-            "title": "3. Installation",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "title": "3. Leverans & installation",
+            "description": "<p>När offertet är godkänd levererar och installera vi</p>"
           }
         },
         "step_cFgBdG": {
@@ -180,8 +180,8 @@
         }
       },
       "block_order": [
-        "step_HcbJqz",
         "step_TxEikq",
+        "step_HcbJqz",
         "step_x9iFjQ",
         "step_cFgBdG"
       ],
