@@ -165,7 +165,7 @@
         "step_x9iFjQ": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/install.svg",
+            "image": "shopify://shop_images/Vector.svg",
             "title": "3. Leverans & installation",
             "description": "<p>När offertet är godkänd levererar och installera vi</p>"
           }
@@ -173,9 +173,9 @@
         "step_cFgBdG": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/radio.svg",
+            "image": "shopify://shop_images/Group.svg",
             "title": "4. Support",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Efter ditt köp finns vi tillgängliga för support!</p>"
           }
         }
       },
