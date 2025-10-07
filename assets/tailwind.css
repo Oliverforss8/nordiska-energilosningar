@@ -308,6 +308,10 @@
   margin-bottom: 15px
 }
 
+.mb-\[18px\] {
+  margin-bottom: 18px
+}
+
 .mb-\[20px\] {
   margin-bottom: 20px
 }
@@ -320,8 +324,8 @@
   margin-bottom: 30px
 }
 
-.mb-\[50px\] {
-  margin-bottom: 50px
+.mb-\[40px\] {
+  margin-bottom: 40px
 }
 
 .mb-\[6px\] {
@@ -354,6 +358,14 @@
 
 .mt-\[62px\] {
   margin-top: 62px
+}
+
+.mt-\[6px\] {
+  margin-top: 6px
+}
+
+.mb-\[50px\] {
+  margin-bottom: 50px
 }
 
 .line-clamp-2 {
@@ -728,6 +740,10 @@
   gap: 5px
 }
 
+.gap-\[6px\] {
+  gap: 6px
+}
+
 .gap-\[8px\] {
   gap: 8px
 }
@@ -791,6 +807,10 @@
 
 .rounded-\[15px\] {
   border-radius: 15px
+}
+
+.rounded-\[16px\] {
+  border-radius: 16px
 }
 
 .rounded-\[5px\] {
@@ -980,6 +1000,10 @@
   padding: 20px
 }
 
+.p-\[28px\] {
+  padding: 28px
+}
+
 .p-\[30px\] {
   padding: 30px
 }
@@ -1016,6 +1040,11 @@
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px
+}
+
+.px-\[26px\] {
+  padding-left: 26px;
+  padding-right: 26px
 }
 
 .px-\[30px\] {
@@ -1359,6 +1388,10 @@
   line-height: 90%
 }
 
+.leading-relaxed {
+  line-height: 1.625
+}
+
 .text-\[\#171717\] {
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity, 1))
@@ -1391,6 +1424,16 @@
 .text-\[\#545454\] {
   --tw-text-opacity: 1;
   color: rgb(84 84 84 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#E5E5E5\] {
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#EBCF2F\] {
+  --tw-text-opacity: 1;
+  color: rgb(235 207 47 / var(--tw-text-opacity, 1))
 }
 
 .text-gray-500 {
@@ -1461,6 +1504,12 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
+.shadow-\[0_1px_0_rgba\(23\2c 23\2c 23\2c 0\.06\)\] {
+  --tw-shadow: 0 1px 0 rgba(23,23,23,0.06);
+  --tw-shadow-colored: 0 1px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1483,6 +1532,12 @@
 
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+.transition-\[box-shadow\2c transform\] {
+  transition-property: box-shadow,transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms
 }
@@ -1541,6 +1596,11 @@
 
 /* Custom utilities */
 
+.hover\:-translate-y-\[2px\]:hover {
+  --tw-translate-y: -2px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1583,6 +1643,12 @@
 
 .hover\:opacity-80:hover {
   opacity: 0.8
+}
+
+.hover\:shadow-\[0_8px_24px_rgba\(23\2c 23\2c 23\2c 0\.12\)\]:hover {
+  --tw-shadow: 0 8px 24px rgba(23,23,23,0.12);
+  --tw-shadow-colored: 0 8px 24px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
 .hover\:shadow-md:hover {
