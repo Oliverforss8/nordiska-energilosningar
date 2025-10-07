@@ -14,7 +14,7 @@
       "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_12.png",
+        "background_image": "shopify://shop_images/ae172ed2-6217-4349-a71e-7f3f7d029e9b_1.original.jpg",
         "overlay_opacity": 20,
         "heading": "Maximera företagets lönsamhet med energilösningar",
         "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för ert företag.",
@@ -64,7 +64,7 @@
       "name": "Banner med länkar",
       "settings": {
         "background_color": "#171717",
-        "background_image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "background_image": "shopify://shop_images/Svea_Solar_-_Komatsu_Umea_-_2022-.2e16d0ba.fill-1200x630.jpg",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "header_button_text": "Energieffektivisering",
