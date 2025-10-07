@@ -31,7 +31,7 @@
             "heading": "Solceller",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         },
@@ -41,7 +41,7 @@
             "heading": "Batterier",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         },
@@ -51,7 +51,7 @@
             "heading": "Laddboxar",
             "description": "Kort beskrivning",
             "link": "",
-            "card_bg_color": "#F3F1E8",
+            "card_bg_color": "#f3f1e8",
             "card_text_color": "#171717"
           }
         }
@@ -75,6 +75,51 @@
         "primary_button_url": "",
         "secondary_button_text": "",
         "secondary_button_url": ""
+      }
+    },
+    "bild_och_text_knappar_TQdd96": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_JLaLAc": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_mJ8C6b": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_yfdtqw": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_JLaLAc",
+        "button_mJ8C6b",
+        "button_yfdtqw"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Maximera företagets lönsamhet med solceller",
+        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_19.png",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
       }
     },
     "faq_produkt_WAWGp6": {
@@ -132,25 +177,6 @@
         "padding_bottom": 40
       }
     },
-    "banner_bild_ErcDiP": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "media_type": "image",
-        "background_image": "shopify://shop_images/solceller-section3-img-1920.webp",
-        "background_color": "#000000",
-        "overlay_opacity": 20,
-        "header_button_text": "Ditt nästa steg",
-        "header_button_url": "",
-        "heading": "Vi är experter på solceller",
-        "description": "Vill du få riktig experthjälp och hitta en perfekt lösning för ert företag?",
-        "primary_button_text": "Få en offert",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_knappar_T6tiXq": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -186,52 +212,7 @@
       ],
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Energilagring till företag",
-        "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
-        "image_position": "left",
-        "image_button_text": "Gå vidare",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_knappar_UM7UeR": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_t3rhnM": {
-          "type": "button",
-          "settings": {
-            "text": "Lagra energi",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_M4kEnx": {
-          "type": "button",
-          "settings": {
-            "text": "Sänkta elkostnader",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_tijfed": {
-          "type": "button",
-          "settings": {
-            "text": "Optimerar solceller",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_t3rhnM",
-        "button_M4kEnx",
-        "button_tijfed"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Energilagring till företag",
+        "title": "Investera i en tillförlitlig energiförsörjning",
         "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
         "media_type": "image",
         "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
@@ -306,48 +287,67 @@
         "padding_bottom": 40
       }
     },
-    "bild_och_text_knappar_TQdd96": {
+    "bild_och_text_knappar_UM7UeR": {
       "type": "bild-och-text-knappar",
       "blocks": {
-        "button_JLaLAc": {
+        "button_t3rhnM": {
           "type": "button",
           "settings": {
-            "text": "Ökat fastighetsvärde",
+            "text": "Lagra energi",
             "url": "",
             "show_arrow": false
           }
         },
-        "button_mJ8C6b": {
+        "button_M4kEnx": {
           "type": "button",
           "settings": {
-            "text": "Installation",
+            "text": "Sänkta elkostnader",
             "url": "",
             "show_arrow": false
           }
         },
-        "button_yfdtqw": {
+        "button_tijfed": {
           "type": "button",
           "settings": {
-            "text": "Garanti",
+            "text": "Optimerar solceller",
             "url": "",
             "show_arrow": false
           }
         }
       },
       "block_order": [
-        "button_JLaLAc",
-        "button_mJ8C6b",
-        "button_yfdtqw"
+        "button_t3rhnM",
+        "button_M4kEnx",
+        "button_tijfed"
       ],
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Solceller för företag",
-        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
+        "title": "Ladda smart och framtidssäkra er verksamhet",
+        "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_19.png",
+        "image": "shopify://shop_images/qyymok2yfx8.webp",
         "image_position": "left",
         "image_button_text": "Gå vidare",
         "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_ErcDiP": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "background_color": "#000000",
+        "overlay_opacity": 20,
+        "header_button_text": "Ditt nästa steg",
+        "header_button_url": "",
+        "heading": "Vi är experter på solceller",
+        "description": "Vill du få riktig experthjälp och hitta en perfekt lösning för ert företag?",
+        "primary_button_text": "Få en offert",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     }
