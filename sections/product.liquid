@@ -810,6 +810,36 @@
       </div>
     </div>
   </div>
+
+  <!-- Fixed Bottom Price Bar -->
+  <div class="fixed-bottom-price-bar" id="fixed-bottom-price-bar">
+    <div class="price-bar-content">
+      <div class="price-summary">
+        <div class="total-price">
+          <span class="total-label">Totalt pris:</span>
+          <div class="price-container">
+            <span class="total-amount" id="total-price-display">
+              {{- product.selected_or_first_available_variant.price | money -}}
+            </span>
+          </div>
+        </div>
+        <div class="after-discount" id="after-discount" style="display: none;">
+          <span class="discount-label">Efter avdrag:</span>
+          <div class="discount-price-container">
+            <span class="discount-amount" id="discount-price-display"></span>
+          </div>
+        </div>
+      </div>
+      <div class="price-bar-actions">
+        <button
+          class="add-to-cart-btn-bottom headline1"
+          data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+        >
+          Lägg i varukorg
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Cart Drawer -->
@@ -1019,6 +1049,188 @@
     transition: all 0.4s ease;
     overflow: hidden;
   }
+
+  /* Fixed Bottom Price Bar */
+  .fixed-bottom-price-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #ffffff;
+    border-top: 1px solid #171717;
+    padding: 20px 0;
+    z-index: 50;
+    box-shadow: 0 -4px 20px rgba(23, 23, 23, 0.15);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  /* Make price bar always visible for testing */
+  .fixed-bottom-price-bar {
+    transform: translateY(0) !important;
+  }
+
+  .fixed-bottom-price-bar.visible {
+    transform: translateY(0);
+  }
+
+  .price-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .price-summary {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #171717;
+  }
+
+  .total-label {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .total-amount {
+    font-weight: 400;
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .total-amount.strikethrough {
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 16px;
+  }
+
+  .after-discount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #171717;
+    margin-top: 4px;
+  }
+
+  .discount-label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #4ade80;
+  }
+
+  .discount-price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .discount-amount {
+    font-weight: 400;
+    font-size: 20px;
+    color: #4ade80;
+  }
+
+  .price-bar-actions {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .add-to-cart-btn-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #171717;
+    background: transparent;
+    border: 1px solid #171717;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .add-to-cart-btn-bottom:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(23, 23, 23, 0.1);
+  }
+
+  .add-to-cart-btn-bottom svg {
+    width: 16px;
+    height: 14px;
+  }
+
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .fixed-bottom-price-bar {
+      padding: 16px 0;
+    }
+
+    .price-bar-content {
+      gap: 16px;
+      padding: 0 16px;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .price-summary {
+      margin-bottom: 12px;
+    }
+
+    .price-bar-actions {
+      display: flex;
+      width: 100%;
+    }
+
+    .add-to-cart-btn-bottom {
+      min-height: 44px;
+      padding: 12px 24px;
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .product-title {
+      font-size: 12px;
+    }
+
+    .total-amount {
+      font-size: 16px;
+    }
+
+    .upsell-price-item,
+    .installation-price-item {
+      font-size: 11px;
+    }
+  }
+
+  /* Hide price bar when not needed */
+  .fixed-bottom-price-bar.hidden {
+    display: none;
+  }
 {% endstylesheet %}
 
 <!-- Generate product media data -->
@@ -1040,475 +1252,8 @@
   {{ product.variants | json }}
 </script>
 
-{% comment %} Load extracted product.js {% endcomment %}
+{% comment %} Load product.js {% endcomment %}
 <script src="{{ 'product.js' | asset_url }}" defer></script>
-{% comment %}
-  {% javascript %}
-    // Global dropdown toggle function for mobile-friendly interaction
-    function toggleDropdown(contentId, trigger) {
-      const content = document.getElementById(contentId);
-      const icon = trigger.querySelector('.dropdown-icon');
-
-      if (content.style.display === 'none' || content.style.display === '') {
-        content.style.display = 'block';
-        content.classList.add('show');
-        trigger.classList.add('active');
-      } else {
-        content.style.display = 'none';
-        content.classList.remove('show');
-        trigger.classList.remove('active');
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // Variant Selection Logic
-      const variantSelects = document.querySelectorAll('.variant-select');
-      const buyNowBtn = document.querySelector('.buy-now-btn');
-      const addToCartBtn = document.querySelector('.add-to-cart-btn');
-      const priceDisplay = document.getElementById('current-price');
-      const comparePriceDisplay = document.getElementById('compare-price');
-
-      // Product variants data
-      const productVariantsRaw = document.getElementById('product-variants-data');
-      const productVariants = productVariantsRaw ? JSON.parse(productVariantsRaw.textContent) : [];
-
-      // Function to find matching variant based on selected options
-      function findMatchingVariant() {
-        const selectedOptions = {};
-
-        // Get selected values by position (option1, option2, option3)
-        variantSelects.forEach(select => {
-          const position = select.dataset.optionPosition;
-          selectedOptions['option' + position] = select.value;
-        });
-
-        // Find variant where all options match
-        return productVariants.find(variant => {
-          return Object.keys(selectedOptions).every(optionKey => {
-            return variant[optionKey] === selectedOptions[optionKey];
-          });
-        });
-      }
-
-      // Function to update variant
-      function updateVariant() {
-        const selectedVariant = findMatchingVariant();
-
-        if (selectedVariant) {
-          console.log('Selected variant:', selectedVariant.id, selectedVariant.title);
-
-          // Update button data attributes
-          if (buyNowBtn) {
-            buyNowBtn.setAttribute('data-variant-id', selectedVariant.id);
-          }
-          if (addToCartBtn) {
-            addToCartBtn.setAttribute('data-variant-id', selectedVariant.id);
-          }
-
-          // Update price display
-          if (priceDisplay) {
-            priceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
-              style: 'currency',
-              currency: 'SEK'
-            }).format(selectedVariant.price / 100);
-          }
-
-          // Update compare price
-          if (comparePriceDisplay) {
-            if (selectedVariant.compare_at_price && selectedVariant.compare_at_price > selectedVariant.price) {
-              comparePriceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
-                style: 'currency',
-                currency: 'SEK'
-              }).format(selectedVariant.compare_at_price / 100);
-              comparePriceDisplay.style.display = 'inline';
-            } else {
-              comparePriceDisplay.style.display = 'none';
-            }
-          }
-
-          // Update URL
-          const newUrl = new URL(window.location.href);
-          newUrl.searchParams.set('variant', selectedVariant.id);
-          window.history.replaceState({}, '', newUrl);
-          console.log('Updated URL to:', newUrl.toString());
-        } else {
-          console.log('No matching variant found');
-        }
-      }
-
-      // Add change listeners to variant selects
-      variantSelects.forEach(select => {
-        select.addEventListener('change', updateVariant);
-      });
-
-      const mainImageContainer = document.getElementById('main-product-image');
-      const thumbnails = document.querySelectorAll('[data-thumbnail]');
-
-      if (mainImageContainer && thumbnails.length > 0) {
-        // Store all product media for easy access
-        const productMediaRaw = document.getElementById('product-media-data');
-        const productMedia = productMediaRaw ? JSON.parse(productMediaRaw.textContent) : [];
-
-        // Function to update main image
-        function updateMainImage(mediaId) {
-          const media = productMedia.find(m => m.id === mediaId);
-          if (!media) return;
-
-          // Update the image source
-          const img = mainImageContainer.querySelector('img');
-          if (img) {
-            img.src = media.src;
-            img.alt = media.alt;
-          }
-
-          // Update active thumbnail
-          thumbnails.forEach(thumb => {
-            thumb.classList.remove('active');
-            if (parseInt(thumb.dataset.mediaId) === mediaId) {
-              thumb.classList.add('active');
-            }
-          });
-        }
-
-        // Add click listeners to thumbnails
-        thumbnails.forEach(thumbnail => {
-          thumbnail.addEventListener('click', function() {
-            const mediaId = parseInt(this.dataset.mediaId);
-            updateMainImage(mediaId);
-          });
-        });
-
-        // Set initial active state for featured image
-        if (productMedia.length > 0) {
-          const featuredMedia = productMedia.find(m => m.isFeatured);
-          if (featuredMedia) {
-            const featuredThumbnail = Array.from(thumbnails).find(thumb =>
-              parseInt(thumb.dataset.mediaId) === featuredMedia.id
-            );
-
-            if (featuredThumbnail) {
-              featuredThumbnail.classList.add('active');
-            }
-          }
-        }
-      }
-
-      // Installation and Green Deduction Functionality
-      const installationCheckbox = document.getElementById('installation-checkbox');
-      const greenDeductionWrapper = document.getElementById('green-deduction-wrapper');
-
-      if (installationCheckbox && greenDeductionWrapper) {
-        // Set initial visibility based on installation checkbox state
-        greenDeductionWrapper.style.display = installationCheckbox.checked ? 'block' : 'none';
-
-        // Show/hide green deduction options based on installation checkbox
-        installationCheckbox.addEventListener('change', function() {
-          if (this.checked) {
-            greenDeductionWrapper.style.display = 'block';
-          } else {
-            greenDeductionWrapper.style.display = 'none';
-            // Uncheck any selected green deduction option
-            const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
-            greenDeductionRadios.forEach(radio => {
-              radio.checked = false;
-            });
-          }
-        });
-      }
-
-      // Function to get selected discount code (supports radios and checkboxes)
-      function getSelectedDiscountCode() {
-        // Prefer any checked radio
-        const selectedRadio = document.querySelector('.green-deduction-radio:checked, input[type="radio"][data-discount-code]:checked');
-        if (selectedRadio) {
-          const code = selectedRadio.dataset.discountCode || null;
-          console.log('🔍 Discount (radio) selected:', code);
-          return code;
-        }
-
-        // Fallback: any checked checkbox with data-discount-code
-        const checkedCheckbox = document.querySelector('.green-deduction-checkbox:checked, input[type="checkbox"][data-discount-code]:checked');
-        if (checkedCheckbox) {
-          const code = checkedCheckbox.dataset.discountCode || null;
-          console.log('🔍 Discount (checkbox) selected:', code);
-          return code;
-        }
-
-        console.log('🔍 No discount selected');
-        return null;
-      }
-
-      // Persist discount selection immediately on any discount input change and notify cart
-      const discountInputs = document.querySelectorAll('.green-deduction-radio, .green-deduction-checkbox, [data-discount-code]');
-      console.log('🧩 Discount inputs init - found count:', discountInputs ? discountInputs.length : 0);
-      if (discountInputs && discountInputs.length > 0) {
-        discountInputs.forEach((input) => {
-          input.addEventListener('change', function() {
-            console.log('🖱️ Discount input changed:', this.type, this.dataset.discountCode, 'checked:', this.checked);
-            const code = getSelectedDiscountCode();
-            try {
-              if (code) {
-                sessionStorage.setItem('selectedDiscountCode', code);
-                console.log('💾 Saved discount code to session:', code);
-              } else {
-                sessionStorage.removeItem('selectedDiscountCode');
-                console.log('🧹 Cleared discount code from session');
-              }
-            } catch (e) {
-              console.warn('SessionStorage not available', e);
-            }
-            // Broadcast to cart drawer to update its display
-            window.dispatchEvent(new CustomEvent('discount:update'));
-          });
-        });
-      } else {
-        console.log('ℹ️ No discount inputs found on this product');
-      }
-
-      // Upsell Products Functionality
-      function getSelectedUpsells() {
-        const selectedUpsells = [];
-        const upsellCheckboxes = document.querySelectorAll('.upsell-checkbox:checked');
-
-        upsellCheckboxes.forEach(checkbox => {
-          selectedUpsells.push({
-            id: checkbox.dataset.variantId,
-            quantity: 1
-          });
-        });
-
-        return selectedUpsells;
-      }
-
-
-      // Buy Now functionality with upsells and installation
-      const buyNowBtn = document.querySelector('.buy-now-btn');
-      let isBuyNowProcessing = false;
-
-      if (buyNowBtn) {
-        buyNowBtn.addEventListener('click', async function (e) {
-          e.preventDefault();
-
-          // Prevent duplicate clicks
-          if (isBuyNowProcessing) {
-            console.log('Already processing, please wait...');
-            return;
-          }
-
-          const variantId = this.getAttribute('data-variant-id');
-          const quantity = getSelectedQuantity();
-          const upsells = getSelectedUpsells();
-          const discountCode = getSelectedDiscountCode();
-
-          console.log('🛒 Buy Now clicked!');
-          console.log('📦 Variant ID:', variantId);
-          console.log('🎁 Discount Code:', discountCode || 'None selected');
-
-          // Store discount code in sessionStorage
-          if (discountCode) {
-            sessionStorage.setItem('selectedDiscountCode', discountCode);
-            console.log('💾 Saved discount code to session:', discountCode);
-          }
-
-          // Show loading state
-          const originalText = this.innerHTML;
-          this.innerHTML = 'Behandlar...';
-          this.disabled = true;
-          isBuyNowProcessing = true;
-
-          try {
-            // Build items array with main product and upsells
-            const items = [
-              {
-                id: variantId,
-                quantity: quantity
-              },
-              ...upsells
-            ];
-
-            // Check if installation is selected
-            const installationCheckbox = document.getElementById('installation-checkbox');
-            if (installationCheckbox && installationCheckbox.checked) {
-              const installationVariantId = installationCheckbox.dataset.variantId;
-              // Add installation product to cart
-              items.push({
-                id: installationVariantId,
-                quantity: 1
-              });
-            }
-
-            const response = await fetch('/cart/add.js', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                items: items
-              }),
-            });
-
-            if (response.ok) {
-              // Go to checkout with discount code if selected
-              if (discountCode) {
-                const checkoutUrl = '/checkout?discount=' + discountCode;
-                console.log('✅ Going to checkout with discount:', checkoutUrl);
-                window.location.href = checkoutUrl;
-              } else {
-                console.log('✅ Going to checkout (no discount)');
-                window.location.href = '/checkout';
-              }
-            } else if (response.status === 429) {
-              throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
-            } else {
-              const errorData = await response.json();
-              throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
-            }
-          } catch (error) {
-            console.error('Error with buy now:', error);
-
-            // Show error state with specific message
-            this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
-            this.style.background = '#EF4444';
-            this.style.color = 'white';
-
-            // Reset button after appropriate delay
-            const resetDelay = error.message.includes('många') ? 3000 : 2000;
-            setTimeout(() => {
-              this.innerHTML = originalText;
-              this.disabled = false;
-              this.style.background = '';
-              this.style.color = '';
-              isBuyNowProcessing = false;
-            }, resetDelay);
-          }
-        });
-      }
-
-      // Add to Cart functionality with upsells and installation
-      const addToCartBtn = document.querySelector('.add-to-cart-btn');
-      let isAddToCartProcessing = false;
-
-      if (addToCartBtn) {
-        addToCartBtn.addEventListener('click', async function (e) {
-          e.preventDefault();
-
-          // Prevent duplicate clicks
-          if (isAddToCartProcessing) {
-            console.log('Already processing, please wait...');
-            return;
-          }
-
-          const variantId = this.getAttribute('data-variant-id');
-          const quantity = getSelectedQuantity();
-          const upsells = getSelectedUpsells();
-          const discountCode = getSelectedDiscountCode();
-
-          console.log('🛒 Add to Cart clicked!');
-          console.log('🎁 Discount Code:', discountCode || 'None selected');
-
-          // Store discount code in sessionStorage so cart drawer can use it
-          if (discountCode) {
-            sessionStorage.setItem('selectedDiscountCode', discountCode);
-            console.log('💾 Saved discount code to session:', discountCode);
-          }
-
-          // Show loading state
-          const originalText = this.innerHTML;
-          this.innerHTML = 'Lägger till...';
-          this.disabled = true;
-          isAddToCartProcessing = true;
-
-          try {
-            // Build items array with main product and upsells
-            const items = [
-              {
-                id: variantId,
-                quantity: quantity
-              },
-              ...upsells
-            ];
-
-            // Check if installation is selected
-            const installationCheckbox = document.getElementById('installation-checkbox');
-            if (installationCheckbox && installationCheckbox.checked) {
-              const installationVariantId = installationCheckbox.dataset.variantId;
-              // Add installation product to cart
-              items.push({
-                id: installationVariantId,
-                quantity: 1
-              });
-            }
-
-            const response = await fetch('/cart/add.js', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                items: items
-              }),
-            });
-
-            if (response.ok) {
-              // Update cart count and show success
-              const cartData = await response.json();
-
-              // Show success state
-              this.innerHTML = 'Tillagd! ✓';
-              this.style.background = '#4ade80';
-              this.style.color = 'white';
-
-              // Trigger cart update event for cart.js to reload
-              window.dispatchEvent(new CustomEvent('cart:update'));
-
-              // Open cart drawer if available
-              const cartDrawer = document.getElementById('cart-drawer');
-              const cartOverlay = document.querySelector('[data-cart-overlay]');
-              if (cartDrawer) {
-                cartDrawer.classList.add('open');
-                if (cartOverlay) {
-                  cartOverlay.classList.add('active');
-                }
-                document.body.style.overflow = 'hidden';
-              }
-
-              // Reset button after 2 seconds
-              setTimeout(() => {
-                this.innerHTML = originalText;
-                this.disabled = false;
-                this.style.background = '';
-                this.style.color = '';
-                isAddToCartProcessing = false;
-              }, 2000);
-            } else if (response.status === 429) {
-              throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
-            } else {
-              const errorData = await response.json();
-              throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
-            }
-          } catch (error) {
-            console.error('Error adding to cart:', error);
-
-            // Show error state with specific message
-            this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
-            this.style.background = '#EF4444';
-            this.style.color = 'white';
-
-            // Reset button after appropriate delay
-            const resetDelay = error.message.includes('många') ? 3000 : 2000;
-            setTimeout(() => {
-              this.innerHTML = originalText;
-              this.disabled = false;
-              this.style.background = '';
-              this.style.color = '';
-              isAddToCartProcessing = false;
-            }, resetDelay);
-          }
-        });
-      }
-    });
-  {% endjavascript %}
-{% endcomment %}
 
 {% schema %}
 {
