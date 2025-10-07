@@ -41,7 +41,7 @@
           "settings": {
             "label": "Telefonnummer",
             "name": "",
-            "field_type": "text",
+            "field_type": "tel",
             "placeholder": "",
             "required": true,
             "pattern": "",
@@ -51,9 +51,9 @@
         "form_field_Dy63fQ": {
           "type": "form_field",
           "settings": {
-            "label": "Mailadress",
+            "label": "E-post",
             "name": "",
-            "field_type": "text",
+            "field_type": "email",
             "placeholder": "",
             "required": true,
             "pattern": "",
