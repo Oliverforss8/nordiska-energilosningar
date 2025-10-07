@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_L9AzVL": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "background_video": "shopify://files/videos/1080.mp4",
+        "overlay_opacity": 20,
+        "heading": "Solenergilösningar\nanpassat till större organisationer",
+        "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för er organisation",
+        "button_text": "För företag",
+        "button_url": ""
+      }
+    },
+    "lankar_tGAxqY": {
+      "type": "lankar",
+      "blocks": {
+        "card_6TwFP8": {
+          "type": "card",
+          "settings": {
+            "heading": "Företag",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": "shopify://pages/vara-solceller"
+          }
+        },
+        "card_67XLE3": {
+          "type": "card",
+          "settings": {
+            "heading": "BRF",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": "shopify://pages/vara-batterilosningar"
+          }
+        },
+        "card_Ype6Wd": {
+          "type": "card",
+          "settings": {
+            "heading": "Lantbruk",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": "shopify://pages/vara-laddboxar"
+          }
+        }
+      },
+      "block_order": [
+        "card_6TwFP8",
+        "card_67XLE3",
+        "card_Ype6Wd"
+      ],
+      "name": "Länkar sektion",
+      "settings": {}
+    },
+    "3_grid_GT9efL": {
+      "type": "3-grid",
+      "name": "Tre kolumner grid",
+      "settings": {
+        "title": "Effektiva energilösningar för framtidens fastigheter",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_image": "shopify://shop_images/image_15.png",
+        "card_1_button_text": "Solceller",
+        "card_1_button_link": "",
+        "card_1_overlay_opacity": 0,
+        "card_2_image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "card_2_button_text": "Batterier",
+        "card_2_button_link": "",
+        "card_2_overlay_opacity": 0,
+        "card_3_image": "shopify://shop_images/image_14_845fb8c2-1183-4b14-aa31-dd048d4aad97.png",
+        "card_3_button_text": "Baddboxar",
+        "card_3_button_link": "",
+        "card_3_overlay_opacity": 0,
+        "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+      }
+    }
+  },
+  "order": [
+    "hero_L9AzVL",
+    "lankar_tGAxqY",
+    "3_grid_GT9efL"
+  ]
+}
