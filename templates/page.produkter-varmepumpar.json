@@ -22,7 +22,7 @@
         "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
         "overlay_opacity": 30,
         "heading": "Våra värmepumpslöningar",
-        "subheading": "Discover amazing products and services",
+        "subheading": "Överväger du att installera värmepump?\nVi tar hand om hela processen från planering till driftsatt anläggning!",
         "button_text": "Våra värmepumpar",
         "button_url": ""
       }
@@ -38,17 +38,6 @@
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "text_sektion_Up6yBe": {
-      "type": "text-sektion",
-      "name": "Text sektion",
-      "settings": {
-        "title": "Varför installera värmepump?",
-        "text": "<p>Nordiska Energilösningar är stolt installationspartner till Affärsverken i Karlskrona. Tillsammans levererar vi framtidens energilösningar och omvandlar solens strålar till ren, förnybar energi som minskar utsläpp och ökar effektiviteten. Samarbetet stärker Karlskronas energiinfrastruktur och driver regionen mot en fossilfri framtid.</p>",
-        "button_text": "Be om en offert",
-        "button_link": "shopify://pages/vara-varmepumpar",
         "custom_id": ""
       }
     },
@@ -173,7 +162,6 @@
     "main",
     "hero_lower_FNPfHG",
     "bild_och_text_knappar_gVCNFB",
-    "text_sektion_Up6yBe",
     "banner_med_3_produkter_JdJbDT",
     "hur_ED7Umq",
     "kontakt_form_CfQrPU"
