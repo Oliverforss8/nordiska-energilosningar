@@ -121,7 +121,7 @@
         "overlay_opacity": 30,
         "header_button_text": "Solceller",
         "header_button_url": "shopify://collections/solceller",
-        "heading": "Vill du kontakta våra experter påsolceller",
+        "heading": "Vill du kontakta våra experter på solceller",
         "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
         "primary_button_text": "Privat",
         "primary_button_url": "shopify://pages/support-om-oss",
@@ -318,9 +318,89 @@
     },
     "kontakt_form_chLN6N": {
       "type": "kontakt-form",
+      "blocks": {
+        "form_field_PVqaRa": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_LQHnCq": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_Dj3rJM": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_XpFhUy": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_gaYnE3": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_zK7bLV": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        },
+        "service_option_YKEwa6": {
+          "type": "service_option",
+          "settings": {
+            "label": "Serviceavtal",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_PVqaRa",
+        "form_field_LQHnCq",
+        "form_field_Dj3rJM",
+        "form_field_XpFhUy",
+        "service_option_gaYnE3",
+        "service_option_zK7bLV",
+        "service_option_YKEwa6"
+      ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
+        "heading": "Ta kontakt med oss",
         "header_button_text": "",
         "header_button_url": ""
       }
