@@ -820,15 +820,15 @@
     <div class="  layout flex items-center justify-between py-[20px]">
       <div class="flex flex-col ">
         <div class="flex items-center space-x-3">
-          <span class="headline1 text-[30px]">Totalt pris:</span>
-          <span class="headline1 text-[30px] text-gray-900" id="total-price-display">
+          <span class="headline1 text-[30px]" style="color: #171717;">Totalt pris:</span>
+          <span class="headline1 text-[30px]" id="total-price-display" style="color: #171717;">
             {{- product.selected_or_first_available_variant.price | money -}}
           </span>
         </div>
         <div class="flex items-center space-x-3" id="after-discount" style="display: none;">
-          <span class="text-sm font-medium" style="color: #3e753e;">Efter avdrag:</span>
+          <span class="headline1 text-[24px]" style="color: #3e753e;">Efter avdrag:</span>
           <span
-            class="text-lg font-bold"
+            class="headline1 text-[24px]"
             id="discount-price-display"
             style="color: #3e753e;"
           ></span>

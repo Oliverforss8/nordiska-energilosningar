@@ -253,6 +253,13 @@ document.addEventListener('DOMContentLoaded', function () {
       return code;
     }
 
+    // Debug: Log all available discount elements
+    const allDiscountElements = document.querySelectorAll('[data-discount-code]');
+    console.log('🔍 All discount elements found:', allDiscountElements.length);
+    allDiscountElements.forEach((el, index) => {
+      console.log(`  ${index + 1}. ${el.type} ${el.id || el.className} - checked: ${el.checked} - code: ${el.dataset.discountCode}`);
+    });
+
     console.log('🔍 No discount selected');
     return null;
   }
@@ -404,18 +411,35 @@ document.addEventListener('DOMContentLoaded', function () {
     updateAllPriceDisplays(totalPrice, showDiscount, finalPrice);
 
     // Update discount display
+    console.log('🔍 Discount display check:', {
+      showDiscount,
+      afterDiscount: !!afterDiscount,
+      discountPriceDisplay: !!discountPriceDisplay,
+      finalPrice: finalPrice / 100
+    });
+    
     if (showDiscount) {
       console.log('✅ Showing discount display');
-      afterDiscount.style.display = 'flex';
+      if (afterDiscount) {
+        afterDiscount.style.display = 'flex';
+        console.log('✅ After discount element shown');
+      } else {
+        console.log('❌ After discount element not found');
+      }
       if (discountPriceDisplay) {
         discountPriceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
           style: 'currency',
           currency: 'SEK',
         }).format(finalPrice / 100);
+        console.log('✅ Discount price updated:', finalPrice / 100);
+      } else {
+        console.log('❌ Discount price display element not found');
       }
     } else {
       console.log('❌ Hiding discount display');
-      afterDiscount.style.display = 'none';
+      if (afterDiscount) {
+        afterDiscount.style.display = 'none';
+      }
     }
 
     // Update button data attributes and styling
