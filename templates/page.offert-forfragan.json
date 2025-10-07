@@ -16,6 +16,62 @@
     },
     "offert_forfragan_jgH9z9": {
       "type": "offert-forfragan",
+      "blocks": {
+        "form_field_zjkD36": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_7yPiPV": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_xm978t": {
+          "type": "form_field",
+          "settings": {
+            "label": "Mailadress",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_eJ8QfB": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        }
+      },
+      "block_order": [
+        "form_field_zjkD36",
+        "form_field_7yPiPV",
+        "form_field_xm978t",
+        "form_field_eJ8QfB"
+      ],
       "name": "Offertförfrågan",
       "settings": {
         "title": "Begär offert",
