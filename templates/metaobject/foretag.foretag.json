@@ -170,7 +170,7 @@
       ],
       "name": "FAQ produkter",
       "settings": {
-        "title": "Varför installera solceller?",
+        "title": "Varför installera solceller på företaget?",
         "description": "<p>Många diskuterar solceller men varför bör ett företag egentligen installera solceller?</p>",
         "custom_id": "",
         "padding_top": 40,
@@ -221,6 +221,61 @@
         "image_button_link": "",
         "custom_id": ""
       }
+    },
+    "faq_produkt_fD68te": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_XVKEjz": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Sänk elkostnaderna när elnätsavgifter baseras på högsta effektuttag",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p>Effekttoppar kan leda till höga nätavgifter och ökade energikostnader för företag. Genom att installera ett batterilager kan företag lagra energi under lågbelastningstider och använda den vid höga effektuttag, vilket minskar den maximala effekten som tas från elnätet. Detta sänker effektavgifterna och bidrar till en jämnare belastning på elnätet.<br/><br/>Batterilagring är särskilt fördelaktigt för verksamheter med höga och varierande effektbehov, såsom industrier och kommersiella fastigheter. Förutom kostnadsbesparingar kan lösningen också minska behovet av att investera i dyra nätförstärkningar och förbättra elförsörjningens stabilitet.</p>"
+          }
+        },
+        "faq_item_BEFUmc": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Säkerställ driften med batterilagring",
+            "button_text": "Nytt krav",
+            "description": "",
+            "answer": "<p><strong>Reservkraft vid elavbrott<br/><br/></strong>Batterilagring ger företag en pålitlig reservkraft vid elavbrott, vilket minimerar driftstopp och skyddar kritiska system. Till skillnad från dieselaggregat är batterier tysta, underhållsfria och miljövänliga.<br/><br/>De kan dessutom användas för att sänka elkostnader genom lastbalansering och smart energianvändning. Med batterilagring säkerställer du en stabil och kostnadseffektiv energilösning för din verksamhet.</p>"
+          }
+        },
+        "faq_item_eTzHnP": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Skydd mot effekttariffer",
+            "button_text": "Skydd",
+            "description": "",
+            "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning.<br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
+          }
+        },
+        "faq_item_jXTGRa": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Grönare framtid",
+            "button_text": "Miljö",
+            "description": "",
+            "answer": "<p>Förnybar energi är framtiden. Solceller minskar fossilberoendet, sänker utsläpp och sparar pengar. En ren, pålitlig och långsiktig lösning.<br/><br/>Företag som investerar i solenergi och batterilagring stärker sin hållbarhetsprofil, ökar effektiviteten och framtidssäkrar verksamheten. Tillsammans driver vi omställningen mot en fossilfri framtid.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_XVKEjz",
+        "faq_item_BEFUmc",
+        "faq_item_eTzHnP",
+        "faq_item_jXTGRa"
+      ],
+      "name": "FAQ produkter",
+      "settings": {
+        "title": "Varför ska företag energilagra?",
+        "description": "<p>Många diskuterar solceller men varför bör ett företag egentligen installera solceller?</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -228,6 +283,7 @@
     "banner_med_lankar_agkbJm",
     "bild_och_text_knappar_TQdd96",
     "faq_produkt_WAWGp6",
-    "bild_och_text_knappar_T6tiXq"
+    "bild_och_text_knappar_T6tiXq",
+    "faq_produkt_fD68te"
   ]
 }
