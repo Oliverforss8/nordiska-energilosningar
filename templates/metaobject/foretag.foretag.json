@@ -371,31 +371,13 @@
     "faq_produkt_EJBe43": {
       "type": "faq-produkt",
       "blocks": {
-        "faq_item_wfXyz6": {
+        "faq_item_PBBr68": {
           "type": "faq_item",
           "settings": {
-            "question": "Högre fastighetsvärde",
-            "button_text": "Ekonomi",
+            "question": "Från 2025 är laddstolpar obligatoriska",
+            "button_text": "EU-krav",
             "description": "",
-            "answer": "<p><strong>Gör fastigheten mer attraktiv för kunder och köpare</strong><br/><br/>Fastigheter med elbilsladdare blir allt mer efterfrågade då behovet av laddmöjligheter ökar i takt med elbilsutvecklingen. Att investera i laddinfrastruktur gör inte bara fastigheten mer konkurrenskraftig på marknaden, utan kan också bidra till högre hyresintäkter och en bättre uthyrningsgrad. Samtidigt skapar företaget en modern och hållbar arbetsplats som stödjer grön mobilitet och framtidssäkrar verksamheten inför kommande krav och behov.</p>"
-          }
-        },
-        "faq_item_PzKenf": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Framtidssäkra företaget",
-            "button_text": "Framtid",
-            "description": "",
-            "answer": "<p><strong>Undvik dyra efterinstallationer genom att agera i tid.</strong><br/><br/>Laddinfrastruktur blir allt mer en standard snarare än en lyx, och med nya lagkrav och ökad efterfrågan på elbilsladdning är det klokt att agera tidigt. Genom att installera laddboxar nu slipper företag dyra efterinstallationer och kan säkerställa att de uppfyller kommande krav. Detta gör verksamheten mer flexibel och redo för framtidens mobilitet.</p>"
-          }
-        },
-        "faq_item_WNt3nA": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Företag får lägre energikostnader",
-            "button_text": "Ekonomi",
-            "description": "",
-            "answer": "<p>Genom att kombinera solceller med batterilagring kan er verksamhet både producera sin egen el och kapa effekttoppar, vilket minskar elkostnaderna avsevärt. Detta ger en mer hållbar och kostnadseffektiv energiförsörjning samtidigt som beroendet av elnätet minskar.</p>"
+            "answer": "<p><strong>Optimera elkostnader med batterilagring</strong><br/><br/>Genom att utnyttja prisvariationer på elmarknaden kan företag med batterilagring köpa el när priserna är låga och använda eller sälja den när priserna är höga. Detta kallas arbitrage och möjliggör direkta kostnadsbesparingar och intäktsmöjligheter.<br/><br/>Batterilagring ger flexibilitet att anpassa energiförbrukningen efter elmarknadens svängningar och minskar beroendet av dyra elpriser under högbelastningstimmar. Lösningen är särskilt lönsam för verksamheter med hög energiförbrukning och dynamiska energibehov. Dessutom kan den kombineras med egen elproduktion för ytterligare ekonomiska och miljömässiga fördelar.</p>"
           }
         },
         "faq_item_VQ4xNh": {
@@ -407,22 +389,40 @@
             "answer": "<p><strong>Minska kostnaderna för tjänstebilar och fordonsflottan</strong><br/><br/>Att ladda elbilar är betydligt billigare än att tanka bensin eller diesel. Företag med en eldriven fordonsflotta kan sänka sina bränslekostnader avsevärt genom att investera i egna laddstationer och undvika dyra publika laddplatser.</p>"
           }
         },
-        "faq_item_PBBr68": {
+        "faq_item_WNt3nA": {
           "type": "faq_item",
           "settings": {
-            "question": "Från 2025 är laddstolpar obligatoriska",
-            "button_text": "EU-krav",
+            "question": "Företag får lägre energikostnader",
+            "button_text": "Ekonomi",
             "description": "",
-            "answer": "<p><strong>Optimera elkostnader med batterilagring</strong><br/><br/>Genom att utnyttja prisvariationer på elmarknaden kan företag med batterilagring köpa el när priserna är låga och använda eller sälja den när priserna är höga. Detta kallas arbitrage och möjliggör direkta kostnadsbesparingar och intäktsmöjligheter.<br/><br/>Batterilagring ger flexibilitet att anpassa energiförbrukningen efter elmarknadens svängningar och minskar beroendet av dyra elpriser under högbelastningstimmar. Lösningen är särskilt lönsam för verksamheter med hög energiförbrukning och dynamiska energibehov. Dessutom kan den kombineras med egen elproduktion för ytterligare ekonomiska och miljömässiga fördelar.</p>"
+            "answer": "<p>Genom att kombinera solceller med batterilagring kan er verksamhet både producera sin egen el och kapa effekttoppar, vilket minskar elkostnaderna avsevärt. Detta ger en mer hållbar och kostnadseffektiv energiförsörjning samtidigt som beroendet av elnätet minskar.</p>"
+          }
+        },
+        "faq_item_PzKenf": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Framtidssäkra företaget",
+            "button_text": "Framtid",
+            "description": "",
+            "answer": "<p><strong>Undvik dyra efterinstallationer genom att agera i tid.</strong><br/><br/>Laddinfrastruktur blir allt mer en standard snarare än en lyx, och med nya lagkrav och ökad efterfrågan på elbilsladdning är det klokt att agera tidigt. Genom att installera laddboxar nu slipper företag dyra efterinstallationer och kan säkerställa att de uppfyller kommande krav. Detta gör verksamheten mer flexibel och redo för framtidens mobilitet.</p>"
+          }
+        },
+        "faq_item_wfXyz6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Högre fastighetsvärde",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p><strong>Gör fastigheten mer attraktiv för kunder och köpare</strong><br/><br/>Fastigheter med elbilsladdare blir allt mer efterfrågade då behovet av laddmöjligheter ökar i takt med elbilsutvecklingen. Att investera i laddinfrastruktur gör inte bara fastigheten mer konkurrenskraftig på marknaden, utan kan också bidra till högre hyresintäkter och en bättre uthyrningsgrad. Samtidigt skapar företaget en modern och hållbar arbetsplats som stödjer grön mobilitet och framtidssäkrar verksamheten inför kommande krav och behov.</p>"
           }
         }
       },
       "block_order": [
-        "faq_item_wfXyz6",
-        "faq_item_PzKenf",
-        "faq_item_WNt3nA",
+        "faq_item_PBBr68",
         "faq_item_VQ4xNh",
-        "faq_item_PBBr68"
+        "faq_item_WNt3nA",
+        "faq_item_PzKenf",
+        "faq_item_wfXyz6"
       ],
       "name": "FAQ produkter",
       "settings": {
