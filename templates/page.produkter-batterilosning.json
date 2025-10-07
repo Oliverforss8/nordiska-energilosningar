@@ -115,10 +115,10 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_11.png",
+        "background_image": "shopify://shop_images/pixii-batteri-3.jpg",
         "overlay_opacity": 30,
-        "header_button_text": "Läs mer",
-        "header_button_url": "",
+        "header_button_text": "Batterier",
+        "header_button_url": "shopify://collections/batteri",
         "heading": "Vill du veta mer om solceller?",
         "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
         "primary_button_text": "Privat",
