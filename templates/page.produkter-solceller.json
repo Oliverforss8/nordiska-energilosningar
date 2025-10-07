@@ -89,28 +89,28 @@
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Hus.svg",
-            "text": "Ökar värdet på dinbostad"
+            "text": "Ökar värdet på din bostad"
           }
         },
         "feature_gBje4F": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Blixt.svg",
-            "text": "Sänker dinaelkostnader"
+            "text": "Sänker dina elkostnader"
           }
         },
         "feature_EU9MQV": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Ladd.svg",
-            "text": "Låg kostnad för attunderhålla"
+            "text": "Låga underhållskostnader"
           }
         },
         "feature_pEbKNg": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Ladd2.svg",
-            "text": "Ökadsjälvförsörjning"
+            "text": "Ökad självförsörjning"
           }
         }
       },
