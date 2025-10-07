@@ -187,6 +187,25 @@
         "custom_id": ""
       }
     },
+    "banner_bild_mtUYxw": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/image_15.png",
+        "background_color": "#000000",
+        "overlay_opacity": 25,
+        "header_button_text": "Solceller",
+        "header_button_url": "",
+        "heading": "Ladda din elbil med solenergi – direkt från ditt eget tak",
+        "description": "Att kombinera solceller med elbilsladdning hemma är ett smart val för villaägare som vill sänka sina elkostnader och minska sitt klimatavtryck.",
+        "primary_button_text": "Läs mer om solceller",
+        "primary_button_url": "shopify://pages/vara-solceller",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "kontakt_form_MEdRdB": {
       "type": "kontakt-form",
       "blocks": {
@@ -284,6 +303,7 @@
     "banner_med_3_produkter_NwVfdk",
     "avdrag_47f9Td",
     "bild_och_text_knappar_kAcza6",
+    "banner_bild_mtUYxw",
     "kontakt_form_MEdRdB"
   ]
 }
