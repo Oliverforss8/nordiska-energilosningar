@@ -27,6 +27,50 @@
         "button_url": "shopify://collections/batteri"
       }
     },
+    "bild_och_text_knappar_3iKePW": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_zrtRPF": {
+          "type": "button",
+          "settings": {
+            "text": "Slipper köpa el",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_FhgFh4": {
+          "type": "button",
+          "settings": {
+            "text": "Minskade elkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_wcFWiw": {
+          "type": "button",
+          "settings": {
+            "text": "Mindre beroende av elnätet",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_zrtRPF",
+        "button_FhgFh4",
+        "button_wcFWiw"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Bli självförsörjande under mars till oktober",
+        "text": "<p>Med ett batterilager kan du lagra överskottsel från dina solceller och använda den när solen gått ner. Det innebär att du kan minska ditt beroende av elnätet och i stort sett vara självförsörjande under mars–oktober. Med ett batteri för villan har du alltid tillgång till din egenproducerade el när den behövs som bäst.</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "banner_med_3_produkter_tmN89j": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -80,53 +124,6 @@
         "primary_button_url": "",
         "secondary_button_text": "Företag",
         "secondary_button_url": ""
-      }
-    },
-    "icon_ty3fXr": {
-      "type": "icon",
-      "blocks": {
-        "feature_rbUMVj": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Hus.svg",
-            "text": "Ökar värdet på dinbostad"
-          }
-        },
-        "feature_3L3Ank": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Blixt.svg",
-            "text": "Sänker dinaelkostnader"
-          }
-        },
-        "feature_8hYFnP": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Ladd.svg",
-            "text": "Låg kostnad för attunderhålla"
-          }
-        },
-        "feature_V6rCt7": {
-          "type": "feature",
-          "settings": {
-            "image": "shopify://shop_images/Ladd2.svg",
-            "text": "Ökadsjälvförsörjning"
-          }
-        }
-      },
-      "block_order": [
-        "feature_rbUMVj",
-        "feature_3L3Ank",
-        "feature_8hYFnP",
-        "feature_V6rCt7"
-      ],
-      "name": "Icon section",
-      "settings": {
-        "heading": "Fördelar med solceller",
-        "description": "<p>Solceller ger dig billig och ren el direkt från solen. Du blir mer självförsörjande, minskar dina elkostnader och skyddar dig mot stigande elpriser. Dessutom ökar de värdet på din fastighet och kräver minimalt underhåll.</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "bild_och_text_HJKBUV": {
@@ -352,8 +349,8 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
+    "bild_och_text_knappar_3iKePW",
     "banner_med_3_produkter_tmN89j",
-    "icon_ty3fXr",
     "bild_och_text_HJKBUV",
     "banner_bild_gJDBKA",
     "hur_jEzfNm",
