@@ -98,27 +98,27 @@
         "custom_id": ""
       }
     },
-    "avdrag_UJWkJe": {
+    "avdrag_UeYUdn": {
       "type": "avdrag",
       "blocks": {
-        "avdrag_item_6PfkjR": {
+        "avdrag_item_qy3y6p": {
           "type": "avdrag_item",
           "settings": {
-            "text": "15% avdrag för solcellsinstallationer",
+            "text": "15% avdrag för installation av solceller",
             "image": "shopify://shop_images/Hus.svg"
           }
         },
-        "avdrag_item_8TBtda": {
+        "avdrag_item_RBirrk": {
           "type": "avdrag_item",
           "settings": {
-            "text": "50% avdrag för batterilagring",
+            "text": "50% avdrag vid köp av batterilagring",
             "image": "shopify://shop_images/Ladd.svg"
           }
         }
       },
       "block_order": [
-        "avdrag_item_6PfkjR",
-        "avdrag_item_8TBtda"
+        "avdrag_item_qy3y6p",
+        "avdrag_item_RBirrk"
       ],
       "name": "Avdrag",
       "settings": {
@@ -394,7 +394,7 @@
     "lankar_kHPxWD",
     "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
-    "avdrag_UJWkJe",
+    "avdrag_UeYUdn",
     "banner_bild_Tr8FhV",
     "bild_och_text_D9hWE6",
     "grid_omraden_zBziiH",
