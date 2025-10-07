@@ -21,47 +21,51 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_18.png",
         "overlay_opacity": 20,
-        "heading": "Våra solcellslösningar",
-        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
+        "heading": "Funderar du på att investera i solceller?",
+        "subheading": "Vi hjälper dig hela vägen! Från projektering till färdig installation",
         "button_text": "Våra solceller",
         "button_url": "shopify://collections/solceller"
       }
     },
-    "banner_med_3_produkter_HxVFnP": {
+    "banner_med_3_produkter_k9TmHH": {
       "type": "banner-med-3-produkter",
       "blocks": {
-        "product_card_iVqQVd": {
+        "product_card_yXAFHr": {
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
             "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
+            "description": "Perfekt för din villa, stuga eller garage",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "learn_more_url": "shopify://products/solceller-1"
           }
         },
-        "product_card_XciY6V": {
+        "product_card_nzfXwq": {
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
             "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
+            "description": "Perfekt för din villa, stuga eller garage",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "learn_more_url": "shopify://products/solceller-1"
           }
         },
-        "product_card_gaPRNm": {
+        "product_card_C6rRmK": {
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
             "title": "Laddboxar 3",
-            "description": "Avancerad laddning för professionella behov.",
+            "description": "Perfekt för din villa, stuga eller garage",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "learn_more_url": "shopify://products/solceller-1"
           }
         }
       },
-      "block_order": ["product_card_iVqQVd", "product_card_XciY6V", "product_card_gaPRNm"],
+      "block_order": [
+        "product_card_yXAFHr",
+        "product_card_nzfXwq",
+        "product_card_C6rRmK"
+      ],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
@@ -110,7 +114,12 @@
           }
         }
       },
-      "block_order": ["feature_YzaeKt", "feature_gBje4F", "feature_EU9MQV", "feature_pEbKNg"],
+      "block_order": [
+        "feature_YzaeKt",
+        "feature_gBje4F",
+        "feature_EU9MQV",
+        "feature_pEbKNg"
+      ],
       "name": "Icon section",
       "settings": {
         "heading": "Fördelar med solceller",
@@ -170,7 +179,12 @@
           }
         }
       },
-      "block_order": ["step_HcbJqz", "step_TxEikq", "step_x9iFjQ", "step_cFgBdG"],
+      "block_order": [
+        "step_HcbJqz",
+        "step_TxEikq",
+        "step_x9iFjQ",
+        "step_cFgBdG"
+      ],
       "name": "How it works",
       "settings": {
         "heading": "Så här fungerar det",
@@ -213,7 +227,10 @@
           }
         }
       },
-      "block_order": ["avdrag_item_CwEPVk", "avdrag_item_VTmMVG"],
+      "block_order": [
+        "avdrag_item_CwEPVk",
+        "avdrag_item_VTmMVG"
+      ],
       "name": "Avdrag",
       "settings": {
         "custom_id": "",
@@ -250,7 +267,7 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "banner_med_3_produkter_HxVFnP",
+    "banner_med_3_produkter_k9TmHH",
     "icon_NDwUyT",
     "bild_och_text_fF7gV6",
     "hur_KCyVH6",

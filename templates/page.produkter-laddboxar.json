@@ -27,44 +27,44 @@
         "button_url": ""
       }
     },
-    "banner_med_3_produkter_iN36dT": {
+    "banner_med_3_produkter_NwVfdk": {
       "type": "banner-med-3-produkter",
       "blocks": {
-        "product_card_JMzrXX": {
+        "product_card_UD9G6B": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "produkt",
             "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
+            "description": "Laddbox med 3-fas, färdiga för installation",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
         },
-        "product_card_GiXHfA": {
+        "product_card_AertQY": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "produkt",
             "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
+            "description": "Laddbox med 3-fas, färdiga för installation",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
         },
-        "product_card_Jgx9FK": {
+        "product_card_JERkdE": {
           "type": "product_card",
           "settings": {
-            "product": "solceller-1",
+            "product": "produkt",
             "title": "Laddboxar 3",
-            "description": "Avancerad laddning för professionella behov.",
+            "description": "Laddbox med 3-fas, färdiga för installation",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/produkt"
           }
         }
       },
       "block_order": [
-        "product_card_JMzrXX",
-        "product_card_GiXHfA",
-        "product_card_Jgx9FK"
+        "product_card_UD9G6B",
+        "product_card_AertQY",
+        "product_card_JERkdE"
       ],
       "name": "Banner med 3 produkter",
       "settings": {
@@ -161,7 +161,7 @@
   "order": [
     "main",
     "hero_lower_UadDG8",
-    "banner_med_3_produkter_iN36dT",
+    "banner_med_3_produkter_NwVfdk",
     "icon_RN8CC6",
     "bild_och_text_3Kjt7B",
     "bild_och_text_G3CaL6"
