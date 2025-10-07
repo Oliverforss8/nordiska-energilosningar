@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {}
     },
     "offert_forfragan_jgH9z9": {
@@ -38,5 +39,8 @@
       }
     }
   },
-  "order": ["main", "offert_forfragan_jgH9z9"]
+  "order": [
+    "main",
+    "offert_forfragan_jgH9z9"
+  ]
 }
