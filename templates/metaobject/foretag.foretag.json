@@ -177,6 +177,42 @@
         "padding_bottom": 40
       }
     },
+    "lankar_nykFtk": {
+      "type": "lankar",
+      "blocks": {
+        "card_G7dNMw": {
+          "type": "card",
+          "settings": {
+            "heading": "För lantbruk",
+            "description": "Läs mer om våra lösningar för lantbrukare",
+            "link": "shopify://metaobjects/foretag/lantbruk"
+          }
+        },
+        "card_VHWmLM": {
+          "type": "card",
+          "settings": {
+            "heading": "För BRF",
+            "description": "Läs mer om våra lösningar för bostadsrättsföreningar",
+            "link": "shopify://metaobjects/foretag/bostadsrattsforening"
+          }
+        },
+        "card_JDkQ9W": {
+          "type": "card",
+          "settings": {
+            "heading": "Få offert",
+            "description": "Bli kontaktad med ett skräddarsytt erbjudande för ert företag",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_G7dNMw",
+        "card_VHWmLM",
+        "card_JDkQ9W"
+      ],
+      "name": "Länkar sektion",
+      "settings": {}
+    },
     "bild_och_text_knappar_T6tiXq": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -357,6 +393,7 @@
     "banner_med_lankar_agkbJm",
     "bild_och_text_knappar_TQdd96",
     "faq_produkt_WAWGp6",
+    "lankar_nykFtk",
     "bild_och_text_knappar_T6tiXq",
     "faq_produkt_fD68te",
     "bild_och_text_knappar_UM7UeR",
