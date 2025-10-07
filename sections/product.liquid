@@ -53,6 +53,8 @@
           {% endif %}
         </div>
 
+        
+
         {% if product.media.size > 1 %}
           <div class="flex gap-3 overflow-x-auto pb-2">
             {% for media in product.media offset: 1 limit: 4 %}
@@ -68,6 +70,41 @@
                   class: 'image--cover'
                 %}
               </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {%- comment -%} Product-specific reviews under all images (desktop only) {%- endcomment -%}
+        {% if section.blocks.size > 0 %}
+          <div class="hidden md:block">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'product_review' %}
+                  <div
+                    class="mt-[10px] rounded-[10px] bg-[#F3F1E8] p-[16px]"
+                    {{ block.shopify_attributes }}
+                  >
+                    <div class="mb-[8px] flex items-center gap-[4px]">
+                      {% for i in (1..5) %}
+                        {% if i <= block.settings.stars %}
+                          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d='M10 0L12.2451 7.75593H20L13.8775 12.4881L16.1226 20.2441L10 15.5119L3.87744 20.2441L6.12256 12.4881L0 7.75593H7.75493L10 0Z' fill='#EBCF2F'/>
+                          </svg>
+                        {% else %}
+                          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                            <path d='M10 0L12.2451 7.75593H20L13.8775 12.4881L16.1226 20.2441L10 15.5119L3.87744 20.2441L6.12256 12.4881L0 7.75593H7.75493L10 0Z' fill='#E5E5E5'/>
+                          </svg>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                    {% if block.settings.review_text != blank %}
+                      <div class="body1 mb-[6px] text-[14px] text-[#171717]/80">“{{ block.settings.review_text }}”</div>
+                    {% endif %}
+                    {% if block.settings.customer_name != blank %}
+                      <div class="body1 text-[14px] text-[#171717]">- {{ block.settings.customer_name }}</div>
+                    {% endif %}
+                  </div>
+              {% endcase %}
             {% endfor %}
           </div>
         {% endif %}
@@ -1376,6 +1413,32 @@
           "id": "upsell_description",
           "label": "Beskrivning",
           "info": "Förklara varför kunden bör lägga till denna produkt"
+        }
+      ]
+    },
+    {
+      "type": "product_review",
+      "name": "Produktrecension",
+      "settings": [
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Antal stjärnor",
+          "min": 1,
+          "max": 5,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Recensionstext",
+          "default": "Fantastisk kvalitet och snabb leverans."
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Kundnamn",
+          "default": "Kundnamn"
         }
       ]
     }
