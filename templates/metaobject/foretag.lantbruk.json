@@ -14,10 +14,10 @@
       "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/images.webp",
-        "overlay_opacity": 20,
-        "heading": "Minska elkostnaderna och stärk föreningens framtid",
-        "subheading": "Att installera energilösningar är inte bara ett sätt att sänka elräkningen – det är ett strategiskt beslut som gör föreningen mer ekonomiskt stabil, energismart och framtidsorienterad.",
+        "background_image": "shopify://shop_images/image_11.png",
+        "overlay_opacity": 30,
+        "heading": "Sänk elkostnaderna på gården med energilösningar",
+        "subheading": "Börja producera och lagra din egna gröna el och betala mindre i elräkning",
         "button_text": "Be om offert",
         "button_url": ""
       }
@@ -57,10 +57,66 @@
       ],
       "name": "Länkar sektion",
       "settings": {}
+    },
+    "banner_med_lankar_4QUT3x": {
+      "type": "banner-med-lankar",
+      "blocks": {
+        "card_XAiHbr": {
+          "type": "card",
+          "settings": {
+            "heading": "Solceller",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#f3f1e8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_ypN4xf": {
+          "type": "card",
+          "settings": {
+            "heading": "Batterier",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#f3f1e8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_aAJ69N": {
+          "type": "card",
+          "settings": {
+            "heading": "Laddboxar",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#f3f1e8",
+            "card_text_color": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "card_XAiHbr",
+        "card_ypN4xf",
+        "card_aAJ69N"
+      ],
+      "name": "Banner med länkar",
+      "settings": {
+        "background_color": "#171717",
+        "background_image": "shopify://shop_images/Svea_Solar_-_Komatsu_Umea_-_2022-.2e16d0ba.fill-1200x630.jpg",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "header_button_text": "För företag",
+        "header_button_url": "",
+        "heading": "Vi är experter på helhetslösningar inom energi",
+        "description": "Vi hjälper företag att optimera sin energianvändning.",
+        "primary_button_text": "Be om offert",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
     "hero_lower_6X9dhE",
-    "lankar_tGAxqY"
+    "lankar_tGAxqY",
+    "banner_med_lankar_4QUT3x"
   ]
 }
