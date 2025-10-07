@@ -109,6 +109,95 @@
         "image_button_link": "shopify://products/solceller-1",
         "custom_id": ""
       }
+    },
+    "kontakt_form_MEdRdB": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_7LpkGt": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_YM9MR8": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_tJhNbF": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_6ximdV": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_3aCw3e": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_UD6agY": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        },
+        "service_option_zAdVtf": {
+          "type": "service_option",
+          "settings": {
+            "label": "Frågor",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_7LpkGt",
+        "form_field_YM9MR8",
+        "form_field_tJhNbF",
+        "form_field_6ximdV",
+        "service_option_3aCw3e",
+        "service_option_UD6agY",
+        "service_option_zAdVtf"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta kontakt med oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
@@ -116,6 +205,7 @@
     "hero_lower_UadDG8",
     "banner_med_3_produkter_NwVfdk",
     "bild_och_text_3Kjt7B",
-    "bild_och_text_G3CaL6"
+    "bild_och_text_G3CaL6",
+    "kontakt_form_MEdRdB"
   ]
 }
