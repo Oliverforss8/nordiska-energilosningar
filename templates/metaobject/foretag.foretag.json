@@ -260,13 +260,23 @@
             "description": "",
             "answer": "<p><strong>Minska fasta elkostnader med batterilagring<br/><br/></strong>Genom att använda ett batterilager kan företag jämna ut sitt effektuttag och minska de högsta belastningstopparna. Detta skapar möjlighet att sänka huvudsäkringen och därmed de fasta nätavgifterna, vilket leder till långsiktiga kostnadsbesparingar.<br/><br/>Batterilagring gör det möjligt att lagra energi under lågbelastade perioder och använda den när behovet ökar, utan att överskrida huvudsäkringens kapacitet. Detta är särskilt fördelaktigt för verksamheter med varierande effektbehov och kan minska behovet av dyra nätförstärkningar.</p>"
           }
+        },
+        "faq_item_EnQfpk": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Arbitrage på elhandel",
+            "button_text": "Arbitrage",
+            "description": "",
+            "answer": "<p><strong>Optimera elkostnader med batterilagring</strong><br/><br/>Genom att utnyttja prisvariationer på elmarknaden kan företag med batterilagring köpa el när priserna är låga och använda eller sälja den när priserna är höga. Detta kallas arbitrage och möjliggör direkta kostnadsbesparingar och intäktsmöjligheter.<br/><br/>Batterilagring ger flexibilitet att anpassa energiförbrukningen efter elmarknadens svängningar och minskar beroendet av dyra elpriser under högbelastningstimmar. Lösningen är särskilt lönsam för verksamheter med hög energiförbrukning och dynamiska energibehov. Dessutom kan den kombineras med egen elproduktion för ytterligare ekonomiska och miljömässiga fördelar.</p>"
+          }
         }
       },
       "block_order": [
         "faq_item_XVKEjz",
         "faq_item_BEFUmc",
         "faq_item_eTzHnP",
-        "faq_item_jXTGRa"
+        "faq_item_jXTGRa",
+        "faq_item_EnQfpk"
       ],
       "name": "FAQ produkter",
       "settings": {
