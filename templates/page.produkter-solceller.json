@@ -146,28 +146,28 @@
     "hur_KCyVH6": {
       "type": "hur",
       "blocks": {
+        "step_HcbJqz": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector_7.svg",
+            "title": "1. Boka tid",
+            "description": "<p>Kontakta oss idag ör ett möte där vi analyserar</p>"
+          }
+        },
         "step_TxEikq": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/person.svg",
-            "title": "1. Offert",
-            "description": "<p>Du ber om en offert och inväntar ett erbjudande</p>"
-          }
-        },
-        "step_HcbJqz": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Vector-1.svg",
-            "title": "2. Godkännande",
-            "description": "<p>Vi inväntar ditt beslut innan vi påbörjar arbetet</p>"
+            "title": "2. Träffa oss",
+            "description": "<p>Våra experter skräddarsyr en lösning och presenterar en offert.</p>"
           }
         },
         "step_x9iFjQ": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/Vector.svg",
-            "title": "3. Leverans & installation",
-            "description": "<p>När offertet är godkänd levererar och installera vi</p>"
+            "title": "3. Installation",
+            "description": "<p>Vi hanterar allt – från montering till färdig anläggning.</p>"
           }
         },
         "step_cFgBdG": {
@@ -180,8 +180,8 @@
         }
       },
       "block_order": [
-        "step_TxEikq",
         "step_HcbJqz",
+        "step_TxEikq",
         "step_x9iFjQ",
         "step_cFgBdG"
       ],
