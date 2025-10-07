@@ -19,7 +19,7 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_14.png",
+        "background_image": "shopify://shop_images/qyymok2yfx8.webp",
         "overlay_opacity": 20,
         "heading": "Laddboxar för hemmet",
         "subheading": "Behöver du ladda bilen hemma? \nVi har laddboxen som passar just ditt hem och din bil.",
@@ -70,15 +70,15 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_11.png",
+        "background_image": "shopify://shop_images/image_14.png",
         "overlay_opacity": 30,
-        "header_button_text": "Läs mer",
-        "header_button_url": "",
-        "heading": "Vill du veta mer om solceller?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
-        "primary_button_text": "Privat",
-        "primary_button_url": "",
-        "secondary_button_text": "Företag",
+        "header_button_text": "Laddoxar",
+        "header_button_url": "shopify://collections/laddboxar",
+        "heading": "Upptäck vårt utbud av laddboxar",
+        "description": "Vi har garanterat en laddbox som passar både ditt hem och bilen perfekt!",
+        "primary_button_text": "Våra laddboxar",
+        "primary_button_url": "shopify://collections/laddboxar",
+        "secondary_button_text": "",
         "secondary_button_url": ""
       }
     },
