@@ -23,7 +23,7 @@
         "overlay_opacity": 20,
         "heading": "Lagra din solengeri",
         "subheading": "Funderar du på att investera i batterilagring?\nVi hjälper dig hela vägen, från rätt dimensionering till färdig installation!",
-        "button_text": "Se våra batterier",
+        "button_text": "Våra batterier",
         "button_url": "shopify://collections/batteri"
       }
     },
@@ -61,7 +61,11 @@
           }
         }
       },
-      "block_order": ["product_card_h6f6wr", "product_card_acNTbf", "product_card_KmdwjF"],
+      "block_order": [
+        "product_card_h6f6wr",
+        "product_card_acNTbf",
+        "product_card_KmdwjF"
+      ],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
@@ -110,7 +114,12 @@
           }
         }
       },
-      "block_order": ["feature_rbUMVj", "feature_3L3Ank", "feature_8hYFnP", "feature_V6rCt7"],
+      "block_order": [
+        "feature_rbUMVj",
+        "feature_3L3Ank",
+        "feature_8hYFnP",
+        "feature_V6rCt7"
+      ],
       "name": "Icon section",
       "settings": {
         "heading": "Fördelar med solceller",
@@ -170,7 +179,12 @@
           }
         }
       },
-      "block_order": ["step_cdyeXy", "step_J48fxk", "step_9nP6Cw", "step_kyRdCf"],
+      "block_order": [
+        "step_cdyeXy",
+        "step_J48fxk",
+        "step_9nP6Cw",
+        "step_kyRdCf"
+      ],
       "name": "How it works",
       "settings": {
         "heading": "Så här fungerar det",
@@ -199,7 +213,10 @@
           }
         }
       },
-      "block_order": ["avdrag_item_EXmf8T", "avdrag_item_Rhxkyf"],
+      "block_order": [
+        "avdrag_item_EXmf8T",
+        "avdrag_item_Rhxkyf"
+      ],
       "name": "Avdrag",
       "settings": {
         "custom_id": "",
