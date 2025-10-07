@@ -195,17 +195,30 @@
         "secondary_button_url": ""
       }
     },
-    "bild_och_text_fe37pr": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "bild_och_text_knappar_hd7RJH": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_7m9wVQ": {
+          "type": "button",
+          "settings": {
+            "text": "Trygg drift",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_7m9wVQ"
+      ],
+      "name": "Bild och text med knappar",
       "settings": {
         "title": "Teckna serviceavtal",
-        "text": "<p>Serviceavtal för trygg och långsiktig drift. Oavsett om din installation är utförd av oss eller av en annan leverantör kan du teckna ett serviceavtal som säkerställer långsiktig trygghet och optimal funktion i ditt system.<br/><br/>När installationsgarantin löper ut erbjuder vi ett extra skydd – särskilt värdefullt för bostadsrättsföreningar, företag och privata fastighetsägare.<br/>Våra flexibla serviceavtal är utformade för att ge dig ökad säkerhet, driftsäkerhet och maximal avkastning på din investering.</p>",
+        "text": "<p>Teckna serviceavtal för trygg och effektiv drift. Oavsett vem som installerat ditt system ger våra avtal långsiktig säkerhet och optimal funktion. När garantin löper ut erbjuder vi extra skydd, särskilt för företag, bostadsrättsföreningar och fastighetsägare. Våra flexibla avtal maximerar både driftsäkerhet och avkastning.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/man-worker-firld-by-solar-panels.jpg",
+        "image": "shopify://shop_images/solceller-section3-img-1920.webp",
         "image_position": "left",
         "image_button_text": "Teckna avtal",
-        "image_button_link": "shopify://pages/contact",
+        "image_button_link": "shopify://pages/offert-forfragan",
         "custom_id": ""
       }
     },
@@ -271,7 +284,7 @@
     "icon_NDwUyT",
     "bild_och_text_fF7gV6",
     "hur_KCyVH6",
-    "bild_och_text_fe37pr",
+    "bild_och_text_knappar_hd7RJH",
     "avdrag_cwFWrR",
     "bild_och_text_k67Awi",
     "kontakt_form_chLN6N"
