@@ -433,23 +433,13 @@
         "padding_bottom": 40
       }
     },
-    "banner_bild_ErcDiP": {
-      "type": "banner-bild",
-      "name": "Banner bild",
+    "kontakt_form_zCEaqe": {
+      "type": "kontakt-form",
+      "name": "Contact Form",
       "settings": {
-        "media_type": "image",
-        "background_image": "shopify://shop_images/c155352ccc12fefddc4105b3e626dacb90fb5c3b.png",
-        "background_color": "#000000",
-        "overlay_opacity": 20,
-        "header_button_text": "Ditt nästa steg",
-        "header_button_url": "",
-        "heading": "Energieffektivera er verksamhet",
-        "description": "Vill du få riktig experthjälp och hitta en perfekt lösning för ert företag?",
-        "primary_button_text": "Få en offert",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
+        "heading": "Ta kontakt med oss",
+        "header_button_text": "",
+        "header_button_url": ""
       }
     }
   },
@@ -463,6 +453,6 @@
     "faq_produkt_fD68te",
     "bild_och_text_knappar_UM7UeR",
     "faq_produkt_EJBe43",
-    "banner_bild_ErcDiP"
+    "kontakt_form_zCEaqe"
   ]
 }
