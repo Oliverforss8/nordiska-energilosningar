@@ -29,10 +29,41 @@
     },
     "bild_och_text_knappar_gVCNFB": {
       "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_FrMbiL": {
+          "type": "button",
+          "settings": {
+            "text": "Minskade kostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_JetyE7": {
+          "type": "button",
+          "settings": {
+            "text": "Värme året om",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_QmcKmh": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_FrMbiL",
+        "button_JetyE7",
+        "button_QmcKmh"
+      ],
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Varför installera värmepump?",
-        "text": "<p>Nordiska Energilösningar är stolt installationspartner till Affärsverken i Karlskrona. Tillsammans levererar vi framtidens energilösningar och omvandlar solens strålar till ren, förnybar energi som minskar utsläpp och ökar effektiviteten. Samarbetet stärker Karlskronas energiinfrastruktur och driver regionen mot en fossilfri framtid.</p>",
+        "text": "<p>Att installera värmepump är ett smart sätt att sänka energikostnader och minska klimatpåverkan. Genom att utnyttja energi från luft, mark eller vatten får du effektiv och stabil värme året runt. Samtidigt höjer du fastighetens värde och investerar i en hållbar framtid.</p>",
         "media_type": "image",
         "image": "shopify://shop_images/Aero-innedel_miljo_koncept2024.png",
         "image_position": "right",
