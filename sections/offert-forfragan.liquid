@@ -655,34 +655,32 @@
       "unit": "%"
     }
   ],
-  "default": {
-    "blocks": [
-      {
-        "type": "form_field",
-        "settings": { "label": "För- & efternamn", "field_type": "text", "required": true }
-      },
-      {
-        "type": "form_field",
-        "settings": { "label": "E‑postadress", "field_type": "email", "required": true }
-      },
-      {
-        "type": "form_field",
-        "settings": {
-          "label": "Telefonnummer",
-          "field_type": "tel",
-          "required": false,
-          "pattern": "^[0-9\\- +()]*$"
-        }
-      },
-      {
-        "type": "form_field",
-        "settings": { "label": "Adress", "field_type": "text", "required": false }
-      }
-    ]
-  },
   "presets": [
     {
-      "name": "Offertförfrågan"
+      "name": "Offertförfrågan",
+      "blocks": [
+        {
+          "type": "form_field",
+          "settings": { "label": "För- & efternamn", "field_type": "text", "required": true }
+        },
+        {
+          "type": "form_field",
+          "settings": { "label": "E‑postadress", "field_type": "email", "required": true }
+        },
+        {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "field_type": "tel",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$"
+          }
+        },
+        {
+          "type": "form_field",
+          "settings": { "label": "Adress", "field_type": "text", "required": false }
+        }
+      ]
     }
   ]
 }
