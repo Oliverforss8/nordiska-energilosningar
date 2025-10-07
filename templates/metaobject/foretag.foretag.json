@@ -77,51 +77,6 @@
         "secondary_button_url": ""
       }
     },
-    "bild_och_text_knappar_TQdd96": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_JLaLAc": {
-          "type": "button",
-          "settings": {
-            "text": "Ökat fastighetsvärde",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_mJ8C6b": {
-          "type": "button",
-          "settings": {
-            "text": "Installation",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_yfdtqw": {
-          "type": "button",
-          "settings": {
-            "text": "Garanti",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_JLaLAc",
-        "button_mJ8C6b",
-        "button_yfdtqw"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Solceller för företag",
-        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/image_19.png",
-        "image_position": "left",
-        "image_button_text": "Gå vidare",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "faq_produkt_WAWGp6": {
       "type": "faq-produkt",
       "blocks": {
@@ -241,6 +196,51 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_knappar_UM7UeR": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_t3rhnM": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra energi",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_M4kEnx": {
+          "type": "button",
+          "settings": {
+            "text": "Sänkta elkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_tijfed": {
+          "type": "button",
+          "settings": {
+            "text": "Optimerar solceller",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_t3rhnM",
+        "button_M4kEnx",
+        "button_tijfed"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Energilagring till företag",
+        "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "faq_produkt_fD68te": {
       "type": "faq-produkt",
       "blocks": {
@@ -305,6 +305,51 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "bild_och_text_knappar_TQdd96": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_JLaLAc": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_mJ8C6b": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_yfdtqw": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_JLaLAc",
+        "button_mJ8C6b",
+        "button_yfdtqw"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Solceller för företag",
+        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_19.png",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -312,8 +357,9 @@
     "banner_med_lankar_agkbJm",
     "bild_och_text_knappar_TQdd96",
     "faq_produkt_WAWGp6",
-    "banner_bild_ErcDiP",
     "bild_och_text_knappar_T6tiXq",
-    "faq_produkt_fD68te"
+    "faq_produkt_fD68te",
+    "bild_och_text_knappar_UM7UeR",
+    "banner_bild_ErcDiP"
   ]
 }
