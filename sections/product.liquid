@@ -8,7 +8,7 @@
   class="{{ section_class }} "
 >
   <div class="layout pt-[100px] md:pt-[150px] ">
-    <div class="headline1 pb-[60px] text-[20px] font-[300]">
+    <div class="headline1 pb-[60px] text-[20px] font-[300] md:sticky md:top-[150px] md:w-auto md:self-start">
       <nav aria-label="Breadcrumb">
         <a href="{{ routes.root_url }}" class="text-[#171717] transition-opacity hover:opacity-70">
           Hem
@@ -36,7 +36,7 @@
     </div>
     <div class="flex flex-col gap-[30px] md:flex-row md:gap-[50px]">
       <!-- Product Images -->
-      <div class="w-full space-y-4 md:w-auto">
+      <div class="w-full space-y-4 md:sticky md:top-[190px] md:w-auto md:self-start">
         <div class="flex rounded-[15px] bg-[#F6F6F6] px-[20px] py-[20px] md:px-[90px] md:py-[40px]">
           {% if product.featured_media %}
             <div
@@ -201,27 +201,39 @@
                             {% assign target_variant = upsell_product.selected_or_first_available_variant %}
                             {% if block.settings.upsell_variant_id != blank %}
                               {% comment %} Try to find by exact ID first {% endcomment %}
-                              {% assign found_variant = upsell_product.variants | where: 'id', block.settings.upsell_variant_id | first %}
+                              {% assign found_variant = upsell_product.variants
+                                | where: 'id', block.settings.upsell_variant_id
+                                | first
+                              %}
                               {% if found_variant %}
                                 {% assign target_variant = found_variant %}
                               {% else %}
                                 {% comment %} Try to find by SKU {% endcomment %}
-                                {% assign found_variant = upsell_product.variants | where: 'sku', block.settings.upsell_variant_id | first %}
+                                {% assign found_variant = upsell_product.variants
+                                  | where: 'sku', block.settings.upsell_variant_id
+                                  | first
+                                %}
                                 {% if found_variant %}
                                   {% assign target_variant = found_variant %}
                                 {% else %}
                                   {% comment %} Try to find by title {% endcomment %}
-                                  {% assign found_variant = upsell_product.variants | where: 'title', block.settings.upsell_variant_id | first %}
+                                  {% assign found_variant = upsell_product.variants
+                                    | where: 'title', block.settings.upsell_variant_id
+                                    | first
+                                  %}
                                   {% if found_variant %}
                                     {% assign target_variant = found_variant %}
                                   {% endif %}
                                 {% endif %}
                               {% endif %}
                             {% endif %}
-                            <div class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]" {{ block.shopify_attributes }} >
+                            <div
+                              class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]"
+                              {{ block.shopify_attributes }}
+                            >
                               <div class="flex flex-col gap-[20px]">
                                 <!-- Header with checkbox -->
-                                <div class="flex items-start justify-between gap-[15px]" >
+                                <div class="flex items-start justify-between gap-[15px]">
                                   <div class="flex items-start gap-[15px]">
                                     <input
                                       type="checkbox"
@@ -231,9 +243,15 @@
                                       data-variant-id="{{ target_variant.id }}"
                                       data-price="{{ target_variant.price }}"
                                     >
-                                    <label for="upsell-{{ upsell_product.id }}" class="cursor-pointer">
+                                    <label
+                                      for="upsell-{{ upsell_product.id }}"
+                                      class="cursor-pointer"
+                                    >
                                       <div class="headline1 text-[20px] md:text-[24px]">
-                                        {{ block.settings.upsell_title | default: upsell_product.title }}
+                                        {{
+                                          block.settings.upsell_title
+                                          | default: upsell_product.title
+                                        }}
                                       </div>
                                       {% if block.settings.upsell_description != blank %}
                                         <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
@@ -243,7 +261,11 @@
                                     </label>
                                   </div>
                                   <div class="headline1 text-[18px] md:text-[20px]">
-                                    <span class="upsell-price "  data-currency="SEK" data-product-id="{{ upsell_product.id }}">
+                                    <span
+                                      class="upsell-price "
+                                      data-currency="SEK"
+                                      data-product-id="{{ upsell_product.id }}"
+                                    >
                                       +{{ target_variant.price | money }}
                                     </span>
                                   </div>
@@ -272,20 +294,37 @@
                                     {% endif %}
                                     {% unless upsell_product.has_only_default_variant %}
                                       <div class="mt-[10px]">
-                                        <label class="sr-only" for="upsell-variant-{{ upsell_product.id }}">Välj variant</label>
+                                        <label
+                                          class="sr-only"
+                                          for="upsell-variant-{{ upsell_product.id }}"
+                                          >Välj variant</label
+                                        >
                                         <select
                                           id="upsell-variant-{{ upsell_product.id }}"
-                                          class="upsell-variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] md:text-[16px] focus:outline-none"    style="  border: 1px solid #171717 !important; "
+                                          class="upsell-variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] focus:outline-none md:text-[16px]"
+                                          style="  border: 1px solid #171717 !important; "
                                           data-product-id="{{ upsell_product.id }}"
                                         >
                                           {% for v in upsell_product.variants %}
                                             <option
                                               value="{{ v.id }}"
                                               data-price="{{ v.price }}"
-                                              {% if v.id == target_variant.id %}selected{% endif %}
-                                              {% unless v.available %}disabled{% endunless %}
+                                              {% if v.id == target_variant.id %}
+                                                selected
+                                              {% endif %}
+                                              {% unless v.available %}
+                                                disabled
+                                              {% endunless %}
                                             >
-                                              {{ v.title }}{% unless v.available %} - {{ 'products.product.sold_out' | t | default: 'Slut i lager' }}{% endunless %}
+                                              {{ v.title -}}
+                                              {%- unless v.available %}
+                                                -
+                                                {{
+                                                  'products.product.sold_out'
+                                                  | t
+                                                  | default: 'Slut i lager'
+                                                -}}
+                                              {%- endunless %}
                                             </option>
                                           {% endfor %}
                                         </select>
@@ -302,7 +341,9 @@
                 {% endif %}
 
                 <!-- Installation Option -->
-                {% if section.settings.show_installation and section.settings.installation_product != blank %}
+                {% if section.settings.show_installation
+                  and section.settings.installation_product != blank
+                %}
                   {% assign installation_product = section.settings.installation_product %}
                   <div class="installation-wrapper pt-[15px]">
                     <div class="installation-card rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]">
@@ -318,7 +359,10 @@
                           >
                           <label for="installation-checkbox" class="cursor-pointer">
                             <div class="headline1 text-[20px] md:text-[24px]">
-                              {{ section.settings.installation_title | default: installation_product.title }}
+                              {{
+                                section.settings.installation_title
+                                | default: installation_product.title
+                              }}
                             </div>
                             {% if section.settings.installation_description != blank %}
                               <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
@@ -344,7 +388,7 @@
                       <div class="headline1 mb-[15px] text-[18px] md:text-[20px]">
                         Välj grönt avdrag
                       </div>
-                      
+
                       <!-- Grönt avdrag 1 -->
                       <div class="green-deduction-option mb-[15px] flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
                         <input
@@ -355,8 +399,11 @@
                           data-discount-code="AVDRAG1"
                         >
                         <label for="green-deduction-1" class="flex-1 cursor-pointer">
-                          <div class="body1 font-medium text-[16px] md:text-[18px]">
-                            {{ section.settings.green_deduction_1_title | default: 'Grönt avdrag 1' }}
+                          <div class="body1 text-[16px] font-medium md:text-[18px]">
+                            {{
+                              section.settings.green_deduction_1_title
+                              | default: 'Grönt avdrag 1'
+                            }}
                           </div>
                           {% if section.settings.green_deduction_1_description != blank %}
                             <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
@@ -379,8 +426,11 @@
                           data-discount-code="AVDRAG2"
                         >
                         <label for="green-deduction-2" class="flex-1 cursor-pointer">
-                          <div class="body1 font-medium text-[16px] md:text-[18px]">
-                            {{ section.settings.green_deduction_2_title | default: 'Grönt avdrag 2' }}
+                          <div class="body1 text-[16px] font-medium md:text-[18px]">
+                            {{
+                              section.settings.green_deduction_2_title
+                              | default: 'Grönt avdrag 2'
+                            }}
                           </div>
                           {% if section.settings.green_deduction_2_description != blank %}
                             <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
@@ -925,7 +975,7 @@
   /* Installation Card Styling */
   .installation-card {
     transition: all 0.3s ease;
-    background-color: #F3F1E8;
+    background-color: #f3f1e8;
   }
 
   .installation-card:hover {
@@ -933,8 +983,8 @@
   }
 
   .installation-card:has(.installation-checkbox:checked) {
-    background-color: #F3F1E8;
-    border-color: #EBCF2F;
+    background-color: #f3f1e8;
+    border-color: #ebcf2f;
     border-width: 2px;
   }
 
@@ -973,491 +1023,491 @@
 
 <!-- Generate product media data -->
 <script type="application/json" id="product-media-data">
-[
-  {% for media in product.media %}
-    {
-      "id": {{ media.id }},
-      "alt": {{ media.alt | default: product.title | json }},
-      "src": {{ media | image_url: width: 600 | json }},
-      "isFeatured": {% if forloop.first %}true{% else %}false{% endif %}
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-]
+  [
+    {% for media in product.media %}
+      {
+        "id": {{ media.id }},
+        "alt": {{ media.alt | default: product.title | json }},
+        "src": {{ media | image_url: width: 600 | json }},
+        "isFeatured": {% if forloop.first %}true{% else %}false{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
 </script>
 
 <!-- Generate product variants data -->
 <script type="application/json" id="product-variants-data">
-{{ product.variants | json }}
+  {{ product.variants | json }}
 </script>
 
 {% comment %} Load extracted product.js {% endcomment %}
 <script src="{{ 'product.js' | asset_url }}" defer></script>
 {% comment %}
-{% javascript %}
-  // Global dropdown toggle function for mobile-friendly interaction
-  function toggleDropdown(contentId, trigger) {
-    const content = document.getElementById(contentId);
-    const icon = trigger.querySelector('.dropdown-icon');
+  {% javascript %}
+    // Global dropdown toggle function for mobile-friendly interaction
+    function toggleDropdown(contentId, trigger) {
+      const content = document.getElementById(contentId);
+      const icon = trigger.querySelector('.dropdown-icon');
 
-    if (content.style.display === 'none' || content.style.display === '') {
-      content.style.display = 'block';
-      content.classList.add('show');
-      trigger.classList.add('active');
-    } else {
-      content.style.display = 'none';
-      content.classList.remove('show');
-      trigger.classList.remove('active');
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        content.classList.add('show');
+        trigger.classList.add('active');
+      } else {
+        content.style.display = 'none';
+        content.classList.remove('show');
+        trigger.classList.remove('active');
+      }
     }
-  }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Variant Selection Logic
-    const variantSelects = document.querySelectorAll('.variant-select');
-    const buyNowBtn = document.querySelector('.buy-now-btn');
-    const addToCartBtn = document.querySelector('.add-to-cart-btn');
-    const priceDisplay = document.getElementById('current-price');
-    const comparePriceDisplay = document.getElementById('compare-price');
+    document.addEventListener('DOMContentLoaded', function() {
+      // Variant Selection Logic
+      const variantSelects = document.querySelectorAll('.variant-select');
+      const buyNowBtn = document.querySelector('.buy-now-btn');
+      const addToCartBtn = document.querySelector('.add-to-cart-btn');
+      const priceDisplay = document.getElementById('current-price');
+      const comparePriceDisplay = document.getElementById('compare-price');
 
-    // Product variants data
-    const productVariantsRaw = document.getElementById('product-variants-data');
-    const productVariants = productVariantsRaw ? JSON.parse(productVariantsRaw.textContent) : [];
+      // Product variants data
+      const productVariantsRaw = document.getElementById('product-variants-data');
+      const productVariants = productVariantsRaw ? JSON.parse(productVariantsRaw.textContent) : [];
 
-    // Function to find matching variant based on selected options
-    function findMatchingVariant() {
-      const selectedOptions = {};
-      
-      // Get selected values by position (option1, option2, option3)
-      variantSelects.forEach(select => {
-        const position = select.dataset.optionPosition;
-        selectedOptions['option' + position] = select.value;
-      });
+      // Function to find matching variant based on selected options
+      function findMatchingVariant() {
+        const selectedOptions = {};
 
-      // Find variant where all options match
-      return productVariants.find(variant => {
-        return Object.keys(selectedOptions).every(optionKey => {
-          return variant[optionKey] === selectedOptions[optionKey];
+        // Get selected values by position (option1, option2, option3)
+        variantSelects.forEach(select => {
+          const position = select.dataset.optionPosition;
+          selectedOptions['option' + position] = select.value;
         });
-      });
-    }
 
-    // Function to update variant
-    function updateVariant() {
-      const selectedVariant = findMatchingVariant();
-      
-      if (selectedVariant) {
-        console.log('Selected variant:', selectedVariant.id, selectedVariant.title);
-        
-        // Update button data attributes
-        if (buyNowBtn) {
-          buyNowBtn.setAttribute('data-variant-id', selectedVariant.id);
-        }
-        if (addToCartBtn) {
-          addToCartBtn.setAttribute('data-variant-id', selectedVariant.id);
-        }
+        // Find variant where all options match
+        return productVariants.find(variant => {
+          return Object.keys(selectedOptions).every(optionKey => {
+            return variant[optionKey] === selectedOptions[optionKey];
+          });
+        });
+      }
 
-        // Update price display
-        if (priceDisplay) {
-          priceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
-            style: 'currency',
-            currency: 'SEK'
-          }).format(selectedVariant.price / 100);
-        }
+      // Function to update variant
+      function updateVariant() {
+        const selectedVariant = findMatchingVariant();
 
-        // Update compare price
-        if (comparePriceDisplay) {
-          if (selectedVariant.compare_at_price && selectedVariant.compare_at_price > selectedVariant.price) {
-            comparePriceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
+        if (selectedVariant) {
+          console.log('Selected variant:', selectedVariant.id, selectedVariant.title);
+
+          // Update button data attributes
+          if (buyNowBtn) {
+            buyNowBtn.setAttribute('data-variant-id', selectedVariant.id);
+          }
+          if (addToCartBtn) {
+            addToCartBtn.setAttribute('data-variant-id', selectedVariant.id);
+          }
+
+          // Update price display
+          if (priceDisplay) {
+            priceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
               style: 'currency',
               currency: 'SEK'
-            }).format(selectedVariant.compare_at_price / 100);
-            comparePriceDisplay.style.display = 'inline';
-          } else {
-            comparePriceDisplay.style.display = 'none';
+            }).format(selectedVariant.price / 100);
           }
-        }
 
-        // Update URL
-        const newUrl = new URL(window.location.href);
-        newUrl.searchParams.set('variant', selectedVariant.id);
-        window.history.replaceState({}, '', newUrl);
-        console.log('Updated URL to:', newUrl.toString());
-      } else {
-        console.log('No matching variant found');
-      }
-    }
-
-    // Add change listeners to variant selects
-    variantSelects.forEach(select => {
-      select.addEventListener('change', updateVariant);
-    });
-
-    const mainImageContainer = document.getElementById('main-product-image');
-    const thumbnails = document.querySelectorAll('[data-thumbnail]');
-
-    if (mainImageContainer && thumbnails.length > 0) {
-      // Store all product media for easy access
-      const productMediaRaw = document.getElementById('product-media-data');
-      const productMedia = productMediaRaw ? JSON.parse(productMediaRaw.textContent) : [];
-
-      // Function to update main image
-      function updateMainImage(mediaId) {
-        const media = productMedia.find(m => m.id === mediaId);
-        if (!media) return;
-
-        // Update the image source
-        const img = mainImageContainer.querySelector('img');
-        if (img) {
-          img.src = media.src;
-          img.alt = media.alt;
-        }
-
-        // Update active thumbnail
-        thumbnails.forEach(thumb => {
-          thumb.classList.remove('active');
-          if (parseInt(thumb.dataset.mediaId) === mediaId) {
-            thumb.classList.add('active');
+          // Update compare price
+          if (comparePriceDisplay) {
+            if (selectedVariant.compare_at_price && selectedVariant.compare_at_price > selectedVariant.price) {
+              comparePriceDisplay.textContent = new Intl.NumberFormat('sv-SE', {
+                style: 'currency',
+                currency: 'SEK'
+              }).format(selectedVariant.compare_at_price / 100);
+              comparePriceDisplay.style.display = 'inline';
+            } else {
+              comparePriceDisplay.style.display = 'none';
+            }
           }
-        });
-      }
 
-      // Add click listeners to thumbnails
-      thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
-          const mediaId = parseInt(this.dataset.mediaId);
-          updateMainImage(mediaId);
-        });
-      });
-
-      // Set initial active state for featured image
-      if (productMedia.length > 0) {
-        const featuredMedia = productMedia.find(m => m.isFeatured);
-        if (featuredMedia) {
-          const featuredThumbnail = Array.from(thumbnails).find(thumb =>
-            parseInt(thumb.dataset.mediaId) === featuredMedia.id
-          );
-
-          if (featuredThumbnail) {
-            featuredThumbnail.classList.add('active');
-          }
-        }
-      }
-    }
-
-    // Installation and Green Deduction Functionality
-    const installationCheckbox = document.getElementById('installation-checkbox');
-    const greenDeductionWrapper = document.getElementById('green-deduction-wrapper');
-    
-    if (installationCheckbox && greenDeductionWrapper) {
-      // Set initial visibility based on installation checkbox state
-      greenDeductionWrapper.style.display = installationCheckbox.checked ? 'block' : 'none';
-
-      // Show/hide green deduction options based on installation checkbox
-      installationCheckbox.addEventListener('change', function() {
-        if (this.checked) {
-          greenDeductionWrapper.style.display = 'block';
+          // Update URL
+          const newUrl = new URL(window.location.href);
+          newUrl.searchParams.set('variant', selectedVariant.id);
+          window.history.replaceState({}, '', newUrl);
+          console.log('Updated URL to:', newUrl.toString());
         } else {
-          greenDeductionWrapper.style.display = 'none';
-          // Uncheck any selected green deduction option
-          const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
-          greenDeductionRadios.forEach(radio => {
-            radio.checked = false;
-          });
+          console.log('No matching variant found');
         }
-      });
-    }
-
-    // Function to get selected discount code (supports radios and checkboxes)
-    function getSelectedDiscountCode() {
-      // Prefer any checked radio
-      const selectedRadio = document.querySelector('.green-deduction-radio:checked, input[type="radio"][data-discount-code]:checked');
-      if (selectedRadio) {
-        const code = selectedRadio.dataset.discountCode || null;
-        console.log('🔍 Discount (radio) selected:', code);
-        return code;
       }
 
-      // Fallback: any checked checkbox with data-discount-code
-      const checkedCheckbox = document.querySelector('.green-deduction-checkbox:checked, input[type="checkbox"][data-discount-code]:checked');
-      if (checkedCheckbox) {
-        const code = checkedCheckbox.dataset.discountCode || null;
-        console.log('🔍 Discount (checkbox) selected:', code);
-        return code;
+      // Add change listeners to variant selects
+      variantSelects.forEach(select => {
+        select.addEventListener('change', updateVariant);
+      });
+
+      const mainImageContainer = document.getElementById('main-product-image');
+      const thumbnails = document.querySelectorAll('[data-thumbnail]');
+
+      if (mainImageContainer && thumbnails.length > 0) {
+        // Store all product media for easy access
+        const productMediaRaw = document.getElementById('product-media-data');
+        const productMedia = productMediaRaw ? JSON.parse(productMediaRaw.textContent) : [];
+
+        // Function to update main image
+        function updateMainImage(mediaId) {
+          const media = productMedia.find(m => m.id === mediaId);
+          if (!media) return;
+
+          // Update the image source
+          const img = mainImageContainer.querySelector('img');
+          if (img) {
+            img.src = media.src;
+            img.alt = media.alt;
+          }
+
+          // Update active thumbnail
+          thumbnails.forEach(thumb => {
+            thumb.classList.remove('active');
+            if (parseInt(thumb.dataset.mediaId) === mediaId) {
+              thumb.classList.add('active');
+            }
+          });
+        }
+
+        // Add click listeners to thumbnails
+        thumbnails.forEach(thumbnail => {
+          thumbnail.addEventListener('click', function() {
+            const mediaId = parseInt(this.dataset.mediaId);
+            updateMainImage(mediaId);
+          });
+        });
+
+        // Set initial active state for featured image
+        if (productMedia.length > 0) {
+          const featuredMedia = productMedia.find(m => m.isFeatured);
+          if (featuredMedia) {
+            const featuredThumbnail = Array.from(thumbnails).find(thumb =>
+              parseInt(thumb.dataset.mediaId) === featuredMedia.id
+            );
+
+            if (featuredThumbnail) {
+              featuredThumbnail.classList.add('active');
+            }
+          }
+        }
       }
 
-      console.log('🔍 No discount selected');
-      return null;
-    }
+      // Installation and Green Deduction Functionality
+      const installationCheckbox = document.getElementById('installation-checkbox');
+      const greenDeductionWrapper = document.getElementById('green-deduction-wrapper');
 
-    // Persist discount selection immediately on any discount input change and notify cart
-    const discountInputs = document.querySelectorAll('.green-deduction-radio, .green-deduction-checkbox, [data-discount-code]');
-    console.log('🧩 Discount inputs init - found count:', discountInputs ? discountInputs.length : 0);
-    if (discountInputs && discountInputs.length > 0) {
-      discountInputs.forEach((input) => {
-        input.addEventListener('change', function() {
-          console.log('🖱️ Discount input changed:', this.type, this.dataset.discountCode, 'checked:', this.checked);
-          const code = getSelectedDiscountCode();
-          try {
-            if (code) {
-              sessionStorage.setItem('selectedDiscountCode', code);
-              console.log('💾 Saved discount code to session:', code);
-            } else {
-              sessionStorage.removeItem('selectedDiscountCode');
-              console.log('🧹 Cleared discount code from session');
-            }
-          } catch (e) {
-            console.warn('SessionStorage not available', e);
-          }
-          // Broadcast to cart drawer to update its display
-          window.dispatchEvent(new CustomEvent('discount:update'));
-        });
-      });
-    } else {
-      console.log('ℹ️ No discount inputs found on this product');
-    }
+      if (installationCheckbox && greenDeductionWrapper) {
+        // Set initial visibility based on installation checkbox state
+        greenDeductionWrapper.style.display = installationCheckbox.checked ? 'block' : 'none';
 
-    // Upsell Products Functionality
-    function getSelectedUpsells() {
-      const selectedUpsells = [];
-      const upsellCheckboxes = document.querySelectorAll('.upsell-checkbox:checked');
-      
-      upsellCheckboxes.forEach(checkbox => {
-        selectedUpsells.push({
-          id: checkbox.dataset.variantId,
-          quantity: 1
-        });
-      });
-      
-      return selectedUpsells;
-    }
-
-
-    // Buy Now functionality with upsells and installation
-    const buyNowBtn = document.querySelector('.buy-now-btn');
-    let isBuyNowProcessing = false;
-    
-    if (buyNowBtn) {
-      buyNowBtn.addEventListener('click', async function (e) {
-        e.preventDefault();
-
-        // Prevent duplicate clicks
-        if (isBuyNowProcessing) {
-          console.log('Already processing, please wait...');
-          return;
-        }
-
-        const variantId = this.getAttribute('data-variant-id');
-        const quantity = getSelectedQuantity();
-        const upsells = getSelectedUpsells();
-        const discountCode = getSelectedDiscountCode();
-
-        console.log('🛒 Buy Now clicked!');
-        console.log('📦 Variant ID:', variantId);
-        console.log('🎁 Discount Code:', discountCode || 'None selected');
-
-        // Store discount code in sessionStorage
-        if (discountCode) {
-          sessionStorage.setItem('selectedDiscountCode', discountCode);
-          console.log('💾 Saved discount code to session:', discountCode);
-        }
-        
-        // Show loading state
-        const originalText = this.innerHTML;
-        this.innerHTML = 'Behandlar...';
-        this.disabled = true;
-        isBuyNowProcessing = true;
-
-        try {
-          // Build items array with main product and upsells
-          const items = [
-            {
-              id: variantId,
-              quantity: quantity
-            },
-            ...upsells
-          ];
-
-          // Check if installation is selected
-          const installationCheckbox = document.getElementById('installation-checkbox');
-          if (installationCheckbox && installationCheckbox.checked) {
-            const installationVariantId = installationCheckbox.dataset.variantId;
-            // Add installation product to cart
-            items.push({
-              id: installationVariantId,
-              quantity: 1
-            });
-          }
-
-          const response = await fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              items: items
-            }),
-          });
-
-          if (response.ok) {
-            // Go to checkout with discount code if selected
-            if (discountCode) {
-              const checkoutUrl = '/checkout?discount=' + discountCode;
-              console.log('✅ Going to checkout with discount:', checkoutUrl);
-              window.location.href = checkoutUrl;
-            } else {
-              console.log('✅ Going to checkout (no discount)');
-              window.location.href = '/checkout';
-            }
-          } else if (response.status === 429) {
-            throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
+        // Show/hide green deduction options based on installation checkbox
+        installationCheckbox.addEventListener('change', function() {
+          if (this.checked) {
+            greenDeductionWrapper.style.display = 'block';
           } else {
-            const errorData = await response.json();
-            throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
-          }
-        } catch (error) {
-          console.error('Error with buy now:', error);
-
-          // Show error state with specific message
-          this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
-          this.style.background = '#EF4444';
-          this.style.color = 'white';
-
-          // Reset button after appropriate delay
-          const resetDelay = error.message.includes('många') ? 3000 : 2000;
-          setTimeout(() => {
-            this.innerHTML = originalText;
-            this.disabled = false;
-            this.style.background = '';
-            this.style.color = '';
-            isBuyNowProcessing = false;
-          }, resetDelay);
-        }
-      });
-    }
-
-    // Add to Cart functionality with upsells and installation
-    const addToCartBtn = document.querySelector('.add-to-cart-btn');
-    let isAddToCartProcessing = false;
-    
-    if (addToCartBtn) {
-      addToCartBtn.addEventListener('click', async function (e) {
-        e.preventDefault();
-
-        // Prevent duplicate clicks
-        if (isAddToCartProcessing) {
-          console.log('Already processing, please wait...');
-          return;
-        }
-
-        const variantId = this.getAttribute('data-variant-id');
-        const quantity = getSelectedQuantity();
-        const upsells = getSelectedUpsells();
-        const discountCode = getSelectedDiscountCode();
-
-        console.log('🛒 Add to Cart clicked!');
-        console.log('🎁 Discount Code:', discountCode || 'None selected');
-
-        // Store discount code in sessionStorage so cart drawer can use it
-        if (discountCode) {
-          sessionStorage.setItem('selectedDiscountCode', discountCode);
-          console.log('💾 Saved discount code to session:', discountCode);
-        }
-
-        // Show loading state
-        const originalText = this.innerHTML;
-        this.innerHTML = 'Lägger till...';
-        this.disabled = true;
-        isAddToCartProcessing = true;
-
-        try {
-          // Build items array with main product and upsells
-          const items = [
-            {
-              id: variantId,
-              quantity: quantity
-            },
-            ...upsells
-          ];
-
-          // Check if installation is selected
-          const installationCheckbox = document.getElementById('installation-checkbox');
-          if (installationCheckbox && installationCheckbox.checked) {
-            const installationVariantId = installationCheckbox.dataset.variantId;
-            // Add installation product to cart
-            items.push({
-              id: installationVariantId,
-              quantity: 1
+            greenDeductionWrapper.style.display = 'none';
+            // Uncheck any selected green deduction option
+            const greenDeductionRadios = document.querySelectorAll('.green-deduction-radio');
+            greenDeductionRadios.forEach(radio => {
+              radio.checked = false;
             });
           }
+        });
+      }
 
-          const response = await fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              items: items
-            }),
+      // Function to get selected discount code (supports radios and checkboxes)
+      function getSelectedDiscountCode() {
+        // Prefer any checked radio
+        const selectedRadio = document.querySelector('.green-deduction-radio:checked, input[type="radio"][data-discount-code]:checked');
+        if (selectedRadio) {
+          const code = selectedRadio.dataset.discountCode || null;
+          console.log('🔍 Discount (radio) selected:', code);
+          return code;
+        }
+
+        // Fallback: any checked checkbox with data-discount-code
+        const checkedCheckbox = document.querySelector('.green-deduction-checkbox:checked, input[type="checkbox"][data-discount-code]:checked');
+        if (checkedCheckbox) {
+          const code = checkedCheckbox.dataset.discountCode || null;
+          console.log('🔍 Discount (checkbox) selected:', code);
+          return code;
+        }
+
+        console.log('🔍 No discount selected');
+        return null;
+      }
+
+      // Persist discount selection immediately on any discount input change and notify cart
+      const discountInputs = document.querySelectorAll('.green-deduction-radio, .green-deduction-checkbox, [data-discount-code]');
+      console.log('🧩 Discount inputs init - found count:', discountInputs ? discountInputs.length : 0);
+      if (discountInputs && discountInputs.length > 0) {
+        discountInputs.forEach((input) => {
+          input.addEventListener('change', function() {
+            console.log('🖱️ Discount input changed:', this.type, this.dataset.discountCode, 'checked:', this.checked);
+            const code = getSelectedDiscountCode();
+            try {
+              if (code) {
+                sessionStorage.setItem('selectedDiscountCode', code);
+                console.log('💾 Saved discount code to session:', code);
+              } else {
+                sessionStorage.removeItem('selectedDiscountCode');
+                console.log('🧹 Cleared discount code from session');
+              }
+            } catch (e) {
+              console.warn('SessionStorage not available', e);
+            }
+            // Broadcast to cart drawer to update its display
+            window.dispatchEvent(new CustomEvent('discount:update'));
           });
+        });
+      } else {
+        console.log('ℹ️ No discount inputs found on this product');
+      }
 
-          if (response.ok) {
-            // Update cart count and show success
-            const cartData = await response.json();
-            
-            // Show success state
-            this.innerHTML = 'Tillagd! ✓';
-            this.style.background = '#4ade80';
+      // Upsell Products Functionality
+      function getSelectedUpsells() {
+        const selectedUpsells = [];
+        const upsellCheckboxes = document.querySelectorAll('.upsell-checkbox:checked');
+
+        upsellCheckboxes.forEach(checkbox => {
+          selectedUpsells.push({
+            id: checkbox.dataset.variantId,
+            quantity: 1
+          });
+        });
+
+        return selectedUpsells;
+      }
+
+
+      // Buy Now functionality with upsells and installation
+      const buyNowBtn = document.querySelector('.buy-now-btn');
+      let isBuyNowProcessing = false;
+
+      if (buyNowBtn) {
+        buyNowBtn.addEventListener('click', async function (e) {
+          e.preventDefault();
+
+          // Prevent duplicate clicks
+          if (isBuyNowProcessing) {
+            console.log('Already processing, please wait...');
+            return;
+          }
+
+          const variantId = this.getAttribute('data-variant-id');
+          const quantity = getSelectedQuantity();
+          const upsells = getSelectedUpsells();
+          const discountCode = getSelectedDiscountCode();
+
+          console.log('🛒 Buy Now clicked!');
+          console.log('📦 Variant ID:', variantId);
+          console.log('🎁 Discount Code:', discountCode || 'None selected');
+
+          // Store discount code in sessionStorage
+          if (discountCode) {
+            sessionStorage.setItem('selectedDiscountCode', discountCode);
+            console.log('💾 Saved discount code to session:', discountCode);
+          }
+
+          // Show loading state
+          const originalText = this.innerHTML;
+          this.innerHTML = 'Behandlar...';
+          this.disabled = true;
+          isBuyNowProcessing = true;
+
+          try {
+            // Build items array with main product and upsells
+            const items = [
+              {
+                id: variantId,
+                quantity: quantity
+              },
+              ...upsells
+            ];
+
+            // Check if installation is selected
+            const installationCheckbox = document.getElementById('installation-checkbox');
+            if (installationCheckbox && installationCheckbox.checked) {
+              const installationVariantId = installationCheckbox.dataset.variantId;
+              // Add installation product to cart
+              items.push({
+                id: installationVariantId,
+                quantity: 1
+              });
+            }
+
+            const response = await fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                items: items
+              }),
+            });
+
+            if (response.ok) {
+              // Go to checkout with discount code if selected
+              if (discountCode) {
+                const checkoutUrl = '/checkout?discount=' + discountCode;
+                console.log('✅ Going to checkout with discount:', checkoutUrl);
+                window.location.href = checkoutUrl;
+              } else {
+                console.log('✅ Going to checkout (no discount)');
+                window.location.href = '/checkout';
+              }
+            } else if (response.status === 429) {
+              throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
+            } else {
+              const errorData = await response.json();
+              throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
+            }
+          } catch (error) {
+            console.error('Error with buy now:', error);
+
+            // Show error state with specific message
+            this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
+            this.style.background = '#EF4444';
             this.style.color = 'white';
 
-            // Trigger cart update event for cart.js to reload
-            window.dispatchEvent(new CustomEvent('cart:update'));
-            
-            // Open cart drawer if available
-            const cartDrawer = document.getElementById('cart-drawer');
-            const cartOverlay = document.querySelector('[data-cart-overlay]');
-            if (cartDrawer) {
-              cartDrawer.classList.add('open');
-              if (cartOverlay) {
-                cartOverlay.classList.add('active');
-              }
-              document.body.style.overflow = 'hidden';
+            // Reset button after appropriate delay
+            const resetDelay = error.message.includes('många') ? 3000 : 2000;
+            setTimeout(() => {
+              this.innerHTML = originalText;
+              this.disabled = false;
+              this.style.background = '';
+              this.style.color = '';
+              isBuyNowProcessing = false;
+            }, resetDelay);
+          }
+        });
+      }
+
+      // Add to Cart functionality with upsells and installation
+      const addToCartBtn = document.querySelector('.add-to-cart-btn');
+      let isAddToCartProcessing = false;
+
+      if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', async function (e) {
+          e.preventDefault();
+
+          // Prevent duplicate clicks
+          if (isAddToCartProcessing) {
+            console.log('Already processing, please wait...');
+            return;
+          }
+
+          const variantId = this.getAttribute('data-variant-id');
+          const quantity = getSelectedQuantity();
+          const upsells = getSelectedUpsells();
+          const discountCode = getSelectedDiscountCode();
+
+          console.log('🛒 Add to Cart clicked!');
+          console.log('🎁 Discount Code:', discountCode || 'None selected');
+
+          // Store discount code in sessionStorage so cart drawer can use it
+          if (discountCode) {
+            sessionStorage.setItem('selectedDiscountCode', discountCode);
+            console.log('💾 Saved discount code to session:', discountCode);
+          }
+
+          // Show loading state
+          const originalText = this.innerHTML;
+          this.innerHTML = 'Lägger till...';
+          this.disabled = true;
+          isAddToCartProcessing = true;
+
+          try {
+            // Build items array with main product and upsells
+            const items = [
+              {
+                id: variantId,
+                quantity: quantity
+              },
+              ...upsells
+            ];
+
+            // Check if installation is selected
+            const installationCheckbox = document.getElementById('installation-checkbox');
+            if (installationCheckbox && installationCheckbox.checked) {
+              const installationVariantId = installationCheckbox.dataset.variantId;
+              // Add installation product to cart
+              items.push({
+                id: installationVariantId,
+                quantity: 1
+              });
             }
 
-            // Reset button after 2 seconds
+            const response = await fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                items: items
+              }),
+            });
+
+            if (response.ok) {
+              // Update cart count and show success
+              const cartData = await response.json();
+
+              // Show success state
+              this.innerHTML = 'Tillagd! ✓';
+              this.style.background = '#4ade80';
+              this.style.color = 'white';
+
+              // Trigger cart update event for cart.js to reload
+              window.dispatchEvent(new CustomEvent('cart:update'));
+
+              // Open cart drawer if available
+              const cartDrawer = document.getElementById('cart-drawer');
+              const cartOverlay = document.querySelector('[data-cart-overlay]');
+              if (cartDrawer) {
+                cartDrawer.classList.add('open');
+                if (cartOverlay) {
+                  cartOverlay.classList.add('active');
+                }
+                document.body.style.overflow = 'hidden';
+              }
+
+              // Reset button after 2 seconds
+              setTimeout(() => {
+                this.innerHTML = originalText;
+                this.disabled = false;
+                this.style.background = '';
+                this.style.color = '';
+                isAddToCartProcessing = false;
+              }, 2000);
+            } else if (response.status === 429) {
+              throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
+            } else {
+              const errorData = await response.json();
+              throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
+            }
+          } catch (error) {
+            console.error('Error adding to cart:', error);
+
+            // Show error state with specific message
+            this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
+            this.style.background = '#EF4444';
+            this.style.color = 'white';
+
+            // Reset button after appropriate delay
+            const resetDelay = error.message.includes('många') ? 3000 : 2000;
             setTimeout(() => {
               this.innerHTML = originalText;
               this.disabled = false;
               this.style.background = '';
               this.style.color = '';
               isAddToCartProcessing = false;
-            }, 2000);
-          } else if (response.status === 429) {
-            throw new Error('För många förfrågningar. Vänta några sekunder och försök igen.');
-          } else {
-            const errorData = await response.json();
-            throw new Error(errorData.description || 'Kunde inte lägga till i varukorgen');
+            }, resetDelay);
           }
-        } catch (error) {
-          console.error('Error adding to cart:', error);
-
-          // Show error state with specific message
-          this.innerHTML = error.message.includes('många') ? 'Vänta...' : 'Fel!';
-          this.style.background = '#EF4444';
-          this.style.color = 'white';
-
-          // Reset button after appropriate delay
-          const resetDelay = error.message.includes('många') ? 3000 : 2000;
-          setTimeout(() => {
-            this.innerHTML = originalText;
-            this.disabled = false;
-            this.style.background = '';
-            this.style.color = '';
-            isAddToCartProcessing = false;
-          }, resetDelay);
-        }
-      });
-    }
-  });
-{% endjavascript %}
+        });
+      }
+    });
+  {% endjavascript %}
 {% endcomment %}
 
 {% schema %}
