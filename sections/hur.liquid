@@ -16,7 +16,7 @@
       <div class="grid grid-cols-1 gap-[15px] md:grid-cols-2 xl:grid-cols-4">
         {% for block in section.blocks %}
           <div
-            class="flex  flex-row items-center justify-center gap-[20px]    bg-[#F3F1E8] p-[20px] md:flex-col md:p-[30px] md:pt-[50px]"
+            class="flex  flex-row items-center justify-center gap-[20px] rounded-[20px]    bg-[#F3F1E8] p-[20px] md:flex-col md:p-[30px] md:pt-[50px]"
             {{ block.shopify_attributes }}
           >
             {% if block.settings.image != blank %}
@@ -25,9 +25,9 @@
                   src="{{ block.settings.image | image_url: width: 139 }}"
                   alt="{{ block.settings.image.alt | default: block.settings.text }}"
                   width="139"
-                  height="84"
+                  height="321321"
                   loading="lazy"
-                  class="h-[65px] w-auto object-contain  md:h-[90px]"
+                  class=" h-[90px] w-[100px] object-contain"
                 >
               </div>
             {% endif %}

@@ -15,19 +15,50 @@
       {{ blog.title }}
     </h1>
 
-    {% paginate blog.articles by 5 %}
+    {%- liquid
+      assign per_page = section.settings.articles_per_page | default: 6
+    -%}
+
+    {%- if blog.all_tags.size > 0 -%}
+      <div class="mb-[30px] flex flex-wrap gap-[10px] md:gap-[12px]">
+        <a
+          href="{{ blog.url }}"
+          class="inline-flex items-center rounded-full border border-[#e5e5e5] px-[14px] py-[8px] text-[14px] leading-none transition-colors hover:border-[#171717] hover:bg-[#171717] hover:text-white"
+          {% if current_tags.size == 0 %}
+            aria-current="page"
+          {% endif %}
+          >Alla</a
+        >
+        {% for tag in blog.all_tags %}
+          <a
+            href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+            class="inline-flex items-center rounded-full border px-[14px] py-[8px] text-[14px] leading-none transition-colors {% if current_tags contains tag %}border-[#171717] bg-[#171717] text-white{% else %}border-[#e5e5e5] text-[#171717] hover:border-[#171717] hover:bg-[#171717] hover:text-white{% endif %}"
+            {% if current_tags contains tag %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{- tag -}}
+          </a>
+        {% endfor %}
+      </div>
+    {%- endif -%}
+
+    {% paginate blog.articles by per_page %}
       <div class="grid grid-cols-1 gap-[30px] md:grid-cols-2 md:gap-[40px] lg:grid-cols-3">
         {% for article in blog.articles %}
-          <article class="overflow-hidden rounded-[15px] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+          <article class="group overflow-hidden rounded-[15px] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
             {% if article.image %}
-              <div class="aspect-[4/3] overflow-hidden">
+              <div class="relative aspect-[4/3] overflow-hidden">
                 {{
                   article.image
                   | image_url: width: 600
                   | image_tag:
                     loading: 'lazy',
-                    class: 'w-full h-full object-cover hover:scale-105 transition-transform duration-300'
+                    class: 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
                 }}
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"
+                ></div>
               </div>
             {% endif %}
             <div class="p-[20px] md:p-[25px]">
@@ -45,9 +76,27 @@
               </p>
               {% if article.excerpt != blank %}
                 <p class="text-[16px] leading-[140%] text-[#171717] opacity-80">
-                  {{ article.excerpt | truncate: 120 }}
+                  {{ article.excerpt | strip_html | truncate: 140 }}
                 </p>
               {% endif %}
+              <div class="mt-[16px]">
+                <a
+                  href="{{ article.url }}"
+                  class="inline-flex items-center gap-[8px] text-[14px] font-medium text-[#171717] underline-offset-4 hover:underline"
+                >
+                  {{ 'blog.read_more' | t }}
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path d="M13 5l7 7-7 7M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
         {% endfor %}
@@ -65,6 +114,17 @@
 {% schema %}
 {
   "name": "t:sections.blog.name",
-  "settings": []
+  "settings": [
+    {
+      "type": "range",
+      "id": "articles_per_page",
+      "label": "t:sections.blog.settings.articles_per_page.label",
+      "info": "t:sections.blog.settings.articles_per_page.info",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 6
+    }
+  ]
 }
 {% endschema %}
