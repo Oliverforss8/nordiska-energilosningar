@@ -104,14 +104,14 @@
         "avdrag_item_6PfkjR": {
           "type": "avdrag_item",
           "settings": {
-            "text": "15% avdrag försolcellsinstallationer",
+            "text": "15% avdrag för solcellsinstallationer",
             "image": "shopify://shop_images/Hus.svg"
           }
         },
         "avdrag_item_8TBtda": {
           "type": "avdrag_item",
           "settings": {
-            "text": "50% avdrag förbatterilagring",
+            "text": "50% avdrag för batterilagring",
             "image": "shopify://shop_images/Ladd.svg"
           }
         }
@@ -123,8 +123,8 @@
       "name": "Avdrag",
       "settings": {
         "custom_id": "",
-        "heading": "Avdrag för grön teknikt",
-        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "heading": "Avdrag för grön teknik",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
       }
