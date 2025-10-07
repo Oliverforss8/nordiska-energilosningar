@@ -88,7 +88,7 @@
       "name": "Offertförfrågan",
       "settings": {
         "title": "Begär offert",
-        "description": "<p>Fyll i formuläret nedan så återkommer vi till dig med en skräddarsydd offert.</p>",
+        "description": "<p>Fyll i formuläret nedan så återkommer vi till er!</p>",
         "card_1_image": "shopify://shop_images/ae172ed2-6217-4349-a71e-7f3f7d029e9b_1.original.jpg",
         "card_1_button_text": "Företag",
         "card_1_button_link": "shopify://pages/vara-solceller",
