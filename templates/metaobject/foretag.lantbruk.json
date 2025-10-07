@@ -14,12 +14,12 @@
       "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_11.png",
+        "background_image": "shopify://shop_images/image_12.png",
         "overlay_opacity": 30,
         "heading": "Sänk elkostnaderna på gården med energilösningar",
         "subheading": "Börja producera och lagra din egna gröna el och betala mindre i elräkning",
         "button_text": "Be om offert",
-        "button_url": ""
+        "button_url": "shopify://metaobjects/foretag/offert"
       }
     },
     "lankar_tGAxqY": {
@@ -55,68 +55,50 @@
         "card_67XLE3",
         "card_Ype6Wd"
       ],
+      "disabled": true,
       "name": "Länkar sektion",
       "settings": {}
     },
-    "banner_med_lankar_4QUT3x": {
-      "type": "banner-med-lankar",
+    "bild_och_text_knappar_wwTPne": {
+      "type": "bild-och-text-knappar",
       "blocks": {
-        "card_XAiHbr": {
-          "type": "card",
+        "button_NGMmDp": {
+          "type": "button",
           "settings": {
-            "heading": "Solceller",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
+            "text": "Självförsörjande",
+            "url": "",
+            "show_arrow": false
           }
         },
-        "card_ypN4xf": {
-          "type": "card",
+        "button_K8iMcL": {
+          "type": "button",
           "settings": {
-            "heading": "Batterier",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        },
-        "card_aAJ69N": {
-          "type": "card",
-          "settings": {
-            "heading": "Laddboxar",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
+            "text": "Miljökrav",
+            "url": "",
+            "show_arrow": false
           }
         }
       },
       "block_order": [
-        "card_XAiHbr",
-        "card_ypN4xf",
-        "card_aAJ69N"
+        "button_NGMmDp",
+        "button_K8iMcL"
       ],
-      "name": "Banner med länkar",
+      "name": "Bild och text med knappar",
       "settings": {
-        "background_color": "#171717",
-        "background_image": "shopify://shop_images/Svea_Solar_-_Komatsu_Umea_-_2022-.2e16d0ba.fill-1200x630.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30,
-        "header_button_text": "För företag",
-        "header_button_url": "",
-        "heading": "Vi är experter på helhetslösningar inom energi",
-        "description": "Vi hjälper företag att optimera sin energianvändning.",
-        "primary_button_text": "Be om offert",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
+        "title": "Solceller till lantbruksfastigheter",
+        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på till exempel industri- och lagerlokaler passar perfekt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en hållbar och framtidssäker energiförsörjning.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_11.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
       }
     }
   },
   "order": [
     "hero_lower_6X9dhE",
     "lankar_tGAxqY",
-    "banner_med_lankar_4QUT3x"
+    "bild_och_text_knappar_wwTPne"
   ]
 }
