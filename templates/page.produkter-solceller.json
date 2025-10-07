@@ -271,20 +271,6 @@
         "padding_bottom": 40
       }
     },
-    "bild_och_text_k67Awi": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Dokumentation för hela projektet",
-        "text": "<p>För att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/bild_nor.png",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_knappar_PdkfaH": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -343,13 +329,12 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "banner_med_3_produkter_k9TmHH",
     "icon_NDwUyT",
+    "banner_med_3_produkter_k9TmHH",
     "bild_och_text_fF7gV6",
     "hur_KCyVH6",
     "bild_och_text_knappar_hd7RJH",
     "avdrag_cwFWrR",
-    "bild_och_text_k67Awi",
     "bild_och_text_knappar_PdkfaH",
     "kontakt_form_chLN6N"
   ]
