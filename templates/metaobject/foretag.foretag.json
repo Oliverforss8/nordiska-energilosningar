@@ -21,9 +21,24 @@
         "button_text": "Be om offert",
         "button_url": ""
       }
+    },
+    "bild_och_text_4tzeq9": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Solceller för företag",
+        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/solceller-section3-img-1920.webp",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
-    "hero_lower_i4AUcN"
+    "hero_lower_i4AUcN",
+    "bild_och_text_4tzeq9"
   ]
 }
