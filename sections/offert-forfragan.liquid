@@ -16,32 +16,42 @@
           class="flex flex-col gap-[15px] md:gap-[20px]"
           id="quote-form"
         >
-          <input
-            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
-            placeholder="För- & efternamn"
-            type="text"
-            name="name"
-            required
-          >
-          <input
-            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
-            placeholder="E-postadress"
-            type="email"
-            name="email"
-            required
-          >
-          <input
-            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
-            placeholder="Telefonnummer"
-            type="tel"
-            name="phone"
-          >
-          <input
-            class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
-            placeholder="Adress"
-            type="text"
-            name="address"
-          >
+          {% for block in section.blocks %}
+            {% if block.type == 'form_field' %}
+              {% liquid
+                assign field_type = block.settings.field_type | default: 'text'
+                assign field_name = block.settings.name | default: block.settings.label | handleize
+                assign is_required = block.settings.required
+                assign placeholder = block.settings.placeholder | default: block.settings.label
+                assign pattern = block.settings.pattern
+                assign rows = block.settings.rows | default: 4
+              %}
+              {% if field_type == 'textarea' %}
+                <textarea
+                  class="body1 min-h-[120px] rounded-[10px] bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                  name="{{ field_name }}"
+                  placeholder="{{ placeholder | escape }}"
+                  {% if is_required %}
+                    required
+                  {% endif %}
+                  rows="{{ rows }}"
+                ></textarea>
+              {% else %}
+                <input
+                  class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                  placeholder="{{ placeholder | escape }}"
+                  type="{{ field_type }}"
+                  name="{{ field_name }}"
+                  {% if is_required %}
+                    required
+                  {% endif %}
+                  {% if pattern != blank %}
+                    pattern="{{ pattern }}"
+                  {% endif %}
+                >
+              {% endif %}
+            {% endif %}
+          {% endfor %}
           <div class="body1 flex flex-col gap-[5px] text-[20px] md:flex-row md:text-[25px]">
             Hur kan vi hjälpa dig?
             <span class="text-[13px] opacity-70 md:text-[15px]">
@@ -364,19 +374,9 @@
         e.preventDefault();
 
         // Basic validation
-        const name = this.querySelector('input[name="name"]');
-        const email = this.querySelector('input[name="email"]');
         const selectedService = selectedServiceInput ? selectedServiceInput.value : '';
-
-        if (!name || !name.value.trim()) {
-          alert('Vänligen fyll i ditt namn');
-          if (name) name.focus();
-          return;
-        }
-
-        if (!email || !email.value.trim()) {
-          alert('Vänligen fyll i din e-postadress');
-          if (email) email.focus();
+        if (!this.checkValidity()) {
+          this.reportValidity();
           return;
         }
 
@@ -480,6 +480,47 @@
           "id": "icon_svg",
           "label": "Inline SVG (valfritt)",
           "info": "Klistra in rå SVG-kod här om du vill använda egen SVG."
+        }
+      ]
+    },
+    {
+      "type": "form_field",
+      "name": "Formulärfält",
+      "limit": 30,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Etikett", "default": "För- & efternamn" },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Fältnamn (valfritt)",
+          "info": "Om tomt används etiketten som namn (handleized)"
+        },
+        {
+          "type": "select",
+          "id": "field_type",
+          "label": "Typ",
+          "options": [
+            { "value": "text", "label": "Text" },
+            { "value": "email", "label": "E‑post" },
+            { "value": "tel", "label": "Telefon" },
+            { "value": "textarea", "label": "Textarea" }
+          ],
+          "default": "text"
+        },
+        { "type": "text", "id": "placeholder", "label": "Platshållare (valfritt)" },
+        { "type": "checkbox", "id": "required", "label": "Obligatoriskt", "default": true },
+        {
+          "type": "text",
+          "id": "pattern",
+          "label": "HTML5 pattern (valfritt)",
+          "info": "RegExp för validering, t.ex.^[0-9\\- +()]*$ för telefon"
+        },
+        {
+          "type": "number",
+          "id": "rows",
+          "label": "Textarea rader",
+          "default": 4,
+          "info": "Gäller endast textarea"
         }
       ]
     }
@@ -614,6 +655,31 @@
       "unit": "%"
     }
   ],
+  "default": {
+    "blocks": [
+      {
+        "type": "form_field",
+        "settings": { "label": "För- & efternamn", "field_type": "text", "required": true }
+      },
+      {
+        "type": "form_field",
+        "settings": { "label": "E‑postadress", "field_type": "email", "required": true }
+      },
+      {
+        "type": "form_field",
+        "settings": {
+          "label": "Telefonnummer",
+          "field_type": "tel",
+          "required": false,
+          "pattern": "^[0-9\\- +()]*$"
+        }
+      },
+      {
+        "type": "form_field",
+        "settings": { "label": "Adress", "field_type": "text", "required": false }
+      }
+    ]
+  },
   "presets": [
     {
       "name": "Offertförfrågan"

@@ -335,29 +335,39 @@
         {% endfor %}
       </nav>
 
-      <!-- Cart button -->
-      <button
-        class="cart-btn knappetikett relative flex flex-row gap-[20px] rounded-[10px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
-        data-cart-toggle
-      >
-        <span class="hidden xl:block ">kundvagn</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="21"
-          height="22"
-          viewBox="0 0 21 22"
-          fill="none"
+      <!-- Cart / Företag CTA button -->
+      {% if is_foretag_page %}
+        <a
+          href="{{ section.settings.foretag_quote_link | default: '/pages/foretag/offert' }}"
+          class="cart-btn knappetikett relative flex flex-row gap-[20px] rounded-[10px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+          style="text-decoration: none;"
         >
-          <path d="M2.37325 16.02L1.16926 8.84C0.98726 7.754 0.896261 7.212 1.18826 6.856C1.47926 6.5 2.01525 6.5 3.08624 6.5H17.9141C18.9851 6.5 19.5211 6.5 19.8121 6.856C20.1041 7.212 20.0121 7.754 19.8311 8.84L18.6271 16.02C18.2281 18.4 18.0291 19.589 17.2141 20.295C16.4001 21 15.2261 21 12.8782 21H8.12219C5.77422 21 4.60023 21 3.78623 20.294C2.97124 19.589 2.77224 18.399 2.37325 16.019M16.0001 6.5C16.0001 5.04131 15.4207 3.64236 14.3892 2.61091C13.3578 1.57946 11.9588 1 10.5002 1C9.0415 1 7.64256 1.57946 6.61112 2.61091C5.57968 3.64236 5.00022 5.04131 5.00022 6.5" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <!-- Cart count badge -->
-        <span
-          class="cart-count absolute -right-2 -top-2 flex h-6 w-6 scale-0 items-center justify-center rounded-full bg-[#171717] text-xs font-bold text-white opacity-0 transition-all duration-200"
-          data-cart-count
+          <span class="xl:block">Be om offert</span>
+        </a>
+      {% else %}
+        <button
+          class="cart-btn knappetikett relative flex flex-row gap-[20px] rounded-[10px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+          data-cart-toggle
         >
-          0
-        </span>
-      </button>
+          <span class="hidden xl:block ">kundvagn</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="22"
+            viewBox="0 0 21 22"
+            fill="none"
+          >
+            <path d="M2.37325 16.02L1.16926 8.84C0.98726 7.754 0.896261 7.212 1.18826 6.856C1.47926 6.5 2.01525 6.5 3.08624 6.5H17.9141C18.9851 6.5 19.5211 6.5 19.8121 6.856C20.1041 7.212 20.0121 7.754 19.8311 8.84L18.6271 16.02C18.2281 18.4 18.0291 19.589 17.2141 20.295C16.4001 21 15.2261 21 12.8782 21H8.12219C5.77422 21 4.60023 21 3.78623 20.294C2.97124 19.589 2.77224 18.399 2.37325 16.019M16.0001 6.5C16.0001 5.04131 15.4207 3.64236 14.3892 2.61091C13.3578 1.57946 11.9588 1 10.5002 1C9.0415 1 7.64256 1.57946 6.61112 2.61091C5.57968 3.64236 5.00022 5.04131 5.00022 6.5" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <!-- Cart count badge -->
+          <span
+            class="cart-count absolute -right-2 -top-2 flex h-6 w-6 scale-0 items-center justify-center rounded-full bg-[#171717] text-xs font-bold text-white opacity-0 transition-all duration-200"
+            data-cart-count
+          >
+            0
+          </span>
+        </button>
+      {% endif %}
     </div>
   </div>
 </header>
@@ -606,6 +616,12 @@
       "label": "Specifika sidor för inverterat läge",
       "info": "Ange sidhandtag eller mallnamn separerade med komma (t.ex: om-oss, kontakt, product, collection). Detta åsidosätter den globala inställningen.",
       "placeholder": "om-oss, kontakt, support"
+    },
+    {
+      "type": "url",
+      "id": "foretag_quote_link",
+      "label": "Företag: länk för 'Be om offert'",
+      "info": "Visas på företagssidor istället för varukorgsknappen"
     },
     {
       "type": "header",
