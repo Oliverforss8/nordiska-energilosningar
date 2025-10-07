@@ -16,29 +16,274 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_12.png",
         "overlay_opacity": 20,
-        "heading": "Maximera företagets lönsamhet med solceller",
+        "heading": "Maximera företagets lönsamhet med energilösningar",
         "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för ert företag.",
         "button_text": "Be om offert",
         "button_url": ""
       }
     },
-    "bild_och_text_4tzeq9": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "banner_med_lankar_agkbJm": {
+      "type": "banner-med-lankar",
+      "blocks": {
+        "card_BwHac7": {
+          "type": "card",
+          "settings": {
+            "heading": "Solceller",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_3i3xAJ": {
+          "type": "card",
+          "settings": {
+            "heading": "Batterier",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        },
+        "card_gfAVUq": {
+          "type": "card",
+          "settings": {
+            "heading": "Laddboxar",
+            "description": "Kort beskrivning",
+            "link": "",
+            "card_bg_color": "#F3F1E8",
+            "card_text_color": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "card_BwHac7",
+        "card_3i3xAJ",
+        "card_gfAVUq"
+      ],
+      "name": "Banner med länkar",
+      "settings": {
+        "background_color": "#171717",
+        "background_image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "header_button_text": "Energieffektivisering",
+        "header_button_url": "",
+        "heading": "Vi är experter på helhetslösningar inom energi",
+        "description": "Vi hjälper företag att optimera sin energianvändning.",
+        "primary_button_text": "Be om offert",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
+    },
+    "bild_och_text_knappar_TQdd96": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_JLaLAc": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_mJ8C6b": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_yfdtqw": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_JLaLAc",
+        "button_mJ8C6b",
+        "button_yfdtqw"
+      ],
+      "name": "Bild och text med knappar",
       "settings": {
         "title": "Solceller för företag",
         "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/solceller-section3-img-1920.webp",
-        "image_position": "right",
-        "image_button_text": "",
+        "image": "shopify://shop_images/image_19.png",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
         "image_button_link": "",
         "custom_id": ""
+      }
+    },
+    "faq_produkt_WAWGp6": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_YLnPLr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Maximera företagets lönsamhet",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning. <br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
+          }
+        },
+        "faq_item_FFrWCT": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Solceller blir ett krav från år 2026 enligt nya EU-direktiv",
+            "button_text": "Nytt krav",
+            "description": "",
+            "answer": "<p><strong>De nya EU-direktiven innebär:</strong><br/><br/></p><ul><li>Från 2026 måste alla nya kommersiella och offentliga byggnader ha integrerade solceller för ökad förnybar energi och minskad klimatpåverkan.<br/><br/></li><li>Från 2027 omfattas även befintliga kommersiella och offentliga fastigheter som genomgår renovering, förutsatt att solcellsinstallation är tekniskt möjlig.<br/><br/></li><li>År 2029 omfattar kravet även befintliga offentliga och kommersiella byggnader.</li></ul>"
+          }
+        },
+        "faq_item_ifXwWb": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Skydd mot effekttariffer",
+            "button_text": "Skydd",
+            "description": "",
+            "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning.<br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
+          }
+        },
+        "faq_item_dq7w7y": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Grönare framtid",
+            "button_text": "Miljö",
+            "description": "",
+            "answer": "<p>Förnybar energi är framtiden. Solceller minskar fossilberoendet, sänker utsläpp och sparar pengar. En ren, pålitlig och långsiktig lösning.<br/><br/>Företag som investerar i solenergi och batterilagring stärker sin hållbarhetsprofil, ökar effektiviteten och framtidssäkrar verksamheten. Tillsammans driver vi omställningen mot en fossilfri framtid.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_YLnPLr",
+        "faq_item_FFrWCT",
+        "faq_item_ifXwWb",
+        "faq_item_dq7w7y"
+      ],
+      "name": "FAQ produkter",
+      "settings": {
+        "title": "Varför installera solceller på företaget?",
+        "description": "<p>Många diskuterar solceller men varför bör ett företag egentligen installera solceller?</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "bild_och_text_knappar_T6tiXq": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_rTzwmG": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra energi",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_k3pWWi": {
+          "type": "button",
+          "settings": {
+            "text": "Sänkta elkostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_BpEz6U": {
+          "type": "button",
+          "settings": {
+            "text": "Optimerar solceller",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_rTzwmG",
+        "button_k3pWWi",
+        "button_BpEz6U"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Energilagring till företag",
+        "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "faq_produkt_fD68te": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_XVKEjz": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Sänk elkostnaderna när elnätsavgifter baseras på högsta effektuttag",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p>Effekttoppar kan leda till höga nätavgifter och ökade energikostnader för företag. Genom att installera ett batterilager kan företag lagra energi under lågbelastningstider och använda den vid höga effektuttag, vilket minskar den maximala effekten som tas från elnätet. Detta sänker effektavgifterna och bidrar till en jämnare belastning på elnätet.<br/><br/>Batterilagring är särskilt fördelaktigt för verksamheter med höga och varierande effektbehov, såsom industrier och kommersiella fastigheter. Förutom kostnadsbesparingar kan lösningen också minska behovet av att investera i dyra nätförstärkningar och förbättra elförsörjningens stabilitet.</p>"
+          }
+        },
+        "faq_item_BEFUmc": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Säkerställ driften med batterilagring",
+            "button_text": "Nytt krav",
+            "description": "",
+            "answer": "<p><strong>Reservkraft vid elavbrott<br/><br/></strong>Batterilagring ger företag en pålitlig reservkraft vid elavbrott, vilket minimerar driftstopp och skyddar kritiska system. Till skillnad från dieselaggregat är batterier tysta, underhållsfria och miljövänliga.<br/><br/>De kan dessutom användas för att sänka elkostnader genom lastbalansering och smart energianvändning. Med batterilagring säkerställer du en stabil och kostnadseffektiv energilösning för din verksamhet.</p>"
+          }
+        },
+        "faq_item_eTzHnP": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Skydd mot effekttariffer",
+            "button_text": "Skydd",
+            "description": "",
+            "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning.<br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
+          }
+        },
+        "faq_item_jXTGRa": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Grönare framtid",
+            "button_text": "Miljö",
+            "description": "",
+            "answer": "<p>Förnybar energi är framtiden. Solceller minskar fossilberoendet, sänker utsläpp och sparar pengar. En ren, pålitlig och långsiktig lösning.<br/><br/>Företag som investerar i solenergi och batterilagring stärker sin hållbarhetsprofil, ökar effektiviteten och framtidssäkrar verksamheten. Tillsammans driver vi omställningen mot en fossilfri framtid.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_XVKEjz",
+        "faq_item_BEFUmc",
+        "faq_item_eTzHnP",
+        "faq_item_jXTGRa"
+      ],
+      "name": "FAQ produkter",
+      "settings": {
+        "title": "Varför ska företag energilagra?",
+        "description": "<p>Många diskuterar solceller men varför bör ett företag egentligen installera solceller?</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
     "hero_lower_i4AUcN",
-    "bild_och_text_4tzeq9"
+    "banner_med_lankar_agkbJm",
+    "bild_och_text_knappar_TQdd96",
+    "faq_produkt_WAWGp6",
+    "bild_och_text_knappar_T6tiXq",
+    "faq_produkt_fD68te"
   ]
 }
