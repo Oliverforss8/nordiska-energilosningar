@@ -162,56 +162,56 @@
         "custom_id": ""
       }
     },
-    "hur_wwU88T": {
+    "hur_jEzfNm": {
       "type": "hur",
       "blocks": {
-        "step_cdyeXy": {
+        "step_d7i8cP": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/book.svg",
+            "image": "shopify://shop_images/Vector_7.svg",
             "title": "1. Boka tid",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
           }
         },
-        "step_J48fxk": {
+        "step_Q3Lkiy": {
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/person.svg",
             "title": "2. Träffa oss",
-            "description": "<p>Beskrivande text Kontakta oss idag för ett möte där vi analyserarför steget.</p>"
+            "description": "<p>Våra experter skräddarsyr en lösning och presenterar en offert.</p>"
           }
         },
-        "step_9nP6Cw": {
+        "step_BtBQck": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/install.svg",
+            "image": "shopify://shop_images/Vector.svg",
             "title": "3. Installation",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Vi hanterar allt – från montering till färdig anläggning.</p>"
           }
         },
-        "step_kyRdCf": {
+        "step_pDRYGU": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/radio.svg",
+            "image": "shopify://shop_images/Group.svg",
             "title": "4. Support",
-            "description": "<p>Kontakta oss idag för ett möte där vi analyserar</p>"
+            "description": "<p>Efter ditt köp finns vi tillgängliga för support!</p>"
           }
         }
       },
       "block_order": [
-        "step_cdyeXy",
-        "step_J48fxk",
-        "step_9nP6Cw",
-        "step_kyRdCf"
+        "step_d7i8cP",
+        "step_Q3Lkiy",
+        "step_BtBQck",
+        "step_pDRYGU"
       ],
       "name": "How it works",
       "settings": {
-        "heading": "Så här fungerar det",
-        "description": "<p>Lägg till en kort beskrivning här.</p>",
-        "primary_button_text": "Boka tid",
+        "heading": "Från offert till installation",
+        "description": "<p>Hela vår process är enkel när du väljer att köpa och installera batterier med oss!</p>",
+        "primary_button_text": "Boka en tid",
         "primary_button_url": "shopify://pages/offert-forfragan",
-        "secondary_button_text": "Kontakta oss",
-        "secondary_button_url": "shopify://pages/support-om-oss"
+        "secondary_button_text": "",
+        "secondary_button_url": ""
       }
     },
     "avdrag_BEUazc": {
@@ -356,7 +356,7 @@
     "icon_ty3fXr",
     "bild_och_text_HJKBUV",
     "banner_bild_gJDBKA",
-    "hur_wwU88T",
+    "hur_jEzfNm",
     "avdrag_BEUazc",
     "bild_och_text_DHxVVF",
     "kontakt_form_WTeQAb"
