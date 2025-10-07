@@ -11,6 +11,37 @@
   "sections": {
     "offert_forfragan_bdcUQP": {
       "type": "offert-forfragan",
+      "blocks": {
+        "service_option_6DDday": {
+          "type": "service_option",
+          "settings": {
+            "label": "Företag",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        },
+        "service_option_G76dct": {
+          "type": "service_option",
+          "settings": {
+            "label": "Bostadsrättsförening",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        },
+        "service_option_bjCBta": {
+          "type": "service_option",
+          "settings": {
+            "label": "Lantbruk",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        }
+      },
+      "block_order": [
+        "service_option_6DDday",
+        "service_option_G76dct",
+        "service_option_bjCBta"
+      ],
       "name": "Offertförfrågan",
       "settings": {
         "title": "Begär offert",
