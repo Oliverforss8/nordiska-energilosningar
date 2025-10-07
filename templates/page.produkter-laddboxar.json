@@ -27,6 +27,42 @@
         "button_url": ""
       }
     },
+    "bild_och_text_knappar_Ya3NQr": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_AtFPKi": {
+          "type": "button",
+          "settings": {
+            "text": "Lägre kostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_rzjbLt": {
+          "type": "button",
+          "settings": {
+            "text": "Tidsbesparing",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_AtFPKi",
+        "button_rzjbLt"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Alltid redo att köra",
+        "text": "<p>Med en egen laddare hemma slipper du onödiga stopp vid laddstationer. Du pluggar enkelt in bilen när du kommer hem, och den laddas medan du sover. På morgonen är bilen fulladdad och redo för dagen – oavsett om du ska till jobbet, hämta barnen eller åka på weekendresa. Bekvämligare än så blir det inte.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/charging_ev.webp",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "banner_med_3_produkter_NwVfdk": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -203,6 +239,7 @@
   "order": [
     "main",
     "hero_lower_UadDG8",
+    "bild_och_text_knappar_Ya3NQr",
     "banner_med_3_produkter_NwVfdk",
     "bild_och_text_3Kjt7B",
     "bild_och_text_G3CaL6",
