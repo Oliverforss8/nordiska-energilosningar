@@ -46,82 +46,89 @@
     {%- endif -%}
 
     {% paginate blog.articles by per_page %}
-      <div class="grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3">
-        {% for article in blog.articles %}
-          <a href="{{ article.url }}" class="group block">
-            <article class="flex flex-col overflow-hidden rounded-[10px] border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
-              <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                {% if article.image %}
-                  {{
-                    article.image
-                    | image_url: width: 800, height: 500
-                    | image_tag:
-                      loading: 'lazy',
-                      alt: article.title,
-                      class: 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                  }}
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  ></div>
-                {% else %}
-                  <div class="flex h-full w-full items-center justify-center bg-gray-200">
-                    <svg
-                      class="h-16 w-16 text-gray-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                  </div>
-                {% endif %}
-              </div>
-              <div class="flex flex-1 flex-col p-[28px]">
-                {% assign date = article.published_at | time_tag: format: 'date' %}
-                <div class="body1 mb-[16px] text-[13px] text-gray-500">
-                  <time>{{ date }}</time>
-                </div>
-                <h2 class="mb-[16px] flex-1">
-                  <span class="headline2 line-clamp-2 text-[20px] text-gray-900 transition-colors duration-200 md:text-[22px]">
-                    {{ article.title }}
-                  </span>
-                </h2>
-                {% if article.excerpt != blank %}
-                  <p class="body1 mb-[24px] line-clamp-3 text-[15px] leading-relaxed text-gray-600">
-                    {{ article.excerpt | strip_html | truncate: 150 }}
-                  </p>
-                {% endif %}
-                <div class="mt-auto">
-                  <div class="flex items-center justify-between">
-                    <span class="body1 inline-flex items-center gap-[8px] text-[15px] text-[#171717] transition-colors duration-200">
-                      Läs mer
+      {% comment %}Debug: Blog has {{ blog.articles.size }} articles{% endcomment %}
+      {% if blog.articles.size == 0 %}
+        <div class="py-[60px] text-center">
+          <p class="body1 text-gray-600">Inga artiklar hittades.</p>
+        </div>
+      {% else %}
+        <div class="grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3">
+          {% for article in blog.articles %}
+            <a href="{{ article.url }}" class="group block">
+              <article class="flex flex-col overflow-hidden rounded-[10px] border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+                <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+                  {% if article.image %}
+                    {{
+                      article.image
+                      | image_url: width: 800, height: 500
+                      | image_tag:
+                        loading: 'lazy',
+                        alt: article.title,
+                        class: 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
+                    }}
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    ></div>
+                  {% else %}
+                    <div class="flex h-full w-full items-center justify-center bg-gray-200">
                       <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
+                        class="h-16 w-16 text-gray-400"
                         fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="transition-transform duration-200 group-hover:translate-x-1"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <path d="M13 5l7 7-7 7M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                       </svg>
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="flex flex-1 flex-col p-[28px]">
+                  {% assign date = article.published_at | time_tag: format: 'date' %}
+                  <div class="body1 mb-[16px] text-[13px] text-gray-500">
+                    <time>{{ date }}</time>
+                  </div>
+                  <h2 class="mb-[16px] flex-1">
+                    <span class="headline2 line-clamp-2 text-[20px] text-gray-900 transition-colors duration-200 md:text-[22px]">
+                      {{ article.title }}
                     </span>
-                    {% if article.tags.size > 0 %}
-                      <div class="flex gap-[6px]">
-                        {% for tag in article.tags limit: 2 %}
-                          <span class="rounded-full bg-gray-100 px-[10px] py-[4px] text-[12px] text-gray-600">
-                            {{ tag }}
-                          </span>
-                        {% endfor %}
-                      </div>
-                    {% endif %}
+                  </h2>
+                  {% if article.excerpt != blank %}
+                    <p class="body1 mb-[24px] line-clamp-3 text-[15px] leading-relaxed text-gray-600">
+                      {{ article.excerpt | strip_html | truncate: 150 }}
+                    </p>
+                  {% endif %}
+                  <div class="mt-auto">
+                    <div class="flex items-center justify-between">
+                      <span class="body1 inline-flex items-center gap-[8px] text-[15px] text-[#171717] transition-colors duration-200">
+                        Läs mer
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="transition-transform duration-200 group-hover:translate-x-1"
+                        >
+                          <path d="M13 5l7 7-7 7M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      {% if article.tags.size > 0 %}
+                        <div class="flex gap-[6px]">
+                          {% for tag in article.tags limit: 2 %}
+                            <span class="rounded-full bg-gray-100 px-[10px] py-[4px] text-[12px] text-gray-600">
+                              {{ tag }}
+                            </span>
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
-          </a>
-        {% endfor %}
-      </div>
+              </article>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
 
       {%- if paginate.pages > 1 -%}
         <div class="mt-[50px]">
