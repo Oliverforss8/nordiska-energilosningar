@@ -813,22 +813,21 @@
 
   <!-- Fixed Bottom Price Bar -->
   <div
-    class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white"
-    id="fixed-bottom-price-bar "
-    style="box-shadow: 0 -4px 8px rgba(23, 23, 23, 0.1);"
+    class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white shadow-lg"
+    id="fixed-bottom-price-bar"
   >
-    <div class="  layout flex items-center justify-between py-[20px]">
-      <div class="flex flex-col ">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <div class="flex flex-col">
         <div class="flex items-center space-x-3">
-          <span class="headline1 text-[30px]" style="color: #171717;">Totalt pris:</span>
-          <span class="headline1 text-[30px]" id="total-price-display" style="color: #171717;">
+          <span class="text-sm font-medium text-gray-700">Totalt pris:</span>
+          <span class="text-lg font-bold text-gray-900" id="total-price-display">
             {{- product.selected_or_first_available_variant.price | money -}}
           </span>
         </div>
         <div class="flex items-center space-x-3" id="after-discount" style="display: none;">
-          <span class="headline1 text-[24px]" style="color: #3e753e;">Efter avdrag:</span>
+          <span class="text-sm font-medium" style="color: #3e753e;">Efter avdrag:</span>
           <span
-            class="headline1 text-[24px]"
+            class="text-lg font-bold"
             id="discount-price-display"
             style="color: #3e753e;"
           ></span>
@@ -836,8 +835,8 @@
       </div>
       <div class="flex-shrink-0">
         <button
-          class="headline1 add-to-cart-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[10px] rounded-[10px] bg-transparent px-[20px] py-[15px] text-[18px] md:w-auto md:text-[20px]"
-          style="border: 1px solid #171717 !important; color: #171717;"
+          class="body1 rounded-lg border-2 border-gray-300 bg-white px-6 py-3 font-medium transition-colors duration-200 hover:bg-gray-50"
+          style="color: #171717;"
           data-variant-id="{{ product.selected_or_first_available_variant.id }}"
         >
           Lägg i varukorg
