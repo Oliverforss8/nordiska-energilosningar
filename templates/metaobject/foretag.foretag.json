@@ -128,10 +128,19 @@
         "faq_item_YLnPLr": {
           "type": "faq_item",
           "settings": {
+            "question": "Maximera företagets lönsamhet",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning. <br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
+          }
+        },
+        "faq_item_FFrWCT": {
+          "type": "faq_item",
+          "settings": {
             "question": "Solceller blir ett krav från år 2026 enligt nya EU-direktiv",
             "button_text": "Nytt krav",
             "description": "",
-            "answer": "<p>Solceller är en kostnadseffektiv och hållbar lösning för företag som vill minska sina elkostnader och sin klimatpåverkan. Kommersiella fastigheter, såsom köpcentrum, industri- och lagerlokaler, har ofta stora takytor som lämpar sig väl för solenergiutvinning.<br/><br/>Genom att installera en anpassad solcellsanläggning kan företag sänka sina energikostnader avsevärt och samtidigt öka sin självförsörjning av el. Investeringen ger långsiktig ekonomisk stabilitet och minskar beroendet av externa elpriser. Att installera solpaneler är ett strategiskt steg mot en mer hållbar och framtidssäker energiförsörjning.</p>"
+            "answer": "<p><strong>De nya EU-direktiven innebär:</strong></p><ul><li>Från 2026 måste alla nya kommersiella och offentliga byggnader ha integrerade solceller för ökad förnybar energi och minskad klimatpåverkan.</li><li>Från 2027 omfattas även befintliga kommersiella och offentliga fastigheter som genomgår renovering, förutsatt att solcellsinstallation är tekniskt möjlig.</li><li>År 2029 omfattar kravet även befintliga offentliga och kommersiella byggnader.</li></ul>"
           }
         },
         "faq_item_ifXwWb": {
@@ -155,6 +164,7 @@
       },
       "block_order": [
         "faq_item_YLnPLr",
+        "faq_item_FFrWCT",
         "faq_item_ifXwWb",
         "faq_item_dq7w7y"
       ],
