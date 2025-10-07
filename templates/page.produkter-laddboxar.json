@@ -22,8 +22,8 @@
         "background_image": "shopify://shop_images/image_14.png",
         "overlay_opacity": 20,
         "heading": "Laddboxar för hemmet",
-        "subheading": "Redo för elbil? \nVi har laddboxen som passar just ditt hem och din bil.",
-        "button_text": "Vårt utbud",
+        "subheading": "Behöver du ladda bilen hemma? \nVi har laddboxen som passar just ditt hem och din bil.",
+        "button_text": "Våra laddboxar",
         "button_url": ""
       }
     },
@@ -61,7 +61,11 @@
           }
         }
       },
-      "block_order": ["product_card_JMzrXX", "product_card_GiXHfA", "product_card_Jgx9FK"],
+      "block_order": [
+        "product_card_JMzrXX",
+        "product_card_GiXHfA",
+        "product_card_Jgx9FK"
+      ],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
@@ -110,7 +114,12 @@
           }
         }
       },
-      "block_order": ["feature_PyHkAP", "feature_7rQTpL", "feature_WeR6dU", "feature_EqQaKA"],
+      "block_order": [
+        "feature_PyHkAP",
+        "feature_7rQTpL",
+        "feature_WeR6dU",
+        "feature_EqQaKA"
+      ],
       "name": "Icon section",
       "settings": {
         "heading": "Fördelar med solceller",
