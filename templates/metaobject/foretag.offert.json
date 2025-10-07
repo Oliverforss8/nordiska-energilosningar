@@ -12,44 +12,78 @@
     "offert_forfragan_bdcUQP": {
       "type": "offert-forfragan",
       "blocks": {
-        "service_option_6DDday": {
-          "type": "service_option",
+        "form_field_Jg4dFV": {
+          "type": "form_field",
           "settings": {
-            "label": "Företag",
-            "service_key": "",
-            "icon_svg": ""
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
           }
         },
-        "service_option_McV9nd": {
-          "type": "service_option",
+        "form_field_TLi6yU": {
+          "type": "form_field",
           "settings": {
-            "label": "Solceller",
-            "service_key": "",
-            "icon_svg": ""
+            "label": "Företag eller BRF",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
           }
         },
-        "service_option_G76dct": {
-          "type": "service_option",
+        "form_field_yRQYXh": {
+          "type": "form_field",
           "settings": {
-            "label": "Bostadsrättsförening",
-            "service_key": "",
-            "icon_svg": ""
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
           }
         },
-        "service_option_bjCBta": {
+        "form_field_Dy63fQ": {
+          "type": "form_field",
+          "settings": {
+            "label": "Mailadress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_RrpJ9b": {
           "type": "service_option",
           "settings": {
             "label": "Lantbruk",
             "service_key": "",
             "icon_svg": ""
           }
+        },
+        "service_option_MW9Egf": {
+          "type": "service_option",
+          "settings": {
+            "label": "Företag",
+            "service_key": "",
+            "icon_svg": ""
+          }
         }
       },
       "block_order": [
-        "service_option_6DDday",
-        "service_option_McV9nd",
-        "service_option_G76dct",
-        "service_option_bjCBta"
+        "form_field_Jg4dFV",
+        "form_field_TLi6yU",
+        "form_field_yRQYXh",
+        "form_field_Dy63fQ",
+        "service_option_RrpJ9b",
+        "service_option_MW9Egf"
       ],
       "name": "Offertförfrågan",
       "settings": {
