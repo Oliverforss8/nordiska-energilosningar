@@ -20,6 +20,14 @@
             "icon_svg": ""
           }
         },
+        "service_option_McV9nd": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        },
         "service_option_G76dct": {
           "type": "service_option",
           "settings": {
@@ -39,6 +47,7 @@
       },
       "block_order": [
         "service_option_6DDday",
+        "service_option_McV9nd",
         "service_option_G76dct",
         "service_option_bjCBta"
       ],
