@@ -21,81 +21,73 @@
     method="POST"
     class="grid grid-cols-1 gap-x-[20px] md:grid-cols-2"
   >
-    <div class="flex flex-col">
-      <label for="name" class="body1 mb-[15px] text-[#171717]"> För- & efternamn </label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-        class="h-[40px] rounded border-0 bg-[#F6F6F6] px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-    </div>
-
-    <div class="flex flex-col">
-      <label for="company" class="body1 mb-[15px] text-[#171717]"> Företagsnamn </label>
-      <input
-        type="text"
-        id="company"
-        name="company"
-        class="h-[40px] rounded border-0 bg-[#F6F6F6] px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-    </div>
-
-    <div class="flex flex-col pt-[30px]">
-      <label for="phone" class="body1 mb-[15px] text-[#171717]"> Telefonnummer </label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        class="h-[40px] rounded border-0 bg-[#F6F6F6] px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-    </div>
-
-    <div class="flex flex-col pt-[30px]">
-      <label for="email" class="body1 mb-[15px] text-[#171717]"> Mailadress </label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        class="h-[40px] rounded border-0 bg-[#F6F6F6] px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-    </div>
+    {% for block in section.blocks %}
+      {% if block.type == 'form_field' %}
+        {% liquid
+          assign field_type = block.settings.field_type | default: 'text'
+          assign field_name = block.settings.name | default: block.settings.label | handleize
+          assign is_required = block.settings.required
+          assign placeholder = block.settings.placeholder | default: ''
+          assign rows = block.settings.rows | default: 4
+          assign pattern = block.settings.pattern
+        %}
+        <div class="flex flex-col{% if field_type != 'text' and field_type != 'email' and field_type != 'tel' %} col-span-2{% endif %}{% if forloop.index > 2 %} pt-[30px]{% endif %}">
+          <label for="{{ field_name }}" class="body1 mb-[15px] text-[#171717]">
+            {{ block.settings.label }}
+          </label>
+          {% if field_type == 'textarea' %}
+            <textarea
+              id="{{ field_name }}"
+              name="{{ field_name }}"
+              rows="{{ rows }}"
+              {% if is_required %}
+                required
+              {% endif %}
+              class="h-[80px] rounded border-0 bg-[#F6F6F6] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              {% if placeholder != blank %}
+                placeholder="{{ placeholder | escape }}"
+              {% endif %}
+            ></textarea>
+          {% else %}
+            <input
+              type="{{ field_type }}"
+              id="{{ field_name }}"
+              name="{{ field_name }}"
+              {% if is_required %}
+                required
+              {% endif %}
+              {% if pattern != blank %}
+                pattern="{{ pattern }}"
+              {% endif %}
+              class="h-[40px] rounded border-0 bg-[#F6F6F6] px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              {% if placeholder != blank %}
+                placeholder="{{ placeholder | escape }}"
+              {% endif %}
+            >
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
     <div class="col-span-2 flex flex-col py-[50px]">
       <div class=" body1 flex flex-row gap-[5px] text-[25px] text-[#171717]">
         Hur kan vi hjälpa dig?
         <span class=" mt-[5px]  text-[15px] text-[#171717]/80"> Klicka för att välja* </span>
       </div>
       <div class=" flex flex-row flex-wrap gap-[10px] pt-[15px]">
-        <button
-          type="button"
-          class="service-btn knappetikett rounded-[10px] bg-[#F6F6F6] p-[13px] font-[300] text-[#171717]"
-          data-service="Solceller"
-        >
-          Solceller
-        </button>
-        <button
-          type="button"
-          class="service-btn knappetikett rounded-[10px] bg-[#F6F6F6] p-[13px] font-[300] text-[#171717]"
-          data-service="Energilagring"
-        >
-          Energilagring
-        </button>
-        <button
-          type="button"
-          class="service-btn knappetikett rounded-[10px] bg-[#F6F6F6] p-[13px] font-[300] text-[#171717]"
-          data-service="Laddbox"
-        >
-          Laddbox
-        </button>
-        <button
-          type="button"
-          class="service-btn knappetikett rounded-[10px] bg-[#F6F6F6] p-[13px] font-[300] text-[#171717]"
-          data-service="Serviceavtal"
-        >
-          Serviceavtal
-        </button>
+        {% for block in section.blocks %}
+          {% if block.type == 'service_option' %}
+            {% liquid
+              assign service_key = block.settings.service_key | default: block.settings.label | handleize
+            %}
+            <button
+              type="button"
+              class="service-option knappetikett rounded-[10px] bg-[#F6F6F6] p-[13px] font-[300] text-[#171717]"
+              data-service="{{ service_key }}"
+            >
+              {{ block.settings.label | default: 'Tjänst' }}
+            </button>
+          {% endif %}
+        {% endfor %}
       </div>
       <input
         type="hidden"
@@ -124,7 +116,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const serviceButtons = document.querySelectorAll('.service-btn');
+    const serviceButtons = document.querySelectorAll('.service-option, .service-btn');
     const hiddenInput = document.getElementById('selected-services');
     let selectedServices = []; // Start with no services selected
 
@@ -182,9 +174,103 @@
       "label": "Header Button URL"
     }
   ],
+  "max_blocks": 50,
+  "blocks": [
+    {
+      "type": "form_field",
+      "name": "Formulärfält",
+      "limit": 30,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Etikett", "default": "För- & efternamn" },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Fältnamn (valfritt)",
+          "info": "Om tomt används etiketten som namn (handleized)"
+        },
+        {
+          "type": "select",
+          "id": "field_type",
+          "label": "Typ",
+          "options": [
+            { "value": "text", "label": "Text" },
+            { "value": "email", "label": "E‑post" },
+            { "value": "tel", "label": "Telefon" },
+            { "value": "textarea", "label": "Textarea" }
+          ],
+          "default": "text"
+        },
+        { "type": "text", "id": "placeholder", "label": "Platshållare (valfritt)" },
+        { "type": "checkbox", "id": "required", "label": "Obligatoriskt", "default": true },
+        {
+          "type": "text",
+          "id": "pattern",
+          "label": "HTML5 pattern (valfritt)",
+          "info": "RegExp för validering, t.ex.^[0-9\\- +()]*$ för telefon"
+        },
+        {
+          "type": "number",
+          "id": "rows",
+          "label": "Textarea rader",
+          "default": 4,
+          "info": "Gäller endast textarea"
+        }
+      ]
+    },
+    {
+      "type": "service_option",
+      "name": "Tjänsteval",
+      "limit": 12,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Etikett", "default": "Solceller" },
+        {
+          "type": "text",
+          "id": "service_key",
+          "label": "Nyckel (valfritt)",
+          "info": "Används som data-service. Lämna tomt för att använda etiketten."
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Contact Form"
+      "name": "Contact Form",
+      "blocks": [
+        {
+          "type": "form_field",
+          "settings": { "label": "För- & efternamn", "field_type": "text", "required": true }
+        },
+        {
+          "type": "form_field",
+          "settings": { "label": "Mailadress", "field_type": "email", "required": true }
+        },
+        {
+          "type": "form_field",
+          "settings": { "label": "Företagsnamn", "field_type": "text", "required": false }
+        },
+        {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "field_type": "tel",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$"
+          }
+        },
+        {
+          "type": "form_field",
+          "settings": {
+            "label": "Meddelande",
+            "field_type": "textarea",
+            "required": false,
+            "rows": 4
+          }
+        },
+        { "type": "service_option", "settings": { "label": "Solceller" } },
+        { "type": "service_option", "settings": { "label": "Energilagring" } },
+        { "type": "service_option", "settings": { "label": "Laddbox" } },
+        { "type": "service_option", "settings": { "label": "Serviceavtal" } }
+      ]
     }
   ]
 }
