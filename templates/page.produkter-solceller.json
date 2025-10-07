@@ -253,7 +253,7 @@
         "avdrag_item_VTmMVG": {
           "type": "avdrag_item",
           "settings": {
-            "text": "50% avdrag förbatterilagring",
+            "text": "50% avdrag vid köp av batterilagring",
             "image": "shopify://shop_images/Ladd.svg"
           }
         }
