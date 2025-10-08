@@ -70,8 +70,8 @@
         "specification_AQCrQp": {
           "type": "specification",
           "settings": {
-            "label": "Dimension (per modul)",
-            "value": "L 587 x B 310 x H 1230 mm"
+            "label": "Dimension (L x B x H)",
+            "value": "210 x 80 x 220 mm"
           }
         },
         "specification_HewNBR": {
