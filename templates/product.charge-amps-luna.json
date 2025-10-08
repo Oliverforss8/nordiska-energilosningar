@@ -150,27 +150,12 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_wA4xfq": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "En optimal laddlösning för hemmet",
-        "text": "<p><br/>Charge Amps Luna integreras sömlöst i ditt hem och anpassar sig efter dina dagliga behov. Oavsett om du laddar bilen med el från elnätet eller med egenproducerad solel kan du vara trygg i att hushållets övriga elutrustning fungerar som vanligt. Detta möjliggörs av den smarta mjukvarans lastbalansering, som säkerställer en jämn och stabil strömförsörjning till alla enheter.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/CA_Luna_juni_HR_2024_foto_Maria_Cruseman-1_e8bdb9c1-d786-4f67-8170-73d5d43a05f9.jpg",
-        "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
-        "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "banner_bild_xdt9Wn": {
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-17.jpg",
+        "background_image": "shopify://shop_images/CA_Luna_juni_HR_2024_foto_Maria_Cruseman-1_e8bdb9c1-d786-4f67-8170-73d5d43a05f9.jpg",
         "background_video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
         "background_color": "#000000",
         "overlay_opacity": 0,
@@ -244,7 +229,6 @@
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "tekniska_specifikationer_NRgBkG",
-    "bild_och_text_wA4xfq",
     "banner_bild_xdt9Wn",
     "faq_produkt",
     "relaterade_produkter"
