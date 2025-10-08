@@ -99,7 +99,7 @@
           "type": "specification",
           "settings": {
             "label": "Driftstemperatur",
-            "value": "- 20 – + 55 °C"
+            "value": "–35 till + 45 °C"
           }
         },
         "specification_tjm798": {
