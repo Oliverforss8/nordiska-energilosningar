@@ -51,6 +51,26 @@
         "custom_id": ""
       }
     },
+    "banner_bild_xdt9Wn": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-17.jpg",
+        "background_video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Redo för framtiden",
+        "description": "Laddaren är framtidssäkrad och utvecklad för att möta kommande behov, med stöd för funktioner som plug-and-charge (PnC) och vehicle-to-grid (V2G)*. Charge Amps Luna erbjuder inte bara bekvämlighet utan också enkelhet – du kan enkelt identifiera din bil som behörig att använda laddaren och få realtidsinformation om elbilens batteristatus.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "tekniska_specifikationer_NRgBkG": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -151,26 +171,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_xdt9Wn": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "media_type": "image",
-        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-17.jpg",
-        "background_video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Redo för framtiden",
-        "description": "Laddaren är framtidssäkrad och utvecklad för att möta kommande behov, med stöd för funktioner som plug-and-charge (PnC) och vehicle-to-grid (V2G)*. Charge Amps Luna erbjuder inte bara bekvämlighet utan också enkelhet – du kan enkelt identifiera din bil som behörig att använda laddaren och få realtidsinformation om elbilens batteristatus.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -227,8 +227,8 @@
   },
   "order": [
     "main",
-    "bild_och_text_dETT6e",
     "bild_och_text_wA4xfq",
+    "bild_och_text_dETT6e",
     "tekniska_specifikationer_NRgBkG",
     "banner_bild_xdt9Wn",
     "faq_produkt",
