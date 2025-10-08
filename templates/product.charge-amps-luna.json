@@ -22,6 +22,21 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
+    "bild_och_text_wA4xfq": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "En optimal laddlösning för hemmet",
+        "text": "<p><br/>Charge Amps Luna integreras sömlöst i ditt hem och anpassar sig efter dina dagliga behov. Oavsett om du laddar bilen med el från elnätet eller med egenproducerad solel kan du vara trygg i att hushållets övriga elutrustning fungerar som vanligt. Detta möjliggörs av den smarta mjukvarans lastbalansering, som säkerställer en jämn och stabil strömförsörjning till alla enheter.<br/><br/></p>",
+        "media_type": "video",
+        "image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
+        "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "tekniska_specifikationer_NRgBkG": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -122,17 +137,23 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_wA4xfq": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "banner_bild_xdt9Wn": {
+      "type": "banner-bild",
+      "name": "Banner bild",
       "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
-        "media_type": "video",
-        "video": "shopify://files/videos/jichajiyongsuo.mp4",
-        "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-17.jpg",
+        "background_video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Redo för framtiden",
+        "description": "Laddaren är framtidssäkrad och utvecklad för att möta kommande behov, med stöd för funktioner som plug-and-charge (PnC) och vehicle-to-grid (V2G)*. Charge Amps Luna erbjuder inte bara bekvämlighet utan också enkelhet – du kan enkelt identifiera din bil som behörig att använda laddaren och få realtidsinformation om elbilens batteristatus.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -192,8 +213,9 @@
   },
   "order": [
     "main",
-    "tekniska_specifikationer_NRgBkG",
     "bild_och_text_wA4xfq",
+    "tekniska_specifikationer_NRgBkG",
+    "banner_bild_xdt9Wn",
     "faq_produkt",
     "relaterade_produkter"
   ]
