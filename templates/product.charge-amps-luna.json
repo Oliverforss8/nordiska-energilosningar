@@ -91,8 +91,8 @@
         "specification_C99Mme": {
           "type": "specification",
           "settings": {
-            "label": "C-värde",
-            "value": "1 C"
+            "label": "Vikt",
+            "value": "1,3 kg"
           }
         },
         "specification_hUmEmF": {
@@ -106,7 +106,7 @@
           "type": "specification",
           "settings": {
             "label": "IP-klass",
-            "value": "IP55"
+            "value": "IP 54"
           }
         },
         "specification_HYy9jM": {
