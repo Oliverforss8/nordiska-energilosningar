@@ -150,24 +150,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_qjTnxY": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "media_type": "image",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "Primär knapp",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_knappar_h6VipL": {
       "type": "bild-och-text-knappar",
       "name": "Bild och text med knappar",
@@ -261,7 +243,6 @@
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "tekniska_specifikationer_NRgBkG",
-    "banner_bild_qjTnxY",
     "bild_och_text_knappar_h6VipL",
     "banner_bild_xdt9Wn",
     "faq_produkt",
