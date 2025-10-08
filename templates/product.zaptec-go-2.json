@@ -1,0 +1,245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "settings": {
+        "show_installation": false,
+        "installation_product": "",
+        "installation_title": "",
+        "installation_description": "",
+        "green_deduction_1_title": "Grönt avdrag 1",
+        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
+        "green_deduction_2_title": "Grönt avdrag 2",
+        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+      }
+    },
+    "bild_och_text_dETT6e": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Redo för framtiden",
+        "text": "<p>Charge Amps Luna är framtidssäkrad och utvecklad för att möta kommande behov, med stöd för funktioner som plug-and-charge (PnC) och vehicle-to-grid (V2G)*. Charge Amps Luna erbjuder inte bara bekvämlighet utan också enkelhet – du kan enkelt identifiera din bil som behörig att använda laddaren och få realtidsinformation om elbilens batteristatus.</p>",
+        "media_type": "video",
+        "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_CEmcye": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "Ladda bilen med el från dina solceller",
+        "text": "<p><br/>Med Charge Amps Luna får du möjlighet att bygga ett smart och effektivt energisystem i ditt eget hem. Du kan utnyttja din solproducerade el till fullo genom att ladda bilen med ren, förnybar energi under dagen, medan systemet automatiskt växlar över till elnätet under natten. För dig som vill maximera hållbarheten finns även möjligheten att enbart ladda bilen med solenergi – ett val som både gynnar miljön och minskar dina elkostnader.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "tekniska_specifikationer_NRgBkG": {
+      "type": "tekniska-specifikationer",
+      "blocks": {
+        "specification_E4emyj": {
+          "type": "specification",
+          "settings": {
+            "label": "Batterityp",
+            "value": "LFP (LiFePO4)"
+          }
+        },
+        "specification_m7iLK6": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringskapacitet",
+            "value": "7.86 – 23.04 kWh (2–6 moduler per torn)"
+          }
+        },
+        "specification_AQCrQp": {
+          "type": "specification",
+          "settings": {
+            "label": "Dimension (L x B x H)",
+            "value": "210 x 80 x 220 mm"
+          }
+        },
+        "specification_HewNBR": {
+          "type": "specification",
+          "settings": {
+            "label": "Antal laddcykler",
+            "value": "≥ 8000 cycles"
+          }
+        },
+        "specification_WABDdY": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        },
+        "specification_C99Mme": {
+          "type": "specification",
+          "settings": {
+            "label": "Vikt",
+            "value": "1,3 kg"
+          }
+        },
+        "specification_hUmEmF": {
+          "type": "specification",
+          "settings": {
+            "label": "Driftstemperatur",
+            "value": "–35 till + 45 °C"
+          }
+        },
+        "specification_tjm798": {
+          "type": "specification",
+          "settings": {
+            "label": "IP-klass",
+            "value": "IP 54"
+          }
+        },
+        "specification_HYy9jM": {
+          "type": "specification",
+          "settings": {
+            "label": "Kompatibel med växelriktare",
+            "value": "Solis, Solinteg"
+          }
+        },
+        "specification_Wb33Wp": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        }
+      },
+      "block_order": [
+        "specification_E4emyj",
+        "specification_m7iLK6",
+        "specification_AQCrQp",
+        "specification_HewNBR",
+        "specification_WABDdY",
+        "specification_C99Mme",
+        "specification_hUmEmF",
+        "specification_tjm798",
+        "specification_HYy9jM",
+        "specification_Wb33Wp"
+      ],
+      "name": "Tekniska specifikationer",
+      "settings": {
+        "title": "Tekniska specifikationer",
+        "image_1": "shopify://shop_images/charge-amps-luna-laddbox-1.png",
+        "image_2": "shopify://shop_images/charge-amps-luna-laddbox-2.png",
+        "image_3": "shopify://shop_images/charge-amps-luna-laddbox-3.png",
+        "product_name": "Dyness",
+        "stack_info": "Stack",
+        "description": "Dyness",
+        "button_text": "Produktdatablad",
+        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250915/DynessTowerProDatasheetEN20250723.pdf",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_h6VipL": {
+      "type": "bild-och-text-knappar",
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Finns i flera färger för att matcha ditt hem",
+        "text": "<p><br/>Charge Amps Luna levereras som standard i elegant silver, men du kan även välja frontpaneler i mörkgrått eller pärlvitt för att matcha din stil och ditt hem. Här kombineras smart funktionalitet med stilren design.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/PACKSHOT-Luna-White-Silver-Grey-Triple-Transparent-LR-768x307.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_Lt8MP6": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "title": "En optimal laddlösning för hemmet",
+        "text": "<p>Charge Amps Luna integreras sömlöst i ditt hem och anpassar sig efter dina dagliga behov. Oavsett om du laddar bilen med el från elnätet eller med egenproducerad solel kan du vara trygg i att hushållets övriga elutrustning fungerar som vanligt. Detta möjliggörs av den smarta mjukvarans lastbalansering, som säkerställer en jämn och stabil strömförsörjning till alla enheter.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "faq_produkt": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång är garantin på era produkter?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Vad ingår i installationen?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur mycket kan jag spara på min elräkning?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ],
+      "settings": {
+        "title": "Vanliga frågor",
+        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bild_och_text_dETT6e",
+    "bild_och_text_CEmcye",
+    "tekniska_specifikationer_NRgBkG",
+    "bild_och_text_knappar_h6VipL",
+    "bild_och_text_Lt8MP6",
+    "faq_produkt",
+    "relaterade_produkter"
+  ]
+}
