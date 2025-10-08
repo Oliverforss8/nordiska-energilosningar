@@ -184,10 +184,10 @@
         "faq_item_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur lång är garantin på era produkter?",
+            "question": "Hur lång är garantin på Zaptec Go 2?",
             "button_text": "Ämne",
             "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
+            "answer": "<p>Zaptec Go 2 har 5 års produktgaranti.</p>"
           }
         },
         "faq_item_2": {
