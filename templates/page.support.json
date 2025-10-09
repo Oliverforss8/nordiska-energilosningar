@@ -20,7 +20,7 @@
         "media_type": "video",
         "background_image": "shopify://shop_images/test_for_hero_2.png",
         "background_video": "shopify://files/videos/1080.mp4",
-        "overlay_opacity": 20,
+        "overlay_opacity": 30,
         "heading": "Tillsammans för en\nljusare framtid",
         "subheading": "På Nordiska Energilösningar brinner vi för hållbarhet, gemenskap och innovation. Vi är mer än ett energibolag – vi är en familj av engagerade människor som växer tillsammans och gör skillnad varje dag.",
         "button_text": "Mer om oss",
