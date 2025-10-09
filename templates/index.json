@@ -28,7 +28,8 @@
       "type": "hero-lower",
       "name": "Hero nedre",
       "settings": {
-        "media_type": "video",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/images.webp",
         "background_video": "shopify://files/videos/1080.mp4",
         "overlay_opacity": 25,
         "heading": "Egen el. Lägre kostnad. Full kontroll.",
