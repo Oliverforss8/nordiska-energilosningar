@@ -433,15 +433,6 @@
         "padding_bottom": 40
       }
     },
-    "kontakt_form_zCEaqe": {
-      "type": "kontakt-form",
-      "name": "Contact Form",
-      "settings": {
-        "heading": "Ta kontakt med oss",
-        "header_button_text": "",
-        "header_button_url": ""
-      }
-    },
     "kontakt_form_GmWWBf": {
       "type": "kontakt-form",
       "blocks": {
@@ -550,7 +541,6 @@
     "faq_produkt_fD68te",
     "bild_och_text_knappar_UM7UeR",
     "faq_produkt_EJBe43",
-    "kontakt_form_zCEaqe",
     "kontakt_form_GmWWBf"
   ]
 }
