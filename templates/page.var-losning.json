@@ -27,20 +27,6 @@
         "button_url": "shopify://pages/vara-produkter"
       }
     },
-    "bild_och_text_irHa6L": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Välj en heltäckande lösning för maximal energibesparing",
-        "text": "<p><strong>Vi gör energi enkelt och lönsamt.</strong><br/><br/>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.<br/><br/></p><ul><li>Solceller gör att du producerar din egen el</li><li>Batteriet lagrar din el tills du behöver den</li><li>Laddboxen ger dig billig och trygg laddning hemma</li><li>Värmepumpen minskar dina värmekostnader rejält</li><li>Grönt bolån sänker dina räntekostnader</li><li>Allt i ett paket ger dig kontroll och lägre elräkning</li></ul><p><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "right",
-        "image_button_text": "Länka knapp",
-        "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_knappar_DJ8KNN": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -71,7 +57,7 @@
         "button_FtCtkw": {
           "type": "button",
           "settings": {
-            "text": "Värmepumpen minskar dina värmekostnader",
+            "text": "Värmepumpen minskar dina kostnader",
             "url": "",
             "show_arrow": false
           }
@@ -158,7 +144,6 @@
   "order": [
     "main",
     "hero_lower_pKeggt",
-    "bild_och_text_irHa6L",
     "bild_och_text_knappar_DJ8KNN",
     "bild_och_text_3Vj8Aw",
     "banner_bild_d78jQM",
