@@ -50,8 +50,8 @@
         "media_type": "image",
         "image": "shopify://shop_images/image_15.png",
         "image_position": "left",
-        "image_button_text": "Länka knapp",
-        "image_button_link": "shopify://pages/vara-solceller",
+        "image_button_text": "Få en offert",
+        "image_button_link": "shopify://pages/offert-forfragan",
         "custom_id": ""
       }
     },
