@@ -51,11 +51,109 @@
         "card_4_overlay_opacity": 20,
         "bottom_description": ""
       }
+    },
+    "kontakt_form_HnKitz": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_baaWQC": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_Yg3mk6": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_8GdLPB": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_aexpHU": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_BfhjQw": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_pRWjnM": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_pbFMmq": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_yqEPyW": {
+          "type": "service_option",
+          "settings": {
+            "label": "Värmepumpar",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_baaWQC",
+        "form_field_Yg3mk6",
+        "form_field_8GdLPB",
+        "form_field_aexpHU",
+        "service_option_BfhjQw",
+        "service_option_pRWjnM",
+        "service_option_pbFMmq",
+        "service_option_yqEPyW"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta kontakt med oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_UegThw",
-    "grid_omraden_8peiLf"
+    "grid_omraden_8peiLf",
+    "kontakt_form_HnKitz"
   ]
 }
