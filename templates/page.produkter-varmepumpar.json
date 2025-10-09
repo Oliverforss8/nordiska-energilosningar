@@ -179,10 +179,10 @@
         "secondary_button_url": "shopify://pages/offert-forfragan"
       }
     },
-    "kontakt_form_CfQrPU": {
+    "kontakt_form_YWJKxn": {
       "type": "kontakt-form",
       "blocks": {
-        "form_field_gBzGPY": {
+        "form_field_PqLckE": {
           "type": "form_field",
           "settings": {
             "label": "För- & efternamn",
@@ -194,7 +194,7 @@
             "rows": 4
           }
         },
-        "form_field_UdJG3Q": {
+        "form_field_yYdEEF": {
           "type": "form_field",
           "settings": {
             "label": "Telefonnummer",
@@ -206,7 +206,7 @@
             "rows": 4
           }
         },
-        "form_field_HY6kMk": {
+        "form_field_c4jcQV": {
           "type": "form_field",
           "settings": {
             "label": "E-post",
@@ -218,7 +218,7 @@
             "rows": 4
           }
         },
-        "form_field_hfqq4t": {
+        "form_field_EqQjwD": {
           "type": "form_field",
           "settings": {
             "label": "Adress",
@@ -230,40 +230,40 @@
             "rows": 4
           }
         },
-        "service_option_RtzDfq": {
+        "service_option_aYgP9h": {
           "type": "service_option",
           "settings": {
-            "label": "Frågor",
+            "label": "Värmepumpar",
             "service_key": ""
           }
         },
-        "service_option_UGntXX": {
-          "type": "service_option",
-          "settings": {
-            "label": "Offert",
-            "service_key": ""
-          }
-        },
-        "service_option_Qa9bmP": {
+        "service_option_k6WHH9": {
           "type": "service_option",
           "settings": {
             "label": "Installation",
             "service_key": ""
           }
+        },
+        "service_option_PUtrKV": {
+          "type": "service_option",
+          "settings": {
+            "label": "Frågor",
+            "service_key": ""
+          }
         }
       },
       "block_order": [
-        "form_field_gBzGPY",
-        "form_field_UdJG3Q",
-        "form_field_HY6kMk",
-        "form_field_hfqq4t",
-        "service_option_RtzDfq",
-        "service_option_UGntXX",
-        "service_option_Qa9bmP"
+        "form_field_PqLckE",
+        "form_field_yYdEEF",
+        "form_field_c4jcQV",
+        "form_field_EqQjwD",
+        "service_option_aYgP9h",
+        "service_option_k6WHH9",
+        "service_option_PUtrKV"
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
+        "heading": "Ta kontakt med oss",
         "header_button_text": "",
         "header_button_url": ""
       }
@@ -275,6 +275,6 @@
     "bild_och_text_knappar_gVCNFB",
     "banner_med_3_produkter_JdJbDT",
     "hur_ED7Umq",
-    "kontakt_form_CfQrPU"
+    "kontakt_form_YWJKxn"
   ]
 }
