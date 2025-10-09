@@ -21,14 +21,34 @@
         "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
         "overlay_opacity": 20,
         "heading": "Finansiera i 24 månader",
-        "subheading": "Upptäck fantastiska produkter och tjänster",
+        "subheading": "Spara på elräkningen redan idag, betala av i lugn och ro på 24 månader",
         "button_text": "Kontakta oss",
         "button_url": ""
+      }
+    },
+    "banner_bild_iqdGiK": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 20,
+        "header_button_text": "Räntefri avbetlaning",
+        "header_button_url": "",
+        "heading": "Flexibel finansiering – 24 månaders räntefri avbetalning",
+        "description": "Spara på elräkningen redan idag, betala av i lugn och ro på 24 månader",
+        "primary_button_text": "Läs mer",
+        "primary_button_url": "shopify://pages/finansiering",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
       }
     }
   },
   "order": [
     "main",
-    "hero_lower_Wi4en4"
+    "hero_lower_Wi4en4",
+    "banner_bild_iqdGiK"
   ]
 }
