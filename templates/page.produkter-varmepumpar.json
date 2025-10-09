@@ -24,7 +24,7 @@
         "heading": "Våra värmepumpslöningar",
         "subheading": "Överväger du att installera värmepump?\nVi tar hand om hela processen från planering till driftsatt anläggning!",
         "button_text": "Våra värmepumpar",
-        "button_url": ""
+        "button_url": "shopify://collections/varmepumpar"
       }
     },
     "bild_och_text_knappar_gVCNFB": {
@@ -115,7 +115,7 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_7.png",
+        "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
         "overlay_opacity": 30,
         "header_button_text": "Värmepumpar",
         "header_button_url": "",
