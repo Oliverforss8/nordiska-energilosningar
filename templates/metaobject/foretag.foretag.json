@@ -441,6 +441,103 @@
         "header_button_text": "",
         "header_button_url": ""
       }
+    },
+    "kontakt_form_GmWWBf": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_ihGEkw": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_PGY7ab": {
+          "type": "form_field",
+          "settings": {
+            "label": "Företagsnamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_xRUtEA": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_JhM4EU": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_CafhVJ": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_8zKeWN": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_QhzMKq": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_WdBmVe": {
+          "type": "service_option",
+          "settings": {
+            "label": "Serviceavtal",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_ihGEkw",
+        "form_field_PGY7ab",
+        "form_field_xRUtEA",
+        "form_field_JhM4EU",
+        "service_option_CafhVJ",
+        "service_option_8zKeWN",
+        "service_option_QhzMKq",
+        "service_option_WdBmVe"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
+      }
     }
   },
   "order": [
@@ -453,6 +550,7 @@
     "faq_produkt_fD68te",
     "bild_och_text_knappar_UM7UeR",
     "faq_produkt_EJBe43",
-    "kontakt_form_zCEaqe"
+    "kontakt_form_zCEaqe",
+    "kontakt_form_GmWWBf"
   ]
 }
