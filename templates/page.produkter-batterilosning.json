@@ -269,7 +269,7 @@
       "name": "Avdrag",
       "settings": {
         "custom_id": "",
-        "heading": "Avdrag för grön teknikt",
+        "heading": "Avdrag för grön teknik",
         "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
@@ -359,9 +359,9 @@
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Ta kontakt med oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },

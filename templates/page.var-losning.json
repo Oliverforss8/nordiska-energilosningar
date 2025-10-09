@@ -19,7 +19,7 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_11.png",
+        "background_image": "shopify://shop_images/image_12.png",
         "overlay_opacity": 30,
         "heading": "Trött på höga elräkningar? Här är vår lösning.",
         "subheading": "Vi vet hur det känns när elräkningen blir onödigt hög. Därför har vi skapat en enkel och smart helhetslösning som gör att du får kontroll över dina kostnader – och slipper oron över nästa faktura.",
@@ -27,17 +27,75 @@
         "button_url": "shopify://pages/vara-produkter"
       }
     },
-    "bild_och_text_irHa6L": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "bild_och_text_knappar_DJ8KNN": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_cReQHr": {
+          "type": "button",
+          "settings": {
+            "text": "Producerar egen el med solceller",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_CEtHeD": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra din el med batterier",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_qEb8Cy": {
+          "type": "button",
+          "settings": {
+            "text": "Laddbox ger dig billig laddning",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_FtCtkw": {
+          "type": "button",
+          "settings": {
+            "text": "Värmepumpen minskar dina kostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_cYMmVi": {
+          "type": "button",
+          "settings": {
+            "text": "Grönt bolån sänker dina räntekostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_hrHyXE": {
+          "type": "button",
+          "settings": {
+            "text": "Allt i ett paket ger dig lägre elräkning",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_cReQHr",
+        "button_CEtHeD",
+        "button_qEb8Cy",
+        "button_FtCtkw",
+        "button_cYMmVi",
+        "button_hrHyXE"
+      ],
+      "name": "Bild och text med knappar",
       "settings": {
         "title": "Välj en heltäckande lösning för maximal energibesparing",
-        "text": "<p><strong>Vi gör energi enkelt och lönsamt.</strong><br/><br/>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.<br/><br/></p><ul><li>Solceller gör att du producerar din egen el</li><li>Batteriet lagrar din el tills du behöver den</li><li>Laddboxen ger dig billig och trygg laddning hemma</li><li>Värmepumpen minskar dina värmekostnader rejält</li><li>Grönt bolån sänker dina räntekostnader</li><li>Allt i ett paket ger dig kontroll och lägre elräkning</li></ul><p><br/></p>",
+        "text": "<p>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
+        "image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
         "image_position": "right",
-        "image_button_text": "Länka knapp",
-        "image_button_link": "shopify://pages/var-losning",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
@@ -50,8 +108,8 @@
         "media_type": "image",
         "image": "shopify://shop_images/image_15.png",
         "image_position": "left",
-        "image_button_text": "Länka knapp",
-        "image_button_link": "shopify://pages/vara-solceller",
+        "image_button_text": "Få en offert",
+        "image_button_link": "shopify://pages/offert-forfragan",
         "custom_id": ""
       }
     },
@@ -60,7 +118,7 @@
       "name": "Banner bild",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
+        "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
         "background_color": "#000000",
         "overlay_opacity": 20,
         "header_button_text": "Räntefri avbetlaning",
@@ -68,28 +126,116 @@
         "heading": "Flexibel finansiering – 24 månaders räntefri avbetalning",
         "description": "Spara på elräkningen redan idag, betala av i lugn och ro på 24 månader",
         "primary_button_text": "Läs mer",
-        "primary_button_url": "",
+        "primary_button_url": "shopify://pages/finansiering",
         "secondary_button_text": "",
         "secondary_button_url": "",
         "custom_id": ""
       }
     },
-    "kontakt_form_394yiU": {
+    "kontakt_form_WJqr9M": {
       "type": "kontakt-form",
+      "blocks": {
+        "form_field_Ba8aJ6": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_XqNRJJ": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_pLfkRX": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_fqX6ag": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_TaV9Xi": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_bKmMcx": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_xHdUct": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_Fe6xk9": {
+          "type": "service_option",
+          "settings": {
+            "label": "Värmepumpar",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_Ba8aJ6",
+        "form_field_XqNRJJ",
+        "form_field_pLfkRX",
+        "form_field_fqX6ag",
+        "service_option_TaV9Xi",
+        "service_option_bKmMcx",
+        "service_option_xHdUct",
+        "service_option_Fe6xk9"
+      ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },
   "order": [
     "main",
     "hero_lower_pKeggt",
-    "bild_och_text_irHa6L",
+    "bild_och_text_knappar_DJ8KNN",
     "bild_och_text_3Vj8Aw",
     "banner_bild_d78jQM",
-    "kontakt_form_394yiU"
+    "kontakt_form_WJqr9M"
   ]
 }

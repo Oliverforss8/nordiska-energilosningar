@@ -17,9 +17,10 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
-        "media_type": "image",
+        "media_type": "video",
         "background_image": "shopify://shop_images/test_for_hero_2.png",
-        "overlay_opacity": 20,
+        "background_video": "shopify://files/videos/1080.mp4",
+        "overlay_opacity": 30,
         "heading": "Tillsammans för en\nljusare framtid",
         "subheading": "På Nordiska Energilösningar brinner vi för hållbarhet, gemenskap och innovation. Vi är mer än ett energibolag – vi är en familj av engagerade människor som växer tillsammans och gör skillnad varje dag.",
         "button_text": "Mer om oss",
@@ -36,7 +37,7 @@
         "image": "shopify://shop_images/test_for_hero_2.png",
         "image_position": "right",
         "image_button_text": "Upptäck våra lösningar",
-        "image_button_link": "shopify://pages/vara-produkter",
+        "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
     },
@@ -72,7 +73,12 @@
           }
         }
       },
-      "block_order": ["feature_PA8KdK", "feature_p9CMea", "feature_NptdVP", "feature_NeCEHe"],
+      "block_order": [
+        "feature_PA8KdK",
+        "feature_p9CMea",
+        "feature_NptdVP",
+        "feature_NeCEHe"
+      ],
       "disabled": true,
       "name": "Icon section",
       "settings": {
@@ -90,7 +96,7 @@
         "title": "Vi är auktoriserade hos Elsäkerhetsverket",
         "text": "<p>Som registrerade hos Elsäkerhetsverket har vi rätt att utföra elinstallationsarbeten enligt gällande regler och säkerhetskrav. Det innebär att våra tekniker har rätt kompetens, att vi följer branschens föreskrifter och att vi tar fullt ansvar för säkerheten i din anläggning. När du anlitar oss kan du känna dig trygg med att jobbet blir rätt gjort – från start till färdig installation.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/Easee_Elsaekerhetsverket_e11c00ebb8.png",
+        "image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
@@ -104,20 +110,132 @@
         "title": "Vi är en del av installatörsföretagen",
         "text": "<p>Att vi är medlemmar i Installatörsföretagen innebär att vi följer branschens regler för solcellsinstallationer och alltid arbetar enligt aktuella standarder. Det ger oss tillgång till den senaste tekniken, branschpraxis och riktlinjer – vilket säkerställer korrekt och säker installation.</p><p>Medlemskapet innebär också att våra anställda omfattas av kollektivavtal, med trygga villkor, löpande utbildning och en säker arbetsmiljö.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/527c3c48-1188-48c8-8afa-59bc4766c4ef-w_720.webp",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
         "image_position": "right",
-        "image_button_text": "Läs mer",
+        "image_button_text": "Ta reda på mer",
         "image_button_link": "https://www.in.se/om-oss/#/",
         "custom_id": ""
       }
     },
-    "kontakt_form_H47hYU": {
+    "kontakt_form_UMgaJa": {
       "type": "kontakt-form",
+      "blocks": {
+        "form_field_thmbgC": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_WzwV9q": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_VKcmQb": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_QQr6Hp": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_hMHYih": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_GhkM7b": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_7TT3fV": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_WnwVMh": {
+          "type": "service_option",
+          "settings": {
+            "label": "Värmepumpar",
+            "service_key": ""
+          }
+        },
+        "service_option_ygDjRQ": {
+          "type": "service_option",
+          "settings": {
+            "label": "Finansiering",
+            "service_key": ""
+          }
+        },
+        "service_option_DeQPK8": {
+          "type": "service_option",
+          "settings": {
+            "label": "Support",
+            "service_key": ""
+          }
+        },
+        "service_option_eCTPe7": {
+          "type": "service_option",
+          "settings": {
+            "label": "Retur",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_thmbgC",
+        "form_field_WzwV9q",
+        "form_field_VKcmQb",
+        "form_field_QQr6Hp",
+        "service_option_hMHYih",
+        "service_option_GhkM7b",
+        "service_option_7TT3fV",
+        "service_option_WnwVMh",
+        "service_option_ygDjRQ",
+        "service_option_DeQPK8",
+        "service_option_eCTPe7"
+      ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Support",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },
@@ -128,6 +246,6 @@
     "icon_3eKirx",
     "bild_och_text_pUBNQ3",
     "bild_och_text_CPXJh3",
-    "kontakt_form_H47hYU"
+    "kontakt_form_UMgaJa"
   ]
 }

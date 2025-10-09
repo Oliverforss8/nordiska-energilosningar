@@ -14,8 +14,8 @@
       "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_12.png",
-        "overlay_opacity": 30,
+        "background_image": "shopify://shop_images/image_13.png",
+        "overlay_opacity": 5,
         "heading": "Sänk elkostnaderna på gården med energilösningar",
         "subheading": "Börja producera och lagra din egna gröna el och betala mindre i elräkning",
         "button_text": "Be om offert",
@@ -130,12 +130,110 @@
         "image_button_link": "",
         "custom_id": ""
       }
+    },
+    "kontakt_form_Q8dUhx": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_RBrkeB": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_pgB4Jt": {
+          "type": "form_field",
+          "settings": {
+            "label": "Företagsnamn / Lantbruk",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_iV3jdE": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_3Cee7X": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_MDjRgF": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_d7zjar": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_gfxWU4": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_eJWhL6": {
+          "type": "service_option",
+          "settings": {
+            "label": "Serviceavtal",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_RBrkeB",
+        "form_field_pgB4Jt",
+        "form_field_iV3jdE",
+        "form_field_3Cee7X",
+        "service_option_MDjRgF",
+        "service_option_d7zjar",
+        "service_option_gfxWU4",
+        "service_option_eJWhL6"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
+      }
     }
   },
   "order": [
     "hero_lower_6X9dhE",
     "lankar_tGAxqY",
     "bild_och_text_knappar_wwTPne",
-    "bild_och_text_knappar_fdzFA4"
+    "bild_och_text_knappar_fdzFA4",
+    "kontakt_form_Q8dUhx"
   ]
 }

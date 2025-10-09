@@ -19,12 +19,13 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/qyymok2yfx8.webp",
+        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
+        "background_video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
         "overlay_opacity": 20,
         "heading": "Ladda elbilen hemma - enkelt snabbt och smart",
         "subheading": "Att installera en elbilsladdare hemma ger dig full kontroll över din laddning – du laddar snabbt, säkert och när det passar dig bäst.",
         "button_text": "Våra laddboxar",
-        "button_url": ""
+        "button_url": "shopify://collections/laddboxar"
       }
     },
     "bild_och_text_knappar_Ya3NQr": {
@@ -56,93 +57,153 @@
         "title": "Alltid redo att köra",
         "text": "<p>Med en egen laddare hemma slipper du onödiga stopp vid laddstationer. Du pluggar enkelt in bilen när du kommer hem, och den laddas medan du sover. På morgonen är bilen fulladdad och redo för dagen – oavsett om du ska till jobbet, hämta barnen eller åka på weekendresa. Bekvämligare än så blir det inte.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/charging_ev.webp",
+        "image": "shopify://shop_images/TE_Zaptec_MG_5108_PRINT.png",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
       }
     },
-    "banner_med_3_produkter_NwVfdk": {
+    "banner_med_3_produkter_GFbCBa": {
       "type": "banner-med-3-produkter",
       "blocks": {
-        "product_card_UD9G6B": {
+        "product_card_fnUKGi": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
-            "title": "Laddbox 1",
-            "description": "Laddbox med 3-fas, färdiga för installation",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
           }
         },
-        "product_card_AertQY": {
+        "product_card_nQUcje": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
-            "title": "Laddbox 2",
-            "description": "Laddbox med 3-fas, färdiga för installation",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
           }
         },
-        "product_card_JERkdE": {
+        "product_card_XJMKCm": {
           "type": "product_card",
           "settings": {
-            "product": "produkt",
-            "title": "Laddboxar 3",
-            "description": "Laddbox med 3-fas, färdiga för installation",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
           }
         }
       },
       "block_order": [
-        "product_card_UD9G6B",
-        "product_card_AertQY",
-        "product_card_JERkdE"
+        "product_card_fnUKGi",
+        "product_card_nQUcje",
+        "product_card_XJMKCm"
       ],
       "name": "Banner med 3 produkter",
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_14.png",
-        "overlay_opacity": 30,
-        "header_button_text": "Laddoxar",
-        "header_button_url": "shopify://collections/laddboxar",
-        "heading": "Upptäck vårt utbud av laddboxar",
-        "description": "Vi har garanterat en laddbox som passar både ditt hem och bilen perfekt!",
-        "primary_button_text": "Våra laddboxar",
+        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
+        "overlay_opacity": 25,
+        "header_button_text": "Laddboxar",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Upptäck",
         "primary_button_url": "shopify://collections/laddboxar",
         "secondary_button_text": "",
         "secondary_button_url": ""
       }
     },
-    "bild_och_text_3Kjt7B": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "avdrag_47f9Td": {
+      "type": "avdrag",
+      "blocks": {
+        "avdrag_item_7PLgzk": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag för köp av laddbox",
+            "image": "shopify://shop_images/Ladd2.svg"
+          }
+        },
+        "avdrag_item_ihprFL": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag vid installation",
+            "image": "shopify://shop_images/Vector.svg"
+          }
+        }
+      },
+      "block_order": [
+        "avdrag_item_7PLgzk",
+        "avdrag_item_ihprFL"
+      ],
+      "name": "Avdrag",
       "settings": {
-        "title": "Undvik höga elnätsavgifter",
-        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "custom_id": "",
+        "heading": "Avdrag för grön teknik",
+        "description": "<p>Med det gröna avdraget får du som privatperson en skattereduktion på 50 % av kostnaden för både laddbox och installation. Avdraget görs direkt på fakturan, vilket innebär att du slipper ligga ute med pengar eller hantera ansökningar i efterhand.</p>",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "bild_och_text_knappar_kAcza6": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_dPLtxU": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "text": "Lägre kostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_yfChzy": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "text": "Tidsbesparing",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_dPLtxU",
+        "button_yfChzy"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Smarta funktioner för modern AI-teknik",
+        "text": "<p>Dagens laddare är inte bara laddare – de är smarta enheter. Med funktioner som fjärrstyrning via app, schemaläggning av laddning när elen är billigast, dynamisk lastbalansering för att inte överbelasta huset och statistik över din förbrukning får du full kontroll. Du kan till och med integrera laddningen med ditt solcellssystem för maximal effektivitet.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "right",
-        "image_button_text": "Knapp",
-        "image_button_link": "shopify://products/solceller-1",
+        "image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
-    "bild_och_text_G3CaL6": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "banner_bild_mtUYxw": {
+      "type": "banner-bild",
+      "name": "Banner bild",
       "settings": {
-        "title": "Undvik höga elnätsavgifter",
-        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "left",
-        "image_button_text": "Knapp",
-        "image_button_link": "shopify://products/solceller-1",
+        "background_image": "shopify://shop_images/image_15.png",
+        "background_color": "#000000",
+        "overlay_opacity": 25,
+        "header_button_text": "Solceller",
+        "header_button_url": "",
+        "heading": "Ladda din elbil med solenergi – direkt från ditt eget tak",
+        "description": "Att kombinera solceller med elbilsladdning hemma är ett smart val för villaägare som vill sänka sina elkostnader och minska sitt klimatavtryck.",
+        "primary_button_text": "Läs mer om solceller",
+        "primary_button_url": "shopify://pages/vara-solceller",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -231,8 +292,8 @@
       "name": "Contact Form",
       "settings": {
         "heading": "Ta kontakt med oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },
@@ -240,9 +301,10 @@
     "main",
     "hero_lower_UadDG8",
     "bild_och_text_knappar_Ya3NQr",
-    "banner_med_3_produkter_NwVfdk",
-    "bild_och_text_3Kjt7B",
-    "bild_och_text_G3CaL6",
+    "banner_med_3_produkter_GFbCBa",
+    "avdrag_47f9Td",
+    "bild_och_text_knappar_kAcza6",
+    "banner_bild_mtUYxw",
     "kontakt_form_MEdRdB"
   ]
 }

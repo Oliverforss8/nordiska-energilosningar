@@ -18,6 +18,7 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
+        "media_type": "image",
         "background_image": "shopify://shop_images/image_13.png",
         "overlay_opacity": 10,
         "heading": "Upptäck våra produkter",
@@ -26,239 +27,133 @@
         "button_url": ""
       }
     },
-    "grid_omraden_VThqFD": {
+    "grid_omraden_8peiLf": {
       "type": "grid-omraden",
       "name": "Grid areas",
       "settings": {
-        "title": "Effektiva energilösningar för framtidens fastigheter",
-        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
-        "card_1_image": "shopify://shop_images/image_16.png",
-        "card_1_button_text": "Batterilösningar",
-        "card_1_button_link": "shopify://pages/vara-batterilosningar",
-        "card_2_image": "shopify://shop_images/image_15.png",
-        "card_2_button_text": "Solceller",
-        "card_2_button_link": "shopify://pages/vara-solceller",
-        "card_3_image": "shopify://shop_images/image_7.png",
-        "card_3_button_text": "Värmepumpar",
-        "card_3_button_link": "shopify://pages/vara-varmepumpar",
-        "card_4_image": "shopify://shop_images/image_14.png",
-        "card_4_button_text": "Laddboxar",
+        "title": "Smarta energilösningar för en hållbar vardag",
+        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
+        "card_1_image": "shopify://shop_images/image_18.png",
+        "card_1_button_text": "Solceller",
+        "card_1_button_link": "shopify://pages/vara-solceller",
+        "card_1_overlay_opacity": 20,
+        "card_2_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
+        "card_2_button_text": "Värmepumpar",
+        "card_2_button_link": "shopify://pages/vara-varmepumpar",
+        "card_2_overlay_opacity": 20,
+        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
+        "card_3_button_text": "Laddboxar",
+        "card_3_button_link": "shopify://pages/vara-laddboxar",
+        "card_3_overlay_opacity": 20,
+        "card_4_image": "shopify://shop_images/image_16.png",
+        "card_4_button_text": "Batterier",
         "card_4_button_link": "shopify://pages/vara-laddboxar",
-        "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+        "card_4_overlay_opacity": 20,
+        "bottom_description": ""
       }
     },
-    "banner_med_3_produkter_AhTjN7": {
-      "type": "banner-med-3-produkter",
+    "kontakt_form_HnKitz": {
+      "type": "kontakt-form",
       "blocks": {
-        "product_card_FyyC7A": {
-          "type": "product_card",
+        "form_field_baaWQC": {
+          "type": "form_field",
           "settings": {
-            "product": "solceller-1",
-            "title": "Solcell 1",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
           }
         },
-        "product_card_tMxjy9": {
-          "type": "product_card",
+        "form_field_Yg3mk6": {
+          "type": "form_field",
           "settings": {
-            "product": "solceller-1",
-            "title": "Solcell 2",
-            "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
           }
         },
-        "product_card_rwDpXn": {
-          "type": "product_card",
+        "form_field_8GdLPB": {
+          "type": "form_field",
           "settings": {
-            "product": "solceller-1",
-            "title": "Solcell 3",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_aexpHU": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_BfhjQw": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_pRWjnM": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_pbFMmq": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_yqEPyW": {
+          "type": "service_option",
+          "settings": {
+            "label": "Värmepumpar",
+            "service_key": ""
           }
         }
       },
-      "block_order": ["product_card_FyyC7A", "product_card_tMxjy9", "product_card_rwDpXn"],
-      "name": "Banner med 3 produkter",
+      "block_order": [
+        "form_field_baaWQC",
+        "form_field_Yg3mk6",
+        "form_field_8GdLPB",
+        "form_field_aexpHU",
+        "service_option_BfhjQw",
+        "service_option_pRWjnM",
+        "service_option_pbFMmq",
+        "service_option_yqEPyW"
+      ],
+      "name": "Contact Form",
       "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_11.png",
-        "overlay_opacity": 30,
-        "header_button_text": "Solceller",
-        "header_button_url": "",
-        "heading": "Vill du veta mer om solceller?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
-        "primary_button_text": "Läs mer",
-        "primary_button_url": "",
-        "secondary_button_text": "Företag",
-        "secondary_button_url": ""
-      }
-    },
-    "banner_med_3_produkter_rGEkTD": {
-      "type": "banner-med-3-produkter",
-      "blocks": {
-        "product_card_Rxaze4": {
-          "type": "product_card",
-          "settings": {
-            "product": "produkt",
-            "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_azRKYx": {
-          "type": "product_card",
-          "settings": {
-            "product": "produkt",
-            "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_azghfh": {
-          "type": "product_card",
-          "settings": {
-            "product": "produkt",
-            "title": "Laddboxar 3",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        }
-      },
-      "block_order": ["product_card_Rxaze4", "product_card_azRKYx", "product_card_azghfh"],
-      "name": "Banner med 3 produkter",
-      "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_14.png",
-        "overlay_opacity": 30,
-        "header_button_text": "Laddboxar",
-        "header_button_url": "",
-        "heading": "Vill du veta mer om solceller?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
-        "primary_button_text": "Läs mer",
-        "primary_button_url": "",
-        "secondary_button_text": "Företag",
-        "secondary_button_url": ""
-      }
-    },
-    "banner_med_3_produkter_Va3ajQ": {
-      "type": "banner-med-3-produkter",
-      "blocks": {
-        "product_card_jija74": {
-          "type": "product_card",
-          "settings": {
-            "product": "batteri-1",
-            "title": "Batteri 1",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_wGVBt4": {
-          "type": "product_card",
-          "settings": {
-            "product": "batteri-1",
-            "title": "Batteri 2",
-            "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_Fh46Hy": {
-          "type": "product_card",
-          "settings": {
-            "product": "batteri-1",
-            "title": "Batteri 3",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        }
-      },
-      "block_order": ["product_card_jija74", "product_card_wGVBt4", "product_card_Fh46Hy"],
-      "name": "Banner med 3 produkter",
-      "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_16.png",
-        "overlay_opacity": 30,
-        "header_button_text": "Värmepumpar",
-        "header_button_url": "",
-        "heading": "Letar du efter värmepump?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
-        "primary_button_text": "Läs mer",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
-      }
-    },
-    "banner_med_3_produkter_DFAaCk": {
-      "type": "banner-med-3-produkter",
-      "blocks": {
-        "product_card_cW7hLf": {
-          "type": "product_card",
-          "settings": {
-            "product": "varmepump-1",
-            "title": "Värmepump 1",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_miqUqE": {
-          "type": "product_card",
-          "settings": {
-            "product": "varmepump-1",
-            "title": "Värmepump 2",
-            "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_QBkP4D": {
-          "type": "product_card",
-          "settings": {
-            "product": "varmepump-1",
-            "title": "Värmepump 3",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        }
-      },
-      "block_order": ["product_card_cW7hLf", "product_card_miqUqE", "product_card_QBkP4D"],
-      "name": "Banner med 3 produkter",
-      "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_7.png",
-        "overlay_opacity": 30,
-        "header_button_text": "Värmepumpar",
-        "header_button_url": "",
-        "heading": "Letar du efter värmepump?",
-        "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi med en kostnadsfri konsultation.",
-        "primary_button_text": "Läs mer",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },
   "order": [
     "main",
     "hero_lower_UegThw",
-    "grid_omraden_VThqFD",
-    "banner_med_3_produkter_AhTjN7",
-    "banner_med_3_produkter_rGEkTD",
-    "banner_med_3_produkter_Va3ajQ",
-    "banner_med_3_produkter_DFAaCk"
+    "grid_omraden_8peiLf",
+    "kontakt_form_HnKitz"
   ]
 }

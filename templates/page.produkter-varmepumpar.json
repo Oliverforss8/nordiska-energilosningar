@@ -24,7 +24,7 @@
         "heading": "Våra värmepumpslöningar",
         "subheading": "Överväger du att installera värmepump?\nVi tar hand om hela processen från planering till driftsatt anläggning!",
         "button_text": "Våra värmepumpar",
-        "button_url": ""
+        "button_url": "shopify://collections/varmepumpar"
       }
     },
     "bild_och_text_knappar_gVCNFB": {
@@ -72,6 +72,25 @@
         "custom_id": ""
       }
     },
+    "banner_bild_tmVRkk": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 20,
+        "header_button_text": "Kampanj",
+        "header_button_url": "",
+        "heading": "Luftvärmepump för 9 995:-",
+        "description": "Just nu får du en luftvärmepump för 9 995:- vid köp av solceller och batteri från oss",
+        "primary_button_text": "Jag vill veta mer",
+        "primary_button_url": "shopify://pages/offert-forfragan",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "banner_med_3_produkter_JdJbDT": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -115,7 +134,7 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_7.png",
+        "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
         "overlay_opacity": 30,
         "header_button_text": "Värmepumpar",
         "header_button_url": "",
@@ -179,10 +198,10 @@
         "secondary_button_url": "shopify://pages/offert-forfragan"
       }
     },
-    "kontakt_form_CfQrPU": {
+    "kontakt_form_YWJKxn": {
       "type": "kontakt-form",
       "blocks": {
-        "form_field_gBzGPY": {
+        "form_field_PqLckE": {
           "type": "form_field",
           "settings": {
             "label": "För- & efternamn",
@@ -194,7 +213,7 @@
             "rows": 4
           }
         },
-        "form_field_UdJG3Q": {
+        "form_field_yYdEEF": {
           "type": "form_field",
           "settings": {
             "label": "Telefonnummer",
@@ -206,7 +225,7 @@
             "rows": 4
           }
         },
-        "form_field_HY6kMk": {
+        "form_field_c4jcQV": {
           "type": "form_field",
           "settings": {
             "label": "E-post",
@@ -218,7 +237,7 @@
             "rows": 4
           }
         },
-        "form_field_hfqq4t": {
+        "form_field_EqQjwD": {
           "type": "form_field",
           "settings": {
             "label": "Adress",
@@ -230,42 +249,42 @@
             "rows": 4
           }
         },
-        "service_option_RtzDfq": {
+        "service_option_aYgP9h": {
           "type": "service_option",
           "settings": {
-            "label": "Frågor",
+            "label": "Värmepumpar",
             "service_key": ""
           }
         },
-        "service_option_UGntXX": {
-          "type": "service_option",
-          "settings": {
-            "label": "Offert",
-            "service_key": ""
-          }
-        },
-        "service_option_Qa9bmP": {
+        "service_option_k6WHH9": {
           "type": "service_option",
           "settings": {
             "label": "Installation",
             "service_key": ""
           }
+        },
+        "service_option_PUtrKV": {
+          "type": "service_option",
+          "settings": {
+            "label": "Frågor",
+            "service_key": ""
+          }
         }
       },
       "block_order": [
-        "form_field_gBzGPY",
-        "form_field_UdJG3Q",
-        "form_field_HY6kMk",
-        "form_field_hfqq4t",
-        "service_option_RtzDfq",
-        "service_option_UGntXX",
-        "service_option_Qa9bmP"
+        "form_field_PqLckE",
+        "form_field_yYdEEF",
+        "form_field_c4jcQV",
+        "form_field_EqQjwD",
+        "service_option_aYgP9h",
+        "service_option_k6WHH9",
+        "service_option_PUtrKV"
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },
@@ -273,8 +292,9 @@
     "main",
     "hero_lower_FNPfHG",
     "bild_och_text_knappar_gVCNFB",
+    "banner_bild_tmVRkk",
     "banner_med_3_produkter_JdJbDT",
     "hur_ED7Umq",
-    "kontakt_form_CfQrPU"
+    "kontakt_form_YWJKxn"
   ]
 }

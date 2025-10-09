@@ -1,0 +1,203 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {}
+    },
+    "hero_lower_Wi4en4": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
+        "overlay_opacity": 20,
+        "heading": "Finansiera i 24 månader",
+        "subheading": "Spara på elräkningen redan idag, betala av i lugn och ro på 24 månader",
+        "button_text": "Kontakta oss",
+        "button_url": "shopify://pages/support-om-oss"
+      }
+    },
+    "text_sektion_Hkymwt": {
+      "type": "text-sektion",
+      "name": "Text sektion",
+      "settings": {
+        "title": "Spara på elräkningen redan idag",
+        "text": "<p>Vi hjälper dig att sänka dina elkostnader med moderna och hållbara energilösningar. Genom att kombinera hög kvalitet med flexibla betalningsalternativ gör vi det enkelt att ta steget mot en mer effektiv vardag.<br/><br/>Du får en lösning som börjar betala tillbaka sig själv redan från dag ett. Med vår 24-månaders delbetalning slipper du stora engångskostnader och får tid att se besparingarna växa fram månad för månad.</p>",
+        "button_text": "Kontakta oss",
+        "button_link": "shopify://pages/support-om-oss",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_iqdGiK": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/ae172ed2-6217-4349-a71e-7f3f7d029e9b_1.original.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 20,
+        "header_button_text": "Räntefri avbetlaning",
+        "header_button_url": "",
+        "heading": "Flexibel finansiering – 24 månaders räntefri avbetalning",
+        "description": "Spara på elräkningen redan idag, betala av i lugn och ro på 24 månader",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_KJNHCJ": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_Vetfw7": {
+          "type": "button",
+          "settings": {
+            "text": "Direkt besparing",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_WbehJQ": {
+          "type": "button",
+          "settings": {
+            "text": "Flexibel betalning",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_rhVbYN": {
+          "type": "button",
+          "settings": {
+            "text": "Trygg investering",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_dEnGD9": {
+          "type": "button",
+          "settings": {
+            "text": "Enkel process",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_Vetfw7",
+        "button_WbehJQ",
+        "button_rhVbYN",
+        "button_dEnGD9"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Varför investera i energilösningar",
+        "text": "<p>Att investera i energibesparande teknik är inte bara bra för miljön, det är också ett smart ekonomiskt beslut. Våra lösningar är utformade för att ge märkbara resultat direkt, samtidigt som du slipper ta hela kostnaden på en gång.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "kontakt_form_PkCV4E": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_NBg6NQ": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_8DTYwx": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_LtKR7c": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_M7zC99": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_pfKrxD": {
+          "type": "service_option",
+          "settings": {
+            "label": "Finansiera solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_zGe7qX": {
+          "type": "service_option",
+          "settings": {
+            "label": "Finansiera batterier",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_NBg6NQ",
+        "form_field_8DTYwx",
+        "form_field_LtKR7c",
+        "form_field_M7zC99",
+        "service_option_pfKrxD",
+        "service_option_zGe7qX"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_lower_Wi4en4",
+    "text_sektion_Hkymwt",
+    "banner_bild_iqdGiK",
+    "bild_och_text_knappar_KJNHCJ",
+    "kontakt_form_PkCV4E"
+  ]
+}

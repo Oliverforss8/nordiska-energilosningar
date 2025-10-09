@@ -117,7 +117,7 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_11.png",
+        "background_image": "shopify://shop_images/image_12.png",
         "overlay_opacity": 30,
         "header_button_text": "Solceller",
         "header_button_url": "shopify://collections/solceller",
@@ -196,21 +196,13 @@
             "title": "4. Support",
             "description": "<p>Efter ditt köp finns vi tillgängliga för support!</p>"
           }
-        },
-        "step_9H7KQG": {
-          "type": "step",
-          "settings": {
-            "title": "Steg titel",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
         }
       },
       "block_order": [
         "step_HcbJqz",
         "step_TxEikq",
         "step_x9iFjQ",
-        "step_cFgBdG",
-        "step_9H7KQG"
+        "step_cFgBdG"
       ],
       "name": "How it works",
       "settings": {
@@ -292,7 +284,7 @@
       "name": "Avdrag",
       "settings": {
         "custom_id": "",
-        "heading": "Avdrag för grön teknikt",
+        "heading": "Avdrag för grön teknik",
         "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
@@ -427,9 +419,9 @@
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Ta kontakt med oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },

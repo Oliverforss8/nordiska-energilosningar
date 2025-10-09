@@ -22,42 +22,6 @@
         "button_url": ""
       }
     },
-    "lankar_tGAxqY": {
-      "type": "lankar",
-      "blocks": {
-        "card_6TwFP8": {
-          "type": "card",
-          "settings": {
-            "heading": "Företag",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://pages/vara-solceller"
-          }
-        },
-        "card_67XLE3": {
-          "type": "card",
-          "settings": {
-            "heading": "BRF",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://pages/vara-batterilosningar"
-          }
-        },
-        "card_Ype6Wd": {
-          "type": "card",
-          "settings": {
-            "heading": "Lantbruk",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://pages/vara-laddboxar"
-          }
-        }
-      },
-      "block_order": [
-        "card_6TwFP8",
-        "card_67XLE3",
-        "card_Ype6Wd"
-      ],
-      "name": "Länkar sektion",
-      "settings": {}
-    },
     "banner_med_lankar_ERdirD": {
       "type": "banner-med-lankar",
       "blocks": {
@@ -112,11 +76,108 @@
         "secondary_button_text": "",
         "secondary_button_url": ""
       }
+    },
+    "kontakt_form_aaeFxV": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_Yg8EDp": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_cdcJBm": {
+          "type": "form_field",
+          "settings": {
+            "label": "Bostadsrättsförening",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_VLQbKY": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_x6UJdE": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_miFYrR": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_gm3A67": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_eMmz9d": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddboxar",
+            "service_key": ""
+          }
+        },
+        "service_option_XUbV67": {
+          "type": "service_option",
+          "settings": {
+            "label": "Serviceavtal",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_Yg8EDp",
+        "form_field_cdcJBm",
+        "form_field_VLQbKY",
+        "form_field_x6UJdE",
+        "service_option_miFYrR",
+        "service_option_gm3A67",
+        "service_option_eMmz9d",
+        "service_option_XUbV67"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
+      }
     }
   },
   "order": [
     "hero_lower_AyRGqj",
     "banner_med_lankar_ERdirD",
-    "lankar_tGAxqY"
+    "kontakt_form_aaeFxV"
   ]
 }

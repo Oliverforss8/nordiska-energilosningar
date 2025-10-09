@@ -11,16 +11,31 @@
   "sections": {
     "hero_HUEAy6": {
       "type": "hero",
+      "disabled": true,
       "name": "Hero",
       "settings": {
         "media_type": "video",
         "background_image": "shopify://shop_images/solar-panels-team-technician-with-people-nature-photovoltaic-grid-renewable-energy-power-generator-sustainability-electric-system-inspection-with-engineer-outdoor-project.jpg",
         "background_video": "shopify://files/videos/1080.mp4",
         "overlay_opacity": 30,
-        "heading": "Lösningar inom solenergi, \nbatterilagring och laddboxar",
-        "subheading": "Lagra din egen solenergi och använd den när elpriserna är som högst. Perfekt för villaägare som vill sänka sina elkostnader och bli mer självförsörjande – året runt.",
+        "heading": "Egen el. Lägre kostnad. Full kontroll.",
+        "subheading": "Smart energi för dig som vill leva friare.",
         "button_text": "Få offert",
         "button_url": "shopify://pages/vara-produkter"
+      }
+    },
+    "hero_lower_FJyVVX": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/images.webp",
+        "background_video": "shopify://files/videos/1080.mp4",
+        "overlay_opacity": 25,
+        "heading": "Egen el. Lägre kostnad. Full kontroll.",
+        "subheading": "Smart energi för dig som vill leva friare.",
+        "button_text": "Få en offert",
+        "button_url": "shopify://pages/offert-forfragan"
       }
     },
     "lankar_kHPxWD": {
@@ -59,21 +74,32 @@
       "name": "Länkar sektion",
       "settings": {}
     },
+    "relaterade_produkter_jRpymw": {
+      "type": "relaterade-produkter",
+      "disabled": true,
+      "name": "Relaterade produkter",
+      "settings": {
+        "title": "Våra produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
+    },
     "grid_omraden_gmji3j": {
       "type": "grid-omraden",
       "name": "Grid areas",
       "settings": {
         "title": "Smarta energilösningar för en hållbar vardag",
         "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
-        "card_1_image": "shopify://shop_images/image_11.png",
+        "card_1_image": "shopify://shop_images/image_18.png",
         "card_1_button_text": "Solceller",
         "card_1_button_link": "shopify://pages/vara-solceller",
         "card_1_overlay_opacity": 20,
-        "card_2_image": "shopify://shop_images/image_7.png",
+        "card_2_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
         "card_2_button_text": "Värmepumpar",
         "card_2_button_link": "shopify://pages/vara-varmepumpar",
         "card_2_overlay_opacity": 20,
-        "card_3_image": "shopify://shop_images/image_14.png",
+        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
         "card_3_button_text": "Laddboxar",
         "card_3_button_link": "shopify://pages/vara-laddboxar",
         "card_3_overlay_opacity": 20,
@@ -98,33 +124,88 @@
         "custom_id": ""
       }
     },
-    "avdrag_UJWkJe": {
+    "banner_med_3_produkter_D79ei6": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_HAB8jq": {
+          "type": "product_card",
+          "settings": {
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
+          }
+        },
+        "product_card_PCcc9L": {
+          "type": "product_card",
+          "settings": {
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
+          }
+        },
+        "product_card_CwcHAR": {
+          "type": "product_card",
+          "settings": {
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_HAB8jq",
+        "product_card_PCcc9L",
+        "product_card_CwcHAR"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "products_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
+        "overlay_opacity": 25,
+        "header_button_text": "Laddboxar",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Upptäck",
+        "primary_button_url": "shopify://pages/vara-laddboxar",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
+    },
+    "avdrag_UeYUdn": {
       "type": "avdrag",
       "blocks": {
-        "avdrag_item_6PfkjR": {
+        "avdrag_item_qy3y6p": {
           "type": "avdrag_item",
           "settings": {
-            "text": "15% avdrag försolcellsinstallationer",
+            "text": "15% avdrag för installation av solceller",
             "image": "shopify://shop_images/Hus.svg"
           }
         },
-        "avdrag_item_8TBtda": {
+        "avdrag_item_RBirrk": {
           "type": "avdrag_item",
           "settings": {
-            "text": "50% avdrag förbatterilagring",
+            "text": "50% avdrag vid köp av batterilagring",
             "image": "shopify://shop_images/Ladd.svg"
           }
         }
       },
       "block_order": [
-        "avdrag_item_6PfkjR",
-        "avdrag_item_8TBtda"
+        "avdrag_item_qy3y6p",
+        "avdrag_item_RBirrk"
       ],
       "name": "Avdrag",
       "settings": {
         "custom_id": "",
-        "heading": "Avdrag för grön teknikt",
-        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring.<br/>Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar.<br/>Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "heading": "Avdrag för grön teknik",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -188,67 +269,12 @@
         "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
       }
     },
-    "banner_med_3_produkter_D79ei6": {
-      "type": "banner-med-3-produkter",
-      "blocks": {
-        "product_card_HAB8jq": {
-          "type": "product_card",
-          "settings": {
-            "product": "produkt",
-            "title": "Laddbox 1",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_PCcc9L": {
-          "type": "product_card",
-          "settings": {
-            "product": "produkt",
-            "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        },
-        "product_card_CwcHAR": {
-          "type": "product_card",
-          "settings": {
-            "product": "produkt",
-            "title": "Laddbox 3",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
-          }
-        }
-      },
-      "block_order": [
-        "product_card_HAB8jq",
-        "product_card_PCcc9L",
-        "product_card_CwcHAR"
-      ],
-      "name": "Banner med 3 produkter",
-      "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/image_14.png",
-        "overlay_opacity": 25,
-        "header_button_text": "Laddboxar",
-        "header_button_url": "",
-        "heading": "Smarta elbilsladdare för alla behov",
-        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Upptäck",
-        "primary_button_url": "",
-        "secondary_button_text": "Läs mer",
-        "secondary_button_url": ""
-      }
-    },
     "banner_bild_xRHf34": {
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_7.png",
+        "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
         "background_color": "#000000",
         "overlay_opacity": 20,
         "header_button_text": "Kampanj",
@@ -256,7 +282,7 @@
         "heading": "Luftvärmepump för 9 995:-",
         "description": "Just nu får du en luftvärmepump för 9 995:- vid köp av solceller och batteri från oss",
         "primary_button_text": "Jag vill veta mer",
-        "primary_button_url": "shopify://pages/contact",
+        "primary_button_url": "shopify://pages/vara-varmepumpar",
         "secondary_button_text": "",
         "secondary_button_url": "",
         "custom_id": ""
@@ -391,14 +417,16 @@
   },
   "order": [
     "hero_HUEAy6",
+    "hero_lower_FJyVVX",
     "lankar_kHPxWD",
+    "relaterade_produkter_jRpymw",
     "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
-    "avdrag_UJWkJe",
+    "banner_med_3_produkter_D79ei6",
+    "avdrag_UeYUdn",
     "banner_bild_Tr8FhV",
     "bild_och_text_D9hWE6",
     "grid_omraden_zBziiH",
-    "banner_med_3_produkter_D79ei6",
     "banner_bild_xRHf34",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
