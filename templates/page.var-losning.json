@@ -136,9 +136,9 @@
       "type": "kontakt-form",
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakta oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },
