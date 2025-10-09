@@ -41,9 +41,23 @@
         "nav_item_4_button_link_2": "",
         "nav_item_4_button_text_2": "Knapp"
       }
+    },
+    "hero_lower_9P3ynM": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
+        "overlay_opacity": 20,
+        "heading": "Finansiera i 24 månader",
+        "subheading": "Upptäck fantastiska produkter och tjänster",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "hero_lower_9P3ynM"
   ]
 }
