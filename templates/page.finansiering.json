@@ -12,9 +12,23 @@
     "main": {
       "type": "page",
       "settings": {}
+    },
+    "hero_lower_Wi4en4": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
+        "overlay_opacity": 20,
+        "heading": "Finansiera i 24 månader",
+        "subheading": "Upptäck fantastiska produkter och tjänster",
+        "button_text": "Kontakta oss",
+        "button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_lower_Wi4en4"
   ]
 }
