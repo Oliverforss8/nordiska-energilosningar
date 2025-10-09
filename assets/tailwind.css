@@ -249,16 +249,16 @@
   z-index: 100
 }
 
+.z-\[200\] {
+  z-index: 200
+}
+
 .z-\[9998\] {
   z-index: 9998
 }
 
 .z-\[9999\] {
   z-index: 9999
-}
-
-.z-\[200\] {
-  z-index: 200
 }
 
 .order-1 {
@@ -376,10 +376,6 @@
   margin-top: auto
 }
 
-.mt-\[40px\] {
-  margin-top: 40px
-}
-
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -478,6 +474,14 @@
   height: 280px
 }
 
+.h-\[2px\] {
+  height: 2px
+}
+
+.h-\[32px\] {
+  height: 32px
+}
+
 .h-\[350px\] {
   height: 350px
 }
@@ -534,14 +538,6 @@
   height: 100%
 }
 
-.h-\[2px\] {
-  height: 2px
-}
-
-.h-\[32px\] {
-  height: 32px
-}
-
 .max-h-0 {
   max-height: 0px
 }
@@ -594,6 +590,14 @@
   width: 20px
 }
 
+.w-\[25px\] {
+  width: 25px
+}
+
+.w-\[32px\] {
+  width: 32px
+}
+
 .w-\[420px\] {
   width: 420px
 }
@@ -612,14 +616,6 @@
 
 .w-screen {
   width: 100vw
-}
-
-.w-\[25px\] {
-  width: 25px
-}
-
-.w-\[32px\] {
-  width: 32px
 }
 
 .max-w-7xl {
@@ -755,6 +751,10 @@
   gap: 10px
 }
 
+.gap-\[12px\] {
+  gap: 12px
+}
+
 .gap-\[15px\] {
   gap: 15px
 }
@@ -797,10 +797,6 @@
 
 .gap-\[8px\] {
   gap: 8px
-}
-
-.gap-\[12px\] {
-  gap: 12px
 }
 
 .gap-x-\[20px\] {
@@ -860,6 +856,10 @@
   border-radius: 10px
 }
 
+.rounded-\[12px\] {
+  border-radius: 12px
+}
+
 .rounded-\[15px\] {
   border-radius: 15px
 }
@@ -882,10 +882,6 @@
 
 .rounded-full {
   border-radius: 9999px
-}
-
-.rounded-\[12px\] {
-  border-radius: 12px
 }
 
 .rounded-t-\[25px\] {
@@ -937,10 +933,6 @@
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1))
 }
 
-.border-white\/20 {
-  border-color: rgb(255 255 255 / 0.2)
-}
-
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1)
 }
@@ -953,6 +945,11 @@
 .bg-\[\#E5E5E5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity, 1))
+}
+
+.bg-\[\#E9A600\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 166 0 / var(--tw-bg-opacity, 1))
 }
 
 .bg-\[\#EBCF2F\] {
@@ -1013,17 +1010,17 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
 }
 
-.bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1))
-}
-
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1)
 }
 
 .bg-white\/5 {
   background-color: rgb(255 255 255 / 0.05)
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1))
 }
 
 .bg-opacity-50 {
@@ -1088,6 +1085,10 @@
   padding: 10px
 }
 
+.p-\[12px\] {
+  padding: 12px
+}
+
 .p-\[13px\] {
   padding: 13px
 }
@@ -1108,6 +1109,10 @@
   padding: 20px
 }
 
+.p-\[22px\] {
+  padding: 22px
+}
+
 .p-\[28px\] {
   padding: 28px
 }
@@ -1118,14 +1123,6 @@
 
 .p-\[50px\] {
   padding: 50px
-}
-
-.p-\[12px\] {
-  padding: 12px
-}
-
-.p-\[22px\] {
-  padding: 22px
 }
 
 .px-3 {
@@ -1166,6 +1163,11 @@
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px
+}
+
+.px-\[25px\] {
+  padding-left: 25px;
+  padding-right: 25px
 }
 
 .px-\[30px\] {
@@ -1253,9 +1255,19 @@
   padding-bottom: 20px
 }
 
+.py-\[25px\] {
+  padding-top: 25px;
+  padding-bottom: 25px
+}
+
 .py-\[30px\] {
   padding-top: 30px;
   padding-bottom: 30px
+}
+
+.py-\[35px\] {
+  padding-top: 35px;
+  padding-bottom: 35px
 }
 
 .py-\[40px\] {
@@ -1286,21 +1298,6 @@
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px
-}
-
-.px-\[25px\] {
-  padding-left: 25px;
-  padding-right: 25px
-}
-
-.py-\[25px\] {
-  padding-top: 25px;
-  padding-bottom: 25px
-}
-
-.py-\[35px\] {
-  padding-top: 35px;
-  padding-bottom: 35px
 }
 
 .pb-2 {
@@ -1443,12 +1440,20 @@
   font-size: 16px
 }
 
+.text-\[17px\] {
+  font-size: 17px
+}
+
 .text-\[18px\] {
   font-size: 18px
 }
 
 .text-\[20px\] {
   font-size: 20px
+}
+
+.text-\[22px\] {
+  font-size: 22px
 }
 
 .text-\[24px\] {
@@ -1491,14 +1496,6 @@
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem
-}
-
-.text-\[17px\] {
-  font-size: 17px
-}
-
-.text-\[22px\] {
-  font-size: 22px
 }
 
 .font-\[300\] {
@@ -1622,16 +1619,12 @@
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
 }
 
-.text-white\/60 {
-  color: rgb(255 255 255 / 0.6)
+.text-white\/40 {
+  color: rgb(255 255 255 / 0.4)
 }
 
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8)
-}
-
-.text-white\/40 {
-  color: rgb(255 255 255 / 0.4)
 }
 
 .text-white\/90 {

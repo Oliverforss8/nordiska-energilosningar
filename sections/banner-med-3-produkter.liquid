@@ -51,8 +51,7 @@
             {% if section.settings.primary_button_text != blank %}
               <a
                 href="{{ section.settings.primary_button_url }}"
-                class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717]"
-                style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
+                class="knappetikett rounded- [10px] flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] bg-[#E9A600] px-[20px] py-[17px] text-[#171717]"
               >
                 {{ section.settings.primary_button_text }}
                 <svg
@@ -126,8 +125,7 @@
                     {% if block.settings.learn_more_url != blank %}
                       <a
                         href="{{ block.settings.learn_more_url }}"
-                        class="banner-3-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
-                        style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F; border: none;"
+                        class="banner-3-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[10px] bg-[#E9A600] bg-transparent px-[20px] py-[18px] text-[#171717]"
                       >
                         {{ block.settings.learn_more_text | default: 'Läs mer' }}
                         <svg
@@ -336,8 +334,8 @@
   .product-card.active .banner-3-learn-more-btn,
   .product-card:hover .banner-3-learn-more-btn,
   .product-card .banner-3-learn-more-btn.banner-3-active {
-    background: #ebcf2f !important;
-    border-color: #ebcf2f !important;
+    background: #e9a600 !important;
+    border-color: #e9a600 !important;
     color: #171717 !important;
   }
 
