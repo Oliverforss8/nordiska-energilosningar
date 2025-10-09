@@ -419,7 +419,7 @@
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Kontakt",
+        "heading": "Ta hjälp av oss",
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
