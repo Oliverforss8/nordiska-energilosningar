@@ -72,6 +72,25 @@
         "custom_id": ""
       }
     },
+    "banner_bild_tmVRkk": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 20,
+        "header_button_text": "Kampanj",
+        "header_button_url": "",
+        "heading": "Luftvärmepump för 9 995:-",
+        "description": "Just nu får du en luftvärmepump för 9 995:- vid köp av solceller och batteri från oss",
+        "primary_button_text": "Jag vill veta mer",
+        "primary_button_url": "shopify://pages/offert-forfragan",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "banner_med_3_produkter_JdJbDT": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -273,6 +292,7 @@
     "main",
     "hero_lower_FNPfHG",
     "bild_och_text_knappar_gVCNFB",
+    "banner_bild_tmVRkk",
     "banner_med_3_produkter_JdJbDT",
     "hur_ED7Umq",
     "kontakt_form_YWJKxn"
