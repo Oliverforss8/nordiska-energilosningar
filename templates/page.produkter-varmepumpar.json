@@ -263,9 +263,9 @@
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Ta kontakt med oss",
-        "header_button_text": "",
-        "header_button_url": ""
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
       }
     }
   },
