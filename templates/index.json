@@ -11,7 +11,6 @@
   "sections": {
     "hero_HUEAy6": {
       "type": "hero",
-      "disabled": true,
       "name": "Hero",
       "settings": {
         "media_type": "video",
@@ -26,6 +25,7 @@
     },
     "hero_lower_FJyVVX": {
       "type": "hero-lower",
+      "disabled": true,
       "name": "Hero nedre",
       "settings": {
         "media_type": "video",
