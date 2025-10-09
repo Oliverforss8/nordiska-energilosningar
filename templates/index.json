@@ -11,6 +11,7 @@
   "sections": {
     "hero_HUEAy6": {
       "type": "hero",
+      "disabled": true,
       "name": "Hero",
       "settings": {
         "media_type": "video",
@@ -21,6 +22,19 @@
         "subheading": "Smart energi för dig som vill leva friare.",
         "button_text": "Få offert",
         "button_url": "shopify://pages/vara-produkter"
+      }
+    },
+    "hero_lower_FJyVVX": {
+      "type": "hero-lower",
+      "name": "Hero nedre",
+      "settings": {
+        "media_type": "video",
+        "background_video": "shopify://files/videos/1080.mp4",
+        "overlay_opacity": 25,
+        "heading": "Egen el. Lägre kostnad. Full kontroll.",
+        "subheading": "Smart energi för dig som vill leva friare.",
+        "button_text": "Få en offert",
+        "button_url": "shopify://pages/offert-forfragan"
       }
     },
     "lankar_kHPxWD": {
@@ -401,6 +415,7 @@
   },
   "order": [
     "hero_HUEAy6",
+    "hero_lower_FJyVVX",
     "lankar_kHPxWD",
     "relaterade_produkter_jRpymw",
     "grid_omraden_gmji3j",
