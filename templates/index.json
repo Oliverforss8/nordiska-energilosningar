@@ -76,6 +76,7 @@
     },
     "relaterade_produkter_jRpymw": {
       "type": "relaterade-produkter",
+      "disabled": true,
       "name": "Relaterade produkter",
       "settings": {
         "title": "Våra produkter",
