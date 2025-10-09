@@ -41,6 +41,77 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_knappar_DJ8KNN": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_cReQHr": {
+          "type": "button",
+          "settings": {
+            "text": "Producerar egen el med solceller",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_CEtHeD": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra din el med batterier",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_qEb8Cy": {
+          "type": "button",
+          "settings": {
+            "text": "Laddbox ger dig billig laddning",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_FtCtkw": {
+          "type": "button",
+          "settings": {
+            "text": "Värmepumpen minskar dina värmekostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_cYMmVi": {
+          "type": "button",
+          "settings": {
+            "text": "Grönt bolån sänker dina räntekostnader",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_hrHyXE": {
+          "type": "button",
+          "settings": {
+            "text": "Allt i ett paket ger dig lägre elräkning",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_cReQHr",
+        "button_CEtHeD",
+        "button_qEb8Cy",
+        "button_FtCtkw",
+        "button_cYMmVi",
+        "button_hrHyXE"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Välj en heltäckande lösning för maximal energibesparing",
+        "text": "<p>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "bild_och_text_3Vj8Aw": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -88,6 +159,7 @@
     "main",
     "hero_lower_pKeggt",
     "bild_och_text_irHa6L",
+    "bild_och_text_knappar_DJ8KNN",
     "bild_och_text_3Vj8Aw",
     "banner_bild_d78jQM",
     "kontakt_form_394yiU"
