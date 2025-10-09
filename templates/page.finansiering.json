@@ -109,6 +109,87 @@
         "image_button_link": "",
         "custom_id": ""
       }
+    },
+    "kontakt_form_PkCV4E": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_NBg6NQ": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_8DTYwx": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_LtKR7c": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_M7zC99": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_pfKrxD": {
+          "type": "service_option",
+          "settings": {
+            "label": "Finansiera solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_zGe7qX": {
+          "type": "service_option",
+          "settings": {
+            "label": "Finansiera batterier",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_NBg6NQ",
+        "form_field_8DTYwx",
+        "form_field_LtKR7c",
+        "form_field_M7zC99",
+        "service_option_pfKrxD",
+        "service_option_zGe7qX"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta hjälp av oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
+      }
     }
   },
   "order": [
@@ -116,6 +197,7 @@
     "hero_lower_Wi4en4",
     "text_sektion_Hkymwt",
     "banner_bild_iqdGiK",
-    "bild_och_text_knappar_KJNHCJ"
+    "bild_och_text_knappar_KJNHCJ",
+    "kontakt_form_PkCV4E"
   ]
 }
