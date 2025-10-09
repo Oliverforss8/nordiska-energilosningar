@@ -55,12 +55,66 @@
         "secondary_button_url": "",
         "custom_id": ""
       }
+    },
+    "bild_och_text_knappar_KJNHCJ": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_Vetfw7": {
+          "type": "button",
+          "settings": {
+            "text": "Direkt besparing",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_WbehJQ": {
+          "type": "button",
+          "settings": {
+            "text": "Flexibel betalning",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_rhVbYN": {
+          "type": "button",
+          "settings": {
+            "text": "Trygg investering",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_dEnGD9": {
+          "type": "button",
+          "settings": {
+            "text": "Enkel process",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_Vetfw7",
+        "button_WbehJQ",
+        "button_rhVbYN",
+        "button_dEnGD9"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Varför investera i energilösningar",
+        "text": "<p>Att investera i energibesparande teknik är inte bara bra för miljön, det är också ett smart ekonomiskt beslut. Våra lösningar är utformade för att ge märkbara resultat direkt, samtidigt som du slipper ta hela kostnaden på en gång.</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_Wi4en4",
     "text_sektion_Hkymwt",
-    "banner_bild_iqdGiK"
+    "banner_bild_iqdGiK",
+    "bild_och_text_knappar_KJNHCJ"
   ]
 }
