@@ -14,8 +14,8 @@
       "name": "Hero nedre",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_12.png",
-        "overlay_opacity": 30,
+        "background_image": "shopify://shop_images/image_13.png",
+        "overlay_opacity": 5,
         "heading": "Sänk elkostnaderna på gården med energilösningar",
         "subheading": "Börja producera och lagra din egna gröna el och betala mindre i elräkning",
         "button_text": "Be om offert",
