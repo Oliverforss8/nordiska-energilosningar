@@ -124,6 +124,61 @@
         "custom_id": ""
       }
     },
+    "banner_med_3_produkter_D79ei6": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_HAB8jq": {
+          "type": "product_card",
+          "settings": {
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
+          }
+        },
+        "product_card_PCcc9L": {
+          "type": "product_card",
+          "settings": {
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
+          }
+        },
+        "product_card_CwcHAR": {
+          "type": "product_card",
+          "settings": {
+            "product": "charge-amps-luna",
+            "title": "Charge Amps Luna",
+            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/charge-amps-luna"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_HAB8jq",
+        "product_card_PCcc9L",
+        "product_card_CwcHAR"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "products_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
+        "overlay_opacity": 25,
+        "header_button_text": "Laddboxar",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Upptäck",
+        "primary_button_url": "shopify://pages/vara-laddboxar",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
+    },
     "avdrag_UeYUdn": {
       "type": "avdrag",
       "blocks": {
@@ -212,61 +267,6 @@
         "card_4_button_link": "shopify://pages/vara-laddboxar",
         "card_4_overlay_opacity": 20,
         "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
-      }
-    },
-    "banner_med_3_produkter_D79ei6": {
-      "type": "banner-med-3-produkter",
-      "blocks": {
-        "product_card_HAB8jq": {
-          "type": "product_card",
-          "settings": {
-            "product": "charge-amps-luna",
-            "title": "Charge Amps Luna",
-            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
-            "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
-          }
-        },
-        "product_card_PCcc9L": {
-          "type": "product_card",
-          "settings": {
-            "product": "charge-amps-luna",
-            "title": "Charge Amps Luna",
-            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
-            "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
-          }
-        },
-        "product_card_CwcHAR": {
-          "type": "product_card",
-          "settings": {
-            "product": "charge-amps-luna",
-            "title": "Charge Amps Luna",
-            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
-            "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
-          }
-        }
-      },
-      "block_order": [
-        "product_card_HAB8jq",
-        "product_card_PCcc9L",
-        "product_card_CwcHAR"
-      ],
-      "name": "Banner med 3 produkter",
-      "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
-        "overlay_opacity": 25,
-        "header_button_text": "Laddboxar",
-        "header_button_url": "",
-        "heading": "Smarta elbilsladdare för alla behov",
-        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Upptäck",
-        "primary_button_url": "shopify://pages/vara-laddboxar",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
       }
     },
     "banner_bild_xRHf34": {
@@ -422,11 +422,11 @@
     "relaterade_produkter_jRpymw",
     "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
+    "banner_med_3_produkter_D79ei6",
     "avdrag_UeYUdn",
     "banner_bild_Tr8FhV",
     "bild_och_text_D9hWE6",
     "grid_omraden_zBziiH",
-    "banner_med_3_produkter_D79ei6",
     "banner_bild_xRHf34",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
