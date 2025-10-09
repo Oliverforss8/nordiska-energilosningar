@@ -80,13 +80,59 @@
         "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
       }
     },
-    "bild_och_text_PUEpYf": {
+    "bild_och_text_w7KiJt": {
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
-        "title": "Vi är experter på storskaliga lösningar",
+        "title": "Vi är experter på storskaliga energilösningar",
         "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.</p>",
         "media_type": "image",
+        "image": "shopify://shop_images/image_12.png",
+        "image_position": "left",
+        "image_button_text": "Våra lösningar",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_MRbxmk": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_yNW8xy": {
+          "type": "button",
+          "settings": {
+            "text": "Företag",
+            "url": "shopify://metaobjects/foretag/foretag",
+            "show_arrow": false
+          }
+        },
+        "button_HE7dXp": {
+          "type": "button",
+          "settings": {
+            "text": "BRF",
+            "url": "shopify://metaobjects/foretag/bostadsrattsforening",
+            "show_arrow": false
+          }
+        },
+        "button_e6fLy4": {
+          "type": "button",
+          "settings": {
+            "text": "Lantbruk",
+            "url": "shopify://metaobjects/foretag/lantbruk",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_yNW8xy",
+        "button_HE7dXp",
+        "button_e6fLy4"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Vi är experter på storskaliga energilösningar",
+        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/images.webp",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
@@ -98,6 +144,7 @@
     "hero_L9AzVL",
     "lankar_tGAxqY",
     "3_grid_GT9efL",
-    "bild_och_text_PUEpYf"
+    "bild_och_text_w7KiJt",
+    "bild_och_text_knappar_MRbxmk"
   ]
 }
