@@ -26,6 +26,17 @@
         "button_url": ""
       }
     },
+    "text_sektion_Hkymwt": {
+      "type": "text-sektion",
+      "name": "Text sektion",
+      "settings": {
+        "title": "Spara på elräkningen redan idag",
+        "text": "<p>Vi hjälper dig att sänka dina elkostnader med moderna och hållbara energilösningar. Genom att kombinera hög kvalitet med flexibla betalningsalternativ gör vi det enkelt att ta steget mot en mer effektiv vardag.<br/><br/>Du får en lösning som börjar betala tillbaka sig själv redan från dag ett. Med vår 24-månaders delbetalning slipper du stora engångskostnader och får tid att se besparingarna växa fram månad för månad.</p>",
+        "button_text": "Kontakta oss",
+        "button_link": "shopify://pages/support-om-oss",
+        "custom_id": ""
+      }
+    },
     "banner_bild_iqdGiK": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -49,6 +60,7 @@
   "order": [
     "main",
     "hero_lower_Wi4en4",
+    "text_sektion_Hkymwt",
     "banner_bild_iqdGiK"
   ]
 }
