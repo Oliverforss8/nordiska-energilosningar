@@ -5,9 +5,10 @@
 
 <section
   id="{{ section_id }}"
-  class="{{ section_class }} layout  py-[60px] md:py-[85px]"
+  class="{{ section_class }}   py-[60px] md:py-[85px]"
+  style="background-color: {{ section.settings.background_color }};"
 >
-  <div class="flex flex-col items-center justify-between gap-[40px] md:gap-[50px] {% if section.settings.image_position == 'left' %}md:flex-row-reverse{% else %}md:flex-row{% endif %}">
+  <div class="layout flex flex-col items-center justify-between gap-[40px] md:gap-[50px] {% if section.settings.image_position == 'left' %}md:flex-row-reverse{% else %}md:flex-row{% endif %}">
     <div class="flex flex-col">
       {% if section.settings.title != blank %}
         <div class="headline1 text-[#171717]">{{ section.settings.title }}</div>
@@ -67,7 +68,7 @@
       {% elsif section.settings.media_type == 'image' and section.settings.image != blank %}
         <!-- Image -->
         <img
-          src="{{ section.settings.image | image_url: width: 450 }}"
+          src="{{ section.settings.image | image_url: width: 900 }}"
           alt="{{ section.settings.image.alt | default: section.settings.title }}"
           class="h-full w-full rounded-[15px] object-cover"
           width="450"
@@ -116,6 +117,22 @@
   "tag": "section",
   "class": "section-bild-och-text",
   "settings": [
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background color",
+      "options": [
+        {
+          "value": "#ffffff",
+          "label": "White"
+        },
+        {
+          "value": "#f7f7f7",
+          "label": "Gray"
+        }
+      ],
+      "default": "#ffffff"
+    },
     {
       "type": "text",
       "id": "title",
