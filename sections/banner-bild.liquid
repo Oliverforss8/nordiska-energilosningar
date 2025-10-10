@@ -4,8 +4,10 @@
 
   if section.settings.layout_type == 'full'
     assign container_class = ''
+    assign rounded_class = ''
   else
     assign container_class = 'layout'
+    assign rounded_class = 'rounded-[10px]'
   endif
 %}
 
@@ -14,7 +16,7 @@
   class="{{ section_class }} {{ container_class }} py-[60px] md:py-[85px]"
 >
   <div
-    class="relative h-[500px] w-full overflow-hidden rounded-[10px] p-[20px] md:px-[50px] md:py-[40px]"
+    class="relative h-[500px] w-full overflow-hidden {{ rounded_class }} p-[20px] md:px-[50px] md:py-[40px]"
     {% if section.settings.media_type == 'image' and section.settings.background_image %}
       style="background-color: {{ section.settings.background_color }}; background-image: url({{ section.settings.background_image | image_url: width: 1200 }}); background-size: cover; background-position: center; background-repeat: no-repeat;"
     {% else %}
@@ -42,7 +44,7 @@
     {% endif %}
     {% if section.settings.overlay_opacity > 0 %}
       <div
-        class="absolute inset-0 rounded-[10px]"
+        class="absolute inset-0 {{ rounded_class }}"
         style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
       ></div>
     {% endif %}
