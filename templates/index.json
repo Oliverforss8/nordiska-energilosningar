@@ -74,6 +74,63 @@
       "name": "Länkar sektion",
       "settings": {}
     },
+    "slider_sektion_PkT3FL": {
+      "type": "slider-sektion",
+      "blocks": {
+        "product_ezcRPQ": {
+          "type": "product",
+          "settings": {
+            "product": "produkt",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_WHbHEk": {
+          "type": "product",
+          "settings": {
+            "product": "dyness-stack100",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_AaGGir": {
+          "type": "product",
+          "settings": {
+            "product": "lastbalansering-perific-max",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_manqr7": {
+          "type": "product",
+          "settings": {
+            "product": "lastbalsering-zaptec-sense",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_PzHRYV": {
+          "type": "product",
+          "settings": {
+            "product": "varmepump-1",
+            "show_price": true,
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_ezcRPQ",
+        "product_WHbHEk",
+        "product_AaGGir",
+        "product_manqr7",
+        "product_PzHRYV"
+      ],
+      "name": "Produktslider",
+      "settings": {
+        "title": "Våra produkter",
+        "custom_id": ""
+      }
+    },
     "relaterade_produkter_jRpymw": {
       "type": "relaterade-produkter",
       "disabled": true,
@@ -404,69 +461,13 @@
         "card_4_button_link": "",
         "card_4_overlay_opacity": 0
       }
-    },
-    "slider_sektion_PkT3FL": {
-      "type": "slider-sektion",
-      "blocks": {
-        "product_ezcRPQ": {
-          "type": "product",
-          "settings": {
-            "product": "produkt",
-            "show_price": true,
-            "description": ""
-          }
-        },
-        "product_WHbHEk": {
-          "type": "product",
-          "settings": {
-            "product": "dyness-stack100",
-            "show_price": true,
-            "description": ""
-          }
-        },
-        "product_AaGGir": {
-          "type": "product",
-          "settings": {
-            "product": "lastbalansering-perific-max",
-            "show_price": true,
-            "description": ""
-          }
-        },
-        "product_manqr7": {
-          "type": "product",
-          "settings": {
-            "product": "lastbalsering-zaptec-sense",
-            "show_price": true,
-            "description": ""
-          }
-        },
-        "product_PzHRYV": {
-          "type": "product",
-          "settings": {
-            "product": "varmepump-1",
-            "show_price": true,
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_ezcRPQ",
-        "product_WHbHEk",
-        "product_AaGGir",
-        "product_manqr7",
-        "product_PzHRYV"
-      ],
-      "name": "Produktslider",
-      "settings": {
-        "title": "Våra produkter",
-        "custom_id": ""
-      }
     }
   },
   "order": [
     "hero_HUEAy6",
     "hero_lower_FJyVVX",
     "lankar_kHPxWD",
+    "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
@@ -478,7 +479,6 @@
     "banner_bild_xRHf34",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
-    "offert_forfragan_H8kdLx",
-    "slider_sektion_PkT3FL"
+    "offert_forfragan_H8kdLx"
   ]
 }
