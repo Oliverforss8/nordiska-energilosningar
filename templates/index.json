@@ -384,15 +384,6 @@
         "button_url": ""
       }
     },
-    "kontakt_form_Ae7RmC": {
-      "type": "kontakt-form",
-      "name": "Contact Form",
-      "settings": {
-        "heading": "Kontakta oss",
-        "header_button_text": "Kontaktformulär",
-        "header_button_url": "shopify://products/produkt"
-      }
-    },
     "offert_forfragan_H8kdLx": {
       "type": "offert-forfragan",
       "disabled": true,
@@ -430,7 +421,6 @@
     "banner_bild_xRHf34",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
-    "kontakt_form_Ae7RmC",
     "offert_forfragan_H8kdLx"
   ]
 }
