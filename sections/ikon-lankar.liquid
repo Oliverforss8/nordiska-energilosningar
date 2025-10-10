@@ -1,0 +1,144 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+%}
+
+<section
+  id="{{ section_id }}"
+  class="py-[60px] md:py-[85px]"
+  style="background-color: {{ section.settings.background_color }};"
+>
+  <div class=" layout">
+    <div class="flex flex-row justify-between">
+      {% for block in section.blocks %}
+        <a
+          href="{{ block.settings.link }}"
+          class="flex items-center gap-[25px] "
+          {{ block.shopify_attributes }}
+        >
+          {% if block.settings.icon != blank %}
+            <div class="flex  h-[40px] w-[40px] items-center justify-center overflow-visible">
+              {{
+                block.settings.icon
+                | image_url: width: 120
+                | image_tag:
+                  loading: 'lazy',
+                  alt: block.settings.text,
+                  class: 'h-[40px] w-[40px] object-contain overflow-visible'
+              }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <p class="body1 text-[24px] font-[400] text-[#171717]">{{ block.settings.text }}</p>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Icon links",
+  "tag": "section",
+  "class": "section-icon-links",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Quick links"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 6,
+      "default": 3,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap between items",
+      "min": 0,
+      "max": 60,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_link",
+      "name": "Icon link",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon links",
+      "blocks": [
+        {
+          "type": "icon_link",
+          "settings": {
+            "text": "Link 1"
+          }
+        },
+        {
+          "type": "icon_link",
+          "settings": {
+            "text": "Link 2"
+          }
+        },
+        {
+          "type": "icon_link",
+          "settings": {
+            "text": "Link 3"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

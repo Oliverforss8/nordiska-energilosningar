@@ -277,6 +277,10 @@
   grid-column: span 2 / span 2
 }
 
+.m-0 {
+  margin: 0px
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem
@@ -386,6 +390,10 @@
 
 .mt-\[40px\] {
   margin-top: 40px
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem
 }
 
 .line-clamp-2 {
@@ -554,6 +562,10 @@
   height: 30px
 }
 
+.h-12 {
+  height: 3rem
+}
+
 .max-h-0 {
   max-height: 0px
 }
@@ -644,6 +656,14 @@
 
 .w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   width: calc(100% / 1.5 - 20px * 0.5)
+}
+
+.w-12 {
+  width: 3rem
+}
+
+.w-\[40px\] {
+  width: 40px
 }
 
 .min-w-\[calc\(100\%-20px\)\] {
@@ -941,6 +961,10 @@
   border-radius: 9999px
 }
 
+.rounded-lg {
+  border-radius: 0.5rem
+}
+
 .rounded-t-\[25px\] {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px
@@ -1199,6 +1223,10 @@
   padding: 50px
 }
 
+.p-4 {
+  padding: 1rem
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem
@@ -1382,6 +1410,11 @@
 .px-\[5px\] {
   padding-left: 5px;
   padding-right: 5px
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem
 }
 
 .pb-2 {
@@ -1592,6 +1625,16 @@
 
 .text-\[11px\] {
   font-size: 11px
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem
 }
 
 .font-\[300\] {
@@ -1846,6 +1889,11 @@
 /* Custom component classes */
 
 /* Custom utilities */
+
+.hover\:-translate-y-1:hover {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
 
 .hover\:scale-\[1\.02\]:hover {
   --tw-scale-x: 1.02;
@@ -2141,6 +2189,10 @@
     height: 90px
   }
 
+  .md\:h-14 {
+    height: 3.5rem
+  }
+
   .md\:w-1\/2 {
     width: 50%
   }
@@ -2163,6 +2215,10 @@
 
   .md\:w-auto {
     width: auto
+  }
+
+  .md\:w-14 {
+    width: 3.5rem
   }
 
   .md\:min-w-\[calc\(50\%-15px\)\] {
@@ -2357,6 +2413,11 @@
     padding-bottom: 87px
   }
 
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem
+  }
+
   .md\:pb-\[120px\] {
     padding-bottom: 120px
   }
@@ -2459,6 +2520,16 @@
 
   .md\:text-\[48px\] {
     font-size: 48px
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem
   }
 }
 
