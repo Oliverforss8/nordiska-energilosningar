@@ -9,6 +9,7 @@ class ProductSlider {
     this.track = slider.querySelector('[data-slider-track]');
     this.prevButton = slider.parentElement.querySelector('[data-slider-prev]');
     this.nextButton = slider.parentElement.querySelector('[data-slider-next]');
+    this.progressBar = slider.parentElement.querySelector('[data-slider-progress]');
 
     if (!this.track) return;
 
@@ -47,9 +48,9 @@ class ProductSlider {
 
   getItemsPerView() {
     const width = window.innerWidth;
-    if (width >= 1024) return 4; // lg breakpoint
-    if (width >= 768) return 2; // md breakpoint
-    return 1; // mobile
+    if (width >= 1024) return 4; // lg breakpoint - 4 cards
+    if (width >= 768) return 2; // md breakpoint - 2 cards
+    return 1.5; // mobile - 1.5 cards
   }
 
   next() {
@@ -81,6 +82,9 @@ class ProductSlider {
 
     // Update button states
     this.updateButtons();
+
+    // Update progress bar
+    this.updateProgressBar();
   }
 
   updateButtons() {
@@ -93,6 +97,27 @@ class ProductSlider {
     if (this.nextButton) {
       this.nextButton.disabled = this.currentIndex >= maxIndex;
     }
+  }
+
+  updateProgressBar() {
+    if (!this.progressBar) return;
+
+    // Calculate progress
+    const maxIndex = Math.max(0, this.totalItems - this.itemsPerView);
+    if (maxIndex === 0) {
+      this.progressBar.style.width = '100%';
+      this.progressBar.style.transform = 'translateX(0)';
+      return;
+    }
+
+    // Calculate the width of the progress bar
+    const progressWidth = (1 / this.totalItems) * 100;
+
+    // Calculate the position based on current index
+    const progressPosition = (this.currentIndex / this.totalItems) * 100;
+
+    this.progressBar.style.width = `${progressWidth * this.itemsPerView}%`;
+    this.progressBar.style.transform = `translateX(${(progressPosition / (progressWidth * this.itemsPerView)) * 100}%)`;
   }
 
   addTouchSupport() {

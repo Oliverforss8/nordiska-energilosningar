@@ -376,6 +376,10 @@
   margin-top: auto
 }
 
+.mt-\[25px\] {
+  margin-top: 25px
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -624,6 +628,10 @@
 
 .min-w-\[calc\(100\%-20px\)\] {
   min-width: calc(100% - 20px)
+}
+
+.min-w-\[calc\(66\.666\%-13\.33px\)\] {
+  min-width: calc(66.666% - 13.33px)
 }
 
 .max-w-7xl {
@@ -1047,6 +1055,10 @@
 .bg-\[\#f2f0e6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 240 230 / var(--tw-bg-opacity, 1))
+}
+
+.bg-\[\#171717\]\/10 {
+  background-color: rgb(23 23 23 / 0.1)
 }
 
 .bg-opacity-50 {
@@ -2377,8 +2389,24 @@
 }
 
 @media (min-width: 1024px) {
+  .lg\:absolute {
+    position: absolute
+  }
+
+  .lg\:right-0 {
+    right: 0px
+  }
+
+  .lg\:top-\[-80px\] {
+    top: -80px
+  }
+
   .lg\:mt-\[-20px\] {
     margin-top: -20px
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px
   }
 
   .lg\:hidden {
@@ -2419,6 +2447,10 @@
 
   .lg\:flex-row {
     flex-direction: row
+  }
+
+  .lg\:gap-\[10px\] {
+    gap: 10px
   }
 
   .lg\:pt-\[30px\] {

@@ -26,7 +26,7 @@
             {% if block.settings.product != blank %}
               {% assign product = block.settings.product %}
               <div
-                class="min-w-[calc(100%-20px)] shrink-0 md:min-w-[calc(50%-15px)] lg:min-w-[calc(25%-22.5px)]"
+                class="min-w-[calc(66.666%-13.33px)] shrink-0 md:min-w-[calc(50%-15px)] lg:min-w-[calc(25%-22.5px)]"
                 {{ block.shopify_attributes }}
               >
                 <div class="flex h-full flex-col overflow-hidden rounded-[15px] border border-[#171717]/10 bg-[#f2f0e6]">
@@ -94,9 +94,20 @@
         </div>
       </div>
 
+      <!-- Progress Indicator Line (Mobile & Tablet) -->
+      <div class="mt-[25px] lg:hidden">
+        <div class="relative h-[2px] w-full overflow-hidden rounded-full bg-[#171717]/10">
+          <div
+            data-slider-progress
+            class="absolute left-0 top-0 h-full bg-[#171717] transition-all duration-500 ease-in-out"
+            style="width: 0%; transform: translateX(0)"
+          ></div>
+        </div>
+      </div>
+
       <!-- Navigation Buttons -->
-      {% if section.blocks.size > 4 %}
-        <div class="mt-[30px] flex items-center justify-center gap-[15px] md:absolute md:right-0 md:top-[-80px] md:mt-0 md:gap-[10px]">
+      {% if section.blocks.size > 1 %}
+        <div class="mt-[30px] flex items-center justify-center gap-[15px] lg:absolute lg:right-0 lg:top-[-80px] lg:mt-0 lg:gap-[10px]">
           <button
             data-slider-prev
             class="flex h-[45px] w-[45px] items-center justify-center rounded-full border border-[#171717]/20 bg-white transition-colors hover:border-[#E9A600] hover:bg-[#E9A600] disabled:cursor-not-allowed disabled:opacity-50"
