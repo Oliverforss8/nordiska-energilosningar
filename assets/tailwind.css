@@ -650,12 +650,20 @@
   min-width: calc(66.666% - 13.33px)
 }
 
+.min-w-\[calc\(66\.666\%-13\.333px\)\] {
+  min-width: calc(66.666% - 13.333px)
+}
+
 .max-w-7xl {
   max-width: 80rem
 }
 
 .max-w-\[800px\] {
   max-width: 800px
+}
+
+.max-w-\[calc\(66\.666\%-13\.333px\)\] {
+  max-width: calc(66.666% - 13.333px)
 }
 
 .flex-1 {
@@ -2153,6 +2161,10 @@
     min-width: calc(50% - 10px)
   }
 
+  .md\:max-w-\[calc\(50\%-15px\)\] {
+    max-width: calc(50% - 15px)
+  }
+
   .md\:shrink-0 {
     flex-shrink: 0
   }
@@ -2527,6 +2539,14 @@
 
   .xl\:min-w-\[calc\(25\%-22\.5px\)\] {
     min-width: calc(25% - 22.5px)
+  }
+
+  .xl\:min-w-\[calc\(25\%-\(30px\*3\/4\)\)\] {
+    min-width: calc(25% - (30px * 3 / 4))
+  }
+
+  .xl\:max-w-\[calc\(25\%-22\.5px\)\] {
+    max-width: calc(25% - 22.5px)
   }
 
   .xl\:flex-shrink-0 {
