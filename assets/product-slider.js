@@ -48,9 +48,11 @@ class ProductSlider {
 
   getItemsPerView() {
     const width = window.innerWidth;
-    if (width >= 1024) return 4; // lg breakpoint - 4 cards
+    if (width >= 1280) return 4; // xl breakpoint - 4 cards
+    if (width >= 1024) return 3; // lg breakpoint - 3 cards
     if (width >= 768) return 2; // md breakpoint - 2 cards
-    return 1.5; // mobile - 1.5 cards
+    if (width >= 640) return 2; // sm breakpoint - 2 cards
+    return 1; // mobile - 1 card
   }
 
   next() {
