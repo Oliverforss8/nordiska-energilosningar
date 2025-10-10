@@ -2418,6 +2418,11 @@
     padding-bottom: 4rem
   }
 
+  .md\:px-\[40px\] {
+    padding-left: 40px;
+    padding-right: 40px
+  }
+
   .md\:pb-\[120px\] {
     padding-bottom: 120px
   }

@@ -1,11 +1,17 @@
 {% liquid
   assign section_id = section.settings.custom_id | default: section.id
   assign section_class = 'section-banner-bild'
+
+  if section.settings.layout_type == 'full'
+    assign container_class = ''
+  else
+    assign container_class = 'layout'
+  endif
 %}
 
 <section
   id="{{ section_id }}"
-  class="{{ section_class }} layout  py-[60px] md:py-[85px]"
+  class="{{ section_class }} {{ container_class }} py-[60px] md:py-[85px]"
 >
   <div
     class="relative h-[500px] w-full overflow-hidden rounded-[10px] p-[20px] md:px-[50px] md:py-[40px]"
@@ -113,6 +119,22 @@
   "tag": "section",
   "class": "section-banner-bild",
   "settings": [
+    {
+      "type": "select",
+      "id": "layout_type",
+      "label": "Layout width",
+      "options": [
+        {
+          "value": "contained",
+          "label": "Contained"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ],
+      "default": "contained"
+    },
     {
       "type": "select",
       "id": "media_type",
