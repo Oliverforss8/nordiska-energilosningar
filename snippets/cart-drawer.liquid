@@ -42,7 +42,11 @@
       </div>
 
       <!-- Applied Discount (from green deduction) -->
-      <div class="flex items-center justify-between py-2" data-cart-discount-row style="display: none;">
+      <div
+        class="flex items-center justify-between py-2"
+        data-cart-discount-row
+        style="display: none;"
+      >
         <div class="flex flex-col gap-1">
           <div class="flex items-center gap-2">
             <span class="body1 text-[16px] text-[#171717]">Rabattkod</span>
@@ -50,7 +54,11 @@
           </div>
           <span class="body1 text-[12px] text-[#171717]/70">Tillämpas i kassan</span>
         </div>
-        <button type="button" class="body1 text-[14px] text-[#171717] underline hover:opacity-70" data-clear-discount>
+        <button
+          type="button"
+          class="body1 text-[14px] text-[#171717] underline hover:opacity-70"
+          data-clear-discount
+        >
           Rensa
         </button>
       </div>
@@ -58,7 +66,7 @@
       <!-- Buttons -->
       <div class="space-y-3">
         <button
-          class="knappetikett w-full rounded-[10px] py-3 text-[#171717] transition-colors hover:bg-gray-100 border border-gray-200"
+          class="knappetikett w-full rounded-[10px] border border-gray-200 py-3 text-[#171717] transition-colors hover:bg-gray-100"
           onclick="window.clearCart && window.clearCart()"
           type="button"
         >
@@ -67,7 +75,7 @@
 
         <button
           class="checkout-btn knappetikett w-full rounded-[10px] py-4 text-[#171717] transition-colors hover:bg-[#D4B82A]"
-          style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
+          style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #E9A600;"
           onclick="goToCheckoutWithDiscount()"
         >
           Gå till kassan
@@ -285,7 +293,7 @@
   // Function to go to checkout with discount code if available
   function goToCheckoutWithDiscount() {
     const discountCode = sessionStorage.getItem('selectedDiscountCode');
-    
+
     if (discountCode) {
       const checkoutUrl = '/checkout?discount=' + discountCode;
       console.log('✅ Going to checkout with discount from cart:', checkoutUrl);
