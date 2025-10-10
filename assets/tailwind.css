@@ -237,6 +237,18 @@
   top: 100px
 }
 
+.bottom-\[140px\] {
+  bottom: 140px
+}
+
+.right-\[20px\] {
+  right: 20px
+}
+
+.top-1\/2 {
+  top: 50%
+}
+
 .z-10 {
   z-index: 10
 }
@@ -259,6 +271,10 @@
 
 .z-\[9999\] {
   z-index: 9999
+}
+
+.z-20 {
+  z-index: 20
 }
 
 .order-1 {
@@ -566,6 +582,10 @@
   height: 3rem
 }
 
+.h-\[10px\] {
+  height: 10px
+}
+
 .max-h-0 {
   max-height: 0px
 }
@@ -666,6 +686,14 @@
   width: 40px
 }
 
+.w-\[10px\] {
+  width: 10px
+}
+
+.w-\[50px\] {
+  width: 50px
+}
+
 .min-w-\[calc\(100\%-20px\)\] {
   min-width: calc(100% - 20px)
 }
@@ -730,6 +758,11 @@
 
 .translate-x-\[calc\(100\%\+10px\)\] {
   --tw-translate-x: calc(100% + 10px);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
@@ -1119,6 +1152,10 @@
 
 .bg-\[\#171717\]\/10 {
   background-color: rgb(23 23 23 / 0.1)
+}
+
+.bg-white\/20 {
+  background-color: rgb(255 255 255 / 0.2)
 }
 
 .bg-opacity-50 {
@@ -1836,6 +1873,11 @@
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1946,6 +1988,10 @@
 
 .hover\:bg-white\/90:hover {
   background-color: rgb(255 255 255 / 0.9)
+}
+
+.hover\:bg-white\/30:hover {
+  background-color: rgb(255 255 255 / 0.3)
 }
 
 .hover\:text-\[\#efd959\]:hover {
@@ -2086,6 +2132,10 @@
 
   .md\:top-\[-80px\] {
     top: -80px
+  }
+
+  .md\:bottom-\[150px\] {
+    bottom: 150px
   }
 
   .md\:order-1 {

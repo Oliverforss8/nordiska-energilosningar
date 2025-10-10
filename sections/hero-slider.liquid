@@ -1,0 +1,258 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = 'section-hero-slider'
+%}
+
+<section
+  class="flex h-full w-full flex-col overflow-visible"
+  style="min-height: 75vh;"
+>
+  <div
+    class="hero-slider relative flex h-full w-full overflow-hidden"
+    style="min-height: 75vh;"
+    data-slider
+  >
+    {% for block in section.blocks %}
+      <div
+        class="hero-slide absolute inset-0 h-full w-full transition-opacity duration-500"
+        data-slide
+        {{ block.shopify_attributes }}
+        style="opacity: {% if forloop.first %}1{% else %}0{% endif %}; pointer-events: {% if forloop.first %}auto{% else %}none{% endif %};"
+      >
+        {% if block.settings.media_type == 'video' and block.settings.background_video != blank %}
+          <!-- Background Video -->
+          <video
+            class="absolute inset-0 h-full w-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source
+              src="{{ block.settings.background_video.sources[1].url }}"
+              type="video/mp4"
+            >
+            <source
+              src="{{ block.settings.background_video.sources[0].url }}"
+              type="video/webm"
+            >
+          </video>
+        {% elsif block.settings.media_type == 'image'
+          and block.settings.background_image != blank
+        %}
+          <!-- Background Image -->
+          <img
+            src="{{ block.settings.background_image | image_url: width: 1920 }}"
+            alt="{{ block.settings.heading }}"
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+          >
+        {% endif %}
+
+        {% if block.settings.overlay_opacity > 0 %}
+          <div
+            class="absolute inset-0 h-full"
+            style="background: linear-gradient(0deg, rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }}) 0%, rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }}) 100%)"
+          ></div>
+        {% endif %}
+
+        {% if block.settings.heading != blank %}
+          <div class="layout absolute inset-0 h-full">
+            <div class="flex h-full flex-col items-start justify-end pb-[110px] md:pb-[120px]">
+              <h1 class="headline1 pb-[20px] text-white md:pb-[40px]">
+                {{ block.settings.heading | newline_to_br }}
+              </h1>
+              <div class="flex flex-col gap-[20px] md:flex-row md:items-center md:gap-[40px]">
+                <div class="md:shrink-0">
+                  {% if block.settings.button_url != blank %}
+                    <a
+                      href="{{ block.settings.button_url }}"
+                      class="knappetikett flex flex-row items-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717]"
+                      style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #EBCF2F;"
+                    >
+                      {{ block.settings.button_text }}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="18"
+                        viewBox="0 0 22 18"
+                        fill="none"
+                      >
+                        <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                </div>
+                {% if block.settings.subheading != blank %}
+                  <p class="body1 w-full text-white sm:w-[70%] lg:w-[90%]">
+                    {{ block.settings.subheading | newline_to_br }}
+                  </p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    {% if section.blocks.size > 1 %}
+      <!-- Navigation Arrows -->
+      <button
+        class="hero-slider-prev absolute left-[20px] top-1/2 z-20 flex h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all hover:bg-white/30"
+        aria-label="Previous slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button
+        class="hero-slider-next absolute right-[20px] top-1/2 z-20 flex h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all hover:bg-white/30"
+        aria-label="Next slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Dots Navigation -->
+    {% endif %}
+  </div>
+  <div
+    class="z-10 mt-[-50px] h-[50px] rounded-t-[25px] bg-white"
+    style="z-index: 1 !important;"
+  ></div>
+</section>
+
+<script src="{{ 'hero-slider.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Hero slider",
+  "tag": "section",
+  "class": "section-hero-slider",
+  "settings": [
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed (milliseconds)",
+      "min": 0,
+      "max": 9000,
+      "step": 1000,
+      "default": 5000,
+      "info": "Set to 0 to disable autoplay"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "select",
+          "id": "media_type",
+          "label": "Bakgrundstyp",
+          "options": [
+            {
+              "value": "image",
+              "label": "Bild"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ],
+          "default": "image"
+        },
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Bakgrundsbild"
+        },
+        {
+          "type": "video",
+          "id": "background_video",
+          "label": "Bakgrundsvideo (autoplay, muted, loop)"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Mörk overlay opacitet",
+          "min": 0,
+          "max": 80,
+          "step": 5,
+          "unit": "%",
+          "default": 20,
+          "info": "Lägg till en mörk overlay över bakgrunden för bättre läsbarhet"
+        },
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Rubrik",
+          "default": "Välkommen till vår webbplats"
+        },
+        {
+          "type": "textarea",
+          "id": "subheading",
+          "label": "Beskrivning",
+          "default": "Upptäck fantastiska produkter och tjänster"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Knapptext",
+          "default": "Våra energilösningar"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Knapplänk"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero slider",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "heading": "Välkommen till vår webbplats",
+            "subheading": "Upptäck fantastiska produkter och tjänster",
+            "button_text": "Våra energilösningar"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "heading": "Slide 2",
+            "subheading": "En annan beskrivning",
+            "button_text": "Läs mer"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
