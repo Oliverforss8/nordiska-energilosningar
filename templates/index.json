@@ -494,7 +494,7 @@
         "product_card_RxU67f": {
           "type": "product_card",
           "settings": {
-            "product": "fronius-reserva",
+            "product": "charge-amps-luna",
             "title": "Fronius Reserva",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
