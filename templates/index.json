@@ -96,7 +96,7 @@
         "product_AaGGir": {
           "type": "product",
           "settings": {
-            "product": "lastbalansering-perific-max",
+            "product": "sigenergy",
             "show_price": true,
             "description": ""
           }
@@ -104,7 +104,7 @@
         "product_manqr7": {
           "type": "product",
           "settings": {
-            "product": "lastbalsering-zaptec-sense",
+            "product": "saj",
             "show_price": true,
             "description": ""
           }
@@ -112,7 +112,7 @@
         "product_PzHRYV": {
           "type": "product",
           "settings": {
-            "product": "varmepump-1",
+            "product": "fronius-reserva",
             "show_price": true,
             "description": ""
           }
