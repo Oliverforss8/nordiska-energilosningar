@@ -138,7 +138,7 @@
         "title": "Solcellsintegration",
         "text": "<p><br/>Zaptec Go 2 växlar automatiskt mellan 1- och 3-fasladdning för att optimera laddningen utifrån din solproduktion. Det gör att du kan ladda bilen med egenproducerad solel när solen skiner och minska köpt el när produktionen är låg – för en smartare och mer hållbar energianvändning.<br/><br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/TE_Zaptec_MG_5108_PRINT.png",
+        "image": "shopify://shop_images/21355_Zaptec-173_Black_1ce9c54d-b778-43bf-a7af-64351da97f35.jpg",
         "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
         "image_position": "right",
         "image_button_text": "",
@@ -154,23 +154,8 @@
         "title": "Framtidssäker laddning",
         "text": "<p><strong>Zaptec Go 2 banar väg för elbilsladdning med vehicle-to-grid (V2G),</strong> vilket gör din bil till mer än bara ett transportmedel. Den blir en flexibel energikälla som kan lagra el när tillgången är god och återföra energi till elnätet eller försörja ditt hem vid behov – ett viktigt steg mot ett smartare och mer hållbart energisystem.<br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/Polestar_Zaptec_selection_014.jpg",
+        "image": "shopify://shop_images/Zaptec-pro_juni22-46.jpg",
         "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_PRMKVR": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Finns i olika färgen för att matcha ditt unika hem",
-        "text": "<p><br/>Zaptec Go 2 finns i flera eleganta färger som låter dig anpassa designen efter din stil och ditt hem. Oavsett om du vill att laddboxen ska smälta in diskret eller sticka ut som en modern detalj, finns det en färg som passar just dig.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
-        "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -317,7 +302,6 @@
     "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
-    "bild_och_text_PRMKVR",
     "banner_bild_6QPpC3",
     "review_V4fpRw",
     "faq_produkt",
