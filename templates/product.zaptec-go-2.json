@@ -289,26 +289,6 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
-    },
-    "banner_bild_H4Tfap": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/Zaptec-Go_Colour.png",
-        "background_color": "#ffffff",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "",
-        "description": "",
-        "primary_button_text": "Finns i olika färger för att matcha ditt hem",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
     }
   },
   "order": [
@@ -320,7 +300,6 @@
     "bild_och_text_PRMKVR",
     "review_V4fpRw",
     "faq_produkt",
-    "relaterade_produkter",
-    "banner_bild_H4Tfap"
+    "relaterade_produkter"
   ]
 }
