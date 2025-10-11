@@ -152,12 +152,13 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_knappar_h6VipL": {
-      "type": "bild-och-text-knappar",
-      "name": "Bild och text med knappar",
+    "bild_och_text_PHARHm": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
       "settings": {
+        "background_color": "#f7f7f7",
         "title": "Finns i flera färger för att matcha ditt hem",
-        "text": "<p><br/>Charge Amps Luna levereras som standard i elegant silver, men du kan även välja frontpaneler i mörkgrått eller pärlvitt för att matcha din stil och ditt hem. Här kombineras smart funktionalitet med stilren design.<br/><br/></p>",
+        "text": "<p>Charge Amps Luna levereras som standard i elegant silver, men du kan även välja frontpaneler i mörkgrått eller pärlvitt för att matcha din stil och ditt hem. Här kombineras smart funktionalitet med stilren design.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/PACKSHOT-Luna-White-Silver-Grey-Triple-Transparent-LR-768x307.png",
         "image_position": "right",
@@ -233,21 +234,6 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
-    },
-    "bild_och_text_PHARHm": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#f7f7f7",
-        "title": "Finns i flera färger för att matcha ditt hem",
-        "text": "<p>Charge Amps Luna levereras som standard i elegant silver, men du kan även välja frontpaneler i mörkgrått eller pärlvitt för att matcha din stil och ditt hem. Här kombineras smart funktionalitet med stilren design.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/PACKSHOT-Luna-White-Silver-Grey-Triple-Transparent-LR-768x307.png",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
     }
   },
   "order": [
@@ -255,10 +241,9 @@
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "tekniska_specifikationer_NRgBkG",
-    "bild_och_text_knappar_h6VipL",
+    "bild_och_text_PHARHm",
     "bild_och_text_Lt8MP6",
     "faq_produkt",
-    "relaterade_produkter",
-    "bild_och_text_PHARHm"
+    "relaterade_produkter"
   ]
 }
