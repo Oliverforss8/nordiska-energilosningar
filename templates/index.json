@@ -38,42 +38,6 @@
         "button_url": "shopify://pages/offert-forfragan"
       }
     },
-    "lankar_kHPxWD": {
-      "type": "lankar",
-      "blocks": {
-        "card_H4qwkF": {
-          "type": "card",
-          "settings": {
-            "heading": "Solceller",
-            "description": "Installera solceller som ger dig billig och ren el direkt från solen.",
-            "link": "shopify://pages/vara-solceller"
-          }
-        },
-        "card_jqt4VF": {
-          "type": "card",
-          "settings": {
-            "heading": "Batteri",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://pages/vara-batterilosningar"
-          }
-        },
-        "card_UYi6He": {
-          "type": "card",
-          "settings": {
-            "heading": "Laddbox",
-            "description": "Ladda din fullt el eller hybrid drivna bil hemma utan krångel.",
-            "link": "shopify://pages/vara-laddboxar"
-          }
-        }
-      },
-      "block_order": [
-        "card_H4qwkF",
-        "card_jqt4VF",
-        "card_UYi6He"
-      ],
-      "name": "Länkar sektion",
-      "settings": {}
-    },
     "ikon_lankar_ki6Ryk": {
       "type": "ikon-lankar",
       "blocks": {
@@ -628,7 +592,7 @@
   "order": [
     "hero_HUEAy6",
     "hero_lower_FJyVVX",
-    "lankar_kHPxWD",
+    "hero_slider_D8U4yr",
     "ikon_lankar_ki6Ryk",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
@@ -643,7 +607,6 @@
     "review_7jfwE6",
     "offert_forfragan_H8kdLx",
     "banner_med_3_produkter_3LW7zF",
-    "banner_med_2_produkter_rrjGgf",
-    "hero_slider_D8U4yr"
+    "banner_med_2_produkter_rrjGgf"
   ]
 }
