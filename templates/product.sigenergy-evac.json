@@ -27,7 +27,7 @@
       "custom_css": [],
       "name": "Banner bild",
       "settings": {
-        "layout_type": "full",
+        "layout_type": "contained",
         "media_type": "image",
         "background_image": "shopify://shop_images/Genomsprangnin_bild_laddare.jpg",
         "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
