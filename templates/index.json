@@ -27,6 +27,18 @@
     "hero_slider_D8U4yr": {
       "type": "hero-slider",
       "blocks": {
+        "slide_kBaNR6": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "background_image": "shopify://shop_images/A_DeMain_0192_00028_1144x_e8e21d35-c71a-4b46-af73-f69202c80c88.png",
+            "overlay_opacity": 20,
+            "heading": "Lagra din el",
+            "subheading": "En annan beskrivning",
+            "button_text": "Läs mer",
+            "button_url": "shopify://pages/vara-batterilosningar"
+          }
+        },
         "slide_dpHNkz": {
           "type": "slide",
           "settings": {
@@ -38,22 +50,11 @@
             "button_text": "Få en offert",
             "button_url": "shopify://pages/vara-solceller"
           }
-        },
-        "slide_kBaNR6": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "overlay_opacity": 20,
-            "heading": "Slide 2",
-            "subheading": "En annan beskrivning",
-            "button_text": "Läs mer",
-            "button_url": ""
-          }
         }
       },
       "block_order": [
-        "slide_dpHNkz",
-        "slide_kBaNR6"
+        "slide_kBaNR6",
+        "slide_dpHNkz"
       ],
       "name": "Hero slider",
       "settings": {
