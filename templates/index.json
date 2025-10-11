@@ -38,6 +38,42 @@
         "button_url": "shopify://pages/offert-forfragan"
       }
     },
+    "hero_slider_D8U4yr": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide_dpHNkz": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "background_image": "shopify://shop_images/Polestar_Zaptec_selection_014.jpg",
+            "overlay_opacity": 20,
+            "heading": "Välkommen till vår webbplats",
+            "subheading": "Upptäck fantastiska produkter och tjänster",
+            "button_text": "Våra energilösningar",
+            "button_url": ""
+          }
+        },
+        "slide_kBaNR6": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "overlay_opacity": 20,
+            "heading": "Slide 2",
+            "subheading": "En annan beskrivning",
+            "button_text": "Läs mer",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_dpHNkz",
+        "slide_kBaNR6"
+      ],
+      "name": "Hero slider",
+      "settings": {
+        "autoplay_speed": 5000
+      }
+    },
     "ikon_lankar_ki6Ryk": {
       "type": "ikon-lankar",
       "blocks": {
@@ -461,7 +497,7 @@
         "product_card_MDr4Qn": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "fronius-reserva",
             "title": "Laddbox 1",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
@@ -550,42 +586,6 @@
         "primary_button_url": "",
         "secondary_button_text": "Företag",
         "secondary_button_url": ""
-      }
-    },
-    "hero_slider_D8U4yr": {
-      "type": "hero-slider",
-      "blocks": {
-        "slide_dpHNkz": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "background_image": "shopify://shop_images/Polestar_Zaptec_selection_014.jpg",
-            "overlay_opacity": 20,
-            "heading": "Välkommen till vår webbplats",
-            "subheading": "Upptäck fantastiska produkter och tjänster",
-            "button_text": "Våra energilösningar",
-            "button_url": ""
-          }
-        },
-        "slide_kBaNR6": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "overlay_opacity": 20,
-            "heading": "Slide 2",
-            "subheading": "En annan beskrivning",
-            "button_text": "Läs mer",
-            "button_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_dpHNkz",
-        "slide_kBaNR6"
-      ],
-      "name": "Hero slider",
-      "settings": {
-        "autoplay_speed": 5000
       }
     }
   },
