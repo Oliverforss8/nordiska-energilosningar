@@ -361,13 +361,13 @@
         "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
         "overlay_opacity": 25,
-        "header_button_text": "Batterilösningar",
+        "header_button_text": "Kampanj",
         "header_button_url": "shopify://pages/vara-batterilosningar",
-        "heading": "Batterilager från 29 900:-",
-        "description": "Lagra din egen solel och använd den när du behöver den. Ett batterilager ger lägre elkostnader och ökad självständighet.",
+        "heading": "En extra batterimodul på köpet",
+        "description": "Vid köp av solceller och batteri från oss på Nordiska Enegilösningar",
         "primary_button_text": "Läs mer",
         "primary_button_url": "shopify://pages/vara-batterilosningar",
-        "secondary_button_text": "Produkter",
+        "secondary_button_text": "Lämna intresseanmälan",
         "secondary_button_url": "shopify://collections/laddboxar",
         "custom_id": ""
       }
