@@ -16,6 +16,11 @@
           "type": "upsell_product",
           "settings": {
             "upsell_product": "solis-s6-eh3p10-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
             "upsell_title": "",
             "upsell_description": ""
           }
@@ -24,6 +29,11 @@
           "type": "upsell_product",
           "settings": {
             "upsell_product": "solinteg",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
             "upsell_title": "",
             "upsell_description": ""
           }
@@ -154,6 +164,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "full",
         "media_type": "video",
         "background_video": "shopify://files/videos/1C1.mp4",
         "background_color": "#000000",
@@ -173,6 +184,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "full",
         "media_type": "video",
         "background_video": "shopify://files/videos/miehuodiaohei.mp4",
         "background_color": "#000000",
