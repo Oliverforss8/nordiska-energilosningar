@@ -64,8 +64,8 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Ladda bilen med el från dina solceller",
-        "text": "<p><br/>Med Charge Amps Luna får du möjlighet att bygga ett smart och effektivt energisystem i ditt eget hem. Du kan utnyttja din solproducerade el till fullo genom att ladda bilen med ren, förnybar energi under dagen, medan systemet automatiskt växlar över till elnätet under natten. För dig som vill maximera hållbarheten finns även möjligheten att enbart ladda bilen med solenergi – ett val som både gynnar miljön och minskar dina elkostnader.<br/><br/></p>",
+        "title": "Framtidssäker laddring",
+        "text": "<p>Zaptec Go 2 banar väg för elbilsladdning med vehicle-to-grid (V2G), vilket gör din bil till en energikälla som kan återföra energi till elnätet eller försörja ditt hem.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/Polestar_Zaptec_selection_014.jpg",
         "image_position": "left",
