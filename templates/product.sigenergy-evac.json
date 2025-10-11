@@ -106,22 +106,22 @@
         "specification_MQHq3V": {
           "type": "specification",
           "settings": {
-            "label": "IP-klass",
-            "value": "IP 54"
+            "label": "Lastbalansering",
+            "value": "Integrerat via Sigen Power Sensor"
           }
         },
         "specification_DDcaaj": {
           "type": "specification",
           "settings": {
             "label": "Anslutningsmöjlighet",
-            "value": "WiFi, 4G"
+            "value": "WiFi, 4G, Ethernet"
           }
         },
         "specification_XpqeXR": {
           "type": "specification",
           "settings": {
             "label": "Kommunikationsprotokoll",
-            "value": "OCPP"
+            "value": "OCPP 1.6, ED 2"
           }
         }
       },
