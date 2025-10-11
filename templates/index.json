@@ -158,6 +158,63 @@
         "custom_id": ""
       }
     },
+    "slider_sektion_Rd7AJK": {
+      "type": "slider-sektion",
+      "blocks": {
+        "product_znEcFD": {
+          "type": "product",
+          "settings": {
+            "product": "solinteg",
+            "show_price": false,
+            "description": "Komplett lösning med"
+          }
+        },
+        "product_njb4wF": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-verto",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_Q8BgpU": {
+          "type": "product",
+          "settings": {
+            "product": "solis-s6-eh3p10-kw",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_kCbLpw": {
+          "type": "product",
+          "settings": {
+            "product": "saj",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_y6J77j": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-reserva",
+            "show_price": true,
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_znEcFD",
+        "product_njb4wF",
+        "product_Q8BgpU",
+        "product_kCbLpw",
+        "product_y6J77j"
+      ],
+      "name": "Produktslider",
+      "settings": {
+        "title": "Våra växelriktare",
+        "custom_id": ""
+      }
+    },
     "relaterade_produkter_jRpymw": {
       "type": "relaterade-produkter",
       "disabled": true,
@@ -581,6 +638,7 @@
     "hero_slider_D8U4yr",
     "ikon_lankar_ki6Ryk",
     "slider_sektion_PkT3FL",
+    "slider_sektion_Rd7AJK",
     "relaterade_produkter_jRpymw",
     "bild_och_text_nY9Rik",
     "banner_med_3_produkter_D79ei6",
