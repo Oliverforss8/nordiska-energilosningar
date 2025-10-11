@@ -196,7 +196,7 @@
         "product_y6J77j": {
           "type": "product",
           "settings": {
-            "product": "fronius-reserva",
+            "product": "fronius-gen24-plus",
             "show_price": true,
             "description": ""
           }
