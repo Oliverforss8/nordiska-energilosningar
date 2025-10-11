@@ -182,6 +182,21 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_PRMKVR": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Finns i olika färgen för att matcha ditt unika hem",
+        "text": "<p><br/>Zaptec Go 2 finns i flera eleganta färger som låter dig anpassa designen efter din stil och ditt hem. Oavsett om du vill att laddboxen ska smälta in diskret eller sticka ut som en modern detalj, finns det en färg som passar just dig.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "review_V4fpRw": {
       "type": "review",
       "blocks": {
@@ -302,6 +317,7 @@
     "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
+    "bild_och_text_PRMKVR",
     "review_V4fpRw",
     "faq_produkt",
     "relaterade_produkter",
