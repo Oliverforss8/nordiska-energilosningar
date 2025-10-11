@@ -43,91 +43,99 @@
         "custom_id": ""
       }
     },
-    "tekniska_specifikationer_NRgBkG": {
+    "tekniska_specifikationer_QwhGhj": {
       "type": "tekniska-specifikationer",
       "blocks": {
-        "specification_E4emyj": {
+        "specification_kdpry8": {
           "type": "specification",
           "settings": {
-            "label": "Batterityp",
-            "value": "LFP (LiFePO4)"
+            "label": "Effekt",
+            "value": "Upp till 22 kW"
           }
         },
-        "specification_m7iLK6": {
+        "specification_NyyLXe": {
           "type": "specification",
           "settings": {
-            "label": "Lagringskapacitet",
-            "value": "7.86 – 23.04 kWh (2–6 moduler per torn)"
+            "label": "Strömstyrka",
+            "value": "6-32 A, 1-3 fas"
           }
         },
-        "specification_AQCrQp": {
+        "specification_6XKfUT": {
           "type": "specification",
           "settings": {
-            "label": "Dimension (L x B x H)",
-            "value": "210 x 80 x 220 mm"
+            "label": "Spänning",
+            "value": "230/400 V"
           }
         },
-        "specification_HewNBR": {
+        "specification_ajKcF9": {
           "type": "specification",
           "settings": {
-            "label": "Antal laddcykler",
-            "value": "≥ 8000 cycles"
+            "label": "Drifttemperatur",
+            "value": "-35°C till +45°C"
           }
         },
-        "specification_WABDdY": {
-          "type": "specification",
-          "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
-          }
-        },
-        "specification_C99Mme": {
-          "type": "specification",
-          "settings": {
-            "label": "Vikt",
-            "value": "1,3 kg"
-          }
-        },
-        "specification_hUmEmF": {
-          "type": "specification",
-          "settings": {
-            "label": "Driftstemperatur",
-            "value": "–35 till + 45 °C"
-          }
-        },
-        "specification_tjm798": {
+        "specification_KjfEgm": {
           "type": "specification",
           "settings": {
             "label": "IP-klass",
             "value": "IP 54"
           }
         },
-        "specification_HYy9jM": {
+        "specification_DcpECC": {
           "type": "specification",
           "settings": {
-            "label": "Kompatibel med växelriktare",
-            "value": "Solis, Solinteg"
+            "label": "Dimensioner (B × D × H)",
+            "value": "210 x 80 x 220 mm"
           }
         },
-        "specification_Wb33Wp": {
+        "specification_rEykcY": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "Vikt",
+            "value": "1,3 kg"
+          }
+        },
+        "specification_mLUDCr": {
+          "type": "specification",
+          "settings": {
+            "label": "Driftstemperatur",
+            "value": "–35 till + 45 °C"
+          }
+        },
+        "specification_MQHq3V": {
+          "type": "specification",
+          "settings": {
+            "label": "IP-klass",
+            "value": "IP 54"
+          }
+        },
+        "specification_DDcaaj": {
+          "type": "specification",
+          "settings": {
+            "label": "Anslutningsmöjlighet",
+            "value": "WiFi, 4G LTE** , Bluetooth"
+          }
+        },
+        "specification_XpqeXR": {
+          "type": "specification",
+          "settings": {
+            "label": "Kommunikationsprotokoll",
+            "value": "OCPP 1.6J"
           }
         }
       },
       "block_order": [
-        "specification_E4emyj",
-        "specification_m7iLK6",
-        "specification_AQCrQp",
-        "specification_HewNBR",
-        "specification_WABDdY",
-        "specification_C99Mme",
-        "specification_hUmEmF",
-        "specification_tjm798",
-        "specification_HYy9jM",
-        "specification_Wb33Wp"
+        "specification_kdpry8",
+        "specification_NyyLXe",
+        "specification_6XKfUT",
+        "specification_ajKcF9",
+        "specification_KjfEgm",
+        "specification_DcpECC",
+        "specification_rEykcY",
+        "specification_mLUDCr",
+        "specification_MQHq3V",
+        "specification_DDcaaj",
+        "specification_XpqeXR"
       ],
       "name": "Tekniska specifikationer",
       "settings": {
@@ -291,7 +299,7 @@
   "order": [
     "main",
     "banner_bild_6QPpC3",
-    "tekniska_specifikationer_NRgBkG",
+    "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "review_V4fpRw",
