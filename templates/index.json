@@ -171,6 +171,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Din väg till lägre elkostnader",
         "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
         "media_type": "image",
@@ -187,8 +188,8 @@
         "product_card_HAB8jq": {
           "type": "product_card",
           "settings": {
-            "product": "charge-amps-luna",
-            "title": "Charge Amps Luna",
+            "product": "zaptec-2",
+            "title": "Zaptec Go 2",
             "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
             "learn_more_text": "Köp nu",
             "learn_more_url": "shopify://products/charge-amps-luna"
@@ -197,8 +198,8 @@
         "product_card_PCcc9L": {
           "type": "product_card",
           "settings": {
-            "product": "charge-amps-luna",
-            "title": "Charge Amps Luna",
+            "product": "zaptec-pro",
+            "title": "Zaptec PRO",
             "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
             "learn_more_text": "Köp nu",
             "learn_more_url": "shopify://products/charge-amps-luna"
@@ -271,6 +272,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
@@ -283,20 +285,6 @@
         "primary_button_url": "shopify://pages/vara-batterilosningar",
         "secondary_button_text": "Produkter",
         "secondary_button_url": "shopify://collections/laddboxar",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_D9hWE6": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "title": "Vi är experter på storskaliga energilösningar",
-        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/image_12.png",
-        "image_position": "left",
-        "image_button_text": "Våra lösningar",
-        "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
     },
@@ -330,6 +318,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "image",
         "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
         "background_color": "#000000",
@@ -461,6 +450,60 @@
         "card_4_button_link": "",
         "card_4_overlay_opacity": 0
       }
+    },
+    "banner_med_3_produkter_3LW7zF": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_MDr4Qn": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": ""
+          }
+        },
+        "product_card_RxU67f": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "Laddbox 2",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": ""
+          }
+        },
+        "product_card_at6LTU": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "title": "Laddbox 3",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Läs mer",
+            "learn_more_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_MDr4Qn",
+        "product_card_RxU67f",
+        "product_card_at6LTU"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "overlay_opacity": 0,
+        "header_button_text": "Läs mer",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
@@ -474,11 +517,11 @@
     "banner_med_3_produkter_D79ei6",
     "avdrag_UeYUdn",
     "banner_bild_Tr8FhV",
-    "bild_och_text_D9hWE6",
     "grid_omraden_zBziiH",
     "banner_bild_xRHf34",
     "banner_med_3_produkter_ThPDRM",
     "review_7jfwE6",
-    "offert_forfragan_H8kdLx"
+    "offert_forfragan_H8kdLx",
+    "banner_med_3_produkter_3LW7zF"
   ]
 }
