@@ -36,7 +36,7 @@
           "type": "specification",
           "settings": {
             "label": "Strömstyrka",
-            "value": "6-32 A, 1-3 fas"
+            "value": "6-32 A, 3-fas"
           }
         },
         "specification_6XKfUT": {
@@ -50,7 +50,7 @@
           "type": "specification",
           "settings": {
             "label": "Drifttemperatur",
-            "value": "-30°C till +50°C"
+            "value": "-30°C till +40°C"
           }
         },
         "specification_KjfEgm": {
@@ -64,14 +64,14 @@
           "type": "specification",
           "settings": {
             "label": "Dimensioner (B × D × H)",
-            "value": "239 x 178 x 73 mm"
+            "value": "392 x 258 x 112 mm"
           }
         },
         "specification_rEykcY": {
           "type": "specification",
           "settings": {
             "label": "Vikt",
-            "value": "1,6 kg"
+            "value": "5 kg"
           }
         },
         "specification_mLUDCr": {
@@ -84,8 +84,8 @@
         "specification_MQHq3V": {
           "type": "specification",
           "settings": {
-            "label": "IP-klass",
-            "value": "IP 54"
+            "label": "Jordfelsbrytare",
+            "value": "Inbyggd typ B jordfelsbrytare (RCD)"
           }
         },
         "specification_DDcaaj": {
