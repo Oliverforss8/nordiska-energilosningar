@@ -498,7 +498,7 @@
           "type": "product_card",
           "settings": {
             "product": "fronius-gen24-plus",
-            "title": "Laddbox 1",
+            "title": "Verto",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
             "learn_more_url": ""
@@ -508,7 +508,7 @@
           "type": "product_card",
           "settings": {
             "product": "fronius-reserva",
-            "title": "Laddbox 2",
+            "title": "Fronius Reserva",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
             "learn_more_url": ""
@@ -517,8 +517,8 @@
         "product_card_at6LTU": {
           "type": "product_card",
           "settings": {
-            "product": "",
-            "title": "Laddbox 3",
+            "product": "fronius-wattpilot-flex",
+            "title": "Wattpilot Flex 11 kW",
             "description": "Avancerad laddning för professionella behov.",
             "learn_more_text": "Läs mer",
             "learn_more_url": ""
