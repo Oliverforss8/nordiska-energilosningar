@@ -72,14 +72,14 @@
           "type": "specification",
           "settings": {
             "label": "Drifttemperatur",
-            "value": "-30°C till +50°C"
+            "value": "-30°C till +55°C"
           }
         },
         "specification_KjfEgm": {
           "type": "specification",
           "settings": {
             "label": "IP-klass",
-            "value": "IP 54"
+            "value": "IP 65"
           }
         },
         "specification_DcpECC": {
