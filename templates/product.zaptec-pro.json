@@ -22,28 +22,6 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
-    "banner_bild_6QPpC3": {
-      "type": "banner-bild",
-      "custom_css": [],
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/Zaptec-pro_juni22-25.jpg",
-        "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Byggd för säkerhet",
-        "description": "Med hjälp av sensorer som övervakar temperatur, överström och luftfuktighet garanteras säkerheten för ditt fordon. Stödd av strikta standarder och med en femårig garanti kan du köra med trygghet.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "tekniska_specifikationer_QwhGhj": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -141,9 +119,9 @@
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
-        "image_1": "shopify://shop_images/zaptec_go_green-logo.png",
-        "image_2": "shopify://shop_images/zaptec_go_Wood-brown_TURNTABLE_v009_Wood_Brown_1500px_00040.png",
-        "image_3": "shopify://shop_images/Zaptec_Go_Wood_Brown_Open_Lid.png",
+        "image_1": "shopify://shop_images/Open_Shutter_Black_View01_Shadows_R04.png",
+        "image_2": "shopify://shop_images/Closed_Black_View03_Shadows_R04.png",
+        "image_3": "shopify://shop_images/Open_Shutter_Black_View02_Shadows_R04.png",
         "product_name": "Dyness",
         "stack_info": "Stack",
         "description": "Dyness",
@@ -195,6 +173,28 @@
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_6QPpC3": {
+      "type": "banner-bild",
+      "custom_css": [],
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "full",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Zaptec-pro_juni22-25.jpg",
+        "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Byggd för säkerhet",
+        "description": "Med hjälp av sensorer som övervakar temperatur, överström och luftfuktighet garanteras säkerheten för ditt fordon. Stödd av strikta standarder och med en femårig garanti kan du köra med trygghet.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
