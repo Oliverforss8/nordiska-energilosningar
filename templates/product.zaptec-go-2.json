@@ -27,6 +27,7 @@
       "custom_css": [],
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "video",
         "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
         "background_color": "#000000",
@@ -46,6 +47,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Gör din bil till en powerbank",
         "text": "<p>Förberedd för Vehicle-to-grid, med möjlighet att kommunicera med ditt fordon och förvandla din elbil till en powerbank.<br/><br/></p>",
         "media_type": "image",
@@ -61,6 +63,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Ladda bilen med el från dina solceller",
         "text": "<p><br/>Med Charge Amps Luna får du möjlighet att bygga ett smart och effektivt energisystem i ditt eget hem. Du kan utnyttja din solproducerade el till fullo genom att ladda bilen med ren, förnybar energi under dagen, medan systemet automatiskt växlar över till elnätet under natten. För dig som vill maximera hållbarheten finns även möjligheten att enbart ladda bilen med solenergi – ett val som både gynnar miljön och minskar dina elkostnader.<br/><br/></p>",
         "media_type": "image",
@@ -160,9 +163,9 @@
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
-        "image_1": "shopify://shop_images/charge-amps-luna-laddbox-1.png",
-        "image_2": "shopify://shop_images/charge-amps-luna-laddbox-2.png",
-        "image_3": "shopify://shop_images/charge-amps-luna-laddbox-3.png",
+        "image_1": "shopify://shop_images/zaptec_go_asphalt-logo.png",
+        "image_2": "shopify://shop_images/zaptec_go__asphalt-TURNTABLE_v009_1500px_00040_logo.png",
+        "image_3": "shopify://shop_images/Zaptec_Go_Wood_Brown_Open_Lid.png",
         "product_name": "Dyness",
         "stack_info": "Stack",
         "description": "Dyness",
@@ -189,6 +192,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "En optimal laddlösning för hemmet",
         "text": "<p>Charge Amps Luna integreras sömlöst i ditt hem och anpassar sig efter dina dagliga behov. Oavsett om du laddar bilen med el från elnätet eller med egenproducerad solel kan du vara trygg i att hushållets övriga elutrustning fungerar som vanligt. Detta möjliggörs av den smarta mjukvarans lastbalansering, som säkerställer en jämn och stabil strömförsörjning till alla enheter.</p>",
         "media_type": "image",
