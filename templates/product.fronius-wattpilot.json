@@ -165,11 +165,11 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Fronius ECA - smart laddning med egenproducerad el",
-        "text": "<p><br/>Fronius Wattpilot samarbetar sömlöst med Fronius Energy Cell Adapter (ECA) för att optimera elbilsladdningen. Systemet kommunicerar direkt med din solcellsanläggning och ser till att bilen laddas med överskottsel från solcellerna – helt automatiskt. När produktionen är låg växlar systemet intelligent till nätström, så du alltid laddar på det mest kostnadseffektiva och hållbara sättet.<br/><br/><br/></p>",
+        "title": "Allt samlat i SolarWeb",
+        "text": "<p>Med Fronius SolarWeb har du hela din energianläggning samlad på ett och samma ställe. Appen ger dig full kontroll och insyn i din solproduktion, elförbrukning, batterilagring och elbilsladdning – i realtid. Du kan enkelt följa hur mycket el du producerar, hur mycket som används i fastigheten och hur mycket som matas ut på elnätet.</p><p></p><p>SolarWeb gör det dessutom möjligt att optimera din energianvändning och maximera lönsamheten i din anläggning. Oavsett om du är hemma, på jobbet eller på resande fot har du alltid tillgång till din energi – direkt i mobilen, surfplattan eller datorn.</p>",
         "media_type": "image",
         "image": "shopify://shop_images/fronius-wattpilot-wallbox-home-flex-c_1_ad3a920d-7450-49a7-99e2-7554b62cf4bd.jpg",
-        "image_position": "left",
+        "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
