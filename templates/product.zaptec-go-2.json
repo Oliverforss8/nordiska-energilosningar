@@ -27,16 +27,16 @@
       "custom_css": [],
       "name": "Banner bild",
       "settings": {
-        "layout_type": "contained",
+        "layout_type": "full",
         "media_type": "video",
         "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
         "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "hi",
+        "heading": "Byggd för säkerhet",
+        "description": "Med hjälp av sensorer som övervakar temperatur, överström och luftfuktighet garanteras säkerheten för ditt fordon. Stödd av strikta standarder och med en femårig garanti kan du köra med trygghet.",
+        "primary_button_text": "",
         "primary_button_url": "",
         "secondary_button_text": "",
         "secondary_button_url": "",
@@ -181,7 +181,7 @@
         "title": "Finns i flera färger för att matcha ditt hem",
         "text": "<p><br/>Charge Amps Luna levereras som standard i elegant silver, men du kan även välja frontpaneler i mörkgrått eller pärlvitt för att matcha din stil och ditt hem. Här kombineras smart funktionalitet med stilren design.<br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/PACKSHOT-Luna-White-Silver-Grey-Triple-Transparent-LR-768x307.png",
+        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
@@ -255,6 +255,26 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "banner_bild_H4Tfap": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Zaptec-Go_Colour.png",
+        "background_color": "#FFFFFF",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "",
+        "description": "",
+        "primary_button_text": "Finns i olika färger för att matcha ditt hem",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -266,6 +286,7 @@
     "bild_och_text_knappar_h6VipL",
     "bild_och_text_Lt8MP6",
     "faq_produkt",
-    "relaterade_produkter"
+    "relaterade_produkter",
+    "banner_bild_H4Tfap"
   ]
 }
