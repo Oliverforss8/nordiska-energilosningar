@@ -74,6 +74,46 @@
       "name": "Länkar sektion",
       "settings": {}
     },
+    "ikon_lankar_ki6Ryk": {
+      "type": "ikon-lankar",
+      "blocks": {
+        "icon_link_rYDtBi": {
+          "type": "icon_link",
+          "settings": {
+            "text": "Solceller",
+            "link": ""
+          }
+        },
+        "icon_link_YEyk3D": {
+          "type": "icon_link",
+          "settings": {
+            "text": "Batteri",
+            "link": ""
+          }
+        },
+        "icon_link_FFGJLa": {
+          "type": "icon_link",
+          "settings": {
+            "text": "Laddboxar",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_link_rYDtBi",
+        "icon_link_YEyk3D",
+        "icon_link_FFGJLa"
+      ],
+      "name": "Icon links",
+      "settings": {
+        "background_color": "#ffffff",
+        "columns_desktop": 3,
+        "grid_gap": 20,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "custom_id": ""
+      }
+    },
     "slider_sektion_PkT3FL": {
       "type": "slider-sektion",
       "blocks": {
@@ -547,12 +587,49 @@
         "secondary_button_text": "Företag",
         "secondary_button_url": ""
       }
+    },
+    "hero_slider_D8U4yr": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide_dpHNkz": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "background_image": "shopify://shop_images/Polestar_Zaptec_selection_014.jpg",
+            "overlay_opacity": 20,
+            "heading": "Välkommen till vår webbplats",
+            "subheading": "Upptäck fantastiska produkter och tjänster",
+            "button_text": "Våra energilösningar",
+            "button_url": ""
+          }
+        },
+        "slide_kBaNR6": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "overlay_opacity": 20,
+            "heading": "Slide 2",
+            "subheading": "En annan beskrivning",
+            "button_text": "Läs mer",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_dpHNkz",
+        "slide_kBaNR6"
+      ],
+      "name": "Hero slider",
+      "settings": {
+        "autoplay_speed": 5000
+      }
     }
   },
   "order": [
     "hero_HUEAy6",
     "hero_lower_FJyVVX",
     "lankar_kHPxWD",
+    "ikon_lankar_ki6Ryk",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "grid_omraden_gmji3j",
@@ -566,6 +643,7 @@
     "review_7jfwE6",
     "offert_forfragan_H8kdLx",
     "banner_med_3_produkter_3LW7zF",
-    "banner_med_2_produkter_rrjGgf"
+    "banner_med_2_produkter_rrjGgf",
+    "hero_slider_D8U4yr"
   ]
 }
