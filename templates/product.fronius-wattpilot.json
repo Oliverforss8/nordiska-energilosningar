@@ -135,10 +135,10 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Sömnlös integration med Verto och Gen24",
-        "text": "<p><br/>Zaptec Go 2 växlar automatiskt mellan 1- och 3-fasladdning för att optimera laddningen utifrån din solproduktion. Det gör att du kan ladda bilen med egenproducerad solel när solen skiner och minska köpt el när produktionen är låg – för en smartare och mer hållbar energianvändning.<br/><br/><br/></p>",
+        "title": "Sömnlös integration med Reserva,  Verto och Gen24",
+        "text": "<p>Fronius Wattpilot fungerar sömlöst tillsammans med <strong>Reserva</strong>, <strong>Verto</strong> och <strong>Gen24</strong>. Systemet samverkar smart för att optimera laddningen efter solproduktionen, vilket gör att elbilen automatiskt laddas när det finns överskottsel – för maximal egenanvändning och energieffektivitet.<br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/SE__Wattpilot_Flex_Social_Media_-_Product_Photo_Story___Carousel_2_7.jpg",
+        "image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva__GEN24_detail__1.png",
         "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
         "image_position": "right",
         "image_button_text": "",
@@ -158,30 +158,6 @@
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_PRMKVR": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Finns i olika färgen för att matcha ditt unika hem",
-        "text": "<p><br/>Zaptec Go 2 finns i flera eleganta färger som låter dig anpassa designen efter din stil och ditt hem. Oavsett om du vill att laddboxen ska smälta in diskret eller sticka ut som en modern detalj, finns det en färg som passar just dig.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
-      "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
     },
@@ -227,6 +203,15 @@
         "custom_id": "",
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
       }
     },
     "review_V4fpRw": {
@@ -275,7 +260,6 @@
     "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
-    "bild_och_text_PRMKVR",
     "faq_produkt",
     "relaterade_produkter",
     "review_V4fpRw"
