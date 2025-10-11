@@ -71,7 +71,7 @@
           "type": "specification",
           "settings": {
             "label": "Drifttemperatur",
-            "value": "-35°C till +45°C"
+            "value": "-30°C till +50°C"
           }
         },
         "specification_KjfEgm": {
@@ -85,21 +85,21 @@
           "type": "specification",
           "settings": {
             "label": "Dimensioner (B × D × H)",
-            "value": "210 x 80 x 220 mm"
+            "value": "239 x 178 x 73 mm"
           }
         },
         "specification_rEykcY": {
           "type": "specification",
           "settings": {
             "label": "Vikt",
-            "value": "1,3 kg"
+            "value": "1,6 kg"
           }
         },
         "specification_mLUDCr": {
           "type": "specification",
           "settings": {
-            "label": "Driftstemperatur",
-            "value": "–35 till + 45 °C"
+            "label": "Garanti",
+            "value": "5 år"
           }
         },
         "specification_MQHq3V": {
@@ -113,14 +113,14 @@
           "type": "specification",
           "settings": {
             "label": "Anslutningsmöjlighet",
-            "value": "WiFi, 4G LTE** , Bluetooth"
+            "value": "WiFi, 4G"
           }
         },
         "specification_XpqeXR": {
           "type": "specification",
           "settings": {
             "label": "Kommunikationsprotokoll",
-            "value": "OCPP 1.6J"
+            "value": "OCPP"
           }
         }
       },
@@ -147,7 +147,7 @@
         "stack_info": "Stack",
         "description": "Dyness",
         "button_text": "Produktdatablad",
-        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250915/DynessTowerProDatasheetEN20250723.pdf",
+        "button_link": "https://help.zaptec.com/hc/article_attachments/36068564256401",
         "custom_id": ""
       }
     },
@@ -177,21 +177,6 @@
         "media_type": "image",
         "image": "shopify://shop_images/Polestar_Zaptec_selection_014.jpg",
         "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_kmMCqR": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Finns i olika färger för att matcha ditt unika hem",
-        "text": "<p><br/>Zaptec Go 2 finns i flera eleganta färger som låter dig anpassa designen efter din stil och ditt hem. Oavsett om du vill att laddboxen ska smälta in diskret eller sticka ut som en modern detalj, finns det en färg som passar just dig.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
-        "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -289,6 +274,26 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "banner_bild_H4Tfap": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Zaptec-Go_Colour.png",
+        "background_color": "#ffffff",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "",
+        "description": "",
+        "primary_button_text": "Finns i olika färger för att matcha ditt hem",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -297,9 +302,9 @@
     "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
-    "bild_och_text_kmMCqR",
     "review_V4fpRw",
     "faq_produkt",
-    "relaterade_produkter"
+    "relaterade_produkter",
+    "banner_bild_H4Tfap"
   ]
 }
