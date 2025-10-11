@@ -26,6 +26,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Redo för framtiden",
         "text": "<p>Charge Amps Luna är framtidssäkrad och utvecklad för att möta kommande behov, med stöd för funktioner som plug-and-charge (PnC) och vehicle-to-grid (V2G)*. Charge Amps Luna erbjuder inte bara bekvämlighet utan också enkelhet – du kan enkelt identifiera din bil som behörig att använda laddaren och få realtidsinformation om elbilens batteristatus.</p>",
         "media_type": "video",
@@ -40,6 +41,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Ladda bilen med el från dina solceller",
         "text": "<p><br/>Med Charge Amps Luna får du möjlighet att bygga ett smart och effektivt energisystem i ditt eget hem. Du kan utnyttja din solproducerade el till fullo genom att ladda bilen med ren, förnybar energi under dagen, medan systemet automatiskt växlar över till elnätet under natten. För dig som vill maximera hållbarheten finns även möjligheten att enbart ladda bilen med solenergi – ett val som både gynnar miljön och minskar dina elkostnader.<br/><br/></p>",
         "media_type": "image",
@@ -168,6 +170,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "En optimal laddlösning för hemmet",
         "text": "<p>Charge Amps Luna integreras sömlöst i ditt hem och anpassar sig efter dina dagliga behov. Oavsett om du laddar bilen med el från elnätet eller med egenproducerad solel kan du vara trygg i att hushållets övriga elutrustning fungerar som vanligt. Detta möjliggörs av den smarta mjukvarans lastbalansering, som säkerställer en jämn och stabil strömförsörjning till alla enheter.</p>",
         "media_type": "image",
@@ -230,6 +233,21 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "bild_och_text_PHARHm": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#f7f7f7",
+        "title": "Finns i flera färger för att matcha ditt hem",
+        "text": "<p>Charge Amps Luna levereras som standard i elegant silver, men du kan även välja frontpaneler i mörkgrått eller pärlvitt för att matcha din stil och ditt hem. Här kombineras smart funktionalitet med stilren design.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/PACKSHOT-Luna-White-Silver-Grey-Triple-Transparent-LR-768x307.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -240,6 +258,7 @@
     "bild_och_text_knappar_h6VipL",
     "bild_och_text_Lt8MP6",
     "faq_produkt",
-    "relaterade_produkter"
+    "relaterade_produkter",
+    "bild_och_text_PHARHm"
   ]
 }
