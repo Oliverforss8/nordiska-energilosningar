@@ -176,44 +176,13 @@
         "custom_id": ""
       }
     },
-    "review_V4fpRw": {
-      "type": "review",
-      "blocks": {
-        "review_FecaPT": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
-            "customer_name": "Marie"
-          }
-        },
-        "review_QNdJdm": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
-            "customer_name": "Ruben"
-          }
-        },
-        "review_MepF4p": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
-            "customer_name": "Stefan"
-          }
-        }
-      },
-      "block_order": [
-        "review_FecaPT",
-        "review_QNdJdm",
-        "review_MepF4p"
-      ],
-      "name": "Reviews",
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
       "settings": {
-        "heading": "Vad våra kunder säger om oss",
-        "button_text": "Läs alla recensioner",
-        "button_url": ""
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
       }
     },
     "faq_produkt": {
@@ -260,13 +229,44 @@
         "padding_bottom": 40
       }
     },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
+    "review_V4fpRw": {
+      "type": "review",
+      "blocks": {
+        "review_FecaPT": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_QNdJdm": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_MepF4p": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_FecaPT",
+        "review_QNdJdm",
+        "review_MepF4p"
+      ],
+      "name": "Reviews",
       "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
       }
     }
   },
