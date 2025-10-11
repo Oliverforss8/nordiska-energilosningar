@@ -138,7 +138,7 @@
         "title": "Sömnlös integration med Verto och Gen24",
         "text": "<p><br/>Zaptec Go 2 växlar automatiskt mellan 1- och 3-fasladdning för att optimera laddningen utifrån din solproduktion. Det gör att du kan ladda bilen med egenproducerad solel när solen skiner och minska köpt el när produktionen är låg – för en smartare och mer hållbar energianvändning.<br/><br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/SE_Product_Image_Fronius_Wattpilot_Flex_Image.jpg",
+        "image": "shopify://shop_images/SE__Wattpilot_Flex_Social_Media_-_Product_Photo_Story___Carousel_2_7.jpg",
         "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
         "image_position": "right",
         "image_button_text": "",
@@ -268,26 +268,6 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
-    },
-    "banner_bild_H4Tfap": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/Zaptec-Go_Colour.png",
-        "background_color": "#ffffff",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "",
-        "description": "",
-        "primary_button_text": "Finns i olika färger för att matcha ditt hem",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
     }
   },
   "order": [
@@ -296,9 +276,8 @@
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "bild_och_text_PRMKVR",
-    "review_V4fpRw",
     "faq_produkt",
     "relaterade_produkter",
-    "banner_bild_H4Tfap"
+    "review_V4fpRw"
   ]
 }
