@@ -136,7 +136,7 @@
       "settings": {
         "background_color": "#ffffff",
         "title": "Sömnlös integration med Reserva,  Verto och Gen24",
-        "text": "<p>Fronius Wattpilot fungerar sömlöst tillsammans med <strong>Reserva</strong>, <strong>Verto</strong> och <strong>Gen24</strong>. Systemet samverkar smart för att optimera laddningen efter solproduktionen, vilket gör att elbilen automatiskt laddas när det finns överskottsel – för maximal egenanvändning och energieffektivitet.<br/></p>",
+        "text": "<p>Fronius Wattpilot fungerar sömlöst tillsammans med <strong>Fronius</strong> <strong>Reserva</strong>, <strong>Verto</strong> och <strong>Gen24</strong>. Systemet samverkar smart för att optimera laddningen efter solproduktionen, vilket gör att elbilen automatiskt laddas när det finns överskottsel – för maximal egenanvändning och energieffektivitet.<br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva__GEN24_detail__1.png",
         "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
@@ -151,8 +151,8 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Framtidssäker laddning",
-        "text": "<p><strong>Zaptec Go 2 banar väg för elbilsladdning med vehicle-to-grid (V2G),</strong> vilket gör din bil till mer än bara ett transportmedel. Den blir en flexibel energikälla som kan lagra el när tillgången är god och återföra energi till elnätet eller försörja ditt hem vid behov – ett viktigt steg mot ett smartare och mer hållbart energisystem.<br/><br/></p>",
+        "title": "Fronius ECA - smart laddning med egenproducerad el",
+        "text": "<p><br/>Fronius Wattpilot samarbetar sömlöst med Fronius Energy Cell Adapter (ECA) för att optimera elbilsladdningen. Systemet kommunicerar direkt med din solcellsanläggning och ser till att bilen laddas med överskottsel från solcellerna – helt automatiskt. När produktionen är låg växlar systemet intelligent till nätström, så du alltid laddar på det mest kostnadseffektiva och hållbara sättet.<br/><br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/SE__Wattpilot_Flex_Social_Media_-_Product_Photo_Story___Carousel_2_7.jpg",
         "image_position": "left",
