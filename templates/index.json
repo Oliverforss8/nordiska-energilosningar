@@ -33,7 +33,7 @@
             "media_type": "image",
             "background_image": "shopify://shop_images/A_DeMain_0192_00028_1144x_e8e21d35-c71a-4b46-af73-f69202c80c88.png",
             "overlay_opacity": 20,
-            "heading": "Lagra din el",
+            "heading": "Kompletta batterilager från 29.900:-",
             "subheading": "En annan beskrivning",
             "button_text": "Läs mer",
             "button_url": "shopify://pages/vara-batterilosningar"
@@ -169,31 +169,6 @@
         "custom_id": ""
       }
     },
-    "grid_omraden_gmji3j": {
-      "type": "grid-omraden",
-      "name": "Grid areas",
-      "settings": {
-        "title": "Smarta energilösningar för en hållbar vardag",
-        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
-        "card_1_image": "shopify://shop_images/image_18.png",
-        "card_1_button_text": "Solceller",
-        "card_1_button_link": "shopify://pages/vara-solceller",
-        "card_1_overlay_opacity": 20,
-        "card_2_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
-        "card_2_button_text": "Värmepumpar",
-        "card_2_button_link": "shopify://pages/vara-varmepumpar",
-        "card_2_overlay_opacity": 20,
-        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
-        "card_3_button_text": "Laddboxar",
-        "card_3_button_link": "shopify://pages/vara-laddboxar",
-        "card_3_overlay_opacity": 20,
-        "card_4_image": "shopify://shop_images/image_16.png",
-        "card_4_button_text": "Batterier",
-        "card_4_button_link": "shopify://pages/vara-laddboxar",
-        "card_4_overlay_opacity": 20,
-        "bottom_description": ""
-      }
-    },
     "bild_och_text_nY9Rik": {
       "type": "bild-och-text",
       "name": "Bild och text",
@@ -262,6 +237,31 @@
         "primary_button_url": "shopify://pages/vara-laddboxar",
         "secondary_button_text": "",
         "secondary_button_url": ""
+      }
+    },
+    "grid_omraden_gmji3j": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Smarta energilösningar för en hållbar vardag",
+        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
+        "card_1_image": "shopify://shop_images/image_18.png",
+        "card_1_button_text": "Solceller",
+        "card_1_button_link": "shopify://pages/vara-solceller",
+        "card_1_overlay_opacity": 20,
+        "card_2_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
+        "card_2_button_text": "Värmepumpar",
+        "card_2_button_link": "shopify://pages/vara-varmepumpar",
+        "card_2_overlay_opacity": 20,
+        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
+        "card_3_button_text": "Laddboxar",
+        "card_3_button_link": "shopify://pages/vara-laddboxar",
+        "card_3_overlay_opacity": 20,
+        "card_4_image": "shopify://shop_images/image_16.png",
+        "card_4_button_text": "Batterier",
+        "card_4_button_link": "shopify://pages/vara-laddboxar",
+        "card_4_overlay_opacity": 20,
+        "bottom_description": ""
       }
     },
     "avdrag_UeYUdn": {
@@ -582,9 +582,9 @@
     "ikon_lankar_ki6Ryk",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
-    "grid_omraden_gmji3j",
     "bild_och_text_nY9Rik",
     "banner_med_3_produkter_D79ei6",
+    "grid_omraden_gmji3j",
     "avdrag_UeYUdn",
     "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
