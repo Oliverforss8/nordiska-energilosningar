@@ -158,63 +158,6 @@
         "custom_id": ""
       }
     },
-    "slider_sektion_Rd7AJK": {
-      "type": "slider-sektion",
-      "blocks": {
-        "product_znEcFD": {
-          "type": "product",
-          "settings": {
-            "product": "solinteg",
-            "show_price": false,
-            "description": "Komplett lösning med"
-          }
-        },
-        "product_njb4wF": {
-          "type": "product",
-          "settings": {
-            "product": "fronius-verto",
-            "show_price": true,
-            "description": ""
-          }
-        },
-        "product_Q8BgpU": {
-          "type": "product",
-          "settings": {
-            "product": "solis-s6-eh3p10-kw",
-            "show_price": true,
-            "description": ""
-          }
-        },
-        "product_kCbLpw": {
-          "type": "product",
-          "settings": {
-            "product": "saj",
-            "show_price": true,
-            "description": ""
-          }
-        },
-        "product_y6J77j": {
-          "type": "product",
-          "settings": {
-            "product": "fronius-gen24-plus",
-            "show_price": true,
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_znEcFD",
-        "product_njb4wF",
-        "product_Q8BgpU",
-        "product_kCbLpw",
-        "product_y6J77j"
-      ],
-      "name": "Produktslider",
-      "settings": {
-        "title": "Upptäck våra hybridväxelriktare",
-        "custom_id": ""
-      }
-    },
     "relaterade_produkter_jRpymw": {
       "type": "relaterade-produkter",
       "disabled": true,
@@ -350,6 +293,63 @@
         "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "slider_sektion_Rd7AJK": {
+      "type": "slider-sektion",
+      "blocks": {
+        "product_znEcFD": {
+          "type": "product",
+          "settings": {
+            "product": "solinteg",
+            "show_price": false,
+            "description": "Komplett lösning med"
+          }
+        },
+        "product_njb4wF": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-verto",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_Q8BgpU": {
+          "type": "product",
+          "settings": {
+            "product": "solis-s6-eh3p10-kw",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_kCbLpw": {
+          "type": "product",
+          "settings": {
+            "product": "saj",
+            "show_price": true,
+            "description": ""
+          }
+        },
+        "product_y6J77j": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-gen24-plus",
+            "show_price": true,
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_znEcFD",
+        "product_njb4wF",
+        "product_Q8BgpU",
+        "product_kCbLpw",
+        "product_y6J77j"
+      ],
+      "name": "Produktslider",
+      "settings": {
+        "title": "Upptäck våra hybridväxelriktare",
+        "custom_id": ""
       }
     },
     "banner_bild_Tr8FhV": {
@@ -597,7 +597,7 @@
           "type": "product_card",
           "settings": {
             "product": "zaptec-2",
-            "title": "Laddbox 1",
+            "title": "Zaptec Go 2",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
             "learn_more_url": ""
@@ -607,7 +607,7 @@
           "type": "product_card",
           "settings": {
             "product": "zaptec-pro",
-            "title": "Laddbox 2",
+            "title": "Zaptec PRO",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
             "learn_more_url": ""
@@ -620,7 +620,7 @@
       ],
       "name": "Banner med 2 produkter",
       "settings": {
-        "layout_direction": "banner_first",
+        "layout_direction": "products_first",
         "background_color": "#f5f5f5",
         "header_button_text": "Läs mer",
         "header_button_url": "",
@@ -638,12 +638,12 @@
     "hero_slider_D8U4yr",
     "ikon_lankar_ki6Ryk",
     "slider_sektion_PkT3FL",
-    "slider_sektion_Rd7AJK",
     "relaterade_produkter_jRpymw",
     "bild_och_text_nY9Rik",
     "banner_med_3_produkter_D79ei6",
     "grid_omraden_gmji3j",
     "avdrag_UeYUdn",
+    "slider_sektion_Rd7AJK",
     "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
     "banner_bild_xRHf34",
