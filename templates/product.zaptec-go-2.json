@@ -149,7 +149,7 @@
       "settings": {
         "background_color": "#ffffff",
         "title": "Solcellsintegration",
-        "text": "<p>Maximera energieffektiviteten med integration av solenergi. Zaptec Go 2 växlar smidigt mellan 1- och 3-fasladdning, vilket gör att du kan utnyttja solens energi.<br/><br/></p>",
+        "text": "<p><br/>Zaptec Go 2 växlar automatiskt mellan 1- och 3-fasladdning för att optimera laddningen utifrån din solproduktion. Det gör att du kan ladda bilen med egenproducerad solel när solen skiner och minska köpt el när produktionen är låg – för en smartare och mer hållbar energianvändning.<br/><br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/TE_Zaptec_MG_5108_PRINT.png",
         "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
@@ -174,33 +174,44 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_knappar_h6VipL": {
-      "type": "bild-och-text-knappar",
-      "name": "Bild och text med knappar",
+    "review_V4fpRw": {
+      "type": "review",
+      "blocks": {
+        "review_FecaPT": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_QNdJdm": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_MepF4p": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_FecaPT",
+        "review_QNdJdm",
+        "review_MepF4p"
+      ],
+      "name": "Reviews",
       "settings": {
-        "title": "Finns i flera färger för att matcha ditt hem",
-        "text": "<p><br/>Charge Amps Luna levereras som standard i elegant silver, men du kan även välja frontpaneler i mörkgrått eller pärlvitt för att matcha din stil och ditt hem. Här kombineras smart funktionalitet med stilren design.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_Lt8MP6": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "En optimal laddlösning för hemmet",
-        "text": "<p>Charge Amps Luna integreras sömlöst i ditt hem och anpassar sig efter dina dagliga behov. Oavsett om du laddar bilen med el från elnätet eller med egenproducerad solel kan du vara trygg i att hushållets övriga elutrustning fungerar som vanligt. Detta möjliggörs av den smarta mjukvarans lastbalansering, som säkerställer en jämn och stabil strömförsörjning till alla enheter.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
       }
     },
     "faq_produkt": {
@@ -283,8 +294,7 @@
     "banner_bild_6QPpC3",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
-    "bild_och_text_knappar_h6VipL",
-    "bild_och_text_Lt8MP6",
+    "review_V4fpRw",
     "faq_produkt",
     "relaterade_produkter",
     "banner_bild_H4Tfap"
