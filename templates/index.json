@@ -24,20 +24,6 @@
         "button_url": "shopify://pages/vara-produkter"
       }
     },
-    "hero_lower_FJyVVX": {
-      "type": "hero-lower",
-      "name": "Hero nedre",
-      "settings": {
-        "media_type": "image",
-        "background_image": "shopify://shop_images/images.webp",
-        "background_video": "shopify://files/videos/1080.mp4",
-        "overlay_opacity": 25,
-        "heading": "Egen el. Lägre kostnad. Full kontroll.",
-        "subheading": "Smart energi för dig som vill leva friare.",
-        "button_text": "Få en offert",
-        "button_url": "shopify://pages/offert-forfragan"
-      }
-    },
     "hero_slider_D8U4yr": {
       "type": "hero-slider",
       "blocks": {
@@ -49,7 +35,7 @@
             "overlay_opacity": 20,
             "heading": "Egen el. Egen kostnad. Full kontroll.",
             "subheading": "Smart energi för dig som vill leva friare.",
-            "button_text": "Våra energilösningar",
+            "button_text": "Få en offert",
             "button_url": ""
           }
         },
@@ -591,7 +577,6 @@
   },
   "order": [
     "hero_HUEAy6",
-    "hero_lower_FJyVVX",
     "hero_slider_D8U4yr",
     "ikon_lankar_ki6Ryk",
     "slider_sektion_PkT3FL",
