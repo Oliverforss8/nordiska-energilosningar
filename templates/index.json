@@ -544,8 +544,8 @@
             "product": "fronius-verto",
             "title": "Fronius Verto",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/fronius-verto"
           }
         },
         "product_card_RxU67f": {
@@ -554,18 +554,18 @@
             "product": "fronius-reserva",
             "title": "Fronius Reserva",
             "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/fronius-reserva"
           }
         },
         "product_card_at6LTU": {
           "type": "product_card",
           "settings": {
             "product": "fronius-wattpilot-flex",
-            "title": "Wattpilot Flex 11 kW",
+            "title": "Fronius Wattpilot",
             "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/fronius-wattpilot-flex"
           }
         }
       },
@@ -584,7 +584,7 @@
         "header_button_url": "",
         "heading": "Tysk kvalité med europeiska servrar",
         "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Privat",
+        "primary_button_text": "Batterier",
         "primary_button_url": "",
         "secondary_button_text": "Företag",
         "secondary_button_url": ""
