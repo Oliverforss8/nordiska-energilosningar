@@ -146,20 +146,6 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_knappar_LkcadR": {
-      "type": "bild-och-text-knappar",
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
-        "media_type": "video",
-        "video": "shopify://files/videos/1C1.mp4",
-        "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "banner_bild_gnz8mP": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -177,6 +163,20 @@
         "primary_button_url": "",
         "secondary_button_text": "",
         "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_LkcadR": {
+      "type": "bild-och-text-knappar",
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "video",
+        "video": "shopify://files/videos/1C1.mp4",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
@@ -257,8 +257,8 @@
   "order": [
     "main",
     "tekniska_specifikationer_AdpmjP",
-    "bild_och_text_knappar_LkcadR",
     "banner_bild_gnz8mP",
+    "bild_och_text_knappar_LkcadR",
     "banner_bild_89kigT",
     "faq_produkt",
     "relaterade_produkter"
