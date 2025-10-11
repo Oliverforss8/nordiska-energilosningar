@@ -48,8 +48,8 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Gör din bil till en powerbank",
-        "text": "<p>Förberedd för Vehicle-to-grid, med möjlighet att kommunicera med ditt fordon och förvandla din elbil till en powerbank.<br/><br/></p>",
+        "title": "Solcellsintegration",
+        "text": "<p>Maximera energieffektiviteten med integration av solenergi. Zaptec Go 2 växlar smidigt mellan 1- och 3-fasladdning, vilket gör att du kan utnyttja solens energi.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/TE_Zaptec_MG_5108_PRINT.png",
         "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
