@@ -22,6 +22,27 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
+    "banner_bild_6QPpC3": {
+      "type": "banner-bild",
+      "custom_css": [],
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "full",
+        "media_type": "video",
+        "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Byggd för säkerhet",
+        "description": "Med hjälp av sensorer som övervakar temperatur, överström och luftfuktighet garanteras säkerheten för ditt fordon. Stödd av strikta standarder och med en femårig garanti kan du köra med trygghet.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "tekniska_specifikationer_NRgBkG": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -119,27 +140,6 @@
         "description": "Dyness",
         "button_text": "Produktdatablad",
         "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250915/DynessTowerProDatasheetEN20250723.pdf",
-        "custom_id": ""
-      }
-    },
-    "banner_bild_6QPpC3": {
-      "type": "banner-bild",
-      "custom_css": [],
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Byggd för säkerhet",
-        "description": "Med hjälp av sensorer som övervakar temperatur, överström och luftfuktighet garanteras säkerheten för ditt fordon. Stödd av strikta standarder och med en femårig garanti kan du köra med trygghet.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -290,8 +290,8 @@
   },
   "order": [
     "main",
-    "tekniska_specifikationer_NRgBkG",
     "banner_bild_6QPpC3",
+    "tekniska_specifikationer_NRgBkG",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "review_V4fpRw",
