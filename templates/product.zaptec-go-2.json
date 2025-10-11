@@ -165,7 +165,7 @@
       "settings": {
         "background_color": "#ffffff",
         "title": "Framtidssäker laddning",
-        "text": "<p>Zaptec Go 2 banar väg för elbilsladdning med vehicle-to-grid (V2G), vilket gör din bil till en energikälla som kan återföra energi till elnätet eller försörja ditt hem.<br/><br/></p>",
+        "text": "<p><strong>Zaptec Go 2 banar väg för elbilsladdning med vehicle-to-grid (V2G),</strong> vilket gör din bil till mer än bara ett transportmedel. Den blir en flexibel energikälla som kan lagra el när tillgången är god och återföra energi till elnätet eller försörja ditt hem vid behov – ett viktigt steg mot ett smartare och mer hållbart energisystem.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/Polestar_Zaptec_selection_014.jpg",
         "image_position": "left",
