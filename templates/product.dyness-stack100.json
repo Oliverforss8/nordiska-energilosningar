@@ -153,7 +153,7 @@
         "title": "Titel",
         "text": "<p>Text</p>",
         "media_type": "video",
-        "video": "shopify://files/videos/jichajiyongsuo.mp4",
+        "video": "shopify://files/videos/1C1.mp4",
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
@@ -166,7 +166,7 @@
       "settings": {
         "layout_type": "full",
         "media_type": "video",
-        "background_video": "shopify://files/videos/1C1.mp4",
+        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
