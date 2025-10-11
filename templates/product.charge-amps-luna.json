@@ -58,36 +58,43 @@
         "specification_E4emyj": {
           "type": "specification",
           "settings": {
-            "label": "Batterityp",
-            "value": "LFP (LiFePO4)"
+            "label": "Effekt",
+            "value": "Upp till 22 kW"
           }
         },
         "specification_m7iLK6": {
           "type": "specification",
           "settings": {
-            "label": "Lagringskapacitet",
-            "value": "7.86 – 23.04 kWh (2–6 moduler per torn)"
+            "label": "Strömstyrka",
+            "value": "6-32 A, 1-3 fas"
+          }
+        },
+        "specification_RtiJVG": {
+          "type": "specification",
+          "settings": {
+            "label": "Spänning",
+            "value": "230/400 V"
           }
         },
         "specification_AQCrQp": {
           "type": "specification",
           "settings": {
-            "label": "Dimension (L x B x H)",
-            "value": "210 x 80 x 220 mm"
+            "label": "Drifttemperatur",
+            "value": "-35°C till +45°C"
           }
         },
         "specification_HewNBR": {
           "type": "specification",
           "settings": {
-            "label": "Antal laddcykler",
-            "value": "≥ 8000 cycles"
+            "label": "IP-klass",
+            "value": "IP 54"
           }
         },
         "specification_WABDdY": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "Dimensioner (B × D × H)",
+            "value": "210 x 80 x 220 mm"
           }
         },
         "specification_C99Mme": {
@@ -114,21 +121,22 @@
         "specification_HYy9jM": {
           "type": "specification",
           "settings": {
-            "label": "Kompatibel med växelriktare",
-            "value": "Solis, Solinteg"
+            "label": "Anslutningsmöjlighet",
+            "value": "WiFi, 4G LTE** , Bluetooth"
           }
         },
         "specification_Wb33Wp": {
           "type": "specification",
           "settings": {
-            "label": "Produktgaranti",
-            "value": "10 år"
+            "label": "Kommunikationsprotokoll",
+            "value": "OCPP 1.6J"
           }
         }
       },
       "block_order": [
         "specification_E4emyj",
         "specification_m7iLK6",
+        "specification_RtiJVG",
         "specification_AQCrQp",
         "specification_HewNBR",
         "specification_WABDdY",
@@ -191,7 +199,7 @@
             "question": "Hur lång är garantin på era produkter?",
             "button_text": "Ämne",
             "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
+            "answer": "<p>Vi erbjuder 5 - 10 års installationsgaranti.  På batterier har vi 10 års garanti. Solcellerna erbjuder en garanti på 30 år. Våra laddboxar har fem års garanti.  </p>"
           }
         },
         "faq_item_2": {
