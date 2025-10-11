@@ -28,7 +28,8 @@
       "name": "Banner bild",
       "settings": {
         "layout_type": "full",
-        "media_type": "video",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Zaptec-pro_juni22-25.jpg",
         "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
         "background_color": "#000000",
         "overlay_opacity": 0,
@@ -313,11 +314,11 @@
   },
   "order": [
     "main",
-    "banner_bild_6QPpC3",
     "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "bild_och_text_PRMKVR",
+    "banner_bild_6QPpC3",
     "review_V4fpRw",
     "faq_produkt",
     "relaterade_produkter",
