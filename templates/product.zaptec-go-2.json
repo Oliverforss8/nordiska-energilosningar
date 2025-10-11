@@ -182,23 +182,18 @@
         "custom_id": ""
       }
     },
-    "banner_bild_H4Tfap": {
-      "type": "banner-bild",
-      "name": "Banner bild",
+    "bild_och_text_kmMCqR": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
       "settings": {
-        "layout_type": "contained",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/Zaptec-Go_Colour.png",
         "background_color": "#ffffff",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "",
-        "description": "",
-        "primary_button_text": "Finns i olika färger för att matcha ditt hem",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
+        "title": "Finns i olika färger för att matcha ditt unika hem",
+        "text": "<p><br/>Zaptec Go 2 finns i flera eleganta färger som låter dig anpassa designen efter din stil och ditt hem. Oavsett om du vill att laddboxen ska smälta in diskret eller sticka ut som en modern detalj, finns det en färg som passar just dig.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
@@ -294,21 +289,6 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
-    },
-    "bild_och_text_kmMCqR": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Finns i olika färger för att matcha ditt unika hem",
-        "text": "<p><br/>Zaptec Go 2 finns i flera eleganta färger som låter dig anpassa designen efter din stil och ditt hem. Oavsett om du vill att laddboxen ska smälta in diskret eller sticka ut som en modern detalj, finns det en färg som passar just dig.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Zaptec-Go_Colour.png",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
     }
   },
   "order": [
@@ -317,10 +297,9 @@
     "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
-    "banner_bild_H4Tfap",
+    "bild_och_text_kmMCqR",
     "review_V4fpRw",
     "faq_produkt",
-    "relaterade_produkter",
-    "bild_och_text_kmMCqR"
+    "relaterade_produkter"
   ]
 }
