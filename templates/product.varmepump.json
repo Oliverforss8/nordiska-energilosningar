@@ -9,19 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "product",
-      "settings": {}
-    },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
-      "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
-      }
-    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -53,7 +40,11 @@
           }
         }
       },
-      "block_order": ["faq_item_1", "faq_item_2", "faq_item_3"],
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ],
       "settings": {
         "title": "Vanliga frågor",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
@@ -61,7 +52,19 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
     }
   },
-  "order": ["main", "faq_produkt", "relaterade_produkter"]
+  "order": [
+    "faq_produkt",
+    "relaterade_produkter"
+  ]
 }
