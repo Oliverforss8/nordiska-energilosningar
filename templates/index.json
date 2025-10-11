@@ -497,7 +497,7 @@
         "product_card_MDr4Qn": {
           "type": "product_card",
           "settings": {
-            "product": "fronius-reserva",
+            "product": "fronius-gen24-plus",
             "title": "Laddbox 1",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
@@ -507,7 +507,7 @@
         "product_card_RxU67f": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "fronius-reserva",
             "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
