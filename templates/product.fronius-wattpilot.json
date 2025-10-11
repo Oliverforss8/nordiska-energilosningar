@@ -22,27 +22,6 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
-    "banner_bild_6QPpC3": {
-      "type": "banner-bild",
-      "custom_css": [],
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Byggd för säkerhet",
-        "description": "Med hjälp av sensorer som övervakar temperatur, överström och luftfuktighet garanteras säkerheten för ditt fordon. Stödd av strikta standarder och med en femårig garanti kan du köra med trygghet.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "tekniska_specifikationer_QwhGhj": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -140,14 +119,36 @@
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
-        "image_1": "shopify://shop_images/zaptec_go_green-logo.png",
-        "image_2": "shopify://shop_images/zaptec_go_Wood-brown_TURNTABLE_v009_Wood_Brown_1500px_00040.png",
-        "image_3": "shopify://shop_images/Zaptec_Go_Wood_Brown_Open_Lid.png",
+        "image_1": "shopify://shop_images/SE_Product_Image_Produktfoto_Fronius_Wattpilot_Flex_Pro_-2.jpg",
+        "image_2": "shopify://shop_images/SE_Product_Image_Produktfoto_Fronius_Wattpilot_Flex_Home.jpg",
+        "image_3": "shopify://shop_images/SE_Product_Image_Produktfoto_Fronius_Wattpilot_Flex_Pro__cable.jpg",
         "product_name": "Dyness",
         "stack_info": "Stack",
         "description": "Dyness",
         "button_text": "Produktdatablad",
         "button_link": "https://help.zaptec.com/hc/article_attachments/36068564256401",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_6QPpC3": {
+      "type": "banner-bild",
+      "custom_css": [],
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/SE_Product_Image_Fronius_Wattpilot_Flex_Image.jpg",
+        "background_video": "shopify://files/videos/SE_ZAPTEC_GO_2_1920x1080.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Sömnlös integration med Verto och Gen24",
+        "description": "Med hjälp av sensorer som övervakar temperatur, överström och luftfuktighet garanteras säkerheten för ditt fordon. Stödd av strikta standarder och med en femårig garanti kan du köra med trygghet.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -313,8 +314,8 @@
   },
   "order": [
     "main",
-    "banner_bild_6QPpC3",
     "tekniska_specifikationer_QwhGhj",
+    "banner_bild_6QPpC3",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "bild_och_text_PRMKVR",
