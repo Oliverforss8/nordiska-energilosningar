@@ -205,6 +205,21 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_Pxgq8i": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#f7f7f7",
+        "title": "mySigen – AI som optimerar din energi",
+        "text": "<p>mySigen använder avancerad AI för att analysera och styra energiflöden i realtid. Systemet lär sig dina vanor och anpassar användningen av solenergi, batterilagring och elnät för att maximera effektivitet, sänka kostnader och minska klimatpåverkan.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/1706671614211632.jpg",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "review_VrVr4m": {
       "type": "review",
       "blocks": {
@@ -244,31 +259,16 @@
         "button_text": "Läs alla recensioner",
         "button_url": ""
       }
-    },
-    "bild_och_text_Pxgq8i": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#f7f7f7",
-        "title": "mySigen – AI som optimerar din energi",
-        "text": "<p>mySigen använder avancerad AI för att analysera och styra energiflöden i realtid. Systemet lär sig dina vanor och anpassar användningen av solenergi, batterilagring och elnät för att maximera effektivitet, sänka kostnader och minska klimatpåverkan.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/1706671614211632.jpg",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
     }
   },
   "order": [
     "main",
     "banner_bild_wcEktQ",
     "tekniska_specifikationer_aDeHRx",
+    "bild_och_text_Pxgq8i",
     "banner_bild_nNHbxn",
     "faq_produkt",
     "relaterade_produkter",
-    "review_VrVr4m",
-    "bild_och_text_Pxgq8i"
+    "review_VrVr4m"
   ]
 }
