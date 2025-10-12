@@ -138,7 +138,7 @@
       "settings": {
         "layout_type": "full",
         "media_type": "image",
-        "background_image": "shopify://shop_images/pro-wap-1-1.jpg",
+        "background_image": "shopify://shop_images/sg-prod-c-bg.webp",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
@@ -250,10 +250,10 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#f7f7f7",
-        "title": "Titel",
-        "text": "<p>Text</p>",
+        "title": "mySigen – AI som optimerar din energi",
+        "text": "<p>mySigen använder avancerad AI för att analysera och styra energiflöden i realtid. Systemet lär sig dina vanor och anpassar användningen av solenergi, batterilagring och elnät för att maximera effektivitet, sänka kostnader och minska klimatpåverkan.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/pro-wap-1-1.jpg",
+        "image": "shopify://shop_images/1706671614211632.jpg",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
