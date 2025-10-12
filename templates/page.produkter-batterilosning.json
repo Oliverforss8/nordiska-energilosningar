@@ -176,6 +176,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
@@ -363,11 +364,22 @@
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "product_meny_pyhwqF": {
+      "type": "product-meny",
+      "name": "Product Menu",
+      "settings": {
+        "heading": "Våra batterier",
+        "product_1": "dyness-stack100",
+        "product_2": "dyness-tower-pro",
+        "product_3": "fronius-reserva"
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_HxUwkQ",
+    "product_meny_pyhwqF",
     "bild_och_text_knappar_3iKePW",
     "banner_med_3_produkter_tmN89j",
     "bild_och_text_knappar_weYcCP",
