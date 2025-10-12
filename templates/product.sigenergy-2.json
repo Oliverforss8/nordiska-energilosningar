@@ -11,14 +11,123 @@
   "sections": {
     "main": {
       "type": "product",
-      "settings": {}
-    },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
       "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
+        "show_installation": false,
+        "installation_product": "",
+        "installation_title": "",
+        "installation_description": "",
+        "green_deduction_1_title": "Grönt avdrag 1",
+        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
+        "green_deduction_2_title": "Grönt avdrag 2",
+        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+      }
+    },
+    "tekniska_specifikationer_aDeHRx": {
+      "type": "tekniska-specifikationer",
+      "blocks": {
+        "specification_bLFNmA": {
+          "type": "specification",
+          "settings": {
+            "label": "Batterityp",
+            "value": "LFP (LiFePO4)"
+          }
+        },
+        "specification_i3jGXc": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh (3-15 moduler)"
+          }
+        },
+        "specification_AjpE8T": {
+          "type": "specification",
+          "settings": {
+            "label": "Dimension",
+            "value": "B 591 * D 390 * H 1700mm"
+          }
+        },
+        "specification_HLhtCP": {
+          "type": "specification",
+          "settings": {
+            "label": "Antal laddcykler",
+            "value": "≥8000 cycles"
+          }
+        },
+        "specification_yyQkKR": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        },
+        "specification_YXPHe7": {
+          "type": "specification",
+          "settings": {
+            "label": "C-värde",
+            "value": "1 C"
+          }
+        },
+        "specification_7z4HHa": {
+          "type": "specification",
+          "settings": {
+            "label": "Driftstemperatur",
+            "value": "- 30 – + 55 °C"
+          }
+        },
+        "specification_VGN8w8": {
+          "type": "specification",
+          "settings": {
+            "label": "IP-klass",
+            "value": "IP20"
+          }
+        },
+        "specification_kFqFFd": {
+          "type": "specification",
+          "settings": {
+            "label": "Kompatibel med växelriktare",
+            "value": "Solis, Solinteg"
+          }
+        }
+      },
+      "block_order": [
+        "specification_bLFNmA",
+        "specification_i3jGXc",
+        "specification_AjpE8T",
+        "specification_HLhtCP",
+        "specification_yyQkKR",
+        "specification_YXPHe7",
+        "specification_7z4HHa",
+        "specification_VGN8w8",
+        "specification_kFqFFd"
+      ],
+      "name": "Tekniska specifikationer",
+      "settings": {
+        "title": "Tekniska specifikationer",
+        "image_1": "shopify://shop_images/SigenStor-Battery_19831d19-1bf1-4690-bfb3-c56feadbc7f1.jpg",
+        "product_name": "Sigenergy",
+        "stack_info": "Stack",
+        "description": "Produktbeskrivning här...",
+        "button_text": "Produktdatablad",
+        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250318/DynessSTACK100datasheet20250228EN.pdf",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_wcEktQ": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -65,10 +174,21 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
+    "tekniska_specifikationer_aDeHRx",
+    "banner_bild_wcEktQ",
     "faq_produkt",
     "relaterade_produkter"
   ]
