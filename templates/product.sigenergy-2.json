@@ -22,6 +22,26 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
+    "banner_bild_wcEktQ": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "full",
+        "media_type": "video",
+        "background_video": "shopify://files/videos/videosigen.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "SigenStor",
+        "description": "SigenStor är ett AI-optimerat fem-i-ett-energilagringssystem som förvandlar din dröm om solenergi till verklighet samt hjälper dig att uppnå energioberoende med maximal effektivitet, besparing, flexibilitet och tålighet.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "tekniska_specifikationer_aDeHRx": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -112,25 +132,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_wcEktQ": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "image",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "Primär knapp",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -187,8 +188,8 @@
   },
   "order": [
     "main",
-    "tekniska_specifikationer_aDeHRx",
     "banner_bild_wcEktQ",
+    "tekniska_specifikationer_aDeHRx",
     "faq_produkt",
     "relaterade_produkter"
   ]
