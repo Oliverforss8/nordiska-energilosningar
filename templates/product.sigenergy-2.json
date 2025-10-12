@@ -132,6 +132,26 @@
         "custom_id": ""
       }
     },
+    "banner_bild_nNHbxn": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "full",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/sg-prod-c-bg.webp",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Skalbart på begäran",
+        "description": "Vare sig det ämnas för hemmet eller för företaget så ger dess unika modulära och stapelbara design en riktigt skalbar och flexibel konfiguration.\n\nFör tillämpningar inom handeln kan du parallellkoppla flera SigenStor för att möta dina kapacitetsbehov.",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -185,24 +205,44 @@
         "custom_id": ""
       }
     },
-    "banner_bild_nNHbxn": {
-      "type": "banner-bild",
-      "name": "Banner bild",
+    "review_VrVr4m": {
+      "type": "review",
+      "blocks": {
+        "review_6MUMzh": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Fantastisk service och mycket professionell hantering av vårt projekt.",
+            "customer_name": "Anna Andersson"
+          }
+        },
+        "review_RciNdR": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Rekommenderar varmt! Snabb installation och bra priser.",
+            "customer_name": "Erik Johansson"
+          }
+        },
+        "review_HJwmWJ": {
+          "type": "review",
+          "settings": {
+            "stars": 4,
+            "review_text": "Mycket nöjd med resultatet. Kommer definitivt använda er igen.",
+            "customer_name": "Maria Svensson"
+          }
+        }
+      },
+      "block_order": [
+        "review_6MUMzh",
+        "review_RciNdR",
+        "review_HJwmWJ"
+      ],
+      "name": "Reviews",
       "settings": {
-        "layout_type": "full",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/sg-prod-c-bg.webp",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Skalbart på begäran",
-        "description": "Vare sig det ämnas för hemmet eller för företaget så ger dess unika modulära och stapelbara design en riktigt skalbar och flexibel konfiguration.\n\nFör tillämpningar inom handeln kan du parallellkoppla flera SigenStor för att möta dina kapacitetsbehov.",
-        "primary_button_text": "Primär knapp",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
+        "heading": "Vad våra kunder säger",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
       }
     }
   },
@@ -210,8 +250,9 @@
     "main",
     "banner_bild_wcEktQ",
     "tekniska_specifikationer_aDeHRx",
+    "banner_bild_nNHbxn",
     "faq_produkt",
     "relaterade_produkter",
-    "banner_bild_nNHbxn"
+    "review_VrVr4m"
   ]
 }
