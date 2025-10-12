@@ -138,7 +138,7 @@
       "settings": {
         "layout_type": "full",
         "media_type": "image",
-        "background_image": "shopify://shop_images/sg-prod-c-bg.webp",
+        "background_image": "shopify://shop_images/pro-wap-1-1.jpg",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
@@ -244,6 +244,21 @@
         "button_text": "Läs alla recensioner",
         "button_url": ""
       }
+    },
+    "bild_och_text_Pxgq8i": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#f7f7f7",
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/pro-wap-1-1.jpg",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -253,6 +268,7 @@
     "banner_bild_nNHbxn",
     "faq_produkt",
     "relaterade_produkter",
-    "review_VrVr4m"
+    "review_VrVr4m",
+    "bild_och_text_Pxgq8i"
   ]
 }
