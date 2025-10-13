@@ -76,6 +76,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "image",
         "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
         "background_color": "#000000",
@@ -91,51 +92,39 @@
         "custom_id": ""
       }
     },
-    "banner_med_3_produkter_JdJbDT": {
-      "type": "banner-med-3-produkter",
+    "banner_med_2_produkter_QzDe6K": {
+      "type": "banner-med-2-produkter",
       "blocks": {
-        "product_card_7tGUtQ": {
+        "product_card_PHK8qt": {
           "type": "product_card",
           "settings": {
-            "product": "varmepump-1",
-            "title": "Värmepump 1",
-            "description": "Avancerad laddning för professionella behov.",
+            "product": "",
+            "title": "Laddbox 1",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/varmepump-1"
+            "learn_more_url": ""
           }
         },
-        "product_card_LWGEtn": {
+        "product_card_TQzeEq": {
           "type": "product_card",
           "settings": {
-            "product": "varmepump-1",
-            "title": "Värmepump 2",
+            "product": "",
+            "title": "Laddbox 2",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/varmepump-1"
-          }
-        },
-        "product_card_LxXipk": {
-          "type": "product_card",
-          "settings": {
-            "product": "varmepump-1",
-            "title": "Värmepump 3",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/varmepump-1"
+            "learn_more_url": ""
           }
         }
       },
       "block_order": [
-        "product_card_7tGUtQ",
-        "product_card_LWGEtn",
-        "product_card_LxXipk"
+        "product_card_PHK8qt",
+        "product_card_TQzeEq"
       ],
-      "name": "Banner med 3 produkter",
+      "name": "Banner med 2 produkter",
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
-        "overlay_opacity": 30,
         "header_button_text": "Värmepumpar",
         "header_button_url": "",
         "heading": "Upptäck våra värmepumpar",
@@ -293,7 +282,7 @@
     "hero_lower_FNPfHG",
     "bild_och_text_knappar_gVCNFB",
     "banner_bild_tmVRkk",
-    "banner_med_3_produkter_JdJbDT",
+    "banner_med_2_produkter_QzDe6K",
     "hur_ED7Umq",
     "kontakt_form_YWJKxn"
   ]
