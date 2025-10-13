@@ -12,7 +12,7 @@
     "main": {
       "type": "product",
       "settings": {
-        "show_installation": false,
+        "show_installation": true,
         "installation_product": "installation",
         "installation_title": "",
         "installation_description": "",
