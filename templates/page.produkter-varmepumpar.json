@@ -98,21 +98,21 @@
         "product_card_PHK8qt": {
           "type": "product_card",
           "settings": {
-            "product": "",
-            "title": "Laddbox 1",
+            "product": "solinteg",
+            "title": "Solinteg",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/solinteg"
           }
         },
         "product_card_TQzeEq": {
           "type": "product_card",
           "settings": {
-            "product": "",
-            "title": "Laddbox 2",
+            "product": "solinteg",
+            "title": "Solinteg",
             "description": "Perfekt för företag och kommersiell användning.",
             "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "learn_more_url": "shopify://products/solinteg"
           }
         }
       },
