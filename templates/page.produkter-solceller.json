@@ -81,7 +81,7 @@
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Laddbox 1",
+            "title": "Solcell 1",
             "description": "Perfekt för din villa, stuga eller garage",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/solceller-1"
@@ -91,7 +91,7 @@
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Laddbox 2",
+            "title": "Solcell 2",
             "description": "Perfekt för din villa, stuga eller garage",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/solceller-1"
@@ -101,7 +101,7 @@
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Laddboxar 3",
+            "title": "Solcell 3",
             "description": "Perfekt för din villa, stuga eller garage",
             "learn_more_text": "Läs mer",
             "learn_more_url": "shopify://products/solceller-1"
@@ -133,6 +133,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
         "media_type": "image",
@@ -147,6 +148,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
