@@ -31,6 +31,30 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
+            "background_image": "shopify://shop_images/Zaptec_2022-11.jpg",
+            "overlay_opacity": 20,
+            "heading": "Upptäck Zaptec Go 2",
+            "subheading": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Enegilösningar.\nVärde 20 000kr",
+            "button_text": "Läs mer",
+            "button_url": "shopify://pages/vara-batterilosningar"
+          }
+        },
+        "slide_XBGAtr": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "background_image": "shopify://shop_images/A_DeMain_0192_00028_1144x_e8e21d35-c71a-4b46-af73-f69202c80c88.png",
+            "overlay_opacity": 20,
+            "heading": "Kompletta batterilager från 29.900:-",
+            "subheading": "En annan beskrivning",
+            "button_text": "Läs mer",
+            "button_url": "shopify://pages/vara-batterilosningar"
+          }
+        },
+        "slide_dCDG8J": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
             "background_image": "shopify://shop_images/A_DeMain_0192_00028_1144x_e8e21d35-c71a-4b46-af73-f69202c80c88.png",
             "overlay_opacity": 20,
             "heading": "Kompletta batterilager från 29.900:-",
@@ -54,11 +78,53 @@
       },
       "block_order": [
         "slide_kBaNR6",
+        "slide_XBGAtr",
+        "slide_dCDG8J",
         "slide_dpHNkz"
       ],
       "name": "Hero slider",
       "settings": {
         "autoplay_speed": 5000
+      }
+    },
+    "ikon_lankar_x8tm4P": {
+      "type": "ikon-lankar",
+      "blocks": {
+        "icon_link_fttAQh": {
+          "type": "icon_link",
+          "settings": {
+            "text": "Solceller",
+            "link": ""
+          }
+        },
+        "icon_link_pCNPRF": {
+          "type": "icon_link",
+          "settings": {
+            "text": "Batteri",
+            "link": ""
+          }
+        },
+        "icon_link_PxLjJd": {
+          "type": "icon_link",
+          "settings": {
+            "text": "Elbilsladdare",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_link_fttAQh",
+        "icon_link_pCNPRF",
+        "icon_link_PxLjJd"
+      ],
+      "name": "Icon links",
+      "settings": {
+        "background_color": "#ffffff",
+        "columns_desktop": 3,
+        "grid_gap": 20,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "custom_id": ""
       }
     },
     "ikon_lankar_ki6Ryk": {
@@ -102,42 +168,6 @@
         "padding_bottom": 40,
         "custom_id": ""
       }
-    },
-    "lankar_TJiCi6": {
-      "type": "lankar",
-      "blocks": {
-        "card_GGQtpa": {
-          "type": "card",
-          "settings": {
-            "heading": "Solceller",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://metaobjects/foretag/foretag"
-          }
-        },
-        "card_Epf6cy": {
-          "type": "card",
-          "settings": {
-            "heading": "Batterier",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://metaobjects/foretag/bostadsrattsforening"
-          }
-        },
-        "card_M3ihmp": {
-          "type": "card",
-          "settings": {
-            "heading": "Laddboxar",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://metaobjects/foretag/lantbruk"
-          }
-        }
-      },
-      "block_order": [
-        "card_GGQtpa",
-        "card_Epf6cy",
-        "card_M3ihmp"
-      ],
-      "name": "Länkar sektion",
-      "settings": {}
     },
     "slider_sektion_PkT3FL": {
       "type": "slider-sektion",
@@ -675,8 +705,8 @@
   "order": [
     "hero_HUEAy6",
     "hero_slider_D8U4yr",
+    "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
-    "lankar_TJiCi6",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "bild_och_text_nY9Rik",
