@@ -359,7 +359,7 @@
           </a>
         {% else %}
           <button
-            class="cart-btn knappetikett relative flex flex-row gap-[20px] rounded-[10px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+            class="cart-btn knappetikett relative hidden flex-row  gap-[20px] rounded-[10px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100 md:flex"
             data-cart-toggle
           >
             <span class="hidden xl:block ">kundvagn</span>
@@ -380,7 +380,139 @@
               0
             </span>
           </button>
+          <button
+            class="knappetikett mobile-menu-toggle relative flex flex-row gap-[20px] rounded-[10px] bg-white p-[15px]"
+            data-mobile-menu-toggle
+            aria-label="Toggle menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="16"
+              viewBox="0 0 22 16"
+              fill="none"
+            >
+              <path d="M1 15H21" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 1H21" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 8H21" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
         {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div
+    class="mobile-dropdown layout"
+    data-mobile-dropdown
+  >
+    <div class="rounded-[10px] bg-white p-[30px]">
+      <nav class="flex flex-col gap-[8px] bg-white">
+        {% for link in current_menu.links %}
+          {% liquid
+            assign has_dropdown = false
+            if link.links.size > 0
+              assign has_dropdown = true
+            endif
+          %}
+
+          {% if has_dropdown %}
+            <!-- Menu item with submenu -->
+            <div class="mobile-nav-item">
+              <button
+                class="
+                  mobile-nav-button headline1 flex w-full items-center justify-between bg-white
+                  py-[16px] text-left text-[30px] text-[#171717]
+                "
+                data-mobile-submenu-toggle
+              >
+                <span>{{ link.title }}</span>
+                <svg
+                  class="mobile-submenu-arrow transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="9"
+                  viewBox="0 0 14 9"
+                  fill="none"
+                >
+                  <path d="M0.344765 0.837496C0.235521 0.943564 0.148811 1.06976 0.0896384 1.20879C0.0304655 1.34783 0 1.49696 0 1.64758C0 1.7982 0.0304655 1.94733 0.0896384 2.08637C0.148811 2.22541 0.235521 2.3516 0.344765 2.45767L6.17247 8.1625C6.28082 8.26944 6.40973 8.35433 6.55176 8.41225C6.69379 8.47018 6.84614 8.5 7 8.5C7.15387 8.5 7.30621 8.47018 7.44824 8.41225C7.59027 8.35433 7.71918 8.26944 7.82753 8.1625L13.6552 2.45767C13.7645 2.3516 13.8512 2.22541 13.9104 2.08637C13.9695 1.94733 14 1.7982 14 1.64758C14 1.49696 13.9695 1.34783 13.9104 1.20879C13.8512 1.06976 13.7645 0.943564 13.6552 0.837496C13.5469 0.730556 13.418 0.645674 13.2759 0.587749C13.1339 0.529823 12.9816 0.5 12.8277 0.5C12.6738 0.5 12.5215 0.529823 12.3795 0.587749C12.2374 0.645674 12.1085 0.730556 12.0002 0.837496L7 5.74365L1.99983 0.837496C1.89148 0.730556 1.76257 0.645674 1.62054 0.587749C1.47851 0.529823 1.32616 0.5 1.1723 0.5C1.01843 0.5 0.866091 0.529823 0.724059 0.587749C0.582027 0.645674 0.453117 0.730556 0.344765 0.837496Z" fill="currentColor"/>
+                </svg>
+              </button>
+
+              <!-- Submenu -->
+              <div class="mobile-submenu max-h-0 overflow-hidden transition-all duration-300">
+                <div class="flex flex-col gap-[4px] pb-[12px] pl-[20px] pt-[8px]">
+                  {% for child_link in link.links %}
+                    <a
+                      href="{{ child_link.url }}"
+                      class="body1 py-[10px] text-[24px] text-[#171717]/90 transition-all duration-200 hover:text-[#171717]"
+                    >
+                      {{ child_link.title }}
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <!-- Simple menu item -->
+            <a
+              href="{{ link.url }}"
+              class="headline1  0 py-[16px] text-[30px] text-[#171717]"
+            >
+              {{ link.title }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+
+      <!-- Mobile Menu Footer -->
+      <div class="mt-[40px] flex flex-col gap-[8px]  pt-[20px]">
+        <div class="body1 mb-[8px] text-[11px]  uppercase tracking-[1.5px] text-[#171717]/90">
+          Växla vy
+        </div>
+        {% if is_foretag_page %}
+          <a
+            href="{{ routes.root_url }}"
+            class="body1 py-[10px] text-[#171717]/90"
+          >
+            {{ 'general.privatperson' | t | default: 'Privatperson' }}
+          </a>
+        {% else %}
+          <a
+            href="/pages/foretag/start"
+            class="body1 py-[10px] text-[#171717]/90"
+          >
+            {{ 'general.foretag' | t | default: 'Företag' }}
+          </a>
+        {% endif %}
+      </div>
+
+      <!-- Mobile Cart Button -->
+      <div class="mt-[20px]">
+        <button
+          class="knappetikett relative flex w-full flex-row items-center justify-center gap-[20px] rounded-[10px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+          style="border: 1px solid #171717;"
+          data-cart-toggle
+        >
+          <span>Kundvagn</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="22"
+            viewBox="0 0 21 22"
+            fill="none"
+          >
+            <path d="M2.37325 16.02L1.16926 8.84C0.98726 7.754 0.896261 7.212 1.18826 6.856C1.47926 6.5 2.01525 6.5 3.08624 6.5H17.9141C18.9851 6.5 19.5211 6.5 19.8121 6.856C20.1041 7.212 20.0121 7.754 19.8311 8.84L18.6271 16.02C18.2281 18.4 18.0291 19.589 17.2141 20.295C16.4001 21 15.2261 21 12.8782 21H8.12219C5.77422 21 4.60023 21 3.78623 20.294C2.97124 19.589 2.77224 18.399 2.37325 16.019M16.0001 6.5C16.0001 5.04131 15.4207 3.64236 14.3892 2.61091C13.3578 1.57946 11.9588 1 10.5002 1C9.0415 1 7.64256 1.57946 6.61112 2.61091C5.57968 3.64236 5.00022 5.04131 5.00022 6.5" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <!-- Cart count badge -->
+          <span
+            class="cart-count absolute -right-2 -top-2 flex h-6 w-6 scale-0 items-center justify-center rounded-full bg-[#171717] text-xs font-bold text-white opacity-0 transition-all duration-200"
+            data-cart-count
+          >
+            0
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -542,43 +674,33 @@
     background-color: white !important;
   }
 
-  /* Mobile Menu Styles */
-  .mobile-menu.active {
+  /* Mobile Dropdown Menu Styles */
+  .mobile-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      max-height 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-dropdown.active {
     opacity: 1;
     visibility: visible;
-  }
-
-  /* Prevent body scroll when mobile menu is open */
-  body.mobile-menu-open {
-    overflow: hidden;
-  }
-
-  /* Hamburger animation when menu is open */
-  .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
-  }
-
-  .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    max-height: 1200px;
+    overflow: visible;
   }
 
   /* Mobile submenu active state */
   .mobile-nav-item.active .mobile-submenu {
-    max-height: 1000px;
+    max-height: 500px;
   }
 
   .mobile-nav-item.active .mobile-submenu-arrow {
     transform: rotate(180deg);
-  }
-
-  /* Adjust hamburger color based on header state */
-  .header-section.scrolled .hamburger-line,
-  .header-section.inverted .hamburger-line {
-    background-color: #171717;
   }
 
   /* Mobile responsive */
@@ -627,7 +749,7 @@
 {% comment %}
   Header scroll functionality is handled in header-scroll.js
   Dropdown interactions are handled in dropdown.js
-  Mobile menu functionality is handled in mobile-menu.js
+  Mobile dropdown menu functionality is handled in mobile-menu.js
 {% endcomment %}
 
 {% schema %}
