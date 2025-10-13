@@ -200,41 +200,41 @@
         "custom_id": ""
       }
     },
-    "faq_produkt": {
+    "faq_produkt_bk6RtW": {
       "type": "faq-produkt",
       "blocks": {
-        "faq_item_1": {
+        "faq_item_dwH99x": {
           "type": "faq_item",
           "settings": {
             "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Ämne",
+            "button_text": "Garanti",
             "description": "",
             "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
           }
         },
-        "faq_item_2": {
+        "faq_item_ktzBT4": {
           "type": "faq_item",
           "settings": {
             "question": "Vad ingår i installationen?",
-            "button_text": "Ämne",
+            "button_text": "Installation",
             "description": "",
             "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
           }
         },
-        "faq_item_3": {
+        "faq_item_bFxMJC": {
           "type": "faq_item",
           "settings": {
             "question": "Hur mycket kan jag spara på min elräkning?",
-            "button_text": "Ämne",
+            "button_text": "Ekonomi",
             "description": "",
             "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
           }
         }
       },
       "block_order": [
-        "faq_item_1",
-        "faq_item_2",
-        "faq_item_3"
+        "faq_item_dwH99x",
+        "faq_item_ktzBT4",
+        "faq_item_bFxMJC"
       ],
       "settings": {
         "title": "Vanliga frågor",
@@ -260,7 +260,7 @@
     "banner_bild_gnz8mP",
     "bild_och_text_knappar_LkcadR",
     "banner_bild_89kigT",
-    "faq_produkt",
+    "faq_produkt_bk6RtW",
     "relaterade_produkter"
   ]
 }
