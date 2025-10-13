@@ -11,7 +11,16 @@
   "sections": {
     "main": {
       "type": "product",
-      "settings": {}
+      "settings": {
+        "show_installation": false,
+        "installation_product": "",
+        "installation_title": "",
+        "installation_description": "",
+        "green_deduction_1_title": "Grönt avdrag 1",
+        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
+        "green_deduction_2_title": "Grönt avdrag 2",
+        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+      }
     },
     "tekniska_specifikationer_AdpmjP": {
       "type": "tekniska-specifikationer",
@@ -99,6 +108,7 @@
     },
     "bild_och_text_knappar_LkcadR": {
       "type": "bild-och-text-knappar",
+      "disabled": true,
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Titel",
@@ -115,6 +125,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "video",
         "background_video": "shopify://files/videos/1C1.mp4",
         "background_color": "#000000",
@@ -134,6 +145,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "video",
         "background_video": "shopify://files/videos/miehuodiaohei.mp4",
         "background_color": "#000000",
@@ -180,7 +192,12 @@
           }
         }
       },
-      "block_order": ["faq_item_1", "faq_item_2", "faq_item_3"],
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ],
+      "disabled": true,
       "settings": {
         "title": "Vanliga frågor",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
