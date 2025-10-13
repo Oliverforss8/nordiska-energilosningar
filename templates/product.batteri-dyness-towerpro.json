@@ -13,7 +13,7 @@
       "type": "product",
       "settings": {
         "show_installation": false,
-        "installation_product": "",
+        "installation_product": "installation",
         "installation_title": "",
         "installation_description": "",
         "green_deduction_1_title": "Grönt avdrag 1",
