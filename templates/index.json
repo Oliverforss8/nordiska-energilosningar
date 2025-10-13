@@ -92,6 +92,7 @@
         "icon_link_YEyk3D",
         "icon_link_FFGJLa"
       ],
+      "disabled": true,
       "name": "Icon links",
       "settings": {
         "background_color": "#ffffff",
@@ -108,7 +109,7 @@
         "card_GGQtpa": {
           "type": "card",
           "settings": {
-            "heading": "Företag",
+            "heading": "Solceller",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "link": "shopify://metaobjects/foretag/foretag"
           }
@@ -116,7 +117,7 @@
         "card_Epf6cy": {
           "type": "card",
           "settings": {
-            "heading": "BRF",
+            "heading": "Batterier",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "link": "shopify://metaobjects/foretag/bostadsrattsforening"
           }
@@ -124,7 +125,7 @@
         "card_M3ihmp": {
           "type": "card",
           "settings": {
-            "heading": "Lantbruk",
+            "heading": "Laddboxar",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "link": "shopify://metaobjects/foretag/lantbruk"
           }
@@ -135,7 +136,6 @@
         "card_Epf6cy",
         "card_M3ihmp"
       ],
-      "disabled": true,
       "name": "Länkar sektion",
       "settings": {}
     },
