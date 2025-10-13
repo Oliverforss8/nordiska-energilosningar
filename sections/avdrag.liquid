@@ -28,23 +28,23 @@
       <div class="grid grid-cols-1 gap-[20px] md:grid-cols-2">
         {% for block in section.blocks %}
           <div
-            class="flex flex-row items-center justify-between gap-[25px] rounded-[15px] bg-[#F3F1E8] p-[30px]"
+            class="flex flex-row items-center justify-between gap-[25px] rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]"
             {{ block.shopify_attributes }}
           >
             {% if block.settings.text != blank %}
-              <div class="headline1 text-[30px]">{{ block.settings.text }}</div>
+              <div class="headline1 text-[24px] md:text-[30px]">{{ block.settings.text }}</div>
             {% endif %}
 
             {% if block.settings.image != blank %}
               <div>
-                <div class="flex w-[200px] items-center justify-center md:h-[84px] md:w-auto">
+                <div class="flex  items-center justify-center md:h-[84px] md:w-auto">
                   <img
                     src="{{ block.settings.image | image_url: width: 139 }}"
                     alt="{{ block.settings.image.alt | default: block.settings.text }}"
                     width="139"
                     height="84"
                     loading="lazy"
-                    class="h-[65px] w-auto object-contain md:h-[90px]"
+                    class="h-[65px] w-auto overflow-visible object-contain md:h-[90px]"
                   >
                 </div>
               </div>
