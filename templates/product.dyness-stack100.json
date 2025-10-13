@@ -82,7 +82,7 @@
           "type": "specification",
           "settings": {
             "label": "Antal laddcykler",
-            "value": "≥8000 cycles"
+            "value": "≥ 8000"
           }
         },
         "specification_H6YUdb": {
