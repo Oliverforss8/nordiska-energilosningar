@@ -67,6 +67,7 @@
         "icon_link_rYDtBi": {
           "type": "icon_link",
           "settings": {
+            "icon": "shopify://shop_images/Hus.svg",
             "text": "Solceller",
             "link": ""
           }
@@ -100,6 +101,43 @@
         "padding_bottom": 40,
         "custom_id": ""
       }
+    },
+    "lankar_TJiCi6": {
+      "type": "lankar",
+      "blocks": {
+        "card_GGQtpa": {
+          "type": "card",
+          "settings": {
+            "heading": "Företag",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": "shopify://metaobjects/foretag/foretag"
+          }
+        },
+        "card_Epf6cy": {
+          "type": "card",
+          "settings": {
+            "heading": "BRF",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": "shopify://metaobjects/foretag/bostadsrattsforening"
+          }
+        },
+        "card_M3ihmp": {
+          "type": "card",
+          "settings": {
+            "heading": "Lantbruk",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "link": "shopify://metaobjects/foretag/lantbruk"
+          }
+        }
+      },
+      "block_order": [
+        "card_GGQtpa",
+        "card_Epf6cy",
+        "card_M3ihmp"
+      ],
+      "disabled": true,
+      "name": "Länkar sektion",
+      "settings": {}
     },
     "slider_sektion_PkT3FL": {
       "type": "slider-sektion",
@@ -637,6 +675,7 @@
     "hero_HUEAy6",
     "hero_slider_D8U4yr",
     "ikon_lankar_ki6Ryk",
+    "lankar_TJiCi6",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "bild_och_text_nY9Rik",
