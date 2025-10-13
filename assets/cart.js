@@ -1,7 +1,7 @@
 // Cart functionality
 document.addEventListener('DOMContentLoaded', function () {
-  // Cart functionality
-  const cartToggle = document.querySelector('[data-cart-toggle]');
+  // Cart functionality - select ALL cart toggle buttons
+  const cartToggles = document.querySelectorAll('[data-cart-toggle]');
   const cartDrawer = document.querySelector('[data-cart-drawer]');
   const cartOverlay = document.querySelector('[data-cart-overlay]');
   const cartClose = document.querySelector('[data-cart-close]');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Debug: Check if elements are found
   console.log('Cart elements found:', {
-    cartToggle: !!cartToggle,
+    cartToggles: cartToggles.length,
     cartDrawer: !!cartDrawer,
     cartOverlay: !!cartOverlay,
     cartClose: !!cartClose,
