@@ -238,41 +238,41 @@
         "button_url": ""
       }
     },
-    "faq_produkt": {
+    "faq_produkt_eTWQV6": {
       "type": "faq-produkt",
       "blocks": {
-        "faq_item_1": {
+        "faq_item_YiyLWL": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur lång är garantin på Zaptec Go 2?",
-            "button_text": "Produkt",
+            "question": "Hur lång är garantin på era produkter?",
+            "button_text": "Garanti",
             "description": "",
-            "answer": "<p>Zaptec Go 2 har 5 års produktgaranti.</p>"
+            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
           }
         },
-        "faq_item_2": {
+        "faq_item_fWA7f6": {
           "type": "faq_item",
           "settings": {
             "question": "Vad ingår i installationen?",
-            "button_text": "Ämne",
+            "button_text": "Installation",
             "description": "",
             "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
           }
         },
-        "faq_item_3": {
+        "faq_item_np4AN4": {
           "type": "faq_item",
           "settings": {
             "question": "Hur mycket kan jag spara på min elräkning?",
-            "button_text": "Ämne",
+            "button_text": "Ekonomi",
             "description": "",
             "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
           }
         }
       },
       "block_order": [
-        "faq_item_1",
-        "faq_item_2",
-        "faq_item_3"
+        "faq_item_YiyLWL",
+        "faq_item_fWA7f6",
+        "faq_item_np4AN4"
       ],
       "settings": {
         "title": "Vanliga frågor",
@@ -300,7 +300,7 @@
     "bild_och_text_CEmcye",
     "bild_och_text_PRMKVR",
     "review_V4fpRw",
-    "faq_produkt",
+    "faq_produkt_eTWQV6",
     "relaterade_produkter"
   ]
 }
