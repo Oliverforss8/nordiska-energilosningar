@@ -226,6 +226,7 @@
         "faq_item_2",
         "faq_item_3"
       ],
+      "disabled": true,
       "settings": {
         "title": "Vanliga frågor",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
