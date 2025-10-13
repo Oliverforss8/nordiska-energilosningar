@@ -9,20 +9,29 @@ document.addEventListener('DOMContentLoaded', function() {
   
   let currentSlide = 0;
   const totalSlides = slides.length;
+  let autoplayInterval = null;
 
   if (totalSlides <= 1) return;
+
+  // Get autoplay speed from section settings (passed via data attribute)
+  const section = slider.closest('section');
+  const autoplaySpeed = section?.dataset?.autoplaySpeed ? parseInt(section.dataset.autoplaySpeed) : 5000;
 
   function goToSlide(index) {
     // Hide current slide
     slides[currentSlide].style.opacity = '0';
     slides[currentSlide].style.pointerEvents = 'none';
-    dots[currentSlide].style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    if (dots[currentSlide]) {
+      dots[currentSlide].style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    }
 
     // Show new slide
     currentSlide = index;
     slides[currentSlide].style.opacity = '1';
     slides[currentSlide].style.pointerEvents = 'auto';
-    dots[currentSlide].style.backgroundColor = 'white';
+    if (dots[currentSlide]) {
+      dots[currentSlide].style.backgroundColor = 'white';
+    }
   }
 
   function nextSlide() {
@@ -35,12 +44,51 @@ document.addEventListener('DOMContentLoaded', function() {
     goToSlide(prev);
   }
 
+  function startAutoplay() {
+    if (autoplaySpeed > 0) {
+      autoplayInterval = setInterval(nextSlide, autoplaySpeed);
+    }
+  }
+
+  function stopAutoplay() {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  }
+
+  function resetAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
   // Event listeners
-  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoplay();
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoplay();
+    });
+  }
   
   dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => goToSlide(index));
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+      resetAutoplay();
+    });
   });
+
+  // Pause autoplay on hover
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+
+  // Start autoplay
+  startAutoplay();
 });
 
