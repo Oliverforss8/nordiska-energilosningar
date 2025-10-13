@@ -660,14 +660,15 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "header_button_text": "Läs mer",
-        "header_button_url": "",
+        "background_image": "shopify://shop_images/SE_Product_Image_Fronius_Wattpilot_Flex_Image.jpg",
+        "header_button_text": "Laddboxar",
+        "header_button_url": "shopify://collections/batteri",
         "heading": "Smarta elbilsladdare för alla behov",
         "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
         "primary_button_text": "Privat",
-        "primary_button_url": "",
+        "primary_button_url": "shopify://pages/vara-laddboxar",
         "secondary_button_text": "Företag",
-        "secondary_button_url": ""
+        "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     }
   },
