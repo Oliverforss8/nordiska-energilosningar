@@ -269,6 +269,12 @@ document.addEventListener('DOMContentLoaded', function () {
     loadCartData();
   });
 
+  // Listen for cart open events
+  window.addEventListener('cart:open', function () {
+    console.log('Cart open event received');
+    openCart();
+  });
+
   // Listen for discount updates to refresh discount UI in cart
   window.addEventListener('discount:update', function () {
     console.log('Cart heard discount:update; refreshing discount UI');
