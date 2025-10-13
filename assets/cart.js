@@ -228,7 +228,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (clearBtn) {
       clearBtn.onclick = function () {
-        try { sessionStorage.removeItem('selectedDiscountCode'); } catch (_) {}
+        try {
+          sessionStorage.removeItem('selectedDiscountCode');
+        } catch (_) {}
         // Notify others (product page, cart drawer) to refresh discount state
         window.dispatchEvent(new CustomEvent('discount:update'));
       };
@@ -263,12 +265,12 @@ document.addEventListener('DOMContentLoaded', function () {
   loadCartData();
 
   // Listen for cart update events from product page
-  window.addEventListener('cart:update', function() {
+  window.addEventListener('cart:update', function () {
     loadCartData();
   });
 
   // Listen for discount updates to refresh discount UI in cart
-  window.addEventListener('discount:update', function() {
+  window.addEventListener('discount:update', function () {
     console.log('Cart heard discount:update; refreshing discount UI');
     updateDiscountUI();
   });

@@ -60,6 +60,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Close mobile menu when cart button is clicked
+  const mobileCartButton = mobileDropdown?.querySelector('[data-cart-toggle]');
+  if (mobileCartButton && mobileDropdown) {
+    mobileCartButton.addEventListener('click', function () {
+      // Close the mobile menu when cart is opened
+      mobileDropdown.classList.remove('active');
+      if (menuToggle) {
+        menuToggle.classList.remove('active');
+      }
+    });
+  }
+
   // Close menu on window resize to desktop
   let resizeTimer;
   window.addEventListener('resize', function () {

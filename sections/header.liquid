@@ -381,7 +381,7 @@
             </span>
           </button>
           <button
-            class="knappetikett mobile-menu-toggle relative flex flex-row gap-[20px] rounded-[10px] bg-white p-[15px]"
+            class="knappetikett mobile-menu-toggle relative flex flex-row gap-[20px] rounded-[10px] bg-white p-[15px] md:hidden"
             data-mobile-menu-toggle
             aria-label="Toggle menu"
           >
@@ -725,6 +725,12 @@
       padding-right: 20px;
     }
   }
+  @media (min-width: 768px) {
+    .mobile-dropdown {
+      display: none !important;
+    }
+  }
+
   @media (max-width: 1023px) {
     .header-nav {
       display: none;
