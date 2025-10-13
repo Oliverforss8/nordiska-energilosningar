@@ -237,14 +237,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Event listeners
-  if (cartToggle) {
+  // Event listeners - attach to ALL cart toggle buttons
+  cartToggles.forEach((cartToggle) => {
     cartToggle.addEventListener('click', function (e) {
       e.preventDefault();
       console.log('Cart button clicked');
       openCart();
     });
-  }
+  });
 
   if (cartClose) {
     cartClose.addEventListener('click', closeCart);
@@ -280,7 +280,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const addToCartBtn = document.querySelector('.add-to-cart-btn');
   const buyNowBtn = document.querySelector('.buy-now-btn');
-  const cartToggle = document.querySelector('[data-cart-toggle]');
 
   // Buy Now functionality - add to cart and go to checkout
   if (buyNowBtn) {
@@ -374,10 +373,8 @@ document.addEventListener('DOMContentLoaded', function () {
           this.style.borderColor = '#10B981';
           this.style.color = 'white';
 
-          // Open cart drawer
-          if (cartToggle) {
-            cartToggle.click();
-          }
+          // Open cart drawer by dispatching custom event
+          window.dispatchEvent(new CustomEvent('cart:open'));
 
           // Reset button after 2 seconds
           setTimeout(() => {
