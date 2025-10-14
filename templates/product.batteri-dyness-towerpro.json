@@ -11,6 +11,19 @@
   "sections": {
     "main": {
       "type": "product",
+      "blocks": {
+        "product_review_Wg6f6U": {
+          "type": "product_review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Fantastisk kvalitet och snabb leverans.",
+            "customer_name": "Kundnamn"
+          }
+        }
+      },
+      "block_order": [
+        "product_review_Wg6f6U"
+      ],
       "settings": {
         "show_installation": true,
         "installation_product": "installation",
