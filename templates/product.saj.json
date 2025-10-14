@@ -183,7 +183,7 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/solcellsbatteri-saj-hs3-2n.jpg",
         "background_color": "#000000",
-        "overlay_opacity": 0,
+        "overlay_opacity": 15,
         "header_button_text": "",
         "header_button_url": "",
         "heading": "Elegant och kompakt design",
