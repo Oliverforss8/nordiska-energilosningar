@@ -103,7 +103,7 @@
           "type": "specification",
           "settings": {
             "label": "Driftstemperatur",
-            "value": "- 20 – + 55 °C"
+            "value": "- 30 – + 55 °C"
           }
         },
         "specification_k6xA9k": {
