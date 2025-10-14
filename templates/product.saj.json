@@ -146,34 +146,29 @@
         "custom_id": ""
       }
     },
-    "banner_bild_gnz8mP": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Snabb laddning, smart besparing",
-        "description": "Med C-värde 1 kan STACK100 ladda fullt och leverera energi på bara en timme. Ladda när elen är billig och använd den när priserna är höga – sänk kostnaderna och stärk er energifrihet.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_knappar_LkcadR": {
       "type": "bild-och-text-knappar",
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
+        "title": "Helhetsstyrning av hemmets energi",
+        "text": "<p>Integrera och kontrollera tredjepartsenheter smidigt. Få dygnet runt-överblick och styrning av hela hemmets energianvändning, och skapa anpassade, optimerade energiplaner utifrån dina behov och preferenser – allt via en enda app.<br/><br/></p>",
         "media_type": "video",
-        "video": "shopify://files/videos/1C1.mp4",
+        "video": "shopify://files/videos/家电手机2.mp4",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_z4zUK4": {
+      "type": "bild-och-text-knappar",
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Förbättrad prestanda och säkerhet",
+        "text": "<p>HS3-serien är konstruerad för kompromisslös tillförlitlighet och med säkerheten i första rummet. Den är byggd för att klara extrema temperaturer (-30°C till +50°C), utrustad med avancerad brandsläckningsteknik och erbjuder flexibel batteriintegration. Den modulära designen gör det enkelt och effektivt att utöka hemmets systemkapacitet vid behov.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/promotion-pic-3.jpg",
+        "video": "shopify://files/videos/家电手机2.mp4",
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
@@ -257,8 +252,8 @@
   "order": [
     "main",
     "tekniska_specifikationer_AdpmjP",
-    "banner_bild_gnz8mP",
     "bild_och_text_knappar_LkcadR",
+    "bild_och_text_knappar_z4zUK4",
     "banner_bild_89kigT",
     "faq_produkt_bk6RtW",
     "relaterade_produkter"
