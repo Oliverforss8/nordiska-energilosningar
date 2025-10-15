@@ -27,18 +27,6 @@
     "hero_slider_D8U4yr": {
       "type": "hero-slider",
       "blocks": {
-        "slide_kBaNR6": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "background_image": "shopify://shop_images/Zaptec_2022-11.jpg",
-            "overlay_opacity": 20,
-            "heading": "Upptäck Zaptec Go 2",
-            "subheading": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Enegilösningar.\nVärde 20 000kr",
-            "button_text": "Läs mer",
-            "button_url": "shopify://products/zaptec-2"
-          }
-        },
         "slide_dCDG8J": {
           "type": "slide",
           "settings": {
@@ -49,6 +37,18 @@
             "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
             "button_text": "Läs mer",
             "button_url": "shopify://pages/vara-batterilosningar"
+          }
+        },
+        "slide_kBaNR6": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "background_image": "shopify://shop_images/Zaptec_2022-11.jpg",
+            "overlay_opacity": 20,
+            "heading": "Upptäck Zaptec Go 2",
+            "subheading": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Enegilösningar.\nVärde 20 000kr",
+            "button_text": "Läs mer",
+            "button_url": "shopify://products/zaptec-2"
           }
         },
         "slide_dpHNkz": {
@@ -65,8 +65,8 @@
         }
       },
       "block_order": [
-        "slide_kBaNR6",
         "slide_dCDG8J",
+        "slide_kBaNR6",
         "slide_dpHNkz"
       ],
       "name": "Hero slider",
