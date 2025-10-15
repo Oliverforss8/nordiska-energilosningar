@@ -36,19 +36,7 @@
             "heading": "Upptäck Zaptec Go 2",
             "subheading": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Enegilösningar.\nVärde 20 000kr",
             "button_text": "Läs mer",
-            "button_url": "shopify://pages/vara-batterilosningar"
-          }
-        },
-        "slide_XBGAtr": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "background_image": "shopify://shop_images/A_DeMain_0192_00028_1144x_e8e21d35-c71a-4b46-af73-f69202c80c88.png",
-            "overlay_opacity": 20,
-            "heading": "Kompletta batterilager från 29.900:-",
-            "subheading": "En annan beskrivning",
-            "button_text": "Läs mer",
-            "button_url": "shopify://pages/vara-batterilosningar"
+            "button_url": "shopify://products/zaptec-2"
           }
         },
         "slide_dCDG8J": {
@@ -58,7 +46,7 @@
             "background_image": "shopify://shop_images/A_DeMain_0192_00028_1144x_e8e21d35-c71a-4b46-af73-f69202c80c88.png",
             "overlay_opacity": 20,
             "heading": "Kompletta batterilager från 29.900:-",
-            "subheading": "En annan beskrivning",
+            "subheading": "",
             "button_text": "Läs mer",
             "button_url": "shopify://pages/vara-batterilosningar"
           }
@@ -78,7 +66,6 @@
       },
       "block_order": [
         "slide_kBaNR6",
-        "slide_XBGAtr",
         "slide_dCDG8J",
         "slide_dpHNkz"
       ],
@@ -93,22 +80,25 @@
         "icon_link_fttAQh": {
           "type": "icon_link",
           "settings": {
+            "icon": "shopify://shop_images/Hus.svg",
             "text": "Solceller",
-            "link": ""
+            "link": "shopify://pages/vara-solceller"
           }
         },
         "icon_link_pCNPRF": {
           "type": "icon_link",
           "settings": {
+            "icon": "shopify://shop_images/Ladd.svg",
             "text": "Batteri",
-            "link": ""
+            "link": "shopify://pages/vara-batterilosningar"
           }
         },
         "icon_link_PxLjJd": {
           "type": "icon_link",
           "settings": {
+            "icon": "shopify://shop_images/Ladd2.svg",
             "text": "Elbilsladdare",
-            "link": ""
+            "link": "shopify://pages/vara-laddboxar"
           }
         }
       },
