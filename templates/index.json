@@ -198,8 +198,8 @@
           "type": "product",
           "settings": {
             "product": "fronius-reserva",
-            "show_price": true,
-            "description": ""
+            "show_price": false,
+            "description": "Från 59 995:-"
           }
         }
       },
