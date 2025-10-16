@@ -466,25 +466,6 @@
         "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
-    "banner_bild_Tr8FhV": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "image",
-        "background_color": "#000000",
-        "overlay_opacity": 25,
-        "header_button_text": "Kampanj",
-        "header_button_url": "shopify://pages/vara-batterilosningar",
-        "heading": "En extra batterimodul på köpet",
-        "description": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Energilösningar.\nVärde 20 000kr",
-        "primary_button_text": "Läs mer",
-        "primary_button_url": "shopify://pages/vara-batterilosningar",
-        "secondary_button_text": "Lämna intresseanmälan",
-        "secondary_button_url": "shopify://pages/offert-forfragan",
-        "custom_id": ""
-      }
-    },
     "grid_omraden_zBziiH": {
       "type": "grid-omraden",
       "disabled": true,
@@ -621,10 +602,10 @@
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/SE_Product_Image_Fronius_Wattpilot_Flex_Image.jpg",
-        "header_button_text": "Laddboxar",
+        "header_button_text": "Solis + Dyness",
         "header_button_url": "shopify://collections/batteri",
-        "heading": "Smarta elbilsladdare för alla behov",
-        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "heading": "Våra mest populära batteripaket",
+        "description": "Kombinationen av Solis växelriktare och Dyness batterier är vårt mest efterfrågade paket. Det ger pålitlig prestanda, hög verkningsgrad och lång livslängd – till ett pris som gör solenergi tillgängligt för alla.",
         "primary_button_text": "Privat",
         "primary_button_url": "shopify://pages/vara-laddboxar",
         "secondary_button_text": "Företag",
@@ -796,7 +777,6 @@
     "slider_sektion_Rd7AJK",
     "avdrag_UeYUdn",
     "banner_med_3_produkter_3LW7zF",
-    "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
     "banner_med_3_produkter_ThPDRM",
     "offert_forfragan_H8kdLx",
