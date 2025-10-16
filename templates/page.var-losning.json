@@ -118,7 +118,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
-        "layout_type": "contained",
+        "layout_type": "full",
         "media_type": "image",
         "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
         "background_color": "#000000",
