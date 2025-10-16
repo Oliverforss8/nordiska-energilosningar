@@ -186,6 +186,14 @@
             "description": ""
           }
         },
+        "product_7ft9dh": {
+          "type": "product",
+          "settings": {
+            "product": "sigenergy-1",
+            "show_price": false,
+            "description": "Ledande design och smart energilagring i ett."
+          }
+        },
         "product_manqr7": {
           "type": "product",
           "settings": {
@@ -207,6 +215,7 @@
         "product_ezcRPQ",
         "product_WHbHEk",
         "product_AaGGir",
+        "product_7ft9dh",
         "product_manqr7",
         "product_PzHRYV"
       ],
