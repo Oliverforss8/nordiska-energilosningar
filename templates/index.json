@@ -31,7 +31,6 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "background_image": "shopify://shop_images/IMG_1685c.jpg",
             "overlay_opacity": 20,
             "heading": "Kompletta batteripaket från 37 900:-",
             "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
@@ -156,6 +155,20 @@
         "grid_gap": 20,
         "padding_top": 40,
         "padding_bottom": 40,
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_nY9Rik": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Din energi. Ditt hem. Din frihet.",
+        "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p><br/></p><p>☀️ <strong>Bli din egen elproducent</strong></p><p><br/>🔋 <strong>Lagra energin för när du behöver den</strong><br/></p><p><br/>⚙️ <strong>Optimera ditt hem med smart styrning</strong><br/><br/></p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
     },
@@ -339,7 +352,7 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_nY9Rik": {
+    "bild_och_text_trnXfg": {
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
@@ -761,11 +774,12 @@
     "hero_slider_D8U4yr",
     "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
+    "bild_och_text_nY9Rik",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
     "slider_sektion_Rd7AJK",
-    "bild_och_text_nY9Rik",
+    "bild_och_text_trnXfg",
     "avdrag_UeYUdn",
     "banner_med_3_produkter_3LW7zF",
     "banner_bild_Tr8FhV",
