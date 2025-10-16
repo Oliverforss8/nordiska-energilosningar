@@ -103,6 +103,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Våra kunder halverar sina elräkningar direkt",
         "text": "<p><br/>Vår smarta AI ser till att du alltid använder elen när den är som billigast och lagrar den när den är som mest värd – så halverar du elräkningen utan att lyfta ett finger.<br/><br/></p><p>Resultatet blir att du får ut maximalt värde av varje kilowattimme – helt automatiskt, utan att du behöver göra någonting själv.</p>",
         "media_type": "image",
@@ -117,6 +118,7 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
         "media_type": "image",
         "background_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
         "background_color": "#000000",
@@ -132,10 +134,10 @@
         "custom_id": ""
       }
     },
-    "kontakt_form_WJqr9M": {
+    "kontakt_form_UhxXUB": {
       "type": "kontakt-form",
       "blocks": {
-        "form_field_Ba8aJ6": {
+        "form_field_6hUwyG": {
           "type": "form_field",
           "settings": {
             "label": "För- & efternamn",
@@ -147,22 +149,10 @@
             "rows": 4
           }
         },
-        "form_field_XqNRJJ": {
+        "form_field_MBC7Tt": {
           "type": "form_field",
           "settings": {
-            "label": "Telefonnummer",
-            "name": "",
-            "field_type": "tel",
-            "placeholder": "",
-            "required": true,
-            "pattern": "",
-            "rows": 4
-          }
-        },
-        "form_field_pLfkRX": {
-          "type": "form_field",
-          "settings": {
-            "label": "E-post",
+            "label": "Mailadress",
             "name": "",
             "field_type": "email",
             "placeholder": "",
@@ -171,62 +161,87 @@
             "rows": 4
           }
         },
-        "form_field_fqX6ag": {
+        "form_field_rHBrqD": {
           "type": "form_field",
           "settings": {
-            "label": "Adress",
+            "label": "Addres",
             "name": "",
             "field_type": "text",
             "placeholder": "",
-            "required": true,
+            "required": false,
             "pattern": "",
             "rows": 4
           }
         },
-        "service_option_TaV9Xi": {
+        "form_field_iR8HyH": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$",
+            "rows": 4
+          }
+        },
+        "form_field_bPP8MR": {
+          "type": "form_field",
+          "settings": {
+            "label": "Meddelande",
+            "name": "",
+            "field_type": "textarea",
+            "placeholder": "",
+            "required": false,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_heWk68": {
           "type": "service_option",
           "settings": {
             "label": "Solceller",
             "service_key": ""
           }
         },
-        "service_option_bKmMcx": {
+        "service_option_JkEch3": {
           "type": "service_option",
           "settings": {
-            "label": "Batterier",
+            "label": "Energilagring",
             "service_key": ""
           }
         },
-        "service_option_xHdUct": {
+        "service_option_N7AYct": {
           "type": "service_option",
           "settings": {
-            "label": "Laddboxar",
+            "label": "Laddbox",
             "service_key": ""
           }
         },
-        "service_option_Fe6xk9": {
+        "service_option_PcGkzx": {
           "type": "service_option",
           "settings": {
-            "label": "Värmepumpar",
+            "label": "Boka elektriker",
             "service_key": ""
           }
         }
       },
       "block_order": [
-        "form_field_Ba8aJ6",
-        "form_field_XqNRJJ",
-        "form_field_pLfkRX",
-        "form_field_fqX6ag",
-        "service_option_TaV9Xi",
-        "service_option_bKmMcx",
-        "service_option_xHdUct",
-        "service_option_Fe6xk9"
+        "form_field_6hUwyG",
+        "form_field_MBC7Tt",
+        "form_field_rHBrqD",
+        "form_field_iR8HyH",
+        "form_field_bPP8MR",
+        "service_option_heWk68",
+        "service_option_JkEch3",
+        "service_option_N7AYct",
+        "service_option_PcGkzx"
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Ta hjälp av oss",
-        "header_button_text": "Kontakt",
-        "header_button_url": "shopify://pages/support-om-oss"
+        "heading": "Fri rådgivning och offert",
+        "header_button_text": "",
+        "header_button_url": ""
       }
     }
   },
@@ -236,6 +251,6 @@
     "bild_och_text_knappar_DJ8KNN",
     "bild_och_text_3Vj8Aw",
     "banner_bild_d78jQM",
-    "kontakt_form_WJqr9M"
+    "kontakt_form_UhxXUB"
   ]
 }
