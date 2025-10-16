@@ -13,7 +13,7 @@
       "type": "hero",
       "name": "Hero",
       "settings": {
-        "media_type": "image",
+        "media_type": "video",
         "background_image": "shopify://shop_images/solceller-section3-img-1920.webp",
         "background_video": "shopify://files/videos/1080.mp4",
         "overlay_opacity": 20,
@@ -84,6 +84,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Vi är experter på storskaliga energilösningar",
         "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.</p>",
         "media_type": "image",
