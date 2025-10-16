@@ -222,42 +222,42 @@
         "custom_id": ""
       }
     },
-    "review_VrVr4m": {
+    "review_qywrAD": {
       "type": "review",
       "blocks": {
-        "review_6MUMzh": {
+        "review_ipqrRU": {
           "type": "review",
           "settings": {
             "stars": 5,
-            "review_text": "Fantastisk service och mycket professionell hantering av vårt projekt.",
-            "customer_name": "Anna Andersson"
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
           }
         },
-        "review_RciNdR": {
+        "review_4cHpTw": {
           "type": "review",
           "settings": {
             "stars": 5,
-            "review_text": "Rekommenderar varmt! Snabb installation och bra priser.",
-            "customer_name": "Erik Johansson"
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
           }
         },
-        "review_HJwmWJ": {
+        "review_R7tWBt": {
           "type": "review",
           "settings": {
-            "stars": 4,
-            "review_text": "Mycket nöjd med resultatet. Kommer definitivt använda er igen.",
-            "customer_name": "Maria Svensson"
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
           }
         }
       },
       "block_order": [
-        "review_6MUMzh",
-        "review_RciNdR",
-        "review_HJwmWJ"
+        "review_ipqrRU",
+        "review_4cHpTw",
+        "review_R7tWBt"
       ],
       "name": "Reviews",
       "settings": {
-        "heading": "Vad våra kunder säger",
+        "heading": "Vad våra kunder säger om oss",
         "button_text": "Läs alla recensioner",
         "button_url": ""
       }
@@ -271,6 +271,6 @@
     "banner_bild_nNHbxn",
     "faq_produkt_kEEXWh",
     "relaterade_produkter",
-    "review_VrVr4m"
+    "review_qywrAD"
   ]
 }
