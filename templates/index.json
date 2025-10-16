@@ -212,7 +212,7 @@
       ],
       "name": "Produktslider",
       "settings": {
-        "title": "Våra batterier",
+        "title": "Upptäck våra batterier",
         "custom_id": ""
       }
     },
@@ -224,21 +224,6 @@
         "title": "Våra produkter",
         "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_nY9Rik": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Din väg till lägre elkostnader",
-        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
-        "image_position": "right",
-        "image_button_text": "Så fungerar det",
-        "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
     },
@@ -283,7 +268,7 @@
       ],
       "name": "Banner med 3 produkter",
       "settings": {
-        "layout_direction": "products_first",
+        "layout_direction": "banner_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
         "overlay_opacity": 25,
@@ -295,62 +280,6 @@
         "primary_button_url": "shopify://pages/vara-laddboxar",
         "secondary_button_text": "",
         "secondary_button_url": ""
-      }
-    },
-    "grid_omraden_gmji3j": {
-      "type": "grid-omraden",
-      "name": "Grid areas",
-      "settings": {
-        "title": "Smarta energilösningar för en hållbar vardag",
-        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
-        "card_1_image": "shopify://shop_images/image_18.png",
-        "card_1_button_text": "Solceller",
-        "card_1_button_link": "shopify://pages/vara-solceller",
-        "card_1_overlay_opacity": 20,
-        "card_2_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
-        "card_2_button_text": "Värmepumpar",
-        "card_2_button_link": "shopify://pages/vara-varmepumpar",
-        "card_2_overlay_opacity": 20,
-        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
-        "card_3_button_text": "Laddboxar",
-        "card_3_button_link": "shopify://pages/vara-laddboxar",
-        "card_3_overlay_opacity": 20,
-        "card_4_image": "shopify://shop_images/image_16.png",
-        "card_4_button_text": "Batterier",
-        "card_4_button_link": "shopify://pages/vara-laddboxar",
-        "card_4_overlay_opacity": 20,
-        "bottom_description": ""
-      }
-    },
-    "avdrag_UeYUdn": {
-      "type": "avdrag",
-      "blocks": {
-        "avdrag_item_qy3y6p": {
-          "type": "avdrag_item",
-          "settings": {
-            "text": "15% avdrag för installation av solceller",
-            "image": "shopify://shop_images/Hus.svg"
-          }
-        },
-        "avdrag_item_RBirrk": {
-          "type": "avdrag_item",
-          "settings": {
-            "text": "50% avdrag vid köp av batterilagring",
-            "image": "shopify://shop_images/Ladd.svg"
-          }
-        }
-      },
-      "block_order": [
-        "avdrag_item_qy3y6p",
-        "avdrag_item_RBirrk"
-      ],
-      "name": "Avdrag",
-      "settings": {
-        "custom_id": "",
-        "heading": "Avdrag för grön teknik",
-        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "slider_sektion_Rd7AJK": {
@@ -408,6 +337,77 @@
       "settings": {
         "title": "Upptäck våra hybridväxelriktare",
         "custom_id": ""
+      }
+    },
+    "bild_och_text_nY9Rik": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Din väg till lägre elkostnader",
+        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "right",
+        "image_button_text": "Så fungerar det",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
+    },
+    "grid_omraden_gmji3j": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Smarta energilösningar för en hållbar vardag",
+        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
+        "card_1_image": "shopify://shop_images/image_18.png",
+        "card_1_button_text": "Solceller",
+        "card_1_button_link": "shopify://pages/vara-solceller",
+        "card_1_overlay_opacity": 20,
+        "card_2_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
+        "card_2_button_text": "Värmepumpar",
+        "card_2_button_link": "shopify://pages/vara-varmepumpar",
+        "card_2_overlay_opacity": 20,
+        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
+        "card_3_button_text": "Laddboxar",
+        "card_3_button_link": "shopify://pages/vara-laddboxar",
+        "card_3_overlay_opacity": 20,
+        "card_4_image": "shopify://shop_images/image_16.png",
+        "card_4_button_text": "Batterier",
+        "card_4_button_link": "shopify://pages/vara-laddboxar",
+        "card_4_overlay_opacity": 20,
+        "bottom_description": ""
+      }
+    },
+    "avdrag_UeYUdn": {
+      "type": "avdrag",
+      "blocks": {
+        "avdrag_item_qy3y6p": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "15% avdrag för installation av solceller",
+            "image": "shopify://shop_images/Hus.svg"
+          }
+        },
+        "avdrag_item_RBirrk": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag vid köp av batterilagring",
+            "image": "shopify://shop_images/Ladd.svg"
+          }
+        }
+      },
+      "block_order": [
+        "avdrag_item_qy3y6p",
+        "avdrag_item_RBirrk"
+      ],
+      "name": "Avdrag",
+      "settings": {
+        "custom_id": "",
+        "heading": "Avdrag för grön teknik",
+        "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "banner_bild_Tr8FhV": {
@@ -788,11 +788,11 @@
     "ikon_lankar_ki6Ryk",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
-    "bild_och_text_nY9Rik",
     "banner_med_3_produkter_D79ei6",
+    "slider_sektion_Rd7AJK",
+    "bild_och_text_nY9Rik",
     "grid_omraden_gmji3j",
     "avdrag_UeYUdn",
-    "slider_sektion_Rd7AJK",
     "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
     "banner_med_3_produkter_ThPDRM",
