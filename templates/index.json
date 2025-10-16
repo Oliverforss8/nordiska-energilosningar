@@ -174,8 +174,8 @@
           "type": "product",
           "settings": {
             "product": "dyness-tower-pro",
-            "show_price": true,
-            "description": ""
+            "show_price": false,
+            "description": "Från 37 900:-"
           }
         },
         "product_AaGGir": {
@@ -190,8 +190,8 @@
           "type": "product",
           "settings": {
             "product": "saj",
-            "show_price": true,
-            "description": ""
+            "show_price": false,
+            "description": "Från 64 900:-"
           }
         },
         "product_PzHRYV": {
