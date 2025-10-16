@@ -27,31 +27,31 @@
         "button_url": "shopify://collections/solceller"
       }
     },
-    "icon_NDwUyT": {
+    "icon_UQgYfa": {
       "type": "icon",
       "blocks": {
-        "feature_YzaeKt": {
+        "feature_WhnEyB": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Hus.svg",
             "text": "Ökar värdet på din bostad"
           }
         },
-        "feature_gBje4F": {
+        "feature_Kzjtk4": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Blixt.svg",
             "text": "Sänker dina elkostnader"
           }
         },
-        "feature_EU9MQV": {
+        "feature_HdP6mf": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Ladd.svg",
             "text": "Låga underhållskostnader"
           }
         },
-        "feature_pEbKNg": {
+        "feature_rVTrcA": {
           "type": "feature",
           "settings": {
             "image": "shopify://shop_images/Ladd2.svg",
@@ -60,10 +60,10 @@
         }
       },
       "block_order": [
-        "feature_YzaeKt",
-        "feature_gBje4F",
-        "feature_EU9MQV",
-        "feature_pEbKNg"
+        "feature_WhnEyB",
+        "feature_Kzjtk4",
+        "feature_HdP6mf",
+        "feature_rVTrcA"
       ],
       "name": "Icon section",
       "settings": {
@@ -430,7 +430,7 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "icon_NDwUyT",
+    "icon_UQgYfa",
     "banner_med_3_produkter_k9TmHH",
     "bild_och_text_fF7gV6",
     "banner_bild_cwiWWd",
