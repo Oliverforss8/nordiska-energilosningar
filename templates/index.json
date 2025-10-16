@@ -354,31 +354,6 @@
         "custom_id": ""
       }
     },
-    "grid_omraden_gmji3j": {
-      "type": "grid-omraden",
-      "name": "Grid areas",
-      "settings": {
-        "title": "Smarta energilösningar för en hållbar vardag",
-        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
-        "card_1_image": "shopify://shop_images/image_18.png",
-        "card_1_button_text": "Solceller",
-        "card_1_button_link": "shopify://pages/vara-solceller",
-        "card_1_overlay_opacity": 20,
-        "card_2_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
-        "card_2_button_text": "Värmepumpar",
-        "card_2_button_link": "shopify://pages/vara-varmepumpar",
-        "card_2_overlay_opacity": 20,
-        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
-        "card_3_button_text": "Laddboxar",
-        "card_3_button_link": "shopify://pages/vara-laddboxar",
-        "card_3_overlay_opacity": 20,
-        "card_4_image": "shopify://shop_images/image_16.png",
-        "card_4_button_text": "Batterier",
-        "card_4_button_link": "shopify://pages/vara-laddboxar",
-        "card_4_overlay_opacity": 20,
-        "bottom_description": ""
-      }
-    },
     "avdrag_UeYUdn": {
       "type": "avdrag",
       "blocks": {
@@ -408,6 +383,61 @@
         "description": "<p>Med det gröna avdraget kan du göra en smart och längsiktig investering i solceller och batterilagring. Maxbeloppet är hela 50 000 kr per dr och person, vilket gör att du kan göra stora besparingar. Avdraget innebär att du som kund kan göra bsparingar med:</p>",
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "banner_med_3_produkter_3LW7zF": {
+      "type": "banner-med-3-produkter",
+      "blocks": {
+        "product_card_MDr4Qn": {
+          "type": "product_card",
+          "settings": {
+            "product": "fronius-verto",
+            "title": "Fronius Verto",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/fronius-verto"
+          }
+        },
+        "product_card_RxU67f": {
+          "type": "product_card",
+          "settings": {
+            "product": "fronius-reserva",
+            "title": "Fronius Reserva",
+            "description": "Perfekt för företag och kommersiell användning.",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/fronius-reserva"
+          }
+        },
+        "product_card_at6LTU": {
+          "type": "product_card",
+          "settings": {
+            "product": "fronius-wattpilot-flex",
+            "title": "Fronius Wattpilot",
+            "description": "Avancerad laddning för professionella behov.",
+            "learn_more_text": "Köp nu",
+            "learn_more_url": "shopify://products/fronius-wattpilot-flex"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_MDr4Qn",
+        "product_card_RxU67f",
+        "product_card_at6LTU"
+      ],
+      "name": "Banner med 3 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva_detail_2.png",
+        "overlay_opacity": 0,
+        "header_button_text": "Upptäck Fronius",
+        "header_button_url": "",
+        "heading": "Tysk kvalité med europeiska servrar",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Batterier",
+        "primary_button_url": "shopify://pages/vara-batterilosningar",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
     "banner_bild_Tr8FhV": {
@@ -530,61 +560,6 @@
         "card_4_button_text": "",
         "card_4_button_link": "",
         "card_4_overlay_opacity": 0
-      }
-    },
-    "banner_med_3_produkter_3LW7zF": {
-      "type": "banner-med-3-produkter",
-      "blocks": {
-        "product_card_MDr4Qn": {
-          "type": "product_card",
-          "settings": {
-            "product": "fronius-verto",
-            "title": "Fronius Verto",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/fronius-verto"
-          }
-        },
-        "product_card_RxU67f": {
-          "type": "product_card",
-          "settings": {
-            "product": "fronius-reserva",
-            "title": "Fronius Reserva",
-            "description": "Perfekt för företag och kommersiell användning.",
-            "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/fronius-reserva"
-          }
-        },
-        "product_card_at6LTU": {
-          "type": "product_card",
-          "settings": {
-            "product": "fronius-wattpilot-flex",
-            "title": "Fronius Wattpilot",
-            "description": "Avancerad laddning för professionella behov.",
-            "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/fronius-wattpilot-flex"
-          }
-        }
-      },
-      "block_order": [
-        "product_card_MDr4Qn",
-        "product_card_RxU67f",
-        "product_card_at6LTU"
-      ],
-      "name": "Banner med 3 produkter",
-      "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva_detail_2.png",
-        "overlay_opacity": 0,
-        "header_button_text": "Upptäck Fronius",
-        "header_button_url": "",
-        "heading": "Tysk kvalité med europeiska servrar",
-        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Batterier",
-        "primary_button_url": "shopify://pages/vara-batterilosningar",
-        "secondary_button_text": "Företag",
-        "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
     "banner_med_2_produkter_rrjGgf": {
@@ -791,13 +766,12 @@
     "banner_med_3_produkter_D79ei6",
     "slider_sektion_Rd7AJK",
     "bild_och_text_nY9Rik",
-    "grid_omraden_gmji3j",
     "avdrag_UeYUdn",
+    "banner_med_3_produkter_3LW7zF",
     "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
     "banner_med_3_produkter_ThPDRM",
     "offert_forfragan_H8kdLx",
-    "banner_med_3_produkter_3LW7zF",
     "banner_med_2_produkter_rrjGgf",
     "review_7jfwE6",
     "kontakt_form_xiaXgr"
