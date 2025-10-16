@@ -19,45 +19,9 @@
         "overlay_opacity": 20,
         "heading": "Vi är experter på storskaliga energilösningar",
         "subheading": "Driv er fastighet med framtidens energi – solkraft, batterilagring och laddning som ger maximal effekt och minimal kostnad.",
-        "button_text": "För företag",
+        "button_text": "Fri offert",
         "button_url": ""
       }
-    },
-    "lankar_tGAxqY": {
-      "type": "lankar",
-      "blocks": {
-        "card_6TwFP8": {
-          "type": "card",
-          "settings": {
-            "heading": "Företag",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://metaobjects/foretag/foretag"
-          }
-        },
-        "card_67XLE3": {
-          "type": "card",
-          "settings": {
-            "heading": "BRF",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://metaobjects/foretag/bostadsrattsforening"
-          }
-        },
-        "card_Ype6Wd": {
-          "type": "card",
-          "settings": {
-            "heading": "Lantbruk",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-            "link": "shopify://metaobjects/foretag/lantbruk"
-          }
-        }
-      },
-      "block_order": [
-        "card_6TwFP8",
-        "card_67XLE3",
-        "card_Ype6Wd"
-      ],
-      "name": "Länkar sektion",
-      "settings": {}
     },
     "3_grid_GT9efL": {
       "type": "3-grid",
@@ -85,8 +49,8 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Vi är experter på storskaliga energilösningar",
-        "text": "<p>På Nordiska Energilösningar specialiserar vi oss på effektiva och hållbara energilösningar för fastighetsägare. Vi erbjuder kompletta system med solcellsanläggningar, batterilagring och laddinfrastruktur – skräddarsydda efter varje kunds behov och förutsättningar.</p>",
+        "title": "Vi är en del av installatörsföretagen",
+        "text": "<p>Som medlemmar i Installatörsföretagen följer vi branschens standarder och regler för solcellsinstallationer – vilket garanterar säkra, korrekta och framtidssäkra lösningar.</p><p>Medlemskapet innebär också att våra medarbetare har kollektivavtal, trygg arbetsmiljö och kontinuerlig utbildning – för högsta kvalitet i varje projekt.</p>",
         "media_type": "image",
         "image": "shopify://shop_images/image_12.png",
         "image_position": "left",
@@ -143,7 +107,6 @@
   },
   "order": [
     "hero_L9AzVL",
-    "lankar_tGAxqY",
     "3_grid_GT9efL",
     "bild_och_text_w7KiJt",
     "bild_och_text_knappar_MRbxmk"

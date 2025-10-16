@@ -38,18 +38,6 @@
             "button_url": "shopify://pages/vara-batterilosningar"
           }
         },
-        "slide_kBaNR6": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "background_image": "shopify://shop_images/Zaptec_2022-11.jpg",
-            "overlay_opacity": 20,
-            "heading": "En extra batterimodul på köpet",
-            "subheading": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Enegilösningar.\nVärde 20 000kr",
-            "button_text": "Läs mer",
-            "button_url": "shopify://products/zaptec-2"
-          }
-        },
         "slide_dpHNkz": {
           "type": "slide",
           "settings": {
@@ -61,12 +49,24 @@
             "button_text": "Solceller",
             "button_url": "shopify://pages/offert-forfragan"
           }
+        },
+        "slide_kBaNR6": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "background_image": "shopify://shop_images/ChatGPT_Image_26_juni_2025_21_24_41_eb04fd43-88c6-4026-ba4b-4653f23b912e.png",
+            "overlay_opacity": 20,
+            "heading": "En extra batterimodul på köpet",
+            "subheading": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Enegilösningar.\nVärde 20 000kr",
+            "button_text": "Läs mer",
+            "button_url": "shopify://products/zaptec-2"
+          }
         }
       },
       "block_order": [
         "slide_dCDG8J",
-        "slide_kBaNR6",
-        "slide_dpHNkz"
+        "slide_dpHNkz",
+        "slide_kBaNR6"
       ],
       "name": "Hero slider",
       "settings": {
@@ -166,6 +166,7 @@
         "title": "Ett smartare sätt att äga din energi",
         "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p></p><p></p><p><br/></p><p> <strong>Bli din egen elproducent</strong></p><p><br/> <strong>Lagra energin för när du behöver den</strong><br/></p><p><br/> <strong>Optimera ditt hem med smart styrning</strong><br/><br/></p>",
         "media_type": "image",
+        "image": "shopify://shop_images/ChatGPT_Image_26_juni_2025_21_24_41_eb04fd43-88c6-4026-ba4b-4653f23b912e.png",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
