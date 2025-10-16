@@ -31,7 +31,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "background_image": "shopify://shop_images/A_DeMain_0192_00028_1144x_e8e21d35-c71a-4b46-af73-f69202c80c88.png",
+            "background_image": "shopify://shop_images/IMG_1685c.jpg",
             "overlay_opacity": 20,
             "heading": "Kompletta batteripaket från 37 900:-",
             "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
@@ -414,15 +414,14 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
-        "layout_type": "contained",
+        "layout_type": "full",
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
         "overlay_opacity": 25,
         "header_button_text": "Kampanj",
         "header_button_url": "shopify://pages/vara-batterilosningar",
         "heading": "En extra batterimodul på köpet",
-        "description": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Enegilösningar.\nVärde 20 000kr",
+        "description": "Just nu får du en extra batterimodul vid köp av solceller och batteri från oss på Nordiska Energilösningar.\nVärde 20 000kr",
         "primary_button_text": "Läs mer",
         "primary_button_url": "shopify://pages/vara-batterilosningar",
         "secondary_button_text": "Lämna intresseanmälan",
@@ -454,26 +453,6 @@
         "card_4_button_link": "shopify://pages/vara-laddboxar",
         "card_4_overlay_opacity": 20,
         "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
-      }
-    },
-    "banner_bild_xRHf34": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/Vaillant-Luft-Wasser-Waermepumpe-aroTHERM-4.jpg",
-        "background_color": "#000000",
-        "overlay_opacity": 20,
-        "header_button_text": "Kampanj",
-        "header_button_url": "",
-        "heading": "Luftvärmepump för 9 995:-",
-        "description": "Just nu får du en luftvärmepump för 9 995:- vid köp av solceller och batteri från oss",
-        "primary_button_text": "Jag vill veta mer",
-        "primary_button_url": "shopify://pages/vara-varmepumpar",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
       }
     },
     "banner_med_3_produkter_ThPDRM": {
@@ -530,46 +509,6 @@
         "primary_button_url": "shopify://pages/vara-solceller",
         "secondary_button_text": "",
         "secondary_button_url": ""
-      }
-    },
-    "review_7jfwE6": {
-      "type": "review",
-      "blocks": {
-        "review_fMhRqw": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
-            "customer_name": "Marie"
-          }
-        },
-        "review_WnJfgk": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
-            "customer_name": "Ruben"
-          }
-        },
-        "review_rqBKMd": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
-            "customer_name": "Stefan"
-          }
-        }
-      },
-      "block_order": [
-        "review_fMhRqw",
-        "review_WnJfgk",
-        "review_rqBKMd"
-      ],
-      "name": "Reviews",
-      "settings": {
-        "heading": "Vad våra kunder säger om oss",
-        "button_text": "Läs alla recensioner",
-        "button_url": ""
       }
     },
     "offert_forfragan_H8kdLx": {
@@ -690,6 +629,156 @@
         "secondary_button_text": "Företag",
         "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
+    },
+    "review_7jfwE6": {
+      "type": "review",
+      "blocks": {
+        "review_fMhRqw": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_WnJfgk": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_rqBKMd": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_fMhRqw",
+        "review_WnJfgk",
+        "review_rqBKMd"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
+      }
+    },
+    "kontakt_form_xiaXgr": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_qkUF3e": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_jiBmBQ": {
+          "type": "form_field",
+          "settings": {
+            "label": "Mailadress",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_yhxae9": {
+          "type": "form_field",
+          "settings": {
+            "label": "Address",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": false,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_JCGxY9": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$",
+            "rows": 4
+          }
+        },
+        "form_field_jRMwBU": {
+          "type": "form_field",
+          "settings": {
+            "label": "Meddelande",
+            "name": "",
+            "field_type": "textarea",
+            "placeholder": "",
+            "required": false,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_H6eFaF": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_QMtgmd": {
+          "type": "service_option",
+          "settings": {
+            "label": "Energilagring",
+            "service_key": ""
+          }
+        },
+        "service_option_EaxUBr": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddbox",
+            "service_key": ""
+          }
+        },
+        "service_option_NXC4JV": {
+          "type": "service_option",
+          "settings": {
+            "label": "Boka elektriker",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_qkUF3e",
+        "form_field_jiBmBQ",
+        "form_field_yhxae9",
+        "form_field_JCGxY9",
+        "form_field_jRMwBU",
+        "service_option_H6eFaF",
+        "service_option_QMtgmd",
+        "service_option_EaxUBr",
+        "service_option_NXC4JV"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Kontakta oss",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
@@ -706,11 +795,11 @@
     "slider_sektion_Rd7AJK",
     "banner_bild_Tr8FhV",
     "grid_omraden_zBziiH",
-    "banner_bild_xRHf34",
     "banner_med_3_produkter_ThPDRM",
-    "review_7jfwE6",
     "offert_forfragan_H8kdLx",
     "banner_med_3_produkter_3LW7zF",
-    "banner_med_2_produkter_rrjGgf"
+    "banner_med_2_produkter_rrjGgf",
+    "review_7jfwE6",
+    "kontakt_form_xiaXgr"
   ]
 }
