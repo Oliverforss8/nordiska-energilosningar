@@ -575,8 +575,8 @@
         "product_card_rYQ3WU": {
           "type": "product_card",
           "settings": {
-            "product": "zaptec-2",
-            "title": "Zaptec Go 2",
+            "product": "solis-s6-eh3p10-kw",
+            "title": "Solis 10-20 kW",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Läs mer",
             "learn_more_url": ""
@@ -606,9 +606,9 @@
         "header_button_url": "shopify://collections/batteri",
         "heading": "Våra mest populära batteripaket",
         "description": "Kombinationen av Solis växelriktare och Dyness batterier är vårt mest efterfrågade paket. Det ger pålitlig prestanda, hög verkningsgrad och lång livslängd – till ett pris som gör solenergi tillgängligt för alla.",
-        "primary_button_text": "Privat",
+        "primary_button_text": "Batterier",
         "primary_button_url": "shopify://pages/vara-laddboxar",
-        "secondary_button_text": "Företag",
+        "secondary_button_text": "Växelriktare",
         "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
