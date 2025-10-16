@@ -170,28 +170,20 @@
             "description": "Vårt mest prisvärda batteri med imponerande lagringskapacitet."
           }
         },
-        "product_WHbHEk": {
-          "type": "product",
-          "settings": {
-            "product": "dyness-tower-pro",
-            "show_price": false,
-            "description": "Prisvärd och kraftfull energilagring för utomhusbruk."
-          }
-        },
-        "product_AaGGir": {
-          "type": "product",
-          "settings": {
-            "product": "sigenergy",
-            "show_price": true,
-            "description": ""
-          }
-        },
         "product_7ft9dh": {
           "type": "product",
           "settings": {
             "product": "sigenergy-1",
             "show_price": false,
             "description": "Ledande design och smart energilagring i ett."
+          }
+        },
+        "product_PzHRYV": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-reserva",
+            "show_price": false,
+            "description": "Europeiskt premiumbatteri med driftsäker prestanda och servrar inom EU."
           }
         },
         "product_manqr7": {
@@ -202,22 +194,21 @@
             "description": "Stilren energilagring med kompakt design för ditt hem."
           }
         },
-        "product_PzHRYV": {
+        "product_WHbHEk": {
           "type": "product",
           "settings": {
-            "product": "fronius-reserva",
+            "product": "dyness-tower-pro",
             "show_price": false,
-            "description": "Europeiskt premiumbatteri med driftsäker prestanda och servrar inom EU."
+            "description": "Prisvärd och kraftfull energilagring för utomhusbruk."
           }
         }
       },
       "block_order": [
         "product_ezcRPQ",
-        "product_WHbHEk",
-        "product_AaGGir",
         "product_7ft9dh",
+        "product_PzHRYV",
         "product_manqr7",
-        "product_PzHRYV"
+        "product_WHbHEk"
       ],
       "name": "Produktslider",
       "settings": {
