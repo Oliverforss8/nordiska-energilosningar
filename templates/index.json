@@ -162,12 +162,27 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
-        "background_color": "#ffffff",
+        "background_color": "#f7f7f7",
         "title": "Ett smartare sätt att äga din energi",
-        "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p><br/>Din energi. Ditt hem. Din frihet.<br/><br/><br/></p><p>☀️ <strong>Bli din egen elproducent</strong></p><p><br/>🔋 <strong>Lagra energin för när du behöver den</strong><br/></p><p><br/>⚙️ <strong>Optimera ditt hem med smart styrning</strong><br/><br/></p>",
+        "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p></p><p></p><p><br/></p><p>☀️ <strong>Bli din egen elproducent</strong></p><p><br/>🔋 <strong>Lagra energin för när du behöver den</strong><br/></p><p><br/>⚙️ <strong>Optimera ditt hem med smart styrning</strong><br/><br/></p>",
         "media_type": "image",
         "image_position": "right",
         "image_button_text": "",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_trnXfg": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Din väg till lägre elkostnader",
+        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "left",
+        "image_button_text": "Så fungerar det",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
@@ -349,21 +364,6 @@
       "name": "Produktslider",
       "settings": {
         "title": "Upptäck våra hybridväxelriktare",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_trnXfg": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Din väg till lägre elkostnader",
-        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
-        "image_position": "right",
-        "image_button_text": "Så fungerar det",
-        "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
     },
@@ -775,11 +775,11 @@
     "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
+    "bild_och_text_trnXfg",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
     "slider_sektion_Rd7AJK",
-    "bild_och_text_trnXfg",
     "avdrag_UeYUdn",
     "banner_med_3_produkter_3LW7zF",
     "banner_bild_Tr8FhV",
