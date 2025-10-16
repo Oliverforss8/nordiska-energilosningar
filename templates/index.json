@@ -172,12 +172,12 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_trnXfg": {
+    "bild_och_text_ydyfhV": {
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Din väg till lägre elkostnader",
+        "title": "AI-styrningen tänker på elpriset så att du inte behöver",
         "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
@@ -187,12 +187,12 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_ydyfhV": {
+    "bild_och_text_trnXfg": {
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "AI-styrningen tänker på elpriset så att du inte behöver",
+        "title": "Din väg till lägre elkostnader",
         "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
@@ -790,11 +790,11 @@
     "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
-    "bild_och_text_trnXfg",
     "bild_och_text_ydyfhV",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
+    "bild_och_text_trnXfg",
     "slider_sektion_Rd7AJK",
     "avdrag_UeYUdn",
     "banner_med_3_produkter_3LW7zF",
