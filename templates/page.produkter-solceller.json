@@ -337,10 +337,10 @@
         "custom_id": ""
       }
     },
-    "kontakt_form_chLN6N": {
+    "kontakt_form_7kGfXQ": {
       "type": "kontakt-form",
       "blocks": {
-        "form_field_PVqaRa": {
+        "form_field_ftE4Uq": {
           "type": "form_field",
           "settings": {
             "label": "För- & efternamn",
@@ -352,22 +352,10 @@
             "rows": 4
           }
         },
-        "form_field_LQHnCq": {
+        "form_field_9jQ9jC": {
           "type": "form_field",
           "settings": {
-            "label": "Telefonnummer",
-            "name": "",
-            "field_type": "tel",
-            "placeholder": "",
-            "required": true,
-            "pattern": "",
-            "rows": 4
-          }
-        },
-        "form_field_Dj3rJM": {
-          "type": "form_field",
-          "settings": {
-            "label": "E-post",
+            "label": "Mailadress",
             "name": "",
             "field_type": "email",
             "placeholder": "",
@@ -376,54 +364,87 @@
             "rows": 4
           }
         },
-        "form_field_XpFhUy": {
+        "form_field_RTKrXB": {
           "type": "form_field",
           "settings": {
-            "label": "Adress",
+            "label": "Addres",
             "name": "",
             "field_type": "text",
             "placeholder": "",
-            "required": true,
+            "required": false,
             "pattern": "",
             "rows": 4
           }
         },
-        "service_option_gaYnE3": {
+        "form_field_4eb6RJ": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$",
+            "rows": 4
+          }
+        },
+        "form_field_JUbj6g": {
+          "type": "form_field",
+          "settings": {
+            "label": "Meddelande",
+            "name": "",
+            "field_type": "textarea",
+            "placeholder": "",
+            "required": false,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_MDG9VU": {
           "type": "service_option",
           "settings": {
             "label": "Solceller",
             "service_key": ""
           }
         },
-        "service_option_zK7bLV": {
+        "service_option_Y6XkrA": {
           "type": "service_option",
           "settings": {
-            "label": "Installation",
+            "label": "Energilagring",
             "service_key": ""
           }
         },
-        "service_option_YKEwa6": {
+        "service_option_U78PLb": {
           "type": "service_option",
           "settings": {
-            "label": "Serviceavtal",
+            "label": "Laddbox",
+            "service_key": ""
+          }
+        },
+        "service_option_6YTtfd": {
+          "type": "service_option",
+          "settings": {
+            "label": "Boka elektriker",
             "service_key": ""
           }
         }
       },
       "block_order": [
-        "form_field_PVqaRa",
-        "form_field_LQHnCq",
-        "form_field_Dj3rJM",
-        "form_field_XpFhUy",
-        "service_option_gaYnE3",
-        "service_option_zK7bLV",
-        "service_option_YKEwa6"
+        "form_field_ftE4Uq",
+        "form_field_9jQ9jC",
+        "form_field_RTKrXB",
+        "form_field_4eb6RJ",
+        "form_field_JUbj6g",
+        "service_option_MDG9VU",
+        "service_option_Y6XkrA",
+        "service_option_U78PLb",
+        "service_option_6YTtfd"
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Ta hjälp av oss",
-        "header_button_text": "Kontakt",
-        "header_button_url": "shopify://pages/support-om-oss"
+        "heading": "Fri rådgivning och offert",
+        "header_button_text": "",
+        "header_button_url": ""
       }
     }
   },
@@ -438,6 +459,6 @@
     "bild_och_text_knappar_hd7RJH",
     "avdrag_cwFWrR",
     "bild_och_text_knappar_PdkfaH",
-    "kontakt_form_chLN6N"
+    "kontakt_form_7kGfXQ"
   ]
 }
