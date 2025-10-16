@@ -187,6 +187,21 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_ydyfhV": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "AI-styrningen tänker på elpriset så att du inte behöver",
+        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "left",
+        "image_button_text": "Så fungerar det",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
+    },
     "slider_sektion_PkT3FL": {
       "type": "slider-sektion",
       "blocks": {
@@ -776,6 +791,7 @@
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
     "bild_och_text_trnXfg",
+    "bild_och_text_ydyfhV",
     "slider_sektion_PkT3FL",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
