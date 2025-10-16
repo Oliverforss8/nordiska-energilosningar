@@ -286,93 +286,19 @@
         "padding_bottom": 40
       }
     },
-    "kontakt_form_WTeQAb": {
-      "type": "kontakt-form",
-      "blocks": {
-        "form_field_GNzBkf": {
-          "type": "form_field",
-          "settings": {
-            "label": "För- & efternamn",
-            "name": "",
-            "field_type": "text",
-            "placeholder": "",
-            "required": true,
-            "pattern": "",
-            "rows": 4
-          }
-        },
-        "form_field_6CaaLT": {
-          "type": "form_field",
-          "settings": {
-            "label": "Telefonnummer",
-            "name": "",
-            "field_type": "tel",
-            "placeholder": "",
-            "required": true,
-            "pattern": "",
-            "rows": 4
-          }
-        },
-        "form_field_wnmpTp": {
-          "type": "form_field",
-          "settings": {
-            "label": "E-post",
-            "name": "",
-            "field_type": "email",
-            "placeholder": "",
-            "required": true,
-            "pattern": "",
-            "rows": 4
-          }
-        },
-        "form_field_JAbXM6": {
-          "type": "form_field",
-          "settings": {
-            "label": "Adress",
-            "name": "",
-            "field_type": "text",
-            "placeholder": "",
-            "required": true,
-            "pattern": "",
-            "rows": 4
-          }
-        },
-        "service_option_ELVxeL": {
-          "type": "service_option",
-          "settings": {
-            "label": "Batterier",
-            "service_key": ""
-          }
-        },
-        "service_option_zWCkAX": {
-          "type": "service_option",
-          "settings": {
-            "label": "Installation",
-            "service_key": ""
-          }
-        },
-        "service_option_BNyfAw": {
-          "type": "service_option",
-          "settings": {
-            "label": "Serviceavtal",
-            "service_key": ""
-          }
-        }
-      },
-      "block_order": [
-        "form_field_GNzBkf",
-        "form_field_6CaaLT",
-        "form_field_wnmpTp",
-        "form_field_JAbXM6",
-        "service_option_ELVxeL",
-        "service_option_zWCkAX",
-        "service_option_BNyfAw"
-      ],
-      "name": "Contact Form",
+    "bild_och_text_iMgyFz": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
       "settings": {
-        "heading": "Ta hjälp av oss",
-        "header_button_text": "Kontakt",
-        "header_button_url": "shopify://pages/support-om-oss"
+        "background_color": "#ffffff",
+        "title": "Lägg till backup vid strömavbrott",
+        "text": "<p><br/>Säkra elen vid strömavbrott – med smart backup får du fortsatt drift och trygghet även när nätet ligger nere.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/pro-wap-1-3.jpg",
+        "image_position": "right",
+        "image_button_text": "Offert",
+        "image_button_link": "shopify://pages/contact",
+        "custom_id": ""
       }
     }
   },
@@ -386,6 +312,6 @@
     "banner_bild_gJDBKA",
     "hur_jEzfNm",
     "avdrag_BEUazc",
-    "kontakt_form_WTeQAb"
+    "bild_och_text_iMgyFz"
   ]
 }
