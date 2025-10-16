@@ -461,9 +461,9 @@
         "header_button_url": "",
         "heading": "Tysk kvalité med europeiska servrar",
         "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Batterier",
+        "primary_button_text": "",
         "primary_button_url": "shopify://pages/vara-batterilosningar",
-        "secondary_button_text": "Företag",
+        "secondary_button_text": "",
         "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
