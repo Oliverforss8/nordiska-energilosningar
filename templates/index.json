@@ -172,36 +172,6 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_ydyfhV": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "AI-styrningen tänker på elpriset så att du inte behöver",
-        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
-        "image_position": "left",
-        "image_button_text": "Så fungerar det",
-        "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_trnXfg": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Din väg till lägre elkostnader",
-        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
-        "image_position": "left",
-        "image_button_text": "Så fungerar det",
-        "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
     "slider_sektion_PkT3FL": {
       "type": "slider-sektion",
       "blocks": {
@@ -259,6 +229,21 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_ydyfhV": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "AI-styrningen tänker på elpriset så att du inte behöver",
+        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "left",
+        "image_button_text": "Så fungerar det",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
+    },
     "relaterade_produkter_jRpymw": {
       "type": "relaterade-produkter",
       "disabled": true,
@@ -311,7 +296,7 @@
       ],
       "name": "Banner med 3 produkter",
       "settings": {
-        "layout_direction": "banner_first",
+        "layout_direction": "products_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
         "overlay_opacity": 25,
@@ -323,6 +308,21 @@
         "primary_button_url": "shopify://pages/vara-laddboxar",
         "secondary_button_text": "",
         "secondary_button_url": ""
+      }
+    },
+    "bild_och_text_trnXfg": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Din väg till lägre elkostnader",
+        "text": "<p>Med en total energianalys får du en tydlig överblick över hur din fastighet använder energi och var du kan spara mest. Vi tittar på helheten – från produktion till förbrukning – och skapar en plan som sänker dina kostnader både på kort och lång sikt.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "left",
+        "image_button_text": "Så fungerar det",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
       }
     },
     "slider_sektion_Rd7AJK": {
@@ -790,8 +790,8 @@
     "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
-    "bild_och_text_ydyfhV",
     "slider_sektion_PkT3FL",
+    "bild_och_text_ydyfhV",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
     "bild_och_text_trnXfg",
