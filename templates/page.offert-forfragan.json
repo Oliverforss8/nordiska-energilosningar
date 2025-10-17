@@ -76,6 +76,30 @@
             "pattern": "",
             "rows": 4
           }
+        },
+        "service_option_LJYHdm": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        },
+        "service_option_hTB7iJ": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batteri",
+            "service_key": "",
+            "icon_svg": ""
+          }
+        },
+        "service_option_ejrxJB": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddbox",
+            "service_key": "",
+            "icon_svg": ""
+          }
         }
       },
       "block_order": [
@@ -83,7 +107,10 @@
         "form_field_7yPiPV",
         "form_field_xm978t",
         "form_field_eJ8QfB",
-        "form_field_7C9xYp"
+        "form_field_7C9xYp",
+        "service_option_LJYHdm",
+        "service_option_hTB7iJ",
+        "service_option_ejrxJB"
       ],
       "name": "Offertförfrågan",
       "settings": {
