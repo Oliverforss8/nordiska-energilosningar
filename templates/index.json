@@ -165,11 +165,11 @@
       "settings": {
         "background_color": "#ffffff",
         "title": "Ett smartare sätt att äga styra energi",
-        "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p></p><p></p><p><br/></p><ul><li> <strong>Bli din egen elproducent</strong></li><li> <strong>Lagra energin för när du behöver den</strong></li><li><strong>Optimera ditt hem med smart styrning</strong><br/><br/></li></ul>",
+        "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p></p><p></p><p><br/></p><p> <strong>Bli din egen elproducent</strong></p><p><br/> <strong>Lagra energin för när du behöver den</strong><br/></p><p><br/> <strong>Optimera ditt hem med smart styrning</strong><br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/Bra.png",
         "image_position": "right",
-        "image_button_text": "Knapp",
+        "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
@@ -238,9 +238,9 @@
         "background_color": "#ffffff",
         "title": "AI-styrningen tänker på elpriset så att du inte behöver",
         "text": "<p>AI-styrningen optimerar din energianvändning efter elpriset och ger dig maximal besparing. Ingår i alla våra solcells- och batteripaket.<br/><br/><br/></p>",
-        "media_type": "image",
+        "media_type": "video",
         "image": "shopify://shop_images/fronius-wattpilot-wallbox-home-flex-c_1_ad3a920d-7450-49a7-99e2-7554b62cf4bd.jpg",
-        "video": "shopify://files/videos/DJI_20000724034110_0081_D.MP4",
+        "video": "shopify://files/videos/家电手机2.mp4",
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
