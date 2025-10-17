@@ -437,8 +437,8 @@
         "product_card_MDr4Qn": {
           "type": "product_card",
           "settings": {
-            "product": "fronius-gen24-plus",
-            "title": "Fronius Gen24",
+            "product": "fronius-verto",
+            "title": "Fronius Verto",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Köp nu",
             "learn_more_url": "shopify://products/fronius-verto"
