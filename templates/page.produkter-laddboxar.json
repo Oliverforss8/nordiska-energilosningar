@@ -64,6 +64,26 @@
         "custom_id": ""
       }
     },
+    "product_meny_wtYNAA": {
+      "type": "product-meny",
+      "name": "Product Menu",
+      "settings": {
+        "heading": "Våra utvalda batterier",
+        "product_1": "dyness-stack100",
+        "product_2": "dyness-tower-pro",
+        "product_3": "fronius-reserva"
+      }
+    },
+    "product_meny_arymYD": {
+      "type": "product-meny",
+      "name": "Product Menu",
+      "settings": {
+        "heading": "Våra utvalda batterier",
+        "product_1": "dyness-stack100",
+        "product_2": "dyness-tower-pro",
+        "product_3": "fronius-reserva"
+      }
+    },
     "banner_med_3_produkter_nkMr87": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -296,16 +316,29 @@
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "product_meny_DjaKrd": {
+      "type": "product-meny",
+      "name": "Product Menu",
+      "settings": {
+        "heading": "Våra utvalda laddboxar",
+        "product_1": "charge-amps-luna",
+        "product_2": "",
+        "product_3": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_UadDG8",
     "bild_och_text_knappar_Ya3NQr",
+    "product_meny_wtYNAA",
+    "product_meny_arymYD",
     "banner_med_3_produkter_nkMr87",
     "avdrag_47f9Td",
     "bild_och_text_knappar_kAcza6",
     "banner_bild_mtUYxw",
-    "kontakt_form_MEdRdB"
+    "kontakt_form_MEdRdB",
+    "product_meny_DjaKrd"
   ]
 }
