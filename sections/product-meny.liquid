@@ -36,6 +36,26 @@
         {{ section.settings.product_3.title }}
       </button>
     {% endif %}
+
+    {% if section.settings.product_4 != blank %}
+      <button
+        class="product-tab text relative px-[8px] py-[12px] text-[18px] transition-colors md:px-[10px] md:py-[15px] md:text-[25px]"
+        data-product="product-4"
+        style="color: #171717; opacity: 0.3; background: none; border: none;"
+      >
+        {{ section.settings.product_4.title }}
+      </button>
+    {% endif %}
+
+    {% if section.settings.product_5 != blank %}
+      <button
+        class="product-tab text relative px-[8px] py-[12px] text-[18px] transition-colors md:px-[10px] md:py-[15px] md:text-[25px]"
+        data-product="product-5"
+        style="color: #171717; opacity: 0.3; background: none; border: none;"
+      >
+        {{ section.settings.product_5.title }}
+      </button>
+    {% endif %}
   </div>
 
   <!-- Product Content Area -->
@@ -63,13 +83,23 @@
             id="product-description"
           ></div>
           <div class="flex justify-start pt-[25px] md:pt-[50px]">
-            <button
+            <a
               id="product-link"
-              class="knappetikett flex flex-row items-center gap-[15px] rounded-[8px] px-[18px] py-[14px] text-[14px] text-[#171717] md:gap-[20px] md:rounded-[10px] md:px-[20px] md:py-[17px] md:text-[16px]"
-              style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #E9A600; text-decoration: none;"
+              class="knappetikett flex flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717]"
+              style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%); text-decoration: none;"
             >
               Läs mer
-            </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -105,6 +135,24 @@
         url: "{{ section.settings.product_3.url }}",
         image: "{{ section.settings.product_3.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_3.featured_image.alt | default: section.settings.product_3.title | escape }}"
+      {% endif %}
+    },
+    'product-4': {
+      {% if section.settings.product_4 != blank %}
+        title: "{{ section.settings.product_4.title | escape }}",
+        description: `{{ section.settings.product_4.description | strip_html }}`,
+        url: "{{ section.settings.product_4.url }}",
+        image: "{{ section.settings.product_4.featured_image | image_url: width: 450 }}",
+        alt: "{{ section.settings.product_4.featured_image.alt | default: section.settings.product_4.title | escape }}"
+      {% endif %}
+    },
+    'product-5': {
+      {% if section.settings.product_5 != blank %}
+        title: "{{ section.settings.product_5.title | escape }}",
+        description: `{{ section.settings.product_5.description | strip_html }}`,
+        url: "{{ section.settings.product_5.url }}",
+        image: "{{ section.settings.product_5.featured_image | image_url: width: 450 }}",
+        alt: "{{ section.settings.product_5.featured_image.alt | default: section.settings.product_5.title | escape }}"
       {% endif %}
     }
   };
@@ -181,6 +229,16 @@
       "type": "product",
       "id": "product_3",
       "label": "Product 3"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "Product 4"
+    },
+    {
+      "type": "product",
+      "id": "product_5",
+      "label": "Product 5"
     }
   ],
   "presets": [
