@@ -19,10 +19,38 @@
             "review_text": "Fantastisk kvalitet och snabb leverans.",
             "customer_name": "Kundnamn"
           }
+        },
+        "upsell_product_MQBrpG": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "solis-s6-eh3p10-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_wwjneR": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "solinteg",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
         }
       },
       "block_order": [
-        "product_review_Wg6f6U"
+        "product_review_Wg6f6U",
+        "upsell_product_MQBrpG",
+        "upsell_product_wwjneR"
       ],
       "settings": {
         "show_installation": true,

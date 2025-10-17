@@ -12,10 +12,10 @@
     "main": {
       "type": "product",
       "blocks": {
-        "upsell_product_GQw9tB": {
+        "upsell_product_DY4Qkm": {
           "type": "upsell_product",
           "settings": {
-            "upsell_product": "solis-s6-eh3p10-kw",
+            "upsell_product": "saj-hs3-hybridvaxelriktare",
             "upsell_variant_id": "",
             "enable_condition": false,
             "option_index": "1",
@@ -25,10 +25,10 @@
             "upsell_description": ""
           }
         },
-        "upsell_product_DY4Qkm": {
+        "upsell_product_p4g39x": {
           "type": "upsell_product",
           "settings": {
-            "upsell_product": "solinteg",
+            "upsell_product": "saj-hs3-dc-laddare",
             "upsell_variant_id": "",
             "enable_condition": false,
             "option_index": "1",
@@ -40,8 +40,8 @@
         }
       },
       "block_order": [
-        "upsell_product_GQw9tB",
-        "upsell_product_DY4Qkm"
+        "upsell_product_DY4Qkm",
+        "upsell_product_p4g39x"
       ],
       "settings": {
         "show_installation": true,

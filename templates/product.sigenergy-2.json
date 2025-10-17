@@ -11,9 +11,41 @@
   "sections": {
     "main": {
       "type": "product",
+      "blocks": {
+        "upsell_product_Y9arBB": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "sigenstor-1",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_9eePpJ": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "sigenergy-evac",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "upsell_product_Y9arBB",
+        "upsell_product_9eePpJ"
+      ],
       "settings": {
-        "show_installation": false,
-        "installation_product": "",
+        "show_installation": true,
+        "installation_product": "installation",
         "installation_title": "",
         "installation_description": "",
         "green_deduction_1_title": "Grönt avdrag 1",
