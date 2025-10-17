@@ -161,7 +161,7 @@
         "text": "<p>Laddboxar gör det möjligt att driva gårdens fordon klimatsmart och framtidssäkert – direkt från den egna solenergin.<br/><br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
-        "image_position": "left",
+        "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -233,7 +233,7 @@
         "text": "<p>Med egen elproduktion minskar du elkostnaderna, stärker lönsamheten och gör gården mindre sårbar för framtida prisökningar.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
-        "image_position": "left",
+        "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
