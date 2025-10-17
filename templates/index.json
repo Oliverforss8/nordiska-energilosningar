@@ -165,7 +165,7 @@
       "settings": {
         "background_color": "#ffffff",
         "title": "Ett smartare sätt att styra energi",
-        "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p></p><p></p><p><br/></p><p> <strong>Bli din egen elproducent</strong></p><p><br/> <strong>Lagra energin för när du behöver den</strong><br/></p><p><br/> <strong>Optimera ditt hem med smart styrning</strong><br/><br/></p>",
+        "text": "<p><br/>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p><p></p><p></p><p><br/></p><ul><li> <strong>Bli din egen elproducent</strong></li><li><strong> Lagra energin för när du behöver den</strong><br/></li><li><strong>Optimera ditt hem med smart styrning</strong><br/><br/></li></ul>",
         "media_type": "image",
         "image": "shopify://shop_images/Bra.png",
         "image_position": "right",
@@ -437,8 +437,8 @@
         "product_card_MDr4Qn": {
           "type": "product_card",
           "settings": {
-            "product": "fronius-gen24-plus",
-            "title": "Fronius Gen24",
+            "product": "fronius-verto",
+            "title": "Fronius Verto",
             "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Köp nu",
             "learn_more_url": "shopify://products/fronius-verto"
@@ -621,6 +621,7 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
+        "background_image": "shopify://shop_images/solcellsbatteri-saj-hs3-2n.jpg",
         "header_button_text": "Solis + Dyness",
         "header_button_url": "shopify://collections/batteri",
         "heading": "Smart energi till rätt pris",
