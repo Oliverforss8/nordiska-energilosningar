@@ -21,7 +21,7 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
         "overlay_opacity": 20,
-        "heading": "Lagra din solengeri",
+        "heading": "Lagra din solengeri och kapa effekttoppar",
         "subheading": "Funderar du på att investera i batterilagring?\nVi hjälper dig hela vägen, från rätt dimensionering till färdig installation!",
         "button_text": "Våra batterier",
         "button_url": "shopify://collections/batteri"
@@ -31,7 +31,7 @@
       "type": "product-meny",
       "name": "Product Menu",
       "settings": {
-        "heading": "Våra batterier",
+        "heading": "Våra utvalda batterier",
         "product_1": "dyness-stack100",
         "product_2": "dyness-tower-pro",
         "product_3": "fronius-reserva"
