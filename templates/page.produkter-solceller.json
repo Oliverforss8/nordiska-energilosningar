@@ -21,9 +21,9 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_18.png",
         "overlay_opacity": 20,
-        "heading": "Funderar du på att investera i solceller?",
-        "subheading": "Vi hjälper dig hela vägen! Från projektering till färdig installation",
-        "button_text": "Våra solceller",
+        "heading": "En extra batterimodul på köpet!",
+        "subheading": "När du väljer solceller och batteri från Nordiska Energilösningar ingår just nu en extra batterimodul – för maximal energinytta hemma.",
+        "button_text": "Fri offert",
         "button_url": "shopify://collections/solceller"
       }
     },
@@ -127,6 +127,25 @@
         "primary_button_url": "shopify://pages/support-om-oss",
         "secondary_button_text": "Företag",
         "secondary_button_url": "shopify://metaobjects/foretag/foretag"
+      }
+    },
+    "banner_bild_aLwFVg": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "En extra batterimodul på köpet!",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
       }
     },
     "bild_och_text_fF7gV6": {
@@ -400,25 +419,6 @@
         "heading": "Fri rådgivning och offert",
         "header_button_text": "",
         "header_button_url": ""
-      }
-    },
-    "banner_bild_aLwFVg": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "image",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Banner rubrik",
-        "description": "Banner beskrivning",
-        "primary_button_text": "Primär knapp",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
       }
     }
   },
