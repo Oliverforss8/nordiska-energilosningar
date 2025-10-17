@@ -32,7 +32,7 @@
           "settings": {
             "media_type": "image",
             "background_image": "shopify://shop_images/IMG_1685_e17e381a-cffe-4a45-81c1-9eadc44b3716.jpg",
-            "overlay_opacity": 0,
+            "overlay_opacity": 35,
             "heading": "Kompletta batteripaket \nfrån 37 900:-",
             "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
             "button_text": "Läs mer",
@@ -71,7 +71,7 @@
       ],
       "name": "Hero slider",
       "settings": {
-        "autoplay_speed": 7000
+        "autoplay_speed": 9000
       }
     },
     "ikon_lankar_x8tm4P": {
