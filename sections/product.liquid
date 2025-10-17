@@ -428,8 +428,12 @@
                   </div>
                 {% endif %}
 
-                <!-- Green Deduction Options (always visible) -->
-                <div class="green-deduction-wrapper pt-[15px]" id="green-deduction-wrapper">
+                <!-- Green Deduction Options (only visible when installation is selected) -->
+                <div
+                  class="green-deduction-wrapper pt-[15px]"
+                  id="green-deduction-wrapper"
+                  style="display: none;"
+                >
                   <div class="rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
                     <div class="headline1 mb-[15px] text-[18px] md:text-[20px]">
                       Välj grönt avdrag
@@ -1133,8 +1137,15 @@
   }
 
   .green-deduction-wrapper {
-    transition: all 0.4s ease;
+    transition:
+      opacity 0.3s ease,
+      max-height 0.3s ease;
     overflow: hidden;
+  }
+
+  .green-deduction-wrapper[style*='display: none'] {
+    opacity: 0;
+    max-height: 0;
   }
 
   /* Fixed Bottom Price Bar */
@@ -1434,6 +1445,33 @@
     document.addEventListener('DOMContentLoaded', evaluateUpsells);
   })();
 
+  // Installation checkbox handling - show/hide green deduction
+  document.addEventListener('DOMContentLoaded', function () {
+    const installationCheckbox = document.getElementById('installation-checkbox');
+    const greenDeductionWrapper = document.getElementById('green-deduction-wrapper');
+
+    if (installationCheckbox && greenDeductionWrapper) {
+      // Show green deduction if installation is checked by default
+      if (installationCheckbox.checked) {
+        greenDeductionWrapper.style.display = 'block';
+      }
+
+      // Toggle green deduction visibility when installation checkbox changes
+      installationCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+          greenDeductionWrapper.style.display = 'block';
+        } else {
+          greenDeductionWrapper.style.display = 'none';
+          // Uncheck all green deduction radios when hiding
+          const radios = greenDeductionWrapper.querySelectorAll('.green-deduction-radio');
+          radios.forEach(function (radio) {
+            radio.checked = false;
+          });
+        }
+      });
+    }
+  });
+
   // Service option button handling
   document.addEventListener('DOMContentLoaded', function () {
     const serviceOptions = document.querySelectorAll('.service-option');
@@ -1502,36 +1540,36 @@
     },
     {
       "type": "header",
-      "content": "Grönt avdrag 1"
+      "content": "Grönt avdrag (visas endast när installation är vald)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Grönt avdrag-alternativen visas automatiskt när kunden väljer installation. Om installation avmarkeras döljs alternativen."
     },
     {
       "type": "text",
       "id": "green_deduction_1_title",
-      "label": "Titel",
+      "label": "Titel för alternativ 1",
       "default": "Grönt avdrag 1",
-      "info": "Visas endast om installation är vald. Rabattkod: AVDRAG1"
+      "info": "Rabattkod: AVDRAG1"
     },
     {
       "type": "textarea",
       "id": "green_deduction_1_description",
-      "label": "Beskrivning",
+      "label": "Beskrivning för alternativ 1",
       "default": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT)."
-    },
-    {
-      "type": "header",
-      "content": "Grönt avdrag 2"
     },
     {
       "type": "text",
       "id": "green_deduction_2_title",
-      "label": "Titel",
+      "label": "Titel för alternativ 2",
       "default": "Grönt avdrag 2",
-      "info": "Visas endast om installation är vald. Rabattkod: AVDRAG2"
+      "info": "Rabattkod: AVDRAG2"
     },
     {
       "type": "textarea",
       "id": "green_deduction_2_description",
-      "label": "Beskrivning",
+      "label": "Beskrivning för alternativ 2",
       "default": "Alternativ grönt avdrag med andra villkor."
     }
   ],
