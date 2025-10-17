@@ -148,7 +148,7 @@
               <!-- Quantity selector -->
               <div class="flex justify-start md:hidden">
                 <div
-                  class="headline1 flex min-h-[48px] flex-row items-center gap-[10px] rounded-[10px] bg-transparent py-[10px] pl-[20px] pr-[15px] text-[18px] md:text-[20px]"
+                  class="headline1 flex min-h-[48px] flex-row items-center gap-[10px] rounded-[25px] bg-transparent py-[10px] pl-[20px] pr-[15px] text-[18px] md:text-[20px]"
                   style="border: 1px solid #171717 !important;"
                 >
                   <span id="quantity-display-mobile">1</span>
@@ -201,7 +201,7 @@
                 </div>
               </div>
               {% unless product.has_only_default_variant %}
-                <div class="variant-selectors rounded-[10px]  border  pt-[50px] ">
+                <div class="variant-selectors rounded-[25px]  border  pt-[50px] ">
                   {% for option in product.options_with_values %}
                     <div class="variant-option">
                       <label class="body1 mb-2 block text-[16px] font-medium md:text-[18px]">
@@ -209,7 +209,7 @@
                       </label>
                       <select
                         style="  border: 1px solid #171717 !important; "
-                        class="variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[12px] text-[16px] focus:outline-none md:text-[18px] "
+                        class="variant-select body1 w-full rounded-[25px] border border-[#171717] bg-white px-[15px] py-[12px] text-[16px] focus:outline-none md:text-[18px] "
                         data-option-position="{{ option.position }}"
                         data-option-name="{{ option.name }}"
                       >
@@ -344,7 +344,7 @@
                                         >
                                         <select
                                           id="upsell-variant-{{ upsell_product.id }}"
-                                          class="upsell-variant-select body1 w-full rounded-[10px] border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] focus:outline-none md:text-[16px]"
+                                          class="upsell-variant-select body1 w-full rounded-[25px] border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] focus:outline-none md:text-[16px]"
                                           style="  border: 1px solid #171717 !important; "
                                           data-product-id="{{ upsell_product.id }}"
                                         >
@@ -549,14 +549,14 @@
                   </div>
                 </div>
                 <button
-                  class="knappetikett buy-now-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[20px] rounded-[10px] px-[20px] py-[17px] text-[#171717] md:w-auto"
-                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #E9A600;"
+                  class="knappetikett buy-now-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717] md:w-auto"
+                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                   data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 >
                   Köp nu
                 </button>
                 <button
-                  class="headline1 add-to-cart-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[10px] rounded-[10px] bg-transparent px-[20px] py-[15px] text-[18px] md:w-auto md:text-[20px]"
+                  class="headline1 add-to-cart-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[10px] rounded-[25px] bg-transparent px-[20px] py-[15px] text-[18px] md:w-auto md:text-[20px]"
                   style="border: 1px solid #171717 !important;"
                   data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 >
@@ -692,27 +692,27 @@
                     method="POST"
                   >
                     <input
-                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      class="body1 h-[45px] rounded-[25px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                       placeholder="För- & efternamn"
                       type="text"
                       name="name"
                       required
                     >
                     <input
-                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      class="body1 h-[45px] rounded-[25px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                       placeholder="E-postadress"
                       type="email"
                       name="email"
                       required
                     >
                     <input
-                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      class="body1 h-[45px] rounded-[25px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                       placeholder="Telefonnummer"
                       type="tel"
                       name="phone"
                     >
                     <input
-                      class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                      class="body1 h-[45px] rounded-[25px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                       placeholder="Adress"
                       type="text"
                       name="address"
@@ -726,7 +726,7 @@
                     <div class="flex flex-col gap-[10px] md:flex-row">
                       <button
                         type="button"
-                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[25px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
                         data-service="solceller"
                       >
                         <svg
@@ -749,7 +749,7 @@
                       </button>
                       <button
                         type="button"
-                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[25px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
                         data-service="laddbox"
                       >
                         <svg
@@ -777,7 +777,7 @@
                       </button>
                       <button
                         type="button"
-                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                        class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[25px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
                         data-service="batteri"
                       >
                         <svg
@@ -832,7 +832,8 @@
                     >
                     <button
                       type="submit"
-                      class="headline1 quote-submit-btn  flex w-full flex-row items-center justify-center gap-[15px] rounded-[10px] bg-[#EFD959] py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
+                      class="headline1 quote-submit-btn  flex w-full flex-row items-center justify-center gap-[15px] rounded-[25px] py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
+                      style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       Få ditt förslag
                       <svg
@@ -890,7 +891,7 @@
         </div>
         <div class="flex-shrink-0">
           <button
-            class="headline1 add-to-cart-btn-bottom flex min-h-[48px] flex-row items-center justify-center gap-[10px] rounded-[10px] bg-transparent px-[20px] py-[15px] text-[16px] text-[#171717] transition-colors duration-200 hover:bg-gray-50 md:text-[18px]"
+            class="headline1 add-to-cart-btn-bottom flex min-h-[48px] flex-row items-center justify-center gap-[10px] rounded-[25px] bg-transparent px-[20px] py-[15px] text-[16px] text-[#171717] transition-colors duration-200 hover:bg-gray-50 md:text-[18px]"
             style="border: 1px solid #171717 !important; color: #171717 !important;"
             data-variant-id="{{ product.selected_or_first_available_variant.id }}"
           >
@@ -1235,7 +1236,7 @@
     gap: 8px;
     min-height: 48px;
     padding: 12px 32px;
-    border-radius: 10px;
+    border-radius: 25px;
     font-size: 16px;
     font-weight: 400;
     color: #171717;
@@ -1416,6 +1417,39 @@
 
     document.addEventListener('DOMContentLoaded', evaluateUpsells);
   })();
+
+  // Service option button handling
+  document.addEventListener('DOMContentLoaded', function () {
+    const serviceOptions = document.querySelectorAll('.service-option');
+
+    serviceOptions.forEach(function (button) {
+      button.addEventListener('click', function () {
+        const isSelected = this.getAttribute('data-selected') === 'true';
+
+        if (isSelected) {
+          // Deselect this option
+          this.style.background = 'white';
+          this.setAttribute('data-selected', 'false');
+        } else {
+          // Deselect all other options first
+          serviceOptions.forEach(function (opt) {
+            opt.style.background = 'white';
+            opt.setAttribute('data-selected', 'false');
+          });
+
+          // Select this option
+          this.style.background = 'linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%)';
+          this.setAttribute('data-selected', 'true');
+
+          // Update hidden field
+          const serviceField = document.getElementById('selected_service');
+          if (serviceField) {
+            serviceField.value = this.getAttribute('data-service');
+          }
+        }
+      });
+    });
+  });
 </script>
 
 {% schema %}
