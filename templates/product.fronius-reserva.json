@@ -198,10 +198,31 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "banner_bild_xNxJV9": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva_detail_2_1030845b-b73a-4f5b-9759-f9a52299746c.png",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Kraften i trygg energilagring",
+        "description": "ronius Reserva är ett europeiskt batterilager utvecklat av Fronius i Österrike. Det lagrar din överskottsel för användning när solen inte skiner och ger hög effektivitet, lång livslängd och trygg drift – helt i linje med Fronius välkända premiumkvalitet.",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
+    "banner_bild_xNxJV9",
     "tekniska_specifikationer_4DcicN",
     "faq_produkt_kccxUK",
     "relaterade_produkter"
