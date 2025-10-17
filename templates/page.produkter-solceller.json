@@ -216,51 +216,6 @@
         "secondary_button_url": ""
       }
     },
-    "bild_och_text_knappar_hd7RJH": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_7m9wVQ": {
-          "type": "button",
-          "settings": {
-            "text": "Trygg drift",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_NanPdi": {
-          "type": "button",
-          "settings": {
-            "text": "Lägre driftkostnader",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_fjXmVE": {
-          "type": "button",
-          "settings": {
-            "text": "Garanti",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_7m9wVQ",
-        "button_NanPdi",
-        "button_fjXmVE"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Teckna serviceavtal",
-        "text": "<p>Teckna serviceavtal för trygg och effektiv drift. Oavsett vem som installerat ditt system ger våra avtal långsiktig säkerhet och optimal funktion. När garantin löper ut erbjuder vi extra skydd, särskilt för företag, bostadsrättsföreningar och fastighetsägare. Våra flexibla avtal maximerar både driftsäkerhet och avkastning.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/solceller-section3-img-1920.webp",
-        "image_position": "left",
-        "image_button_text": "Teckna avtal",
-        "image_button_link": "shopify://pages/offert-forfragan",
-        "custom_id": ""
-      }
-    },
     "avdrag_cwFWrR": {
       "type": "avdrag",
       "blocks": {
@@ -328,7 +283,7 @@
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Dokumentation under hela projektet",
-        "text": "<p>TextFör att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
+        "text": "<p>För att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
         "media_type": "image",
         "image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
         "image_position": "right",
@@ -456,7 +411,6 @@
     "bild_och_text_fF7gV6",
     "banner_bild_cwiWWd",
     "hur_KCyVH6",
-    "bild_och_text_knappar_hd7RJH",
     "avdrag_cwFWrR",
     "bild_och_text_knappar_PdkfaH",
     "kontakt_form_7kGfXQ"
