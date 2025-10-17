@@ -19,7 +19,7 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/Namnlos_design.jpg",
+        "background_image": "shopify://shop_images/image_16.png",
         "overlay_opacity": 30,
         "heading": "Trött på höga elräkningar? Här är vår lösning.",
         "subheading": "Vi vet hur det känns när elräkningen blir onödigt hög. Därför har vi skapat en enkel och smart helhetslösning som gör att du får kontroll över dina kostnader – och slipper oron över nästa faktura.",
@@ -92,7 +92,7 @@
         "title": "Välj en heltäckande lösning för maximal energibesparing",
         "text": "<p>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_18.png",
+        "image": "shopify://shop_images/Ai_solceller.png",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
