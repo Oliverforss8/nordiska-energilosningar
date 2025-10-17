@@ -67,8 +67,9 @@
                 %}
                 <button
                   type="button"
-                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[25px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[25px] px-[15px] py-[10px] text-[18px] md:text-[20px]"
                   data-service="{{ service_key }}"
+                  data-selected="false"
                 >
                   {% if block.settings.icon_svg != blank %}
                     {{ block.settings.icon_svg }}
@@ -343,174 +344,36 @@
   </div>
 </section>
 
-{% javascript %}
-  // Quote form functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    console.log('Quote form script loaded in section!');
+{% stylesheet %}
+  /* Service option button styling */
+  button.service-option {
+    transition: all 0.3s ease;
+    border: 2px solid #e5e5e5;
+    cursor: pointer;
+    background: white;
+  }
 
-    const serviceOptions = document.querySelectorAll('.service-option');
-    const selectedServiceInput = document.getElementById('selected_service');
-    const quoteSubmitBtn = document.querySelector('.quote-submit-btn');
+  button.service-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.1);
+  }
 
-    console.log('Found service options:', serviceOptions.length);
+  /* Selected state - using !important to override everything */
+  button.service-option[data-selected='true'] {
+    background: linear-gradient(135deg, #ffa94d 0%, #ff4e33 100%) !important;
+    border-color: #ff4e33 !important;
+    box-shadow: 0 4px 16px rgba(255, 78, 51, 0.3) !important;
+  }
 
-    // Handle service option selection (multiple selection)
-    serviceOptions.forEach((option, index) => {
-      console.log('Setting up listener for option', index);
+  /* Default state - ensure white background */
+  button.service-option[data-selected='false'] {
+    background: white !important;
+    border-color: #e5e5e5 !important;
+    box-shadow: none !important;
+  }
+{% endstylesheet %}
 
-      option.addEventListener('click', function (e) {
-        e.preventDefault();
-        console.log('Button clicked!', this);
-
-        const service = this.getAttribute('data-service');
-        const isSelected = this.getAttribute('data-selected') === 'true';
-
-        console.log('Service:', service, 'Is selected:', isSelected);
-
-        if (isSelected) {
-          // Deselect this option
-          this.style.background = 'white';
-          this.setAttribute('data-selected', 'false');
-          console.log('Deselected:', service);
-        } else {
-          // Select this option
-          this.style.background = 'linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%)';
-          this.setAttribute('data-selected', 'true');
-          console.log('Selected:', service);
-        }
-
-        // Update hidden input with all selected services
-        const selectedServices = [];
-        serviceOptions.forEach((opt) => {
-          if (opt.getAttribute('data-selected') === 'true') {
-            selectedServices.push(opt.getAttribute('data-service'));
-          }
-        });
-
-        if (selectedServiceInput) {
-          selectedServiceInput.value = selectedServices.join(', ');
-        }
-
-        console.log('All selected services:', selectedServices);
-      });
-    });
-
-    // Handle button click instead of form submit
-    const quoteSubmitBtn = document.querySelector('.quote-submit-btn');
-    const quoteForm = document.getElementById('quote-form');
-    
-    if (quoteSubmitBtn && quoteForm) {
-      quoteSubmitBtn.addEventListener('click', async function (e) {
-        e.preventDefault();
-        console.log('Submit button clicked');
-
-        // Custom validation with data-required attribute
-        const selectedService = selectedServiceInput ? selectedServiceInput.value : '';
-
-        // Check all fields marked as required via data-required
-        const requiredFields = quoteForm.querySelectorAll('[data-required="true"]');
-        console.log('Required fields found:', requiredFields.length);
-        
-        for (let field of requiredFields) {
-          const value = field.value ? field.value.trim() : '';
-          console.log('Checking field:', field.name, 'Value:', value);
-          
-          if (!value) {
-            const placeholder = field.getAttribute('placeholder') || 'Detta fält';
-            alert(`Vänligen fyll i: ${placeholder}`);
-            field.focus();
-            return;
-          }
-
-          // Check email format if it's an email field
-          if (field.type === 'email') {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(value)) {
-              alert('Vänligen ange en giltig e-postadress');
-              field.focus();
-              return;
-            }
-          }
-
-          // Check pattern if specified via data-pattern
-          const dataPattern = field.getAttribute('data-pattern');
-          if (dataPattern) {
-            try {
-              const pattern = new RegExp(dataPattern);
-              if (!pattern.test(value)) {
-                const placeholder = field.getAttribute('placeholder') || 'Detta fält';
-                alert(`Ogiltigt format för: ${placeholder}`);
-                field.focus();
-                return;
-              }
-            } catch (e) {
-              console.error('Invalid pattern:', dataPattern, e);
-            }
-          }
-        }
-
-        if (!selectedService || selectedService.trim() === '') {
-          alert('Vänligen välj minst en tjänst');
-          return;
-        }
-        
-        console.log('All validation passed, submitting...');
-
-        // Show loading state
-        const originalText = quoteSubmitBtn.innerHTML;
-        quoteSubmitBtn.innerHTML = 'Skickar...';
-        quoteSubmitBtn.disabled = true;
-
-        try {
-          // Submit to Formspree
-          const formData = new FormData(quoteForm);
-
-            const response = await fetch('https://formspree.io/f/mdkllzwo', {
-              method: 'POST',
-              body: formData,
-              headers: {
-                Accept: 'application/json',
-              },
-            });
-
-            if (response.ok) {
-              // Hide the form section and show the success section
-              const formSection = document.querySelector('.quote-form-section');
-              const successSection = document.querySelector('.quote-success-section');
-
-              if (formSection && successSection) {
-                formSection.style.display = 'none';
-                successSection.style.display = 'block';
-              } else {
-                // Fallback to alert if sections not found
-              alert('Tack för din förfrågan! Vi återkommer inom kort.');
-            }
-
-            // Reset form
-            quoteForm.reset();
-            if (selectedServiceInput) selectedServiceInput.value = '';
-
-              // Reset service buttons
-              serviceOptions.forEach((opt) => {
-                opt.style.background = 'white';
-                opt.setAttribute('data-selected', 'false');
-              });
-            } else {
-              throw new Error('Form submission failed');
-            }
-          } catch (error) {
-            console.error('Error submitting form:', error);
-            alert('Det uppstod ett fel när formuläret skickades. Vänligen försök igen.');
-          } finally {
-            // Reset button
-            quoteSubmitBtn.innerHTML = originalText;
-            quoteSubmitBtn.disabled = false;
-          }
-        }
-      });
-    }
-  });
-{% endjavascript %}
+<script src="{{ 'quote-form.js' | asset_url }}" defer></script>
 
 {% schema %}
 {

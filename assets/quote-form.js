@@ -1,51 +1,62 @@
 // Quote form functionality
-console.log('Quote form script loaded!');
-
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM loaded, setting up form...');
-
-  // Check if quote form exists on this page
-  const quoteForm = document.getElementById('quote-form');
-  if (!quoteForm) {
-    console.log('Quote form not found on this page, skipping setup');
+  // Prevent duplicate initialization
+  if (window.quoteFormInitialized) {
+    console.log('Quote form already initialized, skipping...');
     return;
   }
+  window.quoteFormInitialized = true;
+
+  console.log('Quote form script loaded!');
 
   const serviceOptions = document.querySelectorAll('.service-option');
   const selectedServiceInput = document.getElementById('selected_service');
   const quoteSubmitBtn = document.querySelector('.quote-submit-btn');
+  const quoteForm = document.getElementById('quote-form');
 
-  console.log('Elements found:');
-  console.log('- Service options:', serviceOptions.length);
-  console.log('- Selected service input:', selectedServiceInput);
-  console.log('- Submit button:', quoteSubmitBtn);
+  console.log('Found service options:', serviceOptions.length);
+  console.log('Found submit button:', !!quoteSubmitBtn);
+  console.log('Found form:', !!quoteForm);
+  console.log('Found selectedServiceInput:', !!selectedServiceInput);
 
-  // Handle service option selection (multiple selection)
-  if (serviceOptions.length === 0) {
-    console.log('No service options found on quote form');
-    return;
+  if (!selectedServiceInput) {
+    console.error('ERROR: Cannot find #selected_service input!');
+  }
+  if (!quoteForm) {
+    console.error('ERROR: Cannot find #quote-form!');
+  }
+  if (!quoteSubmitBtn) {
+    console.error('ERROR: Cannot find .quote-submit-btn button!');
   }
 
+  // Handle service option selection (multiple selection)
   serviceOptions.forEach((option, index) => {
-    console.log(`Setting up listener for option ${index}:`, option);
+    console.log('Setting up listener for option', index);
 
     option.addEventListener('click', function (e) {
       e.preventDefault();
-      console.log('Button clicked!', this);
+      e.stopPropagation(); // Prevent event bubbling
+      console.log('Service button clicked!', this);
 
       const service = this.getAttribute('data-service');
-      const isSelected = this.getAttribute('data-selected') === 'true';
+      const currentState = this.getAttribute('data-selected');
+      const isSelected = currentState === 'true';
 
-      console.log('Service:', service, 'Is selected:', isSelected);
+      console.log(
+        'Service:',
+        service,
+        'Current data-selected:',
+        currentState,
+        'Is selected:',
+        isSelected
+      );
 
       if (isSelected) {
         // Deselect this option
-        this.style.backgroundColor = 'white';
         this.setAttribute('data-selected', 'false');
         console.log('Deselected:', service);
       } else {
         // Select this option
-        this.style.backgroundColor = '#EFD959';
         this.setAttribute('data-selected', 'true');
         console.log('Selected:', service);
       }
@@ -58,34 +69,66 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
+      console.log('All selected services:', selectedServices);
+
       if (selectedServiceInput) {
         selectedServiceInput.value = selectedServices.join(', ');
+        console.log('Updated hidden input value to:', selectedServiceInput.value);
+      } else {
+        console.error('ERROR: selectedServiceInput is null, cannot update value!');
       }
-
-      console.log('All selected services:', selectedServices);
     });
   });
 
-  // Handle form submission (quoteForm already exists, checked above)
-  if (quoteForm) {
-    quoteForm.addEventListener('submit', async function (e) {
+  // Handle button click instead of form submit
+  if (quoteSubmitBtn && quoteForm) {
+    quoteSubmitBtn.addEventListener('click', async function (e) {
       e.preventDefault();
+      console.log('Submit button clicked');
 
-      // Basic validation
-      const name = this.querySelector('input[name="name"]');
-      const email = this.querySelector('input[name="email"]');
+      // Custom validation with data-required attribute
       const selectedService = selectedServiceInput ? selectedServiceInput.value : '';
 
-      if (!name || !name.value.trim()) {
-        alert('Vänligen fyll i ditt namn');
-        if (name) name.focus();
-        return;
-      }
+      // Check all fields marked as required via data-required
+      const requiredFields = quoteForm.querySelectorAll('[data-required="true"]');
+      console.log('Required fields found:', requiredFields.length);
 
-      if (!email || !email.value.trim()) {
-        alert('Vänligen fyll i din e-postadress');
-        if (email) email.focus();
-        return;
+      for (let field of requiredFields) {
+        const value = field.value ? field.value.trim() : '';
+        console.log('Checking field:', field.name, 'Value:', value);
+
+        if (!value) {
+          const placeholder = field.getAttribute('placeholder') || 'Detta fält';
+          alert(`Vänligen fyll i: ${placeholder}`);
+          field.focus();
+          return;
+        }
+
+        // Check email format if it's an email field
+        if (field.type === 'email') {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value)) {
+            alert('Vänligen ange en giltig e-postadress');
+            field.focus();
+            return;
+          }
+        }
+
+        // Check pattern if specified via data-pattern
+        const dataPattern = field.getAttribute('data-pattern');
+        if (dataPattern) {
+          try {
+            const pattern = new RegExp(dataPattern);
+            if (!pattern.test(value)) {
+              const placeholder = field.getAttribute('placeholder') || 'Detta fält';
+              alert(`Ogiltigt format för: ${placeholder}`);
+              field.focus();
+              return;
+            }
+          } catch (e) {
+            console.error('Invalid pattern:', dataPattern, e);
+          }
+        }
       }
 
       if (!selectedService || selectedService.trim() === '') {
@@ -93,62 +136,61 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      const submitBtn = this.querySelector('.quote-submit-btn');
+      console.log('All validation passed, submitting...');
 
       // Show loading state
-      if (submitBtn) {
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = 'Skickar...';
-        submitBtn.disabled = true;
+      const originalText = quoteSubmitBtn.innerHTML;
+      quoteSubmitBtn.innerHTML = 'Skickar...';
+      quoteSubmitBtn.disabled = true;
 
-        try {
-          // Submit to Formspree
-          const formData = new FormData(this);
+      try {
+        // Submit to Formspree
+        const formData = new FormData(quoteForm);
 
-          const response = await fetch('https://formspree.io/f/mdkllzwo', {
-            method: 'POST',
-            body: formData,
-            headers: {
-              Accept: 'application/json',
-            },
-          });
+        const response = await fetch('https://formspree.io/f/mdkllzwo', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+        });
 
-          if (response.ok) {
-            // Hide the form section and show the success section
-            const formSection = document.querySelector('.quote-form-section');
-            const successSection = document.querySelector('.quote-success-section');
+        if (response.ok) {
+          console.log('Form submitted successfully!');
 
-            if (formSection && successSection) {
-              formSection.style.display = 'none';
-              successSection.style.display = 'block';
-            } else {
-              // Fallback to alert if sections not found
-              alert('Tack för din förfrågan! Vi återkommer inom kort.');
-            }
+          // Hide the form section and show the success section
+          const formSection = document.querySelector('.quote-form-section');
+          const successSection = document.querySelector('.quote-success-section');
 
-            // Reset form
-            this.reset();
-            if (selectedServiceInput) selectedServiceInput.value = '';
-
-            // Reset service buttons
-            serviceOptions.forEach((opt) => {
-              opt.style.backgroundColor = 'white';
-              opt.setAttribute('data-selected', 'false');
-            });
+          if (formSection && successSection) {
+            formSection.style.display = 'none';
+            successSection.style.display = 'flex';
           } else {
-            throw new Error('Form submission failed');
+            // Fallback to alert if sections not found
+            alert('Tack för din förfrågan! Vi återkommer inom kort.');
           }
-        } catch (error) {
-          console.error('Error submitting form:', error);
-          alert('Det uppstod ett fel när formuläret skickades. Vänligen försök igen.');
-        } finally {
-          // Reset button
-          if (submitBtn) {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-          }
+
+          // Reset form
+          quoteForm.reset();
+          if (selectedServiceInput) selectedServiceInput.value = '';
+
+          // Reset service buttons
+          serviceOptions.forEach((opt) => {
+            opt.setAttribute('data-selected', 'false');
+          });
+        } else {
+          throw new Error('Form submission failed');
         }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Det uppstod ett fel när formuläret skickades. Vänligen försök igen.');
+      } finally {
+        // Reset button
+        quoteSubmitBtn.innerHTML = originalText;
+        quoteSubmitBtn.disabled = false;
       }
     });
+  } else {
+    console.error('Submit button or form not found!');
   }
 });
