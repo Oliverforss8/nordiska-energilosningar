@@ -28,7 +28,7 @@
               %}
               {% if field_type == 'textarea' %}
                 <textarea
-                  class="body1 min-h-[120px] rounded-[10px] bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                  class="body1 min-h-[120px] rounded-[25px] bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                   name="{{ field_name }}"
                   placeholder="{{ placeholder | escape }}"
                   {% if is_required %}
@@ -38,7 +38,7 @@
                 ></textarea>
               {% else %}
                 <input
-                  class="body1 h-[45px] rounded-[10px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                  class="body1 h-[45px] rounded-[25px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                   placeholder="{{ placeholder | escape }}"
                   type="{{ field_type }}"
                   name="{{ field_name }}"
@@ -66,7 +66,7 @@
                 %}
                 <button
                   type="button"
-                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[25px] bg-white px-[15px] py-[10px] text-[18px] md:text-[20px]"
                   data-service="{{ service_key }}"
                 >
                   {% if block.settings.icon_svg != blank %}
@@ -84,6 +84,20 @@
               {% endif %}
             {% endfor %}
           </div>
+
+          <!-- Message field -->
+          <div class="body1 flex flex-col gap-[5px] text-[20px] md:text-[25px]">
+            Meddelande
+            <span class="text-[13px] opacity-70 md:text-[15px]">
+              Ytterligare information eller frågor (valfritt)
+            </span>
+          </div>
+          <textarea
+            class="body1 min-h-[120px] rounded-[25px] bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+            name="message"
+            placeholder="Skriv ditt meddelande här..."
+            rows="4"
+          ></textarea>
 
           <!-- Hidden fields with product information -->
           <input
@@ -118,7 +132,8 @@
           >
           <button
             type="submit"
-            class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-[10px] bg-[#EFD959] py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
+            class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-[25px] py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
+            style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
           >
             Få ditt förslag
             <svg
@@ -341,12 +356,12 @@
 
         if (isSelected) {
           // Deselect this option
-          this.style.backgroundColor = 'white';
+          this.style.background = 'white';
           this.setAttribute('data-selected', 'false');
           console.log('Deselected:', service);
         } else {
           // Select this option
-          this.style.backgroundColor = '#EFD959';
+          this.style.background = 'linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%)';
           this.setAttribute('data-selected', 'true');
           console.log('Selected:', service);
         }
@@ -424,7 +439,7 @@
 
               // Reset service buttons
               serviceOptions.forEach((opt) => {
-                opt.style.backgroundColor = 'white';
+                opt.style.background = 'white';
                 opt.setAttribute('data-selected', 'false');
               });
             } else {
