@@ -24,10 +24,24 @@
             "upsell_title": "",
             "upsell_description": ""
           }
+        },
+        "upsell_product_tPxK4c": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "laddkabel-11-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
         }
       },
       "block_order": [
-        "upsell_product_Y9arBB"
+        "upsell_product_Y9arBB",
+        "upsell_product_tPxK4c"
       ],
       "settings": {
         "show_installation": true,
