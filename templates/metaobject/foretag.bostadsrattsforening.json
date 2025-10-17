@@ -22,6 +22,76 @@
         "button_url": ""
       }
     },
+    "bild_och_text_3HzmL4": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Solceller som gynnar alla boende",
+        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_JtxHzi": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Batterilagring för lägre kostnader",
+        "text": "<p>Genom att lagra solenergin kan elen användas under dygnets dyraste timmar. Det minskar effektavgifter och gör föreningen mer självförsörjande.<br/><br/></p>",
+        "media_type": "image",
+        "image_position": "left",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_HdDQVt": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Smarta laddlösningar",
+        "text": "<p>Installera laddboxar för medlemmar och gäster. Med rätt styrsystem kan ni enkelt hantera förbrukning, debitering och lastbalansering.<br/><br/></p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_BexaXj": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Solceller som gynnar alla boende",
+        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_pYUdTp": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Solceller som gynnar alla boende",
+        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "kontakt_form_aaeFxV": {
       "type": "kontakt-form",
       "blocks": {
@@ -117,76 +187,6 @@
         "heading": "Ta hjälp av oss",
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
-      }
-    },
-    "bild_och_text_3HzmL4": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Solceller som gynnar alla boende",
-        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
-        "media_type": "image",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_JtxHzi": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Solceller som gynnar alla boende",
-        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
-        "media_type": "image",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_HdDQVt": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Solceller som gynnar alla boende",
-        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
-        "media_type": "image",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_BexaXj": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Solceller som gynnar alla boende",
-        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
-        "media_type": "image",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_pYUdTp": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Solceller som gynnar alla boende",
-        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
-        "media_type": "image",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
       }
     }
   },
