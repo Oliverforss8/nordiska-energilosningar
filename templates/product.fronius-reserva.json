@@ -54,6 +54,98 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
+    "tekniska_specifikationer_4DcicN": {
+      "type": "tekniska-specifikationer",
+      "blocks": {
+        "specification_QHVb4Y": {
+          "type": "specification",
+          "settings": {
+            "label": "Batterityp",
+            "value": "LFP (LiFePO4)"
+          }
+        },
+        "specification_eXgJA8": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh (3-15 moduler)"
+          }
+        },
+        "specification_Kq8eVJ": {
+          "type": "specification",
+          "settings": {
+            "label": "Dimension",
+            "value": "B 591 * D 390 * H 1700mm"
+          }
+        },
+        "specification_bcgkVe": {
+          "type": "specification",
+          "settings": {
+            "label": "Antal laddcykler",
+            "value": "≥ 8000"
+          }
+        },
+        "specification_cRfidH": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        },
+        "specification_FmiPEY": {
+          "type": "specification",
+          "settings": {
+            "label": "C-värde",
+            "value": "1 C"
+          }
+        },
+        "specification_XjpgHY": {
+          "type": "specification",
+          "settings": {
+            "label": "Driftstemperatur",
+            "value": "- 20 – + 55 °C"
+          }
+        },
+        "specification_KPJfE8": {
+          "type": "specification",
+          "settings": {
+            "label": "IP-klass",
+            "value": "IP20"
+          }
+        },
+        "specification_YxTDDj": {
+          "type": "specification",
+          "settings": {
+            "label": "Kompatibel med växelriktare",
+            "value": "Solis, Solinteg"
+          }
+        }
+      },
+      "block_order": [
+        "specification_QHVb4Y",
+        "specification_eXgJA8",
+        "specification_Kq8eVJ",
+        "specification_bcgkVe",
+        "specification_cRfidH",
+        "specification_FmiPEY",
+        "specification_XjpgHY",
+        "specification_KPJfE8",
+        "specification_YxTDDj"
+      ],
+      "name": "Tekniska specifikationer",
+      "settings": {
+        "title": "Tekniska specifikationer",
+        "image_1": "shopify://shop_images/SE_Product_Image_Product_Rendering_Fronius_Reserva__2_Modules_5bcca880-fe90-400f-b676-14f3fb7bda51.png",
+        "image_2": "shopify://shop_images/SE_Product_Image_Product_Rendering_Fronius_Reserva__4_Modules_3c9dd51d-7523-4c06-868f-fdbda32615b5.png",
+        "image_3": "shopify://shop_images/SE_Product_Image_Product_Rendering_Fronius_Reserva___5_Modules_09553e67-7bd4-4b6b-8200-a1276b7963f3.png",
+        "product_name": "Produktnamn",
+        "stack_info": "Stack",
+        "description": "Produktbeskrivning här...",
+        "button_text": "Produktdatablad",
+        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250318/DynessSTACK100datasheet20250228EN.pdf",
+        "custom_id": ""
+      }
+    },
     "faq_produkt_kccxUK": {
       "type": "faq-produkt",
       "blocks": {
@@ -110,6 +202,7 @@
   },
   "order": [
     "main",
+    "tekniska_specifikationer_4DcicN",
     "faq_produkt_kccxUK",
     "relaterade_produkter"
   ]
