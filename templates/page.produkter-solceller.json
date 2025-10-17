@@ -401,6 +401,25 @@
         "header_button_text": "",
         "header_button_url": ""
       }
+    },
+    "banner_bild_aLwFVg": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -408,6 +427,7 @@
     "hero_lower_HxUwkQ",
     "icon_UQgYfa",
     "banner_med_3_produkter_k9TmHH",
+    "banner_bild_aLwFVg",
     "bild_och_text_fF7gV6",
     "banner_bild_cwiWWd",
     "hur_KCyVH6",
