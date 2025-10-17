@@ -16,7 +16,7 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/ae172ed2-6217-4349-a71e-7f3f7d029e9b_1.original.jpg",
         "overlay_opacity": 20,
-        "heading": "Maximera företagets lönsamhet med energilösningar",
+        "heading": "Sänk kostnader och framtidssäkra verksamheten",
         "subheading": "Sänk energikostnaderna, öka självförsörjningen och bidra till en hållbar framtid med skräddarsydda solcellslösningar för ert företag.",
         "button_text": "Be om offert",
         "button_url": ""
@@ -109,6 +109,96 @@
         "button_JLaLAc",
         "button_mJ8C6b",
         "button_yfdtqw"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Solceller för företag",
+        "text": "<p><br/>Genom att producera egen el minskar ni driftkostnaderna och blir mindre beroende av elmarknadens svängningar. Solenergi stärker också ert hållbarhetsarbete.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_19.png",
+        "image_position": "right",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_iMEHAT": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_iXmLka": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_Xe3BFg": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_YArdGL": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_iXmLka",
+        "button_Xe3BFg",
+        "button_YArdGL"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Maximera företagets lönsamhet med solceller",
+        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på exempelvis industri- och lagerlokaler passar utmärkt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en mer hållbar framtid.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_19.png",
+        "image_position": "right",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_nPrVg7": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_mtEF8q": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_KHH3cY": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_BMiBYD": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_mtEF8q",
+        "button_KHH3cY",
+        "button_BMiBYD"
       ],
       "name": "Bild och text med knappar",
       "settings": {
@@ -535,6 +625,8 @@
     "hero_lower_i4AUcN",
     "banner_med_lankar_agkbJm",
     "bild_och_text_knappar_TQdd96",
+    "bild_och_text_knappar_iMEHAT",
+    "bild_och_text_knappar_nPrVg7",
     "faq_produkt_WAWGp6",
     "lankar_nykFtk",
     "bild_och_text_knappar_T6tiXq",
