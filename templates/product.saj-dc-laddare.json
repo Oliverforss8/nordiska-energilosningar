@@ -22,6 +22,26 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
+    "banner_bild_FW6qKr": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "full",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/Residential-All-in-One-Solution.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 15,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "SAJ HS3 – integrerad laddning för smartare energi",
+        "description": "HS3 kombinerar solenergi, batterilagring och elbilsladdning i ett enda system – effektivt, platsbesparande och fullt optimerat för egenproducerad el.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
     "tekniska_specifikationer_QwhGhj": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -243,25 +263,6 @@
         "custom_id": "",
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "banner_bild_FW6qKr": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "image",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "SAJ HS3 – integrerad laddning för smartare energi",
-        "description": "HS3 kombinerar solenergi, batterilagring och elbilsladdning i ett enda system – effektivt, platsbesparande och fullt optimerat för egenproducerad el.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
       }
     },
     "relaterade_produkter": {
