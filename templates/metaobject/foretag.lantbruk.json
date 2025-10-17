@@ -121,8 +121,8 @@
       ],
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Energilagring för lantbruket",
-        "text": "<p>Energilagring låter lantbruket använda egen el när den behövs, minskar köpt el och sänker kostnader. Batterier kapar effekttoppar, ger reservkraft och ökar självförsörjning samt energieffektivitet.</p>",
+        "title": "Batterier som ger kontroll",
+        "text": "<p>Med energilagring kan du nyttja din egen el även när solen inte skiner. Det minskar behovet av köpt el och jämnar ut topparna i förbrukningen.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
         "image_position": "left",
