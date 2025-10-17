@@ -68,8 +68,8 @@
       "type": "product-meny",
       "name": "Product Menu",
       "settings": {
-        "heading": "Våra utvalda batterier",
-        "product_1": "dyness-stack100",
+        "heading": "Våra utvalda laddboxar",
+        "product_1": "charge-amps-luna",
         "product_2": "dyness-tower-pro",
         "product_3": "fronius-reserva"
       }

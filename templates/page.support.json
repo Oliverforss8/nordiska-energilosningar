@@ -17,7 +17,7 @@
       "type": "hero-lower",
       "name": "Hero Lower",
       "settings": {
-        "media_type": "video",
+        "media_type": "image",
         "background_image": "shopify://shop_images/test_for_hero_2.png",
         "background_video": "shopify://files/videos/1080.mp4",
         "overlay_opacity": 30,
@@ -31,6 +31,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Vår historira",
         "text": "<p>Nordiska Energilösningar grundades 2024 av Robert och Emilia Karlsson.  Robert har lång erfarenhet inom solenergi, batterilagring och smarta energisystem, med djup teknisk kompetens och ett starkt branschnätverk. Emilia har en bakgrund inom ekonomi och ett tydligt fokus på affärsmässiga och hållbara lösningar.Tillsammans erbjuder de trygga, effektiva och framtidssäkrade energilösningar för både privatpersoner och företag, som kombinerar teknisk spetskompetens med personligt bemötande och ett genuint engagemang.</p>",
         "media_type": "image",
@@ -93,6 +94,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Vi är auktoriserade hos Elsäkerhetsverket",
         "text": "<p>Som registrerade hos Elsäkerhetsverket har vi rätt att utföra elinstallationsarbeten enligt gällande regler och säkerhetskrav. Det innebär att våra tekniker har rätt kompetens, att vi följer branschens föreskrifter och att vi tar fullt ansvar för säkerheten i din anläggning. När du anlitar oss kan du känna dig trygg med att jobbet blir rätt gjort – från start till färdig installation.</p>",
         "media_type": "image",
@@ -107,6 +109,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
+        "background_color": "#ffffff",
         "title": "Vi är en del av installatörsföretagen",
         "text": "<p>Att vi är medlemmar i Installatörsföretagen innebär att vi följer branschens regler för solcellsinstallationer och alltid arbetar enligt aktuella standarder. Det ger oss tillgång till den senaste tekniken, branschpraxis och riktlinjer – vilket säkerställer korrekt och säker installation.</p><p>Medlemskapet innebär också att våra anställda omfattas av kollektivavtal, med trygga villkor, löpande utbildning och en säker arbetsmiljö.</p>",
         "media_type": "image",
