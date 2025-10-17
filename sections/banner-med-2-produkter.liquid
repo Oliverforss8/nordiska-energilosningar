@@ -44,7 +44,8 @@
           {% if section.settings.primary_button_text != blank %}
             <a
               href="{{ section.settings.primary_button_url }}"
-              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] bg-[#E9A600] px-[20px] py-[17px] text-[#171717]"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[20px] px-[20px] py-[17px] text-[#171717]"
+              style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
             >
               {{ section.settings.primary_button_text }}
               <svg
@@ -62,7 +63,7 @@
           {% if section.settings.secondary_button_text != blank %}
             <a
               href="{{ section.settings.secondary_button_url }}"
-              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[17px] text-white"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[25px] bg-transparent px-[20px] py-[17px] text-white"
               style="border: 1px solid #fff;"
             >
               {{ section.settings.secondary_button_text }}
@@ -117,7 +118,8 @@
                   {% if block.settings.product != blank %}
                     <a
                       href="{{ block.settings.product.url }}"
-                      class="knappetikett inline-block rounded-[10px] bg-[#E9A600] px-[20px] py-[18px] text-[#171717] "
+                      class="knappetikett inline-block rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                      style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       Köp
                     </a>
@@ -125,8 +127,8 @@
                   {% if block.settings.learn_more_url != blank %}
                     <a
                       href="{{ block.settings.learn_more_url }}"
-                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
-                      style="border: 1px solid #171717;"
+                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                      style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       {{ block.settings.learn_more_text | default: 'Läs mer' }}
                       <svg
@@ -210,7 +212,8 @@
               {% if block.settings.product != blank %}
                 <a
                   href="{{ block.settings.product.url }}"
-                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-[10px] bg-[#E9A600] px-[20px] py-[18px] text-[#171717]"
+                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
                   Köp
                 </a>
@@ -218,8 +221,8 @@
               {% if block.settings.learn_more_url != blank %}
                 <a
                   href="{{ block.settings.learn_more_url }}"
-                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[10px] bg-transparent px-[20px] py-[18px] text-[#171717]"
-                  style="border: 1px solid #171717;"
+                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
                   {{ block.settings.learn_more_text | default: 'Läs mer' }}
                   <svg
@@ -333,17 +336,24 @@
   }
 
   .product-card .banner-2-learn-more-btn {
-    border: 1px solid #171717;
-    background: transparent;
+    background: linear-gradient(135deg, #ffa94d 0%, #ff4e33 100%);
     color: #171717;
     transition: all 0.3s ease;
   }
 
   .product-card.active .banner-2-learn-more-btn,
   .product-card:hover .banner-2-learn-more-btn {
-    background: #e9a600 !important;
-    border-color: #e9a600 !important;
+    background: linear-gradient(135deg, #ffa94d 0%, #ff4e33 100%) !important;
+    border: none !important;
     color: #171717 !important;
+  }
+
+  /* More specific override to ensure gradient is applied */
+  .banner-med-2-produkter .product-card.active .banner-2-learn-more-btn,
+  .banner-med-2-produkter .product-card:hover .banner-2-learn-more-btn {
+    background: linear-gradient(135deg, #ffa94d 0%, #ff4e33 100%) !important;
+    border: none !important;
+    border-color: transparent !important;
   }
 
   .product-card.active .banner-2-learn-more-btn svg path,
