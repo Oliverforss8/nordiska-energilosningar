@@ -25,10 +25,10 @@
             "upsell_description": ""
           }
         },
-        "upsell_product_tPxK4c": {
+        "upsell_product_9eePpJ": {
           "type": "upsell_product",
           "settings": {
-            "upsell_product": "laddkabel-11-kw",
+            "upsell_product": "sigenergy-evac",
             "upsell_variant_id": "",
             "enable_condition": false,
             "option_index": "1",
@@ -41,7 +41,7 @@
       },
       "block_order": [
         "upsell_product_Y9arBB",
-        "upsell_product_tPxK4c"
+        "upsell_product_9eePpJ"
       ],
       "settings": {
         "show_installation": true,
