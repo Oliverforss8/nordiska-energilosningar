@@ -467,26 +467,6 @@
       </nav>
 
       <!-- Mobile Menu Footer -->
-      <div class="mt-[40px] flex flex-col gap-[8px]  pt-[20px]">
-        <div class="body1 mb-[8px] text-[11px]  uppercase tracking-[1.5px] text-[#171717]/90">
-          Växla vy
-        </div>
-        {% if is_foretag_page %}
-          <a
-            href="{{ routes.root_url }}"
-            class="body1 py-[10px] text-[#171717]/90"
-          >
-            {{ 'general.privatperson' | t | default: 'Privatperson' }}
-          </a>
-        {% else %}
-          <a
-            href="/pages/foretag/start"
-            class="body1 py-[10px] text-[#171717]/90"
-          >
-            {{ 'general.foretag' | t | default: 'Företag' }}
-          </a>
-        {% endif %}
-      </div>
 
       <!-- Mobile Cart Button -->
       <div class="mt-[20px]">
