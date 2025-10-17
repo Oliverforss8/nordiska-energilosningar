@@ -226,7 +226,7 @@
       ],
       "name": "Produktslider",
       "settings": {
-        "title": "Upptäck våra batterier",
+        "title": "Våra utvalda batterier",
         "custom_id": ""
       }
     },
@@ -629,10 +629,10 @@
         "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
-    "review_7jfwE6": {
+    "review_VPytWr": {
       "type": "review",
       "blocks": {
-        "review_fMhRqw": {
+        "review_eVwUCd": {
           "type": "review",
           "settings": {
             "stars": 5,
@@ -640,7 +640,7 @@
             "customer_name": "Marie"
           }
         },
-        "review_WnJfgk": {
+        "review_WegPwt": {
           "type": "review",
           "settings": {
             "stars": 5,
@@ -648,7 +648,7 @@
             "customer_name": "Ruben"
           }
         },
-        "review_rqBKMd": {
+        "review_YGpGcg": {
           "type": "review",
           "settings": {
             "stars": 5,
@@ -658,9 +658,9 @@
         }
       },
       "block_order": [
-        "review_fMhRqw",
-        "review_WnJfgk",
-        "review_rqBKMd"
+        "review_eVwUCd",
+        "review_WegPwt",
+        "review_YGpGcg"
       ],
       "name": "Reviews",
       "settings": {
@@ -799,7 +799,7 @@
     "banner_med_3_produkter_ThPDRM",
     "offert_forfragan_H8kdLx",
     "banner_med_2_produkter_rrjGgf",
-    "review_7jfwE6",
+    "review_VPytWr",
     "kontakt_form_xiaXgr"
   ]
 }
