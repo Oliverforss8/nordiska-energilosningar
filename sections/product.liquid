@@ -426,70 +426,86 @@
                       </div>
                     </div>
                   </div>
+                {% endif %}
 
-                  <!-- Green Deduction Options (only visible when installation is selected) -->
-                  <div class="green-deduction-wrapper pt-[15px]" id="green-deduction-wrapper">
-                    <div class="rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
-                      <div class="headline1 mb-[15px] text-[18px] md:text-[20px]">
-                        Välj grönt avdrag
-                      </div>
+                <!-- Green Deduction Options (always visible) -->
+                <div class="green-deduction-wrapper pt-[15px]" id="green-deduction-wrapper">
+                  <div class="rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
+                    <div class="headline1 mb-[15px] text-[18px] md:text-[20px]">
+                      Välj grönt avdrag
+                    </div>
 
-                      <!-- Grönt avdrag 1 -->
-                      <div class="green-deduction-option mb-[15px] flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
-                        <input
-                          type="radio"
-                          id="green-deduction-1"
-                          name="green-deduction"
-                          class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                          data-discount-code="AVDRAG1"
-                        >
-                        <label for="green-deduction-1" class="flex-1 cursor-pointer">
-                          <div class="body1 text-[16px] font-medium md:text-[18px]">
-                            {{
-                              section.settings.green_deduction_1_title
-                              | default: 'Grönt avdrag 1'
-                            }}
+                    <!-- Grönt avdrag 1 -->
+                    <div class="green-deduction-option mb-[15px] flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
+                      <input
+                        type="radio"
+                        id="green-deduction-1"
+                        name="green-deduction"
+                        class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                        data-discount-code="AVDRAG1"
+                      >
+                      <label for="green-deduction-1" class="flex-1 cursor-pointer">
+                        <div class="body1 text-[16px] font-medium md:text-[18px]">
+                          {{ section.settings.green_deduction_1_title | default: 'Grönt avdrag 1' }}
+                        </div>
+                        {% if section.settings.green_deduction_1_description != blank %}
+                          <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                            {{ section.settings.green_deduction_1_description }}
                           </div>
-                          {% if section.settings.green_deduction_1_description != blank %}
-                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
-                              {{ section.settings.green_deduction_1_description }}
-                            </div>
-                          {% endif %}
-                          <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
-                            Rabattkod: AVDRAG1
-                          </div>
-                        </label>
-                      </div>
+                        {% endif %}
+                        <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
+                          Rabattkod: AVDRAG1
+                        </div>
+                      </label>
+                    </div>
 
-                      <!-- Grönt avdrag 2 -->
-                      <div class="green-deduction-option flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
-                        <input
-                          type="radio"
-                          id="green-deduction-2"
-                          name="green-deduction"
-                          class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                          data-discount-code="AVDRAG2"
-                        >
-                        <label for="green-deduction-2" class="flex-1 cursor-pointer">
-                          <div class="body1 text-[16px] font-medium md:text-[18px]">
-                            {{
-                              section.settings.green_deduction_2_title
-                              | default: 'Grönt avdrag 2'
-                            }}
+                    <!-- Grönt avdrag 2 -->
+                    <div class="green-deduction-option mb-[15px] flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
+                      <input
+                        type="radio"
+                        id="green-deduction-2"
+                        name="green-deduction"
+                        class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                        data-discount-code="AVDRAG2"
+                      >
+                      <label for="green-deduction-2" class="flex-1 cursor-pointer">
+                        <div class="body1 text-[16px] font-medium md:text-[18px]">
+                          {{ section.settings.green_deduction_2_title | default: 'Grönt avdrag 2' }}
+                        </div>
+                        {% if section.settings.green_deduction_2_description != blank %}
+                          <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                            {{ section.settings.green_deduction_2_description }}
                           </div>
-                          {% if section.settings.green_deduction_2_description != blank %}
-                            <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
-                              {{ section.settings.green_deduction_2_description }}
-                            </div>
-                          {% endif %}
-                          <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
-                            Rabattkod: AVDRAG2
-                          </div>
-                        </label>
-                      </div>
+                        {% endif %}
+                        <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
+                          Rabattkod: AVDRAG2
+                        </div>
+                      </label>
+                    </div>
+
+                    <!-- Utan grönt avdrag -->
+                    <div class="green-deduction-option flex items-start gap-[15px] rounded-[10px] border border-[#171717]/20 p-[15px] transition-all hover:border-[#171717]">
+                      <input
+                        type="radio"
+                        id="green-deduction-none"
+                        name="green-deduction"
+                        class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                        data-discount-code=""
+                      >
+                      <label for="green-deduction-none" class="flex-1 cursor-pointer">
+                        <div class="body1 text-[16px] font-medium md:text-[18px]">
+                          Utan grönt avdrag
+                        </div>
+                        <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                          Välj detta alternativ om du inte vill använda grönt avdrag
+                        </div>
+                        <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
+                          Ingen rabattkod
+                        </div>
+                      </label>
                     </div>
                   </div>
-                {% endif %}
+                </div>
               {% endunless %}
 
               <!-- Action buttons - stacked on mobile, row on desktop -->
