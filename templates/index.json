@@ -358,7 +358,7 @@
           "type": "product",
           "settings": {
             "product": "fronius-verto",
-            "show_price": true,
+            "show_price": false,
             "description": ""
           }
         },
@@ -366,7 +366,7 @@
           "type": "product",
           "settings": {
             "product": "solis-s6-eh3p10-kw",
-            "show_price": true,
+            "show_price": false,
             "description": ""
           }
         },
@@ -374,7 +374,7 @@
           "type": "product",
           "settings": {
             "product": "saj",
-            "show_price": true,
+            "show_price": false,
             "description": ""
           }
         },
