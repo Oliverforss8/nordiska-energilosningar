@@ -930,6 +930,10 @@
   border-radius: 9999px
 }
 
+.rounded-\[30px\] {
+  border-radius: 30px
+}
+
 .rounded-t-\[25px\] {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px
