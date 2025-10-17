@@ -79,7 +79,8 @@
             id="product-title"
           ></div>
           <div
-            class="text pt-[20px] text-center text-[#171717]/80 md:pt-[50px] md:text-left"
+            class="text pt-[20px] text-center leading-[110%] text-[#171717]/80 md:pt-[50px] md:text-left"
+            %
             id="product-description"
           ></div>
           <div class="flex justify-start pt-[25px] md:pt-[50px]">
@@ -170,7 +171,7 @@
       updateProductContent(firstProduct);
       // Set active tab styling
       tabs[0].style.opacity = '1';
-      tabs[0].style.borderBottom = '2px solid #E9A600';
+      tabs[0].style.borderBottom = '2px solid #FF4E33';
     }
 
     function updateProductContent(productId) {
@@ -197,7 +198,7 @@
         // Update content and highlight active tab
         updateProductContent(targetProduct);
         this.style.opacity = '1';
-        this.style.borderBottom = '2px solid #E9A600';
+        this.style.borderBottom = '2px solid #FF4E33';
       });
     });
   });
