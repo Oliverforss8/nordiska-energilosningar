@@ -71,7 +71,9 @@
         "heading": "Våra utvalda laddboxar",
         "product_1": "charge-amps-luna",
         "product_2": "fronius-wattpilot-flex",
-        "product_3": "zaptec-2"
+        "product_3": "zaptec-2",
+        "product_4": "",
+        "product_5": ""
       }
     },
     "banner_med_3_produkter_nkMr87": {
@@ -306,16 +308,6 @@
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
-    },
-    "product_meny_DjaKrd": {
-      "type": "product-meny",
-      "name": "Product Menu",
-      "settings": {
-        "heading": "Våra utvalda laddboxar",
-        "product_1": "charge-amps-luna",
-        "product_2": "",
-        "product_3": ""
-      }
     }
   },
   "order": [
@@ -327,7 +319,6 @@
     "avdrag_47f9Td",
     "bild_och_text_knappar_kAcza6",
     "banner_bild_mtUYxw",
-    "kontakt_form_MEdRdB",
-    "product_meny_DjaKrd"
+    "kontakt_form_MEdRdB"
   ]
 }
