@@ -1085,6 +1085,10 @@
   background-image: linear-gradient(to top, var(--tw-gradient-stops))
 }
 
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops))
+}
+
 .from-black\/30 {
   --tw-gradient-from: rgb(0 0 0 / 0.3) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
