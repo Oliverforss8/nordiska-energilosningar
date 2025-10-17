@@ -16,7 +16,7 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_13.png",
         "overlay_opacity": 5,
-        "heading": "Sänk elkostnaderna på gården med energilösningar",
+        "heading": "När din vardag kräver mer – energi som hänger med.",
         "subheading": "Börja producera och lagra din egna gröna el och betala mindre i elräkning",
         "button_text": "Be om offert",
         "button_url": "shopify://metaobjects/foretag/offert"
@@ -85,8 +85,8 @@
       ],
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Solceller till lantbruksfastigheter",
-        "text": "<p>Solceller är en hållbar och kostnadseffektiv lösning för företag som vill minska elkostnader och klimatpåverkan. Stora takytor på till exempel industri- och lagerlokaler passar perfekt för solenergi. En skräddarsydd solcellsanläggning sänker energikostnader, ökar självförsörjningen och ger långsiktig ekonomisk stabilitet. Det är ett strategiskt steg mot en hållbar och framtidssäker energiförsörjning.</p>",
+        "title": "Solenergi för lantbrukets behov",
+        "text": "<p>Solceller ger stabil och kostnadseffektiv elproduktion året runt – perfekt för gårdar med hög energiförbrukning.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/image_11.png",
         "image_position": "right",
