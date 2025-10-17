@@ -69,10 +69,10 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Solceller som gynnar alla boende",
-        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
+        "title": "Trygg installation och drift",
+        "text": "<p>Vi tar ansvar för hela processen – från offert till färdig anläggning. Föreningen får en säker, certifierad och framtidssäkrad energilösning.<br/><br/><br/></p>",
         "media_type": "image",
-        "image_position": "right",
+        "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
