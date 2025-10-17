@@ -212,6 +212,96 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_knappar_mcyj4E": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_AtpMEY": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_WgjNzT": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_jFdWGa": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_AtpMEY",
+        "button_WgjNzT",
+        "button_jFdWGa"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Optimerad drift och styrning",
+        "text": "<p>Våra system analyserar produktion och förbrukning i realtid. Det ger full kontroll över energiflödet och maximalt utbyte av investeringen.<br/><br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_19.png",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_yrCiJk": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_BfmPpR": {
+          "type": "button",
+          "settings": {
+            "text": "Ökat fastighetsvärde",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_nMWCUm": {
+          "type": "button",
+          "settings": {
+            "text": "Installation",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_gkc3AM": {
+          "type": "button",
+          "settings": {
+            "text": "Garanti",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_BfmPpR",
+        "button_nMWCUm",
+        "button_gkc3AM"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Trygghet i varje steg",
+        "text": "<p>Vi ansvarar för projektering, tillstånd, installation och service. Ni får en komplett lösning, anpassad för just er verksamhet.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/image_19.png",
+        "image_position": "left",
+        "image_button_text": "Gå vidare",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "faq_produkt_WAWGp6": {
       "type": "faq-produkt",
       "blocks": {
@@ -627,6 +717,8 @@
     "bild_och_text_knappar_TQdd96",
     "bild_och_text_knappar_iMEHAT",
     "bild_och_text_knappar_nPrVg7",
+    "bild_och_text_knappar_mcyj4E",
+    "bild_och_text_knappar_yrCiJk",
     "faq_produkt_WAWGp6",
     "lankar_nykFtk",
     "bild_och_text_knappar_T6tiXq",
