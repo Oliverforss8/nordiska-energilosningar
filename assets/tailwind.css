@@ -654,6 +654,18 @@
   width: 100vw
 }
 
+.w-\[900px\] {
+  width: 900px
+}
+
+.w-\[1200px\] {
+  width: 1200px
+}
+
+.w-\[1250px\] {
+  width: 1250px
+}
+
 .min-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   min-width: calc(100% / 1.5 - 20px * 0.5)
 }
@@ -1443,6 +1455,10 @@
 
 .pt-\[8px\] {
   padding-top: 8px
+}
+
+.pb-\[25px\] {
+  padding-bottom: 25px
 }
 
 .text-left {
