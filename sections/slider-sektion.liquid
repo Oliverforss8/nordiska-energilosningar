@@ -29,7 +29,7 @@
                 class="slider-item w-[calc(100%/1.5-20px*0.5)] min-w-[calc(100%/1.5-20px*0.5)] max-w-[calc(100%/1.5-20px*0.5)] shrink-0 md:min-w-[calc(50%-15px)] md:max-w-[calc(50%-15px)] xl:min-w-[calc(25%-22.5px)] xl:max-w-[calc(25%-22.5px)]"
                 {{ block.shopify_attributes }}
               >
-                <div class="flex h-full flex-col overflow-hidden rounded-[15px] border border-[#171717]/10 bg-[#f2f0e6]">
+                <div class="flex h-full flex-col overflow-hidden rounded-[15px] border border-[#171717]/10 bg-[#f5f5f5]">
                   <!-- Product Image -->
                   {% if product.featured_image %}
                     <a href="{{ product.url }}" class="block">
@@ -71,7 +71,8 @@
                     <!-- Button -->
                     <a
                       href="{{ product.url }}"
-                      class="knappetikett flex w-full flex-row items-center justify-center gap-[15px] rounded-[10px] bg-[#E9A600] px-[20px] py-[15px] text-[#171717] transition-colors hover:bg-[#d99800]"
+                      class="knappetikett flex w-full flex-row items-center justify-center gap-[15px] rounded-[25px] px-[20px] py-[15px] text-[#171717] transition-colors"
+                      style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       {{ 'products.learn_more' | t }}
                       <svg
@@ -110,7 +111,10 @@
         <div class="mt-[30px] flex items-center justify-center gap-[15px] lg:absolute lg:right-0 lg:top-[-80px] lg:mt-0 lg:gap-[10px]">
           <button
             data-slider-prev
-            class="flex h-[45px] w-[45px] items-center justify-center rounded-full border border-[#171717]/20 bg-white transition-colors hover:border-[#E9A600] hover:bg-[#E9A600] disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex h-[45px] w-[45px] items-center justify-center rounded-full border border-[#171717]/20 bg-white transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-50 hover:border-transparent"
+            style="background: white;"
+            onmouseover="this.style.background='linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%)'; this.style.borderColor='transparent';"
+            onmouseout="this.style.background='white'; this.style.borderColor='rgba(23, 23, 23, 0.2)';"
             aria-label="Föregående"
           >
             <svg
@@ -127,7 +131,10 @@
           </button>
           <button
             data-slider-next
-            class="flex h-[45px] w-[45px] items-center justify-center rounded-full border border-[#171717]/20 bg-white transition-colors hover:border-[#E9A600] hover:bg-[#E9A600] disabled:cursor-not-allowed disabled:opacity-50"
+            class="flex h-[45px] w-[45px] items-center justify-center rounded-full border border-[#171717]/20 bg-white transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-50 hover:border-transparent"
+            style="background: white;"
+            onmouseover="this.style.background='linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%)'; this.style.borderColor='transparent';"
+            onmouseout="this.style.background='white'; this.style.borderColor='rgba(23, 23, 23, 0.2)';"
             aria-label="Nästa"
           >
             <svg
