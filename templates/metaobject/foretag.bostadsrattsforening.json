@@ -16,65 +16,10 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/images.webp",
         "overlay_opacity": 20,
-        "heading": "Minska elkostnaderna och stärk föreningens framtid",
+        "heading": "Gemensam kraft för en lönsam framtid",
         "subheading": "Att installera energilösningar är inte bara ett sätt att sänka elräkningen – det är ett strategiskt beslut som gör föreningen mer ekonomiskt stabil, energismart och framtidsorienterad.",
         "button_text": "Be om offert",
         "button_url": ""
-      }
-    },
-    "banner_med_lankar_ERdirD": {
-      "type": "banner-med-lankar",
-      "blocks": {
-        "card_wPqgXF": {
-          "type": "card",
-          "settings": {
-            "heading": "Solceller",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        },
-        "card_x6gAzr": {
-          "type": "card",
-          "settings": {
-            "heading": "Batterier",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        },
-        "card_PVx3tD": {
-          "type": "card",
-          "settings": {
-            "heading": "Laddboxar",
-            "description": "Kort beskrivning",
-            "link": "",
-            "card_bg_color": "#f3f1e8",
-            "card_text_color": "#171717"
-          }
-        }
-      },
-      "block_order": [
-        "card_wPqgXF",
-        "card_x6gAzr",
-        "card_PVx3tD"
-      ],
-      "name": "Banner med länkar",
-      "settings": {
-        "background_color": "#171717",
-        "background_image": "shopify://shop_images/Svea_Solar_-_Komatsu_Umea_-_2022-.2e16d0ba.fill-1200x630.jpg",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30,
-        "header_button_text": "För företag",
-        "header_button_url": "",
-        "heading": "Vi är experter på helhetslösningar inom energi",
-        "description": "Vi hjälper företag att optimera sin energianvändning.",
-        "primary_button_text": "Be om offert",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
       }
     },
     "kontakt_form_aaeFxV": {
@@ -173,11 +118,25 @@
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "bild_och_text_3HzmL4": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Solceller som gynnar alla boende",
+        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "hero_lower_AyRGqj",
-    "banner_med_lankar_ERdirD",
-    "kontakt_form_aaeFxV"
+    "kontakt_form_aaeFxV",
+    "bild_och_text_3HzmL4"
   ]
 }
