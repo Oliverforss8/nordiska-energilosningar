@@ -13,16 +13,22 @@
 >
   {% comment %} Banner Content {% endcomment %}
   <div
-    class="banner-content h-[500px] w-full rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
+    class="banner-content relative h-[500px] w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
     style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
     data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
   >
-    <div class="flex h-full flex-col justify-between">
+    {% if section.settings.overlay_opacity > 0 %}
+      <div
+        class="absolute inset-0 rounded-[10px]"
+        style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
+      ></div>
+    {% endif %}
+    <div class="relative z-10 flex h-full flex-col justify-between">
       <div>
         {% if section.settings.header_button_text != blank %}
           <a
             href="{{ section.settings.header_button_url }}"
-            class="knappetikett2 z-10 inline-block rounded-[10px] bg-transparent p-[15px] text-white"
+            class="knappetikett2 z-10 inline-block rounded-[25px] bg-transparent p-[15px] text-white"
             style="border: 1px solid #fff;"
           >
             {{ section.settings.header_button_text }}
@@ -44,7 +50,7 @@
           {% if section.settings.primary_button_text != blank %}
             <a
               href="{{ section.settings.primary_button_url }}"
-              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[20px] px-[20px] py-[17px] text-[#171717]"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717]"
               style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
             >
               {{ section.settings.primary_button_text }}
@@ -118,7 +124,7 @@
                   {% if block.settings.product != blank %}
                     <a
                       href="{{ block.settings.product.url }}"
-                      class="knappetikett inline-block rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                      class="knappetikett inline-block rounded-[25px] px-[20px] py-[18px] text-[#171717]"
                       style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       Köp
@@ -127,7 +133,7 @@
                   {% if block.settings.learn_more_url != blank %}
                     <a
                       href="{{ block.settings.learn_more_url }}"
-                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[18px] text-[#171717]"
                       style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       {{ block.settings.learn_more_text | default: 'Läs mer' }}
@@ -212,7 +218,7 @@
               {% if block.settings.product != blank %}
                 <a
                   href="{{ block.settings.product.url }}"
-                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-[25px] px-[20px] py-[18px] text-[#171717]"
                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
                   Köp
@@ -221,7 +227,7 @@
               {% if block.settings.learn_more_url != blank %}
                 <a
                   href="{{ block.settings.learn_more_url }}"
-                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[20px] px-[20px] py-[18px] text-[#171717]"
+                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[25px] px-[20px] py-[18px] text-[#171717]"
                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
                   {{ block.settings.learn_more_text | default: 'Läs mer' }}
@@ -664,6 +670,17 @@
       "type": "image_picker",
       "id": "background_image",
       "label": "Background Image"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "info": "Add a dark overlay over the background image for better readability",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0
     },
     {
       "type": "text",
