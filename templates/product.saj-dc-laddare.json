@@ -245,15 +245,6 @@
         "padding_bottom": 40
       }
     },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
-      "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
-      }
-    },
     "banner_bild_FW6qKr": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -272,16 +263,25 @@
         "secondary_button_url": "",
         "custom_id": ""
       }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
+    "banner_bild_FW6qKr",
     "tekniska_specifikationer_QwhGhj",
     "bild_och_text_dETT6e",
     "bild_och_text_CEmcye",
     "review_V4fpRw",
     "faq_produkt_eTWQV6",
-    "relaterade_produkter",
-    "banner_bild_FW6qKr"
+    "relaterade_produkter"
   ]
 }
