@@ -3,17 +3,19 @@
   assign section_class = 'section-banner-bild'
 
   if section.settings.layout_type == 'full'
-    assign container_class = ''
+    assign outer_container_class = ''
+    assign inner_container_class = 'layout'
     assign rounded_class = ''
   else
-    assign container_class = 'layout'
+    assign outer_container_class = 'layout'
+    assign inner_container_class = ''
     assign rounded_class = 'rounded-[10px]'
   endif
 %}
 
 <section
   id="{{ section_id }}"
-  class="{{ section_class }} {{ container_class }} py-[60px] md:py-[85px]"
+  class="{{ section_class }} {{ outer_container_class }} py-[60px] md:py-[85px]"
 >
   <div
     class="relative h-[500px] w-full overflow-hidden {{ rounded_class }} p-[20px] md:px-[50px] md:py-[40px]"
@@ -48,7 +50,7 @@
         style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
       ></div>
     {% endif %}
-    <div class="relative z-10 flex h-full flex-col justify-between">
+    <div class="relative z-10 flex h-full flex-col justify-between {{ inner_container_class }}">
       <div>
         {% if section.settings.header_button_text != blank %}
           <a
