@@ -302,116 +302,6 @@
         "padding_bottom": 40
       }
     },
-    "bild_och_text_knappar_T6tiXq": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_rTzwmG": {
-          "type": "button",
-          "settings": {
-            "text": "Lagra energi",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_k3pWWi": {
-          "type": "button",
-          "settings": {
-            "text": "Sänkta elkostnader",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_BpEz6U": {
-          "type": "button",
-          "settings": {
-            "text": "Optimerar solceller",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_rTzwmG",
-        "button_k3pWWi",
-        "button_BpEz6U"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Investera i en tillförlitlig energiförsörjning",
-        "text": "<p>Företag och lantbruk med hög elförbrukning kan spara pengar med batterilagring. Genom att lagra el när priserna är låga och använda den vid hög belastning minskar man effekttoppar och kostnader. Batterier kan även ge intäkter via balanstjänster till Svenska Kraftnät, vilket gör dem till en smart investering för både ekonomi och hållbarhet.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
-        "image_position": "left",
-        "image_button_text": "Gå vidare",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "faq_produkt_fD68te": {
-      "type": "faq-produkt",
-      "blocks": {
-        "faq_item_XVKEjz": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Sänk elkostnaderna när elnätsavgifter baseras på högsta effektuttag",
-            "button_text": "Ekonomi",
-            "description": "",
-            "answer": "<p>Effekttoppar kan leda till höga nätavgifter och ökade energikostnader för företag. Genom att installera ett batterilager kan företag lagra energi under lågbelastningstider och använda den vid höga effektuttag, vilket minskar den maximala effekten som tas från elnätet. Detta sänker effektavgifterna och bidrar till en jämnare belastning på elnätet.<br/><br/>Batterilagring är särskilt fördelaktigt för verksamheter med höga och varierande effektbehov, såsom industrier och kommersiella fastigheter. Förutom kostnadsbesparingar kan lösningen också minska behovet av att investera i dyra nätförstärkningar och förbättra elförsörjningens stabilitet.</p>"
-          }
-        },
-        "faq_item_BEFUmc": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Säkerställ driften med batterilagring",
-            "button_text": "Reservkraft",
-            "description": "",
-            "answer": "<p><strong>Reservkraft vid elavbrott<br/><br/></strong>Batterilagring ger företag en pålitlig reservkraft vid elavbrott, vilket minimerar driftstopp och skyddar kritiska system. Till skillnad från dieselaggregat är batterier tysta, underhållsfria och miljövänliga.<br/><br/>De kan dessutom användas för att sänka elkostnader genom lastbalansering och smart energianvändning. Med batterilagring säkerställer du en stabil och kostnadseffektiv energilösning för din verksamhet.</p>"
-          }
-        },
-        "faq_item_eTzHnP": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Optimera energikostnaderna tillsammans med solceller",
-            "button_text": "Ekonomi",
-            "description": "",
-            "answer": "<p>Genom att kombinera solceller med batterilagring kan er verksamhet både producera sin egen el och kapa effekttoppar, vilket minskar elkostnaderna avsevärt. Detta ger en mer hållbar och kostnadseffektiv energiförsörjning samtidigt som beroendet av elnätet minskar.</p>"
-          }
-        },
-        "faq_item_jXTGRa": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Utrymme att sänka huvudsäkringen",
-            "button_text": "Ekonomi",
-            "description": "",
-            "answer": "<p><strong>Minska fasta elkostnader med batterilagring<br/><br/></strong>Genom att använda ett batterilager kan företag jämna ut sitt effektuttag och minska de högsta belastningstopparna. Detta skapar möjlighet att sänka huvudsäkringen och därmed de fasta nätavgifterna, vilket leder till långsiktiga kostnadsbesparingar.<br/><br/>Batterilagring gör det möjligt att lagra energi under lågbelastade perioder och använda den när behovet ökar, utan att överskrida huvudsäkringens kapacitet. Detta är särskilt fördelaktigt för verksamheter med varierande effektbehov och kan minska behovet av dyra nätförstärkningar.</p>"
-          }
-        },
-        "faq_item_EnQfpk": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Arbitrage på elhandel",
-            "button_text": "Arbitrage",
-            "description": "",
-            "answer": "<p><strong>Optimera elkostnader med batterilagring</strong><br/><br/>Genom att utnyttja prisvariationer på elmarknaden kan företag med batterilagring köpa el när priserna är låga och använda eller sälja den när priserna är höga. Detta kallas arbitrage och möjliggör direkta kostnadsbesparingar och intäktsmöjligheter.<br/><br/>Batterilagring ger flexibilitet att anpassa energiförbrukningen efter elmarknadens svängningar och minskar beroendet av dyra elpriser under högbelastningstimmar. Lösningen är särskilt lönsam för verksamheter med hög energiförbrukning och dynamiska energibehov. Dessutom kan den kombineras med egen elproduktion för ytterligare ekonomiska och miljömässiga fördelar.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_XVKEjz",
-        "faq_item_BEFUmc",
-        "faq_item_eTzHnP",
-        "faq_item_jXTGRa",
-        "faq_item_EnQfpk"
-      ],
-      "name": "FAQ produkter",
-      "settings": {
-        "title": "Varför ska företag installera batterier?",
-        "description": "<p>Har ditt företag redan solceller eller planerar att installera det? Då är det viktigt att veta hur ni kan optimera din solenergi med batterier</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "bild_och_text_knappar_UM7UeR": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -628,8 +518,6 @@
     "bild_och_text_knappar_mcyj4E",
     "bild_och_text_knappar_yrCiJk",
     "faq_produkt_WAWGp6",
-    "bild_och_text_knappar_T6tiXq",
-    "faq_produkt_fD68te",
     "bild_och_text_knappar_UM7UeR",
     "faq_produkt_EJBe43",
     "kontakt_form_GmWWBf"
