@@ -11,6 +11,24 @@
   "sections": {
     "main": {
       "type": "product",
+      "blocks": {
+        "upsell_product_Qe9GM4": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "lastbalansering-perific-max",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "upsell_product_Qe9GM4"
+      ],
       "settings": {
         "show_installation": true,
         "installation_product": "installation",
