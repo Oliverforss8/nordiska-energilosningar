@@ -74,16 +74,6 @@
         "product_3": "zaptec-2"
       }
     },
-    "product_meny_arymYD": {
-      "type": "product-meny",
-      "name": "Product Menu",
-      "settings": {
-        "heading": "Våra utvalda batterier",
-        "product_1": "dyness-stack100",
-        "product_2": "dyness-tower-pro",
-        "product_3": "fronius-reserva"
-      }
-    },
     "banner_med_3_produkter_nkMr87": {
       "type": "banner-med-3-produkter",
       "blocks": {
@@ -333,7 +323,6 @@
     "hero_lower_UadDG8",
     "bild_och_text_knappar_Ya3NQr",
     "product_meny_wtYNAA",
-    "product_meny_arymYD",
     "banner_med_3_produkter_nkMr87",
     "avdrag_47f9Td",
     "bild_och_text_knappar_kAcza6",
