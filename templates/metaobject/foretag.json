@@ -87,58 +87,13 @@
       "name": "Bild och text",
       "settings": {
         "background_color": "#ffffff",
-        "title": "Effektiv energianvändning",
-        "text": "<p><br/>Med smart styrning och batterilagring jämnas effekttoppar ut, vilket minskar dyra belastningsavgifter och optimerar elförbrukningen.<br/><br/></p>",
+        "title": "En partner du kan lita på",
+        "text": "<p>Vi erbjuder helhetslösningar – från projektering och installation till drift och service. Ni får en trygg energipartner med fokus på kvalitet och resultat.<br/><br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/image_12.png",
         "image_position": "right",
         "image_button_text": "Våra lösningar",
         "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_knappar_qJirCB": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_kRpqqw": {
-          "type": "button",
-          "settings": {
-            "text": "Företag",
-            "url": "shopify://metaobjects/foretag/foretag",
-            "show_arrow": false
-          }
-        },
-        "button_rMih9d": {
-          "type": "button",
-          "settings": {
-            "text": "BRF",
-            "url": "shopify://metaobjects/foretag/bostadsrattsforening",
-            "show_arrow": false
-          }
-        },
-        "button_Q8yjeC": {
-          "type": "button",
-          "settings": {
-            "text": "Lantbruk",
-            "url": "shopify://metaobjects/foretag/lantbruk",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_kRpqqw",
-        "button_rMih9d",
-        "button_Q8yjeC"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Trygg installation och kvalitet",
-        "text": "<p><br/>Alla installationer utförs av certifierade elektriker och dokumenteras enligt branschens högsta standard. Vi använder endast komponenter från ledande tillverkare.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/images.webp",
-        "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
         "custom_id": ""
       }
     }
@@ -149,7 +104,6 @@
     "bild_och_text_33GfxU",
     "bild_och_text_knappar_MRbxmk",
     "bild_och_text_mUTJKN",
-    "bild_och_text_iUmHe6",
-    "bild_och_text_knappar_qJirCB"
+    "bild_och_text_iUmHe6"
   ]
 }
