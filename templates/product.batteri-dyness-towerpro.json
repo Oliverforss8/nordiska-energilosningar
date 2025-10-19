@@ -195,22 +195,6 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_FrM4qE": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Titel",
-        "text": "<p>Text</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Towerph.jpg",
-        "video": "shopify://files/videos/jichajiyongsuo.mp4",
-        "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -270,7 +254,6 @@
     "tekniska_specifikationer_NRgBkG",
     "bild_och_text_wA4xfq",
     "bild_och_text_LFaJUj",
-    "bild_och_text_FrM4qE",
     "faq_produkt",
     "relaterade_produkter"
   ]
