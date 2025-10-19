@@ -411,6 +411,18 @@
         "header_button_text": "",
         "header_button_url": ""
       }
+    },
+    "product_meny_TWz3y8": {
+      "type": "product-meny",
+      "name": "Product Menu",
+      "settings": {
+        "heading": "Våra utvalda solcellspaneler",
+        "product_1": "solceller-1",
+        "product_2": "",
+        "product_3": "",
+        "product_4": "",
+        "product_5": ""
+      }
     }
   },
   "order": [
@@ -424,6 +436,7 @@
     "avdrag_cwFWrR",
     "bild_och_text_knappar_PdkfaH",
     "faq_produkt_dtDVrU",
-    "kontakt_form_7kGfXQ"
+    "kontakt_form_7kGfXQ",
+    "product_meny_TWz3y8"
   ]
 }
