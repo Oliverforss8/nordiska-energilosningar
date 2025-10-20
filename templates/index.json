@@ -32,7 +32,7 @@
           "settings": {
             "media_type": "image",
             "background_image": "shopify://shop_images/fffffff.png",
-            "overlay_opacity": 35,
+            "overlay_opacity": 10,
             "heading": "Kompletta batteripaket \nfrån 37 900:-",
             "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
             "button_text": "Läs mer",
@@ -642,20 +642,14 @@
           "type": "product_card",
           "settings": {
             "product": "solis-s6-eh3p10-kw",
-            "title": "Solis 10-20 kW",
-            "description": "Effektiv, driftsäker och prisvärd – Solis växelriktare omvandlar din solel med högsta precision och samarbetar sömlöst med batteriet genom smart AI-styrning.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "custom_url": ""
           }
         },
         "product_card_Bt7BJh": {
           "type": "product_card",
           "settings": {
             "product": "dyness-stack100",
-            "title": "Dyness STACK100",
-            "description": "Kraftfullt och modulärt batteri som enkelt kan byggas ut för framtida energibehov.",
-            "learn_more_text": "Läs mer",
-            "learn_more_url": ""
+            "custom_url": ""
           }
         }
       },
