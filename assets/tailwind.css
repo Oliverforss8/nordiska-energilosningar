@@ -289,6 +289,10 @@
   grid-column: span 2 / span 2
 }
 
+.col-span-full {
+  grid-column: 1 / -1
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem
@@ -870,12 +874,6 @@
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse))
-}
-
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))
 }
 
 .overflow-hidden {
@@ -1636,11 +1634,6 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
-}
-
-.text-orange-600 {
-  --tw-text-opacity: 1;
-  color: rgb(234 88 12 / var(--tw-text-opacity, 1))
 }
 
 .underline {

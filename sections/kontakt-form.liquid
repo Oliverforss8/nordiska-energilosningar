@@ -31,7 +31,7 @@
           assign rows = block.settings.rows | default: 4
           assign pattern = block.settings.pattern
         %}
-        <div class="flex flex-col{% if field_type != 'text' and field_type != 'email' and field_type != 'tel' %} col-span-2{% endif %}{% if forloop.index > 2 %} pt-[30px]{% endif %}">
+        <div class="flex flex-col col-span-full{% if field_type == 'text' or field_type == 'email' or field_type == 'tel' %} md:col-span-1{% endif %}{% if forloop.index > 2 %} pt-[30px]{% endif %}">
           <label for="{{ field_name }}" class="body1 mb-[15px] text-[#171717]">
             {{ block.settings.label }}
           </label>
