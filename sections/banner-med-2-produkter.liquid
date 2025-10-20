@@ -7,300 +7,298 @@
   endif
 %}
 
-<div class=" layout">
-  <section
-    id="{{ section_id }}"
-    class="{{ section_class }}  py-[60px] md:py-[85px]"
+<section
+  id="{{ section_id }}"
+  class="{{ section_class }} layout py-[60px] md:py-[85px]"
+>
+  {% comment %} Banner Content {% endcomment %}
+  <div
+    class="banner-content relative h-[500px] w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
+    style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
+    data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
   >
-    {% comment %} Banner Content {% endcomment %}
-    <div
-      class="banner-content  relative h-[500px] w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
-      style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
-      data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
-    >
-      {% if section.settings.overlay_opacity > 0 %}
-        <div
-          class="absolute inset-0 rounded-[10px]"
-          style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
-        ></div>
-      {% endif %}
-      <div class="relative z-10 flex h-full flex-col justify-between">
-        <div>
-          {% if section.settings.header_button_text != blank %}
+    {% if section.settings.overlay_opacity > 0 %}
+      <div
+        class="absolute inset-0 rounded-[10px]"
+        style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
+      ></div>
+    {% endif %}
+    <div class="relative z-10 flex h-full flex-col justify-between">
+      <div>
+        {% if section.settings.header_button_text != blank %}
+          <a
+            href="{{ section.settings.header_button_url }}"
+            class="knappetikett2 z-10 inline-block rounded-full bg-transparent p-[15px] text-white"
+            style="border: 1px solid #fff;"
+          >
+            {{ section.settings.header_button_text }}
+          </a>
+        {% endif %}
+      </div>
+      <div class="flex flex-col gap-[30px] lg:w-[840px]">
+        {% if section.settings.heading != blank %}
+          <h2 class="headline2 text-white ">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <p class="knappetikett text-white">
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
+        <div class="flex flex-row gap-[10px]">
+          {% if section.settings.primary_button_text != blank %}
             <a
-              href="{{ section.settings.header_button_url }}"
-              class="knappetikett2 z-10 inline-block rounded-full bg-transparent p-[15px] text-white"
+              href="{{ section.settings.primary_button_url }}"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
+              style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
+            >
+              {{ section.settings.primary_button_text }}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          {% endif %}
+          {% if section.settings.secondary_button_text != blank %}
+            <a
+              href="{{ section.settings.secondary_button_url }}"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
               style="border: 1px solid #fff;"
             >
-              {{ section.settings.header_button_text }}
+              {{ section.settings.secondary_button_text }}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
+              >
+                <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </a>
           {% endif %}
         </div>
-        <div class="flex flex-col gap-[30px] lg:w-[840px]">
-          {% if section.settings.heading != blank %}
-            <h2 class="headline2 text-white ">
-              {{ section.settings.heading }}
-            </h2>
-          {% endif %}
-          {% if section.settings.description != blank %}
-            <p class="knappetikett text-white">
-              {{ section.settings.description }}
-            </p>
-          {% endif %}
-          <div class="flex flex-row gap-[10px]">
-            {% if section.settings.primary_button_text != blank %}
-              <a
-                href="{{ section.settings.primary_button_url }}"
-                class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
-                style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-              >
-                {{ section.settings.primary_button_text }}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="18"
-                  viewBox="0 0 22 18"
-                  fill="none"
-                >
-                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            {% endif %}
-            {% if section.settings.secondary_button_text != blank %}
-              <a
-                href="{{ section.settings.secondary_button_url }}"
-                class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
-                style="border: 1px solid #fff;"
-              >
-                {{ section.settings.secondary_button_text }}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="18"
-                  viewBox="0 0 22 18"
-                  fill="none"
-                >
-                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            {% endif %}
-          </div>
-        </div>
       </div>
     </div>
+  </div>
 
-    {% comment %} Products Content {% endcomment %}
-    <div
-      class="products-content w-full {% if layout_reversed %}order-1{% else %}order-2{% endif %}"
-      data-debug="products order: {% if layout_reversed %}1{% else %}2{% endif %}"
-    >
-      <!-- Mobile carousel container -->
-      <div class="relative w-full md:hidden">
-        <div class="carousel-container w-full overflow-hidden">
-          <div
-            class="carousel-track flex transition-transform duration-500 ease-in-out"
-            data-current="0"
-          >
-            {% for block in section.blocks %}
-              {% liquid
-                assign product = block.settings.product
-                assign product_title = product.title
-                assign product_description = product.description | strip_html | truncatewords: 15
-                if block.settings.custom_url != blank
-                  assign product_url = block.settings.custom_url
-                else
-                  assign product_url = product.url
-                endif
-              %}
-              <div
-                class="product-card flex w-full flex-shrink-0 flex-col-reverse rounded-[10px] p-[30px]"
-                style="background: #F3F1E8;"
-                {{ block.shopify_attributes }}
-              >
-                <div class="flex flex-col justify-between ">
-                  <div class="flex flex-col">
-                    {% if product_title != blank %}
-                      <div class="headline1 pt-[30px] text-[36px] text-[#171717]">
-                        {{ product_title }}
-                      </div>
-                    {% endif %}
-                    {% if product_description != blank %}
-                      <div class="text py-[20px] text-[#171717]/75">
-                        {{ product_description }}
-                      </div>
-                    {% endif %}
-                  </div>
-                  <div class="flex shrink-0 gap-[10px]">
-                    {% if product_url != blank %}
-                      <a
-                        href="{{ product_url }}"
-                        class="knappetikett flex flex-row items-center gap-[10px] rounded-full px-[20px] py-[18px] text-[#171717]"
-                        style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-                      >
-                        Köp nu
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="18"
-                          viewBox="0 0 22 18"
-                          fill="none"
-                        >
-                          <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </a>
-                    {% endif %}
-                  </div>
-                </div>
-                <div class="flex w-full items-center justify-center">
-                  {% if block.settings.product != blank %}
-                    {% assign product = block.settings.product %}
-                    {% if product.featured_image %}
-                      <img
-                        src="{{ product.featured_image | image_url: width: 300 }}"
-                        alt="{{ product.featured_image.alt | default: product.title }}"
-                        width="200"
-                        height="200"
-                        class="h-auto w-full max-w-[200px] rounded-[5px] object-contain"
-                        loading="lazy"
-                      >
-                    {% else %}
-                      <div class="flex h-[200px] w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
-                        {{ 'products.product.media.load_image' | t | default: 'Load image' }}
-                      </div>
-                    {% endif %}
-                  {% else %}
-                    <div class="flex h-full w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
-                      {{
-                        'sections.banner_with_products.no_product_selected'
-                        | t
-                        | default: 'No product selected'
-                      }}
+  {% comment %} Products Content {% endcomment %}
+  <div
+    class="products-content w-full {% if layout_reversed %}order-1{% else %}order-2{% endif %}"
+    data-debug="products order: {% if layout_reversed %}1{% else %}2{% endif %}"
+  >
+    <!-- Mobile carousel container -->
+    <div class="relative w-full md:hidden">
+      <div class="carousel-container w-full overflow-hidden">
+        <div
+          class="carousel-track flex transition-transform duration-500 ease-in-out"
+          data-current="0"
+        >
+          {% for block in section.blocks %}
+            {% liquid
+              assign product = block.settings.product
+              assign product_title = product.title
+              assign product_description = product.description | strip_html | truncatewords: 15
+              if block.settings.custom_url != blank
+                assign product_url = block.settings.custom_url
+              else
+                assign product_url = product.url
+              endif
+            %}
+            <div
+              class="product-card flex w-full flex-shrink-0 flex-col-reverse rounded-[10px] p-[30px]"
+              style="background: #F3F1E8;"
+              {{ block.shopify_attributes }}
+            >
+              <div class="flex flex-col justify-between ">
+                <div class="flex flex-col">
+                  {% if product_title != blank %}
+                    <div class="headline1 pt-[30px] text-[36px] text-[#171717]">
+                      {{ product_title }}
+                    </div>
+                  {% endif %}
+                  {% if product_description != blank %}
+                    <div class="text py-[20px] text-[#171717]/75">
+                      {{ product_description }}
                     </div>
                   {% endif %}
                 </div>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      <!-- Desktop grid -->
-      <div
-        class=" hidden grid-cols-2 gap-[20px] md:grid"
-        id="desktop-products-grid-{{ section.id }}"
-      >
-        {% for block in section.blocks %}
-          {% liquid
-            assign product = block.settings.product
-            assign product_title = product.title
-            assign product_description = product.description | strip_html | truncatewords: 15
-            if block.settings.custom_url != blank
-              assign product_url = block.settings.custom_url
-            else
-              assign product_url = product.url
-            endif
-          %}
-          <div
-            class="product-card flex flex-col-reverse rounded-[10px] p-[30px] transition-colors xl:flex-row duration-300{% if forloop.first %} active{% endif %}"
-            {{ block.shopify_attributes }}
-            data-card-index="{{ forloop.index0 }}"
-          >
-            <div class="flex flex-col justify-between ">
-              <div class="flex flex-col">
-                {% if product_title != blank %}
-                  <div class="headline1 pt-[40px] text-[36px] text-[#171717] xl:pt-0">
-                    {{ product_title }}
-                  </div>
-                {% endif %}
-                {% if product_description != blank %}
-                  <div class="text py-[20px] text-[#171717]/75 xl:pt-[40px]">
-                    {{ product_description }}
-                  </div>
-                {% endif %}
-              </div>
-              <div class="flex shrink-0 gap-[10px]">
-                {% if product_url != blank %}
-                  <a
-                    href="{{ product_url }}"
-                    class="knappetikett flex shrink-0 flex-row items-center gap-[10px] whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
-                    style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-                  >
-                    Köp nu
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="18"
-                      viewBox="0 0 22 18"
-                      fill="none"
+                <div class="flex shrink-0 gap-[10px]">
+                  {% if product_url != blank %}
+                    <a
+                      href="{{ product_url }}"
+                      class="knappetikett flex flex-row items-center gap-[10px] rounded-full px-[20px] py-[18px] text-[#171717]"
+                      style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
-                      <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </a>
+                      Köp nu
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="18"
+                        viewBox="0 0 22 18"
+                        fill="none"
+                      >
+                        <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="flex w-full items-center justify-center">
+                {% if block.settings.product != blank %}
+                  {% assign product = block.settings.product %}
+                  {% if product.featured_image %}
+                    <img
+                      src="{{ product.featured_image | image_url: width: 300 }}"
+                      alt="{{ product.featured_image.alt | default: product.title }}"
+                      width="200"
+                      height="200"
+                      class="h-auto w-full max-w-[200px] rounded-[5px] object-contain"
+                      loading="lazy"
+                    >
+                  {% else %}
+                    <div class="flex h-[200px] w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                      {{ 'products.product.media.load_image' | t | default: 'Load image' }}
+                    </div>
+                  {% endif %}
+                {% else %}
+                  <div class="flex h-full w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                    {{
+                      'sections.banner_with_products.no_product_selected'
+                      | t
+                      | default: 'No product selected'
+                    }}
+                  </div>
                 {% endif %}
               </div>
             </div>
-            <div class="flex w-full items-center justify-center">
-              {% if block.settings.product != blank %}
-                {% assign product = block.settings.product %}
-                {% if product.featured_image %}
-                  <img
-                    src="{{ product.featured_image | image_url: width: 3000 }}"
-                    alt="{{ product.featured_image.alt | default: product.title }}"
-                    width="200"
-                    height="200"
-                    class=" h-full w-full rounded-[5px] object-contain"
-                    loading="lazy"
-                  >
-                {% else %}
-                  <div class="flex h-[200px] w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
-                    {{ 'products.product.media.load_image' | t | default: 'Load image' }}
-                  </div>
-                {% endif %}
-              {% else %}
-                <div class="flex h-full w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
-                  {{
-                    'sections.banner_with_products.no_product_selected'
-                    | t
-                    | default: 'No product selected'
-                  }}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-
-      <!-- Carousel navigation (only show on mobile) -->
-      <div class="flex flex-row gap-[20px] pl-[20px] pt-[20px] md:hidden">
-        <div class="carousel-prev translate-x-[-1] cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="26"
-            height="21"
-            viewBox="0 0 26 21"
-            fill="none"
-          >
-            <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="carousel-next cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="26"
-            height="21"
-            viewBox="0 0 26 21"
-            fill="none"
-          >
-            <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          {% endfor %}
         </div>
       </div>
     </div>
-  </section>
-</div>
+    <!-- Desktop grid -->
+    <div
+      class=" hidden grid-cols-2 gap-[20px] md:grid"
+      id="desktop-products-grid-{{ section.id }}"
+    >
+      {% for block in section.blocks %}
+        {% liquid
+          assign product = block.settings.product
+          assign product_title = product.title
+          assign product_description = product.description | strip_html | truncatewords: 15
+          if block.settings.custom_url != blank
+            assign product_url = block.settings.custom_url
+          else
+            assign product_url = product.url
+          endif
+        %}
+        <div
+          class="product-card flex flex-col-reverse rounded-[10px] p-[30px] transition-colors xl:flex-row duration-300{% if forloop.first %} active{% endif %}"
+          {{ block.shopify_attributes }}
+          data-card-index="{{ forloop.index0 }}"
+        >
+          <div class="flex flex-col justify-between ">
+            <div class="flex flex-col">
+              {% if product_title != blank %}
+                <div class="headline1 pt-[40px] text-[36px] text-[#171717] xl:pt-0">
+                  {{ product_title }}
+                </div>
+              {% endif %}
+              {% if product_description != blank %}
+                <div class="text py-[20px] text-[#171717]/75 xl:pt-[40px]">
+                  {{ product_description }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="flex shrink-0 gap-[10px]">
+              {% if product_url != blank %}
+                <a
+                  href="{{ product_url }}"
+                  class="knappetikett flex shrink-0 flex-row items-center gap-[10px] whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
+                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
+                >
+                  Köp nu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-center">
+            {% if block.settings.product != blank %}
+              {% assign product = block.settings.product %}
+              {% if product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 3000 }}"
+                  alt="{{ product.featured_image.alt | default: product.title }}"
+                  width="200"
+                  height="200"
+                  class=" h-full w-full rounded-[5px] object-contain"
+                  loading="lazy"
+                >
+              {% else %}
+                <div class="flex h-[200px] w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                  {{ 'products.product.media.load_image' | t | default: 'Load image' }}
+                </div>
+              {% endif %}
+            {% else %}
+              <div class="flex h-full w-[200px] items-center justify-center rounded-[5px] bg-gray-200 text-gray-500">
+                {{
+                  'sections.banner_with_products.no_product_selected'
+                  | t
+                  | default: 'No product selected'
+                }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Carousel navigation (only show on mobile) -->
+    <div class="flex flex-row gap-[20px] pl-[20px] pt-[20px] md:hidden">
+      <div class="carousel-prev translate-x-[-1] cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="21"
+          viewBox="0 0 26 21"
+          fill="none"
+        >
+          <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="carousel-next cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="21"
+          viewBox="0 0 26 21"
+          fill="none"
+        >
+          <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% stylesheet %}
   .banner-med-2-produkter {
