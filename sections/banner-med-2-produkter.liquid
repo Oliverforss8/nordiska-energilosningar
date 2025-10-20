@@ -107,7 +107,11 @@
               assign product = block.settings.product
               assign product_title = product.title
               assign product_description = product.description | strip_html | truncatewords: 15
-              assign product_url = product.url
+              if block.settings.custom_url != blank
+                assign product_url = block.settings.custom_url
+              else
+                assign product_url = product.url
+              endif
             %}
             <div
               class="product-card flex w-full flex-shrink-0 flex-col-reverse rounded-[10px] p-[30px]"
@@ -435,8 +439,15 @@
         {
           "type": "text",
           "id": "learn_more_text",
-          "label": "Learn More Button Text",
-          "default": "Läs mer"
+          "label": "Learn More Button Text (Desktop only)",
+          "default": "Läs mer",
+          "info": "This button only shows on desktop. Mobile shows 'Köp' button."
+        },
+        {
+          "type": "url",
+          "id": "custom_url",
+          "label": "Custom Product URL (Optional)",
+          "info": "Leave blank to use the product's default URL"
         }
       ]
     }
