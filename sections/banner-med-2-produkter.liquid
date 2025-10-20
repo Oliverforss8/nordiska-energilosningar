@@ -92,72 +92,54 @@
 
   {% comment %} Products Content {% endcomment %}
   <div
-    class="products-content {% if layout_reversed %}order-1{% else %}order-2{% endif %}"
+    class="products-content w-full {% if layout_reversed %}order-1{% else %}order-2{% endif %}"
     data-debug="products order: {% if layout_reversed %}1{% else %}2{% endif %}"
   >
     <!-- Mobile carousel container -->
-    <div class=" relative md:hidden">
-      <div class="carousel-container overflow-hidden">
+    <div class="relative w-full md:hidden">
+      <div class="carousel-container w-full overflow-hidden">
         <div
           class="carousel-track flex transition-transform duration-500 ease-in-out"
           data-current="0"
         >
           {% for block in section.blocks %}
+            {% liquid
+              assign product = block.settings.product
+              assign product_title = product.title
+              assign product_description = product.description | strip_html | truncatewords: 15
+              assign product_url = product.url
+            %}
             <div
-              class="product-card flex w-full flex-shrink-0 flex-col-reverse rounded-[10px] bg-[#F3F1E8] p-[30px]"
+              class="product-card flex w-full flex-shrink-0 flex-col-reverse rounded-[10px] p-[30px]"
+              style="background: #F3F1E8;"
               {{ block.shopify_attributes }}
             >
               <div class="flex flex-col justify-between ">
                 <div class="flex flex-col">
-                  {% if block.settings.title != blank %}
+                  {% if product_title != blank %}
                     <div class="headline1 pt-[30px] text-[36px] text-[#171717]">
-                      {{ block.settings.title }}
+                      {{ product_title }}
                     </div>
                   {% endif %}
-                  {% if block.settings.description != blank %}
+                  {% if product_description != blank %}
                     <div class="text py-[20px] text-[#171717]/75">
-                      {{ block.settings.description }}
+                      {{ product_description }}
                     </div>
                   {% endif %}
                 </div>
                 <div class="flex shrink-0 gap-[10px]">
-                  {% if block.settings.product != blank %}
+                  {% if product_url != blank %}
                     <a
-                      href="{{ block.settings.product.url }}"
+                      href="{{ product_url }}"
                       class="knappetikett inline-block rounded-full px-[20px] py-[18px] text-[#171717]"
                       style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       Köp
                     </a>
                   {% endif %}
-                  {% if block.settings.learn_more_url != blank %}
-                    <a
-                      href="{{ block.settings.learn_more_url }}"
-                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-full px-[20px] py-[18px] text-[#171717]"
-                      style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-                    >
-                      {{ block.settings.learn_more_text | default: 'Läs mer' }}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="18"
-                        viewBox="0 0 22 18"
-                        fill="none"
-                      >
-                        <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </a>
-                  {% endif %}
                 </div>
               </div>
-              <div
-                class=" "
-                style="
-                      aspect-ratio: 18/23;
-                  height: 285.081px;
-                "
-              >
+              <div class="flex w-full items-center justify-center">
                 {% if block.settings.product != blank %}
                   {% assign product = block.settings.product %}
                   {% if product.featured_image %}
@@ -166,7 +148,7 @@
                       alt="{{ product.featured_image.alt | default: product.title }}"
                       width="200"
                       height="200"
-                      class=" h-full w-full rounded-[5px] object-contain"
+                      class="h-auto w-full max-w-[200px] rounded-[5px] object-contain"
                       loading="lazy"
                     >
                   {% else %}
@@ -189,13 +171,18 @@
         </div>
       </div>
     </div>
-
     <!-- Desktop grid -->
     <div
       class=" hidden grid-cols-2 gap-[20px] md:grid"
       id="desktop-products-grid-{{ section.id }}"
     >
       {% for block in section.blocks %}
+        {% liquid
+          assign product = block.settings.product
+          assign product_title = product.title
+          assign product_description = product.description | strip_html | truncatewords: 15
+          assign product_url = product.url
+        %}
         <div
           class="product-card flex flex-col-reverse rounded-[10px] p-[30px] transition-colors xl:flex-row duration-300{% if forloop.first %} active{% endif %}"
           {{ block.shopify_attributes }}
@@ -203,30 +190,30 @@
         >
           <div class="flex flex-col justify-between ">
             <div class="flex flex-col">
-              {% if block.settings.title != blank %}
+              {% if product_title != blank %}
                 <div class="headline1 pt-[40px] text-[36px] text-[#171717] xl:pt-0">
-                  {{ block.settings.title }}
+                  {{ product_title }}
                 </div>
               {% endif %}
-              {% if block.settings.description != blank %}
+              {% if product_description != blank %}
                 <div class="text py-[20px] text-[#171717]/75 xl:pt-[40px]">
-                  {{ block.settings.description }}
+                  {{ product_description }}
                 </div>
               {% endif %}
             </div>
             <div class="flex shrink-0 gap-[10px]">
-              {% if block.settings.product != blank %}
+              {% if product_url != blank %}
                 <a
-                  href="{{ block.settings.product.url }}"
+                  href="{{ product_url }}"
                   class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
                   Köp
                 </a>
               {% endif %}
-              {% if block.settings.learn_more_url != blank %}
+              {% if product_url != blank %}
                 <a
-                  href="{{ block.settings.learn_more_url }}"
+                  href="{{ product_url }}"
                   class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
@@ -245,18 +232,12 @@
               {% endif %}
             </div>
           </div>
-          <div
-            class=" "
-            style="
-                  aspect-ratio: 18/23;
-              height: 285.081px;
-            "
-          >
+          <div class="flex w-full items-center justify-center">
             {% if block.settings.product != blank %}
               {% assign product = block.settings.product %}
               {% if product.featured_image %}
                 <img
-                  src="{{ product.featured_image | image_url: width: 300 }}"
+                  src="{{ product.featured_image | image_url: width: 3000 }}"
                   alt="{{ product.featured_image.alt | default: product.title }}"
                   width="200"
                   height="200"
@@ -315,6 +296,13 @@
     display: flex !important;
     flex-direction: column !important;
     gap: 20px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .banner-med-2-produkter .products-content {
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .banner-content.order-1 {
@@ -379,10 +367,18 @@
 
   .carousel-container {
     position: relative;
+    width: 100%;
   }
 
   .carousel-track {
     transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-track .product-card {
+    min-width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
   }
 
   .carousel-prev,
@@ -417,181 +413,7 @@
   }
 {% endstylesheet %}
 
-{% javascript %}
-  document.addEventListener('DOMContentLoaded', function () {
-    // Find all carousel sections and initialize each one
-    const carouselSections = document.querySelectorAll('.banner-med-2-produkter');
-
-    carouselSections.forEach(function (section) {
-      const carousel = section.querySelector('.carousel-track');
-      const prevButton = section.querySelector('.carousel-prev');
-      const nextButton = section.querySelector('.carousel-next');
-
-      if (!carousel || !prevButton || !nextButton) return;
-
-      const slides = carousel.querySelectorAll('.product-card');
-      const totalSlides = slides.length;
-      let currentSlide = 0;
-      let autoChangeInterval;
-
-      function updateCarousel() {
-        const translateX = -currentSlide * 100;
-        carousel.style.transform = `translateX(${translateX}%)`;
-        carousel.setAttribute('data-current', currentSlide);
-
-        // Update button states
-        prevButton.disabled = currentSlide === 0;
-        nextButton.disabled = currentSlide === totalSlides - 1;
-
-        // Add visual feedback for disabled state
-        if (prevButton.disabled) {
-          prevButton.style.opacity = '0.5';
-          prevButton.style.cursor = 'not-allowed';
-        } else {
-          prevButton.style.opacity = '1';
-          prevButton.style.cursor = 'pointer';
-        }
-
-        if (nextButton.disabled) {
-          nextButton.style.opacity = '0.5';
-          nextButton.style.cursor = 'not-allowed';
-        } else {
-          nextButton.style.opacity = '1';
-          nextButton.style.cursor = 'pointer';
-        }
-      }
-
-      function nextSlide() {
-        if (currentSlide < totalSlides - 1) {
-          currentSlide++;
-          updateCarousel();
-        }
-      }
-
-      function prevSlide() {
-        if (currentSlide > 0) {
-          currentSlide--;
-          updateCarousel();
-        }
-      }
-
-      function startAutoChange() {
-        if (totalSlides > 1) {
-          autoChangeInterval = setInterval(nextSlide, 8000); // 8 seconds
-        }
-      }
-
-      function stopAutoChange() {
-        if (autoChangeInterval) {
-          clearInterval(autoChangeInterval);
-        }
-      }
-
-      function restartAutoChange() {
-        stopAutoChange();
-        startAutoChange();
-      }
-
-      // Event listeners
-      nextButton.addEventListener('click', function (e) {
-        e.preventDefault();
-        nextSlide();
-        restartAutoChange(); // Restart timer when user interacts
-      });
-
-      prevButton.addEventListener('click', function (e) {
-        e.preventDefault();
-        prevSlide();
-        restartAutoChange(); // Restart timer when user interacts
-      });
-
-      // Pause auto-change on hover
-      const carouselContainer = section.querySelector('.carousel-container');
-      if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', stopAutoChange);
-        carouselContainer.addEventListener('mouseleave', startAutoChange);
-      }
-
-      // Initialize carousel
-      updateCarousel();
-
-      // Start auto-change
-      startAutoChange();
-
-      // Handle touch events for swipe gestures
-      let startX = 0;
-      let isDragging = false;
-
-      carousel.addEventListener('touchstart', function (e) {
-        startX = e.touches[0].clientX;
-        isDragging = true;
-        stopAutoChange();
-      });
-
-      carousel.addEventListener('touchmove', function (e) {
-        if (!isDragging) return;
-        e.preventDefault();
-      });
-
-      carousel.addEventListener('touchend', function (e) {
-        if (!isDragging) return;
-        isDragging = false;
-
-        const endX = e.changedTouches[0].clientX;
-        const diffX = startX - endX;
-
-        if (Math.abs(diffX) > 50) {
-          // Minimum swipe distance
-          if (diffX > 0) {
-            nextSlide();
-          } else {
-            prevSlide();
-          }
-        }
-
-        restartAutoChange();
-      });
-    });
-
-    // Handle desktop product card hover behavior - EXACT same logic as collection page
-    const bannerSections = document.querySelectorAll('.banner-med-2-produkter');
-
-    bannerSections.forEach(function (section) {
-      // Get desktop grid container
-      const desktopGrid = section.querySelector('[id^="desktop-products-grid-"]');
-      if (!desktopGrid) return;
-
-      const productCards = desktopGrid.querySelectorAll('.product-card');
-
-      if (productCards.length === 0) return;
-
-      productCards.forEach(function (card) {
-        card.addEventListener('mouseenter', function () {
-          // Remove active class from all cards
-          productCards.forEach(function (otherCard) {
-            otherCard.classList.remove('active');
-          });
-
-          // Add active class to hovered card
-          this.classList.add('active');
-        });
-      });
-
-      // Handle mouse leave from the entire grid to reset to first item
-      desktopGrid.addEventListener('mouseleave', function () {
-        // Remove active class from all cards
-        productCards.forEach(function (card) {
-          card.classList.remove('active');
-        });
-
-        // Add active class back to first card
-        if (productCards.length > 0) {
-          productCards[0].classList.add('active');
-        }
-      });
-    });
-  });
-{% endjavascript %}
+<script src="{{ 'banner-med-2-produkter.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
@@ -607,30 +429,14 @@
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Product Title",
-          "default": "Laddbox"
-        },
-        {
-          "type": "textarea",
-          "id": "description",
-          "label": "Product Description",
-          "default": "Lagra din egen solenergi och använd den när elpriserna är som högst."
+          "label": "Select Product",
+          "info": "Product title, description (limited to 15 words), and link will be automatically used"
         },
         {
           "type": "text",
           "id": "learn_more_text",
           "label": "Learn More Button Text",
           "default": "Läs mer"
-        },
-        {
-          "type": "url",
-          "id": "learn_more_url",
-          "label": "Learn More Button URL"
         }
       ]
     }
@@ -733,18 +539,10 @@
       "name": "Banner med 2 produkter",
       "blocks": [
         {
-          "type": "product_card",
-          "settings": {
-            "title": "Laddbox 1",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst."
-          }
+          "type": "product_card"
         },
         {
-          "type": "product_card",
-          "settings": {
-            "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning."
-          }
+          "type": "product_card"
         }
       ]
     }

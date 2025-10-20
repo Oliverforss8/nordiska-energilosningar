@@ -658,6 +658,10 @@
   width: 100vw
 }
 
+.w-\[calc\(100\%-40px\)\] {
+  width: calc(100% - 40px)
+}
+
 .min-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   min-width: calc(100% / 1.5 - 20px * 0.5)
 }
@@ -672,6 +676,10 @@
 
 .max-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   max-width: calc(100% / 1.5 - 20px * 0.5)
+}
+
+.max-w-\[200px\] {
+  max-width: 200px
 }
 
 .flex-1 {
