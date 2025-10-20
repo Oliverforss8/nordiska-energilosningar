@@ -658,10 +658,6 @@
   width: 100vw
 }
 
-.w-\[calc\(100\%-40px\)\] {
-  width: calc(100% - 40px)
-}
-
 .min-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   min-width: calc(100% / 1.5 - 20px * 0.5)
 }
@@ -670,20 +666,16 @@
   max-width: 80rem
 }
 
+.max-w-\[200px\] {
+  max-width: 200px
+}
+
 .max-w-\[800px\] {
   max-width: 800px
 }
 
 .max-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   max-width: calc(100% / 1.5 - 20px * 0.5)
-}
-
-.max-w-\[200px\] {
-  max-width: 200px
-}
-
-.max-w-\[300px\] {
-  max-width: 300px
 }
 
 .flex-1 {
