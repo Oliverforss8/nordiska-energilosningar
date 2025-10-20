@@ -13,7 +13,7 @@
 >
   {% comment %} Banner Content {% endcomment %}
   <div
-    class="banner-content relative h-[500px] w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
+    class="banner-content  relative h-[500px] w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
     style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
     data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
   >
@@ -23,7 +23,7 @@
         style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
       ></div>
     {% endif %}
-    <div class="relative z-10 flex h-full flex-col justify-between">
+    <div class="relative  z-10 flex h-full flex-col justify-between">
       <div>
         {% if section.settings.header_button_text != blank %}
           <a
