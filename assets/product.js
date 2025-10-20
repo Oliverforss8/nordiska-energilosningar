@@ -358,22 +358,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Calculate discount if green deduction is selected
     // Green deduction: final price = total price * 0.515 (customer pays 51.5% of total)
+    // But with maximum discount limits
     if (discountCode) {
       showDiscount = true;
 
-      // Calculate discounted price: customer pays 51.5% of total price
-      finalPrice = Math.round(totalPrice * 0.515);
-      const discountAmount = totalPrice - finalPrice;
+      // Set maximum discount based on discount code
+      let maxDiscountAmount = 0;
+      if (discountCode === 'AVDRAG1') {
+        maxDiscountAmount = 5000000; // 50,000 kr in cents
+      } else if (discountCode === 'AVDRAG2') {
+        maxDiscountAmount = 10000000; // 100,000 kr in cents
+      }
+
+      // Calculate what customer should pay (51.5% of total)
+      const calculatedFinalPrice = Math.round(totalPrice * 0.515);
+      const calculatedDiscount = totalPrice - calculatedFinalPrice;
+
+      // Cap the discount at the maximum allowed
+      const actualDiscount =
+        maxDiscountAmount > 0
+          ? Math.min(calculatedDiscount, maxDiscountAmount)
+          : calculatedDiscount;
+
+      finalPrice = totalPrice - actualDiscount;
+
+      // Check if discount is capped
+      const isCapped = maxDiscountAmount > 0 && calculatedDiscount > maxDiscountAmount;
 
       console.log('💰 Green deduction applied:', {
-        totalPrice: totalPrice / 100,
-        discountPercentage: '48.5%',
-        discountAmount: discountAmount / 100,
-        finalPrice: finalPrice / 100,
-        customerPays: '51.5% of total',
+        discountCode: discountCode,
+        totalPrice: totalPrice / 100 + ' kr',
+        calculatedDiscount: calculatedDiscount / 100 + ' kr',
+        maxDiscount: maxDiscountAmount > 0 ? maxDiscountAmount / 100 + ' kr' : 'unlimited',
+        actualDiscount: actualDiscount / 100 + ' kr',
+        finalPrice: finalPrice / 100 + ' kr',
+        discountCapped: isCapped,
       });
+
+      // Store the actual discount rate and capped status for use in individual price calculations
+      window.activeDiscountRate = actualDiscount / totalPrice;
+      window.discountIsCapped = isCapped;
+      window.maxDiscountAmount = maxDiscountAmount;
     } else {
       console.log('❌ No discount code selected');
+      window.activeDiscountRate = 0;
+      window.discountIsCapped = false;
+      window.maxDiscountAmount = 0;
     }
 
     // Update total price display
@@ -444,17 +474,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Apply discount effects ONLY to upsell prices
     const upsellPrices = document.querySelectorAll('.upsell-price');
     upsellPrices.forEach((priceElement) => {
-      if (showDiscount) {
+      if (showDiscount && window.activeDiscountRate > 0) {
         // Only apply discount if not already applied
         if (!priceElement.classList.contains('discount-applied')) {
           priceElement.classList.add('strikethrough', 'discount-applied');
-          // Calculate discounted upsell price (customer pays 51.5% of original)
+          // Calculate discounted upsell price using the actual discount rate
           const upsellCheckbox = document.querySelector(
             `[data-product-id="${priceElement.dataset.productId}"]`
           );
           if (upsellCheckbox) {
             const originalPrice = parseInt(upsellCheckbox.dataset.price);
-            const discountedPrice = Math.round(originalPrice * 0.515);
+            const discount = Math.round(originalPrice * window.activeDiscountRate);
+            const discountedPrice = originalPrice - discount;
 
             // Get original text from stored data or clean textContent
             const originalText = priceElement.dataset.originalText || priceElement.textContent;
@@ -502,15 +533,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const installationPriceElements = document.querySelectorAll('.installation-card .headline1');
     installationPriceElements.forEach((element) => {
       if (element.textContent.includes('+') && element.textContent.includes('kr')) {
-        if (showDiscount) {
+        if (showDiscount && window.activeDiscountRate > 0) {
           // Only apply discount if not already applied
           if (!element.classList.contains('discount-applied')) {
             element.classList.add('strikethrough', 'discount-applied');
-            // Calculate discounted installation price (customer pays 51.5% of original)
+            // Calculate discounted installation price using the actual discount rate
             const installationCheckbox = document.getElementById('installation-checkbox');
             if (installationCheckbox) {
               const originalPrice = parseInt(installationCheckbox.dataset.price);
-              const discountedPrice = Math.round(originalPrice * 0.515);
+              const discount = Math.round(originalPrice * window.activeDiscountRate);
+              const discountedPrice = originalPrice - discount;
 
               // Get original text from stored data or clean textContent
               const originalText = element.dataset.originalText || element.textContent;
@@ -1003,9 +1035,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // If discount is currently active, reapply discount effects to the new price
         const discountRadios = document.querySelectorAll('.green-deduction-radio:checked');
-        if (discountRadios.length > 0) {
-          // Reapply discount logic for the new variant price (customer pays 51.5%)
-          const discountedPrice = Math.round(newPrice * 0.515);
+        if (discountRadios.length > 0 && window.activeDiscountRate > 0) {
+          // Reapply discount logic using the actual discount rate
+          const discount = Math.round(newPrice * window.activeDiscountRate);
+          const discountedPrice = newPrice - discount;
 
           const originalText = priceEl.textContent;
           const discountedText = '+' + formatCurrencySEK(discountedPrice);
