@@ -46,44 +46,48 @@
             {{ section.settings.description }}
           </p>
         {% endif %}
-        <div class="flex flex-row gap-[10px]">
+        <div class="flex flex-col gap-[10px] md:flex-row">
           {% if section.settings.primary_button_text != blank %}
-            <a
-              href="{{ section.settings.primary_button_url }}"
-              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
-              style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-            >
-              {{ section.settings.primary_button_text }}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="18"
-                viewBox="0 0 22 18"
-                fill="none"
+            <div>
+              <button
+                href="{{ section.settings.primary_button_url }}"
+                class="knappetikett flex shrink-0 flex-row items-center justify-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
+                style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
               >
-                <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
+                {{ section.settings.primary_button_text }}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="18"
+                  viewBox="0 0 22 18"
+                  fill="none"
+                >
+                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
           {% endif %}
           {% if section.settings.secondary_button_text != blank %}
-            <a
-              href="{{ section.settings.secondary_button_url }}"
-              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
-              style="border: 1px solid #fff;"
-            >
-              {{ section.settings.secondary_button_text }}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="18"
-                viewBox="0 0 22 18"
-                fill="none"
+            <div>
+              <button
+                href="{{ section.settings.secondary_button_url }}"
+                class="knappetikett flex shrink-0 flex-row items-center justify-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
+                style="border: 1px solid #fff;"
               >
-                <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
+                {{ section.settings.secondary_button_text }}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="18"
+                  viewBox="0 0 22 18"
+                  fill="none"
+                >
+                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
           {% endif %}
         </div>
       </div>
