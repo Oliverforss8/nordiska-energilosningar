@@ -357,29 +357,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Calculate discount if green deduction is selected
+    // Green deduction: final price = total price * 0.515 (customer pays 51.5% of total)
     if (discountCode) {
       showDiscount = true;
-      let maxDiscountAmount = 0;
-      let discountRate = 0.5551; // 55.51%
 
-      if (discountCode === 'AVDRAG1') {
-        maxDiscountAmount = 5000000; // 50,000 SEK in cents
-      } else if (discountCode === 'AVDRAG2') {
-        maxDiscountAmount = 10000000; // 100,000 SEK in cents
-      }
+      // Calculate discounted price: customer pays 51.5% of total price
+      finalPrice = Math.round(totalPrice * 0.515);
+      const discountAmount = totalPrice - finalPrice;
 
-      // Calculate discount on TOTAL PRICE (not just installation)
-      const calculatedDiscount = totalPrice * discountRate;
-      const discountAmount = Math.min(calculatedDiscount, maxDiscountAmount);
-      finalPrice = totalPrice - discountAmount;
-
-      console.log('💰 Discount applied:', {
+      console.log('💰 Green deduction applied:', {
         totalPrice: totalPrice / 100,
-        discountRate: discountRate * 100 + '%',
-        calculatedDiscount: calculatedDiscount / 100,
-        maxDiscountAmount: maxDiscountAmount / 100,
-        actualDiscountAmount: discountAmount / 100,
+        discountPercentage: '48.5%',
+        discountAmount: discountAmount / 100,
         finalPrice: finalPrice / 100,
+        customerPays: '51.5% of total',
       });
     } else {
       console.log('❌ No discount code selected');
@@ -457,14 +448,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Only apply discount if not already applied
         if (!priceElement.classList.contains('discount-applied')) {
           priceElement.classList.add('strikethrough', 'discount-applied');
-          // Calculate discounted upsell price
+          // Calculate discounted upsell price (customer pays 51.5% of original)
           const upsellCheckbox = document.querySelector(
             `[data-product-id="${priceElement.dataset.productId}"]`
           );
           if (upsellCheckbox) {
             const originalPrice = parseInt(upsellCheckbox.dataset.price);
-            const discountRate = 0.5551; // 55.51%
-            const discountedPrice = originalPrice * (1 - discountRate);
+            const discountedPrice = Math.round(originalPrice * 0.515);
 
             // Get original text from stored data or clean textContent
             const originalText = priceElement.dataset.originalText || priceElement.textContent;
@@ -516,12 +506,11 @@ document.addEventListener('DOMContentLoaded', function () {
           // Only apply discount if not already applied
           if (!element.classList.contains('discount-applied')) {
             element.classList.add('strikethrough', 'discount-applied');
-            // Calculate discounted installation price
+            // Calculate discounted installation price (customer pays 51.5% of original)
             const installationCheckbox = document.getElementById('installation-checkbox');
             if (installationCheckbox) {
               const originalPrice = parseInt(installationCheckbox.dataset.price);
-              const discountRate = 0.5551; // 55.51%
-              const discountedPrice = originalPrice * (1 - discountRate);
+              const discountedPrice = Math.round(originalPrice * 0.515);
 
               // Get original text from stored data or clean textContent
               const originalText = element.dataset.originalText || element.textContent;
@@ -564,6 +553,125 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // Conditional upsell visibility and variant mapping
+  function getCurrentMainOptionValue(index) {
+    const select = document.querySelector('.variant-select[data-option-position="' + index + '"]');
+    return select ? (select.value || '').toLowerCase() : '';
+  }
+
+  function evaluateUpsells() {
+    const cards = document.querySelectorAll('.upsell-product-card');
+    cards.forEach(function (card) {
+      const enabled = card.getAttribute('data-condition-enabled') === 'true';
+      if (!enabled) {
+        card.style.removeProperty('display');
+        applyVariantMap(card);
+        return;
+      }
+      const idx = card.getAttribute('data-option-index');
+      const allowed = (card.getAttribute('data-allowed-values') || '')
+        .split(',')
+        .map(function (s) {
+          return s.trim();
+        })
+        .filter(function (s) {
+          return s.length;
+        });
+      if (!idx || !allowed.length) {
+        card.style.removeProperty('display');
+        applyVariantMap(card);
+        return;
+      }
+      const current = getCurrentMainOptionValue(idx);
+      if (current && allowed.indexOf(current) !== -1) {
+        card.style.removeProperty('display');
+        applyVariantMap(card, current);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function parseVariantMap(mapStr) {
+    const out = {};
+    if (!mapStr) return out;
+    mapStr.split('|').forEach(function (line) {
+      const trimmed = line.trim();
+      if (!trimmed) return;
+      const parts = trimmed.split('=');
+      if (parts.length < 2) return;
+      const key = parts[0].trim().toLowerCase();
+      const val = parts.slice(1).join('=').trim().toLowerCase();
+      if (key && val) out[key] = val;
+    });
+    return out;
+  }
+
+  function applyVariantMap(card, currentMainValue) {
+    const mapStr = card.getAttribute('data-variant-map') || '';
+    if (!mapStr) return;
+    const map = parseVariantMap(mapStr);
+    const idx = card.getAttribute('data-option-index');
+    const current = currentMainValue || (idx ? getCurrentMainOptionValue(idx) : '');
+    if (!current || !map[current]) return;
+
+    const wanted = map[current];
+    const select = card.querySelector('.upsell-variant-select');
+    if (!select) return;
+
+    const matchOption = Array.prototype.find.call(select.options, function (opt) {
+      const idMatch = (opt.value || '').toLowerCase() === wanted;
+      const skuMatch = (opt.getAttribute('data-sku') || '').toLowerCase() === wanted;
+      const titleMatch = (opt.getAttribute('data-title') || '').toLowerCase() === wanted;
+      return idMatch || skuMatch || titleMatch;
+    });
+    if (matchOption && !matchOption.selected) {
+      select.value = matchOption.value;
+      const evt = new Event('change', { bubbles: true });
+      select.dispatchEvent(evt);
+    }
+  }
+
+  // Listen for variant changes to re-evaluate upsells
+  document.addEventListener('change', function (e) {
+    if (e.target && e.target.matches('.variant-select')) {
+      evaluateUpsells();
+    }
+  });
+
+  // Initial evaluation of upsells on page load
+  evaluateUpsells();
+
+  // Service option button handling for quote form
+  const serviceOptions = document.querySelectorAll('.service-option');
+  serviceOptions.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const isSelected = this.getAttribute('data-selected') === 'true';
+
+      if (isSelected) {
+        // Deselect this option
+        this.style.background = 'white';
+        this.setAttribute('data-selected', 'false');
+      } else {
+        // Deselect all other options first
+        serviceOptions.forEach(function (opt) {
+          opt.style.background = 'white';
+          opt.setAttribute('data-selected', 'false');
+        });
+
+        // Select this option
+        this.style.background = 'linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%)';
+        this.setAttribute('data-selected', 'true');
+
+        // Update hidden field
+        const serviceField = document.getElementById('selected_service');
+        if (serviceField) {
+          serviceField.value = this.getAttribute('data-service');
+        }
+      }
+    });
+  });
 
   // Function to show/hide price bar based on scroll position
   function togglePriceBarVisibility() {
@@ -894,11 +1002,10 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('✅ Updated upsell price display:', priceEl.textContent);
 
         // If discount is currently active, reapply discount effects to the new price
-        const discountCheckbox = document.getElementById('green-deduction-checkbox');
-        if (discountCheckbox && discountCheckbox.checked) {
-          // Reapply discount logic for the new variant price
-          const discountRate = 0.5551; // 55.51%
-          const discountedPrice = newPrice * (1 - discountRate);
+        const discountRadios = document.querySelectorAll('.green-deduction-radio:checked');
+        if (discountRadios.length > 0) {
+          // Reapply discount logic for the new variant price (customer pays 51.5%)
+          const discountedPrice = Math.round(newPrice * 0.515);
 
           const originalText = priceEl.textContent;
           const discountedText = '+' + formatCurrencySEK(discountedPrice);
