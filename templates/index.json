@@ -174,6 +174,50 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_knappar_3JNi3L": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_dHfKrg": {
+          "type": "button",
+          "settings": {
+            "text": "Bli din egen elproducent",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_9Lrptf": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra energin för när du behöver den",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_rtKQqQ": {
+          "type": "button",
+          "settings": {
+            "text": "Optimera ditt hem med smart styrning",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_dHfKrg",
+        "button_9Lrptf",
+        "button_rtKQqQ"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Ett smartare sätt att styra energi",
+        "text": "<p>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "slider_sektion_PkT3FL": {
       "type": "slider-sektion",
       "blocks": {
@@ -790,6 +834,7 @@
     "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
+    "bild_och_text_knappar_3JNi3L",
     "slider_sektion_PkT3FL",
     "bild_och_text_ydyfhV",
     "relaterade_produkter_jRpymw",
