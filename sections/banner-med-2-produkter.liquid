@@ -28,7 +28,7 @@
         {% if section.settings.header_button_text != blank %}
           <a
             href="{{ section.settings.header_button_url }}"
-            class="knappetikett2 z-10 inline-block rounded-[25px] bg-transparent p-[15px] text-white"
+            class="knappetikett2 z-10 inline-block rounded-full bg-transparent p-[15px] text-white"
             style="border: 1px solid #fff;"
           >
             {{ section.settings.header_button_text }}
@@ -50,7 +50,7 @@
           {% if section.settings.primary_button_text != blank %}
             <a
               href="{{ section.settings.primary_button_url }}"
-              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717]"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
               style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
             >
               {{ section.settings.primary_button_text }}
@@ -69,7 +69,7 @@
           {% if section.settings.secondary_button_text != blank %}
             <a
               href="{{ section.settings.secondary_button_url }}"
-              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[25px] bg-transparent px-[20px] py-[17px] text-white"
+              class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
               style="border: 1px solid #fff;"
             >
               {{ section.settings.secondary_button_text }}
@@ -124,7 +124,7 @@
                   {% if block.settings.product != blank %}
                     <a
                       href="{{ block.settings.product.url }}"
-                      class="knappetikett inline-block rounded-[25px] px-[20px] py-[18px] text-[#171717]"
+                      class="knappetikett inline-block rounded-full px-[20px] py-[18px] text-[#171717]"
                       style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       Köp
@@ -133,7 +133,7 @@
                   {% if block.settings.learn_more_url != blank %}
                     <a
                       href="{{ block.settings.learn_more_url }}"
-                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[18px] text-[#171717]"
+                      class="banner-2-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-full px-[20px] py-[18px] text-[#171717]"
                       style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
                       {{ block.settings.learn_more_text | default: 'Läs mer' }}
@@ -218,7 +218,7 @@
               {% if block.settings.product != blank %}
                 <a
                   href="{{ block.settings.product.url }}"
-                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-[25px] px-[20px] py-[18px] text-[#171717]"
+                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
                   Köp
@@ -227,7 +227,7 @@
               {% if block.settings.learn_more_url != blank %}
                 <a
                   href="{{ block.settings.learn_more_url }}"
-                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-[25px] px-[20px] py-[18px] text-[#171717]"
+                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
                   {{ block.settings.learn_more_text | default: 'Läs mer' }}

@@ -51,7 +51,7 @@
       {% if section.settings.primary_button_text != blank %}
         <a
           href="{{ section.settings.primary_button_url | default: "#" }}"
-          class="knappetikett flex w-auto flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717] no-underline md:shrink-0"
+          class="knappetikett flex w-auto flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717] no-underline md:shrink-0"
           style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
         >
           {{ section.settings.primary_button_text }}
@@ -71,7 +71,7 @@
       {% if section.settings.secondary_button_text != blank %}
         <a
           href="{{ section.settings.secondary_button_url | default: "#" }}"
-          class="knappetikett flex flex-row items-center gap-[20px] rounded-[25px] bg-transparent px-[20px] py-[17px] text-[#171717] no-underline md:shrink-0"
+          class="knappetikett flex flex-row items-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-[#171717] no-underline md:shrink-0"
           style="border: 1px solid #171717;"
         >
           {{ section.settings.secondary_button_text }}

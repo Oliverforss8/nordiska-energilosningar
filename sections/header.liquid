@@ -247,7 +247,7 @@
                               <div class="absolute bottom-[20px] left-[20px] ">
                                 <a
                                   href="{{ button_link_1 }}"
-                                  class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717]"
+                                  class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
                                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%); text-decoration: none;"
                                 >
                                   {{ button_text_1 | default: 'Knapp' }}
@@ -276,7 +276,7 @@
                               <div class="absolute bottom-[20px] left-[20px] ">
                                 <a
                                   href="{{ button_link_2 }}"
-                                  class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717]"
+                                  class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
                                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%); text-decoration: none;"
                                 >
                                   {{ button_text_2 | default: 'Knapp' }}
@@ -312,7 +312,7 @@
                             <div class="absolute bottom-[20px] left-[20px] ">
                               <a
                                 href="{{ button_link_1 }}"
-                                class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-[25px] px-[20px] py-[17px] text-[#171717]"
+                                class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
                                 style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%); text-decoration: none;"
                               >
                                 {{ button_text_1 | default: 'Knapp' }}
@@ -352,14 +352,14 @@
         {% if is_foretag_page %}
           <a
             href="{{ section.settings.foretag_quote_link | default: '/pages/foretag/offert' }}"
-            class="cart-btn knappetikett relative flex flex-row gap-[20px] rounded-[25px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+            class="cart-btn knappetikett relative flex flex-row gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
             style="text-decoration: none;"
           >
             <span class="xl:block">Be om offert</span>
           </a>
         {% else %}
           <button
-            class="cart-btn knappetikett relative hidden flex-row  gap-[20px] rounded-[25px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100 md:flex"
+            class="cart-btn knappetikett relative hidden flex-row  gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100 md:flex"
             data-cart-toggle
           >
             <span class="hidden xl:block ">kundvagn</span>
@@ -381,7 +381,7 @@
             </span>
           </button>
           <button
-            class="knappetikett mobile-menu-toggle relative flex flex-row gap-[20px] rounded-[25px] bg-white p-[15px] md:hidden"
+            class="knappetikett mobile-menu-toggle relative flex flex-row gap-[20px] rounded-full bg-white p-[15px] md:hidden"
             data-mobile-menu-toggle
             aria-label="Toggle menu"
           >
@@ -471,7 +471,7 @@
       <!-- Mobile Cart Button -->
       <div class="mt-[20px]">
         <button
-          class="knappetikett relative flex w-full flex-row items-center justify-center gap-[20px] rounded-[25px] bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+          class="knappetikett relative flex w-full flex-row items-center justify-center gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
           style="border: 1px solid #171717;"
           data-cart-toggle
         >

@@ -29,7 +29,7 @@
               %}
               {% if field_type == 'textarea' %}
                 <textarea
-                  class="body1 min-h-[120px] rounded-[25px] bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                  class="body1 min-h-[120px] rounded-full bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                   name="{{ field_name }}"
                   placeholder="{{ placeholder | escape }}"
                   {% if is_required %}
@@ -39,7 +39,7 @@
                 ></textarea>
               {% else %}
                 <input
-                  class="body1 h-[45px] rounded-[25px] bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+                  class="body1 h-[45px] rounded-full bg-white pl-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
                   placeholder="{{ placeholder | escape }}"
                   type="{{ field_type }}"
                   name="{{ field_name }}"
@@ -67,7 +67,7 @@
                 %}
                 <button
                   type="button"
-                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-[25px] px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-full px-[15px] py-[10px] text-[18px] md:text-[20px]"
                   data-service="{{ service_key }}"
                   data-selected="false"
                 >
@@ -95,7 +95,7 @@
             </span>
           </div>
           <textarea
-            class="body1 min-h-[120px] rounded-[25px] bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
+            class="body1 min-h-[120px] rounded-full bg-white p-[15px] text-[16px] text-[#171717]/85 md:text-[18px]"
             name="message"
             placeholder="Skriv ditt meddelande här..."
             rows="4"
@@ -134,7 +134,7 @@
           >
           <button
             type="button"
-            class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-[25px] py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
+            class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-full py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
             style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
           >
             Få ditt förslag
@@ -239,7 +239,7 @@
             class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
             <button
-              class="knappetikett rounded-[25px] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
+              class="knappetikett rounded-full px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
               style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
             >
               {{ section.settings.card_1_button_text | escape }}
@@ -270,7 +270,7 @@
             class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
             <button
-              class="knappetikett rounded-[25px] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
+              class="knappetikett rounded-full px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
               style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
             >
               {{ section.settings.card_2_button_text | escape }}
@@ -301,7 +301,7 @@
             class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
             <button
-              class="knappetikett rounded-[25px] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
+              class="knappetikett rounded-full px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
               style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
             >
               {{ section.settings.card_3_button_text | escape }}
@@ -332,7 +332,7 @@
             class="absolute inset-0  z-10 flex items-end justify-start p-[20px] no-underline"
           >
             <button
-              class="knappetikett rounded-[25px] px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
+              class="knappetikett rounded-full px-[20px] py-[15px] text-[15px] text-[#171717] no-underline md:px-[30px] md:py-[18px] md:text-[20px]"
               style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
             >
               {{ section.settings.card_4_button_text | escape }}
