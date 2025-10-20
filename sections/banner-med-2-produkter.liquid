@@ -135,10 +135,20 @@
                   {% if product_url != blank %}
                     <a
                       href="{{ product_url }}"
-                      class="knappetikett inline-block rounded-full px-[20px] py-[18px] text-[#171717]"
+                      class="knappetikett flex flex-row items-center gap-[10px] rounded-full px-[20px] py-[18px] text-[#171717]"
                       style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                     >
-                      Köp
+                      Köp nu
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="18"
+                        viewBox="0 0 22 18"
+                        fill="none"
+                      >
+                        <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
                     </a>
                   {% endif %}
                 </div>
@@ -185,7 +195,11 @@
           assign product = block.settings.product
           assign product_title = product.title
           assign product_description = product.description | strip_html | truncatewords: 15
-          assign product_url = product.url
+          if block.settings.custom_url != blank
+            assign product_url = block.settings.custom_url
+          else
+            assign product_url = product.url
+          endif
         %}
         <div
           class="product-card flex flex-col-reverse rounded-[10px] p-[30px] transition-colors xl:flex-row duration-300{% if forloop.first %} active{% endif %}"
@@ -209,19 +223,10 @@
               {% if product_url != blank %}
                 <a
                   href="{{ product_url }}"
-                  class="knappetikett inline-block shrink-0 whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
+                  class="knappetikett flex shrink-0 flex-row items-center gap-[10px] whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
                   style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                 >
-                  Köp
-                </a>
-              {% endif %}
-              {% if product_url != blank %}
-                <a
-                  href="{{ product_url }}"
-                  class="banner-2-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
-                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-                >
-                  {{ block.settings.learn_more_text | default: 'Läs mer' }}
+                  Köp nu
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -230,7 +235,7 @@
                     fill="none"
                   >
                     <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1 8.9996H21L13.1739 16.8257" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
               {% endif %}
