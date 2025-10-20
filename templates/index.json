@@ -770,18 +770,6 @@
             "rows": 4
           }
         },
-        "form_field_jRMwBU": {
-          "type": "form_field",
-          "settings": {
-            "label": "Meddelande",
-            "name": "",
-            "field_type": "textarea",
-            "placeholder": "",
-            "required": false,
-            "pattern": "",
-            "rows": 4
-          }
-        },
         "service_option_H6eFaF": {
           "type": "service_option",
           "settings": {
@@ -816,7 +804,6 @@
         "form_field_jiBmBQ",
         "form_field_yhxae9",
         "form_field_JCGxY9",
-        "form_field_jRMwBU",
         "service_option_H6eFaF",
         "service_option_QMtgmd",
         "service_option_EaxUBr",
