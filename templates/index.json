@@ -56,7 +56,7 @@
           "settings": {
             "media_type": "image",
             "background_image": "shopify://shop_images/Zaptec_2022-11.jpg",
-            "overlay_opacity": 40,
+            "overlay_opacity": 20,
             "heading": "Upptäck Zaptec Go 2",
             "subheading": "Ladda snabbare, smartare och snyggare med Zaptec Go 2 – den eleganta laddboxen som kombinerar maximal prestanda, nordisk design och intelligent styrning för framtidens elbilar.",
             "button_text": "Läs mer",
@@ -421,7 +421,7 @@
           "settings": {
             "product": "saj",
             "show_price": false,
-            "description": "SAJ HS3 vhybridöxelriktare – ett allt-i-ett system med AI-styrning, ultratunn design och integrerad batterihantering för maximal solenergibesparing."
+            "description": ""
           }
         },
         "product_y6J77j": {
@@ -483,9 +483,9 @@
         "product_card_MDr4Qn": {
           "type": "product_card",
           "settings": {
-            "product": "fronius-gen24-plus",
-            "title": "",
-            "description": "",
+            "product": "fronius-verto",
+            "title": "Fronius Verto",
+            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
             "learn_more_text": "Köp nu",
             "learn_more_url": "shopify://products/fronius-verto"
           }
@@ -641,7 +641,7 @@
         "product_card_rYQ3WU": {
           "type": "product_card",
           "settings": {
-            "product": "dyness-tower-pro",
+            "product": "solis-s6-eh3p10-kw",
             "custom_url": ""
           }
         },
@@ -661,16 +661,16 @@
       "settings": {
         "layout_direction": "products_first",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/Namnlos_3000_x_2000_px_20.png",
+        "background_image": "shopify://shop_images/solcellsbatteri-saj-hs3-2n.jpg",
         "overlay_opacity": 35,
         "header_button_text": "Solis + Dyness",
         "header_button_url": "shopify://collections/batteri",
         "heading": "Smart energi till rätt pris",
         "description": "Solis växelriktare i samspel med Dyness batteri ger en pålitlig, effektiv och prisvänlig lösning för ditt hem. Tillsammans skapar de ett stabilt system som maximerar nyttan av din solenergi – dag som natt.",
-        "primary_button_text": "",
-        "primary_button_url": "shopify://pages/landningssida-film",
-        "secondary_button_text": "Läs mer",
-        "secondary_button_url": "shopify://pages/landningssida-film"
+        "primary_button_text": "Batterier",
+        "primary_button_url": "shopify://pages/vara-laddboxar",
+        "secondary_button_text": "Växelriktare",
+        "secondary_button_url": "shopify://metaobjects/foretag/start"
       }
     },
     "review_VPytWr": {
