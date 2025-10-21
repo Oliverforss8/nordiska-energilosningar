@@ -20,7 +20,7 @@
       "settings": {
         "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
-        "overlay_opacity": 30,
+        "overlay_opacity": 50,
         "heading": "Trött på höga elräkningar? Här är vår lösning.",
         "subheading": "Vi vet hur det känns när elräkningen blir onödigt hög. Därför har vi skapat en enkel och smart helhetslösning som gör att du får kontroll över dina kostnader – och slipper oron över nästa faktura.",
         "button_text": "Fri offert",
