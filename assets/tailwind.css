@@ -249,6 +249,10 @@
   top: 100px
 }
 
+.top-full {
+  top: 100%
+}
+
 .z-10 {
   z-index: 10
 }
@@ -1789,6 +1793,11 @@
 
 .hover\:bg-white\/30:hover {
   background-color: rgb(255 255 255 / 0.3)
+}
+
+.hover\:bg-\[\#F3F1E8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 241 232 / var(--tw-bg-opacity, 1))
 }
 
 .hover\:text-\[\#171717\]:hover {

@@ -350,9 +350,10 @@
       <!-- Cart / Företag CTA button -->
       <div class="flex items-center gap-[15px]">
         {% if is_foretag_page %}
+          <!-- Desktop: Show "Be om offert" button -->
           <a
             href="{{ section.settings.foretag_quote_link | default: '/pages/foretag/offert' }}"
-            class="cart-btn knappetikett relative flex flex-row gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+            class="cart-btn knappetikett relative hidden flex-row gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100 md:flex"
             style="text-decoration: none;"
           >
             <span class="flex flex-row items-center  justify-center gap-[10px] xl:flex">
@@ -369,6 +370,24 @@
               </svg>
             </span>
           </a>
+          <!-- Mobile: Show hamburger menu -->
+          <button
+            class="knappetikett mobile-menu-toggle relative flex flex-row gap-[20px] rounded-full bg-white p-[15px] md:hidden"
+            data-mobile-menu-toggle
+            aria-label="Toggle menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="16"
+              viewBox="0 0 22 16"
+              fill="none"
+            >
+              <path d="M1 15H21" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 1H21" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 8H21" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
         {% else %}
           <button
             class="cart-btn knappetikett relative hidden flex-row  gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100 md:flex"
@@ -480,31 +499,51 @@
 
       <!-- Mobile Menu Footer -->
 
-      <!-- Mobile Cart Button -->
+      <!-- Mobile Cart Button / Quote Button -->
       <div class="mt-[20px]">
-        <button
-          class="knappetikett relative flex w-full flex-row items-center justify-center gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
-          style="border: 1px solid #171717;"
-          data-cart-toggle
-        >
-          <span>Kundvagn</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="22"
-            viewBox="0 0 21 22"
-            fill="none"
+        {% if is_foretag_page %}
+          <a
+            href="{{ section.settings.foretag_quote_link | default: '/pages/foretag/offert' }}"
+            class="knappetikett flex w-full flex-row items-center justify-center gap-[20px] rounded-full p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+            style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%); text-decoration: none;"
           >
-            <path d="M2.37325 16.02L1.16926 8.84C0.98726 7.754 0.896261 7.212 1.18826 6.856C1.47926 6.5 2.01525 6.5 3.08624 6.5H17.9141C18.9851 6.5 19.5211 6.5 19.8121 6.856C20.1041 7.212 20.0121 7.754 19.8311 8.84L18.6271 16.02C18.2281 18.4 18.0291 19.589 17.2141 20.295C16.4001 21 15.2261 21 12.8782 21H8.12219C5.77422 21 4.60023 21 3.78623 20.294C2.97124 19.589 2.77224 18.399 2.37325 16.019M16.0001 6.5C16.0001 5.04131 15.4207 3.64236 14.3892 2.61091C13.3578 1.57946 11.9588 1 10.5002 1C9.0415 1 7.64256 1.57946 6.61112 2.61091C5.57968 3.64236 5.00022 5.04131 5.00022 6.5" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <!-- Cart count badge -->
-          <span
-            class="cart-count absolute -right-2 -top-2 flex h-6 w-6 scale-0 items-center justify-center rounded-full bg-[#171717] text-xs font-bold text-white opacity-0 transition-all duration-200"
-            data-cart-count
+            <span>Be om offert</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="18"
+              viewBox="0 0 22 18"
+              fill="none"
+            >
+              <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        {% else %}
+          <button
+            class="knappetikett relative flex w-full flex-row items-center justify-center gap-[20px] rounded-full bg-white p-[20px] py-[15px] text-[#171717] transition-colors hover:bg-gray-100"
+            style="border: 1px solid #171717;"
+            data-cart-toggle
           >
-            0
-          </span>
-        </button>
+            <span>Kundvagn</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="22"
+              viewBox="0 0 21 22"
+              fill="none"
+            >
+              <path d="M2.37325 16.02L1.16926 8.84C0.98726 7.754 0.896261 7.212 1.18826 6.856C1.47926 6.5 2.01525 6.5 3.08624 6.5H17.9141C18.9851 6.5 19.5211 6.5 19.8121 6.856C20.1041 7.212 20.0121 7.754 19.8311 8.84L18.6271 16.02C18.2281 18.4 18.0291 19.589 17.2141 20.295C16.4001 21 15.2261 21 12.8782 21H8.12219C5.77422 21 4.60023 21 3.78623 20.294C2.97124 19.589 2.77224 18.399 2.37325 16.019M16.0001 6.5C16.0001 5.04131 15.4207 3.64236 14.3892 2.61091C13.3578 1.57946 11.9588 1 10.5002 1C9.0415 1 7.64256 1.57946 6.61112 2.61091C5.57968 3.64236 5.00022 5.04131 5.00022 6.5" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <!-- Cart count badge -->
+            <span
+              class="cart-count absolute -right-2 -top-2 flex h-6 w-6 scale-0 items-center justify-center rounded-full bg-[#171717] text-xs font-bold text-white opacity-0 transition-all duration-200"
+              data-cart-count
+            >
+              0
+            </span>
+          </button>
+        {% endif %}
       </div>
     </div>
   </div>
