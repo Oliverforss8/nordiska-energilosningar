@@ -58,23 +58,24 @@
           <div class="flex flex-col gap-[20px] md:flex-row md:items-center md:gap-[40px]">
             <div class=" md:shrink-0">
               {% if section.settings.button_url != blank %}
-                <button
-                  href="{{ section.settings.button_url }}"
-                  class="knappetikett flex flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
-                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-                >
-                  {{ section.settings.button_text | default: 'Våra energilösningar' }}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="18"
-                    viewBox="0 0 22 18"
-                    fill="none"
+                <a href="{{ section.settings.button_url }}" class="no-underline">
+                  <button
+                    class="knappetikett flex flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717] transition-all hover:opacity-90"
+                    style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
                   >
-                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
+                    {{ section.settings.button_text | default: 'Våra energilösningar' }}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="18"
+                      viewBox="0 0 22 18"
+                      fill="none"
+                    >
+                      <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </a>
               {% else %}
                 <div>
                   <button
