@@ -36,7 +36,7 @@
             "heading": "Kompletta batteripaket \nfrån 38 900:-",
             "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
             "button_text": "Läs mer",
-            "button_url": "shopify://pages/vara-batterilosningar"
+            "button_url": "shopify://pages/landningssida-film"
           }
         },
         "slide_dpHNkz": {
@@ -281,7 +281,7 @@
       "type": "bild-och-text",
       "name": "Bild och text",
       "settings": {
-        "background_color": "#ffffff",
+        "background_color": "#f7f7f7",
         "title": "AI-styrningen tänker på elpriset så att du inte behöver",
         "text": "<p>Vår AI-styrning optimerar din energianvändning efter elpriset och ger dig maximal besparing. Ingår i alla våra solcells- och batteripaket.<br/><br/><br/></p>",
         "media_type": "video",
