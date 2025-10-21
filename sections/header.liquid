@@ -70,30 +70,30 @@
 >
   <!-- Top bar -->
   <div class="header-topbar w-full px-[50px] py-[15px]{% if is_foretag_page %} bg-[#171717]{% else %} bg-[#F3F1E8]{% endif %}">
-    <div class="text flex flex-row gap-[15px] px-[50px]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %}">
+    <div class="text flex flex-row gap-[15px] px-[50px]">
       {% if is_foretag_page %}
         <a
           href="{{ routes.root_url }}"
-          class="text-[12px] font-[300]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
+          class="text-[12px] font-[300] text-white transition-opacity hover:opacity-70"
         >
           {{ 'general.privatperson' | t | default: 'Privatperson' }}
         </a>
         <a
           href="/pages/foretag/start"
-          class="text-[18px] font-[400]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
+          class="text-[18px] font-[400] text-white transition-opacity hover:opacity-70"
         >
           {{ 'general.foretag' | t | default: 'Företag' }}
         </a>
       {% else %}
         <a
           href="{{ routes.root_url }}"
-          class="text-[18px] font-[400]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
+          class="text-[18px] font-[400] text-[#171717] transition-opacity hover:opacity-70"
         >
           {{ 'general.privatperson' | t | default: 'Privatperson' }}
         </a>
         <a
           href="/pages/foretag/start"
-          class="text-[12px] font-[300]{% if is_foretag_page %} text-white{% else %} text-[#171717]{% endif %} transition-opacity hover:opacity-70"
+          class="text-[12px] font-[300] text-[#171717] transition-opacity hover:opacity-70"
         >
           {{ 'general.foretag' | t | default: 'Företag' }}
         </a>

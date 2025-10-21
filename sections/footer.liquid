@@ -2,8 +2,16 @@
   sections/footer.liquid
 {% endcomment %}
 
+{% liquid
+  # Check if we're on a company/foretag page
+  assign is_foretag_page = false
+  if page.handle contains 'foretag' or template.name contains 'foretag' or request.page_type contains 'foretag'
+    assign is_foretag_page = true
+  endif
+%}
+
 <footer
-  class="mt-[62px] w-full rounded-t-[25px] bg-[#F3F1E8] md:mt-[87px]"
+  class="mt-[62px] w-full rounded-t-[25px] md:mt-[87px] {% if is_foretag_page %}bg-[#171717]{% else %}bg-[#F3F1E8]{% endif %}"
 >
   <div class="layout w-full py-[40px] pb-[30px] md:py-[80px] md:pb-[50px]">
     <div class="grid w-full grid-cols-1 gap-[30px] md:grid-cols-4 md:gap-[40px]">
@@ -16,7 +24,7 @@
             >
               {% if block.settings.heading != blank %}
                 <div
-                  class="headline1 text-[24px] text-[#171717] md:text-[40px]"
+                  class="headline1 text-[24px] md:text-[40px] {% if is_foretag_page %}text-white{% else %}text-[#171717]{% endif %}"
                 >
                   {{ block.settings.heading }}
                 </div>
@@ -55,7 +63,9 @@
         {% endcase %}
       {% endfor %}
     </div>
-    <div class=" my-[30px] h-[1px] w-full bg-[#171717] md:my-[50px]"></div>
+    <div
+      class=" my-[30px] h-[1px] w-full md:my-[50px] {% if is_foretag_page %}bg-white{% else %}bg-[#171717]{% endif %}"
+    ></div>
     <div class="grid w-full grid-cols-1 gap-[30px] md:grid-cols-4 md:gap-[40px]">
       {% for block in section.blocks %}
         {% case block.type %}
@@ -66,7 +76,7 @@
             >
               {% if block.settings.heading != blank %}
                 <div
-                  class="headline1 text-[24px] text-[#171717] md:text-[40px]"
+                  class="headline1 text-[24px] md:text-[40px] {% if is_foretag_page %}text-white{% else %}text-[#171717]{% endif %}"
                 >
                   {{ block.settings.heading }}
                 </div>
@@ -89,11 +99,11 @@
                             viewBox="0 0 23 18"
                             fill="none"
                           >
-                            <path d="M1.33337 8.82609H21.3334M21.3334 8.82609L13.5073 1M21.3334 8.82609L13.5073 16.6522" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.33337 8.82609H21.3334M21.3334 8.82609L13.5073 1M21.3334 8.82609L13.5073 16.6522" stroke="{% if is_foretag_page %}#ffffff{% else %}#171717{% endif %}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
                         </div>
                         <div
-                          class="body1 text-[16px] text-[#171717] md:text-[20px]"
+                          class="body1 text-[16px] md:text-[20px] {% if is_foretag_page %}text-white{% else %}text-[#171717]{% endif %}"
                         >
                           {{ block.settings[link_text] }}
                         </div>
@@ -109,14 +119,14 @@
     <div class=" flex flex-col items-center justify-center gap-[20px] pt-[40px] md:flex-row md:justify-between md:gap-0 md:pt-[60px]">
       <div>
         <img
-          src="{{ 'logga.svg' | asset_url }}"
+          src="{% if is_foretag_page %}{{ 'logga-vit.svg' | asset_url }}{% else %}{{ 'logga.svg' | asset_url }}{% endif %}"
           alt="Logo"
           width="auto"
           height="40"
           class="h-[40px] w-auto md:h-[53px]"
         >
       </div>
-      <div class=" headline1 text-center text-[14px] text-[#171717] md:text-left md:text-[24px]">
+      <div class=" headline1 text-center text-[14px] md:text-left md:text-[24px] {% if is_foretag_page %}text-white{% else %}text-[#171717]{% endif %}">
         Nordiska Energilösningar Sverige AB I 559510-6690
       </div>
     </div>
