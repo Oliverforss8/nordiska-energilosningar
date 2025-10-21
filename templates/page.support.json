@@ -205,6 +205,13 @@
             "label": "Support",
             "service_key": ""
           }
+        },
+        "service_option_wPzNN4": {
+          "type": "service_option",
+          "settings": {
+            "label": "Övrigt",
+            "service_key": ""
+          }
         }
       },
       "block_order": [
@@ -216,7 +223,8 @@
         "service_option_GhkM7b",
         "service_option_7TT3fV",
         "service_option_WnwVMh",
-        "service_option_DeQPK8"
+        "service_option_DeQPK8",
+        "service_option_wPzNN4"
       ],
       "name": "Contact Form",
       "settings": {
