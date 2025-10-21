@@ -125,8 +125,9 @@
       "settings": {
         "layout_type": "full",
         "media_type": "image",
+        "background_image": "shopify://shop_images/99.jpg",
         "background_color": "#000000",
-        "overlay_opacity": 0,
+        "overlay_opacity": 80,
         "header_button_text": "",
         "header_button_url": "",
         "heading": "Behöver du komma i kontakt med oss?",
