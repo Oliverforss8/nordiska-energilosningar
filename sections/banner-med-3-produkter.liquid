@@ -111,21 +111,33 @@
               >
                 <div class="flex flex-col justify-between ">
                   <div class="flex flex-col">
-                    {% if block.settings.title != blank %}
+                    {% liquid
+                      assign card_title = block.settings.title
+                      assign card_description = block.settings.description
+                      assign card_url = block.settings.learn_more_url
+
+                      if block.settings.product != blank
+                        assign product = block.settings.product
+                        assign card_title = product.title
+                        assign card_description = product.description | strip_html | truncatewords: 15
+                        assign card_url = product.url
+                      endif
+                    %}
+                    {% if card_title != blank %}
                       <div class="headline1 pt-[30px] text-[36px] text-[#171717]">
-                        {{ block.settings.title }}
+                        {{ card_title }}
                       </div>
                     {% endif %}
-                    {% if block.settings.description != blank %}
+                    {% if card_description != blank %}
                       <div class="text py-[20px] text-[#171717]/75">
-                        {{ block.settings.description }}
+                        {{ card_description }}
                       </div>
                     {% endif %}
                   </div>
                   <div class="flex shrink-0 gap-[10px]">
-                    {% if block.settings.learn_more_url != blank %}
+                    {% if card_url != blank %}
                       <a
-                        href="{{ block.settings.learn_more_url }}"
+                        href="{{ card_url }}"
                         class="banner-3-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-full px-[20px] py-[18px] text-[#171717]"
                       >
                         {{ block.settings.learn_more_text | default: 'Läs mer' }}
@@ -195,21 +207,33 @@
           >
             <div class="flex flex-col justify-between ">
               <div class="flex flex-col">
-                {% if block.settings.title != blank %}
+                {% liquid
+                  assign card_title = block.settings.title
+                  assign card_description = block.settings.description
+                  assign card_url = block.settings.learn_more_url
+
+                  if block.settings.product != blank
+                    assign product = block.settings.product
+                    assign card_title = product.title
+                    assign card_description = product.description | strip_html | truncatewords: 15
+                    assign card_url = product.url
+                  endif
+                %}
+                {% if card_title != blank %}
                   <div class="headline1 pt-[40px] text-[36px] text-[#171717] xl:pt-0">
-                    {{ block.settings.title }}
+                    {{ card_title }}
                   </div>
                 {% endif %}
-                {% if block.settings.description != blank %}
+                {% if card_description != blank %}
                   <div class="text py-[20px] text-[#171717]/75 xl:pt-[40px]">
-                    {{ block.settings.description }}
+                    {{ card_description }}
                   </div>
                 {% endif %}
               </div>
               <div class="flex shrink-0 gap-[10px]">
-                {% if block.settings.learn_more_url != blank %}
+                {% if card_url != blank %}
                   <a
-                    href="{{ block.settings.learn_more_url }}"
+                    href="{{ card_url }}"
                     class="banner-3-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-full px-[20px] py-[18px] text-[#171717]"
                   >
                     {{ block.settings.learn_more_text | default: 'Läs mer' }}
@@ -597,14 +621,16 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Product Title",
-          "default": "Laddbox"
+          "label": "Product Title (Fallback)",
+          "default": "Laddbox",
+          "info": "Only used if no product is selected. Will be replaced by the product's title automatically."
         },
         {
           "type": "textarea",
           "id": "description",
-          "label": "Product Description",
-          "default": "Lagra din egen solenergi och använd den när elpriserna är som högst."
+          "label": "Product Description (Fallback)",
+          "default": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+          "info": "Only used if no product is selected. Will be replaced by the product's description (first 15 words) automatically."
         },
         {
           "type": "text",
@@ -615,7 +641,8 @@
         {
           "type": "url",
           "id": "learn_more_url",
-          "label": "Learn More Button URL"
+          "label": "Learn More Button URL (Fallback)",
+          "info": "Only used if no product is selected. Will be replaced by the product URL automatically."
         }
       ]
     }
