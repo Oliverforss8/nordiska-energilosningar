@@ -662,6 +662,15 @@
   width: 100vw
 }
 
+.\!w-full {
+  width: 100% !important
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content
+}
+
 .min-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   min-width: calc(100% / 1.5 - 20px * 0.5)
 }

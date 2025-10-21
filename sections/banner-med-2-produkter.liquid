@@ -9,86 +9,88 @@
 
 <section
   id="{{ section_id }}"
-  class="{{ section_class }} layout py-[60px] md:py-[85px]"
+  class="{{ section_class }}  py-[60px] md:py-[85px]"
 >
   {% comment %} Banner Content {% endcomment %}
-  <div
-    class="banner-content  relative h-[500px] w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] {% if layout_reversed %}order-2{% else %}order-1{% endif %}"
-    style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
-    data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
-  >
-    {% if section.settings.overlay_opacity > 0 %}
-      <div
-        class="absolute inset-0 rounded-[10px]"
-        style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
-      ></div>
-    {% endif %}
-    <div class="relative  z-10 flex h-full flex-col justify-between">
-      <div>
-        {% if section.settings.header_button_text != blank %}
-          <a
-            href="{{ section.settings.header_button_url }}"
-            class="knappetikett2 z-10 inline-block rounded-full bg-transparent p-[15px] text-white"
-            style="border: 1px solid #fff;"
-          >
-            {{ section.settings.header_button_text }}
-          </a>
-        {% endif %}
-      </div>
-      <div class="flex flex-col gap-[30px] lg:w-[840px]">
-        {% if section.settings.heading != blank %}
-          <h2 class="headline2 text-white ">
-            {{ section.settings.heading }}
-          </h2>
-        {% endif %}
-        {% if section.settings.description != blank %}
-          <p class="knappetikett text-white">
-            {{ section.settings.description }}
-          </p>
-        {% endif %}
-        <div class="flex flex-col gap-[10px] md:flex-row">
-          {% if section.settings.primary_button_text != blank %}
-            <div>
-              <button
-                href="{{ section.settings.primary_button_url }}"
-                class="knappetikett flex shrink-0 flex-row items-center justify-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
-                style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-              >
-                {{ section.settings.primary_button_text }}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="18"
-                  viewBox="0 0 22 18"
-                  fill="none"
-                >
-                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-            </div>
+  <div class="layout flex w-full {% if layout_reversed %}order-2{% else %}order-1{% endif %}">
+    <div
+      class="banner-content  relative flex    h-[500px] !w-full w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] "
+      style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
+      data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
+    >
+      {% if section.settings.overlay_opacity > 0 %}
+        <div
+          class="absolute inset-0 rounded-[10px]"
+          style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"
+        ></div>
+      {% endif %}
+      <div class="relative  z-10 flex h-full flex-col justify-between">
+        <div>
+          {% if section.settings.header_button_text != blank %}
+            <a
+              href="{{ section.settings.header_button_url }}"
+              class="knappetikett2 z-10 inline-block rounded-full bg-transparent p-[15px] text-white"
+              style="border: 1px solid #fff;"
+            >
+              {{ section.settings.header_button_text }}
+            </a>
           {% endif %}
-          {% if section.settings.secondary_button_text != blank %}
-            <div>
-              <button
-                href="{{ section.settings.secondary_button_url }}"
-                class="knappetikett flex shrink-0 flex-row items-center justify-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
-                style="border: 1px solid #fff;"
-              >
-                {{ section.settings.secondary_button_text }}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="18"
-                  viewBox="0 0 22 18"
-                  fill="none"
-                >
-                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-            </div>
+        </div>
+        <div class="flex flex-col gap-[30px] lg:w-[840px]">
+          {% if section.settings.heading != blank %}
+            <h2 class="headline2 text-white ">
+              {{ section.settings.heading }}
+            </h2>
           {% endif %}
+          {% if section.settings.description != blank %}
+            <p class="knappetikett text-white">
+              {{ section.settings.description }}
+            </p>
+          {% endif %}
+          <div class="flex flex-col gap-[10px] md:flex-row">
+            {% if section.settings.primary_button_text != blank %}
+              <div>
+                <button
+                  href="{{ section.settings.primary_button_url }}"
+                  class="knappetikett flex shrink-0 flex-row items-center justify-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
+                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
+                >
+                  {{ section.settings.primary_button_text }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            {% endif %}
+            {% if section.settings.secondary_button_text != blank %}
+              <div>
+                <button
+                  href="{{ section.settings.secondary_button_url }}"
+                  class="knappetikett flex shrink-0 flex-row items-center justify-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
+                  style="border: 1px solid #fff;"
+                >
+                  {{ section.settings.secondary_button_text }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewBox="0 0 22 18"
+                    fill="none"
+                  >
+                    <path d="M1 8.99991H21L13.1739 1.17383" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -100,7 +102,7 @@
     data-debug="products order: {% if layout_reversed %}1{% else %}2{% endif %}"
   >
     <!-- Mobile carousel container -->
-    <div class="relative w-full md:hidden">
+    <div class="layout relative w-full md:hidden">
       <div class="carousel-container w-full overflow-hidden">
         <div
           class="carousel-track flex transition-transform duration-500 ease-in-out"
@@ -191,7 +193,7 @@
     </div>
     <!-- Desktop grid -->
     <div
-      class=" hidden grid-cols-2 gap-[20px] md:grid"
+      class="layout hidden grid-cols-2 gap-[20px] md:grid"
       id="desktop-products-grid-{{ section.id }}"
     >
       {% for block in section.blocks %}
