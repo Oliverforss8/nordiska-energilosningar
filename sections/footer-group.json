@@ -65,15 +65,15 @@
         "bottom_link_column_FTKD9V": {
           "type": "bottom_link_column",
           "settings": {
-            "heading": "Kontakta oss",
-            "link_1_text": "Solceller",
-            "link_1_url": "shopify://pages/vara-solceller",
-            "link_2_text": "Batterilösningar",
-            "link_2_url": "shopify://pages/vara-batterilosningar",
-            "link_3_text": "Laddboxar",
-            "link_3_url": "shopify://pages/vara-laddboxar",
-            "link_4_text": "Värmepumpar",
-            "link_4_url": "shopify://pages/vara-varmepumpar"
+            "heading": "Få en offert",
+            "link_1_text": "Privatperson",
+            "link_1_url": "shopify://pages/offert-forfragan",
+            "link_2_text": "Företag & BRF",
+            "link_2_url": "shopify://metaobjects/foretag/offert",
+            "link_3_text": "",
+            "link_3_url": "",
+            "link_4_text": "",
+            "link_4_url": ""
           }
         },
         "bottom_link_column_RpkRmN": {
