@@ -310,9 +310,9 @@
         "product_card_HAB8jq": {
           "type": "product_card",
           "settings": {
-            "product": "zaptec-2",
+            "product": "charge-amps-luna",
             "title": "Zaptec Go 2",
-            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "description": "V2G för",
             "learn_more_text": "Köp nu",
             "learn_more_url": "shopify://products/charge-amps-luna"
           }
