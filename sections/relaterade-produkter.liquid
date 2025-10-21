@@ -93,7 +93,7 @@
                     </button>
                     <a
                       href="{{ related_product.url }}"
-                      class="banner-3-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-full bg-transparent px-[20px] py-[18px] text-[#171717]"
+                      class="banner-3-learn-more-btn knappetikett flex flex-row items-center gap-[20px] rounded-full bg-white px-[20px] py-[18px] text-[#171717]"
                       style="border: 1px solid #171717;"
                     >
                       Läs mer
@@ -180,7 +180,7 @@
                 </button>
                 <a
                   href="{{ related_product.url }}"
-                  class="banner-3-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-full bg-transparent px-[20px] py-[18px] text-[#171717]"
+                  class="banner-3-learn-more-btn knappetikett flex shrink-0 flex-row items-center gap-[20px] whitespace-nowrap rounded-full bg-white px-[20px] py-[18px] text-[#171717]"
                   style="border: 1px solid #171717;"
                 >
                   Läs mer
@@ -257,34 +257,35 @@
 </section>
 
 {% stylesheet %}
-  .section-relaterade-produkter a {
+  .section-relaterade-produkter a,
+  .section-related-products a {
     text-decoration: none;
   }
 
-  .section-relaterade-produkter a:hover {
+  .section-relaterade-produkter a:hover,
+  .section-related-products a:hover {
     text-decoration: none;
   }
 
-  .section-relaterade-produkter .product-card .banner-3-learn-more-btn {
-    border: 1px solid #171717;
-    background: transparent;
-    color: #171717;
+  .section-relaterade-produkter .product-card .banner-3-learn-more-btn,
+  .section-related-products .product-card .banner-3-learn-more-btn {
+    background: white !important;
+    border: 1px solid #171717 !important;
+    color: #171717 !important;
     transition: all 0.3s ease;
   }
 
-  .section-relaterade-produkter .product-card .banner-3-learn-more-btn:hover {
+  .section-relaterade-produkter .product-card .banner-3-learn-more-btn:hover,
+  .section-related-products .product-card .banner-3-learn-more-btn:hover {
     background: linear-gradient(135deg, #ffa94d 0%, #ff4e33 100%) !important;
     border-color: transparent !important;
     color: #171717 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 169, 77, 0.3);
   }
 
-  .section-relaterade-produkter .product-card .banner-3-learn-more-btn.banner-3-active {
-    background: linear-gradient(135deg, #ffa94d 0%, #ff4e33 100%) !important;
-    border-color: transparent !important;
-    color: #171717 !important;
-  }
-
-  .section-relaterade-produkter .product-card .banner-3-learn-more-btn.banner-3-active svg path {
+  .section-relaterade-produkter .product-card .banner-3-learn-more-btn svg path,
+  .section-related-products .product-card .banner-3-learn-more-btn svg path {
     stroke: #171717 !important;
   }
 
