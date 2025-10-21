@@ -56,7 +56,7 @@
           "settings": {
             "media_type": "image",
             "background_image": "shopify://shop_images/Zaptec_2022-11.jpg",
-            "overlay_opacity": 20,
+            "overlay_opacity": 40,
             "heading": "Upptäck Zaptec Go 2",
             "subheading": "Ladda snabbare, smartare och snyggare med Zaptec Go 2 – den eleganta laddboxen som kombinerar maximal prestanda, nordisk design och intelligent styrning för framtidens elbilar.",
             "button_text": "Läs mer",
