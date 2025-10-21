@@ -139,6 +139,62 @@
         "custom_id": ""
       }
     },
+    "medarbetare_XjLAVk": {
+      "type": "medarbetare",
+      "blocks": {
+        "team_member_46nLAq": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
+            "name": "Robert Karlsson",
+            "title": "VD",
+            "email": "robert.karlsson@nordiskaenergi.se",
+            "phone": "0763-22 88 10"
+          }
+        },
+        "team_member_kR7dki": {
+          "type": "team_member",
+          "settings": {
+            "name": "Anton Koupourtiadis",
+            "title": "Säljare",
+            "email": "anton@nordiskaenergi.se",
+            "phone": "0708-29 98 96"
+          }
+        },
+        "team_member_ikdbmt": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1208.jpg",
+            "name": "Simon Löfgren",
+            "title": "Säljare",
+            "email": "simon.lofgren@nordiskaenergi.se",
+            "phone": "0738-55 81 92"
+          }
+        },
+        "team_member_EhfjY4": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
+            "name": "EmiliaKarlsson",
+            "title": "Säljare",
+            "email": "",
+            "phone": ""
+          }
+        }
+      },
+      "block_order": [
+        "team_member_46nLAq",
+        "team_member_kR7dki",
+        "team_member_ikdbmt",
+        "team_member_EhfjY4"
+      ],
+      "name": "Medarbetare",
+      "settings": {
+        "custom_id": "",
+        "heading": "Prata med en säljare",
+        "description": "<p>Våra kärnvärden är mer än ord – de speglar vilka vi är och hur vi arbetar varje dag. De vägleder oss i mötet med kunder, i samarbetet med kollegor och i hur vi bygger vår företagskultur. Genom våra kärnvärden skapar vi en arbetsmiljö där människor trivs, växer och gör skillnad – tillsammans.</p>"
+      }
+    },
     "kontakt_form_UMgaJa": {
       "type": "kontakt-form",
       "blocks": {
@@ -260,6 +316,7 @@
     "icon_3eKirx",
     "faq_produkt_Prmepb",
     "banner_bild_xmeyiR",
+    "medarbetare_XjLAVk",
     "kontakt_form_UMgaJa"
   ]
 }
