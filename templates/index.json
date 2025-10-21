@@ -24,54 +24,17 @@
         "button_url": "shopify://pages/vara-produkter"
       }
     },
-    "hero_slider_D8U4yr": {
-      "type": "hero-slider",
-      "blocks": {
-        "slide_dCDG8J": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "background_image": "shopify://shop_images/fffffff_3482493e-4aff-4d38-90cb-c85ed35cb264.png",
-            "overlay_opacity": 10,
-            "heading": "Kompletta batteripaket \nfrån 38 900:-",
-            "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
-            "button_text": "Läs mer",
-            "button_url": "shopify://pages/landningssida-film"
-          }
-        },
-        "slide_dpHNkz": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "background_image": "shopify://shop_images/ChatGPT_Image_21_okt._2025_20_15_32.png",
-            "overlay_opacity": 20,
-            "heading": "Mer lagringskapacitet, utan extra kostnad",
-            "subheading": "När du väljer solceller och batteri från Nordiska Energilösningar ingår just nu en extra batterimodul – för maximal energinytta hemma.",
-            "button_text": "Solceller",
-            "button_url": "shopify://pages/vara-solceller"
-          }
-        },
-        "slide_kBaNR6": {
-          "type": "slide",
-          "settings": {
-            "media_type": "image",
-            "background_image": "shopify://shop_images/Zaptec_2022-11.jpg",
-            "overlay_opacity": 40,
-            "heading": "Upptäck Zaptec Go 2",
-            "subheading": "Ladda snabbare, smartare och snyggare med Zaptec Go 2 – den eleganta laddboxen som kombinerar maximal prestanda, nordisk design och intelligent styrning för framtidens elbilar.",
-            "button_text": "Läs mer",
-            "button_url": "shopify://products/zaptec-2"
-          }
-        }
-      },
-      "block_order": [
-        "slide_dCDG8J",
-        "slide_dpHNkz",
-        "slide_kBaNR6"
-      ],
-      "name": "Hero slider",
+    "hero_whxcWQ": {
+      "type": "hero",
+      "name": "Hero",
       "settings": {
-        "autoplay_speed": 9000
+        "media_type": "video",
+        "background_video": "shopify://files/videos/1080.mp4",
+        "overlay_opacity": 50,
+        "heading": "Välkommen till vår webbplats",
+        "subheading": "Upptäck fantastiska produkter och tjänster",
+        "button_text": "Våra energilösningar",
+        "button_url": ""
       }
     },
     "ikon_lankar_x8tm4P": {
@@ -813,7 +776,7 @@
   },
   "order": [
     "hero_HUEAy6",
-    "hero_slider_D8U4yr",
+    "hero_whxcWQ",
     "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
