@@ -32,7 +32,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/DJI_20250603133350_0023_V.jpg",
         "image_position": "right",
-        "image_button_text": "Våra lösningar",
+        "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
@@ -48,7 +48,7 @@
         "image": "shopify://shop_images/001_1_.1694.png",
         "video": "shopify://files/videos/DJI_20250317155402_0006_S.MP4",
         "image_position": "left",
-        "image_button_text": "Våra lösningar",
+        "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
@@ -78,7 +78,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/image_12.png",
         "image_position": "left",
-        "image_button_text": "Våra lösningar",
+        "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
