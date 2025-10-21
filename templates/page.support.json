@@ -180,14 +180,14 @@
         "service_option_GhkM7b": {
           "type": "service_option",
           "settings": {
-            "label": "Batterier",
+            "label": "Batteri",
             "service_key": ""
           }
         },
         "service_option_7TT3fV": {
           "type": "service_option",
           "settings": {
-            "label": "Laddboxar",
+            "label": "Laddbox",
             "service_key": ""
           }
         },
@@ -199,24 +199,10 @@
             "service_key": ""
           }
         },
-        "service_option_ygDjRQ": {
-          "type": "service_option",
-          "settings": {
-            "label": "Finansiering",
-            "service_key": ""
-          }
-        },
         "service_option_DeQPK8": {
           "type": "service_option",
           "settings": {
             "label": "Support",
-            "service_key": ""
-          }
-        },
-        "service_option_eCTPe7": {
-          "type": "service_option",
-          "settings": {
-            "label": "Retur",
             "service_key": ""
           }
         }
@@ -230,9 +216,7 @@
         "service_option_GhkM7b",
         "service_option_7TT3fV",
         "service_option_WnwVMh",
-        "service_option_ygDjRQ",
-        "service_option_DeQPK8",
-        "service_option_eCTPe7"
+        "service_option_DeQPK8"
       ],
       "name": "Contact Form",
       "settings": {
