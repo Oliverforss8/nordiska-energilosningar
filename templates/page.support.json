@@ -145,7 +145,6 @@
         "team_member_46nLAq": {
           "type": "team_member",
           "settings": {
-            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
             "name": "Robert Karlsson",
             "title": "VD",
             "email": "robert.karlsson@nordiskaenergi.se",
@@ -175,10 +174,10 @@
           "type": "team_member",
           "settings": {
             "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
-            "name": "EmiliaKarlsson",
+            "name": "Emilia Karlsson",
             "title": "Säljare",
-            "email": "",
-            "phone": ""
+            "email": "emilia.karlsson@nordiskaenergi.se",
+            "phone": "0722-06 16 03"
           }
         }
       },
