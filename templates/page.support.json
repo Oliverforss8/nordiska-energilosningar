@@ -26,21 +26,6 @@
         "button_url": ""
       }
     },
-    "bild_och_text_xgmUNz": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Vår historira",
-        "text": "<p>Nordiska Energilösningar grundades 2024 av Robert och Emilia Karlsson.  Robert har lång erfarenhet inom solenergi, batterilagring och smarta energisystem, med djup teknisk kompetens och ett starkt branschnätverk. Emilia har en bakgrund inom ekonomi och ett tydligt fokus på affärsmässiga och hållbara lösningar.Tillsammans erbjuder de trygga, effektiva och framtidssäkrade energilösningar för både privatpersoner och företag, som kombinerar teknisk spetskompetens med personligt bemötande och ett genuint engagemang.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/test_for_hero_2.png",
-        "image_position": "right",
-        "image_button_text": "Upptäck våra lösningar",
-        "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
     "icon_3eKirx": {
       "type": "icon",
       "blocks": {
@@ -89,34 +74,49 @@
         "padding_bottom": 40
       }
     },
-    "bild_och_text_pUBNQ3": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "faq_produkt_Prmepb": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_kQBgKF": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång är garantin på era produkter?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
+          }
+        },
+        "faq_item_pfhgyB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Vad ingår i installationen?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
+          }
+        },
+        "faq_item_k8fVE6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur mycket kan jag spara på min elräkning?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_kQBgKF",
+        "faq_item_pfhgyB",
+        "faq_item_k8fVE6"
+      ],
+      "name": "FAQ produkter",
       "settings": {
-        "background_color": "#ffffff",
-        "title": "Vi är auktoriserade hos Elsäkerhetsverket",
-        "text": "<p>Som registrerade hos Elsäkerhetsverket har vi rätt att utföra elinstallationsarbeten enligt gällande regler och säkerhetskrav. Det innebär att våra tekniker har rätt kompetens, att vi följer branschens föreskrifter och att vi tar fullt ansvar för säkerheten i din anläggning. När du anlitar oss kan du känna dig trygg med att jobbet blir rätt gjort – från start till färdig installation.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
-        "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_CPXJh3": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Vi är en del av installatörsföretagen",
-        "text": "<p>Att vi är medlemmar i Installatörsföretagen innebär att vi följer branschens regler för solcellsinstallationer och alltid arbetar enligt aktuella standarder. Det ger oss tillgång till den senaste tekniken, branschpraxis och riktlinjer – vilket säkerställer korrekt och säker installation.</p><p>Medlemskapet innebär också att våra anställda omfattas av kollektivavtal, med trygga villkor, löpande utbildning och en säker arbetsmiljö.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
-        "image_position": "right",
-        "image_button_text": "Ta reda på mer",
-        "image_button_link": "https://www.in.se/om-oss/#/",
-        "custom_id": ""
+        "title": "Vanliga frågor",
+        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter och tjänster.</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "kontakt_form_UMgaJa": {
@@ -240,15 +240,62 @@
         "header_button_text": "Support",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "hur_at99iN": {
+      "type": "hur",
+      "blocks": {
+        "step_VHHD8f": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 1",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        },
+        "step_MdUyBq": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 2",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        },
+        "step_tYFVNL": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 3",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        },
+        "step_fK4YRJ": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 4",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_VHHD8f",
+        "step_MdUyBq",
+        "step_tYFVNL",
+        "step_fK4YRJ"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Behöver du komma i kontakt med oss?",
+        "description": "<p>Lägg till en kort beskrivning här.</p>",
+        "primary_button_text": "Våra energilösningar",
+        "primary_button_url": "",
+        "secondary_button_text": "Våra energilösningar",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_jDy7dL",
-    "bild_och_text_xgmUNz",
     "icon_3eKirx",
-    "bild_och_text_pUBNQ3",
-    "bild_och_text_CPXJh3",
-    "kontakt_form_UMgaJa"
+    "faq_produkt_Prmepb",
+    "kontakt_form_UMgaJa",
+    "hur_at99iN"
   ]
 }
