@@ -190,8 +190,8 @@
       "name": "Medarbetare",
       "settings": {
         "custom_id": "",
-        "heading": "Prata med en säljare",
-        "description": "<p>Vi finns här för dig – oavsett om du har frågor, vill ha en offert eller bara vill veta mer. Kontakta oss så hjälper vi dig snabbt och personligt. Nedan hittar du vårt team som alltid står redo att stötta dig genom hela processen.<br/></p>"
+        "heading": "Kom i kontakt med vårt team",
+        "description": "<p>Vi erbjuder personlig rådgivning på högsta nivå. Här möter du vårt dedikerade team som skräddarsyr lösningar utifrån dina behov.</p>"
       }
     },
     "kontakt_form_UMgaJa": {
@@ -303,7 +303,7 @@
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Hör av dig till oss",
+        "heading": "Bli kontaktad av en expert",
         "header_button_text": "Support",
         "header_button_url": "shopify://pages/support-om-oss"
       }
