@@ -17,12 +17,14 @@
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
         "background_image": "shopify://shop_images/image_16.png",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "",
         "header_button_url": "",
-        "heading": "Läs mer om vårt solcells utbud",
+        "heading": "Läs mer om våra batterier",
         "description": "Har du frågor eller funderingar om solceller? Ring oss eller lämna dina kontaktuppgifter, så återkommer vi.",
         "primary_button_text": "Läs mer",
         "primary_button_url": "",
@@ -32,5 +34,8 @@
       }
     }
   },
-  "order": ["main", "banner_bild_md6DXq"]
+  "order": [
+    "main",
+    "banner_bild_md6DXq"
+  ]
 }
