@@ -566,6 +566,10 @@
   height: 100%
 }
 
+.h-\[35px\] {
+  height: 35px
+}
+
 .max-h-0 {
   max-height: 0px
 }
@@ -669,6 +673,14 @@
 .w-fit {
   width: -moz-fit-content;
   width: fit-content
+}
+
+.w-\[35px\] {
+  width: 35px
+}
+
+.w-\[80\%\] {
+  width: 80%
 }
 
 .min-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
@@ -1332,6 +1344,11 @@
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px
+}
+
+.py-\[25px\] {
+  padding-top: 25px;
+  padding-bottom: 25px
 }
 
 .pb-2 {
@@ -2029,6 +2046,10 @@
     height: 90px
   }
 
+  .md\:h-\[40px\] {
+    height: 40px
+  }
+
   .md\:w-1\/2 {
     width: 50%
   }
@@ -2051,6 +2072,14 @@
 
   .md\:w-auto {
     width: auto
+  }
+
+  .md\:w-\[40px\] {
+    width: 40px
+  }
+
+  .md\:w-\[80\%\] {
+    width: 80%
   }
 
   .md\:min-w-\[calc\(50\%-15px\)\] {
@@ -2133,12 +2162,24 @@
     gap: 50px
   }
 
+  .md\:gap-\[25px\] {
+    gap: 25px
+  }
+
   .md\:self-start {
     align-self: flex-start
   }
 
   .md\:rounded-\[15px\] {
     border-radius: 15px
+  }
+
+  .md\:rounded-none {
+    border-radius: 0px
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent
   }
 
   .md\:p-\[25px\] {
@@ -2151,6 +2192,10 @@
 
   .md\:p-\[50px\] {
     padding: 50px
+  }
+
+  .md\:p-0 {
+    padding: 0px
   }
 
   .md\:px-\[10px\] {
