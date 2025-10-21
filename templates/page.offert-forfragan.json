@@ -100,6 +100,14 @@
             "service_key": "",
             "icon_svg": ""
           }
+        },
+        "service_option_jLwQGg": {
+          "type": "service_option",
+          "settings": {
+            "label": "Elektriker",
+            "service_key": "",
+            "icon_svg": ""
+          }
         }
       },
       "block_order": [
@@ -110,7 +118,8 @@
         "form_field_7C9xYp",
         "service_option_LJYHdm",
         "service_option_hTB7iJ",
-        "service_option_ejrxJB"
+        "service_option_ejrxJB",
+        "service_option_jLwQGg"
       ],
       "name": "Offertförfrågan",
       "settings": {
