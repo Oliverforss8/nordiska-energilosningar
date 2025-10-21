@@ -145,6 +145,7 @@
         "team_member_46nLAq": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Namnlos_design_1.png",
             "name": "Robert Karlsson",
             "title": "VD",
             "email": "robert.karlsson@nordiskaenergi.se",
