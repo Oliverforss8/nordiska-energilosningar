@@ -54,26 +54,10 @@
             "show_arrow": false
           }
         },
-        "button_FtCtkw": {
-          "type": "button",
-          "settings": {
-            "text": "Värmepumpen minskar dina kostnader",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_cYMmVi": {
-          "type": "button",
-          "settings": {
-            "text": "Grönt bolån sänker dina räntekostnader",
-            "url": "",
-            "show_arrow": false
-          }
-        },
         "button_hrHyXE": {
           "type": "button",
           "settings": {
-            "text": "Allt i ett paket ger dig lägre elräkning",
+            "text": "AI-styrning optimerar systemet",
             "url": "",
             "show_arrow": false
           }
@@ -83,16 +67,15 @@
         "button_cReQHr",
         "button_CEtHeD",
         "button_qEb8Cy",
-        "button_FtCtkw",
-        "button_cYMmVi",
         "button_hrHyXE"
       ],
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Välj en heltäckande lösning för maximal energibesparing",
         "text": "<p>Med solceller, batteri, laddbox och värmepump som samverkar i vår smarta energiplattform får du full kontroll över din el. Resultatet blir en enklare vardag, lägre kostnader och ett tryggt skydd mot framtidens elpriser.</p>",
-        "media_type": "image",
+        "media_type": "video",
         "image": "shopify://shop_images/Ai_solceller.png",
+        "video": "shopify://files/videos/Video header 2.mp4",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
