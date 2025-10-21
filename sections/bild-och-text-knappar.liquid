@@ -19,13 +19,13 @@
         </div>
       {% endif %}
       {% if section.blocks.size > 0 %}
-        <div class="flex flex-wrap gap-[10px] pt-[50px]">
+        <div class="flex flex-col  pt-[50px]">
           {% for block in section.blocks %}
             {% if block.type == 'button' %}
               <a
                 href="{{ block.settings.url }}"
-                class="knappetikett inline-flex items-center gap-[10px] rounded-full px-[15px] py-[15px] text-[15px] text-[#171717] transition-all duration-300"
-                style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
+                class="knappetikett inline-flex items-center gap-[10px] rounded-full px-[15px] py-[15px] text-[20px] text-[#171717] transition-all duration-300"
+
                 {{ block.shopify_attributes }}
               >
                 <svg
