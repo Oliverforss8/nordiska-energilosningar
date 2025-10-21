@@ -193,6 +193,7 @@
         },
         "service_option_WnwVMh": {
           "type": "service_option",
+          "disabled": true,
           "settings": {
             "label": "Värmepumpar",
             "service_key": ""

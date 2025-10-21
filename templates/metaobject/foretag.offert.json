@@ -63,7 +63,7 @@
         "service_option_MW9Egf": {
           "type": "service_option",
           "settings": {
-            "label": "Företag",
+            "label": "Solceller",
             "service_key": "",
             "icon_svg": ""
           }
@@ -71,7 +71,7 @@
         "service_option_3gm48i": {
           "type": "service_option",
           "settings": {
-            "label": "Bostadsrättförening",
+            "label": "Batterier",
             "service_key": "",
             "icon_svg": ""
           }
@@ -79,7 +79,7 @@
         "service_option_RrpJ9b": {
           "type": "service_option",
           "settings": {
-            "label": "Lantbruk",
+            "label": "Laddboxar",
             "service_key": "",
             "icon_svg": ""
           }

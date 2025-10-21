@@ -22,8 +22,8 @@
             "link_1_url": "shopify://pages/var-losning",
             "link_2_text": "Lagra energi",
             "link_2_url": "shopify://pages/vara-batterilosningar",
-            "link_3_text": "Värmelösning",
-            "link_3_url": "shopify://pages/vara-varmepumpar"
+            "link_3_text": "Ladda bilen",
+            "link_3_url": "shopify://pages/vara-laddboxar"
           }
         },
         "link_column_hnndN3": {
@@ -43,11 +43,11 @@
           "settings": {
             "heading": "Företag",
             "link_1_text": "Företagsfastighet",
-            "link_1_url": "shopify://pages/vara-solceller",
+            "link_1_url": "shopify://metaobjects/foretag/foretag",
             "link_2_text": "Bostadsrättsförening",
-            "link_2_url": "shopify://pages/vara-batterilosningar",
+            "link_2_url": "shopify://metaobjects/foretag/bostadsrattsforening",
             "link_3_text": "Lantbruk",
-            "link_3_url": "shopify://pages/vara-varmepumpar"
+            "link_3_url": "shopify://metaobjects/foretag/lantbruk"
           }
         },
         "link_column_DmRxLw": {
@@ -55,25 +55,25 @@
           "settings": {
             "heading": "Serviceavtal",
             "link_1_text": "3 mån",
-            "link_1_url": "shopify://pages/contact",
+            "link_1_url": "shopify://pages/support-om-oss",
             "link_2_text": "12 mån",
-            "link_2_url": "shopify://products/produkt",
+            "link_2_url": "shopify://pages/support-om-oss",
             "link_3_text": "24 mån",
-            "link_3_url": "shopify://products/produkt"
+            "link_3_url": "shopify://pages/support-om-oss"
           }
         },
         "bottom_link_column_FTKD9V": {
           "type": "bottom_link_column",
           "settings": {
-            "heading": "Kontakta oss",
-            "link_1_text": "Solceller",
-            "link_1_url": "shopify://pages/vara-solceller",
-            "link_2_text": "Batterilösningar",
-            "link_2_url": "shopify://pages/vara-batterilosningar",
-            "link_3_text": "Laddboxar",
-            "link_3_url": "shopify://pages/vara-laddboxar",
-            "link_4_text": "Värmepumpar",
-            "link_4_url": "shopify://pages/vara-varmepumpar"
+            "heading": "Få en offert",
+            "link_1_text": "Privatperson",
+            "link_1_url": "shopify://pages/offert-forfragan",
+            "link_2_text": "Företag & BRF",
+            "link_2_url": "shopify://metaobjects/foretag/offert",
+            "link_3_text": "",
+            "link_3_url": "",
+            "link_4_text": "",
+            "link_4_url": ""
           }
         },
         "bottom_link_column_RpkRmN": {
@@ -82,12 +82,12 @@
             "heading": "Om oss",
             "link_1_text": "Support",
             "link_1_url": "shopify://pages/support-om-oss",
-            "link_2_text": "Medarbetare",
-            "link_2_url": "shopify://pages/medarbetare",
+            "link_2_text": "Kontakta oss",
+            "link_2_url": "shopify://pages/support-om-oss",
             "link_3_text": "",
-            "link_3_url": "shopify://products/produkt",
+            "link_3_url": "",
             "link_4_text": "",
-            "link_4_url": "shopify://products/produkt"
+            "link_4_url": ""
           }
         }
       },
