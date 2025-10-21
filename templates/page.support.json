@@ -155,6 +155,7 @@
         "team_member_kR7dki": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Motiv.png",
             "name": "Anton Koupourtiadis",
             "title": "Säljare",
             "email": "anton@nordiskaenergi.se",

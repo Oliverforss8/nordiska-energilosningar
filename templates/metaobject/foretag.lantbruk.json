@@ -61,34 +61,12 @@
     },
     "bild_och_text_knappar_wwTPne": {
       "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_NGMmDp": {
-          "type": "button",
-          "settings": {
-            "text": "Självförsörjande",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_K8iMcL": {
-          "type": "button",
-          "settings": {
-            "text": "Miljökrav",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_NGMmDp",
-        "button_K8iMcL"
-      ],
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Solenergi för lantbrukets behov",
-        "text": "<p>Solceller ger stabil och kostnadseffektiv elproduktion året runt – perfekt för gårdar med hög energiförbrukning.<br/><br/></p>",
+        "title": "Solenergi anpassad för lantbrukets energibehov",
+        "text": "<p>Lantbruk har ofta hög och varierande energiförbrukning året runt. Med solenergi kan gården producera egen el till förutsägbara kostnader – oberoende av marknadspriser. Investeringen stärker driftsäkerheten, förbättrar lönsamheten och bidrar till att uppfylla miljö- och hållbarhetskrav från myndigheter och marknad.</p><p></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
+        "image": "shopify://shop_images/DJI_20250306125341_0002_V.jpg",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
@@ -97,34 +75,12 @@
     },
     "bild_och_text_knappar_fdzFA4": {
       "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_6WaUJa": {
-          "type": "button",
-          "settings": {
-            "text": "Självförsörjande",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_VmbgPN": {
-          "type": "button",
-          "settings": {
-            "text": "Miljökrav",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_6WaUJa",
-        "button_VmbgPN"
-      ],
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Batterier som ger kontroll",
-        "text": "<p>Med energilagring kan du nyttja din egen el även när solen inte skiner. Det minskar behovet av köpt el och jämnar ut topparna i förbrukningen.<br/><br/></p>",
+        "text": "<p>Med batterilagring kan gården lagra överskottsel från solcellsanläggningen och använda den när elpriserna är som högst eller vid hög belastning. Det ger ökad driftssäkerhet, minskar effekttoppar och skapar en mer stabil elkostnad över tid. Batteriet kan även generera intäkter genom att delta i frekvensreglering och stödtjänster på elnätet – en extra inkomstkälla som förbättrar investeringens återbetalningstid.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
+        "image": "shopify://shop_images/thumbnail_processed-7B08A9C7-CA7E-44AE-BC66-375438ACBA90.jpg",
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
@@ -133,34 +89,12 @@
     },
     "bild_och_text_knappar_eLpeqm": {
       "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_6LnEg6": {
-          "type": "button",
-          "settings": {
-            "text": "Självförsörjande",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_3FbHBy": {
-          "type": "button",
-          "settings": {
-            "text": "Miljökrav",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_6LnEg6",
-        "button_3FbHBy"
-      ],
       "name": "Bild och text med knappar",
       "settings": {
-        "title": "Laddning för maskiner och fordon",
-        "text": "<p>Laddboxar gör det möjligt att driva gårdens fordon klimatsmart och framtidssäkert – direkt från den egna solenergin.<br/><br/><br/></p>",
+        "title": "EU-stöd, ökad robusthet och möjlighet till ö-drift",
+        "text": "<p>Investeringar i solenergi och batterilagring för lantbruk omfattas avEU-bidrag, vilket kan reducera investeringskostnaden avsevärt. Samtidigt ökar batterilagring gårdens energirobusthet genom att säkerställa tillgång till el även vid nätavbrott. Med ö-drift kan anläggningen fortsätta försörja viktiga system som ventilation, foderanläggningar och kylrum – oberoende av elnätet.</p><p></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
+        "image": "shopify://shop_images/thumbnail_1000057540.jpg",
         "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
@@ -169,71 +103,13 @@
     },
     "bild_och_text_knappar_YtdkFa": {
       "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_iVWKGF": {
-          "type": "button",
-          "settings": {
-            "text": "Självförsörjande",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_hkyT6q": {
-          "type": "button",
-          "settings": {
-            "text": "Miljökrav",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_iVWKGF",
-        "button_hkyT6q"
-      ],
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Robust teknik för tuffa miljöer",
         "text": "<p>Vi installerar utrustning anpassad för lantbrukets förhållanden – driftsäker, vädertålig och byggd för lång livslängd.<br/><br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
+        "image": "shopify://shop_images/DJI_20250306125459_0007_V.jpg",
         "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_knappar_Wafdka": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_9ndEUi": {
-          "type": "button",
-          "settings": {
-            "text": "Självförsörjande",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_ccABYC": {
-          "type": "button",
-          "settings": {
-            "text": "Miljökrav",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_9ndEUi",
-        "button_ccABYC"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Lönsamhet och självständighet",
-        "text": "<p>Med egen elproduktion minskar du elkostnaderna, stärker lönsamheten och gör gården mindre sårbar för framtida prisökningar.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/image_11.png",
-        "image_position": "right",
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -331,7 +207,7 @@
       ],
       "name": "Contact Form",
       "settings": {
-        "heading": "Ta hjälp av oss",
+        "heading": "Kontakta oss",
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
@@ -344,7 +220,6 @@
     "bild_och_text_knappar_fdzFA4",
     "bild_och_text_knappar_eLpeqm",
     "bild_och_text_knappar_YtdkFa",
-    "bild_och_text_knappar_Wafdka",
     "kontakt_form_Q8dUhx"
   ]
 }
