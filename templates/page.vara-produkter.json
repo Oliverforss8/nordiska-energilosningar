@@ -47,7 +47,7 @@
         "card_3_overlay_opacity": 20,
         "card_4_image": "shopify://shop_images/image_16.png",
         "card_4_button_text": "Batterier",
-        "card_4_button_link": "shopify://pages/vara-laddboxar",
+        "card_4_button_link": "shopify://collections/batteri",
         "card_4_overlay_opacity": 20,
         "bottom_description": ""
       }
