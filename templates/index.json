@@ -311,30 +311,30 @@
           "type": "product_card",
           "settings": {
             "product": "charge-amps-luna",
-            "title": "Zaptec Go 2",
-            "description": "V2G för",
+            "custom_headline": "",
+            "custom_description": "Smart och hållbar laddbox med upp till 22 kW laddning.",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
+            "custom_url": ""
           }
         },
         "product_card_PCcc9L": {
           "type": "product_card",
           "settings": {
             "product": "zaptec-pro",
-            "title": "Zaptec PRO MID",
-            "description": "Med inbyggd fasbalansering och V2G-förberedd",
+            "custom_headline": "",
+            "custom_description": "Avancerad laddbox med MID-godkänd elmätare och upp till 22 kW effekt.",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
+            "custom_url": ""
           }
         },
         "product_card_CwcHAR": {
           "type": "product_card",
           "settings": {
             "product": "zaptec-2",
-            "title": "Charge Amps Luna",
-            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
+            "custom_url": ""
           }
         }
       },
@@ -484,30 +484,30 @@
           "type": "product_card",
           "settings": {
             "product": "fronius-verto",
-            "title": "Fronius Verto",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/fronius-verto"
+            "custom_url": ""
           }
         },
         "product_card_RxU67f": {
           "type": "product_card",
           "settings": {
             "product": "fronius-reserva",
-            "title": "Fronius Reserva",
-            "description": "Perfekt för företag och kommersiell användning.",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/fronius-reserva"
+            "custom_url": ""
           }
         },
         "product_card_at6LTU": {
           "type": "product_card",
           "settings": {
             "product": "fronius-wattpilot-flex",
-            "title": "Fronius Wattpilot",
-            "description": "Avancerad laddning för professionella behov.",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/fronius-wattpilot-flex"
+            "custom_url": ""
           }
         }
       },
@@ -565,30 +565,30 @@
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Solcell 1",
-            "description": "Avancerad laddning för professionella behov.",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "custom_url": ""
           }
         },
         "product_card_wQdkby": {
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Solcell 2",
-            "description": "Perfekt för företag och kommersiell användning.",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "custom_url": ""
           }
         },
         "product_card_XGk6eH": {
           "type": "product_card",
           "settings": {
             "product": "solceller-1",
-            "title": "Solcell 3",
-            "description": "Avancerad laddning för professionella behov.",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Läs mer",
-            "learn_more_url": "shopify://products/produkt"
+            "custom_url": ""
           }
         }
       },
@@ -642,6 +642,8 @@
           "type": "product_card",
           "settings": {
             "product": "solis-s6-eh3p10-kw",
+            "custom_headline": "",
+            "custom_description": "",
             "custom_url": ""
           }
         },
@@ -649,6 +651,8 @@
           "type": "product_card",
           "settings": {
             "product": "dyness-stack100",
+            "custom_headline": "",
+            "custom_description": "",
             "custom_url": ""
           }
         }
