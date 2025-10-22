@@ -14,7 +14,7 @@
   {% comment %} Banner Content {% endcomment %}
   <div class="layout flex w-full {% if layout_reversed %}order-2{% else %}order-1{% endif %}">
     <div
-      class="banner-content  relative flex    h-[500px] !w-full w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px] "
+      class="banner-content relative flex h-[500px] w-full overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat p-[20px] md:px-[50px] md:py-[40px]"
       style="background-color: {{ section.settings.background_color }}; {% if section.settings.background_image %}background-image: url({{ section.settings.background_image | image_url: width: 1200 }});{% endif %}"
       data-debug="layout_reversed: {{ layout_reversed }}, setting: {{ section.settings.layout_direction }}"
     >
@@ -111,8 +111,19 @@
           {% for block in section.blocks %}
             {% liquid
               assign product = block.settings.product
-              assign product_title = product.title
-              assign product_description = product.description | strip_html | truncatewords: 15
+              
+              if block.settings.custom_headline != blank
+                assign product_title = block.settings.custom_headline
+              else
+                assign product_title = product.title
+              endif
+              
+              if block.settings.custom_description != blank
+                assign product_description = block.settings.custom_description
+              else
+                assign product_description = product.description | strip_html | truncatewords: 15
+              endif
+              
               if block.settings.custom_url != blank
                 assign product_url = block.settings.custom_url
               else
@@ -199,8 +210,19 @@
       {% for block in section.blocks %}
         {% liquid
           assign product = block.settings.product
-          assign product_title = product.title
-          assign product_description = product.description | strip_html | truncatewords: 15
+          
+          if block.settings.custom_headline != blank
+            assign product_title = block.settings.custom_headline
+          else
+            assign product_title = product.title
+          endif
+          
+          if block.settings.custom_description != blank
+            assign product_description = block.settings.custom_description
+          else
+            assign product_description = product.description | strip_html | truncatewords: 15
+          endif
+          
           if block.settings.custom_url != blank
             assign product_url = block.settings.custom_url
           else
@@ -419,7 +441,19 @@
           "type": "product",
           "id": "product",
           "label": "Select Product",
-          "info": "Product title, description (limited to 15 words), and 'Köp nu' button will be automatically used"
+          "info": "The product image and default URL will be automatically used"
+        },
+        {
+          "type": "text",
+          "id": "custom_headline",
+          "label": "Custom Headline (Optional)",
+          "info": "Leave blank to use the product's title"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_description",
+          "label": "Custom Description (Optional)",
+          "info": "Leave blank to use the product's description (limited to 15 words)"
         },
         {
           "type": "url",
