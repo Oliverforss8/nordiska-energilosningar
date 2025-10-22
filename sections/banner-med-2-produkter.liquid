@@ -111,19 +111,19 @@
           {% for block in section.blocks %}
             {% liquid
               assign product = block.settings.product
-              
+
               if block.settings.custom_headline != blank
                 assign product_title = block.settings.custom_headline
               else
                 assign product_title = product.title
               endif
-              
+
               if block.settings.custom_description != blank
                 assign product_description = block.settings.custom_description
               else
                 assign product_description = product.description | strip_html | truncatewords: 15
               endif
-              
+
               if block.settings.custom_url != blank
                 assign product_url = block.settings.custom_url
               else
@@ -210,19 +210,19 @@
       {% for block in section.blocks %}
         {% liquid
           assign product = block.settings.product
-          
+
           if block.settings.custom_headline != blank
             assign product_title = block.settings.custom_headline
           else
             assign product_title = product.title
           endif
-          
+
           if block.settings.custom_description != blank
             assign product_description = block.settings.custom_description
           else
             assign product_description = product.description | strip_html | truncatewords: 15
           endif
-          
+
           if block.settings.custom_url != blank
             assign product_url = block.settings.custom_url
           else
