@@ -135,7 +135,7 @@
           >
           <button
             type="button"
-            class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-full py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
+            class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-full py-[14px] text-[18px] text-[#171717] md:gap-[20px] md:text-[20px]"
             style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%); -webkit-tap-highlight-color: transparent;"
           >
             Få ditt förslag
@@ -145,6 +145,7 @@
               height="14"
               viewBox="0 0 18 14"
               fill="none"
+              style="pointer-events: none;"
             >
               <path d="M1.66699 7.00009H16.667L10.7974 1.13049" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M1.66699 7.00004H16.667L10.7974 12.8696" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -446,6 +447,12 @@
   input,
   textarea {
     -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Prevent SVG elements from capturing tap events */
+  button svg,
+  button img {
+    pointer-events: none;
   }
 {% endstylesheet %}
 
