@@ -25,7 +25,28 @@
       </tr>
     {% endfor %}
   </table>
+<fieldset style="margin-top:1.5rem">
+    <legend style="font-weight:600;">Välj grönt avdrag</legend>
 
+    <label style="display:block; margin:.5rem 0;">
+      <input type="radio" name="attributes[Grönt avdrag]" value="Avdrag 1" {% if cart.attributes['Grönt avdrag'] == 'Avdrag 1' %}checked{% endif %}>
+      Grönt avdrag 1 – upp till 50% av arbetskostnaden (enligt Skatteverket)
+    </label>
+
+    <label style="display:block; margin:.5rem 0;">
+      <input type="radio" name="attributes[Grönt avdrag]" value="Avdrag 2" {% if cart.attributes['Grönt avdrag'] == 'Avdrag 2' %}checked{% endif %}>
+      Grönt avdrag 2 – alternativt upplägg
+    </label>
+
+    <label style="display:block; margin:.5rem 0;">
+      <input type="radio" name="attributes[Grönt avdrag]" value="Utan avdrag" {% if cart.attributes['Grönt avdrag'] == 'Utan avdrag' %}checked{% endif %}>
+      Utan grönt avdrag
+    </label>
+
+    <p style="font-size:.9rem; color:#555; margin-top:.5rem;">
+      Avdraget är en skattereduktion och tillämpas på fakturan enligt Skatteverkets regler – ingen rabattkod behövs.
+    </p>
+  </fieldset>
   <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
 </form>
 
