@@ -278,7 +278,7 @@
             "question": "Hur mycket kan jag spara på min elräkning?",
             "button_text": "Ekonomi",
             "description": "",
-            "answer": "<p><br/>Du kan sänka din elräkning med upp till 50–70 % beroende på takets förutsättningar och din elförbrukning. Dessutom får du betalt för överskottsel du säljer tillbaka till nätet.<br/><br/></p>"
+            "answer": "<p><br/>Du kan sänka din elräkning med upp till 50–70 % beroende på takets förutsättningar och din elförbrukning. Dessutom får du betalt för överskottsel du säljer tillbaka till nätet. Väljer du att komplettera dina solceller med ett batteri ökar dina besparingar.<br/><br/></p>"
           }
         },
         "faq_item_m4ckpA": {
@@ -302,10 +302,19 @@
         "faq_item_HnTQJF": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur lå´ng tid tar installationen?",
+            "question": "Hur lång tid tar installationen?",
             "button_text": "Solceller",
             "description": "",
             "answer": "<p><br/>En normal villainstallation tar 1–2 dagar för solceller och ytterligare 1-2 dagar för elinstallationen.<br/></p>"
+          }
+        },
+        "faq_item_PwyRGE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur fungerar det gröna avdraget?",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p><br/>Du får 15 % skattereduktion direkt av oss på fakturan för solceller. Detta dras av automatiskt och kräver ingen hantering från din sida. För batteri och laddbox ligger skattereduktionen på 50%.<br/><br/></p>"
           }
         }
       },
@@ -313,7 +322,8 @@
         "faq_item_H6kqxw",
         "faq_item_m4ckpA",
         "faq_item_X8a8Td",
-        "faq_item_HnTQJF"
+        "faq_item_HnTQJF",
+        "faq_item_PwyRGE"
       ],
       "name": "FAQ produkter",
       "settings": {
