@@ -127,45 +127,60 @@
         >
       </div>
       <div class="footer-org-info headline1 text-center text-[14px] md:text-left md:text-[24px] {% if is_foretag_page %}text-white{% else %}text-[#171717]{% endif %}">
-        Nordiska Energilösningar Sverige AB I 559510-6690
+        Nordiska Energilösningar Sverige AB I <span class="no-phone-link">559510&#8209;6690</span>
       </div>
     </div>
   </div>
 </footer>
 
 {% stylesheet %}
-  /* Prevent Safari from turning numbers into blue links */
+  /* Prevent Safari from turning numbers into blue links - AGGRESSIVE */
   footer a[href^='tel:'],
   footer a[href^='mailto:'],
-  footer a[x-apple-data-detectors] {
+  footer a[x-apple-data-detectors],
+  footer a[x-apple-data-detectors='true'] {
     color: inherit !important;
     text-decoration: none !important;
     -webkit-tap-highlight-color: transparent !important;
+    -webkit-text-size-adjust: none !important;
   }
 
   .footer-org-info,
-  .footer-org-info a {
+  .footer-org-info *,
+  .footer-org-info a,
+  .footer-org-info span,
+  .no-phone-link,
+  .no-phone-link * {
     color: inherit !important;
     text-decoration: none !important;
     pointer-events: none !important;
     -webkit-tap-highlight-color: transparent !important;
+    -webkit-text-size-adjust: none !important;
   }
 
-  /* Apple data detectors styling */
-  a[x-apple-data-detectors] {
+  /* Apple data detectors styling - AGGRESSIVE */
+  a[x-apple-data-detectors],
+  a[x-apple-data-detectors='true'],
+  .x-apple-data-detectors,
+  .x-apple-data-detectors * {
     color: inherit !important;
     text-decoration: none !important;
+    pointer-events: none !important;
   }
 
   /* For foretag pages - ensure white text */
   .bg-\[\#171717\] .footer-org-info,
-  .bg-\[\#171717\] .footer-org-info a {
+  .bg-\[\#171717\] .footer-org-info *,
+  .bg-\[\#171717\] .footer-org-info a,
+  .bg-\[\#171717\] .no-phone-link {
     color: white !important;
   }
 
   /* For regular pages - ensure dark text */
   .bg-\[\#F3F1E8\] .footer-org-info,
-  .bg-\[\#F3F1E8\] .footer-org-info a {
+  .bg-\[\#F3F1E8\] .footer-org-info *,
+  .bg-\[\#F3F1E8\] .footer-org-info a,
+  .bg-\[\#F3F1E8\] .no-phone-link {
     color: #171717 !important;
   }
 {% endstylesheet %}
