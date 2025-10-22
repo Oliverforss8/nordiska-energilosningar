@@ -135,9 +135,7 @@
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
-        "image_1": "shopify://shop_images/1-444.png",
-        "image_2": "shopify://shop_images/2-707.png",
-        "image_3": "shopify://shop_images/3-125.png",
+        "image_1": "shopify://shop_images/ProductImage76758962.jpg",
         "product_name": "Produktnamn",
         "stack_info": "Stack",
         "description": "Produktbeskrivning här...",
@@ -178,46 +176,6 @@
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "banner_bild_Pee4Fp": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/1C1.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "",
-        "description": "",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
-    "banner_bild_89kigT": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/miehuodiaohei.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Snabbt. Säkert. Självklart.",
-        "description": "Varje modul är utrustad med en avancerad aerosolsbrandsläckare som reagerar blixtsnabbt vid hög temperatur. Inom 5 sekunder aktiveras skyddet, minimerar brandrisker och skapar en säker miljö.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -301,8 +259,6 @@
     "tekniska_specifikationer_AdpmjP",
     "banner_bild_gnz8mP",
     "bild_och_text_knappar_LkcadR",
-    "banner_bild_Pee4Fp",
-    "banner_bild_89kigT",
     "faq_produkt_xEXc9F",
     "relaterade_produkter"
   ]
