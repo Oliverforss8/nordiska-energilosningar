@@ -275,8 +275,8 @@
         "faq_item_m4ckpA": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur lång är garantin på era solpaneler?",
-            "button_text": "Garanti",
+            "question": "Hur lång är garantin på era solpanler?",
+            "button_text": "Solceller",
             "description": "",
             "answer": "<p>Alla våra solceller har en prduktgaranti på 25 år. Utöver det har vi en installationsgaranti på 5 år.</p>"
           }
@@ -287,7 +287,16 @@
             "question": "Vad ingår i installationen?",
             "button_text": "Installation",
             "description": "",
-            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
+            "answer": "<p>Installationen är helt nyckelfärdig och inkluderar montering, inkoppling och driftsättning. Vi tar hand om hela processen – från föranmälan till att din anläggning är fullt igång och producerar el.<br/><br/></p>"
+          }
+        },
+        "faq_item_HnTQJF": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lå´ng tid tar installationen?",
+            "button_text": "Solceller",
+            "description": "",
+            "answer": "<p><br/>En normal villainstallation tar 1–2 dagar för solceller och ytterligare 1-2 dagar för elinstallationen.<br/></p>"
           }
         },
         "faq_item_H6kqxw": {
@@ -303,6 +312,7 @@
       "block_order": [
         "faq_item_m4ckpA",
         "faq_item_X8a8Td",
+        "faq_item_HnTQJF",
         "faq_item_H6kqxw"
       ],
       "name": "FAQ produkter",
