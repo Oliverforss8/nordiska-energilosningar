@@ -27,8 +27,30 @@
         "button_url": ""
       }
     },
+    "3_grid_7XnDKH": {
+      "type": "3-grid",
+      "name": "Tre kolumner grid",
+      "settings": {
+        "title": "Smarta energilösningar för en hållbar vardag",
+        "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
+        "card_1_image": "shopify://shop_images/images.webp",
+        "card_1_button_text": "Solceller",
+        "card_1_button_link": "shopify://collections/solceller",
+        "card_1_overlay_opacity": 10,
+        "card_2_image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "card_2_button_text": "Batterier",
+        "card_2_button_link": "shopify://collections/batteri",
+        "card_2_overlay_opacity": 10,
+        "card_3_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-24.jpg",
+        "card_3_button_text": "Laddboxar",
+        "card_3_button_link": "shopify://collections/laddboxar",
+        "card_3_overlay_opacity": 10,
+        "bottom_description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet."
+      }
+    },
     "grid_omraden_8peiLf": {
       "type": "grid-omraden",
+      "disabled": true,
       "name": "Grid areas",
       "settings": {
         "title": "Smarta energilösningar för en hållbar vardag",
@@ -126,6 +148,7 @@
         },
         "service_option_yqEPyW": {
           "type": "service_option",
+          "disabled": true,
           "settings": {
             "label": "Värmepumpar",
             "service_key": ""
@@ -153,6 +176,7 @@
   "order": [
     "main",
     "hero_lower_UegThw",
+    "3_grid_7XnDKH",
     "grid_omraden_8peiLf",
     "kontakt_form_HnKitz"
   ]
