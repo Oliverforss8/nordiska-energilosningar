@@ -50,6 +50,18 @@
             "link_3_url": "shopify://metaobjects/foretag/lantbruk"
           }
         },
+        "link_column_RkjFzr": {
+          "type": "link_column",
+          "settings": {
+            "heading": "Få en offert",
+            "link_1_text": "Privatperson",
+            "link_1_url": "shopify://pages/offert-forfragan",
+            "link_2_text": "Företag",
+            "link_2_url": "shopify://metaobjects/foretag/offert",
+            "link_3_text": "",
+            "link_3_url": ""
+          }
+        },
         "bottom_link_column_FTKD9V": {
           "type": "bottom_link_column",
           "settings": {
@@ -83,6 +95,7 @@
         "link_column_atybCq",
         "link_column_hnndN3",
         "link_column_c8LkD9",
+        "link_column_RkjFzr",
         "bottom_link_column_FTKD9V",
         "bottom_link_column_RpkRmN"
       ],
