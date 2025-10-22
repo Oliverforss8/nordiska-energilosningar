@@ -31,9 +31,9 @@
           "type": "slide",
           "settings": {
             "media_type": "video",
-            "background_image": "shopify://shop_images/Lagg_till_en_rubrik_c50700ae-5e56-4fb2-b398-b3a7aa5d78b3.png",
+            "background_video": "shopify://files/videos/1080.mp4",
             "overlay_opacity": 10,
-            "heading": "Kompletta batteripaket \nfrån 38 900:-",
+            "heading": "",
             "subheading": "Nyckelfärdiga paket med batteri, hybridväxelriktare och AI-styrning",
             "button_text": "Köp nu",
             "button_url": "shopify://pages/landningssida-film"
