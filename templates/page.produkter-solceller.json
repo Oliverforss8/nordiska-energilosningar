@@ -74,6 +74,33 @@
         "padding_bottom": 40
       }
     },
+    "product_meny_TWz3y8": {
+      "type": "product-meny",
+      "name": "Product Menu",
+      "settings": {
+        "heading": "Våra utvalda solcellspaneler",
+        "product_1": "solceller-1",
+        "product_2": "",
+        "product_3": "",
+        "product_4": "",
+        "product_5": ""
+      }
+    },
+    "bild_och_text_fF7gV6": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Undvik höga elnätsavgifter",
+        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "banner_bild_aLwFVg": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -94,28 +121,13 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_fF7gV6": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Undvik höga elnätsavgifter",
-        "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "banner_bild_cwiWWd": {
       "type": "banner-bild",
       "name": "Banner bild",
       "settings": {
         "layout_type": "contained",
         "media_type": "image",
-        "background_image": "shopify://shop_images/Lagg_till_en_rubrik_5.png",
+        "background_image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva_detail_2_1030845b-b73a-4f5b-9759-f9a52299746c.png",
         "background_color": "#000000",
         "overlay_opacity": 0,
         "header_button_text": "Batteri",
@@ -302,18 +314,6 @@
         "padding_bottom": 40
       }
     },
-    "product_meny_TWz3y8": {
-      "type": "product-meny",
-      "name": "Product Menu",
-      "settings": {
-        "heading": "Våra utvalda solcellspaneler",
-        "product_1": "solceller-1",
-        "product_2": "",
-        "product_3": "",
-        "product_4": "",
-        "product_5": ""
-      }
-    },
     "kontakt_form_7kGfXQ": {
       "type": "kontakt-form",
       "blocks": {
@@ -430,8 +430,8 @@
     "hero_lower_HxUwkQ",
     "icon_UQgYfa",
     "product_meny_TWz3y8",
-    "banner_bild_aLwFVg",
     "bild_och_text_fF7gV6",
+    "banner_bild_aLwFVg",
     "banner_bild_cwiWWd",
     "avdrag_cwFWrR",
     "bild_och_text_knappar_PdkfaH",
