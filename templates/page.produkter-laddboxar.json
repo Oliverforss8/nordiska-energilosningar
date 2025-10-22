@@ -83,30 +83,30 @@
           "type": "product_card",
           "settings": {
             "product": "zaptec-2",
-            "title": "Zaptec Go 2",
-            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
+            "custom_url": ""
           }
         },
         "product_card_wPde4k": {
           "type": "product_card",
           "settings": {
             "product": "zaptec-pro",
-            "title": "Zaptec PRO MID",
-            "description": "Med inbyggd fasbalansering och V2G-förberedd",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
+            "custom_url": ""
           }
         },
         "product_card_fAdJXB": {
           "type": "product_card",
           "settings": {
             "product": "charge-amps-luna",
-            "title": "Charge Amps Luna",
-            "description": "Charge Amps Luna – den intelligenta och framtidssäkra elbilsladda...",
+            "custom_headline": "",
+            "custom_description": "",
             "learn_more_text": "Köp nu",
-            "learn_more_url": "shopify://products/charge-amps-luna"
+            "custom_url": ""
           }
         }
       },
@@ -308,6 +308,46 @@
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "review_BjVqAJ": {
+      "type": "review",
+      "blocks": {
+        "review_ykVaCR": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_r4WGx8": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_CfkYV6": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_ykVaCR",
+        "review_r4WGx8",
+        "review_CfkYV6"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
+      }
     }
   },
   "order": [
@@ -319,6 +359,7 @@
     "avdrag_47f9Td",
     "bild_och_text_knappar_kAcza6",
     "banner_bild_mtUYxw",
+    "review_BjVqAJ",
     "kontakt_form_MEdRdB"
   ]
 }
