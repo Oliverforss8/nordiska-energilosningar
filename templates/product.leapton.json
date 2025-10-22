@@ -221,44 +221,65 @@
         "custom_id": ""
       }
     },
-    "faq_produkt_EaiX4J": {
+    "faq_produkt_xEXc9F": {
       "type": "faq-produkt",
       "blocks": {
-        "faq_item_EjPj8j": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Garanti",
-            "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
-          }
-        },
-        "faq_item_gGGDPd": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Vad ingår i installationen?",
-            "button_text": "Installation",
-            "description": "",
-            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
-          }
-        },
-        "faq_item_rzNTTA": {
+        "faq_item_FkB3aq": {
           "type": "faq_item",
           "settings": {
             "question": "Hur mycket kan jag spara på min elräkning?",
             "button_text": "Ekonomi",
             "description": "",
-            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
+            "answer": "<p><br/>Du kan sänka din elräkning med upp till 50–70 % beroende på takets förutsättningar och din elförbrukning. Dessutom får du betalt för överskottsel du säljer tillbaka till nätet. Väljer du att komplettera dina solceller med ett batteri ökar dina besparingar.<br/><br/></p>"
+          }
+        },
+        "faq_item_HWArpe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång är garantin på era solpanler?",
+            "button_text": "Solceller",
+            "description": "",
+            "answer": "<p>Alla våra solceller har en prduktgaranti på 25 år. Utöver det har vi en installationsgaranti på 5 år.</p>"
+          }
+        },
+        "faq_item_yQyRm6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Vad ingår i installationen?",
+            "button_text": "Installation",
+            "description": "",
+            "answer": "<p>Installationen är helt nyckelfärdig och inkluderar montering, inkoppling och driftsättning. Vi tar hand om hela processen – från föranmälan till att din anläggning är fullt igång och producerar el.<br/><br/></p>"
+          }
+        },
+        "faq_item_BEmFT6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång tid tar installationen?",
+            "button_text": "Solceller",
+            "description": "",
+            "answer": "<p><br/>En normal villainstallation tar 1–2 dagar för solceller och ytterligare 1-2 dagar för elinstallationen.<br/></p>"
+          }
+        },
+        "faq_item_GAj4TG": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur fungerar det gröna avdraget?",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p><br/>Du får 15 % skattereduktion direkt av oss på fakturan för solceller. Detta dras av automatiskt och kräver ingen hantering från din sida. För batteri och laddbox ligger skattereduktionen på 50%.<br/><br/></p>"
           }
         }
       },
       "block_order": [
-        "faq_item_EjPj8j",
-        "faq_item_gGGDPd",
-        "faq_item_rzNTTA"
+        "faq_item_FkB3aq",
+        "faq_item_HWArpe",
+        "faq_item_yQyRm6",
+        "faq_item_BEmFT6",
+        "faq_item_GAj4TG"
       ],
+      "name": "FAQ produkter",
       "settings": {
-        "title": "Vanliga frågor",
+        "title": "Vanliga frågor och svar om solceller",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
         "custom_id": "",
         "padding_top": 40,
@@ -282,7 +303,7 @@
     "bild_och_text_knappar_LkcadR",
     "banner_bild_Pee4Fp",
     "banner_bild_89kigT",
-    "faq_produkt_EaiX4J",
+    "faq_produkt_xEXc9F",
     "relaterade_produkter"
   ]
 }
