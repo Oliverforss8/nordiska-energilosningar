@@ -272,6 +272,15 @@
     "faq_produkt_dtDVrU": {
       "type": "faq-produkt",
       "blocks": {
+        "faq_item_H6kqxw": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur mycket kan jag spara på min elräkning?",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p><br/>Du kan sänka din elräkning med upp till 50–70 % beroende på takets förutsättningar och din elförbrukning. Dessutom får du betalt för överskottsel du säljer tillbaka till nätet.<br/><br/></p>"
+          }
+        },
         "faq_item_m4ckpA": {
           "type": "faq_item",
           "settings": {
@@ -298,22 +307,13 @@
             "description": "",
             "answer": "<p><br/>En normal villainstallation tar 1–2 dagar för solceller och ytterligare 1-2 dagar för elinstallationen.<br/></p>"
           }
-        },
-        "faq_item_H6kqxw": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur mycket kan jag spara på min elräkning?",
-            "button_text": "Ekonomi",
-            "description": "",
-            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
-          }
         }
       },
       "block_order": [
+        "faq_item_H6kqxw",
         "faq_item_m4ckpA",
         "faq_item_X8a8Td",
-        "faq_item_HnTQJF",
-        "faq_item_H6kqxw"
+        "faq_item_HnTQJF"
       ],
       "name": "FAQ produkter",
       "settings": {
