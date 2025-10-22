@@ -154,7 +154,7 @@
         "media_type": "video",
         "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
         "background_color": "#000000",
-        "overlay_opacity": 0,
+        "overlay_opacity": 10,
         "header_button_text": "",
         "header_button_url": "",
         "heading": "Snabb laddning, smart besparing",
@@ -168,6 +168,7 @@
     },
     "bild_och_text_knappar_LkcadR": {
       "type": "bild-och-text-knappar",
+      "disabled": true,
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Titel",
@@ -177,6 +178,26 @@
         "image_position": "left",
         "image_button_text": "",
         "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_Pee4Fp": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "video",
+        "background_video": "shopify://files/videos/1C1.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "",
+        "description": "",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -259,6 +280,7 @@
     "tekniska_specifikationer_AdpmjP",
     "banner_bild_gnz8mP",
     "bild_och_text_knappar_LkcadR",
+    "banner_bild_Pee4Fp",
     "banner_bild_89kigT",
     "faq_produkt_EaiX4J",
     "relaterade_produkter"
