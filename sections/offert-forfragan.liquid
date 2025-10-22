@@ -70,6 +70,7 @@
                   class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-full px-[15px] py-[10px] text-[18px] md:text-[20px]"
                   data-service="{{ service_key }}"
                   data-selected="false"
+                  style="-webkit-tap-highlight-color: transparent;"
                 >
                   {% if block.settings.icon_svg != blank %}
                     {{ block.settings.icon_svg }}
@@ -135,7 +136,7 @@
           <button
             type="button"
             class="headline1 quote-submit-btn flex w-full flex-row items-center justify-center gap-[15px] rounded-full py-[14px] text-[18px] md:gap-[20px] md:text-[20px]"
-            style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
+            style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%); -webkit-tap-highlight-color: transparent;"
           >
             Få ditt förslag
             <svg
@@ -345,20 +346,30 @@
 </section>
 
 {% stylesheet %}
+  /* Global fix for Safari tap highlight */
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
   /* Service option button styling */
   button.service-option {
     transition: all 0.3s ease;
     border: 2px solid #e5e5e5;
     cursor: pointer;
     background: white;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
     user-select: none;
     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     touch-action: manipulation;
+    -webkit-touch-callout: none;
   }
 
   button.service-option:hover {
@@ -367,11 +378,13 @@
   }
 
   button.service-option:focus {
-    outline: none;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   button.service-option:active {
     transform: translateY(0);
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   /* Selected state - using !important to override everything */
@@ -379,6 +392,7 @@
     background: linear-gradient(135deg, #ffa94d 0%, #ff4e33 100%) !important;
     border-color: #ff4e33 !important;
     box-shadow: 0 4px 16px rgba(255, 78, 51, 0.3) !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   /* Default state - ensure white background */
@@ -386,27 +400,40 @@
     background: white !important;
     border-color: #e5e5e5 !important;
     box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   /* Submit button styling */
   button.quote-submit-btn {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
     user-select: none;
     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     touch-action: manipulation;
     border: none;
+    -webkit-touch-callout: none;
   }
 
   button.quote-submit-btn:focus {
-    outline: none;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   button.quote-submit-btn:active {
     transform: scale(0.98);
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Fix for inputs and textareas */
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent !important;
   }
 {% endstylesheet %}
 
