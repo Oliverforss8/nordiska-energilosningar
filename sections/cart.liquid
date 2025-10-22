@@ -25,6 +25,38 @@
       </tr>
     {% endfor %}
   </table>
+  <!-- START: Grönt avdrag val -->
+  <div class="cart-green-deduction" style="padding: 20px; background: #f8f7ef; border-radius: 8px; margin: 20px 0;">
+    <h2>Välj grönt avdrag</h2>
+
+    <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px; background: {% if cart.attributes['gront_avdrag'] == 'GRONT1' %}#e8f8e3{% else %}transparent{% endif %};">
+      <label>
+        <input type="radio" name="attributes[gront_avdrag]" value="GRONT1" {% if cart.attributes['gront_avdrag'] == 'GRONT1' %}checked{% endif %}>
+        <strong>Grönt avdrag 1</strong><br>
+        <span>Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).</span><br>
+        <em>Rabattkod: AVDRAG1</em>
+      </label>
+    </div>
+
+    <div style="padding: 15px; border-radius: 8px; margin-bottom: 10px; background: {% if cart.attributes['gront_avdrag'] == 'GRONT2' %}#e8f8e3{% else %}transparent{% endif %};">
+      <label>
+        <input type="radio" name="attributes[gront_avdrag]" value="GRONT2" {% if cart.attributes['gront_avdrag'] == 'GRONT2' %}checked{% endif %}>
+        <strong>Grönt avdrag 2</strong><br>
+        <span>Alternativt grönt avdrag med andra villkor.</span><br>
+        <em>Rabattkod: AVDRAG2</em>
+      </label>
+    </div>
+
+    <div style="padding: 15px; border-radius: 8px; background: {% if cart.attributes['gront_avdrag'] == 'INGET' %}#e8f8e3{% else %}transparent{% endif %};">
+      <label>
+        <input type="radio" name="attributes[gront_avdrag]" value="INGET" {% if cart.attributes['gront_avdrag'] == 'INGET' or cart.attributes['gront_avdrag'] == blank %}checked{% endif %}>
+        <strong>Utan grönt avdrag</strong><br>
+        <span>Välj detta alternativ om du inte vill använda grönt avdrag</span><br>
+        <em>Ingen rabattkod</em>
+      </label>
+    </div>
+  </div>
+  <!-- END: Grönt avdrag val -->
 
   <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
 </form>
