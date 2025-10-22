@@ -82,11 +82,43 @@
         "title": "Våra utvalda batterier",
         "custom_id": ""
       }
+    },
+    "avdrag_cXVHYp": {
+      "type": "avdrag",
+      "blocks": {
+        "avdrag_item_Lm8BnF": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "15% avdrag för installation av solceller",
+            "image": "shopify://shop_images/Hus.svg"
+          }
+        },
+        "avdrag_item_TeK7hj": {
+          "type": "avdrag_item",
+          "settings": {
+            "text": "50% avdrag vid köp av batterilagring och laddboxar",
+            "image": "shopify://shop_images/Ladd.svg"
+          }
+        }
+      },
+      "block_order": [
+        "avdrag_item_Lm8BnF",
+        "avdrag_item_TeK7hj"
+      ],
+      "name": "Avdrag",
+      "settings": {
+        "custom_id": "",
+        "heading": "Maxa besparingen med grönt avdrag",
+        "description": "<p>Spara upp till 50 000 kr per person och år – en direkt skattereduktion som gör din investering i grön teknik ännu mer lönsam.<br/><br/><br/><br/></p>",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
     "hero_GhxDWK",
-    "slider_sektion_qjEhPV"
+    "slider_sektion_qjEhPV",
+    "avdrag_cXVHYp"
   ]
 }
