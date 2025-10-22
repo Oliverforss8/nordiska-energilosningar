@@ -203,14 +203,14 @@
         "avdrag_item_EXmf8T": {
           "type": "avdrag_item",
           "settings": {
-            "text": "15% avdrag försolcellsinstallationer",
+            "text": "15% avdrag för solcellsinstallationer",
             "image": "shopify://shop_images/Hus.svg"
           }
         },
         "avdrag_item_Rhxkyf": {
           "type": "avdrag_item",
           "settings": {
-            "text": "50% avdrag förbatterilagring",
+            "text": "50% avdrag för batterilagring",
             "image": "shopify://shop_images/Ladd.svg"
           }
         }
