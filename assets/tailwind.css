@@ -1523,6 +1523,14 @@
   line-height: 1rem
 }
 
+.text-\[19px\] {
+  font-size: 19px
+}
+
+.text-\[17px\] {
+  font-size: 17px
+}
+
 .font-\[300\] {
   font-weight: 300
 }
