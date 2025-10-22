@@ -160,6 +160,51 @@
         "padding_bottom": 40
       }
     },
+    "bild_och_text_knappar_PdkfaH": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_eCrzmD": {
+          "type": "button",
+          "settings": {
+            "text": "Full insyn",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_LtpfGA": {
+          "type": "button",
+          "settings": {
+            "text": "Trygghet",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_VnhgfR": {
+          "type": "button",
+          "settings": {
+            "text": "Enklare framtida service",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_eCrzmD",
+        "button_LtpfGA",
+        "button_VnhgfR"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Dokumentation under hela projektet",
+        "text": "<p>För att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "hur_KCyVH6": {
       "type": "hur",
       "blocks": {
@@ -210,51 +255,6 @@
         "primary_button_url": "shopify://pages/offert-forfragan",
         "secondary_button_text": "",
         "secondary_button_url": ""
-      }
-    },
-    "bild_och_text_knappar_PdkfaH": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_eCrzmD": {
-          "type": "button",
-          "settings": {
-            "text": "Full insyn",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_LtpfGA": {
-          "type": "button",
-          "settings": {
-            "text": "Trygghet",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_VnhgfR": {
-          "type": "button",
-          "settings": {
-            "text": "Enklare framtida service",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_eCrzmD",
-        "button_LtpfGA",
-        "button_VnhgfR"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Dokumentation under hela projektet",
-        "text": "<p>För att du ska känna dig trygg och ha full kontroll över ditt solcellsprojekt dokumenterar vi varje steg från start till mål. När projektet är klart får du en slutdokumentation. Den innehåller allt från tekniska specifikationer och garantier till installationsprotokoll och eventuella framtida underhållsråd.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
       }
     },
     "faq_produkt_dtDVrU": {
