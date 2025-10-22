@@ -112,15 +112,30 @@
                 <div class="flex flex-col justify-between ">
                   <div class="flex flex-col">
                     {% liquid
-                      assign card_title = block.settings.title
-                      assign card_description = block.settings.description
-                      assign card_url = block.settings.learn_more_url
+                      assign product = block.settings.product
 
-                      if block.settings.product != blank
-                        assign product = block.settings.product
+                      if block.settings.custom_headline != blank
+                        assign card_title = block.settings.custom_headline
+                      elsif product != blank
                         assign card_title = product.title
+                      else
+                        assign card_title = ''
+                      endif
+
+                      if block.settings.custom_description != blank
+                        assign card_description = block.settings.custom_description
+                      elsif product != blank
                         assign card_description = product.description | strip_html | truncatewords: 15
+                      else
+                        assign card_description = ''
+                      endif
+
+                      if block.settings.custom_url != blank
+                        assign card_url = block.settings.custom_url
+                      elsif product != blank
                         assign card_url = product.url
+                      else
+                        assign card_url = ''
                       endif
                     %}
                     {% if card_title != blank %}
@@ -208,15 +223,30 @@
             <div class="flex flex-col justify-between ">
               <div class="flex flex-col">
                 {% liquid
-                  assign card_title = block.settings.title
-                  assign card_description = block.settings.description
-                  assign card_url = block.settings.learn_more_url
+                  assign product = block.settings.product
 
-                  if block.settings.product != blank
-                    assign product = block.settings.product
+                  if block.settings.custom_headline != blank
+                    assign card_title = block.settings.custom_headline
+                  elsif product != blank
                     assign card_title = product.title
+                  else
+                    assign card_title = ''
+                  endif
+
+                  if block.settings.custom_description != blank
+                    assign card_description = block.settings.custom_description
+                  elsif product != blank
                     assign card_description = product.description | strip_html | truncatewords: 15
+                  else
+                    assign card_description = ''
+                  endif
+
+                  if block.settings.custom_url != blank
+                    assign card_url = block.settings.custom_url
+                  elsif product != blank
                     assign card_url = product.url
+                  else
+                    assign card_url = ''
                   endif
                 %}
                 {% if card_title != blank %}
@@ -616,21 +646,20 @@
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product"
+          "label": "Select Product",
+          "info": "Product title, description, image, and URL will be automatically used"
         },
         {
           "type": "text",
-          "id": "title",
-          "label": "Product Title (Fallback)",
-          "default": "Laddbox",
-          "info": "Only used if no product is selected. Will be replaced by the product's title automatically."
+          "id": "custom_headline",
+          "label": "Override Headline (Optional)",
+          "info": "By default, the product's title will be displayed. Fill this in to override it with custom text."
         },
         {
           "type": "textarea",
-          "id": "description",
-          "label": "Product Description (Fallback)",
-          "default": "Lagra din egen solenergi och använd den när elpriserna är som högst.",
-          "info": "Only used if no product is selected. Will be replaced by the product's description (first 15 words) automatically."
+          "id": "custom_description",
+          "label": "Override Description (Optional)",
+          "info": "By default, the product's description (first 15 words) will be displayed. Fill this in to override it with custom text."
         },
         {
           "type": "text",
@@ -640,9 +669,9 @@
         },
         {
           "type": "url",
-          "id": "learn_more_url",
-          "label": "Learn More Button URL (Fallback)",
-          "info": "Only used if no product is selected. Will be replaced by the product URL automatically."
+          "id": "custom_url",
+          "label": "Override Product URL (Optional)",
+          "info": "By default, the button links to the product page. Fill this in to link to a different URL."
         }
       ]
     }
@@ -745,25 +774,13 @@
       "name": "Banner med 3 produkter",
       "blocks": [
         {
-          "type": "product_card",
-          "settings": {
-            "title": "Laddbox 1",
-            "description": "Lagra din egen solenergi och använd den när elpriserna är som högst."
-          }
+          "type": "product_card"
         },
         {
-          "type": "product_card",
-          "settings": {
-            "title": "Laddbox 2",
-            "description": "Perfekt för företag och kommersiell användning."
-          }
+          "type": "product_card"
         },
         {
-          "type": "product_card",
-          "settings": {
-            "title": "Laddbox 3",
-            "description": "Avancerad laddning för professionella behov."
-          }
+          "type": "product_card"
         }
       ]
     }
