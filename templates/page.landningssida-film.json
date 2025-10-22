@@ -18,54 +18,75 @@
       "name": "Hero",
       "settings": {
         "media_type": "image",
-        "overlay_opacity": 20,
+        "background_image": "shopify://shop_images/Namnlos_1618_x_1080_px_3.png",
+        "overlay_opacity": 60,
         "heading": "Dyness STACK100, Dyness Tower PRO + SOLIS",
         "subheading": "Upptäck våra kampanjer på batteripaket",
         "button_text": "",
         "button_url": ""
       }
     },
-    "banner_med_2_produkter_VBwWaU": {
-      "type": "banner-med-2-produkter",
+    "slider_sektion_qjEhPV": {
+      "type": "slider-sektion",
       "blocks": {
-        "product_card_ATbUer": {
-          "type": "product_card",
+        "product_eCLrkK": {
+          "type": "product",
           "settings": {
-            "product": "",
-            "custom_url": ""
+            "product": "dyness-stack100",
+            "show_price": false,
+            "description": "Vårt mest prisvärda batteri med imponerande lagringskapacitet."
           }
         },
-        "product_card_nhRLim": {
-          "type": "product_card",
+        "product_TUGzNt": {
+          "type": "product",
           "settings": {
-            "product": "",
-            "custom_url": ""
+            "product": "sigenergy-1",
+            "show_price": false,
+            "description": "Ledande design och smart energilagring i ett."
+          }
+        },
+        "product_B86Ygm": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-reserva",
+            "show_price": false,
+            "description": "Europeiskt premiumbatteri med driftsäker prestanda och servrar inom EU."
+          }
+        },
+        "product_Cybgwb": {
+          "type": "product",
+          "settings": {
+            "product": "saj",
+            "show_price": false,
+            "description": "Stilren energilagring med kompakt design för ditt hem."
+          }
+        },
+        "product_Jjr3P6": {
+          "type": "product",
+          "settings": {
+            "product": "dyness-tower-pro",
+            "show_price": false,
+            "description": "Prisvärd och kraftfull energilagring för utomhusbruk."
           }
         }
       },
       "block_order": [
-        "product_card_ATbUer",
-        "product_card_nhRLim"
+        "product_eCLrkK",
+        "product_TUGzNt",
+        "product_B86Ygm",
+        "product_Cybgwb",
+        "product_Jjr3P6"
       ],
-      "name": "Banner med 2 produkter",
+      "name": "Produktslider",
       "settings": {
-        "layout_direction": "banner_first",
-        "background_color": "#f5f5f5",
-        "overlay_opacity": 0,
-        "header_button_text": "Läs mer",
-        "header_button_url": "",
-        "heading": "Smarta elbilsladdare för alla behov",
-        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
-        "primary_button_text": "Privat",
-        "primary_button_url": "",
-        "secondary_button_text": "Företag",
-        "secondary_button_url": ""
+        "title": "Våra utvalda batterier",
+        "custom_id": ""
       }
     }
   },
   "order": [
     "main",
     "hero_GhxDWK",
-    "banner_med_2_produkter_VBwWaU"
+    "slider_sektion_qjEhPV"
   ]
 }
