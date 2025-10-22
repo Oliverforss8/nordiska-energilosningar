@@ -150,6 +150,7 @@
         },
         "form_field_bPP8MR": {
           "type": "form_field",
+          "disabled": true,
           "settings": {
             "label": "Meddelande",
             "name": "",
