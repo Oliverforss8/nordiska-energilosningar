@@ -7,13 +7,13 @@
   id="{{ section_id }}"
   class="{{ section_class }} "
 >
-  <div class="layout pt-[100px] md:pt-[150px] ">
-    <div class="headline1 pb-[60px] text-[20px] font-[400] md:sticky md:top-[150px] md:w-auto md:self-start">
+  <div class="layout pt-[100px] md:pt-[150px]" style="overflow: visible;">
+    <div class="headline1 pb-[60px] text-[20px] font-[400]">
       {{ product.title }}
     </div>
-    <div class="flex flex-col gap-[30px] md:flex-row md:gap-[50px]">
+    <div class="product-container flex flex-col gap-[30px] md:flex-row md:items-start md:gap-[50px]">
       <!-- Product Images -->
-      <div class="w-full space-y-4 md:sticky md:top-[190px] md:w-auto md:self-start">
+      <div class="product-images-sticky w-full space-y-4 md:h-fit md:max-h-[calc(100vh-180px)] md:w-[450px] md:flex-shrink-0">
         <div class="flex rounded-[15px] bg-[#F6F6F6] px-[20px] py-[20px] md:px-[90px] md:py-[40px]">
           {% if product.featured_media %}
             <div
@@ -90,7 +90,7 @@
       </div>
 
       <!-- Product Details -->
-      <div class="product-details w-full">
+      <div class="product-details w-full md:flex-1">
         <div class="">
           <h1 class=" headline2">
             {{ product.title }}
@@ -914,6 +914,25 @@
 {% render 'cart-drawer' %}
 
 {% stylesheet %}
+  /* Sticky product images */
+  .product-images-sticky {
+    position: static;
+  }
+
+  @media (min-width: 768px) {
+    .section-product .layout {
+      position: relative;
+      overflow: visible !important;
+    }
+
+    .product-images-sticky {
+      position: sticky !important;
+      top: 150px !important;
+      align-self: flex-start !important;
+      z-index: 10;
+    }
+  }
+
   /* Make images passed with class image--cover fill and cover wrappers */
   .image.image--cover {
     width: 100%;

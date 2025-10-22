@@ -168,6 +168,10 @@
   visibility: hidden
 }
 
+.static {
+  position: static
+}
+
 .fixed {
   position: fixed
 }
@@ -247,10 +251,6 @@
 
 .top-\[100px\] {
   top: 100px
-}
-
-.top-full {
-  top: 100%
 }
 
 .z-10 {
@@ -566,10 +566,6 @@
   height: 100%
 }
 
-.h-\[35px\] {
-  height: 35px
-}
-
 .max-h-0 {
   max-height: 0px
 }
@@ -584,6 +580,10 @@
 
 .min-h-screen {
   min-height: 100vh
+}
+
+.\!w-full {
+  width: 100% !important
 }
 
 .w-10 {
@@ -606,10 +606,6 @@
   width: 10px
 }
 
-.w-\[1250px\] {
-  width: 1250px
-}
-
 .w-\[12px\] {
   width: 12px
 }
@@ -628,10 +624,6 @@
 
 .w-\[20px\] {
   width: 20px
-}
-
-.w-\[40px\] {
-  width: 40px
 }
 
 .w-\[420px\] {
@@ -664,23 +656,6 @@
 
 .w-screen {
   width: 100vw
-}
-
-.\!w-full {
-  width: 100% !important
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content
-}
-
-.w-\[35px\] {
-  width: 35px
-}
-
-.w-\[80\%\] {
-  width: 80%
 }
 
 .min-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
@@ -1346,11 +1321,6 @@
   padding-bottom: 8px
 }
 
-.py-\[25px\] {
-  padding-top: 25px;
-  padding-bottom: 25px
-}
-
 .pb-2 {
   padding-bottom: 0.5rem
 }
@@ -1369,10 +1339,6 @@
 
 .pb-\[20px\] {
   padding-bottom: 20px
-}
-
-.pb-\[25px\] {
-  padding-bottom: 25px
 }
 
 .pb-\[30px\] {
@@ -1467,6 +1433,10 @@
   text-align: right
 }
 
+.\!text-\[14px\] {
+  font-size: 14px !important
+}
+
 .\!text-\[16px\] {
   font-size: 16px !important
 }
@@ -1477,6 +1447,10 @@
 
 .\!text-\[20px\] {
   font-size: 20px !important
+}
+
+.\!text-\[26px\] {
+  font-size: 26px !important
 }
 
 .text-\[12px\] {
@@ -1549,18 +1523,6 @@
   line-height: 1rem
 }
 
-.\!text-\[36px\] {
-  font-size: 36px !important
-}
-
-.\!text-\[26px\] {
-  font-size: 26px !important
-}
-
-.\!text-\[14px\] {
-  font-size: 14px !important
-}
-
 .font-\[300\] {
   font-weight: 300
 }
@@ -1587,14 +1549,6 @@
 
 .italic {
   font-style: italic
-}
-
-.leading-\[1\.3\] {
-  line-height: 1.3
-}
-
-.leading-\[1\.6\] {
-  line-height: 1.6
 }
 
 .leading-\[110\%\] {
@@ -1833,11 +1787,6 @@
   background-color: rgb(255 255 255 / 0.3)
 }
 
-.hover\:bg-\[\#F3F1E8\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 241 232 / var(--tw-bg-opacity, 1))
-}
-
 .hover\:text-\[\#171717\]:hover {
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity, 1))
@@ -1929,10 +1878,6 @@
 }
 
 @media (min-width: 768px) {
-  .md\:sticky {
-    position: sticky
-  }
-
   .md\:bottom-\[30px\] {
     bottom: 30px
   }
@@ -1943,10 +1888,6 @@
 
   .md\:top-\[150px\] {
     top: 150px
-  }
-
-  .md\:top-\[190px\] {
-    top: 190px
   }
 
   .md\:order-1 {
@@ -2022,6 +1963,10 @@
     height: 379px
   }
 
+  .md\:h-\[40px\] {
+    height: 40px
+  }
+
   .md\:h-\[450px\] {
     height: 450px
   }
@@ -2046,8 +1991,13 @@
     height: 90px
   }
 
-  .md\:h-\[40px\] {
-    height: 40px
+  .md\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content
+  }
+
+  .md\:max-h-\[calc\(100vh-180px\)\] {
+    max-height: calc(100vh - 180px)
   }
 
   .md\:w-1\/2 {
@@ -2066,6 +2016,18 @@
     width: 300px
   }
 
+  .md\:w-\[40px\] {
+    width: 40px
+  }
+
+  .md\:w-\[450px\] {
+    width: 450px
+  }
+
+  .md\:w-\[80\%\] {
+    width: 80%
+  }
+
   .md\:w-\[80px\] {
     width: 80px
   }
@@ -2074,20 +2036,20 @@
     width: auto
   }
 
-  .md\:w-\[40px\] {
-    width: 40px
-  }
-
-  .md\:w-\[80\%\] {
-    width: 80%
-  }
-
   .md\:min-w-\[calc\(50\%-15px\)\] {
     min-width: calc(50% - 15px)
   }
 
   .md\:max-w-\[calc\(50\%-15px\)\] {
     max-width: calc(50% - 15px)
+  }
+
+  .md\:flex-1 {
+    flex: 1 1 0%
+  }
+
+  .md\:flex-shrink-0 {
+    flex-shrink: 0
   }
 
   .md\:shrink-0 {
@@ -2150,6 +2112,10 @@
     gap: 20px
   }
 
+  .md\:gap-\[25px\] {
+    gap: 25px
+  }
+
   .md\:gap-\[30px\] {
     gap: 30px
   }
@@ -2162,14 +2128,6 @@
     gap: 50px
   }
 
-  .md\:gap-\[25px\] {
-    gap: 25px
-  }
-
-  .md\:self-start {
-    align-self: flex-start
-  }
-
   .md\:rounded-\[15px\] {
     border-radius: 15px
   }
@@ -2178,8 +2136,8 @@
     border-radius: 0px
   }
 
-  .md\:bg-transparent {
-    background-color: transparent
+  .md\:p-0 {
+    padding: 0px
   }
 
   .md\:p-\[25px\] {
@@ -2192,10 +2150,6 @@
 
   .md\:p-\[50px\] {
     padding: 50px
-  }
-
-  .md\:p-0 {
-    padding: 0px
   }
 
   .md\:px-\[10px\] {
