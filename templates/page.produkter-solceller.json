@@ -302,6 +302,18 @@
         "padding_bottom": 40
       }
     },
+    "product_meny_TWz3y8": {
+      "type": "product-meny",
+      "name": "Product Menu",
+      "settings": {
+        "heading": "Våra utvalda solcellspaneler",
+        "product_1": "solceller-1",
+        "product_2": "",
+        "product_3": "",
+        "product_4": "",
+        "product_5": ""
+      }
+    },
     "kontakt_form_7kGfXQ": {
       "type": "kontakt-form",
       "blocks": {
@@ -411,24 +423,13 @@
         "header_button_text": "",
         "header_button_url": ""
       }
-    },
-    "product_meny_TWz3y8": {
-      "type": "product-meny",
-      "name": "Product Menu",
-      "settings": {
-        "heading": "Våra utvalda solcellspaneler",
-        "product_1": "solceller-1",
-        "product_2": "",
-        "product_3": "",
-        "product_4": "",
-        "product_5": ""
-      }
     }
   },
   "order": [
     "main",
     "hero_lower_HxUwkQ",
     "icon_UQgYfa",
+    "product_meny_TWz3y8",
     "banner_bild_aLwFVg",
     "bild_och_text_fF7gV6",
     "banner_bild_cwiWWd",
@@ -436,7 +437,6 @@
     "bild_och_text_knappar_PdkfaH",
     "hur_KCyVH6",
     "faq_produkt_dtDVrU",
-    "kontakt_form_7kGfXQ",
-    "product_meny_TWz3y8"
+    "kontakt_form_7kGfXQ"
   ]
 }
