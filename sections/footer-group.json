@@ -64,6 +64,7 @@
         },
         "bottom_link_column_FTKD9V": {
           "type": "bottom_link_column",
+          "disabled": true,
           "settings": {
             "heading": "Få en offert",
             "link_1_text": "Privatperson",
