@@ -332,7 +332,7 @@
           "settings": {
             "product": "zaptec-2",
             "custom_headline": "",
-            "custom_description": "",
+            "custom_description": "Kompakt och smart laddbox med upp till 22 kW effekt och inbyggd MID-mätare.",
             "learn_more_text": "Köp nu",
             "custom_url": ""
           }
@@ -485,7 +485,7 @@
           "settings": {
             "product": "fronius-verto",
             "custom_headline": "",
-            "custom_description": "",
+            "custom_description": "Effektiv trefas växelriktare med hög prestanda och flexibel drift.",
             "learn_more_text": "Köp nu",
             "custom_url": ""
           }
@@ -495,7 +495,7 @@
           "settings": {
             "product": "fronius-reserva",
             "custom_headline": "",
-            "custom_description": "",
+            "custom_description": "Modulärt högvoltssbatteri för effektiv energilagring och flexibel kapacitet.",
             "learn_more_text": "Köp nu",
             "custom_url": ""
           }
@@ -505,7 +505,7 @@
           "settings": {
             "product": "fronius-wattpilot-flex",
             "custom_headline": "",
-            "custom_description": "",
+            "custom_description": "Stilren väggbox med upp till 22 kW laddning, inbyggd MID-mätare och smart solcells-integration.",
             "learn_more_text": "Köp nu",
             "custom_url": ""
           }
