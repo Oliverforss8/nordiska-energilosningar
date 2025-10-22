@@ -126,13 +126,49 @@
           class="h-[40px] w-auto md:h-[53px]"
         >
       </div>
-      <div class=" headline1 text-center text-[14px] md:text-left md:text-[24px] {% if is_foretag_page %}text-white{% else %}text-[#171717]{% endif %}">
-        Nordiska Energilösningar Sverige AB I
-        <p class=" text-[#171717]">559510-6690</p>
+      <div class="footer-org-info headline1 text-center text-[14px] md:text-left md:text-[24px] {% if is_foretag_page %}text-white{% else %}text-[#171717]{% endif %}">
+        Nordiska Energilösningar Sverige AB I 559510-6690
       </div>
     </div>
   </div>
 </footer>
+
+{% stylesheet %}
+  /* Prevent Safari from turning numbers into blue links */
+  footer a[href^="tel:"],
+  footer a[href^="mailto:"],
+  footer a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .footer-org-info,
+  .footer-org-info a {
+    color: inherit !important;
+    text-decoration: none !important;
+    pointer-events: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Apple data detectors styling */
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* For foretag pages - ensure white text */
+  .bg-\[\#171717\] .footer-org-info,
+  .bg-\[\#171717\] .footer-org-info a {
+    color: white !important;
+  }
+
+  /* For regular pages - ensure dark text */
+  .bg-\[\#F3F1E8\] .footer-org-info,
+  .bg-\[\#F3F1E8\] .footer-org-info a {
+    color: #171717 !important;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
