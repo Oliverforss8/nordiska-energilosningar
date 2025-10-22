@@ -144,6 +144,21 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_zGnAYG": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#f7f7f7",
+        "title": "Om Leapton",
+        "text": "<p>Leapton Energy är en japansk tillverkare av högkvalitativa solpaneler med huvudkontor i Kobe och produktionsanläggningar i Kina. Företaget, grundat 2012, är specialiserat på solpaneler med effekter från 430W till 720W, som används i både bostads- och storskaliga solcellsprojekt. Leapton uppfyller internationella certifieringar som TUV och IEC och rankas som Tier-1-leverantör av Bloomberg, vilket säkerställer kvalitet och pålitlighet för kunder över hela världen.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/DJI_20250924122335_0025_V.jpg",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "banner_bild_gnz8mP": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -258,6 +273,7 @@
   "order": [
     "main",
     "tekniska_specifikationer_AdpmjP",
+    "bild_och_text_zGnAYG",
     "banner_bild_gnz8mP",
     "bild_och_text_knappar_LkcadR",
     "faq_produkt_xEXc9F",
