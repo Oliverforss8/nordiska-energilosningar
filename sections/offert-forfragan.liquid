@@ -351,11 +351,27 @@
     border: 2px solid #e5e5e5;
     cursor: pointer;
     background: white;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
   }
 
   button.service-option:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(23, 23, 23, 0.1);
+  }
+
+  button.service-option:focus {
+    outline: none;
+  }
+
+  button.service-option:active {
+    transform: translateY(0);
   }
 
   /* Selected state - using !important to override everything */
@@ -370,6 +386,27 @@
     background: white !important;
     border-color: #e5e5e5 !important;
     box-shadow: none !important;
+  }
+
+  /* Submit button styling */
+  button.quote-submit-btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border: none;
+  }
+
+  button.quote-submit-btn:focus {
+    outline: none;
+  }
+
+  button.quote-submit-btn:active {
+    transform: scale(0.98);
   }
 {% endstylesheet %}
 
