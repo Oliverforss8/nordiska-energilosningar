@@ -11,6 +11,33 @@
     assign inner_container_class = ''
     assign rounded_class = 'rounded-[10px]'
   endif
+
+  # Smart link formatting for header button
+  if section.settings.header_button_url contains '@'
+    assign header_button_link = 'mailto:' | append: section.settings.header_button_url
+  elsif section.settings.header_button_url contains '+'
+    assign header_button_link = 'tel:' | append: section.settings.header_button_url
+  else
+    assign header_button_link = section.settings.header_button_url
+  endif
+
+  # Smart link formatting for primary button
+  if section.settings.primary_button_url contains '@'
+    assign primary_button_link = 'mailto:' | append: section.settings.primary_button_url
+  elsif section.settings.primary_button_url contains '+'
+    assign primary_button_link = 'tel:' | append: section.settings.primary_button_url
+  else
+    assign primary_button_link = section.settings.primary_button_url
+  endif
+
+  # Smart link formatting for secondary button
+  if section.settings.secondary_button_url contains '@'
+    assign secondary_button_link = 'mailto:' | append: section.settings.secondary_button_url
+  elsif section.settings.secondary_button_url contains '+'
+    assign secondary_button_link = 'tel:' | append: section.settings.secondary_button_url
+  else
+    assign secondary_button_link = section.settings.secondary_button_url
+  endif
 %}
 
 <section
@@ -54,7 +81,7 @@
       <div>
         {% if section.settings.header_button_text != blank %}
           <a
-            href="{{ section.settings.header_button_url }}"
+            href="{{ header_button_link }}"
             class="knappetikett2 z-10 inline-block rounded-full bg-transparent p-[15px] text-white"
             style="border: 1px solid #fff;"
           >
@@ -75,9 +102,8 @@
         {% endif %}
         <div class="flex flex-col gap-[10px] md:flex-row">
           {% if section.settings.primary_button_text != blank %}
-            <div>
+            <a href="{{ primary_button_link }}">
               <button
-                href="{{ section.settings.primary_button_url }}"
                 class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717]"
                 style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
               >
@@ -93,12 +119,13 @@
                   <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-            </div>
+            </a>
           {% endif %}
           {% if section.settings.secondary_button_text != blank %}
-            <div>
+            <a
+              href="{{ secondary_button_link }}"
+            >
               <button
-                href="{{ section.settings.secondary_button_url }}"
                 class="knappetikett flex shrink-0 flex-row items-center gap-[20px] rounded-full bg-transparent px-[20px] py-[17px] text-white"
                 style="border: 1px solid #fff;"
               >
@@ -114,7 +141,7 @@
                   <path d="M1 8.9996H21L13.1739 16.8257" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-            </div>
+            </a>
           {% endif %}
         </div>
       </div>
@@ -195,7 +222,8 @@
     {
       "type": "url",
       "id": "header_button_url",
-      "label": "Header knapp länk"
+      "label": "Header knapp länk",
+      "info": "Ange en URL, email (ex: info@example.com) eller telefonnummer (ex: +46701234567)"
     },
     {
       "type": "text",
@@ -218,7 +246,8 @@
     {
       "type": "url",
       "id": "primary_button_url",
-      "label": "Primär knapp länk"
+      "label": "Primär knapp länk",
+      "info": "Ange en URL, email (ex: info@example.com) eller telefonnummer (ex: +46701234567)"
     },
     {
       "type": "text",
@@ -228,7 +257,8 @@
     {
       "type": "url",
       "id": "secondary_button_url",
-      "label": "Sekundär knapp länk"
+      "label": "Sekundär knapp länk",
+      "info": "Ange en URL, email (ex: info@example.com) eller telefonnummer (ex: +46701234567)"
     },
     {
       "type": "text",
