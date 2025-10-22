@@ -97,6 +97,28 @@
         "custom_id": ""
       }
     },
+    "grid_omraden_DMciJF": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Få lägre ränta och maximera din besparing med Grönt Bolån",
+        "description": "Efter att du installerat solceller och batterilagring erbjuder vi en professionell energideklaration som visar din fastighets förbättrade energiprestanda. Med detta kan du ansöka om Grönt Bolån, vilket ger dig lägre ränta på ditt bolån och därmed ytterligare ekonomiska besparingar – år efter år.",
+        "card_1_image": "shopify://shop_images/Zaptec-pro_juni22-46.jpg",
+        "card_1_button_text": "Läs mer",
+        "card_1_button_link": "",
+        "card_1_overlay_opacity": 0,
+        "card_2_button_text": "Utforska",
+        "card_2_button_link": "",
+        "card_2_overlay_opacity": 0,
+        "card_3_button_text": "Upptäck",
+        "card_3_button_link": "",
+        "card_3_overlay_opacity": 0,
+        "card_4_button_text": "Kom igång",
+        "card_4_button_link": "",
+        "card_4_overlay_opacity": 0,
+        "bottom_description": "Genom att producera egen el, lagra överskottet och möjliggöra smart elbilsladdning minskar energikostnaderna och beroendet av elnätet. Varje installation anpassas efter fastighetens unika förutsättningar för att ge maximal effekt, driftsäkerhet och långsiktig lönsamhet. Resultatet är ett modernt och flexibelt energisystem – byggt för framtidens krav."
+      }
+    },
     "kontakt_form_UhxXUB": {
       "type": "kontakt-form",
       "blocks": {
@@ -254,6 +276,7 @@
     "hero_lower_pKeggt",
     "bild_och_text_knappar_DJ8KNN",
     "bild_och_text_3Vj8Aw",
+    "grid_omraden_DMciJF",
     "kontakt_form_UhxXUB",
     "review_qfLVa4"
   ]
