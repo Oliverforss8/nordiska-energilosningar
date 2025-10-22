@@ -12,9 +12,60 @@
     "main": {
       "type": "page",
       "settings": {}
+    },
+    "hero_GhxDWK": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "media_type": "image",
+        "overlay_opacity": 20,
+        "heading": "Dyness STACK100, Dyness Tower PRO + SOLIS",
+        "subheading": "Upptäck våra kampanjer på batteripaket",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
+    "banner_med_2_produkter_VBwWaU": {
+      "type": "banner-med-2-produkter",
+      "blocks": {
+        "product_card_ATbUer": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "custom_url": ""
+          }
+        },
+        "product_card_nhRLim": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "custom_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_ATbUer",
+        "product_card_nhRLim"
+      ],
+      "name": "Banner med 2 produkter",
+      "settings": {
+        "layout_direction": "banner_first",
+        "background_color": "#f5f5f5",
+        "overlay_opacity": 0,
+        "header_button_text": "Läs mer",
+        "header_button_url": "",
+        "heading": "Smarta elbilsladdare för alla behov",
+        "description": "Våra elbilsladdare är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
+        "primary_button_text": "Privat",
+        "primary_button_url": "",
+        "secondary_button_text": "Företag",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_GhxDWK",
+    "banner_med_2_produkter_VBwWaU"
   ]
 }
