@@ -67,7 +67,7 @@
                 %}
                 <button
                   type="button"
-                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-full px-[15px] py-[10px] text-[18px] md:text-[20px]"
+                  class="headline1 service-option flex flex-row items-center justify-center gap-[10px] rounded-full px-[15px] py-[10px] text-[18px] text-[#171717] md:text-[20px]"
                   data-service="{{ service_key }}"
                   data-selected="false"
                   style="-webkit-tap-highlight-color: transparent;"
@@ -174,25 +174,33 @@
         <div class="flex h-full flex-col">
           <div class="headline1 pb-[30px] text-[40px]">Vad händer nu?</div>
           <div class="flex flex-wrap gap-[20px]">
-            <button class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]">
+            <button
+              class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]"
+              style="-webkit-tap-highlight-color: transparent;"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
                 fill="none"
+                style="pointer-events: none;"
               >
                 <path opacity="0.8" d="M4.562 26.5831C2 24.5013 2 22.9262 2 16.2222C2 9.51822 2 6.16533 4.562 4.08356C7.1275 2 11.2505 2 19.5 2C27.7495 2 31.8742 2 34.4362 4.08356C36.9982 6.16711 37 9.51822 37 16.2222C37 22.9262 37 24.5013 34.4362 26.5831C31.876 28.6667 27.7495 28.6667 19.5 28.6667C15.1075 28.6667 12.85 31.7564 9 34V28.2898C7.0855 28 5.67675 27.4898 4.562 26.5831Z" stroke="#171717" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Vi kontaktar dig
             </button>
-            <button class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]">
+            <button
+              class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]"
+              style="-webkit-tap-highlight-color: transparent;"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
                 height="44"
                 viewBox="0 0 36 44"
                 fill="none"
+                style="pointer-events: none;"
               >
                 <g opacity="0.8">
                   <path d="M27.05 5H32C32.5304 5 33.0391 5.21071 33.4142 5.58579C33.7893 5.96086 34 6.46957 34 7V40C34 40.5304 33.7893 41.0391 33.4142 41.4142C33.0391 41.7893 32.5304 42 32 42H4C3.46957 42 2.96086 41.7893 2.58579 41.4142C2.21071 41.0391 2 40.5304 2 40V7C2 6.46957 2.21071 5.96086 2.58579 5.58579C2.96086 5.21071 3.46957 5 4 5H11V8H25V5H27.05Z" stroke="#171717" stroke-width="3" stroke-linejoin="round"/>
@@ -201,13 +209,17 @@
               </svg>
               Du får ett anpassat förslag
             </button>
-            <button class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]">
+            <button
+              class="headline1 flex flex-row items-center gap-[30px] rounded-[15px] bg-white px-[30px] py-[15px] text-[24px]"
+              style="-webkit-tap-highlight-color: transparent;"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"
                 height="40"
                 viewBox="0 0 33 40"
                 fill="none"
+                style="pointer-events: none;"
               >
                 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M16.5 9.74998e-06C13.8653 -0.00351821 11.3181 0.950489 9.32765 2.68626C7.33723 4.42203 6.03772 6.82261 5.66856 9.44571C5.2994 12.0688 5.88545 14.7377 7.31874 16.9606C8.75203 19.1835 10.936 20.8108 13.4682 21.5424C9.86986 21.9818 6.78383 23.2606 4.45726 25.5667C1.49781 28.497 0 32.8636 0 38.5606C0 38.9424 0.150819 39.3085 0.419278 39.5784C0.687738 39.8484 1.05185 40 1.43151 40C1.81117 40 2.17528 39.8484 2.44373 39.5784C2.71219 39.3085 2.86301 38.9424 2.86301 38.5606C2.86301 33.3485 4.22822 29.8333 6.4674 27.6152C8.70959 25.3939 12.0608 24.2424 16.5 24.2424C20.9392 24.2424 24.2904 25.3939 26.5356 27.6152C28.7718 29.8364 30.137 33.3485 30.137 38.5606C30.137 38.9424 30.2878 39.3085 30.5563 39.5784C30.8247 39.8484 31.1888 40 31.5685 40C31.9482 40 32.3123 39.8484 32.5807 39.5784C32.8492 39.3085 33 38.9424 33 38.5606C33 32.8636 31.5022 28.5 28.5397 25.5667C26.2192 23.2636 23.1301 21.9818 19.5318 21.5424C22.0556 20.8025 24.2296 19.1728 25.6554 16.952C27.0812 14.7313 27.6633 12.0682 27.295 9.45089C26.9266 6.83362 25.6326 4.43749 23.6499 2.7017C21.6672 0.965914 19.1289 0.00674768 16.5 9.74998e-06ZM8.43835 10.9849C8.43835 8.835 9.2877 6.77319 10.7996 5.25301C12.3114 3.73283 14.3619 2.8788 16.5 2.8788C18.6381 2.8788 20.6886 3.73283 22.2004 5.25301C23.7123 6.77319 24.5616 8.835 24.5616 10.9849C24.5616 13.1347 23.7123 15.1965 22.2004 16.7167C20.6886 18.2369 18.6381 19.0909 16.5 19.0909C14.3619 19.0909 12.3114 18.2369 10.7996 16.7167C9.2877 15.1965 8.43835 13.1347 8.43835 10.9849Z" fill="#171717"/>
               </svg>
