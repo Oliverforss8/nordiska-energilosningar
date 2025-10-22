@@ -350,7 +350,7 @@
         "background_image": "shopify://shop_images/Charge_Amps_Luna_juni_HR_2024_foto_Maria_Cruseman-6.jpg",
         "overlay_opacity": 25,
         "header_button_text": "Laddboxar",
-        "header_button_url": "",
+        "header_button_url": "shopify://collections/batteri",
         "heading": "Smarta elbilsladdare för alla behov",
         "description": "Våra laddboxar är designade för att vara enkel att använda och installera, med hög effekt och snabb laddning.",
         "primary_button_text": "Upptäck",
@@ -527,9 +527,9 @@
         "heading": "Tysk kvalité med europeiska servrar",
         "description": "Fronius står för pålitlig prestanda, hög säkerhet och lång livslängd. Med servrar inom EU får du trygg datalagring och full kontroll över din anläggning.",
         "primary_button_text": "",
-        "primary_button_url": "shopify://pages/vara-batterilosningar",
+        "primary_button_url": "",
         "secondary_button_text": "",
-        "secondary_button_url": "shopify://metaobjects/foretag/start"
+        "secondary_button_url": ""
       }
     },
     "grid_omraden_zBziiH": {
@@ -668,9 +668,9 @@
         "heading": "Smart energi till rätt pris",
         "description": "Solis växelriktare i samspel med Dyness batteri ger en pålitlig, effektiv och prisvänlig lösning för ditt hem. Tillsammans skapar de ett stabilt system som maximerar nyttan av din solenergi – dag som natt.",
         "primary_button_text": "Batterier",
-        "primary_button_url": "shopify://pages/vara-laddboxar",
+        "primary_button_url": "shopify://collections/batteri",
         "secondary_button_text": "Växelriktare",
-        "secondary_button_url": "shopify://metaobjects/foretag/start"
+        "secondary_button_url": "shopify://collections/batteri"
       }
     },
     "review_VPytWr": {
