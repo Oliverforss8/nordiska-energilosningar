@@ -122,13 +122,6 @@
             "value": "1,3 kg"
           }
         },
-        "specification_hUmEmF": {
-          "type": "specification",
-          "settings": {
-            "label": "Driftstemperatur",
-            "value": "–35 till + 45 °C"
-          }
-        },
         "specification_tjm798": {
           "type": "specification",
           "settings": {
@@ -159,7 +152,6 @@
         "specification_HewNBR",
         "specification_WABDdY",
         "specification_C99Mme",
-        "specification_hUmEmF",
         "specification_tjm798",
         "specification_HYy9jM",
         "specification_Wb33Wp"
