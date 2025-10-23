@@ -110,7 +110,7 @@
           "type": "specification",
           "settings": {
             "label": "IP-klass",
-            "value": "IP20"
+            "value": "IP65"
           }
         },
         "specification_cKwGad": {
