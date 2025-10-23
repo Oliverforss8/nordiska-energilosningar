@@ -11,15 +11,15 @@
   "sections": {
     "main": {
       "type": "product",
-      "settings": {}
-    },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
       "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
+        "show_installation": true,
+        "installation_product": "installation-laddbox",
+        "installation_title": "",
+        "installation_description": "",
+        "green_deduction_1_title": "Grönt avdrag 1",
+        "green_deduction_1_description": "Få 48,5% rabatt (max 50 000 kr) på totalpriset med grönt avdrag.",
+        "green_deduction_2_title": "Grönt avdrag 2",
+        "green_deduction_2_description": "Få 48,5% rabatt (max 100 000 kr) på totalpriset med grönt avdrag."
       }
     },
     "faq_produkt": {
@@ -53,7 +53,11 @@
           }
         }
       },
-      "block_order": ["faq_item_1", "faq_item_2", "faq_item_3"],
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3"
+      ],
       "settings": {
         "title": "Vanliga frågor",
         "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
@@ -61,7 +65,20 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
     }
   },
-  "order": ["main", "faq_produkt", "relaterade_produkter"]
+  "order": [
+    "main",
+    "faq_produkt",
+    "relaterade_produkter"
+  ]
 }
