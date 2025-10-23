@@ -15,7 +15,7 @@
         "upsell_product_8Ti6PQ": {
           "type": "upsell_product",
           "settings": {
-            "upsell_product": "",
+            "upsell_product": "dyness-stack100",
             "upsell_variant_id": "",
             "enable_condition": false,
             "option_index": "1",
