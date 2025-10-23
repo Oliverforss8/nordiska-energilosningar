@@ -221,50 +221,6 @@
         "custom_id": ""
       }
     },
-    "faq_produkt_EaiX4J": {
-      "type": "faq-produkt",
-      "blocks": {
-        "faq_item_EjPj8j": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Garanti",
-            "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
-          }
-        },
-        "faq_item_gGGDPd": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Vad ingår i installationen?",
-            "button_text": "Installation",
-            "description": "",
-            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
-          }
-        },
-        "faq_item_rzNTTA": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur mycket kan jag spara på min elräkning?",
-            "button_text": "Ekonomi",
-            "description": "",
-            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_EjPj8j",
-        "faq_item_gGGDPd",
-        "faq_item_rzNTTA"
-      ],
-      "settings": {
-        "title": "Vanliga frågor",
-        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "relaterade_produkter": {
       "type": "relaterade-produkter",
       "settings": {
@@ -272,6 +228,46 @@
         "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
+      }
+    },
+    "review_eeQLWb": {
+      "type": "review",
+      "blocks": {
+        "review_pGFaHm": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_RaHHpB": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_7KgjbJ": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_pGFaHm",
+        "review_RaHHpB",
+        "review_7KgjbJ"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
       }
     }
   },
@@ -282,7 +278,7 @@
     "bild_och_text_knappar_LkcadR",
     "banner_bild_Pee4Fp",
     "banner_bild_89kigT",
-    "faq_produkt_EaiX4J",
+    "review_eeQLWb",
     "relaterade_produkter"
   ]
 }
