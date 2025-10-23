@@ -139,83 +139,6 @@
         "padding_bottom": 40
       }
     },
-    "banner_bild_xmeyiR": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/99.jpg",
-        "background_color": "#000000",
-        "overlay_opacity": 80,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Behöver du komma i kontakt med oss?",
-        "description": "Ring eller maila till oss - vi återkommer inom 24h.",
-        "primary_button_text": "010-200 77 17",
-        "primary_button_url": "",
-        "secondary_button_text": "info@nordiskaenergi.se",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
-    "medarbetare_XjLAVk": {
-      "type": "medarbetare",
-      "blocks": {
-        "team_member_46nLAq": {
-          "type": "team_member",
-          "settings": {
-            "image": "shopify://shop_images/Namnlos_design_1.png",
-            "name": "Robert Karlsson",
-            "title": "VD",
-            "email": "robert.karlsson@nordiskaenergi.se",
-            "phone": "0763-22 88 10"
-          }
-        },
-        "team_member_kR7dki": {
-          "type": "team_member",
-          "settings": {
-            "image": "shopify://shop_images/Motiv.png",
-            "name": "Anton Koupourtiadis",
-            "title": "Säljare",
-            "email": "anton@nordiskaenergi.se",
-            "phone": "0708-29 98 96"
-          }
-        },
-        "team_member_ikdbmt": {
-          "type": "team_member",
-          "settings": {
-            "image": "shopify://shop_images/IMG_1208.jpg",
-            "name": "Simon Löfgren",
-            "title": "Säljare",
-            "email": "simon.lofgren@nordiskaenergi.se",
-            "phone": "0738-55 81 92"
-          }
-        },
-        "team_member_EhfjY4": {
-          "type": "team_member",
-          "settings": {
-            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
-            "name": "Emilia Karlsson",
-            "title": "Säljare",
-            "email": "emilia.karlsson@nordiskaenergi.se",
-            "phone": "0722-06 16 03"
-          }
-        }
-      },
-      "block_order": [
-        "team_member_46nLAq",
-        "team_member_kR7dki",
-        "team_member_ikdbmt",
-        "team_member_EhfjY4"
-      ],
-      "name": "Medarbetare",
-      "settings": {
-        "custom_id": "",
-        "heading": "Kom i kontakt med vårt team",
-        "description": "<p>Vi erbjuder personlig rådgivning på högsta nivå. Här möter du vårt dedikerade team som skräddarsyr lösningar utifrån dina behov.</p>"
-      }
-    },
     "kontakt_form_UMgaJa": {
       "type": "kontakt-form",
       "blocks": {
@@ -329,6 +252,83 @@
         "header_button_text": "Support",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "banner_bild_xmeyiR": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "full",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/99.jpg",
+        "background_color": "#000000",
+        "overlay_opacity": 80,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Behöver du komma i kontakt med oss?",
+        "description": "Ring eller maila till oss - vi återkommer inom 24h.",
+        "primary_button_text": "010-200 77 17",
+        "primary_button_url": "",
+        "secondary_button_text": "info@nordiskaenergi.se",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "medarbetare_XjLAVk": {
+      "type": "medarbetare",
+      "blocks": {
+        "team_member_46nLAq": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/Namnlos_design_1.png",
+            "name": "Robert Karlsson",
+            "title": "VD",
+            "email": "robert.karlsson@nordiskaenergi.se",
+            "phone": "0763-22 88 10"
+          }
+        },
+        "team_member_kR7dki": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/Motiv.png",
+            "name": "Anton Koupourtiadis",
+            "title": "Säljare",
+            "email": "anton@nordiskaenergi.se",
+            "phone": "0708-29 98 96"
+          }
+        },
+        "team_member_ikdbmt": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1208.jpg",
+            "name": "Simon Löfgren",
+            "title": "Säljare",
+            "email": "simon.lofgren@nordiskaenergi.se",
+            "phone": "0738-55 81 92"
+          }
+        },
+        "team_member_EhfjY4": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/11116b68f1b1b1a1fd4526f5907a4d2b3f3c877d.png",
+            "name": "Emilia Karlsson",
+            "title": "Säljare",
+            "email": "emilia.karlsson@nordiskaenergi.se",
+            "phone": "0722-06 16 03"
+          }
+        }
+      },
+      "block_order": [
+        "team_member_46nLAq",
+        "team_member_kR7dki",
+        "team_member_ikdbmt",
+        "team_member_EhfjY4"
+      ],
+      "name": "Medarbetare",
+      "settings": {
+        "custom_id": "",
+        "heading": "Kom i kontakt med vårt team",
+        "description": "<p>Vi erbjuder personlig rådgivning på högsta nivå. Här möter du vårt dedikerade team som skräddarsyr lösningar utifrån dina behov.</p>"
+      }
     }
   },
   "order": [
@@ -336,8 +336,8 @@
     "hero_lower_jDy7dL",
     "icon_3eKirx",
     "faq_produkt_Prmepb",
+    "kontakt_form_UMgaJa",
     "banner_bild_xmeyiR",
-    "medarbetare_XjLAVk",
-    "kontakt_form_UMgaJa"
+    "medarbetare_XjLAVk"
   ]
 }
