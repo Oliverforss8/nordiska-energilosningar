@@ -54,6 +54,21 @@
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
       }
     },
+    "bild_och_text_jFXLnG": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Elegant och kompakt design",
+        "text": "<p>HS3-serien har en ultraslim profil på endast 17 cm och tar minimalt med plats. Den moderna, eleganta och tunna designen gör den enkel att placera i alla typer av hem utan att kompromissa med prestanda eller estetik.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Namnlos_b2dcdcf3-1eed-498f-b7b3-ee9102ebe49c.jpg",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "tekniska_specifikationer_AdpmjP": {
       "type": "tekniska-specifikationer",
       "blocks": {
@@ -184,19 +199,44 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_jFXLnG": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
+    "review_LKG8Rm": {
+      "type": "review",
+      "blocks": {
+        "review_cQrV9U": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_N3gxRW": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_CtXYEi": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_cQrV9U",
+        "review_N3gxRW",
+        "review_CtXYEi"
+      ],
+      "name": "Reviews",
       "settings": {
-        "background_color": "#ffffff",
-        "title": "Elegant och kompakt design",
-        "text": "<p>HS3-serien har en ultraslim profil på endast 17 cm och tar minimalt med plats. Den moderna, eleganta och tunna designen gör den enkel att placera i alla typer av hem utan att kompromissa med prestanda eller estetik.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/Namnlos_b2dcdcf3-1eed-498f-b7b3-ee9102ebe49c.jpg",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
       }
     }
   },
@@ -206,6 +246,7 @@
     "tekniska_specifikationer_AdpmjP",
     "bild_och_text_knappar_LkcadR",
     "bild_och_text_knappar_z4zUK4",
+    "review_LKG8Rm",
     "relaterade_produkter"
   ]
 }
