@@ -83,6 +83,14 @@
             "service_key": "",
             "icon_svg": ""
           }
+        },
+        "service_option_WePNYN": {
+          "type": "service_option",
+          "settings": {
+            "label": "Elektriker",
+            "service_key": "",
+            "icon_svg": ""
+          }
         }
       },
       "block_order": [
@@ -92,26 +100,27 @@
         "form_field_Dy63fQ",
         "service_option_MW9Egf",
         "service_option_3gm48i",
-        "service_option_RrpJ9b"
+        "service_option_RrpJ9b",
+        "service_option_WePNYN"
       ],
       "name": "Offertförfrågan",
       "settings": {
         "title": "Begär offert",
         "description": "<p>Fyll i formuläret nedan så återkommer vi till er!</p>",
         "card_1_image": "shopify://shop_images/ae172ed2-6217-4349-a71e-7f3f7d029e9b_1.original.jpg",
-        "card_1_button_text": "Företag",
+        "card_1_button_text": "",
         "card_1_button_link": "shopify://metaobjects/foretag/foretag",
         "card_1_overlay_opacity": 20,
         "card_2_image": "shopify://shop_images/images.webp",
-        "card_2_button_text": "BRF",
+        "card_2_button_text": "",
         "card_2_button_link": "shopify://metaobjects/foretag/bostadsrattsforening",
         "card_2_overlay_opacity": 20,
         "card_3_image": "shopify://shop_images/image_11.png",
-        "card_3_button_text": "Lantbruk",
+        "card_3_button_text": "",
         "card_3_button_link": "shopify://metaobjects/foretag/lantbruk",
         "card_3_overlay_opacity": 30,
         "card_4_image": "shopify://shop_images/qyymok2yfx8.webp",
-        "card_4_button_text": "Privatperson",
+        "card_4_button_text": "",
         "card_4_button_link": "shopify://pages/var-losning",
         "card_4_overlay_opacity": 20
       }
