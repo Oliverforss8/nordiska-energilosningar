@@ -68,37 +68,6 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_mUTJKN": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Långsiktig lönsamhet",
-        "text": "<p>Investeringen betalar sig snabbt genom minskade inköp av el, ökad kontroll över kostnader och ett högre fastighetsvärde.<br/><br/><br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/image_12.png",
-        "image_position": "left",
-        "image_button_text": "",
-        "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_iUmHe6": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "En partner du kan lita på",
-        "text": "<p>Vi erbjuder helhetslösningar – från projektering och installation till drift och service. Ni får en trygg energipartner med fokus på kvalitet och resultat.<br/><br/><br/></p>",
-        "media_type": "video",
-        "image": "shopify://shop_images/test_for_hero_2.png",
-        "video": "shopify://files/videos/IMG_1831.MOV",
-        "image_position": "right",
-        "image_button_text": "Våra lösningar",
-        "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
     "banner_bild_TMKRLq": {
       "type": "banner-bild",
       "name": "Banner bild",
@@ -118,6 +87,22 @@
         "secondary_button_url": "",
         "custom_id": ""
       }
+    },
+    "bild_och_text_iUmHe6": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "En partner du kan lita på",
+        "text": "<p>Vi erbjuder helhetslösningar – från projektering och installation till drift och service. Ni får en trygg energipartner med fokus på kvalitet och resultat.<br/><br/><br/></p>",
+        "media_type": "video",
+        "image": "shopify://shop_images/test_for_hero_2.png",
+        "video": "shopify://files/videos/IMG_1831.MOV",
+        "image_position": "right",
+        "image_button_text": "Våra lösningar",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -125,8 +110,7 @@
     "bild_och_text_w7KiJt",
     "bild_och_text_33GfxU",
     "bild_och_text_knappar_MRbxmk",
-    "bild_och_text_mUTJKN",
-    "bild_och_text_iUmHe6",
-    "banner_bild_TMKRLq"
+    "banner_bild_TMKRLq",
+    "bild_och_text_iUmHe6"
   ]
 }
