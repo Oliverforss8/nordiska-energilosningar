@@ -76,26 +76,26 @@
           href="{{ routes.root_url }}"
           class="text-[12px] font-[300] text-white transition-opacity hover:opacity-70"
         >
-          {{ 'general.privatperson' | t | default: 'Privatperson' }}
+          Privatperson
         </a>
         <a
           href="/pages/foretag/start"
           class="text-[18px] font-[400] text-white transition-opacity hover:opacity-70"
         >
-          {{ 'general.foretag' | t | default: 'Företag' }}
+          Företag
         </a>
       {% else %}
         <a
           href="{{ routes.root_url }}"
           class="text-[18px] font-[400] text-[#171717] transition-opacity hover:opacity-70"
         >
-          {{ 'general.privatperson' | t | default: 'Privatperson' }}
+          Privatperson
         </a>
         <a
           href="/pages/foretag/start"
           class="text-[12px] font-[300] text-[#171717] transition-opacity hover:opacity-70"
         >
-          {{ 'general.foretag' | t | default: 'Företag' }}
+          Företag
         </a>
       {% endif %}
     </div>
