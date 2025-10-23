@@ -48,7 +48,7 @@
         "installation_product": "installation",
         "installation_title": "",
         "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
+        "green_deduction_1_title": "Grönt avdrag – 1 person",
         "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
         "green_deduction_2_title": "Grönt avdrag 2",
         "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
@@ -166,50 +166,6 @@
         "custom_id": ""
       }
     },
-    "faq_produkt_kccxUK": {
-      "type": "faq-produkt",
-      "blocks": {
-        "faq_item_bKfxVE": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Garanti",
-            "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
-          }
-        },
-        "faq_item_3xGFcP": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Vad ingår i installationen?",
-            "button_text": "Installation",
-            "description": "",
-            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
-          }
-        },
-        "faq_item_LRkiR7": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur mycket kan jag spara på min elräkning?",
-            "button_text": "Ekonomi",
-            "description": "",
-            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_bKfxVE",
-        "faq_item_3xGFcP",
-        "faq_item_LRkiR7"
-      ],
-      "settings": {
-        "title": "Vanliga frågor",
-        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "relaterade_produkter": {
       "type": "relaterade-produkter",
       "settings": {
@@ -224,7 +180,6 @@
     "main",
     "banner_bild_xNxJV9",
     "tekniska_specifikationer_4DcicN",
-    "faq_produkt_kccxUK",
     "relaterade_produkter"
   ]
 }
