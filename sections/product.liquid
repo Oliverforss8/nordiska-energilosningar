@@ -968,28 +968,9 @@
     object-fit: contain !important;
   }
 
-  /* Thumbnail active state */
-  [data-thumbnail].active {
-    opacity: 1 !important;
-    border: 3px solid #171717 !important;
-    transform: scale(1.05) !important;
-    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.2) !important;
-  }
-
-  /* Thumbnail hover state */
-  [data-thumbnail]:hover:not(.active) {
-    transform: scale(1.02);
-    box-shadow: 0 2px 8px rgba(23, 23, 23, 0.15);
-  }
-
-  /* Smooth transitions for all thumbnail states */
+  /* Thumbnail styling */
   [data-thumbnail] {
     transition: all 0.3s ease;
-  }
-
-  /* Override hover opacity when active */
-  [data-thumbnail].active:hover {
-    opacity: 1 !important;
   }
 
   /* Metafield content styling - target H2 and H3 in rich text */
@@ -1355,15 +1336,8 @@
   /* Product image switcher styles */
   [data-thumbnail] {
     transition: all 0.3s ease;
-  }
-
-  [data-thumbnail].active {
-    opacity: 1;
-    border: 2px solid #171717;
-  }
-
-  [data-thumbnail]:hover {
-    transform: scale(1.05);
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
   }
 
   #main-product-image img {
