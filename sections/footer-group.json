@@ -14,18 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_column_atybCq": {
-          "type": "link_column",
-          "settings": {
-            "heading": "Vår lösning",
-            "link_1_text": "Solenergi",
-            "link_1_url": "shopify://pages/var-losning",
-            "link_2_text": "Lagra energi",
-            "link_2_url": "shopify://pages/vara-batterilosningar",
-            "link_3_text": "Ladda bilen",
-            "link_3_url": "shopify://pages/vara-laddboxar"
-          }
-        },
         "link_column_hnndN3": {
           "type": "link_column",
           "settings": {
@@ -93,7 +81,6 @@
         }
       },
       "block_order": [
-        "link_column_atybCq",
         "link_column_hnndN3",
         "link_column_c8LkD9",
         "link_column_RkjFzr",
