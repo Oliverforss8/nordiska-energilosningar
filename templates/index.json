@@ -32,7 +32,7 @@
           "settings": {
             "media_type": "video",
             "background_video": "shopify://files/videos/1080.mp4",
-            "overlay_opacity": 10,
+            "overlay_opacity": 20,
             "heading": "Helhetslösningar inom solenergi, batterilagring och laddboxar",
             "subheading": "",
             "button_text": "Till våra produkter",

@@ -50,6 +50,18 @@
             "link_3_url": ""
           }
         },
+        "link_column_GTnXeH": {
+          "type": "link_column",
+          "settings": {
+            "heading": "Support",
+            "link_1_text": "Kontakta oss",
+            "link_1_url": "shopify://pages/support-om-oss",
+            "link_2_text": "",
+            "link_2_url": "",
+            "link_3_text": "",
+            "link_3_url": ""
+          }
+        },
         "bottom_link_column_FTKD9V": {
           "type": "bottom_link_column",
           "disabled": true,
@@ -67,6 +79,7 @@
         },
         "bottom_link_column_RpkRmN": {
           "type": "bottom_link_column",
+          "disabled": true,
           "settings": {
             "heading": "Support",
             "link_1_text": "Kontakta oss",
@@ -84,6 +97,7 @@
         "link_column_hnndN3",
         "link_column_c8LkD9",
         "link_column_RkjFzr",
+        "link_column_GTnXeH",
         "bottom_link_column_FTKD9V",
         "bottom_link_column_RpkRmN"
       ],
