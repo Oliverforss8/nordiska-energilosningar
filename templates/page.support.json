@@ -89,17 +89,17 @@
         "faq_item_pfhgyB": {
           "type": "faq_item",
           "settings": {
-            "question": "Vad ingår i installationen?",
+            "question": "Behöver jag betala något för att få en offert?",
             "button_text": "Solceller 6 Batteri",
             "description": "",
-            "answer": "<p>Installationenavser en komplett nyckelfärdig installation.</p>"
+            "answer": "<p><br/>Nej. Offert och rådgivning är helt kostnadsfri och utan förpliktelser.<br/><br/></p>"
           }
         },
         "faq_item_k8fVE6": {
           "type": "faq_item",
           "settings": {
             "question": "Behöver jag bygglov?",
-            "button_text": "Produkter",
+            "button_text": "Solceller",
             "description": "",
             "answer": "<p><br/>Oftast behövs <em>inte</em> bygglov för solceller på villatak. Undantag kan finnas i detaljplanerade områden eller på kulturmärkta byggnader. Vi hjälper dig kontrollera detta.<br/><br/></p>"
           }
