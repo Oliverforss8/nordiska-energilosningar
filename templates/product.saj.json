@@ -68,14 +68,14 @@
           "type": "specification",
           "settings": {
             "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh (3-15 moduler)"
+            "value": "5 – 20 kWh (1-4 moduler)"
           }
         },
         "specification_GpzCVJ": {
           "type": "specification",
           "settings": {
             "label": "Dimension",
-            "value": "B 591 * D 390 * H 1700mm"
+            "value": "B 695 * D 170 * H 1700mm"
           }
         },
         "specification_pQFPk4": {
@@ -103,7 +103,7 @@
           "type": "specification",
           "settings": {
             "label": "Driftstemperatur",
-            "value": "- 30 – + 55 °C"
+            "value": "- 30 – + 50 °C"
           }
         },
         "specification_k6xA9k": {
