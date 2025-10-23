@@ -113,8 +113,8 @@
   const products = {
     'product-1': {
       {% if section.settings.product_1 != blank %}
-        title: "{{ section.settings.product_1.title | escape }}",
-        description: `{{ section.settings.product_1.description | strip_html }}`,
+        title: "{{ section.settings.product_1_custom_title | default: section.settings.product_1.title | escape }}",
+        description: `{{ section.settings.product_1_custom_description | default: section.settings.product_1.description | strip_html }}`,
         url: "{{ section.settings.product_1.url }}",
         image: "{{ section.settings.product_1.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_1.featured_image.alt | default: section.settings.product_1.title | escape }}"
@@ -122,8 +122,8 @@
     },
     'product-2': {
       {% if section.settings.product_2 != blank %}
-        title: "{{ section.settings.product_2.title | escape }}",
-        description: `{{ section.settings.product_2.description | strip_html }}`,
+        title: "{{ section.settings.product_2_custom_title | default: section.settings.product_2.title | escape }}",
+        description: `{{ section.settings.product_2_custom_description | default: section.settings.product_2.description | strip_html }}`,
         url: "{{ section.settings.product_2.url }}",
         image: "{{ section.settings.product_2.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_2.featured_image.alt | default: section.settings.product_2.title | escape }}"
@@ -131,8 +131,8 @@
     },
     'product-3': {
       {% if section.settings.product_3 != blank %}
-        title: "{{ section.settings.product_3.title | escape }}",
-        description: `{{ section.settings.product_3.description | strip_html }}`,
+        title: "{{ section.settings.product_3_custom_title | default: section.settings.product_3.title | escape }}",
+        description: `{{ section.settings.product_3_custom_description | default: section.settings.product_3.description | strip_html }}`,
         url: "{{ section.settings.product_3.url }}",
         image: "{{ section.settings.product_3.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_3.featured_image.alt | default: section.settings.product_3.title | escape }}"
@@ -140,8 +140,8 @@
     },
     'product-4': {
       {% if section.settings.product_4 != blank %}
-        title: "{{ section.settings.product_4.title | escape }}",
-        description: `{{ section.settings.product_4.description | strip_html }}`,
+        title: "{{ section.settings.product_4_custom_title | default: section.settings.product_4.title | escape }}",
+        description: `{{ section.settings.product_4_custom_description | default: section.settings.product_4.description | strip_html }}`,
         url: "{{ section.settings.product_4.url }}",
         image: "{{ section.settings.product_4.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_4.featured_image.alt | default: section.settings.product_4.title | escape }}"
@@ -149,8 +149,8 @@
     },
     'product-5': {
       {% if section.settings.product_5 != blank %}
-        title: "{{ section.settings.product_5.title | escape }}",
-        description: `{{ section.settings.product_5.description | strip_html }}`,
+        title: "{{ section.settings.product_5_custom_title | default: section.settings.product_5.title | escape }}",
+        description: `{{ section.settings.product_5_custom_description | default: section.settings.product_5.description | strip_html }}`,
         url: "{{ section.settings.product_5.url }}",
         image: "{{ section.settings.product_5.featured_image | image_url: width: 450 }}",
         alt: "{{ section.settings.product_5.featured_image.alt | default: section.settings.product_5.title | escape }}"
@@ -230,9 +230,33 @@
       "label": "Product 1"
     },
     {
+      "type": "text",
+      "id": "product_1_custom_title",
+      "label": "Product 1 - Custom title (optional)",
+      "info": "Leave blank to use product's title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_1_custom_description",
+      "label": "Product 1 - Custom description (optional)",
+      "info": "Leave blank to use product's description"
+    },
+    {
       "type": "product",
       "id": "product_2",
       "label": "Product 2"
+    },
+    {
+      "type": "text",
+      "id": "product_2_custom_title",
+      "label": "Product 2 - Custom title (optional)",
+      "info": "Leave blank to use product's title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_2_custom_description",
+      "label": "Product 2 - Custom description (optional)",
+      "info": "Leave blank to use product's description"
     },
     {
       "type": "product",
@@ -240,14 +264,50 @@
       "label": "Product 3"
     },
     {
+      "type": "text",
+      "id": "product_3_custom_title",
+      "label": "Product 3 - Custom title (optional)",
+      "info": "Leave blank to use product's title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_3_custom_description",
+      "label": "Product 3 - Custom description (optional)",
+      "info": "Leave blank to use product's description"
+    },
+    {
       "type": "product",
       "id": "product_4",
       "label": "Product 4"
     },
     {
+      "type": "text",
+      "id": "product_4_custom_title",
+      "label": "Product 4 - Custom title (optional)",
+      "info": "Leave blank to use product's title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_4_custom_description",
+      "label": "Product 4 - Custom description (optional)",
+      "info": "Leave blank to use product's description"
+    },
+    {
       "type": "product",
       "id": "product_5",
       "label": "Product 5"
+    },
+    {
+      "type": "text",
+      "id": "product_5_custom_title",
+      "label": "Product 5 - Custom title (optional)",
+      "info": "Leave blank to use product's title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_5_custom_description",
+      "label": "Product 5 - Custom description (optional)",
+      "info": "Leave blank to use product's description"
     }
   ],
   "presets": [
