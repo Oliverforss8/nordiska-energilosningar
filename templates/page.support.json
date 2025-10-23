@@ -77,6 +77,15 @@
     "faq_produkt_Prmepb": {
       "type": "faq-produkt",
       "blocks": {
+        "faq_item_4F9qN7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång tid tar det från offert till färdig installation?",
+            "button_text": "Beställa",
+            "description": "",
+            "answer": "<p>Vi installerar alla våra beställningar inom 2-6 veckor.<br/><br/></p>"
+          }
+        },
         "faq_item_kQBgKF": {
           "type": "faq_item",
           "settings": {
@@ -90,7 +99,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Behöver jag betala något för att få en offert?",
-            "button_text": "Solceller 6 Batteri",
+            "button_text": "Rådgivning",
             "description": "",
             "answer": "<p><br/>Nej. Offert och rådgivning är helt kostnadsfri och utan förpliktelser.<br/><br/></p>"
           }
@@ -106,6 +115,7 @@
         }
       },
       "block_order": [
+        "faq_item_4F9qN7",
         "faq_item_kQBgKF",
         "faq_item_pfhgyB",
         "faq_item_k8fVE6"
