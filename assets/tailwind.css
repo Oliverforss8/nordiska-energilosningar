@@ -1178,6 +1178,10 @@
   padding: 50px
 }
 
+.p-\[40px\] {
+  padding: 40px
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem
@@ -2047,6 +2051,10 @@
     height: 20px !important
   }
 
+  .md\:h-\[400px\] {
+    height: 400px
+  }
+
   .md\:max-h-\[calc\(100vh-180px\)\] {
     max-height: calc(100vh - 180px)
   }
@@ -2221,6 +2229,10 @@
 
   .md\:p-\[50px\] {
     padding: 50px
+  }
+
+  .md\:p-\[60px\] {
+    padding: 60px
   }
 
   .md\:px-\[10px\] {
