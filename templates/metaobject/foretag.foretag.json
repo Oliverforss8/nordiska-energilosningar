@@ -118,7 +118,7 @@
         "button_mtEF8q": {
           "type": "button",
           "settings": {
-            "text": "Ökat fastighetsvärde",
+            "text": "Ta del av EU - bidrag",
             "url": "",
             "show_arrow": false
           }
@@ -126,7 +126,7 @@
         "button_KHH3cY": {
           "type": "button",
           "settings": {
-            "text": "Installation",
+            "text": "Framtidssäkra med V2G",
             "url": "",
             "show_arrow": false
           }
@@ -134,7 +134,7 @@
         "button_BMiBYD": {
           "type": "button",
           "settings": {
-            "text": "Garanti",
+            "text": "Lägg till en betallösning med oss",
             "url": "",
             "show_arrow": false
           }
@@ -150,7 +150,7 @@
         "title": "Laddboxar för personal och besökare",
         "text": "<p>Med egna laddstationer kan ni erbjuda klimatsmart laddning och stärka företagets profil som en modern och hållbar arbetsplats. Med en betallösning finns möjligheter till ökade intäkter för företaget. <br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/alpitronic-hypercharger-hyc150-1000E.webp",
+        "image": "shopify://shop_images/Zaptec_Pro_MID_0923.jpg",
         "image_position": "right",
         "image_button_text": "Gå vidare",
         "image_button_link": "",
@@ -238,9 +238,9 @@
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Trygghet i varje steg",
-        "text": "<p>Vi ansvarar för projektering, tillstånd, installation och service. Ni får en komplett lösning, anpassad för just er verksamhet.<br/><br/></p>",
+        "text": "<p>Vi är experter på kommersiella energilösningar, med oss kan får ni en långsiktig partner som tar hand om Vi ansvarar för projektering, tillstånd, installation och service. Ni får en komplett lösning, anpassad för just er verksamhet.<br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/image_19.png",
+        "image": "shopify://shop_images/DJI_20250924122335_0025_V.jpg",
         "image_position": "right",
         "image_button_text": "Gå vidare",
         "image_button_link": "",
