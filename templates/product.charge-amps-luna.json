@@ -261,6 +261,46 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "review_D3XQN9": {
+      "type": "review",
+      "blocks": {
+        "review_WKHtKY": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_DVpqqc": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_8XFFTe": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_WKHtKY",
+        "review_DVpqqc",
+        "review_8XFFTe"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
+      }
     }
   },
   "order": [
@@ -271,6 +311,7 @@
     "bild_och_text_PHARHm",
     "bild_och_text_Lt8MP6",
     "faq_produkt",
+    "review_D3XQN9",
     "relaterade_produkter"
   ]
 }
