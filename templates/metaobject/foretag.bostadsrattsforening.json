@@ -82,20 +82,6 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_pYUdTp": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Solceller som gynnar alla boende",
-        "text": "<p>Solenergi sänker föreningens gemensamma elförbrukning och frigör pengar till andra förbättringar i fastigheten.<br/><br/></p>",
-        "media_type": "image",
-        "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "kontakt_form_aaeFxV": {
       "type": "kontakt-form",
       "blocks": {
@@ -200,7 +186,6 @@
     "bild_och_text_JtxHzi",
     "bild_och_text_HdDQVt",
     "bild_och_text_BexaXj",
-    "bild_och_text_pYUdTp",
     "kontakt_form_aaeFxV"
   ]
 }
