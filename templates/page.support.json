@@ -98,10 +98,10 @@
         "faq_item_k8fVE6": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur mycket kan jag spara på min elräkning?",
+            "question": "Behöver jag bygglov?",
             "button_text": "Produkter",
             "description": "",
-            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
+            "answer": "<p><br/>Oftast behövs <em>inte</em> bygglov för solceller på villatak. Undantag kan finnas i detaljplanerade områden eller på kulturmärkta byggnader. Vi hjälper dig kontrollera detta.<br/><br/></p>"
           }
         }
       },
