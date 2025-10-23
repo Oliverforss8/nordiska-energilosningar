@@ -175,26 +175,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_89kigT": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "full",
-        "media_type": "image",
-        "background_image": "shopify://shop_images/solcellsbatteri-saj-hs3-2n.jpg",
-        "background_color": "#000000",
-        "overlay_opacity": 15,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Elegant och kompakt design",
-        "description": "HS3-serien har en ultraslim profil på endast 17 cm och tar minimalt med plats. Den moderna, eleganta och tunna designen gör den enkel att placera i alla typer av hem utan att kompromissa med prestanda eller estetik.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "relaterade_produkter": {
       "type": "relaterade-produkter",
       "settings": {
@@ -203,14 +183,29 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "bild_och_text_jFXLnG": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Elegant och kompakt design",
+        "text": "<p>HS3-serien har en ultraslim profil på endast 17 cm och tar minimalt med plats. Den moderna, eleganta och tunna designen gör den enkel att placera i alla typer av hem utan att kompromissa med prestanda eller estetik.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Namnlos_b2dcdcf3-1eed-498f-b7b3-ee9102ebe49c.jpg",
+        "image_position": "right",
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
+    "bild_och_text_jFXLnG",
     "tekniska_specifikationer_AdpmjP",
     "bild_och_text_knappar_LkcadR",
     "bild_och_text_knappar_z4zUK4",
-    "banner_bild_89kigT",
     "relaterade_produkter"
   ]
 }
