@@ -161,7 +161,7 @@
         "product_name": "Produktnamn",
         "stack_info": "Stack",
         "description": "Produktbeskrivning här...",
-        "button_text": "Produktdatablad",
+        "button_text": "",
         "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250318/DynessSTACK100datasheet20250228EN.pdf",
         "custom_id": ""
       }
