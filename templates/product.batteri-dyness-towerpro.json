@@ -56,11 +56,7 @@
         "show_installation": true,
         "installation_product": "installation",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": ""
       }
     },
     "tekniska_specifikationer_NRgBkG": {
@@ -208,7 +204,7 @@
           "type": "review",
           "settings": {
             "stars": 5,
-            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteriinstallation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
             "customer_name": "Stefan"
           }
         }
