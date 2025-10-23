@@ -80,10 +80,10 @@
         "faq_item_kQBgKF": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Produkter",
+            "question": "Kan jag nyttja det gröna skatteavdraget direkt på fakturan?",
+            "button_text": "Ekonomi",
             "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
+            "answer": "<p>Ja, du behöver inte ansöka själv. Vi hanterar allt och drar av upp till 50 % på batteri och 15 % på solceller direkt på din faktura.<br/><br/></p>"
           }
         },
         "faq_item_pfhgyB": {
