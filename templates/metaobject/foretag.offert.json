@@ -83,6 +83,14 @@
             "service_key": "",
             "icon_svg": ""
           }
+        },
+        "service_option_WePNYN": {
+          "type": "service_option",
+          "settings": {
+            "label": "Elektriker",
+            "service_key": "",
+            "icon_svg": ""
+          }
         }
       },
       "block_order": [
@@ -92,7 +100,8 @@
         "form_field_Dy63fQ",
         "service_option_MW9Egf",
         "service_option_3gm48i",
-        "service_option_RrpJ9b"
+        "service_option_RrpJ9b",
+        "service_option_WePNYN"
       ],
       "name": "Offertförfrågan",
       "settings": {
