@@ -387,7 +387,7 @@
           "settings": {
             "product": "solis-s6-eh3p10-kw",
             "show_price": false,
-            "description": "Vår mest prisvärda växelriktare – med AI-styrning, dubbla MPPT och realtidsoptimering för maximal solproduktion och oslagbar driftssäkerhet."
+            "description": "Vår mest prisvärda växelriktare – med AI-styrning, fyra MPPT och realtidsoptimering för maximal solproduktion och oslagbar driftssäkerhet."
           }
         },
         "product_kCbLpw": {
@@ -609,46 +609,6 @@
         "card_4_overlay_opacity": 0
       }
     },
-    "review_VPytWr": {
-      "type": "review",
-      "blocks": {
-        "review_eVwUCd": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
-            "customer_name": "Marie"
-          }
-        },
-        "review_WegPwt": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
-            "customer_name": "Ruben"
-          }
-        },
-        "review_YGpGcg": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
-            "customer_name": "Stefan"
-          }
-        }
-      },
-      "block_order": [
-        "review_eVwUCd",
-        "review_WegPwt",
-        "review_YGpGcg"
-      ],
-      "name": "Reviews",
-      "settings": {
-        "heading": "Vad våra kunder säger om oss",
-        "button_text": "Läs alla recensioner",
-        "button_url": ""
-      }
-    },
     "banner_med_2_produkter_rrjGgf": {
       "type": "banner-med-2-produkter",
       "blocks": {
@@ -786,6 +746,46 @@
         "heading": "Fri rådgivning och offert",
         "header_button_text": "",
         "header_button_url": ""
+      }
+    },
+    "review_VPytWr": {
+      "type": "review",
+      "blocks": {
+        "review_eVwUCd": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_WegPwt": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_YGpGcg": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_eVwUCd",
+        "review_WegPwt",
+        "review_YGpGcg"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
       }
     }
   },

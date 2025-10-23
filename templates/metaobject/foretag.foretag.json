@@ -36,7 +36,7 @@
         "button_mJ8C6b": {
           "type": "button",
           "settings": {
-            "text": "Installation",
+            "text": "Helhetslösningar inom energi",
             "url": "",
             "show_arrow": false
           }
@@ -44,7 +44,7 @@
         "button_yfdtqw": {
           "type": "button",
           "settings": {
-            "text": "Garanti",
+            "text": "En långsiktigt partner",
             "url": "",
             "show_arrow": false
           }
@@ -58,7 +58,7 @@
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Solceller för företag",
-        "text": "<p><br/>Genom att producera egen el minskar ni driftkostnaderna och blir mindre beroende av elmarknadens svängningar. Solenergi stärker också ert hållbarhetsarbete.<br/><br/></p>",
+        "text": "<p><strong>Vi på Nordiska Energilösningar har tillsammans över 10 års erfarenhet och levererar branschens mest pålitliga och lönsamma lösningar inom solenergi, batterilagring och frekvensbalansering.</strong><br/><br/>När du väljer Nordiska Energilösningar väljer du en långsiktig partner som inte bara installerar – vi optimerar, underhåller och vidareutvecklar dina energisystem för att säkerställa maximal avkastning och trygg drift år efter år.</p><p><strong>Vi tar totalansvar för din energiresa – från projektering till lönsamhet i realtid.</strong></p>",
         "media_type": "image",
         "image": "shopify://shop_images/DJI_20250603105700_0001_V.jpg",
         "image_position": "right",
@@ -73,7 +73,7 @@
         "button_iXmLka": {
           "type": "button",
           "settings": {
-            "text": "Ökat fastighetsvärde",
+            "text": "Undvik effekttariffer",
             "url": "",
             "show_arrow": false
           }
@@ -81,7 +81,7 @@
         "button_Xe3BFg": {
           "type": "button",
           "settings": {
-            "text": "Installation",
+            "text": "Sänk fastighetens driftsnetto",
             "url": "",
             "show_arrow": false
           }
@@ -89,7 +89,7 @@
         "button_YArdGL": {
           "type": "button",
           "settings": {
-            "text": "Garanti",
+            "text": "Uppnå 100% egenanvändning av solel",
             "url": "",
             "show_arrow": false
           }
@@ -103,9 +103,9 @@
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Energikontroll med batterilagring",
-        "text": "<p><br/>Batterier gör att överskottsel kan lagras och användas när elen är som dyrast. Det ger stabilitet, lägre effekttoppar och bättre ekonomi.<br/><br/></p>",
+        "text": "<p><br/>Batterier gör att överskottsel kan lagras och användas när elen är som dyrast. Det ger stabilitet, lägre effekttoppar och bättre ekonomi. Inbyggd AI styrning samt möjlighet till stödtjänster skapar god möjlihger till en god avkastning. <br/><br/></p>",
         "media_type": "image",
-        "image": "shopify://shop_images/Media.jpg",
+        "image": "shopify://shop_images/DJI_20250317155545_0009_V.jpg",
         "image_position": "left",
         "image_button_text": "Gå vidare",
         "image_button_link": "",
@@ -148,7 +148,7 @@
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Laddboxar för personal och besökare",
-        "text": "<p>Med egna laddstationer kan ni erbjuda klimatsmart laddning och stärka företagets profil som en modern och hållbar arbetsplats.<br/><br/></p>",
+        "text": "<p>Med egna laddstationer kan ni erbjuda klimatsmart laddning och stärka företagets profil som en modern och hållbar arbetsplats. Med en betallösning finns möjligheter till ökade intäkter för företaget. <br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/alpitronic-hypercharger-hyc150-1000E.webp",
         "image_position": "right",
