@@ -98,6 +98,26 @@
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
       }
+    },
+    "banner_bild_TMKRLq": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/2.webp",
+        "background_color": "#000000",
+        "overlay_opacity": 50,
+        "header_button_text": "Karlskrona",
+        "header_button_url": "",
+        "heading": "Affärsverken + Nordiska Energilösningar",
+        "description": "Nordiska Energilösningar samarbetar med Affärsverken i Karlskrona för att leverera solenergi, batterisystem och laddinfrastruktur med hög kvalitet och lokal förankring.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
@@ -106,6 +126,7 @@
     "bild_och_text_33GfxU",
     "bild_och_text_knappar_MRbxmk",
     "bild_och_text_mUTJKN",
-    "bild_och_text_iUmHe6"
+    "bild_och_text_iUmHe6",
+    "banner_bild_TMKRLq"
   ]
 }
