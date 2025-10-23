@@ -32,11 +32,11 @@
           "settings": {
             "media_type": "video",
             "background_video": "shopify://files/videos/1080.mp4",
-            "overlay_opacity": 20,
+            "overlay_opacity": 10,
             "heading": "Helhetslösningar inom solenergi, batterilagring och laddboxar",
             "subheading": "",
-            "button_text": "Till våra produkter",
-            "button_url": "shopify://collections/all"
+            "button_text": "Fri offert",
+            "button_url": "shopify://pages/offert-forfragan"
           }
         }
       },
@@ -387,7 +387,7 @@
           "settings": {
             "product": "solis-s6-eh3p10-kw",
             "show_price": false,
-            "description": "Vår mest prisvärda växelriktare – med AI-styrning, fyra MPPT och realtidsoptimering för maximal solproduktion och oslagbar driftssäkerhet."
+            "description": "Vår mest prisvärda växelriktare – med AI-styrning, dubbla MPPT och realtidsoptimering för maximal solproduktion och oslagbar driftssäkerhet."
           }
         },
         "product_kCbLpw": {
