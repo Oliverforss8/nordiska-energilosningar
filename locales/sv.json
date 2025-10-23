@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "customer_accounts": {
+    "payment_methods": {
+      "update_payment_method": {
+        "title": "Uppdatera betalningsmetod",
+        "button_title": "Uppdatera",
+        "billing_address": "Faktureringsadress",
+        "disclaimer": "Denna betalningsmetod sparas för framtida köp och kan användas för återkommande eller uppskjutna köp.",
+        "error_message": "Det gick inte att uppdatera betalningsmetoden",
+        "current": "Nuvarande"
+      }
+    }
+  },
+  "sections": {
+    "banner_with_products": {
+      "name": "Banner med 2 produkter",
+      "settings": {
+        "header_content": {
+          "header": "Rubrikinnehåll"
+        },
+        "background_color": {
+          "label": "Bakgrundsfärg"
+        },
+        "background_image": {
+          "label": "Bakgrundsbild"
+        },
+        "header_button_text": {
+          "label": "Rubrikknappstext"
+        },
+        "header_button_url": {
+          "label": "URL för rubrikknapp"
+        },
+        "heading": {
+          "label": "Rubrik"
+        },
+        "description": {
+          "label": "Beskrivning"
+        },
+        "primary_button_text": {
+          "label": "Primär knapptext"
+        },
+        "primary_button_url": {
+          "label": "Primär knapp-URL"
+        },
+        "secondary_button_text": {
+          "label": "Sekundär knapptext"
+        },
+        "secondary_button_url": {
+          "label": "URL för sekundär knapp"
+        },
+        "product_1": {
+          "header": "Produkt 1",
+          "label": "Välj produkt 1"
+        },
+        "product_1_title": {
+          "label": "Produkt 1 Titel"
+        },
+        "product_1_description": {
+          "label": "Produkt 1 Beskrivning"
+        },
+        "product_1_learn_more_text": {
+          "label": "Produkt 1 Läs mer Text"
+        },
+        "product_1_learn_more_url": {
+          "label": "Produkt 1 Läs mer URL"
+        },
+        "product_1_buy_text": {
+          "label": "Produkt 1 Köptext"
+        },
+        "product_1_buy_url": {
+          "label": "Produkt 1 Köp-URL"
+        },
+        "product_2": {
+          "header": "Produkt 2",
+          "label": "Välj produkt 2"
+        },
+        "product_2_title": {
+          "label": "Produkt 2 Titel"
+        },
+        "product_2_description": {
+          "label": "Produkt 2 Beskrivning"
+        },
+        "product_2_learn_more_text": {
+          "label": "Produkt 2 Läs mer Text"
+        },
+        "product_2_learn_more_url": {
+          "label": "Produkt 2 Läs mer URL"
+        },
+        "product_2_buy_text": {
+          "label": "Produkt 2 Köptext"
+        },
+        "product_2_buy_url": {
+          "label": "Produkt 2 Köp-URL"
+        }
+      },
+      "presets": {
+        "banner_with_products": {
+          "name": "Banner med 2 produkter"
+        }
+      },
+      "no_product_selected": "Ingen produkt vald"
+    },
+    "lankar": {
+      "name": "Länkar",
+      "blocks": {
+        "card": {
+          "name": "Kort",
+          "settings": {
+            "heading": {
+              "label": "Rubrik"
+            },
+            "description": {
+              "label": "Beskrivning"
+            },
+            "link": {
+              "label": "Länk"
+            }
+          }
+        }
+      }
+    },
+    "header": {
+      "name": "Rubrik",
+      "settings": {
+        "navigation": {
+          "header": "Navigeringsinställningar"
+        },
+        "menu": {
+          "label": "Huvudmeny",
+          "info": "Välj menyn som ska visas i sidhuvudet"
+        },
+        "dropdown_config": {
+          "header": "Konfiguration av listrutan",
+          "info": "Konfigurera vilka navigeringsobjekt som ska ha rullgardinsmenyer"
+        },
+        "nav_item_1_dropdown": {
+          "label": "Aktivera rullgardinsmeny för första menyalternativet"
+        },
+        "nav_item_2_dropdown": {
+          "label": "Aktivera rullgardinsmeny för det andra menyalternativet"
+        },
+        "nav_item_3_dropdown": {
+          "label": "Aktivera rullgardinsmeny för det tredje menyalternativet"
+        },
+        "nav_item_4_dropdown": {
+          "label": "Aktivera rullgardinsmeny för fjärde menyalternativet"
+        },
+        "dropdown_link_title": "Rubrik för rullgardinslänk",
+        "dropdown_link_url": "URL för rullgardinsmeny"
+      }
+    },
+    "icon": {
+      "name": "Ikonavsnitt",
+      "settings": {
+        "heading": {
+          "label": "Rubrik"
+        },
+        "description": {
+          "label": "Beskrivning"
+        },
+        "custom_id": {
+          "label": "Anpassat ID",
+          "info": "Lägg till ett anpassat ID i det här avsnittet för stylingändamål"
+        },
+        "padding_top": {
+          "label": "Toppstoppning"
+        },
+        "padding_bottom": {
+          "label": "Bottenstoppning"
+        }
+      },
+      "blocks": {
+        "feature": {
+          "name": "Särdrag",
+          "settings": {
+            "icon": {
+              "label": "Ikon",
+              "info": "Lägg till en emoji eller ikontecken"
+            }
+          }
+        }
+      }
+    },
+    "avdrag": {
+      "name": "Skatteavdrag",
+      "settings": {
+        "custom_id": {
+          "label": "Anpassat ID",
+          "info": "Använd ett anpassat ID för det här avsnittet"
+        },
+        "heading": {
+          "label": "Rubrik"
+        },
+        "description": {
+          "label": "Beskrivning"
+        }
+      },
+      "blocks": {
+        "avdrag_item": {
+          "name": "Avdragspost",
+          "settings": {
+            "image": {
+              "label": "Bild"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Skatteavdrag"
+      }
+    },
+    "all": {
+      "padding": {
+        "padding_top": "Toppstoppning",
+        "padding_bottom": "Bottenstoppning"
+      },
+      "custom_id": {
+        "label": "Anpassat ID",
+        "info": "Använd ett anpassat ID för det här avsnittet"
+      }
+    },
+    "blog": {
+      "name": "Blogg",
+      "settings": {
+        "articles_per_page": {
+          "label": "Artiklar per sida",
+          "info": "Antal artiklar att visa per sida"
+        }
+      }
+    }
+  },
+  "404": {
+    "not_found": "Sidan hittades inte.",
+    "back_to_shopping": "Tillbaka till shoppingen"
+  },
+  "blog": {
+    "article_comments": "Kommentarer",
+    "filter_all": "Alla",
+    "comment_form_body": "Kommentar",
+    "comment_form_email": "E-post",
+    "comment_form_name": "Namn",
+    "comment_form_submit": "Posta",
+    "comment_form_title": "Lägg till en kommentar",
+    "read_more": "Läs mer",
+    "no_articles": "Inga artiklar hittades",
+    "no_articles_description": "Kom tillbaka senare för nytt innehåll."
+  },
+  "articles": {
+    "table_of_contents": "Innehållsförteckning"
+  },
+  "cart": {
+    "checkout": "Kassa",
+    "title": "Vagn",
+    "update": "Uppdatera",
+    "remove": "Ta bort",
+    "empty": "Din varukorg är tom",
+    "empty_text": "Lägg till produkter för att komma igång",
+    "continue_shopping": "Fortsätt handla"
+  }
+}
