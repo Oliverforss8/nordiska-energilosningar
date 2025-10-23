@@ -264,6 +264,49 @@
     "remove": "Ta bort",
     "empty": "Din varukorg är tom",
     "empty_text": "Lägg till produkter för att komma igång",
-    "continue_shopping": "Fortsätt handla"
+    "continue_shopping": "Fortsätt handla",
+    "subtotal": "Delsumma",
+    "view_cart": "Visa varukorg"
+  },
+  "customers": {
+    "login": {
+      "email": "E-post",
+      "password": "Lösenord",
+      "submit": "Logga in",
+      "title": "Inloggning"
+    }
+  },
+  "collections": {
+    "title": "Samlingar"
+  },
+  "gift_card": {
+    "add_to_apple_wallet": "Lägg till i Apple Wallet",
+    "card": "Presentkort",
+    "expired": "Detta presentkort har gått ut",
+    "expires_on": "Utgår den {{ expires_on }}",
+    "use_at_checkout": "Använd detta presentkort i kassan"
+  },
+  "password": {
+    "title": "Denna butik är privat",
+    "password": "Lösenord",
+    "enter": "Skriva in"
+  },
+  "products": {
+    "product": {
+      "media": {
+        "load_image": "Ladda bild"
+      },
+      "sold_out": "Slutsåld"
+    }
+  },
+  "search": {
+    "title": "Söka",
+    "placeholder": "Sök artiklar, sidor eller produkter",
+    "submit": "Söka",
+    "no_results_html": "Inga resultat hittades för {{ terms }}"
+  },
+  "general": {
+    "page": "Sida",
+    "header": "Rubrik"
   }
 }
