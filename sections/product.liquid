@@ -428,13 +428,11 @@
                     >
                     <label for="green-deduction-1" class="flex-1 cursor-pointer">
                       <div class="body1 text-[16px] font-medium md:text-[18px]">
-                        {{ section.settings.green_deduction_1_title | default: 'Grönt avdrag 1' }}
+                        Grönt avdrag – 1 person
                       </div>
-                      {% if section.settings.green_deduction_1_description != blank %}
-                        <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
-                          {{ section.settings.green_deduction_1_description }}
-                        </div>
-                      {% endif %}
+                      <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                        50 % skattereduktion, upp till 50 000 kr
+                      </div>
                       <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
                         Rabattkod: AVDRAG1
                       </div>
@@ -452,13 +450,11 @@
                     >
                     <label for="green-deduction-2" class="flex-1 cursor-pointer">
                       <div class="body1 text-[16px] font-medium md:text-[18px]">
-                        {{ section.settings.green_deduction_2_title | default: 'Grönt avdrag 2' }}
+                        Grönt avdrag – 2 personer
                       </div>
-                      {% if section.settings.green_deduction_2_description != blank %}
-                        <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
-                          {{ section.settings.green_deduction_2_description }}
-                        </div>
-                      {% endif %}
+                      <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                        50 % skattereduktion, upp till 100 000 kr
+                      </div>
                       <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
                         Rabattkod: AVDRAG2
                       </div>
@@ -1389,33 +1385,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Visas endast när installation är vald. Alternativen visas automatiskt när kunden väljer installation. Om installation avmarkeras döljs alternativen."
-    },
-    {
-      "type": "text",
-      "id": "green_deduction_1_title",
-      "label": "Titel för alternativ 1",
-      "default": "Grönt avdrag 1",
-      "info": "Rabattkod: AVDRAG1 - Max rabatt: 50 000 kr"
-    },
-    {
-      "type": "textarea",
-      "id": "green_deduction_1_description",
-      "label": "Beskrivning för alternativ 1",
-      "default": "Få 48,5% rabatt (max 50 000 kr) på totalpriset med grönt avdrag."
-    },
-    {
-      "type": "text",
-      "id": "green_deduction_2_title",
-      "label": "Titel för alternativ 2",
-      "default": "Grönt avdrag 2",
-      "info": "Rabattkod: AVDRAG2 - Max rabatt: 100 000 kr"
-    },
-    {
-      "type": "textarea",
-      "id": "green_deduction_2_description",
-      "label": "Beskrivning för alternativ 2",
-      "default": "Få 48,5% rabatt (max 100 000 kr) på totalpriset med grönt avdrag."
+      "content": "Visas endast när installation är vald. Alternativen visas automatiskt när kunden väljer installation. Om installation avmarkeras döljs alternativen. Texterna är fasta och kan inte ändras."
     }
   ],
   "blocks": [
