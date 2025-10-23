@@ -74,8 +74,8 @@
         "specification_GpzCVJ": {
           "type": "specification",
           "settings": {
-            "label": "Dimension",
-            "value": "B 695 * D 170 * H 1700mm"
+            "label": "Dimension (per modul)",
+            "value": "B 695 * D 170 * H 695mm"
           }
         },
         "specification_pQFPk4": {
