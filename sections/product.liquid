@@ -1,19 +1,17 @@
-{% liquid
-  assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = 'section-' | append: section.type
-%}
-
-<section
-  id="{{ section_id }}"
-  class="{{ section_class }} "
->
-  <div class="layout pt-[100px] md:pt-[150px]" style="overflow: visible;">
+<section class="section-product">
+  <div class="layout pt-[100px] md:pt-[150px]">
     <div class="headline1 pb-[60px] text-[20px] font-[400]">
       {{ product.title }}
     </div>
-    <div class="product-container flex flex-col gap-[30px] md:flex-row md:items-start md:gap-[50px]">
+    <div
+      class="product-container flex flex-col gap-[30px] md:flex-row md:items-start md:gap-[50px]"
+      style="overflow: visible !important;"
+    >
       <!-- Product Images -->
-      <div class="product-images-sticky w-full space-y-4 md:h-fit md:max-h-[calc(100vh-180px)] md:w-[450px] md:flex-shrink-0">
+      <div
+        class="product-images-sticky w-full space-y-4 md:h-fit md:max-h-[calc(100vh-180px)] md:w-[450px] md:flex-shrink-0"
+        style="position: sticky; top: 150px; align-self: flex-start;"
+      >
         <div class="flex rounded-[15px] bg-[#F6F6F6] px-[20px] py-[20px] md:px-[90px] md:py-[40px]">
           {% if product.featured_media %}
             <div
@@ -913,21 +911,51 @@
 
 {% stylesheet %}
   /* Sticky product images */
+  .section-product {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  .section-product .layout {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  .section-product .product-container {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  /* Reset sticky on mobile */
   .product-images-sticky {
-    position: static;
+    position: static !important;
+    top: auto !important;
   }
 
   @media (min-width: 768px) {
-    .section-product .layout {
-      position: relative;
-      overflow: visible !important;
+    .section-product {
+      min-height: 100vh;
     }
 
     .product-images-sticky {
+      position: -webkit-sticky !important;
       position: sticky !important;
       top: 150px !important;
       align-self: flex-start !important;
-      z-index: 10;
+      z-index: 10 !important;
+      will-change: transform;
+    }
+
+    .product-details {
+      min-height: 120vh;
+    }
+  }
+
+  /* Force override any conflicting styles */
+  @media (min-width: 768px) {
+    html,
+    body {
+      overflow-x: clip !important;
     }
   }
 
