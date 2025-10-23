@@ -157,51 +157,6 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_knappar_mcyj4E": {
-      "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_AtpMEY": {
-          "type": "button",
-          "settings": {
-            "text": "Ökat fastighetsvärde",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_WgjNzT": {
-          "type": "button",
-          "settings": {
-            "text": "Installation",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_jFdWGa": {
-          "type": "button",
-          "settings": {
-            "text": "Garanti",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_AtpMEY",
-        "button_WgjNzT",
-        "button_jFdWGa"
-      ],
-      "name": "Bild och text med knappar",
-      "settings": {
-        "title": "Optimerad drift och styrning",
-        "text": "<p>Våra system analyserar produktion och förbrukning i realtid. Det ger full kontroll över energiflödet och maximalt utbyte av investeringen.<br/><br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/H5.jpg",
-        "image_position": "left",
-        "image_button_text": "Gå vidare",
-        "image_button_link": "",
-        "custom_id": ""
-      }
-    },
     "bild_och_text_knappar_yrCiJk": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -241,7 +196,7 @@
         "text": "<p>Vi är experter på kommersiella energilösningar, med oss kan får ni en långsiktig partner som tar hand om Vi ansvarar för projektering, tillstånd, installation och service. Ni får en komplett lösning, anpassad för just er verksamhet.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/DJI_20250924122335_0025_V.jpg",
-        "image_position": "right",
+        "image_position": "left",
         "image_button_text": "Gå vidare",
         "image_button_link": "",
         "custom_id": ""
@@ -515,7 +470,6 @@
     "bild_och_text_knappar_TQdd96",
     "bild_och_text_knappar_iMEHAT",
     "bild_och_text_knappar_nPrVg7",
-    "bild_och_text_knappar_mcyj4E",
     "bild_och_text_knappar_yrCiJk",
     "faq_produkt_WAWGp6",
     "bild_och_text_knappar_UM7UeR",
