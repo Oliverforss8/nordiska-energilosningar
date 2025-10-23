@@ -938,6 +938,10 @@
   border-radius: 9999px
 }
 
+.\!rounded-full {
+  border-radius: 9999px !important
+}
+
 .rounded-t-\[25px\] {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px
@@ -1640,6 +1644,11 @@
   color: rgb(255 255 255 / var(--tw-text-opacity, 1))
 }
 
+.\!text-\[\#171717\] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(23 23 23 / var(--tw-text-opacity, 1)) !important
+}
+
 .underline {
   text-decoration-line: underline
 }
@@ -2000,6 +2009,22 @@
     height: fit-content
   }
 
+  .md\:h-\[32px\] {
+    height: 32px
+  }
+
+  .md\:\!h-\[32px\] {
+    height: 32px !important
+  }
+
+  .md\:\!h-\[25px\] {
+    height: 25px !important
+  }
+
+  .md\:\!h-\[20px\] {
+    height: 20px !important
+  }
+
   .md\:max-h-\[calc\(100vh-180px\)\] {
     max-height: calc(100vh - 180px)
   }
@@ -2038,6 +2063,22 @@
 
   .md\:w-auto {
     width: auto
+  }
+
+  .md\:w-\[35px\] {
+    width: 35px
+  }
+
+  .md\:\!w-\[35px\] {
+    width: 35px !important
+  }
+
+  .md\:\!w-\[25px\] {
+    width: 25px !important
+  }
+
+  .md\:\!w-\[20px\] {
+    width: 20px !important
   }
 
   .md\:min-w-\[calc\(50\%-15px\)\] {

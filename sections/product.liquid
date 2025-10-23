@@ -424,7 +424,7 @@
                       id="green-deduction-1"
                       name="green-deduction"
                       class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                      data-discount-code="AVDRAG1"
+                      data-discount-code="GRON1"
                     >
                     <label for="green-deduction-1" class="flex-1 cursor-pointer">
                       <div class="body1 text-[16px] font-medium md:text-[18px]">
@@ -434,7 +434,7 @@
                         50 % skattereduktion, upp till 50 000 kr
                       </div>
                       <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
-                        Rabattkod: AVDRAG1
+                        Rabattkod: GRON1
                       </div>
                     </label>
                   </div>
@@ -446,7 +446,7 @@
                       id="green-deduction-2"
                       name="green-deduction"
                       class="green-deduction-radio mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                      data-discount-code="AVDRAG2"
+                      data-discount-code="GRON2"
                     >
                     <label for="green-deduction-2" class="flex-1 cursor-pointer">
                       <div class="body1 text-[16px] font-medium md:text-[18px]">
@@ -456,7 +456,7 @@
                         50 % skattereduktion, upp till 100 000 kr
                       </div>
                       <div class="body1 mt-[5px] text-[12px] text-[#171717]/50 md:text-[13px]">
-                        Rabattkod: AVDRAG2
+                        Rabattkod: GRON2
                       </div>
                     </label>
                   </div>
@@ -541,15 +541,17 @@
                     >
                   </div>
                 </div>
+                {% comment %}
+                  <button
+                    class="knappetikett buy-now-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717] md:w-auto"
+                    style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
+                    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                  >
+                    Köp nu
+                  </button>
+                {% endcomment %}
                 <button
-                  class="knappetikett buy-now-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717] md:w-auto"
-                  style="background: linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%);"
-                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-                >
-                  Köp nu
-                </button>
-                <button
-                  class="headline1 add-to-cart-btn flex min-h-[48px] w-full flex-row items-center justify-center gap-[10px] rounded-full bg-transparent px-[20px] py-[15px] text-[18px] md:w-auto md:text-[20px]"
+                  class="headline1 add-to-cart-btn-bottom flex min-h-[48px] w-full flex-row items-center justify-center gap-[10px] !rounded-full bg-transparent px-[20px] py-[15px] text-[18px] !text-[#171717] md:w-auto md:!text-[20px]"
                   style="border: 1px solid #171717 !important;"
                   data-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 >
@@ -560,7 +562,7 @@
                     height="18"
                     viewBox="0 0 25 22"
                     fill="none"
-                    class="md:h-[22px] md:w-[25px]"
+                    class="md:!h-[20px] md:!w-[20px]"
                   >
                     <path d="M11.4617 6.55556H21.0268C21.7143 6.55556 22.0575 6.55556 22.3094 6.66667C23.4225 7.16333 22.9253 8.41111 22.7383 9.30889C22.7209 9.39 22.685 9.46588 22.6334 9.5305C22.5819 9.59512 22.5161 9.64669 22.4413 9.68111C22.0849 9.85113 21.7802 10.1148 21.5592 10.4444M7.06199 6.55556H2.99662C2.30915 6.55556 1.96597 6.55556 1.71409 6.66667C0.600948 7.16333 1.09812 8.41111 1.28511 9.30889C1.30331 9.38967 1.33953 9.46519 1.39099 9.52969C1.44246 9.59419 1.50782 9.64598 1.58209 9.68111C1.89053 9.82463 2.16039 10.0408 2.36901 10.3115C2.57763 10.5821 2.71892 10.8994 2.78103 11.2367L3.43329 14.9867C3.71928 16.6367 3.81827 18.9933 5.24819 20.1556C6.29863 21 7.81105 21 10.837 21H13.6616M16.4115 16C16.9515 15.4378 18.3914 13.2222 19.1613 13.2222M19.1613 13.2222C19.9313 13.2222 21.3711 15.4378 21.9112 16M19.1613 13.2222V21M5.96205 9.88889L9.81184 1M15.3115 1L18.0614 6.55556" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -884,7 +886,7 @@
         </div>
         <div class="flex-shrink-0">
           <button
-            class="headline1 add-to-cart-btn-bottom flex min-h-[48px] flex-row items-center justify-center gap-[10px] rounded-full bg-transparent px-[20px] py-[15px] text-[16px] text-[#171717] transition-colors duration-200 hover:bg-gray-50 md:text-[18px]"
+            class="headline1 add-to-cart-btn-bottom flex min-h-[48px] flex-row items-center justify-center gap-[10px] rounded-full bg-transparent px-[20px] py-[15px] text-[16px] !text-[#171717] transition-colors duration-200 hover:bg-gray-50 md:text-[18px]"
             style="border: 1px solid #171717 !important; color: #171717 !important;"
             data-variant-id="{{ product.selected_or_first_available_variant.id }}"
           >
