@@ -274,10 +274,10 @@
         "faq_item_CRzVJH": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Garanti",
+            "question": "Varför ska jag installera ett batteri tillsammans med solceller?",
+            "button_text": "Batteri",
             "description": "",
-            "answer": "<p>Våra batterier har en garantitid på 10 år, och vi lämnar en installationsgaranti på 5 år. </p>"
+            "answer": "<p>Ett batteri låter dig lagra överskottsel från solcellerna istället för att sälja den billigt till elnätet. Du kan sedan använda den lagrade elen när solen inte skiner – vilket minskar din inköpta el och sänker dina kostnader.</p>"
           }
         },
         "faq_item_GyBRnm": {
