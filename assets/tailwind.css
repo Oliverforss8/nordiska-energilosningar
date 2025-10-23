@@ -2333,6 +2333,10 @@
     padding-top: 60px
   }
 
+  .md\:pt-\[175px\] {
+    padding-top: 175px
+  }
+
   .md\:text-left {
     text-align: left
   }
