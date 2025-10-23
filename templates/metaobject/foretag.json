@@ -18,7 +18,7 @@
         "overlay_opacity": 20,
         "heading": "Energieffektiva helhetslösningar för en hållbar framtid",
         "subheading": "Vi hjälper företag, bostadsrättsföreningar och lantbruk att ta kontroll över sin energianvändning med solenergi, batterier och laddlösningar.",
-        "button_text": "Fri offert",
+        "button_text": "Kontakta oss",
         "button_url": "shopify://pages/offert-forfragan"
       }
     },
@@ -32,6 +32,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/DJI_20250603133350_0023_V.jpg",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
@@ -48,6 +49,7 @@
         "image": "shopify://shop_images/001_1_.1694.png",
         "video": "shopify://files/videos/DJI_20250317155402_0006_S.MP4",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
@@ -63,6 +65,7 @@
         "image": "shopify://shop_images/DJI_20250924122335_0025_V.jpg",
         "video": "shopify://files/videos/DJI_20250924122010_0013_S.MP4",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -99,6 +102,7 @@
         "image": "shopify://shop_images/test_for_hero_2.png",
         "video": "shopify://files/videos/IMG_1831.MOV",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "Våra lösningar",
         "image_button_link": "shopify://pages/var-losning",
         "custom_id": ""
