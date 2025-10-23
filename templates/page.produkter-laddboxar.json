@@ -84,7 +84,7 @@
           "settings": {
             "product": "zaptec-2",
             "custom_headline": "",
-            "custom_description": "",
+            "custom_description": "Den nya versionen av Zaptec Go är här, med V2G och Mid mätare",
             "learn_more_text": "Köp nu",
             "custom_url": ""
           }
@@ -94,7 +94,7 @@
           "settings": {
             "product": "zaptec-pro",
             "custom_headline": "",
-            "custom_description": "",
+            "custom_description": "Zaptec Pro MID är den smarta laddstationen framtagen för företag, bostadsrättsföreningar, samfälligheter och publika parkeringsplatser.",
             "learn_more_text": "Köp nu",
             "custom_url": ""
           }
@@ -104,7 +104,7 @@
           "settings": {
             "product": "charge-amps-luna",
             "custom_headline": "",
-            "custom_description": "",
+            "custom_description": "Charge Amps Luna – Smart, hållbar och redo för framtiden. förberedd för V2G",
             "learn_more_text": "Köp nu",
             "custom_url": ""
           }
@@ -220,6 +220,46 @@
         "custom_id": ""
       }
     },
+    "review_BjVqAJ": {
+      "type": "review",
+      "blocks": {
+        "review_ykVaCR": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_r4WGx8": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_CfkYV6": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_ykVaCR",
+        "review_r4WGx8",
+        "review_CfkYV6"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
+      }
+    },
     "kontakt_form_MEdRdB": {
       "type": "kontakt-form",
       "blocks": {
@@ -307,46 +347,6 @@
         "heading": "Ta kontakt med oss",
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
-      }
-    },
-    "review_BjVqAJ": {
-      "type": "review",
-      "blocks": {
-        "review_ykVaCR": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
-            "customer_name": "Marie"
-          }
-        },
-        "review_r4WGx8": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
-            "customer_name": "Ruben"
-          }
-        },
-        "review_CfkYV6": {
-          "type": "review",
-          "settings": {
-            "stars": 5,
-            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
-            "customer_name": "Stefan"
-          }
-        }
-      },
-      "block_order": [
-        "review_ykVaCR",
-        "review_r4WGx8",
-        "review_CfkYV6"
-      ],
-      "name": "Reviews",
-      "settings": {
-        "heading": "Vad våra kunder säger om oss",
-        "button_text": "Läs alla recensioner",
-        "button_url": ""
       }
     }
   },
