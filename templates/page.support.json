@@ -104,6 +104,15 @@
             "answer": "<p><br/>Nej. Offert och rådgivning är helt kostnadsfri och utan förpliktelser.<br/><br/></p>"
           }
         },
+        "faq_item_tL3mMM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur vet jag om mitt tak passar för solceller?",
+            "button_text": "Solceller",
+            "description": "",
+            "answer": "<p><br/>Vi gör en kostnadsfri takanalys baserad på läge, lutning, väderstreck och eventuella skuggor. De flesta tak lämpar sig för solceller.<br/><br/><br/></p>"
+          }
+        },
         "faq_item_k8fVE6": {
           "type": "faq_item",
           "settings": {
@@ -118,6 +127,7 @@
         "faq_item_4F9qN7",
         "faq_item_kQBgKF",
         "faq_item_pfhgyB",
+        "faq_item_tL3mMM",
         "faq_item_k8fVE6"
       ],
       "name": "FAQ produkter",
