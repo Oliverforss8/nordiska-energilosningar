@@ -174,7 +174,7 @@
         "stack_info": "Stack",
         "description": "Dyness",
         "button_text": "Produktdatablad",
-        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250915/DynessTowerProDatasheetEN20250723.pdf",
+        "button_link": "https://wwwchargeampscom.cdn.triggerfish.cloud/uploads/2025/09/ChargeAmps_product-sheet_luna_SE_240701.pdf",
         "custom_id": ""
       }
     },
@@ -253,15 +253,6 @@
         "padding_bottom": 40
       }
     },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
-      "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
-      }
-    },
     "review_D3XQN9": {
       "type": "review",
       "blocks": {
@@ -300,6 +291,15 @@
         "heading": "Vad våra kunder säger om oss",
         "button_text": "Läs alla recensioner",
         "button_url": ""
+      }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
       }
     }
   },
