@@ -281,6 +281,14 @@
   z-index: 9999
 }
 
+.z-\[99\] {
+  z-index: 99
+}
+
+.z-\[9\] {
+  z-index: 9
+}
+
 .order-1 {
   order: 1
 }

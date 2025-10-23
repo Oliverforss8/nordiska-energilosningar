@@ -4,15 +4,15 @@
 
 <section
   id="{{ section_id }}"
-  class="relative z-[999999] mt-[-20px]"
+  class="relative z-[99] mt-[-20px]"
   style="background-color: {{ section.settings.background_color }};"
 >
-  <div class="layout z-[999999] md:w-[80%]">
-    <div class="z-[999999] flex flex-col gap-[15px] md:flex-row md:justify-between md:gap-[30px]">
+  <div class="layout z-[99] md:w-[80%]">
+    <div class="z-[9] flex flex-col gap-[15px] md:flex-row md:justify-between md:gap-[30px]">
       {% for block in section.blocks %}
         <a
           href="{{ block.settings.link }}"
-          class="relative z-[999999] flex w-full items-center justify-start gap-[20px] rounded-[10px] p-[20px] md:w-auto md:justify-start md:gap-[25px] md:rounded-none md:p-0"
+          class="relative z-[99] flex w-full items-center justify-start gap-[20px] rounded-[10px] p-[20px] md:w-auto md:justify-start md:gap-[25px] md:rounded-none md:p-0"
           style="background: #F3F1E8; border: 1px solid rgba(23, 23, 23, 0.05);"
           {{ block.shopify_attributes }}
         >
