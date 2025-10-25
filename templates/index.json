@@ -179,6 +179,7 @@
         "step_Mi7mMg": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/Group.svg",
             "title": "Steg 1",
             "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
           }
@@ -186,6 +187,7 @@
         "step_zLaBKE": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/book.svg",
             "title": "Steg 2",
             "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
           }
@@ -193,6 +195,7 @@
         "step_zB67Cf": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/Vector-1.svg",
             "title": "Steg 3",
             "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
           }
@@ -200,6 +203,7 @@
         "step_reWzkk": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/Vector.svg",
             "title": "Steg 4",
             "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
           }
