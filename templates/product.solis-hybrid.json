@@ -15,11 +15,7 @@
         "show_installation": false,
         "installation_product": "",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": ""
       }
     },
     "tekniska_specifikationer_AdpmjP": {
@@ -95,9 +91,9 @@
       "name": "Tekniska specifikationer",
       "settings": {
         "title": "Tekniska specifikationer",
-        "image_1": "shopify://shop_images/1-444.png",
-        "image_2": "shopify://shop_images/2-707.png",
-        "image_3": "shopify://shop_images/3-125.png",
+        "image_1": "shopify://shop_images/ZvYrNaANUJwyNCDBRFbmyf2PJWsNgPW8sXIybPB8_c186a5e7-bfe3-4fad-888c-317585d13823.png",
+        "image_2": "shopify://shop_images/gQ5YshBBBGGFzjsJwY9QfmfqCETbb6X1CDA1LzXt_61605f05-4361-4853-9c92-7e9b8ec158a2.png",
+        "image_3": "shopify://shop_images/1735006126909_85513533-32b7-4a91-b1cc-e510cd2b86a6.png",
         "product_name": "Produktnamn",
         "stack_info": "Stack",
         "description": "Produktbeskrivning här...",
@@ -116,6 +112,7 @@
         "media_type": "image",
         "video": "shopify://files/videos/jichajiyongsuo.mp4",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
