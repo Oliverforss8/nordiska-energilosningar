@@ -156,21 +156,21 @@
       "settings": {
         "title": "Vi hjälper dig sänka elräkningen",
         "description": "Hos Nordiska Energilösningar kan du antingen beställa batterier och laddboxar direkt online eller få en energiexpert hem till dig som tar fram den bästa lösningen för att sänka din elförbrukning och öka din besparing.",
-        "card_1_image": "shopify://shop_images/ChatGPT_Image_21_okt._2025_20_15_32_ac3d8439-9849-459c-99a3-8bde5446dcb3.png",
+        "card_1_image": "shopify://shop_images/DJI_20250612165126_0006_V.jpg",
         "card_1_button_text": "Boka möte direkt",
         "card_1_button_link": "shopify://pages/offert-forfragan",
         "card_1_overlay_opacity": 0,
-        "card_2_image": "shopify://shop_images/99.jpg",
+        "card_2_image": "shopify://shop_images/banner.webp",
         "card_2_button_text": "Köp direkt i butik",
         "card_2_button_link": "shopify://pages/vara-produkter",
-        "card_2_overlay_opacity": 0,
+        "card_2_overlay_opacity": 20,
         "card_3_button_text": "Upptäck",
         "card_3_button_link": "",
         "card_3_overlay_opacity": 0,
         "card_4_button_text": "Kom igång",
         "card_4_button_link": "",
         "card_4_overlay_opacity": 0,
-        "bottom_description": "Smartare energi, lägre kostnader och full flexibilitet – till markandens bästa priser."
+        "bottom_description": ""
       }
     },
     "hur_7UXeyd": {
