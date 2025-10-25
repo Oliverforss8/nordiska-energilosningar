@@ -118,46 +118,6 @@
         "custom_id": ""
       }
     },
-    "banner_bild_gnz8mP": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/1C1.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Snabb laddning, smart besparing",
-        "description": "Med C-värde 1 kan STACK100 ladda fullt och leverera energi på bara en timme. Ladda när elen är billig och använd den när priserna är höga – sänk kostnaderna och stärk er energifrihet.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
-    "banner_bild_89kigT": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/miehuodiaohei.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "Snabbt. Säkert. Självklart.",
-        "description": "Varje modul är utrustad med en avancerad aerosolsbrandsläckare som reagerar blixtsnabbt vid hög temperatur. Inom 5 sekunder aktiveras skyddet, minimerar brandrisker och skapar en säker miljö.",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -211,14 +171,28 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "bild_och_text_PDELnK": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "image",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
     }
   },
   "order": [
     "main",
     "tekniska_specifikationer_AdpmjP",
     "bild_och_text_knappar_LkcadR",
-    "banner_bild_gnz8mP",
-    "banner_bild_89kigT",
+    "bild_och_text_PDELnK",
     "faq_produkt",
     "relaterade_produkter"
   ]
