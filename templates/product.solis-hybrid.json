@@ -118,6 +118,22 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_PDELnK": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#f7f7f7",
+        "title": "AI-styrning som optimerar anläggningen automatiskt",
+        "text": "<p><br/>Solis AI-styrning optimerar din solanläggning automatiskt genom att analysera produktion, förbrukning och batterilagring i realtid. Systemet lär sig dina energimönster, maximerar egenanvändning av solenergi och minimerar kostnader genom intelligent styrning – helt automatiskt.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/IMG_1688_50c1417e-1686-41ba-8287-ec6f5cc08a6a.jpg",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "faq_produkt": {
       "type": "faq-produkt",
       "blocks": {
@@ -169,21 +185,6 @@
         "title": "Relaterade produkter",
         "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_PDELnK": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Titel",
-        "text": "<p>Text</p>",
-        "media_type": "image",
-        "image_position": "right",
-        "overlay_opacity": 0,
-        "image_button_text": "",
-        "image_button_link": "",
         "custom_id": ""
       }
     }
