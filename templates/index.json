@@ -187,21 +187,21 @@
           "type": "step",
           "settings": {
             "title": "Steg 2",
-            "description": "<p>Beskrivande text för steget.</p>"
+            "description": "<p><br/>Du får en tydlig offert eller orderbekräftelse med pris, plan och vad som ingår – anpassad efter ditt hem.<br/><br/></p>"
           }
         },
         "step_zB67Cf": {
           "type": "step",
           "settings": {
             "title": "Steg 3",
-            "description": "<p><br/>Vi beställer material och säkerställer att allt är redo inför installation. Du hålls uppdaterad under hela processen, oavsett om du gjort ditt köp online eller via personlig rådgivning.<br/><br/></p>"
+            "description": "<p>Material beställs och projektet förbereds. Du får uppdateringar så att du vet när installationen sker.<br/><br/></p>"
           }
         },
         "step_reWzkk": {
           "type": "step",
           "settings": {
             "title": "Steg 4",
-            "description": "<p>Beskrivande text för steget.</p>"
+            "description": "<p><br/>Certifierade installatörer installerar och driftsätter utrustningen. Allt testas och är klart att användas direkt.<br/><br/></p>"
           }
         }
       },
@@ -214,10 +214,10 @@
       "name": "How it works",
       "settings": {
         "heading": "Så går det till",
-        "description": "<p>En smidig helhetsprocess från beställning till färdig installation – oavsett om du väljer solceller, energilagring eller elbilsladdning.</p>",
-        "primary_button_text": "Våra energilösningar",
+        "description": "<p><br/>En komplett och trygg process från beställning till driftsatt anläggning, oavsett om du väljer solceller, energilagring eller laddbox – utifrån ditt hem och ditt behov.<br/><br/></p>",
+        "primary_button_text": "",
         "primary_button_url": "",
-        "secondary_button_text": "Våra energilösningar",
+        "secondary_button_text": "",
         "secondary_button_url": ""
       }
     },
