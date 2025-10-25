@@ -179,29 +179,29 @@
         "step_Mi7mMg": {
           "type": "step",
           "settings": {
-            "title": "Behov och rådgivning",
-            "description": "<p><br/>Du beställer online eller kontaktar oss för rådgivning. Vi tar reda på dina behov och vilken lösning som passar bäst.<br/><br/></p>"
+            "title": "Steg 1",
+            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
           }
         },
         "step_zLaBKE": {
           "type": "step",
           "settings": {
             "title": "Steg 2",
-            "description": "<p><br/>Du får en tydlig offert eller orderbekräftelse med pris, plan och vad som ingår – anpassad efter ditt hem.<br/><br/></p>"
+            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
           }
         },
         "step_zB67Cf": {
           "type": "step",
           "settings": {
             "title": "Steg 3",
-            "description": "<p>Material beställs och projektet förbereds. Du får uppdateringar så att du vet när installationen sker.<br/><br/></p>"
+            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
           }
         },
         "step_reWzkk": {
           "type": "step",
           "settings": {
             "title": "Steg 4",
-            "description": "<p><br/>Certifierade installatörer installerar och driftsätter utrustningen. Allt testas och är klart att användas direkt.<br/><br/></p>"
+            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
           }
         }
       },
@@ -214,7 +214,7 @@
       "name": "How it works",
       "settings": {
         "heading": "Så går det till – en trygg process från beställning till driftsättning",
-        "description": "",
+        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
         "primary_button_text": "",
         "primary_button_url": "",
         "secondary_button_text": "",
