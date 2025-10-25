@@ -154,8 +154,8 @@
       "type": "grid-omraden",
       "name": "Grid areas",
       "settings": {
-        "title": "Effektiva energilösningar för framtidens fastigheter",
-        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "title": "Vi hjälper dig minska dina elkostnader",
+        "description": "Hos oss står varje kund i centrum och v",
         "card_1_image": "shopify://shop_images/ChatGPT_Image_21_okt._2025_20_15_32_ac3d8439-9849-459c-99a3-8bde5446dcb3.png",
         "card_1_button_text": "Läs mer",
         "card_1_button_link": "",
@@ -170,53 +170,55 @@
         "card_4_button_text": "Kom igång",
         "card_4_button_link": "",
         "card_4_overlay_opacity": 0,
-        "bottom_description": ""
+        "bottom_description": "Smartare energi, lägre kostnader och full flexibilitet –  till markandens bästa priser."
       }
     },
-    "bild_och_text_knappar_3JNi3L": {
-      "type": "bild-och-text-knappar",
+    "hur_7UXeyd": {
+      "type": "hur",
       "blocks": {
-        "button_dHfKrg": {
-          "type": "button",
+        "step_Mi7mMg": {
+          "type": "step",
           "settings": {
-            "text": "Bli din egen elproducent",
-            "url": "",
-            "show_arrow": false
+            "title": "Steg 1",
+            "description": "<p>Beskrivande text för steget.</p>"
           }
         },
-        "button_9Lrptf": {
-          "type": "button",
+        "step_zLaBKE": {
+          "type": "step",
           "settings": {
-            "text": "Lagra energin för när du behöver den",
-            "url": "",
-            "show_arrow": false
+            "title": "Steg 2",
+            "description": "<p>Beskrivande text för steget.</p>"
           }
         },
-        "button_rtKQqQ": {
-          "type": "button",
+        "step_zB67Cf": {
+          "type": "step",
           "settings": {
-            "text": "Optimera ditt hem med smart styrning",
-            "url": "",
-            "show_arrow": false
+            "title": "Steg 3",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        },
+        "step_reWzkk": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 4",
+            "description": "<p>Beskrivande text för steget.</p>"
           }
         }
       },
       "block_order": [
-        "button_dHfKrg",
-        "button_9Lrptf",
-        "button_rtKQqQ"
+        "step_Mi7mMg",
+        "step_zLaBKE",
+        "step_zB67Cf",
+        "step_reWzkk"
       ],
-      "name": "Bild och text med knappar",
+      "name": "How it works",
       "settings": {
-        "title": "Ett smartare sätt att styra energi",
-        "text": "<p>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/20250623_2106_Swedish_Villa_at_Sunset_simple_compose_01jyf2v5vyebrvnkxbjt9nk2br_928ed017-c12a-4fbc-a8cb-f63d2ce832b4.png",
-        "image_position": "right",
-        "overlay_opacity": 30,
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
+        "heading": "Så här fungerar det",
+        "description": "<p>Lägg till en kort beskrivning här.</p>",
+        "primary_button_text": "Våra energilösningar",
+        "primary_button_url": "",
+        "secondary_button_text": "Våra energilösningar",
+        "secondary_button_url": ""
       }
     },
     "slider_sektion_PkT3FL": {
@@ -273,6 +275,52 @@
       "name": "Produktslider",
       "settings": {
         "title": "Våra utvalda batterier",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_3JNi3L": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_dHfKrg": {
+          "type": "button",
+          "settings": {
+            "text": "Bli din egen elproducent",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_9Lrptf": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra energin för när du behöver den",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_rtKQqQ": {
+          "type": "button",
+          "settings": {
+            "text": "Optimera ditt hem med smart styrning",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_dHfKrg",
+        "button_9Lrptf",
+        "button_rtKQqQ"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Ett smartare sätt att styra energi",
+        "text": "<p>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/20250623_2106_Swedish_Villa_at_Sunset_simple_compose_01jyf2v5vyebrvnkxbjt9nk2br_928ed017-c12a-4fbc-a8cb-f63d2ce832b4.png",
+        "image_position": "right",
+        "overlay_opacity": 30,
+        "image_button_text": "",
+        "image_button_link": "",
         "custom_id": ""
       }
     },
@@ -814,54 +862,6 @@
         "heading": "Vad våra kunder säger om oss",
         "button_text": "Läs alla recensioner",
         "button_url": ""
-      }
-    },
-    "hur_7UXeyd": {
-      "type": "hur",
-      "blocks": {
-        "step_Mi7mMg": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 1",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        },
-        "step_zLaBKE": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 2",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        },
-        "step_zB67Cf": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 3",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        },
-        "step_reWzkk": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 4",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_Mi7mMg",
-        "step_zLaBKE",
-        "step_zB67Cf",
-        "step_reWzkk"
-      ],
-      "name": "How it works",
-      "settings": {
-        "heading": "Så här fungerar det",
-        "description": "<p>Lägg till en kort beskrivning här.</p>",
-        "primary_button_text": "Våra energilösningar",
-        "primary_button_url": "",
-        "secondary_button_text": "Våra energilösningar",
-        "secondary_button_url": ""
       }
     }
   },
