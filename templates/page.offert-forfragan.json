@@ -123,7 +123,7 @@
       ],
       "name": "Offertförfrågan",
       "settings": {
-        "title": "Begär offert",
+        "title": "Kontakta oss",
         "description": "<p>Fyll i formuläret nedan så återkommer vi till dig med en skräddarsydd offert.</p>",
         "card_1_image": "shopify://shop_images/image_15.png",
         "card_1_button_text": "",
