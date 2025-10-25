@@ -91,65 +91,6 @@
         "custom_id": ""
       }
     },
-    "text_sektion_MyNT3J": {
-      "type": "text-sektion",
-      "name": "Text sektion",
-      "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
-        "button_text": "Knapp text",
-        "button_link": "",
-        "custom_id": ""
-      }
-    },
-    "hur_Qbj7tE": {
-      "type": "hur",
-      "blocks": {
-        "step_jaYdzN": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 1",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        },
-        "step_xKxzth": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 2",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        },
-        "step_FQmJgg": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 3",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        },
-        "step_kPQFGa": {
-          "type": "step",
-          "settings": {
-            "title": "Steg 4",
-            "description": "<p>Beskrivande text för steget.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_jaYdzN",
-        "step_xKxzth",
-        "step_FQmJgg",
-        "step_kPQFGa"
-      ],
-      "name": "How it works",
-      "settings": {
-        "heading": "Så här fungerar det",
-        "description": "<p>Lägg till en kort beskrivning här.</p>",
-        "primary_button_text": "Våra energilösningar",
-        "primary_button_url": "",
-        "secondary_button_text": "Våra energilösningar",
-        "secondary_button_url": ""
-      }
-    },
     "ikon_lankar_ki6Ryk": {
       "type": "ikon-lankar",
       "blocks": {
@@ -857,8 +798,6 @@
     "hero_HUEAy6",
     "hero_slider_D8U4yr",
     "ikon_lankar_x8tm4P",
-    "text_sektion_MyNT3J",
-    "hur_Qbj7tE",
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
     "bild_och_text_knappar_3JNi3L",
