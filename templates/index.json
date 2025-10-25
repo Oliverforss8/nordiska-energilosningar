@@ -179,7 +179,7 @@
         "step_Mi7mMg": {
           "type": "step",
           "settings": {
-            "title": "Steg 1 - Behov och rådgivning",
+            "title": "Behov och rådgivning",
             "description": "<p><br/>Du beställer online eller kontaktar oss för rådgivning. Vi tar reda på dina behov och vilken lösning som passar bäst.<br/><br/></p>"
           }
         },
@@ -213,8 +213,8 @@
       ],
       "name": "How it works",
       "settings": {
-        "heading": "Så går det till",
-        "description": "<p><br/>En komplett och trygg process från beställning till driftsatt anläggning, oavsett om du väljer solceller, energilagring eller laddbox – utifrån ditt hem och ditt behov.<br/><br/></p>",
+        "heading": "Så går det till – en trygg process från beställning till driftsättning",
+        "description": "",
         "primary_button_text": "",
         "primary_button_url": "",
         "secondary_button_text": "",
