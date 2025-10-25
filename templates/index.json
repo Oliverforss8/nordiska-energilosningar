@@ -150,6 +150,29 @@
         "custom_id": ""
       }
     },
+    "grid_omraden_g48U3c": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Effektiva energilösningar för framtidens fastigheter",
+        "description": "Med rätt kombination av solceller, energilagring och laddboxar kan både företag, lantbruk, bostadsrättsföreningar och privatpersoner ta kontroll över sin energianvändning.",
+        "card_1_image": "shopify://shop_images/ChatGPT_Image_21_okt._2025_20_15_32_ac3d8439-9849-459c-99a3-8bde5446dcb3.png",
+        "card_1_button_text": "Läs mer",
+        "card_1_button_link": "",
+        "card_1_overlay_opacity": 0,
+        "card_2_image": "shopify://shop_images/99.jpg",
+        "card_2_button_text": "Utforska",
+        "card_2_button_link": "",
+        "card_2_overlay_opacity": 0,
+        "card_3_button_text": "Upptäck",
+        "card_3_button_link": "",
+        "card_3_overlay_opacity": 0,
+        "card_4_button_text": "Kom igång",
+        "card_4_button_link": "",
+        "card_4_overlay_opacity": 0,
+        "bottom_description": ""
+      }
+    },
     "bild_och_text_knappar_3JNi3L": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -500,7 +523,7 @@
         "layout_direction": "banner_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva_detail_2.png",
-        "overlay_opacity": 0,
+        "overlay_opacity": 30,
         "header_button_text": "Upptäck Fronius",
         "header_button_url": "",
         "heading": "Tysk kvalité med europeiska servrar",
@@ -792,6 +815,54 @@
         "button_text": "Läs alla recensioner",
         "button_url": ""
       }
+    },
+    "hur_7UXeyd": {
+      "type": "hur",
+      "blocks": {
+        "step_Mi7mMg": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 1",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        },
+        "step_zLaBKE": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 2",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        },
+        "step_zB67Cf": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 3",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        },
+        "step_reWzkk": {
+          "type": "step",
+          "settings": {
+            "title": "Steg 4",
+            "description": "<p>Beskrivande text för steget.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_Mi7mMg",
+        "step_zLaBKE",
+        "step_zB67Cf",
+        "step_reWzkk"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så här fungerar det",
+        "description": "<p>Lägg till en kort beskrivning här.</p>",
+        "primary_button_text": "Våra energilösningar",
+        "primary_button_url": "",
+        "secondary_button_text": "Våra energilösningar",
+        "secondary_button_url": ""
+      }
     }
   },
   "order": [
@@ -800,8 +871,10 @@
     "ikon_lankar_x8tm4P",
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
-    "bild_och_text_knappar_3JNi3L",
+    "grid_omraden_g48U3c",
+    "hur_7UXeyd",
     "slider_sektion_PkT3FL",
+    "bild_och_text_knappar_3JNi3L",
     "bild_och_text_ydyfhV",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
