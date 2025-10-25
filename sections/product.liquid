@@ -1370,6 +1370,59 @@
 {% comment %} Load product image switcher {% endcomment %}
 <script src="{{ 'product-image-switcher.js' | asset_url }}" defer></script>
 
+{% comment %} Quote form functionality {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const serviceButtons = document.querySelectorAll('.service-option');
+    const selectedServiceInput = document.getElementById('selected_service');
+    const quoteForm = document.getElementById('quote-form');
+
+    // Handle service button clicks
+    serviceButtons.forEach((button) => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Toggle selection using data attribute
+        const isSelected = this.dataset.selected === 'true';
+
+        if (isSelected) {
+          // Deselect
+          this.dataset.selected = 'false';
+          this.style.backgroundColor = 'white';
+          this.style.borderColor = '#e5e5e5';
+        } else {
+          // Select
+          this.dataset.selected = 'true';
+          this.style.backgroundColor = '#EFD959';
+          this.style.borderColor = '#EFD959';
+        }
+
+        // Update hidden input with all selected services
+        const selectedServices = Array.from(serviceButtons)
+          .filter((btn) => btn.dataset.selected === 'true')
+          .map((btn) => btn.dataset.service)
+          .join(', ');
+
+        selectedServiceInput.value = selectedServices;
+
+        console.log('Selected services:', selectedServices); // Debug log
+      });
+    });
+
+    // Handle form submission
+    if (quoteForm) {
+      quoteForm.addEventListener('submit', function (e) {
+        // Check if at least one service is selected
+        if (!selectedServiceInput.value) {
+          e.preventDefault();
+          alert('Vänligen välj minst en tjänst (Solceller, Laddbox eller Batteri)');
+          return false;
+        }
+      });
+    }
+  });
+</script>
+
 {% schema %}
 {
   "name": "Produkt",
