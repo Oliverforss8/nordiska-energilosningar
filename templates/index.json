@@ -166,10 +166,10 @@
         "card_3_button_text": "Boka möte direkt",
         "card_3_button_link": "shopify://pages/offert-forfragan",
         "card_3_overlay_opacity": 0,
-        "card_4_image": "shopify://shop_images/ChatGPT_Image_25_okt._2025_22_58_40.png",
+        "card_4_image": "shopify://shop_images/banner.webp",
         "card_4_button_text": "Köp direkt i butik",
         "card_4_button_link": "shopify://pages/offert-forfragan",
-        "card_4_overlay_opacity": 0,
+        "card_4_overlay_opacity": 30,
         "bottom_description": ""
       }
     },
