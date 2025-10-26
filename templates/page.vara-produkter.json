@@ -35,7 +35,7 @@
         "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
         "card_1_image": "shopify://shop_images/images.webp",
         "card_1_button_text": "Solceller",
-        "card_1_button_link": "shopify://collections/solceller",
+        "card_1_button_link": "shopify://pages/vara-solceller",
         "card_1_overlay_opacity": 10,
         "card_2_image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
         "card_2_button_text": "Batterier",
