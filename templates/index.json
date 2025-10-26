@@ -173,6 +173,52 @@
         "bottom_description": ""
       }
     },
+    "bild_och_text_knappar_pLwBUx": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_L9TLni": {
+          "type": "button",
+          "settings": {
+            "text": "Bli din egen elproducent",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_LXLYc7": {
+          "type": "button",
+          "settings": {
+            "text": "Lagra energin för när du behöver den",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_zBr8P4": {
+          "type": "button",
+          "settings": {
+            "text": "Optimera ditt hem med smart styrning",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_L9TLni",
+        "button_LXLYc7",
+        "button_zBr8P4"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Batteripaket från 37 900:-",
+        "text": "<p>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Kampanj..png",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "hur_7UXeyd": {
       "type": "hur",
       "blocks": {
@@ -282,10 +328,10 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_knappar_3JNi3L": {
+    "bild_och_text_knappar_AbTQrL": {
       "type": "bild-och-text-knappar",
       "blocks": {
-        "button_dHfKrg": {
+        "button_YE7BMm": {
           "type": "button",
           "settings": {
             "text": "Bli din egen elproducent",
@@ -293,7 +339,7 @@
             "show_arrow": false
           }
         },
-        "button_9Lrptf": {
+        "button_HydT4F": {
           "type": "button",
           "settings": {
             "text": "Lagra energin för när du behöver den",
@@ -301,7 +347,7 @@
             "show_arrow": false
           }
         },
-        "button_rtKQqQ": {
+        "button_aenqFH": {
           "type": "button",
           "settings": {
             "text": "Optimera ditt hem med smart styrning",
@@ -311,9 +357,9 @@
         }
       },
       "block_order": [
-        "button_dHfKrg",
-        "button_9Lrptf",
-        "button_rtKQqQ"
+        "button_YE7BMm",
+        "button_HydT4F",
+        "button_aenqFH"
       ],
       "name": "Bild och text med knappar",
       "settings": {
@@ -876,9 +922,10 @@
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
     "grid_omraden_g48U3c",
+    "bild_och_text_knappar_pLwBUx",
     "hur_7UXeyd",
     "slider_sektion_PkT3FL",
-    "bild_och_text_knappar_3JNi3L",
+    "bild_och_text_knappar_AbTQrL",
     "bild_och_text_ydyfhV",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
