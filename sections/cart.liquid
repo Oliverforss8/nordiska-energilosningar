@@ -5,113 +5,36 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/cart
 {% endcomment %}
 
-<h1>{{ "cart.title" | t }}</h1>
+<h1>{{ 'cart.title' | t }}</h1>
 
-<form action='{{ routes.cart_url }}' method='post'>
+<form action="{{ routes.cart_url }}" method="post">
   <table>
     {% for item in cart.items %}
       <tr>
         <td>
-          {% render "image", image: item.image, url: item.url %}
+          {% render 'image', image: item.image, url: item.url %}
         </td>
         <td>
           <p>{{ item.product.title }}</p>
 
-          {% comment %}
-          Grönt teknikavdrag baserat på verkliga taggar
-          {% endcomment %}
-          {% if item.product.tags contains 'batterier' %}
-            <p style="color: #4CAF50; font-weight: bold;">
-              48,5 % grönt teknikavdrag för batterilager
-            </p>
-            <p style="color: #4CAF50;">
-              Avdrag: –{{ item.original_line_price | times: 0.485 | money }}
-            </p>
-          {% elsif item.product.tags contains 'laddboxar' %}
-            <p style="color: #4CAF50; font-weight: bold;">
-              48,5 % grönt teknikavdrag för laddbox
-            </p>
-            <p style="color: #4CAF50;">
-              Avdrag: –{{ item.original_line_price | times: 0.485 | money }}
-            </p>
-          {% endif %}
-
-          {{ "cart.remove" | t | link_to: item.url_to_remove }}
+          {{ 'cart.remove' | t | link_to: item.url_to_remove }}
         </td>
         <td>
-          <input type='text' name='updates[]' value='{{ item.quantity }}'>
-          <input type='submit' value='{{ 'cart.update' | t }}'>
+          <input type="text" name="updates[]" value="{{ item.quantity }}">
+          <input type="submit" value="{{ 'cart.update' | t }}">
         </td>
       </tr>
     {% endfor %}
   </table>
+  
 
-  <div>
-    <label for='green_deductions'>Antal gröna avdrag</label>
-    <select id='green_deductions' name='attributes[green_deductions]'>
-      {% liquid
-        assign current_deductions = cart.attributes.green_deductions | default: '1'
-      %}
-      <option value='1' {% if current_deductions == '1' %}selected{% endif %}>1</option>
-      <option value='2' {% if current_deductions == '2' %}selected{% endif %}>2</option>
-    </select>
-  </div>
-
-  {% liquid
-    assign has_installation = false
-    for item in cart.items
-      if item.product.tags contains 'installation'
-        assign has_installation = true
-      endif
-    endfor
-  %}
-  {% if has_installation %}
-    <p>Köp med grön teknik avdrag tillämpas i kassan.</p>
-  {% endif %}
-
-  {% if cart.total_discount > 0 %}
-    <div>
-      <p>Rabatter: {{ cart.total_discount | money }}</p>
-      <ul>
-        {% for discount in cart.discount_applications %}
-          <li>{{ discount.title }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
-  {% comment %} Grönt teknikavdrag – total summering {% endcomment %}
-  {% assign total_green_eligible = 0 %}
-  {% for item in cart.items %}
-    {% if item.product.tags contains 'batterier' or item.product.tags contains 'laddboxar' %}
-      {% assign total_green_eligible = total_green_eligible | plus: item.original_line_price %}
-    {% endif %}
-  {% endfor %}
-
-  {% assign deduction_percent = 0.485 %}
-  {% assign raw_deduction = total_green_eligible | times: deduction_percent %}
-
-  {% assign deduction_people = cart.attributes.green_deductions | default: '1' %}
-  {% if deduction_people == '2' %}
-    {% assign max_deduction = 10000000 %} {# 100 000 kr i cent #}
-  {% else %}
-    {% assign max_deduction = 5000000 %} {# 50 000 kr i cent #}
-  {% endif %}
-
-  {% assign final_deduction = raw_deduction %}
-  {% if raw_deduction > max_deduction %}
-    {% assign final_deduction = max_deduction %}
-  {% endif %}
-
-  <p style="margin-top: 20px; font-weight: bold; color: #4CAF50;">
-    Totalt grönt teknikavdrag: –{{ final_deduction | money }}
-  </p>
-
-  <input type='submit' name='checkout' value='{{ 'cart.checkout' | t }}'>
+  <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
 </form>
 
 {% schema %}
 {
-  "name": "Cart",
+  "name": "cart",
   "settings": []
 }
 {% endschema %}
+,
