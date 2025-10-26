@@ -1,0 +1,280 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "upsell_product_GQw9tB": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "solis-s6-eh3p10-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_DY4Qkm": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "solinteg",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "upsell_product_GQw9tB",
+        "upsell_product_DY4Qkm"
+      ],
+      "settings": {
+        "show_installation": true,
+        "installation_product": "installation",
+        "installation_title": "Installation",
+        "installation_description": "Professionell installation av din produkt"
+      }
+    },
+    "tekniska_specifikationer_AdpmjP": {
+      "type": "tekniska-specifikationer",
+      "blocks": {
+        "specification_BhAQga": {
+          "type": "specification",
+          "settings": {
+            "label": "Batterityp",
+            "value": "LFP (LiFePO4)"
+          }
+        },
+        "specification_ARPRA4": {
+          "type": "specification",
+          "settings": {
+            "label": "Lagringkapacitet",
+            "value": "15.36 - 76.8 kWh (3-15 moduler)"
+          }
+        },
+        "specification_GpzCVJ": {
+          "type": "specification",
+          "settings": {
+            "label": "Dimension",
+            "value": "B 591 * D 390 * H 1700mm"
+          }
+        },
+        "specification_pQFPk4": {
+          "type": "specification",
+          "settings": {
+            "label": "Antal laddcykler",
+            "value": "≥ 8000"
+          }
+        },
+        "specification_H6YUdb": {
+          "type": "specification",
+          "settings": {
+            "label": "Produktgaranti",
+            "value": "10 år"
+          }
+        },
+        "specification_zX3MCJ": {
+          "type": "specification",
+          "settings": {
+            "label": "C-värde",
+            "value": "1 C"
+          }
+        },
+        "specification_JFJ6Jn": {
+          "type": "specification",
+          "settings": {
+            "label": "Driftstemperatur",
+            "value": "- 20 – + 55 °C"
+          }
+        },
+        "specification_k6xA9k": {
+          "type": "specification",
+          "settings": {
+            "label": "IP-klass",
+            "value": "IP20"
+          }
+        },
+        "specification_cKwGad": {
+          "type": "specification",
+          "settings": {
+            "label": "Kompatibel med växelriktare",
+            "value": "Solis, Solinteg"
+          }
+        }
+      },
+      "block_order": [
+        "specification_BhAQga",
+        "specification_ARPRA4",
+        "specification_GpzCVJ",
+        "specification_pQFPk4",
+        "specification_H6YUdb",
+        "specification_zX3MCJ",
+        "specification_JFJ6Jn",
+        "specification_k6xA9k",
+        "specification_cKwGad"
+      ],
+      "name": "Tekniska specifikationer",
+      "settings": {
+        "title": "Tekniska specifikationer",
+        "image_1": "shopify://shop_images/ProductImage76758962.jpg",
+        "product_name": "Produktnamn",
+        "stack_info": "Stack",
+        "description": "Produktbeskrivning här...",
+        "button_text": "Produktdatablad",
+        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250318/DynessSTACK100datasheet20250228EN.pdf",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_zGnAYG": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#f7f7f7",
+        "title": "Om Leapton",
+        "text": "<p>Leapton Energy är en japansk tillverkare av högkvalitativa solpaneler med huvudkontor i Kobe och produktionsanläggningar i Kina. Företaget, grundat 2012, är specialiserat på solpaneler med effekter från 430W till 720W, som används i både bostads- och storskaliga solcellsprojekt. Leapton uppfyller internationella certifieringar som TUV och IEC och rankas som Tier-1-leverantör av Bloomberg, vilket säkerställer kvalitet och pålitlighet för kunder över hela världen.<br/><br/></p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/DJI_20250924122335_0025_V.jpg",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "banner_bild_gnz8mP": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_image": "shopify://shop_images/ChatGPT_Image_21_okt._2025_20_15_32_ac3d8439-9849-459c-99a3-8bde5446dcb3.png",
+        "background_video": "shopify://files/videos/jichajiyongsuo.mp4",
+        "background_color": "#000000",
+        "overlay_opacity": 10,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Framtidssäker solcellsteknik",
+        "description": "Leapton 450W bifacial glas/glas är en premiumsolpanel med N-Type TOPCon-teknologi som ger högre energiproduktion, överlägsen hållbarhet och marknadsledande garantier.",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_LkcadR": {
+      "type": "bild-och-text-knappar",
+      "disabled": true,
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "video",
+        "video": "shopify://files/videos/1C1.mp4",
+        "image_position": "left",
+        "overlay_opacity": 0,
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
+    "faq_produkt_xEXc9F": {
+      "type": "faq-produkt",
+      "blocks": {
+        "faq_item_FkB3aq": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur mycket kan jag spara på min elräkning?",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p><br/>Du kan sänka din elräkning med upp till 50–70 % beroende på takets förutsättningar och din elförbrukning. Dessutom får du betalt för överskottsel du säljer tillbaka till nätet. Väljer du att komplettera dina solceller med ett batteri ökar dina besparingar.<br/><br/></p>"
+          }
+        },
+        "faq_item_HWArpe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång är garantin på era solpanler?",
+            "button_text": "Solceller",
+            "description": "",
+            "answer": "<p>Alla våra solceller har en prduktgaranti på 25 år. Utöver det har vi en installationsgaranti på 5 år.</p>"
+          }
+        },
+        "faq_item_yQyRm6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Vad ingår i installationen?",
+            "button_text": "Installation",
+            "description": "",
+            "answer": "<p>Installationen är helt nyckelfärdig och inkluderar montering, inkoppling och driftsättning. Vi tar hand om hela processen – från föranmälan till att din anläggning är fullt igång och producerar el.<br/><br/></p>"
+          }
+        },
+        "faq_item_BEmFT6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur lång tid tar installationen?",
+            "button_text": "Solceller",
+            "description": "",
+            "answer": "<p><br/>En normal villainstallation tar 2-3 dagar för solceller och ytterligare 1-2 dagar för elinstallationen.<br/></p>"
+          }
+        },
+        "faq_item_GAj4TG": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hur fungerar det gröna avdraget?",
+            "button_text": "Ekonomi",
+            "description": "",
+            "answer": "<p><br/>Du får 15 % skattereduktion direkt av oss på fakturan för solceller. Detta dras av automatiskt och kräver ingen hantering från din sida. För batteri och laddbox ligger skattereduktionen på 50%.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_FkB3aq",
+        "faq_item_HWArpe",
+        "faq_item_yQyRm6",
+        "faq_item_BEmFT6",
+        "faq_item_GAj4TG"
+      ],
+      "name": "FAQ produkter",
+      "settings": {
+        "title": "Vanliga frågor och svar om solceller",
+        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
+        "custom_id": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "tekniska_specifikationer_AdpmjP",
+    "bild_och_text_zGnAYG",
+    "banner_bild_gnz8mP",
+    "bild_och_text_knappar_LkcadR",
+    "faq_produkt_xEXc9F",
+    "relaterade_produkter"
+  ]
+}
