@@ -173,50 +173,37 @@
         "bottom_description": ""
       }
     },
-    "bild_och_text_knappar_pLwBUx": {
-      "type": "bild-och-text-knappar",
+    "paket_YY9TC3": {
+      "type": "paket",
       "blocks": {
-        "button_L9TLni": {
+        "button_zKHeBh": {
           "type": "button",
           "settings": {
-            "text": "Bli din egen elproducent",
-            "url": "",
-            "show_arrow": false
+            "text": "UPPTÄCK VÅRA BATTERIPAKET",
+            "url": "shopify://pages/landningssida-film",
+            "show_arrow": true
           }
         },
-        "button_LXLYc7": {
+        "button_4k4pk9": {
           "type": "button",
           "settings": {
-            "text": "Lagra energin för när du behöver den",
+            "text": "Läs mer",
             "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_zBr8P4": {
-          "type": "button",
-          "settings": {
-            "text": "Optimera ditt hem med smart styrning",
-            "url": "",
-            "show_arrow": false
+            "show_arrow": true
           }
         }
       },
       "block_order": [
-        "button_L9TLni",
-        "button_LXLYc7",
-        "button_zBr8P4"
+        "button_zKHeBh",
+        "button_4k4pk9"
       ],
-      "name": "Bild och text med knappar",
+      "name": "Paket",
       "settings": {
-        "title": "Batteripaket från 37 900:-",
-        "text": "<p>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p>",
-        "media_type": "image",
+        "custom_id": "",
         "image": "shopify://shop_images/Kampanj..png",
-        "image_position": "right",
-        "overlay_opacity": 0,
-        "image_button_text": "",
-        "image_button_link": "",
-        "custom_id": ""
+        "title": "Batteripaket ink. hybridväxelriktare, AI-styrning och installation",
+        "price": "Från 38 900kr",
+        "description": "<p>Upptäck våra kompletta batteripaket med batteri, hybridväxelritkare, AI-styrning och installation. </p>"
       }
     },
     "hur_7UXeyd": {
@@ -922,7 +909,7 @@
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
     "grid_omraden_g48U3c",
-    "bild_och_text_knappar_pLwBUx",
+    "paket_YY9TC3",
     "hur_7UXeyd",
     "slider_sektion_PkT3FL",
     "bild_och_text_knappar_AbTQrL",
