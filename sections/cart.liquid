@@ -79,6 +79,32 @@
       </ul>
     </div>
   {% endif %}
+  {% comment %} Grönt teknikavdrag – total summering {% endcomment %}
+  {% assign total_green_eligible = 0 %}
+  {% for item in cart.items %}
+    {% if item.product.tags contains 'batterier' or item.product.tags contains 'laddboxar' %}
+      {% assign total_green_eligible = total_green_eligible | plus: item.original_line_price %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign deduction_percent = 0.485 %}
+  {% assign raw_deduction = total_green_eligible | times: deduction_percent %}
+
+  {% assign deduction_people = cart.attributes.green_deductions | default: '1' %}
+  {% if deduction_people == '2' %}
+    {% assign max_deduction = 10000000 %} {# 100 000 kr i cent #}
+  {% else %}
+    {% assign max_deduction = 5000000 %} {# 50 000 kr i cent #}
+  {% endif %}
+
+  {% assign final_deduction = raw_deduction %}
+  {% if raw_deduction > max_deduction %}
+    {% assign final_deduction = max_deduction %}
+  {% endif %}
+
+  <p style="margin-top: 20px; font-weight: bold; color: #4CAF50;">
+    Totalt grönt teknikavdrag: –{{ final_deduction | money }}
+  </p>
 
   <input type='submit' name='checkout' value='{{ 'cart.checkout' | t }}'>
 </form>
