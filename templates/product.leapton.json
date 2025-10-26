@@ -47,11 +47,7 @@
         "show_installation": true,
         "installation_product": "installation",
         "installation_title": "Installation",
-        "installation_description": "Professionell installation av din produkt",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": "Professionell installation av din produkt"
       }
     },
     "tekniska_specifikationer_AdpmjP": {
@@ -154,6 +150,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/DJI_20250924122335_0025_V.jpg",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -190,6 +187,7 @@
         "media_type": "video",
         "video": "shopify://files/videos/1C1.mp4",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -231,7 +229,7 @@
             "question": "Hur lång tid tar installationen?",
             "button_text": "Solceller",
             "description": "",
-            "answer": "<p><br/>En normal villainstallation tar 1–2 dagar för solceller och ytterligare 1-2 dagar för elinstallationen.<br/></p>"
+            "answer": "<p><br/>En normal villainstallation tar 2-3 dagar för solceller och ytterligare 1-2 dagar för elinstallationen.<br/></p>"
           }
         },
         "faq_item_GAj4TG": {
