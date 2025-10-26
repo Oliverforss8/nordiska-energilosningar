@@ -20,7 +20,6 @@
         "inverted_pages": "offert-forfragan, foretag-offert",
         "inverted_url_fragments": "/offert",
         "foretag_quote_link": "",
-        "nav_item_1_dropdown_image": "shopify://shop_images/image_18.png",
         "nav_item_1_button_link_1": "shopify://collections/solceller",
         "nav_item_1_button_text_1": "Solceller",
         "nav_item_1_dropdown_image_2": "shopify://shop_images/image_14_845fb8c2-1183-4b14-aa31-dd048d4aad97.png",
@@ -36,9 +35,8 @@
         "nav_item_3_button_text_1": "",
         "nav_item_3_button_link_2": "",
         "nav_item_3_button_text_2": "",
-        "nav_item_4_dropdown_image": "shopify://shop_images/kvinna-pratar-i-telefon-och-laddar-sin-elbil-scaled.jpg",
         "nav_item_4_button_link_1": "shopify://pages/finansiering",
-        "nav_item_4_button_text_1": "Finansiering",
+        "nav_item_4_button_text_1": "",
         "nav_item_4_button_link_2": "",
         "nav_item_4_button_text_2": "Knapp"
       }
