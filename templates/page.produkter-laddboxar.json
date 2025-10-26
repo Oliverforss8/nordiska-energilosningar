@@ -30,35 +30,14 @@
     },
     "bild_och_text_knappar_Ya3NQr": {
       "type": "bild-och-text-knappar",
-      "blocks": {
-        "button_AtFPKi": {
-          "type": "button",
-          "settings": {
-            "text": "Lägre kostnader",
-            "url": "",
-            "show_arrow": false
-          }
-        },
-        "button_rzjbLt": {
-          "type": "button",
-          "settings": {
-            "text": "Tidsbesparing",
-            "url": "",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "button_AtFPKi",
-        "button_rzjbLt"
-      ],
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Alltid redo att köra",
-        "text": "<p>Med en egen laddare hemma slipper du onödiga stopp vid laddstationer. Du pluggar enkelt in bilen när du kommer hem, och den laddas medan du sover. På morgonen är bilen fulladdad och redo för dagen – oavsett om du ska till jobbet, hämta barnen eller åka på weekendresa. Bekvämligare än så blir det inte.</p>",
+        "text": "<p>Med en egen laddare hemma slipper du onödiga stopp vid publika laddstationer och stressen över att hitta en ledig plats. Du pluggar enkelt in bilen när du kommer hem, och den laddas automatiskt medan du sover – till lägsta möjliga elpris om du har timdebitering. På morgonen är bilen fulladdad, uppvärmd och redo för dagen – oavsett om du ska till jobbet, lämna barnen, handla eller ge dig ut på en längre resa. </p><p></p><p>Du får maximal bekvämlighet, kontroll över dina kostnader och tryggheten i att alltid starta dagen med full räckvidd. Bekvämare, smartare och mer ekonomiskt blir det helt enkelt inte.</p>",
         "media_type": "image",
         "image": "shopify://shop_images/TE_Zaptec_MG_5108_PRINT.png",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -70,10 +49,20 @@
       "settings": {
         "heading": "Våra utvalda laddboxar",
         "product_1": "charge-amps-luna",
+        "product_1_custom_title": "",
+        "product_1_custom_description": "",
         "product_2": "fronius-wattpilot-flex",
+        "product_2_custom_title": "",
+        "product_2_custom_description": "",
         "product_3": "zaptec-2",
+        "product_3_custom_title": "",
+        "product_3_custom_description": "",
         "product_4": "",
-        "product_5": ""
+        "product_4_custom_title": "",
+        "product_4_custom_description": "",
+        "product_5": "",
+        "product_5_custom_title": "",
+        "product_5_custom_description": ""
       }
     },
     "banner_med_3_produkter_nkMr87": {
@@ -195,6 +184,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
