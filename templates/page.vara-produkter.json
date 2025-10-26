@@ -19,11 +19,11 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/IMG_1685_e17e381a-cffe-4a45-81c1-9eadc44b3716.jpg",
+        "background_image": "shopify://shop_images/Namnlos_3000_x_2000_px_16.png",
         "overlay_opacity": 10,
         "heading": "Upptäck våra produkter",
-        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
-        "button_text": "Se våra paket",
+        "subheading": "Vi erbjuder ett brett sortiment av solceller, batteri och laddboxar. Handla",
+        "button_text": "",
         "button_url": ""
       }
     },
