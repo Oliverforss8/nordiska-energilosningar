@@ -15,9 +15,7 @@
           {% render 'image', image: item.image, url: item.url %}
         </td>
         <td>
-          <p>{{ item.product.title }}</p> {% if item.product.tags contains 'gron-teknik' %}
-  <p style="color: #4CAF50; font-weight: bold;">Grönt avdrag gäller för denna produkt</p>
-{% endif %}
+          <p>{{ item.product.title }}</p>
 
           {{ 'cart.remove' | t | link_to: item.url_to_remove }}
         </td>
