@@ -48,6 +48,58 @@
         "bottom_description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet."
       }
     },
+    "hur_Vddk4H": {
+      "type": "hur",
+      "blocks": {
+        "step_Czjrwy": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Group.svg",
+            "title": "Steg 1",
+            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
+          }
+        },
+        "step_6yRKfJ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/book.svg",
+            "title": "Steg 2",
+            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
+          }
+        },
+        "step_wK4ijc": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector-1.svg",
+            "title": "Steg 3",
+            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
+          }
+        },
+        "step_3WhpVd": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector.svg",
+            "title": "Steg 4",
+            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_Czjrwy",
+        "step_6yRKfJ",
+        "step_wK4ijc",
+        "step_3WhpVd"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så går det till – en trygg process från beställning till driftsättning",
+        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
+    },
     "grid_omraden_8peiLf": {
       "type": "grid-omraden",
       "disabled": true,
@@ -217,6 +269,7 @@
     "main",
     "hero_lower_UegThw",
     "3_grid_7XnDKH",
+    "hur_Vddk4H",
     "grid_omraden_8peiLf",
     "review_Yw4nRq",
     "kontakt_form_HnKitz"
