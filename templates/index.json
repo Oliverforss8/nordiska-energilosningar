@@ -203,7 +203,7 @@
         "button_YE7BMm": {
           "type": "button",
           "settings": {
-            "text": "Bli din egen elproducent",
+            "text": "Minska effekttariffer och kapa toppar",
             "url": "",
             "show_arrow": false
           }
@@ -233,7 +233,7 @@
       "name": "Bild och text med knappar",
       "settings": {
         "title": "Batteripaket från 38 900:-",
-        "text": "<p>Vi hjälper dig att producera, lagra och styra din egen el – för en enklare och billigare vardag.</p>",
+        "text": "<p><br/>Upptäck nästa generations batteripaket – med kraftfullt energilager, hybridväxelriktare, AI-styrning och komplett installation. Minska effekttarifferna, öka din självförsörjning och få full kontroll över energikostnaderna. En smart helhetslösning som maximerar värdet av din egenproducerade el – dygnet runt, året runt.<br/><br/></p>",
         "media_type": "image",
         "image": "shopify://shop_images/20250623_2106_Swedish_Villa_at_Sunset_simple_compose_01jyf2v5vyebrvnkxbjt9nk2br_928ed017-c12a-4fbc-a8cb-f63d2ce832b4.png",
         "image_position": "left",
