@@ -22,9 +22,9 @@
         "background_image": "shopify://shop_images/Namnlos_3000_x_2000_px_16.png",
         "overlay_opacity": 10,
         "heading": "Upptäck våra produkter",
-        "subheading": "Vi erbjuder ett brett sortiment av solceller, batteri och laddboxar. Handla",
-        "button_text": "",
-        "button_url": ""
+        "subheading": "Vi erbjuder ett brett sortiment av solceller, batteri och laddboxar. Handla direkt i vår webbbutik eller kontakta oss för personlig rådgivning",
+        "button_text": "Kontakta oss",
+        "button_url": "shopify://pages/offert-forfragan"
       }
     },
     "3_grid_7XnDKH": {
