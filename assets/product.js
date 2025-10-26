@@ -364,9 +364,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Set maximum discount based on discount code
       let maxDiscountAmount = 0;
-      if (discountCode === 'AVDRAG1') {
+      if (discountCode === 'GRON1') {
         maxDiscountAmount = 5000000; // 50,000 kr in cents
-      } else if (discountCode === 'AVDRAG2') {
+      } else if (discountCode === 'GRON2') {
         maxDiscountAmount = 10000000; // 100,000 kr in cents
       }
 
