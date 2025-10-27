@@ -24,7 +24,7 @@
         "heading": "En extra batterimodul på köpet!",
         "subheading": "När du väljer solceller och batteri från Nordiska Energilösningar ingår just nu en extra batterimodul – för maximal energinytta hemma.",
         "button_text": "Fri offert",
-        "button_url": "shopify://collections/solceller"
+        "button_url": "shopify://pages/contact"
       }
     },
     "icon_UQgYfa": {
@@ -80,10 +80,20 @@
       "settings": {
         "heading": "Våra utvalda solcellspaneler",
         "product_1": "leapton-450w",
+        "product_1_custom_title": "",
+        "product_1_custom_description": "",
         "product_2": "",
+        "product_2_custom_title": "",
+        "product_2_custom_description": "",
         "product_3": "",
+        "product_3_custom_title": "",
+        "product_3_custom_description": "",
         "product_4": "",
-        "product_5": ""
+        "product_4_custom_title": "",
+        "product_4_custom_description": "",
+        "product_5": "",
+        "product_5_custom_title": "",
+        "product_5_custom_description": ""
       }
     },
     "bild_och_text_fF7gV6": {
@@ -96,6 +106,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -212,6 +223,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/midsection-man-using-phone-table-cafe.jpg",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
