@@ -275,6 +275,7 @@
     },
     "banner_bild_xmeyiR": {
       "type": "banner-bild",
+      "disabled": true,
       "name": "Banner bild",
       "settings": {
         "layout_type": "full",

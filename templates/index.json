@@ -188,6 +188,7 @@
       "block_order": [
         "button_zKHeBh"
       ],
+      "disabled": true,
       "name": "Paket",
       "settings": {
         "custom_id": "",
@@ -238,7 +239,7 @@
         "image": "shopify://shop_images/Kampanj..png",
         "image_position": "left",
         "overlay_opacity": 30,
-        "image_button_text": "",
+        "image_button_text": "Upptäck batteripaketet",
         "image_button_link": "shopify://pages/landningssida-film",
         "custom_id": ""
       }
