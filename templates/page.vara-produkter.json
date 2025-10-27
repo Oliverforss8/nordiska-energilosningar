@@ -19,12 +19,12 @@
       "name": "Hero Lower",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/image_13.png",
+        "background_image": "shopify://shop_images/Namnlos_3000_x_2000_px_16.png",
         "overlay_opacity": 10,
         "heading": "Upptäck våra produkter",
-        "subheading": "Funderar du på att investera i solceller?\nVi hjälper dig hela vägen – från projektering till färdig installation!",
-        "button_text": "Se våra paket",
-        "button_url": ""
+        "subheading": "Vi erbjuder ett brett sortiment av solceller, batteri och laddboxar. Handla direkt i vår webbbutik eller kontakta oss för personlig rådgivning",
+        "button_text": "Kontakta oss",
+        "button_url": "shopify://pages/offert-forfragan"
       }
     },
     "3_grid_7XnDKH": {
@@ -33,11 +33,11 @@
       "settings": {
         "title": "Smarta energilösningar för en hållbar vardag",
         "description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet.",
-        "card_1_image": "shopify://shop_images/images.webp",
+        "card_1_image": "shopify://shop_images/20250624_0710_Modern_Swedish_Villa_simple_compose_01jyg5cfdeed9rh8698d5574rq_d6554d36-8ccf-4d06-9843-9aab4ab41e99.png",
         "card_1_button_text": "Solceller",
         "card_1_button_link": "shopify://pages/vara-solceller",
         "card_1_overlay_opacity": 10,
-        "card_2_image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "card_2_image": "shopify://shop_images/IMG_1685_e17e381a-cffe-4a45-81c1-9eadc44b3716.jpg",
         "card_2_button_text": "Batterier",
         "card_2_button_link": "shopify://pages/vara-batterilosningar",
         "card_2_overlay_opacity": 10,
@@ -46,6 +46,58 @@
         "card_3_button_link": "shopify://pages/vara-laddboxar",
         "card_3_overlay_opacity": 10,
         "bottom_description": "Vi hjälper dig att göra hemmet mer energieffektivt med solceller, batterier, laddboxar och värmepumpar. Smarta lösningar som sänker dina kostnader och ökar din självständighet."
+      }
+    },
+    "hur_Vddk4H": {
+      "type": "hur",
+      "blocks": {
+        "step_Czjrwy": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Group.svg",
+            "title": "Steg 1",
+            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
+          }
+        },
+        "step_6yRKfJ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/book.svg",
+            "title": "Steg 2",
+            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
+          }
+        },
+        "step_wK4ijc": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector-1.svg",
+            "title": "Steg 3",
+            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
+          }
+        },
+        "step_3WhpVd": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector.svg",
+            "title": "Steg 4",
+            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_Czjrwy",
+        "step_6yRKfJ",
+        "step_wK4ijc",
+        "step_3WhpVd"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så går det till – en trygg process från beställning till driftsättning",
+        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
       }
     },
     "grid_omraden_8peiLf": {
@@ -171,13 +223,55 @@
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "review_Yw4nRq": {
+      "type": "review",
+      "blocks": {
+        "review_xVVfFp": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_VHFQEQ": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_ELjR3B": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_xVVfFp",
+        "review_VHFQEQ",
+        "review_ELjR3B"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_UegThw",
     "3_grid_7XnDKH",
+    "hur_Vddk4H",
     "grid_omraden_8peiLf",
-    "kontakt_form_HnKitz"
+    "kontakt_form_HnKitz",
+    "review_Yw4nRq"
   ]
 }

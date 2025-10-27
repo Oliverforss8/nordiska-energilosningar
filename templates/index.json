@@ -173,6 +173,76 @@
         "bottom_description": ""
       }
     },
+    "paket_YY9TC3": {
+      "type": "paket",
+      "blocks": {
+        "button_zKHeBh": {
+          "type": "button",
+          "settings": {
+            "text": "UPPTÄCK VÅRA BATTERIPAKET",
+            "url": "shopify://pages/landningssida-film",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "button_zKHeBh"
+      ],
+      "name": "Paket",
+      "settings": {
+        "custom_id": "",
+        "image": "shopify://shop_images/Kampanj..png",
+        "title": "Batteripaket ink. hybridväxelriktare, AI-styrning och installation",
+        "price": "Från 38 900kr",
+        "description": "<p>Upptäck våra kompletta batteripaket med batteri, hybridväxelritkare, AI-styrning och installation. </p>"
+      }
+    },
+    "bild_och_text_knappar_AbTQrL": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_YE7BMm": {
+          "type": "button",
+          "settings": {
+            "text": "Minska effekttariffer och kapa toppar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_HydT4F": {
+          "type": "button",
+          "settings": {
+            "text": "Gör dig oberoende av elprisernas upp- och nedgångar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_aenqFH": {
+          "type": "button",
+          "settings": {
+            "text": "Komplett system: batteri, hybridväxelriktare, AI-styrning och installation ingår",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_YE7BMm",
+        "button_HydT4F",
+        "button_aenqFH"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Batteripaket från 38 900:-",
+        "text": "<p>Ta kontroll över din energiförbrukning med våra intelligenta batteripaket som optimerar elflödet automatiskt och kraftigt reducerar kostnaderna. Systemet gör att du kan använda mer av din egenproducerade el och bli upp emot 80 % självförsörjande – samtidigt som effekttoppar elimineras.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Kampanj..png",
+        "image_position": "left",
+        "overlay_opacity": 30,
+        "image_button_text": "",
+        "image_button_link": "shopify://pages/landningssida-film",
+        "custom_id": ""
+      }
+    },
     "hur_7UXeyd": {
       "type": "hur",
       "blocks": {
@@ -282,10 +352,10 @@
         "custom_id": ""
       }
     },
-    "bild_och_text_knappar_3JNi3L": {
+    "bild_och_text_knappar_aKrn9q": {
       "type": "bild-och-text-knappar",
       "blocks": {
-        "button_dHfKrg": {
+        "button_F7q4nN": {
           "type": "button",
           "settings": {
             "text": "Bli din egen elproducent",
@@ -293,7 +363,7 @@
             "show_arrow": false
           }
         },
-        "button_9Lrptf": {
+        "button_wA33eP": {
           "type": "button",
           "settings": {
             "text": "Lagra energin för när du behöver den",
@@ -301,7 +371,7 @@
             "show_arrow": false
           }
         },
-        "button_rtKQqQ": {
+        "button_Rr4dU8": {
           "type": "button",
           "settings": {
             "text": "Optimera ditt hem med smart styrning",
@@ -311,9 +381,9 @@
         }
       },
       "block_order": [
-        "button_dHfKrg",
-        "button_9Lrptf",
-        "button_rtKQqQ"
+        "button_F7q4nN",
+        "button_wA33eP",
+        "button_Rr4dU8"
       ],
       "name": "Bild och text med knappar",
       "settings": {
@@ -475,7 +545,7 @@
           "settings": {
             "product": "saj",
             "show_price": false,
-            "description": ""
+            "description": "SAJ HS3 är en integrerad hybridväxelriktare monterad direkt på batteriet, med ultratunn design och smart energistyrning för maximal effektivitet och platsbesparing."
           }
         },
         "product_y6J77j": {
@@ -876,9 +946,11 @@
     "ikon_lankar_ki6Ryk",
     "bild_och_text_nY9Rik",
     "grid_omraden_g48U3c",
+    "paket_YY9TC3",
+    "bild_och_text_knappar_AbTQrL",
     "hur_7UXeyd",
     "slider_sektion_PkT3FL",
-    "bild_och_text_knappar_3JNi3L",
+    "bild_och_text_knappar_aKrn9q",
     "bild_och_text_ydyfhV",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
