@@ -58,7 +58,8 @@
             {% if block.type == 'button' %}
               <a
                 href="{{ block.settings.url }}"
-                class="knappetikett inline-flex items-center gap-[10px] rounded-[10px] bg-[#E9A600] px-[15px] py-[15px] text-[15px] text-[#171717] transition-all duration-300 hover:bg-[#D4B82A]"
+                class="knappetikett flex flex-row items-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717] transition-all hover:opacity-90"
+                style="background: #E9A600; text-decoration: none;"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.text }}
