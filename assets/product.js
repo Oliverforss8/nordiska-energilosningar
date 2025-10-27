@@ -693,7 +693,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Select this option
-        this.style.background = 'linear-gradient(135deg, #FFA94D 0%, #FF4E33 100%)';
+        this.style.background = '#E9A600';
         this.setAttribute('data-selected', 'true');
 
         // Update hidden field
