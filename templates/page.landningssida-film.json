@@ -56,7 +56,7 @@
         "product_Cybgwb": {
           "type": "product",
           "settings": {
-            "product": "saj",
+            "product": "fronius-reserva",
             "show_price": false,
             "description": "Stilren energilagring med kompakt design för ditt hem."
           }
