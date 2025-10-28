@@ -22,8 +22,8 @@
         "overlay_opacity": 65,
         "heading": "Dyness STACK100, Dyness Tower PRO + SOLIS",
         "subheading": "Upptäck våra kampanjer på batteripaket",
-        "button_text": "",
-        "button_url": ""
+        "button_text": "Få offert",
+        "button_url": "shopify://pages/offert-forfragan"
       }
     },
     "slider_sektion_qjEhPV": {
@@ -79,7 +79,7 @@
       ],
       "name": "Produktslider",
       "settings": {
-        "title": "Våra utvalda batterier",
+        "title": "Upptäck våra utvalda batterier",
         "custom_id": ""
       }
     },
