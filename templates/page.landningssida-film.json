@@ -65,16 +65,16 @@
         "button_JRxyhW": {
           "type": "button",
           "settings": {
-            "text": "Få offert",
-            "url": "",
+            "text": "Köp nu >",
+            "url": "shopify://products/dyness-stack100",
             "show_arrow": true
           }
         },
         "button_8qH9tp": {
           "type": "button",
           "settings": {
-            "text": "Läs mer",
-            "url": "",
+            "text": "Få offert >",
+            "url": "shopify://pages/landningssida-film",
             "show_arrow": true
           }
         }
