@@ -96,6 +96,39 @@
         "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
       }
     },
+    "paket_jUKYhD": {
+      "type": "paket",
+      "blocks": {
+        "button_jQXUgf": {
+          "type": "button",
+          "settings": {
+            "text": "Få offert",
+            "url": "",
+            "show_arrow": true
+          }
+        },
+        "button_q7mAHh": {
+          "type": "button",
+          "settings": {
+            "text": "Läs mer",
+            "url": "",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "button_jQXUgf",
+        "button_q7mAHh"
+      ],
+      "name": "Paket",
+      "settings": {
+        "custom_id": "",
+        "image": "shopify://shop_images/Namnlos_design_1_27551934-dc00-4e82-9d8f-ddbe75106abc.png",
+        "title": "Fr. 49 900:-",
+        "price": "Dyness STACK100 30,6 kWh + Solis 15 kW",
+        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+      }
+    },
     "slider_sektion_qjEhPV": {
       "type": "slider-sektion",
       "blocks": {
@@ -507,6 +540,7 @@
     "hero_GhxDWK",
     "paket_qtFeVj",
     "paket_etC3Qr",
+    "paket_jUKYhD",
     "slider_sektion_qjEhPV",
     "grid_omraden_BEhDEW",
     "paket_a8biPt",
