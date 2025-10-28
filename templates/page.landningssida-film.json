@@ -32,8 +32,8 @@
         "button_WfPCPt": {
           "type": "button",
           "settings": {
-            "text": "Få offert",
-            "url": "",
+            "text": "Köp nu >",
+            "url": "shopify://products/dyness-tower-pro",
             "show_arrow": true
           }
         },
