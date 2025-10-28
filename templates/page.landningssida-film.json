@@ -209,38 +209,6 @@
         "bottom_description": ""
       }
     },
-    "paket_a8biPt": {
-      "type": "paket",
-      "blocks": {
-        "button_JAJLri": {
-          "type": "button",
-          "settings": {
-            "text": "Få offert",
-            "url": "",
-            "show_arrow": true
-          }
-        },
-        "button_D6UWwX": {
-          "type": "button",
-          "settings": {
-            "text": "Läs mer",
-            "url": "",
-            "show_arrow": true
-          }
-        }
-      },
-      "block_order": [
-        "button_JAJLri",
-        "button_D6UWwX"
-      ],
-      "name": "Paket",
-      "settings": {
-        "custom_id": "",
-        "title": "Dyness Tower Pro 7,7 kWh + Solis 10 kW",
-        "price": "Från 38 900 kr",
-        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
-      }
-    },
     "hur_BYebNg": {
       "type": "hur",
       "blocks": {
@@ -543,11 +511,10 @@
     "paket_jUKYhD",
     "slider_sektion_qjEhPV",
     "grid_omraden_BEhDEW",
-    "paket_a8biPt",
+    "bild_och_text_nVkW73",
     "hur_BYebNg",
     "slider_sektion_h9EWtP",
     "avdrag_cXVHYp",
-    "bild_och_text_nVkW73",
     "review_tQCwBY",
     "kontakt_form_FxNFw3"
   ]
