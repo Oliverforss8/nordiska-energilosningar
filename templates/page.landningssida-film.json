@@ -102,16 +102,16 @@
         "button_jQXUgf": {
           "type": "button",
           "settings": {
-            "text": "Få offert",
-            "url": "",
+            "text": "Köp nu >",
+            "url": "shopify://products/dyness-stack100",
             "show_arrow": true
           }
         },
         "button_q7mAHh": {
           "type": "button",
           "settings": {
-            "text": "Läs mer",
-            "url": "",
+            "text": "Få offert >",
+            "url": "shopify://pages/offert-forfragan",
             "show_arrow": true
           }
         }
