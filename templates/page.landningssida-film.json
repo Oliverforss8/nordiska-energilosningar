@@ -40,8 +40,8 @@
         "button_HCTihF": {
           "type": "button",
           "settings": {
-            "text": "Läs mer",
-            "url": "",
+            "text": "Få offert >",
+            "url": "shopify://pages/offert-forfragan",
             "show_arrow": true
           }
         }
