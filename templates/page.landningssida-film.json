@@ -40,7 +40,7 @@
         "product_TUGzNt": {
           "type": "product",
           "settings": {
-            "product": "sigenergy-1",
+            "product": "dyness-tower-pro",
             "show_price": false,
             "description": "Ledande design och smart energilagring i ett."
           }
@@ -48,7 +48,7 @@
         "product_B86Ygm": {
           "type": "product",
           "settings": {
-            "product": "fronius-reserva",
+            "product": "saj",
             "show_price": false,
             "description": "Europeiskt premiumbatteri med driftsäker prestanda och servrar inom EU."
           }
