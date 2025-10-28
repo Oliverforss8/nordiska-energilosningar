@@ -53,8 +53,8 @@
       "name": "Paket",
       "settings": {
         "custom_id": "",
-        "title": "Dyness Tower Pro 7,7 kWh + Solis 10 kW",
-        "price": "Från 38 900 kr",
+        "title": "Fr. 38 900:-",
+        "price": "Dyness Tower Pro 7,7 kWh + Solis 10 kW",
         "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
       }
     },
@@ -136,6 +136,23 @@
         "card_4_button_link": "shopify://pages/vara-produkter",
         "card_4_overlay_opacity": 20,
         "bottom_description": ""
+      }
+    },
+    "bild_och_text_Yd9XhY": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#f7f7f7",
+        "title": "AI-styrningen tänker på elpriset så att du inte behöver",
+        "text": "<p>Vår AI-styrning optimerar din energianvändning efter elpriset och ger dig maximal besparing. Ingår i alla våra solcells- och batteripaket.<br/><br/><br/></p>",
+        "media_type": "video",
+        "image": "shopify://shop_images/fronius-wattpilot-wallbox-home-flex-c_1_ad3a920d-7450-49a7-99e2-7554b62cf4bd.jpg",
+        "video": "shopify://files/videos/家电手机2.mp4",
+        "image_position": "left",
+        "overlay_opacity": 30,
+        "image_button_text": "",
+        "image_button_link": "shopify://pages/var-losning",
+        "custom_id": ""
       }
     },
     "paket_a8biPt": {
@@ -468,9 +485,10 @@
     "main",
     "hero_GhxDWK",
     "paket_qtFeVj",
+    "paket_a8biPt",
     "slider_sektion_qjEhPV",
     "grid_omraden_BEhDEW",
-    "paket_a8biPt",
+    "bild_och_text_Yd9XhY",
     "hur_BYebNg",
     "slider_sektion_h9EWtP",
     "avdrag_cXVHYp",
