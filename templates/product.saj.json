@@ -47,11 +47,7 @@
         "show_installation": true,
         "installation_product": "installation",
         "installation_title": "Installation",
-        "installation_description": "Professionell installation av din produkt",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": "Professionell installation av din produkt"
       }
     },
     "bild_och_text_jFXLnG": {
@@ -64,6 +60,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/Namnlos_b2dcdcf3-1eed-498f-b7b3-ee9102ebe49c.jpg",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -170,8 +167,9 @@
         "media_type": "video",
         "video": "shopify://files/videos/家电手机2.mp4",
         "image_position": "right",
-        "image_button_text": "",
-        "image_button_link": "",
+        "overlay_opacity": 0,
+        "image_button_text": "Produktdatablad",
+        "image_button_link": "https://www.saj-electric.com/hubfs/Europe%20Region%202%20document/Datasheet/Residential/North/HS3%20Three%20Phase%20All-in-One%20Solution-datasheet-EN-North.pdf",
         "custom_id": ""
       }
     },
@@ -185,17 +183,9 @@
         "image": "shopify://shop_images/promotion-pic-3.jpg",
         "video": "shopify://files/videos/家电手机2.mp4",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
-      "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
     },
@@ -237,6 +227,15 @@
         "heading": "Vad våra kunder säger om oss",
         "button_text": "Läs alla recensioner",
         "button_url": ""
+      }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
       }
     }
   },
