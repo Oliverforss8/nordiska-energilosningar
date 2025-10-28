@@ -83,6 +83,199 @@
         "custom_id": ""
       }
     },
+    "grid_omraden_BEhDEW": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Vi hjälper dig sänka elräkningen - till marknadens bästa priser",
+        "description": "Här kan du beställa kompletta batteri- och laddboxpaket med installation och grön teknik-avdrag – eller boka en energiexpert som skräddarsyr den bästa lösningen för ditt hem.",
+        "card_1_button_text": "Boka möte direkt",
+        "card_1_button_link": "shopify://pages/offert-forfragan",
+        "card_1_overlay_opacity": 15,
+        "card_2_button_text": "Köp direkt i butik",
+        "card_2_button_link": "shopify://pages/vara-produkter",
+        "card_2_overlay_opacity": 20,
+        "card_3_image": "shopify://shop_images/ChatGPT_Image_25_okt._2025_22_58_40.png",
+        "card_3_button_text": "Boka möte direkt",
+        "card_3_button_link": "shopify://pages/offert-forfragan",
+        "card_3_overlay_opacity": 0,
+        "card_4_image": "shopify://shop_images/banner.webp",
+        "card_4_button_text": "Köp direkt i butik",
+        "card_4_button_link": "shopify://pages/vara-produkter",
+        "card_4_overlay_opacity": 20,
+        "bottom_description": ""
+      }
+    },
+    "paket_a8biPt": {
+      "type": "paket",
+      "blocks": {
+        "button_JAJLri": {
+          "type": "button",
+          "settings": {
+            "text": "Få offert",
+            "url": "",
+            "show_arrow": true
+          }
+        },
+        "button_D6UWwX": {
+          "type": "button",
+          "settings": {
+            "text": "Läs mer",
+            "url": "",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "button_JAJLri",
+        "button_D6UWwX"
+      ],
+      "name": "Paket",
+      "settings": {
+        "custom_id": "",
+        "title": "Dyness Tower Pro 7,7 kWh + Solis 10 kW",
+        "price": "Från 38 900 kr",
+        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+      }
+    },
+    "bild_och_text_knappar_TLqP4p": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_Vdz3VU": {
+          "type": "button",
+          "settings": {
+            "text": "Minska effekttariffer och kapa toppar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_prgYUW": {
+          "type": "button",
+          "settings": {
+            "text": "Gör dig oberoende av elprisernas upp- och nedgångar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_pNE8J4": {
+          "type": "button",
+          "settings": {
+            "text": "Komplett system: batteri, hybridväxelriktare, AI-styrning och installation ingår",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_Vdz3VU",
+        "button_prgYUW",
+        "button_pNE8J4"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Batteripaket från 38 900:-",
+        "text": "<p>Ta kontroll över din energiförbrukning med våra intelligenta batteripaket som optimerar elflödet automatiskt och kraftigt reducerar kostnaderna. Systemet gör att du kan använda mer av din egenproducerade el och bli upp emot 80 % självförsörjande – samtidigt som effekttoppar elimineras.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Kampanj..png",
+        "image_position": "left",
+        "overlay_opacity": 10,
+        "image_button_text": "",
+        "image_button_link": "shopify://pages/landningssida-film",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_CAemrp": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_U74fDm": {
+          "type": "button",
+          "settings": {
+            "text": "Minska effekttariffer och kapa toppar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_mUAgQU": {
+          "type": "button",
+          "settings": {
+            "text": "Gör dig oberoende av elprisernas upp- och nedgångar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_YdfXfQ": {
+          "type": "button",
+          "settings": {
+            "text": "Komplett system: batteri, hybridväxelriktare, AI-styrning och installation ingår",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_U74fDm",
+        "button_mUAgQU",
+        "button_YdfXfQ"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Batteripaket från 38 900:-",
+        "text": "<p>Ta kontroll över din energiförbrukning med våra intelligenta batteripaket som optimerar elflödet automatiskt och kraftigt reducerar kostnaderna. Systemet gör att du kan använda mer av din egenproducerade el och bli upp emot 80 % självförsörjande – samtidigt som effekttoppar elimineras.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Kampanj..png",
+        "image_position": "left",
+        "overlay_opacity": 10,
+        "image_button_text": "",
+        "image_button_link": "shopify://pages/landningssida-film",
+        "custom_id": ""
+      }
+    },
+    "bild_och_text_knappar_B87g3h": {
+      "type": "bild-och-text-knappar",
+      "blocks": {
+        "button_cTw9LD": {
+          "type": "button",
+          "settings": {
+            "text": "Minska effekttariffer och kapa toppar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_TLeaFy": {
+          "type": "button",
+          "settings": {
+            "text": "Gör dig oberoende av elprisernas upp- och nedgångar",
+            "url": "",
+            "show_arrow": false
+          }
+        },
+        "button_z3yEyR": {
+          "type": "button",
+          "settings": {
+            "text": "Komplett system: batteri, hybridväxelriktare, AI-styrning och installation ingår",
+            "url": "",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "button_cTw9LD",
+        "button_TLeaFy",
+        "button_z3yEyR"
+      ],
+      "name": "Bild och text med knappar",
+      "settings": {
+        "title": "Batteripaket från 38 900:-",
+        "text": "<p>Ta kontroll över din energiförbrukning med våra intelligenta batteripaket som optimerar elflödet automatiskt och kraftigt reducerar kostnaderna. Systemet gör att du kan använda mer av din egenproducerade el och bli upp emot 80 % självförsörjande – samtidigt som effekttoppar elimineras.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/Kampanj..png",
+        "image_position": "left",
+        "overlay_opacity": 10,
+        "image_button_text": "",
+        "image_button_link": "shopify://pages/landningssida-film",
+        "custom_id": ""
+      }
+    },
     "hur_BYebNg": {
       "type": "hur",
       "blocks": {
@@ -278,16 +471,119 @@
         "button_text": "Läs alla recensioner",
         "button_url": ""
       }
+    },
+    "kontakt_form_FxNFw3": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_djU9mC": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_AqgAAT": {
+          "type": "form_field",
+          "settings": {
+            "label": "Mailadress",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_7gGUYP": {
+          "type": "form_field",
+          "settings": {
+            "label": "Addres",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": false,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_XHwGBp": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$",
+            "rows": 4
+          }
+        },
+        "service_option_yKRxww": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_dfznmh": {
+          "type": "service_option",
+          "settings": {
+            "label": "Energilagring",
+            "service_key": ""
+          }
+        },
+        "service_option_7iNtBQ": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddbox",
+            "service_key": ""
+          }
+        },
+        "service_option_BQqkTq": {
+          "type": "service_option",
+          "settings": {
+            "label": "Boka elektriker",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_djU9mC",
+        "form_field_AqgAAT",
+        "form_field_7gGUYP",
+        "form_field_XHwGBp",
+        "service_option_yKRxww",
+        "service_option_dfznmh",
+        "service_option_7iNtBQ",
+        "service_option_BQqkTq"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Fri rådgivning och offert",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_GhxDWK",
     "slider_sektion_qjEhPV",
+    "grid_omraden_BEhDEW",
+    "paket_a8biPt",
+    "bild_och_text_knappar_TLqP4p",
+    "bild_och_text_knappar_CAemrp",
+    "bild_och_text_knappar_B87g3h",
     "hur_BYebNg",
     "slider_sektion_h9EWtP",
     "avdrag_cXVHYp",
     "bild_och_text_nVkW73",
-    "review_tQCwBY"
+    "review_tQCwBY",
+    "kontakt_form_FxNFw3"
   ]
 }
