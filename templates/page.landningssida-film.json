@@ -135,6 +135,63 @@
         "secondary_button_url": ""
       }
     },
+    "slider_sektion_h9EWtP": {
+      "type": "slider-sektion",
+      "blocks": {
+        "product_TNTfLp": {
+          "type": "product",
+          "settings": {
+            "product": "solinteg",
+            "show_price": false,
+            "description": "Optimera energin i varje fas med Solintegs fasbalasering – för stabil drift, högre verkningsgrad och smartare solanvändning."
+          }
+        },
+        "product_LWGkLy": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-verto",
+            "show_price": false,
+            "description": "En avancerad växelriktare med hög verkningsgrad och intelligent styrning, designad för maximal solenergiproduktion och driftsäkerhet året runt."
+          }
+        },
+        "product_gbzKeU": {
+          "type": "product",
+          "settings": {
+            "product": "solis-s6-eh3p10-kw",
+            "show_price": false,
+            "description": "Vår mest prisvärda växelriktare – med AI-styrning, dubbla MPPT och realtidsoptimering för maximal solproduktion och oslagbar driftssäkerhet."
+          }
+        },
+        "product_Rbk7DV": {
+          "type": "product",
+          "settings": {
+            "product": "saj",
+            "show_price": false,
+            "description": "SAJ HS3 är en integrerad hybridväxelriktare monterad direkt på batteriet, med ultratunn design och smart energistyrning för maximal effektivitet och platsbesparing."
+          }
+        },
+        "product_Q8hdE3": {
+          "type": "product",
+          "settings": {
+            "product": "sigenergy",
+            "show_price": true,
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_TNTfLp",
+        "product_LWGkLy",
+        "product_gbzKeU",
+        "product_Rbk7DV",
+        "product_Q8hdE3"
+      ],
+      "name": "Produktslider",
+      "settings": {
+        "title": "Upptäck våra hybridväxelriktare",
+        "custom_id": ""
+      }
+    },
     "avdrag_cXVHYp": {
       "type": "avdrag",
       "blocks": {
@@ -212,6 +269,7 @@
     "hero_GhxDWK",
     "slider_sektion_qjEhPV",
     "hur_BYebNg",
+    "slider_sektion_h9EWtP",
     "avdrag_cXVHYp",
     "review_tQCwBY"
   ]
