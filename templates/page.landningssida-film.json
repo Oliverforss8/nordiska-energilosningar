@@ -83,6 +83,10 @@
         "button_JRxyhW",
         "button_8qH9tp"
       ],
+      "custom_css": [
+        "/* Vänder layouten för denna sektion */.paket-layout {display: flex; flex-direction: column;}",
+        "@media (min-width: 768px) {.paket-layout {flex-direction: row-reverse; }}"
+      ],
       "name": "Paket",
       "settings": {
         "custom_id": "",
