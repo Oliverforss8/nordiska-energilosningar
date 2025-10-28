@@ -238,7 +238,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/Kampanj..png",
         "image_position": "left",
-        "overlay_opacity": 30,
+        "overlay_opacity": 10,
         "image_button_text": "",
         "image_button_link": "shopify://pages/landningssida-film",
         "custom_id": ""
