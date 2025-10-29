@@ -76,6 +76,32 @@
             "upsell_title": "",
             "upsell_description": ""
           }
+        },
+        "upsell_product_eNdxTY": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "kabelhallare-svart",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_ywHi3t": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
         }
       },
       "block_order": [
@@ -83,7 +109,9 @@
         "upsell_product_bx3yEF",
         "upsell_product_mTJEL6",
         "upsell_product_XtaY7t",
-        "upsell_product_wqbxnY"
+        "upsell_product_wqbxnY",
+        "upsell_product_eNdxTY",
+        "upsell_product_ywHi3t"
       ],
       "settings": {
         "show_installation": true,
