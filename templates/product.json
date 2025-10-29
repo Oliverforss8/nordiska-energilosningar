@@ -58,6 +58,15 @@
         "button_url": ""
       }
     },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
+      }
+    },
     "kontakt_form_CrnacH": {
       "type": "kontakt-form",
       "blocks": {
@@ -154,21 +163,12 @@
         "header_button_text": "",
         "header_button_url": ""
       }
-    },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
-      "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
-        "custom_id": ""
-      }
     }
   },
   "order": [
     "main",
-    "review_JbUbNY",
     "kontakt_form_CrnacH",
+    "review_JbUbNY",
     "relaterade_produkter"
   ]
 }
