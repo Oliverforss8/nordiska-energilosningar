@@ -84,7 +84,7 @@
           "type": "specification",
           "settings": {
             "label": "Lagringkapacitet",
-            "value": "9.0 - 54.0 kWh"
+            "value": "9.0 - 54.0 kWh (1-6 moduler)"
           }
         },
         "specification_AjpE8T": {
