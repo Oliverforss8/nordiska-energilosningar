@@ -24,10 +24,66 @@
             "upsell_title": "",
             "upsell_description": ""
           }
+        },
+        "upsell_product_bx3yEF": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "lastbalansering-perific-max",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_mTJEL6": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "zaptec-laddstolpe",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_XtaY7t": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "laddkabel-11-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_wqbxnY": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "laddkabel-22-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
         }
       },
       "block_order": [
-        "upsell_product_9p4FDY"
+        "upsell_product_9p4FDY",
+        "upsell_product_bx3yEF",
+        "upsell_product_mTJEL6",
+        "upsell_product_XtaY7t",
+        "upsell_product_wqbxnY"
       ],
       "settings": {
         "show_installation": true,
