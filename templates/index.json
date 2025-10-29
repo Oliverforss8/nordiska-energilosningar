@@ -188,6 +188,7 @@
       "block_order": [
         "button_zKHeBh"
       ],
+      "disabled": true,
       "name": "Paket",
       "settings": {
         "custom_id": "",
@@ -235,64 +236,12 @@
         "title": "Batteripaket från 38 900:-",
         "text": "<p>Ta kontroll över din energiförbrukning med våra intelligenta batteripaket som optimerar elflödet automatiskt och kraftigt reducerar kostnaderna. Systemet gör att du kan använda mer av din egenproducerade el och bli upp emot 80 % självförsörjande – samtidigt som effekttoppar elimineras.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/Kampanj..png",
+        "image": "shopify://shop_images/Namnlos_design_1_27551934-dc00-4e82-9d8f-ddbe75106abc.png",
         "image_position": "left",
-        "overlay_opacity": 30,
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "shopify://pages/landningssida-film",
         "custom_id": ""
-      }
-    },
-    "hur_7UXeyd": {
-      "type": "hur",
-      "blocks": {
-        "step_Mi7mMg": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Group.svg",
-            "title": "Steg 1",
-            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
-          }
-        },
-        "step_zLaBKE": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/book.svg",
-            "title": "Steg 2",
-            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
-          }
-        },
-        "step_zB67Cf": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Vector-1.svg",
-            "title": "Steg 3",
-            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
-          }
-        },
-        "step_reWzkk": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Vector.svg",
-            "title": "Steg 4",
-            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_Mi7mMg",
-        "step_zLaBKE",
-        "step_zB67Cf",
-        "step_reWzkk"
-      ],
-      "name": "How it works",
-      "settings": {
-        "heading": "Så går det till – en trygg process från beställning till driftsättning",
-        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
       }
     },
     "slider_sektion_PkT3FL": {
@@ -350,6 +299,74 @@
       "settings": {
         "title": "Våra utvalda batterier",
         "custom_id": ""
+      }
+    },
+    "bild_och_text_nDWrQ4": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Lägg till backup vid strömavbrott",
+        "text": "<p>Alla våra batterier och växelriktare är förberedda för ö-drift och fortsätter automatiskt att leverera el vid strömavbrott.</p><p>För dig som vill bli helt oberoende kan vi även erbjuda kompletta off-gridlösningar med solceller, batteri och elverk.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/pro-wap-1-3.jpg",
+        "image_position": "left",
+        "overlay_opacity": 30,
+        "image_button_text": "Offert",
+        "image_button_link": "shopify://pages/offert-forfragan",
+        "custom_id": ""
+      }
+    },
+    "hur_7UXeyd": {
+      "type": "hur",
+      "blocks": {
+        "step_Mi7mMg": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Group.svg",
+            "title": "Steg 1",
+            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
+          }
+        },
+        "step_zLaBKE": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/book.svg",
+            "title": "Steg 2",
+            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
+          }
+        },
+        "step_zB67Cf": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector-1.svg",
+            "title": "Steg 3",
+            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
+          }
+        },
+        "step_reWzkk": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector.svg",
+            "title": "Steg 4",
+            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_Mi7mMg",
+        "step_zLaBKE",
+        "step_zB67Cf",
+        "step_reWzkk"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så går det till – en trygg process från beställning till driftsättning",
+        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
       }
     },
     "bild_och_text_knappar_aKrn9q": {
@@ -494,22 +511,6 @@
         "overlay_opacity": 30,
         "image_button_text": "Så fungerar det",
         "image_button_link": "shopify://pages/var-losning",
-        "custom_id": ""
-      }
-    },
-    "bild_och_text_nDWrQ4": {
-      "type": "bild-och-text",
-      "name": "Bild och text",
-      "settings": {
-        "background_color": "#ffffff",
-        "title": "Lägg till backup vid strömavbrott",
-        "text": "<p><br/>Säkra elen vid strömavbrott – med smart backup får du fortsatt drift och trygghet även när nätet ligger nere.<br/><br/></p>",
-        "media_type": "image",
-        "image": "shopify://shop_images/pro-wap-1-3.jpg",
-        "image_position": "left",
-        "overlay_opacity": 30,
-        "image_button_text": "Offert",
-        "image_button_link": "shopify://pages/offert-forfragan",
         "custom_id": ""
       }
     },
@@ -948,14 +949,14 @@
     "grid_omraden_g48U3c",
     "paket_YY9TC3",
     "bild_och_text_knappar_AbTQrL",
-    "hur_7UXeyd",
     "slider_sektion_PkT3FL",
+    "bild_och_text_nDWrQ4",
+    "hur_7UXeyd",
     "bild_och_text_knappar_aKrn9q",
     "bild_och_text_ydyfhV",
     "relaterade_produkter_jRpymw",
     "banner_med_3_produkter_D79ei6",
     "bild_och_text_trnXfg",
-    "bild_och_text_nDWrQ4",
     "slider_sektion_Rd7AJK",
     "avdrag_UeYUdn",
     "banner_med_3_produkter_3LW7zF",

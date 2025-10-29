@@ -18,12 +18,115 @@
       "name": "Hero",
       "settings": {
         "media_type": "image",
-        "background_image": "shopify://shop_images/IMG_1688_50c1417e-1686-41ba-8287-ec6f5cc08a6a.jpg",
+        "background_image": "shopify://shop_images/Batteripaket_fran_38_900.png",
         "overlay_opacity": 65,
-        "heading": "Dyness STACK100, Dyness Tower PRO + SOLIS",
-        "subheading": "Upptäck våra kampanjer på batteripaket",
-        "button_text": "",
-        "button_url": ""
+        "heading": "Batteripaket från 38 900kr",
+        "subheading": "Upptäck våra kompletta paket med batteri, hybridväxelriktare, AI-styrning och installation.",
+        "button_text": "010-200 77 17",
+        "button_url": "shopify://pages/offert-forfragan"
+      }
+    },
+    "paket_qtFeVj": {
+      "type": "paket",
+      "blocks": {
+        "button_WfPCPt": {
+          "type": "button",
+          "settings": {
+            "text": "Köp nu >",
+            "url": "shopify://products/dyness-tower-pro",
+            "show_arrow": true
+          }
+        },
+        "button_HCTihF": {
+          "type": "button",
+          "settings": {
+            "text": "Få offert >",
+            "url": "shopify://pages/offert-forfragan",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "button_WfPCPt",
+        "button_HCTihF"
+      ],
+      "name": "Paket",
+      "settings": {
+        "custom_id": "",
+        "image": "shopify://shop_images/Namnlos_design_1_27551934-dc00-4e82-9d8f-ddbe75106abc.png",
+        "title": "Fr. 38 900:-",
+        "price": "Dyness Tower Pro 7,7 kWh + Solis 10 kW",
+        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+      }
+    },
+    "paket_etC3Qr": {
+      "type": "paket",
+      "blocks": {
+        "button_JRxyhW": {
+          "type": "button",
+          "settings": {
+            "text": "Köp nu >",
+            "url": "shopify://products/dyness-stack100",
+            "show_arrow": true
+          }
+        },
+        "button_8qH9tp": {
+          "type": "button",
+          "settings": {
+            "text": "Få offert >",
+            "url": "shopify://pages/landningssida-film",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "button_JRxyhW",
+        "button_8qH9tp"
+      ],
+      "custom_css": [
+        "/* Vänder layouten för denna sektion */.paket-layout {display: flex; flex-direction: column;}",
+        "@media (min-width: 768px) {.paket-layout {flex-direction: row-reverse; }}"
+      ],
+      "name": "Paket",
+      "settings": {
+        "custom_id": "",
+        "image": "shopify://shop_images/100.png",
+        "title": "Fr. 49 900:-",
+        "price": "Dyness STACK100 15,3 kWh + Solis 10 kW",
+        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+      }
+    },
+    "paket_jUKYhD": {
+      "type": "paket",
+      "blocks": {
+        "button_jQXUgf": {
+          "type": "button",
+          "settings": {
+            "text": "Köp nu >",
+            "url": "shopify://products/dyness-stack100",
+            "show_arrow": true
+          }
+        },
+        "button_q7mAHh": {
+          "type": "button",
+          "settings": {
+            "text": "Få offert >",
+            "url": "shopify://pages/offert-forfragan",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "button_jQXUgf",
+        "button_q7mAHh"
+      ],
+      "name": "Paket",
+      "settings": {
+        "custom_id": "",
+        "image": "shopify://shop_images/Namnlos_design_1_27551934-dc00-4e82-9d8f-ddbe75106abc.png",
+        "title": "Fr. 49 900:-",
+        "price": "Dyness STACK100 30,6 kWh + Solis 15 kW",
+        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
       }
     },
     "slider_sektion_qjEhPV": {
@@ -40,7 +143,7 @@
         "product_TUGzNt": {
           "type": "product",
           "settings": {
-            "product": "sigenergy-1",
+            "product": "dyness-tower-pro",
             "show_price": false,
             "description": "Ledande design och smart energilagring i ett."
           }
@@ -48,7 +151,7 @@
         "product_B86Ygm": {
           "type": "product",
           "settings": {
-            "product": "fronius-reserva",
+            "product": "saj",
             "show_price": false,
             "description": "Europeiskt premiumbatteri med driftsäker prestanda och servrar inom EU."
           }
@@ -56,7 +159,7 @@
         "product_Cybgwb": {
           "type": "product",
           "settings": {
-            "product": "saj",
+            "product": "fronius-reserva",
             "show_price": false,
             "description": "Stilren energilagring med kompakt design för ditt hem."
           }
@@ -64,9 +167,9 @@
         "product_Jjr3P6": {
           "type": "product",
           "settings": {
-            "product": "dyness-tower-pro",
+            "product": "sigenergy-1",
             "show_price": false,
-            "description": "Prisvärd och kraftfull energilagring för utomhusbruk."
+            "description": "Prisvärd och kraftfull energilagring för utomhusbruk.          \n\n\nFrån 44900 kr"
           }
         }
       },
@@ -79,7 +182,155 @@
       ],
       "name": "Produktslider",
       "settings": {
-        "title": "Våra utvalda batterier",
+        "title": "Upptäck alla våra utvalda batterier",
+        "custom_id": ""
+      }
+    },
+    "grid_omraden_BEhDEW": {
+      "type": "grid-omraden",
+      "name": "Grid areas",
+      "settings": {
+        "title": "Vi hjälper dig sänka elräkningen - till marknadens bästa priser",
+        "description": "Här kan du beställa kompletta batteri- och laddboxpaket med installation och grön teknik-avdrag – eller boka en energiexpert som skräddarsyr den bästa lösningen för ditt hem.",
+        "card_1_button_text": "Boka möte direkt",
+        "card_1_button_link": "shopify://pages/offert-forfragan",
+        "card_1_overlay_opacity": 15,
+        "card_2_button_text": "Köp direkt i butik",
+        "card_2_button_link": "shopify://pages/vara-produkter",
+        "card_2_overlay_opacity": 20,
+        "card_3_image": "shopify://shop_images/ChatGPT_Image_25_okt._2025_22_58_40.png",
+        "card_3_button_text": "Boka möte direkt",
+        "card_3_button_link": "shopify://pages/offert-forfragan",
+        "card_3_overlay_opacity": 0,
+        "card_4_image": "shopify://shop_images/banner.webp",
+        "card_4_button_text": "Köp direkt i butik",
+        "card_4_button_link": "shopify://pages/vara-produkter",
+        "card_4_overlay_opacity": 20,
+        "bottom_description": ""
+      }
+    },
+    "bild_och_text_nVkW73": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Lägg till backup vid strömavbrott",
+        "text": "<p>Våra batterier och växelriktare är förberedda för ö-drift och fortsätter automatiskt att leverera el vid strömavbrott.</p><p>För dig som vill bli helt oberoende kan vi även erbjuda kompletta off-gridlösningar med solceller, batteri och elverk.</p>",
+        "media_type": "image",
+        "image": "shopify://shop_images/pro-wap-1-3.jpg",
+        "image_position": "left",
+        "overlay_opacity": 30,
+        "image_button_text": "Offert",
+        "image_button_link": "shopify://pages/offert-forfragan",
+        "custom_id": ""
+      }
+    },
+    "hur_BYebNg": {
+      "type": "hur",
+      "blocks": {
+        "step_DWDq6D": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Group.svg",
+            "title": "Steg 1",
+            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
+          }
+        },
+        "step_7QWPxF": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/book.svg",
+            "title": "Steg 2",
+            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
+          }
+        },
+        "step_RPdfBf": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector-1.svg",
+            "title": "Steg 3",
+            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
+          }
+        },
+        "step_Ycje6C": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector.svg",
+            "title": "Steg 4",
+            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_DWDq6D",
+        "step_7QWPxF",
+        "step_RPdfBf",
+        "step_Ycje6C"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så går det till – en trygg process från beställning till driftsättning",
+        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
+      }
+    },
+    "slider_sektion_h9EWtP": {
+      "type": "slider-sektion",
+      "blocks": {
+        "product_TNTfLp": {
+          "type": "product",
+          "settings": {
+            "product": "solinteg",
+            "show_price": false,
+            "description": "Optimera energin i varje fas med Solintegs fasbalasering – för stabil drift, högre verkningsgrad och smartare solanvändning."
+          }
+        },
+        "product_LWGkLy": {
+          "type": "product",
+          "settings": {
+            "product": "fronius-verto",
+            "show_price": false,
+            "description": "En avancerad växelriktare med hög verkningsgrad och intelligent styrning, designad för maximal solenergiproduktion och driftsäkerhet året runt."
+          }
+        },
+        "product_gbzKeU": {
+          "type": "product",
+          "settings": {
+            "product": "solis-s6-eh3p10-kw",
+            "show_price": false,
+            "description": "Vår mest prisvärda växelriktare – med AI-styrning, dubbla MPPT och realtidsoptimering för maximal solproduktion och oslagbar driftssäkerhet."
+          }
+        },
+        "product_Rbk7DV": {
+          "type": "product",
+          "settings": {
+            "product": "saj",
+            "show_price": false,
+            "description": "SAJ HS3 är en integrerad hybridväxelriktare monterad direkt på batteriet, med ultratunn design och smart energistyrning för maximal effektivitet och platsbesparing."
+          }
+        },
+        "product_Q8hdE3": {
+          "type": "product",
+          "settings": {
+            "product": "sigenergy",
+            "show_price": true,
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_TNTfLp",
+        "product_LWGkLy",
+        "product_gbzKeU",
+        "product_Rbk7DV",
+        "product_Q8hdE3"
+      ],
+      "name": "Produktslider",
+      "settings": {
+        "title": "Upptäck våra hybridväxelriktare",
         "custom_id": ""
       }
     },
@@ -113,12 +364,158 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "review_tQCwBY": {
+      "type": "review",
+      "blocks": {
+        "review_tpF7me": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
+          }
+        },
+        "review_R9z8RF": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
+          }
+        },
+        "review_Nm4Jn6": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
+          }
+        }
+      },
+      "block_order": [
+        "review_tpF7me",
+        "review_R9z8RF",
+        "review_Nm4Jn6"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
+      }
+    },
+    "kontakt_form_FxNFw3": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_djU9mC": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_AqgAAT": {
+          "type": "form_field",
+          "settings": {
+            "label": "Mailadress",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_7gGUYP": {
+          "type": "form_field",
+          "settings": {
+            "label": "Addres",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": false,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_XHwGBp": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$",
+            "rows": 4
+          }
+        },
+        "service_option_yKRxww": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_dfznmh": {
+          "type": "service_option",
+          "settings": {
+            "label": "Energilagring",
+            "service_key": ""
+          }
+        },
+        "service_option_7iNtBQ": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddbox",
+            "service_key": ""
+          }
+        },
+        "service_option_BQqkTq": {
+          "type": "service_option",
+          "settings": {
+            "label": "Boka elektriker",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_djU9mC",
+        "form_field_AqgAAT",
+        "form_field_7gGUYP",
+        "form_field_XHwGBp",
+        "service_option_yKRxww",
+        "service_option_dfznmh",
+        "service_option_7iNtBQ",
+        "service_option_BQqkTq"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Fri rådgivning och offert",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_GhxDWK",
+    "paket_qtFeVj",
+    "paket_etC3Qr",
+    "paket_jUKYhD",
     "slider_sektion_qjEhPV",
-    "avdrag_cXVHYp"
+    "grid_omraden_BEhDEW",
+    "bild_och_text_nVkW73",
+    "hur_BYebNg",
+    "slider_sektion_h9EWtP",
+    "avdrag_cXVHYp",
+    "review_tQCwBY",
+    "kontakt_form_FxNFw3"
   ]
 }

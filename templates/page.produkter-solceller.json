@@ -21,7 +21,7 @@
         "media_type": "image",
         "background_image": "shopify://shop_images/image_18.png",
         "overlay_opacity": 20,
-        "heading": "Halverad in din elräkning med solceller",
+        "heading": "Halvera din elräkning med solceller",
         "subheading": "Visste du att du kan sänka dina elkostnader med upp till 60% med solceller och batterilager. Dessutom kan du vara helt självförsörjande från mars till oktober, hur bra är inte det!",
         "button_text": "Fri offert",
         "button_url": "shopify://pages/support-om-oss"
@@ -397,18 +397,6 @@
             "rows": 4
           }
         },
-        "form_field_JUbj6g": {
-          "type": "form_field",
-          "settings": {
-            "label": "Meddelande",
-            "name": "",
-            "field_type": "textarea",
-            "placeholder": "",
-            "required": false,
-            "pattern": "",
-            "rows": 4
-          }
-        },
         "service_option_MDG9VU": {
           "type": "service_option",
           "settings": {
@@ -443,7 +431,6 @@
         "form_field_9jQ9jC",
         "form_field_RTKrXB",
         "form_field_4eb6RJ",
-        "form_field_JUbj6g",
         "service_option_MDG9VU",
         "service_option_Y6XkrA",
         "service_option_U78PLb",

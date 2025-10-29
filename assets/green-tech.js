@@ -1,6 +1,4 @@
-<script>
 (() => {
-  /** Formatera öre → SEK (sv-SE) */
   function formatMoney(cents) {
     try {
       return new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' }).format((cents || 0) / 100);
@@ -9,27 +7,12 @@
     }
   }
 
-  /** Hämta antal från mängdfält (fallback 1) */
   function getQuantity() {
     const qtyInput = document.querySelector('#quantity-input');
     const qty = qtyInput ? parseInt(qtyInput.value, 10) : 1;
     return isNaN(qty) || qty < 1 ? 1 : qty;
   }
 
-  /** Robust tolkning av betal-sats (svenska format) */
-  function parsePayRate(root) {
-    // Tillåt "0,515", "0.515", "51,5%", "51.5%", "0,00515" (om 0,515%)
-    const raw = (root.getAttribute('data-green-rate') || '').trim();
-    if (!raw) return 0.515; // default = 51,5% att betala
-    let s = raw.replace('%', '').replace(',', '.');
-    let num = parseFloat(s);
-    if (isNaN(num)) return 0.515;
-    if (num > 1) num = num / 100; // 51,5 → 0.515
-    // Begränsa [0..1]
-    return Math.max(0, Math.min(num, 1));
-  }
-
-  /** Omräkning av pris och state */
   function recalc(root) {
     const toggle = root.querySelector('#green-tech-toggle');
     const countWrap = root.querySelector('#green-tech-count-wrap');
@@ -40,23 +23,20 @@
     const basePriceDisplay = root.querySelector('#base-price-display');
     const stateEl = root.querySelector('#green-tech-state-json');
 
-    // Baspris i öre (cents)
-    const baseUnitPrice = parseInt(root.getAttribute('data-base-price'), 10) || 0;
-    // Ny betal-sats (andel av beloppet man BETALAR, ex 0.515 = 51,5 %)
-    const payRate = parsePayRate(root);
+    const baseUnitPrice = parseInt(root.getAttribute('data-base-price'), 10) || 0; // cents
+    const rate = parseFloat(root.getAttribute('data-green-rate')) || 0.53;
 
     const quantity = getQuantity();
     const subtotal = baseUnitPrice * quantity;
 
-    const state = { enabled: false, count: 1, payRate, subtotal, deduction: 0, final: subtotal };
+    const state = { enabled: false, count: 1, rate, subtotal, deduction: 0, final: subtotal };
 
-    // När grön teknik är av (toggle ej vald)
     if (!toggle || !toggle.checked) {
       if (basePriceDisplay) basePriceDisplay.textContent = formatMoney(subtotal);
       if (countWrap) countWrap.style.display = 'none';
       if (summary) summary.style.display = 'none';
       if (stateEl) stateEl.value = JSON.stringify(state);
-      // Töm kundvagnsattribut så ev. backend-funktion inte försöker applicera något
+      // Update cart attribute so Function doesn't apply discount
       try {
         fetch('/cart/update.js', {
           method: 'POST',
@@ -70,16 +50,11 @@
     if (countWrap) countWrap.style.display = 'flex';
     const count = countSelect ? (parseInt(countSelect.value, 10) === 2 ? 2 : 1) : 1;
 
-    // Cap: 50 000 kr per person i öre
-    const capPerCount = 5_000_000;
-    const totalCap = capPerCount * count; // 50k eller 100k
+    const capPerCount = 5000000; // 50,000 SEK in cents
+    const totalCap = capPerCount * count; // 50k or 100k
 
-    // Räkna slutpris från betal-sats, härled avdrag
-    const intendedFinal = Math.round(subtotal * payRate);
-    const intendedDeduction = subtotal - intendedFinal;
-
-    // Applicera cap på avdraget (inte på slutpriset)
-    const deduction = Math.min(Math.max(intendedDeduction, 0), totalCap);
+    const potentialDeduction = Math.round(subtotal * rate);
+    const deduction = Math.min(potentialDeduction, totalCap);
     const finalPrice = Math.max(subtotal - deduction, 0);
 
     if (basePriceDisplay) basePriceDisplay.textContent = formatMoney(subtotal);
@@ -87,10 +62,9 @@
     if (finalEl) finalEl.textContent = formatMoney(finalPrice);
     if (summary) summary.style.display = 'block';
 
-    const newState = { enabled: true, count, payRate, subtotal, deduction, final: finalPrice };
+    const newState = { enabled: true, count, rate, subtotal, deduction, final: finalPrice };
     if (stateEl) stateEl.value = JSON.stringify(newState);
-
-    // Spara val i cart attributes för ev. Discount Function/uppföljning
+    // Persist selection to cart attribute for Discount Function
     try {
       fetch('/cart/update.js', {
         method: 'POST',
@@ -101,7 +75,6 @@
     return newState;
   }
 
-  /** Hooka Add to Cart / Köp nu och skicka med properties */
   function hookAddToCart(root) {
     const addToCartBtn = document.querySelector('.add-to-cart-btn');
     const buyNowBtn = document.querySelector('.buy-now-btn');
@@ -125,9 +98,9 @@
         return {
           'Grön teknik': 'Ja',
           'Grön teknik – antal': String(state.count),
-          'Grön teknik – betal-sats': String(state.payRate),             // ex 0.515
+          'Grön teknik – sats': String(state.rate),
           'Grön teknik – avdrag (SEK)': (state.deduction / 100).toFixed(2),
-          'Belopp att betala (SEK)': (state.final / 100).toFixed(2)      // <- skickas till varukorgen som property
+          'Pris efter avdrag (SEK)': (state.final / 100).toFixed(2)
         };
       } catch (_) {
         return {};
@@ -142,7 +115,9 @@
         const props = getGreenProperties();
         try {
           await addWithProperties(variantId, quantity, props, false);
-          document.dispatchEvent(new CustomEvent('cart:updated'));
+          // Open cart drawer if available
+          const drawerOpenEvent = new CustomEvent('cart:updated');
+          document.dispatchEvent(drawerOpenEvent);
         } catch (err) {
           console.error(err);
         }
@@ -164,7 +139,6 @@
     }
   }
 
-  /** Lyssnare för UI */
   function attachListeners(root) {
     const toggle = root.querySelector('#green-tech-toggle');
     const countSelect = root.querySelector('#green-tech-count');
@@ -179,7 +153,7 @@
       qtyInput.addEventListener('input', run);
     }
 
-    // Hooka ev. global kvantitetsfunktion
+    // Hook into existing global quantity function if present
     if (window.updateQuantity && !window.__greenPatched) {
       const original = window.updateQuantity;
       window.updateQuantity = function(delta) {
@@ -191,13 +165,17 @@
     }
   }
 
-  /** Init */
   document.addEventListener('DOMContentLoaded', () => {
     const root = document.querySelector('[data-green-tech]');
     if (!root) return;
+    // initial calc
     recalc(root);
+    // listeners
     attachListeners(root);
+    // wire cart/checkout
     hookAddToCart(root);
   });
 })();
-</script>
+
+
+

@@ -133,7 +133,7 @@
         "title": "Undvik höga elnätsavgifter",
         "text": "<p>Höjda elnätsavgifter är redan en realitet för många hushåll, och snart införs effektbaserade avgifter i hela Sverige. För att minska elkostnaderna och öka självförsörjningen kan investeringar i solceller och batterilagring vara en lösning. Genom att producera och lagra egen el minskar beroendet av elnätet, vilket kan leda till lägre kostnader och ökad stabilitet i elförsörjningen.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/cq5dam.web.1280.720.webp",
+        "image": "shopify://shop_images/Namnlos_design_2.png",
         "image_position": "left",
         "overlay_opacity": 0,
         "image_button_text": "",
@@ -325,6 +325,95 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "kontakt_form_qiT88c": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_egYipT": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_MypMGP": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_teLC7U": {
+          "type": "form_field",
+          "settings": {
+            "label": "E-post",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_CrHqNq": {
+          "type": "form_field",
+          "settings": {
+            "label": "Adress",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "service_option_Q6KY9G": {
+          "type": "service_option",
+          "settings": {
+            "label": "Batterier",
+            "service_key": ""
+          }
+        },
+        "service_option_d6Texq": {
+          "type": "service_option",
+          "settings": {
+            "label": "Installation",
+            "service_key": ""
+          }
+        },
+        "service_option_TeA6xW": {
+          "type": "service_option",
+          "settings": {
+            "label": "Frågor",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_egYipT",
+        "form_field_MypMGP",
+        "form_field_teLC7U",
+        "form_field_CrHqNq",
+        "service_option_Q6KY9G",
+        "service_option_d6Texq",
+        "service_option_TeA6xW"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Ta kontakt med oss",
+        "header_button_text": "Kontakt",
+        "header_button_url": "shopify://pages/support-om-oss"
+      }
     }
   },
   "order": [
@@ -337,6 +426,7 @@
     "bild_och_text_iMgyFz",
     "avdrag_BEUazc",
     "review_dGhe9D",
-    "faq_produkt_kNnprQ"
+    "faq_produkt_kNnprQ",
+    "kontakt_form_qiT88c"
   ]
 }
