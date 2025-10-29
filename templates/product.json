@@ -13,53 +13,9 @@
       "type": "product",
       "settings": {
         "show_installation": true,
-        "installation_product": "dyness-stack100",
+        "installation_product": "",
         "installation_title": "",
         "installation_description": ""
-      }
-    },
-    "faq_produkt": {
-      "type": "faq-produkt",
-      "blocks": {
-        "faq_item_1": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Ämne",
-            "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
-          }
-        },
-        "faq_item_2": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Vad ingår i installationen?",
-            "button_text": "Ämne",
-            "description": "",
-            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
-          }
-        },
-        "faq_item_3": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hur mycket kan jag spara på min elräkning?",
-            "button_text": "Ämne",
-            "description": "",
-            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_1",
-        "faq_item_2",
-        "faq_item_3"
-      ],
-      "settings": {
-        "title": "Vanliga frågor",
-        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "relaterade_produkter": {
@@ -74,7 +30,6 @@
   },
   "order": [
     "main",
-    "faq_produkt",
     "relaterade_produkter"
   ]
 }
