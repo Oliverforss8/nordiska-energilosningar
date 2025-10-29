@@ -12,9 +12,65 @@
     "main": {
       "type": "page",
       "settings": {}
+    },
+    "banner_bild_mt9wGY": {
+      "type": "banner-bild",
+      "name": "Banner bild",
+      "settings": {
+        "layout_type": "contained",
+        "media_type": "image",
+        "background_color": "#000000",
+        "overlay_opacity": 0,
+        "header_button_text": "",
+        "header_button_url": "",
+        "heading": "Banner rubrik",
+        "description": "Banner beskrivning",
+        "primary_button_text": "Primär knapp",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": "",
+        "custom_id": ""
+      }
+    },
+    "hero_slider_bNajP7": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide_drLXfw": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "overlay_opacity": 20,
+            "heading": "Allmänna Villkor",
+            "subheading": "",
+            "button_text": "Våra energilösningar",
+            "button_url": ""
+          }
+        },
+        "slide_HUwbrD": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "overlay_opacity": 20,
+            "heading": "Slide 2",
+            "subheading": "En annan beskrivning",
+            "button_text": "Läs mer",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_drLXfw",
+        "slide_HUwbrD"
+      ],
+      "name": "Hero slider",
+      "settings": {
+        "autoplay_speed": 5000
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "banner_bild_mt9wGY",
+    "hero_slider_bNajP7"
   ]
 }
