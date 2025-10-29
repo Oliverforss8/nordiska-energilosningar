@@ -13,57 +13,49 @@
       "type": "product",
       "settings": {
         "show_installation": true,
-        "installation_product": "installation-laddbox",
+        "installation_product": "",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få 48,5% rabatt (max 50 000 kr) på totalpriset med grönt avdrag.",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Få 48,5% rabatt (max 100 000 kr) på totalpriset med grönt avdrag."
+        "installation_description": ""
       }
     },
-    "faq_produkt": {
-      "type": "faq-produkt",
+    "review_JbUbNY": {
+      "type": "review",
       "blocks": {
-        "faq_item_1": {
-          "type": "faq_item",
+        "review_tL33zW": {
+          "type": "review",
           "settings": {
-            "question": "Hur lång är garantin på era produkter?",
-            "button_text": "Ämne",
-            "description": "",
-            "answer": "<p>Vi erbjuder 5 års garanti på alla våra solceller och 2 års garanti på våra batterier.</p>"
+            "stars": 5,
+            "review_text": "Från första kontakten var teamet på Nordiska energilösningar professionella och lyhörda.De erbjöd kostnadsfri rådgivning och analyserade vårt elförbrukningsmönster för att skräddarsy en lösning som passade våra behov!\nTack!",
+            "customer_name": "Marie"
           }
         },
-        "faq_item_2": {
-          "type": "faq_item",
+        "review_YMfPhm": {
+          "type": "review",
           "settings": {
-            "question": "Vad ingår i installationen?",
-            "button_text": "Ämne",
-            "description": "",
-            "answer": "<p>Installationen inkluderar montering, inkoppling och idriftsättning. Vi tar hand om alla tillstånd och anmälningar.</p>"
+            "stars": 5,
+            "review_text": "Vill tacka för trevligt och korrekt bemötande inför och vid installationen av våra solcellsbatterier!! Alltid snabba svar både via telefon och sms. Därför rekommenderar vi Nordiska Energilösningar!!",
+            "customer_name": "Ruben"
           }
         },
-        "faq_item_3": {
-          "type": "faq_item",
+        "review_GUJdcD": {
+          "type": "review",
           "settings": {
-            "question": "Hur mycket kan jag spara på min elräkning?",
-            "button_text": "Ämne",
-            "description": "",
-            "answer": "<p>Besparingen beror på din förbrukning och systemets storlek. Kontakta oss för en personlig kalkyl.</p>"
+            "stars": 5,
+            "review_text": "Jättenöjd med att anlita Nordiska Energilösningar för batteri installation till befintlig solcellanläggning. Bra kommunikation, smidig hantering och rätt i pris. Kan klart rekommenderas!",
+            "customer_name": "Stefan"
           }
         }
       },
       "block_order": [
-        "faq_item_1",
-        "faq_item_2",
-        "faq_item_3"
+        "review_tL33zW",
+        "review_YMfPhm",
+        "review_GUJdcD"
       ],
+      "name": "Reviews",
       "settings": {
-        "title": "Vanliga frågor",
-        "description": "<p>Här hittar du svar på vanliga frågor om våra produkter.</p>",
-        "custom_id": "",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "heading": "Vad våra kunder säger om oss",
+        "button_text": "Läs alla recensioner",
+        "button_url": ""
       }
     },
     "relaterade_produkter": {
@@ -74,11 +66,109 @@
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
+    },
+    "kontakt_form_CrnacH": {
+      "type": "kontakt-form",
+      "blocks": {
+        "form_field_Nf7WaJ": {
+          "type": "form_field",
+          "settings": {
+            "label": "För- & efternamn",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_EtkLbb": {
+          "type": "form_field",
+          "settings": {
+            "label": "Mailadress",
+            "name": "",
+            "field_type": "email",
+            "placeholder": "",
+            "required": true,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_r4jCPe": {
+          "type": "form_field",
+          "settings": {
+            "label": "Addres",
+            "name": "",
+            "field_type": "text",
+            "placeholder": "",
+            "required": false,
+            "pattern": "",
+            "rows": 4
+          }
+        },
+        "form_field_e7CURX": {
+          "type": "form_field",
+          "settings": {
+            "label": "Telefonnummer",
+            "name": "",
+            "field_type": "tel",
+            "placeholder": "",
+            "required": false,
+            "pattern": "^[0-9\\- +()]*$",
+            "rows": 4
+          }
+        },
+        "service_option_tczwtx": {
+          "type": "service_option",
+          "settings": {
+            "label": "Solceller",
+            "service_key": ""
+          }
+        },
+        "service_option_WgYeEF": {
+          "type": "service_option",
+          "settings": {
+            "label": "Energilagring",
+            "service_key": ""
+          }
+        },
+        "service_option_A38LDt": {
+          "type": "service_option",
+          "settings": {
+            "label": "Laddbox",
+            "service_key": ""
+          }
+        },
+        "service_option_geBiYL": {
+          "type": "service_option",
+          "settings": {
+            "label": "Boka elektriker",
+            "service_key": ""
+          }
+        }
+      },
+      "block_order": [
+        "form_field_Nf7WaJ",
+        "form_field_EtkLbb",
+        "form_field_r4jCPe",
+        "form_field_e7CURX",
+        "service_option_tczwtx",
+        "service_option_WgYeEF",
+        "service_option_A38LDt",
+        "service_option_geBiYL"
+      ],
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Fri rådgivning och offert",
+        "header_button_text": "",
+        "header_button_url": ""
+      }
     }
   },
   "order": [
     "main",
-    "faq_produkt",
+    "kontakt_form_CrnacH",
+    "review_JbUbNY",
     "relaterade_produkter"
   ]
 }
