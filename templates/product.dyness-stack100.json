@@ -47,11 +47,7 @@
         "show_installation": true,
         "installation_product": "installation",
         "installation_title": "Installation",
-        "installation_description": "Professionell installation av din produkt",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": "Professionell installation av din produkt"
       }
     },
     "tekniska_specifikationer_AdpmjP": {
@@ -176,6 +172,7 @@
         "media_type": "video",
         "video": "shopify://files/videos/1C1.mp4",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -213,20 +210,11 @@
         "header_button_text": "",
         "header_button_url": "",
         "heading": "Snabbt. Säkert. Självklart.",
-        "description": "Varje modul är utrustad med en avancerad aerosolsbrandsläckare som reagerar blixtsnabbt vid hög temperatur. Inom 5 sekunder aktiveras skyddet, minimerar brandrisker och skapar en säker miljö.",
+        "description": "Varje modul är utrustad med en avancerad aerosolsbrandsläckare som reagerar blixtsnabbt vid hög temperatur. Inom 5 sekunder aktiveras skyddet, som minimerar brandrisker och skapar en säker miljö.",
         "primary_button_text": "",
         "primary_button_url": "",
         "secondary_button_text": "",
         "secondary_button_url": "",
-        "custom_id": ""
-      }
-    },
-    "relaterade_produkter": {
-      "type": "relaterade-produkter",
-      "settings": {
-        "title": "Relaterade produkter",
-        "button_text": "Se produkt",
-        "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
     },
@@ -268,6 +256,15 @@
         "heading": "Vad våra kunder säger om oss",
         "button_text": "Läs alla recensioner",
         "button_url": ""
+      }
+    },
+    "relaterade_produkter": {
+      "type": "relaterade-produkter",
+      "settings": {
+        "title": "Relaterade produkter",
+        "button_text": "Se produkt",
+        "no_products_message": "Inga relaterade produkter hittades.",
+        "custom_id": ""
       }
     }
   },
