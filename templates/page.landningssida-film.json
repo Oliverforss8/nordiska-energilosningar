@@ -56,7 +56,7 @@
         "image": "shopify://shop_images/Namnlos_design_1_27551934-dc00-4e82-9d8f-ddbe75106abc.png",
         "title": "Fr. 38 900:-",
         "price": "Dyness Tower Pro 7,7 kWh + Solis 10 kW",
-        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+        "description": "<p>Ett komplett paket med batteri, växelriktare och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt. Detta batteri är skalbart upp till 23 kWh i ett torn och kan stå utomhus. </p>"
       }
     },
     "paket_etC3Qr": {
@@ -93,7 +93,7 @@
         "image": "shopify://shop_images/100.png",
         "title": "Fr. 49 900:-",
         "price": "Dyness STACK100 15,3 kWh + Solis 10 kW",
-        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+        "description": "<p>Ett komplett paket med batteri, växelriktare och AI-styrning. Dyness Stack 100 är ett mycket kompakt batteri som är skalbart upp till 65 kWh i ett torn. Detta batteriet är anpassat för att stå inomhus. </p>"
       }
     },
     "paket_jUKYhD": {
@@ -123,10 +123,10 @@
       "name": "Paket",
       "settings": {
         "custom_id": "",
-        "image": "shopify://shop_images/Namnlos_design_1_27551934-dc00-4e82-9d8f-ddbe75106abc.png",
-        "title": "Fr. 49 900:-",
+        "image": "shopify://shop_images/114319-Dyness-STACK100-6S-Batteriespeicher-3072-kWh-1_600x600_78bfca64-a0ee-480f-8d20-f79f2e2e035c.png",
+        "title": "76 900:-",
         "price": "Dyness STACK100 30,6 kWh + Solis 15 kW",
-        "description": "<p>Ett komplett solcellssystem med batteri och AI-styrning som gör att du inte bara producerar egen el, utan också optimerar din energiförbrukning automatiskt.</p>"
+        "description": "<p><strong>Detta är ett maxat batterilager för dig med högt energibehov och höga krav på trygghet och självförsörjning.</strong><br/><br/>Med ett större batterilager maximerar du nyttan av din solel och ökar din självständighet från elnätet. För dig som äger elbil fungerar batteriet dessutom som en energibrygga – vilket möjliggör ännu större flexibilitet och framtidssäkra energilösningar.<br/><br/></p>"
       }
     },
     "slider_sektion_qjEhPV": {
@@ -153,7 +153,7 @@
           "settings": {
             "product": "saj",
             "show_price": false,
-            "description": "Europeiskt premiumbatteri med driftsäker prestanda och servrar inom EU."
+            "description": "Stilren energilagring med kompakt design för ditt hem."
           }
         },
         "product_Cybgwb": {
@@ -161,7 +161,7 @@
           "settings": {
             "product": "fronius-reserva",
             "show_price": false,
-            "description": "Stilren energilagring med kompakt design för ditt hem."
+            "description": "Europeiskt premiumbatteri med driftsäker prestanda och servrar inom EU."
           }
         },
         "product_Jjr3P6": {
@@ -169,7 +169,7 @@
           "settings": {
             "product": "sigenergy-1",
             "show_price": false,
-            "description": "Prisvärd och kraftfull energilagring för utomhusbruk.          \n\n\nFrån 44900 kr"
+            "description": "Prisvärd och kraftfull energilagring för utomhusbruk."
           }
         }
       },
@@ -191,7 +191,7 @@
       "name": "Grid areas",
       "settings": {
         "title": "Vi hjälper dig sänka elräkningen - till marknadens bästa priser",
-        "description": "Här kan du beställa kompletta batteri- och laddboxpaket med installation och grön teknik-avdrag – eller boka en energiexpert som skräddarsyr den bästa lösningen för ditt hem.",
+        "description": "Beställ kompletta batteri- och laddboxpaket direkt i vår butik – med installation i hela Sverige.\n\n\nVill du ha hjälp att hitta den bästa lösningen för ditt hem? Boka en av våra energiexperter som skräddarsyr ett paket anpassat efter din energiförbrukning, elkostnad och framtida behov",
         "card_1_button_text": "Boka möte direkt",
         "card_1_button_link": "shopify://pages/offert-forfragan",
         "card_1_overlay_opacity": 15,
@@ -215,7 +215,7 @@
       "settings": {
         "background_color": "#ffffff",
         "title": "Lägg till backup vid strömavbrott",
-        "text": "<p>Våra batterier och växelriktare är förberedda för ö-drift och fortsätter automatiskt att leverera el vid strömavbrott.</p><p>För dig som vill bli helt oberoende kan vi även erbjuda kompletta off-gridlösningar med solceller, batteri och elverk.</p>",
+        "text": "<p>Våra batterier och växelriktare är förberedda för ö-drift och fortsätter automatiskt att leverera el vid strömavbrott. </p><p>För dig som vill bli helt oberoende kan vi även erbjuda kompletta off-gridlösningar med solceller, batteri och elverk. </p><p>Kontakta oss så berättar vi mer. </p>",
         "media_type": "image",
         "image": "shopify://shop_images/pro-wap-1-3.jpg",
         "image_position": "left",
