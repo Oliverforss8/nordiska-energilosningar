@@ -59,7 +59,7 @@
       ],
       "settings": {
         "show_installation": false,
-        "installation_product": "",
+        "installation_product": "installation-laddbox",
         "installation_title": "",
         "installation_description": ""
       }
@@ -267,7 +267,6 @@
       "type": "relaterade-produkter",
       "settings": {
         "title": "Relaterade produkter",
-        "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
