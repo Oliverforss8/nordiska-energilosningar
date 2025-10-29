@@ -58,7 +58,7 @@
         "upsell_product_pkYYN8"
       ],
       "settings": {
-        "show_installation": false,
+        "show_installation": true,
         "installation_product": "installation-laddbox",
         "installation_title": "",
         "installation_description": ""
