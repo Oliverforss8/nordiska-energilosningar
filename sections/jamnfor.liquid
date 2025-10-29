@@ -1,0 +1,458 @@
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+%}
+
+<section id="{{ section_id }}" class="py-[60px] md:py-[85px]">
+  <div class="layout">
+    {% liquid
+      assign shadow = section.settings.shadow_level
+      case shadow
+        when 'none'
+          assign card_shadow = 'none'
+        when 'subtle'
+          assign card_shadow = '0 8px 24px rgba(0,0,0,0.06)'
+        when 'medium'
+          assign card_shadow = '0 12px 32px rgba(0,0,0,0.10)'
+        when 'strong'
+          assign card_shadow = '0 16px 40px rgba(0,0,0,0.14)'
+        else
+          assign card_shadow = '0 8px 24px rgba(0,0,0,0.06)'
+      endcase
+    %}
+    <!-- Header Section -->
+    {% if section.settings.heading != blank or section.settings.description != blank %}
+      <div class="grid grid-cols-1 gap-[40px] pb-[60px] md:grid-cols-5 md:gap-[20px] md:pb-[80px]">
+        {% if section.settings.heading != blank %}
+          <h2 class="headline1 col-span-2 text-[40px] text-[#171717]">
+            {{ section.settings.heading | escape }}
+          </h2>
+        {% endif %}
+        <div class="col-span-1 hidden md:block"></div>
+        {% if section.settings.description != blank %}
+          <p class="text col-span-2 text-[#171717]">
+            {{ section.settings.description | escape }}
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <!-- Product Comparison Grid -->
+    {% if section.blocks.size > 0 %}
+      <div class="grid grid-cols-1 gap-[30px] md:grid-cols-3 md:gap-[20px]">
+        {% for block in section.blocks %}
+          {% assign product = block.settings.product %}
+
+          {% if product != blank %}
+            <div
+              class="flex flex-col rounded-[20px] p-[30px]"
+              style="background: {{ section.settings.card_bg | default: '#FFFFFF' }}; border: {% if section.settings.show_border %}1px solid {{ section.settings.card_border_color | default: '#E5E5E5' }}{% else %}1px solid transparent{% endif %}; box-shadow: {{ card_shadow }};"
+              {{ block.shopify_attributes }}
+            >
+              <!-- Product Image -->
+              {% if product.featured_image %}
+                <div class="mb-[20px] flex h-[200px] items-center justify-center">
+                  <img
+                    src="{{ product.featured_image | image_url: width: 300 }}"
+                    alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                    width="300"
+                    height="200"
+                    loading="lazy"
+                    class="h-full w-full object-contain"
+                  >
+                </div>
+              {% endif %}
+
+              <!-- Product Title -->
+              <h3 class="headline2 mb-[20px] text-[18px] text-[#171717]">
+                {{ product.title | escape }}
+              </h3>
+
+              <!-- Product Description -->
+              <div class="text mb-[20px] pb-[20px] text-[16px] text-[#525252]">
+                {% if block.settings.custom_description != blank %}
+                  {{ block.settings.custom_description }}
+                {% elsif product.description != blank %}
+                  {{ product.description | strip_html | truncate: 120 }}
+                {% else %}
+                  En komplett batterilagringslösning för ditt hem. Kontakta oss för mer information
+                  och specifikationer.
+                {% endif %}
+              </div>
+
+              <!-- Comparison Specs Grid -->
+              <div class="mb-[30px] flex flex-col gap-[12px]">
+                {% if block.settings.spec_1_label != blank
+                  and block.settings.spec_1_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_1_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_1_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_2_label != blank
+                  and block.settings.spec_2_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_2_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_2_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_3_label != blank
+                  and block.settings.spec_3_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_3_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_3_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_4_label != blank
+                  and block.settings.spec_4_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_4_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_4_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_5_label != blank
+                  and block.settings.spec_5_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_5_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_5_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_6_label != blank
+                  and block.settings.spec_6_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_6_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_6_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_7_label != blank
+                  and block.settings.spec_7_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_7_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_7_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_8_label != blank
+                  and block.settings.spec_8_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_8_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_8_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_9_label != blank
+                  and block.settings.spec_9_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_9_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_9_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.spec_10_label != blank
+                  and block.settings.spec_10_value != blank
+                %}
+                  <div class="flex items-start justify-between border-b border-[#F5F5F5] pb-[12px]">
+                    <span class="text text-[16px] text-[#737373]">
+                      {{- block.settings.spec_10_label -}}
+                    </span>
+                    <span class="text text-[14px] font-[500] text-[#171717]">
+                      {{- block.settings.spec_10_value -}}
+                    </span>
+                  </div>
+                {% endif %}
+              </div>
+
+              <!-- Price -->
+
+              <!-- CTA Button -->
+              <a
+                href="{{ product.url }}"
+                class="knappetikett mt-auto inline-flex items-center justify-center gap-[20px] rounded-full px-[20px] py-[17px] text-[#171717] no-underline transition-colors hover:opacity-90"
+                style="background: #E9A600;"
+              >
+                Läs vidare
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="18"
+                  viewBox="0 0 22 18"
+                  fill="none"
+                >
+                  <path d="M1 8.99991H21L13.1739 1.17383" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 9.00009H21L13.1739 16.8262" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center text-[#737373]">Inga produkter valda för jämförelse</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Jämför produkter",
+  "tag": "section",
+  "class": "section-jamnfor",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Rubrik"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Rubrik",
+      "default": "Vilket system för batterilagring passar mig?"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Beskrivning",
+      "default": "Vi hjälper dig att navigera bland alternativen för att hitta den bästa lösningen baserat på pris, storlek, kapacitet och specifika användningsområden. Kontakta oss för personlig rådgivning och säkerställ att du väljer systemet som optimalt matchar dina krav. Hittar du inte batteriet du söker här? Vi har ännu fler lösningar tillgängliga, kontakta oss för personlig konsultation."
+    },
+    {
+      "type": "header",
+      "content": "Kortstil"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Kortbakgrund",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Kortram – färg",
+      "default": "#E5E5E5"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Visa kantlinje",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "shadow_level",
+      "label": "Skuggstyrka",
+      "default": "subtle",
+      "options": [
+        { "value": "none", "label": "Ingen" },
+        { "value": "subtle", "label": "Lätt" },
+        { "value": "medium", "label": "Mellan" },
+        { "value": "strong", "label": "Stark" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Produkt",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Välj produkt"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_description",
+          "label": "Anpassad beskrivning",
+          "info": "Valfritt. Lämna tomt för att använda produktens beskrivning."
+        },
+        {
+          "type": "header",
+          "content": "Specifikationer (lämna tomma för att dölja)"
+        },
+        {
+          "type": "text",
+          "id": "spec_1_label",
+          "label": "Spec 1 - Rubrik",
+          "default": "Antal moduler"
+        },
+        {
+          "type": "text",
+          "id": "spec_1_value",
+          "label": "Spec 1 - Värde",
+          "default": "2-6"
+        },
+        {
+          "type": "text",
+          "id": "spec_2_label",
+          "label": "Spec 2 - Rubrik",
+          "default": "Maximal kapacitet"
+        },
+        {
+          "type": "text",
+          "id": "spec_2_value",
+          "label": "Spec 2 - Värde",
+          "default": "32.4 kWh"
+        },
+        {
+          "type": "text",
+          "id": "spec_3_label",
+          "label": "Spec 3 - Rubrik",
+          "default": "Drifttemperatur"
+        },
+        {
+          "type": "text",
+          "id": "spec_3_value",
+          "label": "Spec 3 - Värde",
+          "default": "-20 °C till +55 °C"
+        },
+        {
+          "type": "text",
+          "id": "spec_4_label",
+          "label": "Spec 4 - Rubrik",
+          "default": "Battericellsteknologi"
+        },
+        {
+          "type": "text",
+          "id": "spec_4_value",
+          "label": "Spec 4 - Värde",
+          "default": "Solid state"
+        },
+        {
+          "type": "text",
+          "id": "spec_5_label",
+          "label": "Spec 5 - Rubrik",
+          "default": "C-tal"
+        },
+        {
+          "type": "text",
+          "id": "spec_5_value",
+          "label": "Spec 5 - Värde",
+          "default": "1C"
+        },
+        {
+          "type": "text",
+          "id": "spec_6_label",
+          "label": "Spec 6 - Rubrik",
+          "default": "Kapacitetsklass"
+        },
+        {
+          "type": "text",
+          "id": "spec_6_value",
+          "label": "Spec 6 - Värde",
+          "default": "IP55"
+        },
+        {
+          "type": "text",
+          "id": "spec_7_label",
+          "label": "Spec 7 - Rubrik",
+          "default": "Stödtjänster"
+        },
+        {
+          "type": "text",
+          "id": "spec_7_value",
+          "label": "Spec 7 - Värde",
+          "default": "Ja (med extern hub)"
+        },
+        {
+          "type": "text",
+          "id": "spec_8_label",
+          "label": "Spec 8 - Rubrik",
+          "default": "Produktgaranti"
+        },
+        {
+          "type": "text",
+          "id": "spec_8_value",
+          "label": "Spec 8 - Värde",
+          "default": "10 år, 8 000 cykler"
+        },
+        {
+          "type": "text",
+          "id": "spec_9_label",
+          "label": "Spec 9 - Rubrik"
+        },
+        {
+          "type": "text",
+          "id": "spec_9_value",
+          "label": "Spec 9 - Värde"
+        },
+        {
+          "type": "text",
+          "id": "spec_10_label",
+          "label": "Spec 10 - Rubrik"
+        },
+        {
+          "type": "text",
+          "id": "spec_10_value",
+          "label": "Spec 10 - Värde"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Jämför produkter",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

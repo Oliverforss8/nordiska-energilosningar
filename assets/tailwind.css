@@ -860,6 +860,10 @@
   gap: 10px
 }
 
+.gap-\[12px\] {
+  gap: 12px
+}
+
 .gap-\[15px\] {
   gap: 15px
 }
@@ -1026,6 +1030,11 @@
 .border-\[\#E5E5E5\] {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity, 1))
+}
+
+.border-\[\#F5F5F5\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(245 245 245 / var(--tw-border-opacity, 1))
 }
 
 .border-gray-100 {
@@ -1656,9 +1665,19 @@
   color: rgb(23 23 23 / 0.9)
 }
 
+.text-\[\#525252\] {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity, 1))
+}
+
 .text-\[\#545454\] {
   --tw-text-opacity: 1;
   color: rgb(84 84 84 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#737373\] {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity, 1))
 }
 
 .text-gray-400 {
@@ -1726,6 +1745,12 @@
 
 .opacity-80 {
   opacity: 0.8
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
 .shadow-2xl {
@@ -2308,6 +2333,10 @@
 
   .md\:pb-\[50px\] {
     padding-bottom: 50px
+  }
+
+  .md\:pb-\[80px\] {
+    padding-bottom: 80px
   }
 
   .md\:pb-\[85px\] {
