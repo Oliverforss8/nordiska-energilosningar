@@ -74,7 +74,7 @@
           "type": "button",
           "settings": {
             "text": "Få offert >",
-            "url": "shopify://pages/landningssida-film",
+            "url": "shopify://pages/kampanj-batteri",
             "show_arrow": true
           }
         }

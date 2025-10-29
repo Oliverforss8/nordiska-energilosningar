@@ -180,7 +180,7 @@
           "type": "button",
           "settings": {
             "text": "UPPTÄCK VÅRA BATTERIPAKET",
-            "url": "shopify://pages/landningssida-film",
+            "url": "shopify://pages/kampanj-batteri",
             "show_arrow": true
           }
         }
@@ -240,7 +240,7 @@
         "image_position": "left",
         "overlay_opacity": 0,
         "image_button_text": "",
-        "image_button_link": "shopify://pages/landningssida-film",
+        "image_button_link": "shopify://pages/kampanj-batteri",
         "custom_id": ""
       }
     },
