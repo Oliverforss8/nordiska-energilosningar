@@ -12,10 +12,10 @@
     "main": {
       "type": "product",
       "blocks": {
-        "upsell_product_Qe9GM4": {
+        "upsell_product_9p4FDY": {
           "type": "upsell_product",
           "settings": {
-            "upsell_product": "lastbalansering-perific-max",
+            "upsell_product": "lastbalansering-zaptec-sense",
             "upsell_variant_id": "",
             "enable_condition": false,
             "option_index": "1",
@@ -27,7 +27,7 @@
         }
       },
       "block_order": [
-        "upsell_product_Qe9GM4"
+        "upsell_product_9p4FDY"
       ],
       "settings": {
         "show_installation": true,
