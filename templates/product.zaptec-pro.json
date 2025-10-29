@@ -11,15 +11,99 @@
   "sections": {
     "main": {
       "type": "product",
+      "blocks": {
+        "upsell_product_FVR4A6": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "lastbalansering-zaptec-sense",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_rgn4Ca": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "lastbalansering-perific-max",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_xA7Gjw": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "zaptec-laddstolpe",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_VR8cR9": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "laddkabel-11-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_chNzAb": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "laddkabel-22-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_MMnbJ4": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "kabelhallare-svart",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "upsell_product_FVR4A6",
+        "upsell_product_rgn4Ca",
+        "upsell_product_xA7Gjw",
+        "upsell_product_VR8cR9",
+        "upsell_product_chNzAb",
+        "upsell_product_MMnbJ4"
+      ],
       "settings": {
         "show_installation": true,
         "installation_product": "installation-laddbox",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": ""
       }
     },
     "tekniska_specifikationer_QwhGhj": {
@@ -141,6 +225,7 @@
         "image": "shopify://shop_images/21355_Zaptec-173_Black_1ce9c54d-b778-43bf-a7af-64351da97f35.jpg",
         "video": "shopify://files/videos/10sek_1_16x9_FINAL.mov",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -156,6 +241,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/Zaptec-pro_juni22-46.jpg",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""

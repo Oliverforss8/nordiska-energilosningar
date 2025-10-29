@@ -11,15 +11,57 @@
   "sections": {
     "main": {
       "type": "product",
+      "blocks": {
+        "upsell_product_MWEGqM": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "laddkabel-11-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_Q4WQT9": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "laddkabel-22-kw",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        },
+        "upsell_product_pkYYN8": {
+          "type": "upsell_product",
+          "settings": {
+            "upsell_product": "kabelhallare-svart",
+            "upsell_variant_id": "",
+            "enable_condition": false,
+            "option_index": "1",
+            "allowed_values": "",
+            "variant_map": "",
+            "upsell_title": "",
+            "upsell_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "upsell_product_MWEGqM",
+        "upsell_product_Q4WQT9",
+        "upsell_product_pkYYN8"
+      ],
       "settings": {
         "show_installation": false,
         "installation_product": "",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": ""
       }
     },
     "bild_och_text_dETT6e": {
@@ -32,6 +74,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/SE_Mood_Image_Fronius_Reserva__GEN24_detail__1.png",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -154,6 +197,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/SE__Wattpilot_Flex_Social_Media_-_Product_Photo_Story___Carousel_2_7.jpg",
         "image_position": "left",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -169,6 +213,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/fronius-wattpilot-wallbox-home-flex-c_1_ad3a920d-7450-49a7-99e2-7554b62cf4bd.jpg",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
