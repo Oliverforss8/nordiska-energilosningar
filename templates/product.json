@@ -13,7 +13,7 @@
       "type": "product",
       "settings": {
         "show_installation": true,
-        "installation_product": "",
+        "installation_product": "dyness-stack100",
         "installation_title": "",
         "installation_description": ""
       }
