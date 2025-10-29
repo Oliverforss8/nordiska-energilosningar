@@ -47,11 +47,7 @@
         "show_installation": true,
         "installation_product": "installation",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få upp till 50% rabatt på arbetskostnaden med grönt avdrag (ROT).",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Alternativ grönt avdrag med andra villkor."
+        "installation_description": ""
       }
     },
     "banner_bild_wcEktQ": {
@@ -88,7 +84,7 @@
           "type": "specification",
           "settings": {
             "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh (3-15 moduler)"
+            "value": "9.0 - 54.0 kWh"
           }
         },
         "specification_AjpE8T": {
@@ -130,7 +126,7 @@
           "type": "specification",
           "settings": {
             "label": "IP-klass",
-            "value": "IP20"
+            "value": "IP60"
           }
         },
         "specification_kFqFFd": {
@@ -176,6 +172,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/1706671614211632.jpg",
         "image_position": "right",
+        "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
