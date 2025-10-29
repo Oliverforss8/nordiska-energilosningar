@@ -13,13 +13,9 @@
       "type": "product",
       "settings": {
         "show_installation": true,
-        "installation_product": "installation-laddbox",
+        "installation_product": "",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag 1",
-        "green_deduction_1_description": "Få 48,5% rabatt (max 50 000 kr) på totalpriset med grönt avdrag.",
-        "green_deduction_2_title": "Grönt avdrag 2",
-        "green_deduction_2_description": "Få 48,5% rabatt (max 100 000 kr) på totalpriset med grönt avdrag."
+        "installation_description": ""
       }
     },
     "faq_produkt": {
