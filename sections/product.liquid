@@ -200,164 +200,164 @@
                     </div>
                   {% endfor %}
                 </div>
+              {% endunless %}
 
-                <!-- Upsell Products Section -->
-                {% if section.blocks.size > 0 %}
-                  <div class="upsell-products-wrapper pt-[30px] md:pt-[50px]">
-                    {% for block in section.blocks %}
-                      {% case block.type %}
-                        {% when 'upsell_product' %}
-                          {% if block.settings.upsell_product != blank %}
-                            {% assign upsell_product = block.settings.upsell_product %}
-                            {% comment %} Find the target variant by ID, SKU, or title {% endcomment %}
-                            {% assign target_variant = upsell_product.selected_or_first_available_variant %}
-                            {% if block.settings.upsell_variant_id != blank %}
-                              {% comment %} Try to find by exact ID first {% endcomment %}
+              <!-- Upsell Products Section -->
+              {% if section.blocks.size > 0 %}
+                <div class="upsell-products-wrapper pt-[30px] md:pt-[50px]">
+                  {% for block in section.blocks %}
+                    {% case block.type %}
+                      {% when 'upsell_product' %}
+                        {% if block.settings.upsell_product != blank %}
+                          {% assign upsell_product = block.settings.upsell_product %}
+                          {% comment %} Find the target variant by ID, SKU, or title {% endcomment %}
+                          {% assign target_variant = upsell_product.selected_or_first_available_variant %}
+                          {% if block.settings.upsell_variant_id != blank %}
+                            {% comment %} Try to find by exact ID first {% endcomment %}
+                            {% assign found_variant = upsell_product.variants
+                              | where: 'id', block.settings.upsell_variant_id
+                              | first
+                            %}
+                            {% if found_variant %}
+                              {% assign target_variant = found_variant %}
+                            {% else %}
+                              {% comment %} Try to find by SKU {% endcomment %}
                               {% assign found_variant = upsell_product.variants
-                                | where: 'id', block.settings.upsell_variant_id
+                                | where: 'sku', block.settings.upsell_variant_id
                                 | first
                               %}
                               {% if found_variant %}
                                 {% assign target_variant = found_variant %}
                               {% else %}
-                                {% comment %} Try to find by SKU {% endcomment %}
+                                {% comment %} Try to find by title {% endcomment %}
                                 {% assign found_variant = upsell_product.variants
-                                  | where: 'sku', block.settings.upsell_variant_id
+                                  | where: 'title', block.settings.upsell_variant_id
                                   | first
                                 %}
                                 {% if found_variant %}
                                   {% assign target_variant = found_variant %}
-                                {% else %}
-                                  {% comment %} Try to find by title {% endcomment %}
-                                  {% assign found_variant = upsell_product.variants
-                                    | where: 'title', block.settings.upsell_variant_id
-                                    | first
-                                  %}
-                                  {% if found_variant %}
-                                    {% assign target_variant = found_variant %}
-                                  {% endif %}
                                 {% endif %}
                               {% endif %}
                             {% endif %}
-                            <div
-                              class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]"
-                              data-condition-enabled="{% if block.settings.enable_condition %}true{% else %}false{% endif %}"
-                              data-option-index="{{ block.settings.option_index | default: '' }}"
-                              data-allowed-values="{{ block.settings.allowed_values | downcase }}"
-                              data-variant-map="{{ block.settings.variant_map | newline_to_br | replace: '<br />', '|' | downcase }}"
-                              {{ block.shopify_attributes }}
-                            >
-                              <div class="flex flex-col gap-[20px]">
-                                <!-- Header with checkbox -->
-                                <div class="flex items-start justify-between gap-[15px]">
-                                  <div class="flex items-start gap-[15px]">
-                                    <input
-                                      type="checkbox"
-                                      id="upsell-{{ upsell_product.id }}"
-                                      class="upsell-checkbox mt-[5px] h-[20px] w-[20px] cursor-pointer"
-                                      data-product-id="{{ upsell_product.id }}"
-                                      data-variant-id="{{ target_variant.id }}"
-                                      data-price="{{ target_variant.price }}"
-                                    >
-                                    <label
-                                      for="upsell-{{ upsell_product.id }}"
-                                      class="cursor-pointer"
-                                    >
-                                      <div class="headline1 text-[20px] md:text-[24px]">
-                                        {{
-                                          block.settings.upsell_title
-                                          | default: upsell_product.title
-                                        }}
-                                      </div>
-                                      {% if block.settings.upsell_description != blank %}
-                                        <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
-                                          {{ block.settings.upsell_description }}
-                                        </div>
-                                      {% endif %}
-                                    </label>
-                                  </div>
-                                  <div class="headline1 text-[18px] md:text-[20px]">
-                                    <span
-                                      class="upsell-price "
-                                      data-currency="SEK"
-                                      data-product-id="{{ upsell_product.id }}"
-                                    >
-                                      +{{ target_variant.price | money }}
-                                    </span>
-                                  </div>
-                                </div>
-
-                                <!-- Product Info -->
-                                <div class="flex items-center gap-[15px] md:gap-[20px]">
-                                  {% if upsell_product.featured_image %}
-                                    <div class="h-[60px] w-[60px] flex-shrink-0 overflow-hidden rounded-[10px] bg-[#F6F6F6] md:h-[80px] md:w-[80px]">
-                                      {%
-                                        render 'image',
-                                        image: upsell_product.featured_image,
-                                        alt: upsell_product.featured_image.alt | default: upsell_product.title,
-                                        class: 'image--cover'
-                                      %}
+                          {% endif %}
+                          <div
+                            class="upsell-product-card mb-[20px] rounded-[15px] border border-[#171717] p-[20px] md:p-[30px]"
+                            data-condition-enabled="{% if block.settings.enable_condition %}true{% else %}false{% endif %}"
+                            data-option-index="{{ block.settings.option_index | default: '' }}"
+                            data-allowed-values="{{ block.settings.allowed_values | downcase }}"
+                            data-variant-map="{{ block.settings.variant_map | newline_to_br | replace: '<br />', '|' | downcase }}"
+                            {{ block.shopify_attributes }}
+                          >
+                            <div class="flex flex-col gap-[20px]">
+                              <!-- Header with checkbox -->
+                              <div class="flex items-start justify-between gap-[15px]">
+                                <div class="flex items-start gap-[15px]">
+                                  <input
+                                    type="checkbox"
+                                    id="upsell-{{ upsell_product.id }}"
+                                    class="upsell-checkbox mt-[5px] h-[20px] w-[20px] cursor-pointer"
+                                    data-product-id="{{ upsell_product.id }}"
+                                    data-variant-id="{{ target_variant.id }}"
+                                    data-price="{{ target_variant.price }}"
+                                  >
+                                  <label
+                                    for="upsell-{{ upsell_product.id }}"
+                                    class="cursor-pointer"
+                                  >
+                                    <div class="headline1 text-[20px] md:text-[24px]">
+                                      {{
+                                        block.settings.upsell_title
+                                        | default: upsell_product.title
+                                      }}
                                     </div>
-                                  {% endif %}
-                                  <div class="flex-1">
-                                    <div class="body1 text-[14px] font-medium text-[#171717] md:text-[16px]">
-                                      {{ upsell_product.title }}
-                                    </div>
-                                    {% if upsell_product.description != blank %}
-                                      <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
-                                        {{ upsell_product.description | strip_html | truncate: 80 }}
+                                    {% if block.settings.upsell_description != blank %}
+                                      <div class="body1 mt-[10px] text-[14px] text-[#171717]/70 md:text-[16px]">
+                                        {{ block.settings.upsell_description }}
                                       </div>
                                     {% endif %}
-                                    {% unless upsell_product.has_only_default_variant %}
-                                      <div class="mt-[10px]">
-                                        <label
-                                          class="sr-only"
-                                          for="upsell-variant-{{ upsell_product.id }}"
-                                          >Välj variant</label
-                                        >
-                                        <select
-                                          id="upsell-variant-{{ upsell_product.id }}"
-                                          class="upsell-variant-select body1 w-full rounded-full border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] focus:outline-none md:text-[16px]"
-                                          style="  border: 1px solid #171717 !important; "
-                                          data-product-id="{{ upsell_product.id }}"
-                                        >
-                                          {% for v in upsell_product.variants %}
-                                            <option
-                                              value="{{ v.id }}"
-                                              data-price="{{ v.price }}"
-                                              data-title="{{ v.title | downcase }}"
-                                              data-sku="{{ v.sku | downcase }}"
-                                              {% if v.id == target_variant.id %}
-                                                selected
-                                              {% endif %}
-                                              {% unless v.available %}
-                                                disabled
-                                              {% endunless %}
-                                            >
-                                              {{ v.title -}}
-                                              {%- unless v.available %}
-                                                -
-                                                {{
-                                                  'products.product.sold_out'
-                                                  | t
-                                                  | default: 'Slut i lager'
-                                                -}}
-                                              {%- endunless %}
-                                            </option>
-                                          {% endfor %}
-                                        </select>
-                                      </div>
-                                    {% endunless %}
+                                  </label>
+                                </div>
+                                <div class="headline1 text-[18px] md:text-[20px]">
+                                  <span
+                                    class="upsell-price "
+                                    data-currency="SEK"
+                                    data-product-id="{{ upsell_product.id }}"
+                                  >
+                                    +{{ target_variant.price | money }}
+                                  </span>
+                                </div>
+                              </div>
+
+                              <!-- Product Info -->
+                              <div class="flex items-center gap-[15px] md:gap-[20px]">
+                                {% if upsell_product.featured_image %}
+                                  <div class="h-[60px] w-[60px] flex-shrink-0 overflow-hidden rounded-[10px] bg-[#F6F6F6] md:h-[80px] md:w-[80px]">
+                                    {%
+                                      render 'image',
+                                      image: upsell_product.featured_image,
+                                      alt: upsell_product.featured_image.alt | default: upsell_product.title,
+                                      class: 'image--cover'
+                                    %}
                                   </div>
+                                {% endif %}
+                                <div class="flex-1">
+                                  <div class="body1 text-[14px] font-medium text-[#171717] md:text-[16px]">
+                                    {{ upsell_product.title }}
+                                  </div>
+                                  {% if upsell_product.description != blank %}
+                                    <div class="body1 mt-[5px] text-[12px] text-[#171717]/60 md:text-[14px]">
+                                      {{ upsell_product.description | strip_html | truncate: 80 }}
+                                    </div>
+                                  {% endif %}
+                                  {% unless upsell_product.has_only_default_variant %}
+                                    <div class="mt-[10px]">
+                                      <label
+                                        class="sr-only"
+                                        for="upsell-variant-{{ upsell_product.id }}"
+                                        >Välj variant</label
+                                      >
+                                      <select
+                                        id="upsell-variant-{{ upsell_product.id }}"
+                                        class="upsell-variant-select body1 w-full rounded-full border border-[#171717] bg-white px-[15px] py-[10px] text-[14px] focus:outline-none md:text-[16px]"
+                                        style="  border: 1px solid #171717 !important; "
+                                        data-product-id="{{ upsell_product.id }}"
+                                      >
+                                        {% for v in upsell_product.variants %}
+                                          <option
+                                            value="{{ v.id }}"
+                                            data-price="{{ v.price }}"
+                                            data-title="{{ v.title | downcase }}"
+                                            data-sku="{{ v.sku | downcase }}"
+                                            {% if v.id == target_variant.id %}
+                                              selected
+                                            {% endif %}
+                                            {% unless v.available %}
+                                              disabled
+                                            {% endunless %}
+                                          >
+                                            {{ v.title -}}
+                                            {%- unless v.available %}
+                                              -
+                                              {{
+                                                'products.product.sold_out'
+                                                | t
+                                                | default: 'Slut i lager'
+                                              -}}
+                                            {%- endunless %}
+                                          </option>
+                                        {% endfor %}
+                                      </select>
+                                    </div>
+                                  {% endunless %}
                                 </div>
                               </div>
                             </div>
-                          {% endif %}
-                      {% endcase %}
-                    {% endfor %}
-                  </div>
-                {% endif %}
-              {% endunless %}
+                          </div>
+                        {% endif %}
+                    {% endcase %}
+                  {% endfor %}
+                </div>
+              {% endif %}
 
               <!-- Installation Option -->
               {% if section.settings.show_installation
