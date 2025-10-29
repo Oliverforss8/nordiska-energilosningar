@@ -162,6 +162,22 @@
         "custom_id": ""
       }
     },
+    "bild_och_text_zeHpLf": {
+      "type": "bild-och-text",
+      "name": "Bild och text",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Titel",
+        "text": "<p>Text</p>",
+        "media_type": "video",
+        "video": "shopify://files/videos/1C1.mp4",
+        "image_position": "right",
+        "overlay_opacity": 0,
+        "image_button_text": "",
+        "image_button_link": "",
+        "custom_id": ""
+      }
+    },
     "bild_och_text_knappar_LkcadR": {
       "type": "bild-och-text-knappar",
       "disabled": true,
@@ -175,26 +191,6 @@
         "overlay_opacity": 0,
         "image_button_text": "",
         "image_button_link": "",
-        "custom_id": ""
-      }
-    },
-    "banner_bild_Pee4Fp": {
-      "type": "banner-bild",
-      "name": "Banner bild",
-      "settings": {
-        "layout_type": "contained",
-        "media_type": "video",
-        "background_video": "shopify://files/videos/1C1.mp4",
-        "background_color": "#000000",
-        "overlay_opacity": 0,
-        "header_button_text": "",
-        "header_button_url": "",
-        "heading": "",
-        "description": "",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": "",
         "custom_id": ""
       }
     },
@@ -272,8 +268,8 @@
     "main",
     "tekniska_specifikationer_AdpmjP",
     "banner_bild_gnz8mP",
+    "bild_och_text_zeHpLf",
     "bild_och_text_knappar_LkcadR",
-    "banner_bild_Pee4Fp",
     "banner_bild_89kigT",
     "review_eeQLWb",
     "relaterade_produkter"
