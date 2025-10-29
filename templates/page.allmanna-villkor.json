@@ -39,38 +39,51 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "overlay_opacity": 20,
-            "heading": "Allmänna Villkor",
+            "background_image": "shopify://shop_images/Namnlos_1618_x_1080_px_3.png",
+            "overlay_opacity": 55,
+            "heading": "Allmänna villkor",
             "subheading": "",
             "button_text": "Våra energilösningar",
             "button_url": ""
           }
         },
-        "slide_HUwbrD": {
+        "slide_8bV3zT": {
           "type": "slide",
           "settings": {
             "media_type": "image",
             "overlay_opacity": 20,
-            "heading": "Slide 2",
-            "subheading": "En annan beskrivning",
-            "button_text": "Läs mer",
+            "heading": "Välkommen till vår webbplats",
+            "subheading": "Upptäck fantastiska produkter och tjänster",
+            "button_text": "Våra energilösningar",
             "button_url": ""
           }
         }
       },
       "block_order": [
         "slide_drLXfw",
-        "slide_HUwbrD"
+        "slide_8bV3zT"
       ],
       "name": "Hero slider",
       "settings": {
         "autoplay_speed": 5000
+      }
+    },
+    "text_sektion_CBTNiC": {
+      "type": "text-sektion",
+      "name": "Text sektion",
+      "settings": {
+        "title": "Allmänna villkor",
+        "text": "<p>Text</p>",
+        "button_text": "Knapp text",
+        "button_link": "",
+        "custom_id": ""
       }
     }
   },
   "order": [
     "main",
     "banner_bild_mt9wGY",
-    "hero_slider_bNajP7"
+    "hero_slider_bNajP7",
+    "text_sektion_CBTNiC"
   ]
 }
