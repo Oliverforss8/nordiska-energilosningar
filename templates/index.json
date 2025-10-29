@@ -244,58 +244,6 @@
         "custom_id": ""
       }
     },
-    "hur_7UXeyd": {
-      "type": "hur",
-      "blocks": {
-        "step_Mi7mMg": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Group.svg",
-            "title": "Steg 1",
-            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
-          }
-        },
-        "step_zLaBKE": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/book.svg",
-            "title": "Steg 2",
-            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
-          }
-        },
-        "step_zB67Cf": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Vector-1.svg",
-            "title": "Steg 3",
-            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
-          }
-        },
-        "step_reWzkk": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Vector.svg",
-            "title": "Steg 4",
-            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_Mi7mMg",
-        "step_zLaBKE",
-        "step_zB67Cf",
-        "step_reWzkk"
-      ],
-      "name": "How it works",
-      "settings": {
-        "heading": "Så går det till – en trygg process från beställning till driftsättning",
-        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
-        "primary_button_text": "",
-        "primary_button_url": "",
-        "secondary_button_text": "",
-        "secondary_button_url": ""
-      }
-    },
     "slider_sektion_PkT3FL": {
       "type": "slider-sektion",
       "blocks": {
@@ -367,6 +315,58 @@
         "image_button_text": "Offert",
         "image_button_link": "shopify://pages/offert-forfragan",
         "custom_id": ""
+      }
+    },
+    "hur_7UXeyd": {
+      "type": "hur",
+      "blocks": {
+        "step_Mi7mMg": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Group.svg",
+            "title": "Steg 1",
+            "description": "<p>Beställ online eller boka rådgivning. Vi tar reda på dina behov och guidar dig till rätt energilösning.</p>"
+          }
+        },
+        "step_zLaBKE": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/book.svg",
+            "title": "Steg 2",
+            "description": "<p>Du får en tydlig offert med totalpris och installationsplan – helt anpassad till ditt hem och dina önskemål.</p>"
+          }
+        },
+        "step_zB67Cf": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector-1.svg",
+            "title": "Steg 3",
+            "description": "<p>Vi beställer material och förbereder allt inför installationen. Du får uppdateringar under hela processen.</p>"
+          }
+        },
+        "step_reWzkk": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Vector.svg",
+            "title": "Steg 4",
+            "description": "<p>Våra certifierade installatörer färdigställer anläggningen. Allt testas och aktiveras – redo att användas direkt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_Mi7mMg",
+        "step_zLaBKE",
+        "step_zB67Cf",
+        "step_reWzkk"
+      ],
+      "name": "How it works",
+      "settings": {
+        "heading": "Så går det till – en trygg process från beställning till driftsättning",
+        "description": "<p><br/>Du får en komplett och trygg lösning för solceller, batteri och laddbox – skräddarsydd efter ditt hem och dina energibehov.<br/><br/></p>",
+        "primary_button_text": "",
+        "primary_button_url": "",
+        "secondary_button_text": "",
+        "secondary_button_url": ""
       }
     },
     "bild_och_text_knappar_aKrn9q": {
@@ -949,9 +949,9 @@
     "grid_omraden_g48U3c",
     "paket_YY9TC3",
     "bild_och_text_knappar_AbTQrL",
-    "hur_7UXeyd",
     "slider_sektion_PkT3FL",
     "bild_och_text_nDWrQ4",
+    "hur_7UXeyd",
     "bild_och_text_knappar_aKrn9q",
     "bild_och_text_ydyfhV",
     "relaterade_produkter_jRpymw",
