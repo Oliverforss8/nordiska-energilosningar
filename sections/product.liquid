@@ -1162,16 +1162,20 @@
     z-index: 50;
     box-shadow: 0 -4px 20px rgba(23, 23, 23, 0.15);
     transform: translateY(100%);
-    transition: transform 0.3s ease;
-  }
-
-  /* Make price bar always visible for testing */
-  .fixed-bottom-price-bar {
-    transform: translateY(0) !important;
+    opacity: 0;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 
   .fixed-bottom-price-bar.visible {
     transform: translateY(0);
+    opacity: 1;
+  }
+
+  .fixed-bottom-price-bar.hidden-at-footer {
+    transform: translateY(100%) !important;
+    opacity: 0 !important;
   }
 
   .price-bar-content {
@@ -1370,6 +1374,37 @@
 {% comment %} Load product image switcher {% endcomment %}
 <script src="{{ 'product-image-switcher.js' | asset_url }}" defer></script>
 
+{% comment %} Quantity selector functionality {% endcomment %}
+<script>
+  // Define updateQuantity function globally so onclick handlers can access it
+  function updateQuantity(change) {
+    const quantityInput = document.getElementById('quantity-input');
+    const displayMobile = document.getElementById('quantity-display-mobile');
+    const displayDesktop = document.getElementById('quantity-display-desktop');
+
+    if (!quantityInput) return;
+
+    let currentQty = parseInt(quantityInput.value) || 1;
+    const min = parseInt(quantityInput.getAttribute('min')) || 1;
+    const max = parseInt(quantityInput.getAttribute('max')) || 99;
+
+    // Calculate new quantity
+    let newQty = currentQty + change;
+
+    // Ensure quantity stays within bounds
+    newQty = Math.max(min, Math.min(max, newQty));
+
+    // Update the hidden input and displays
+    quantityInput.value = newQty;
+    if (displayMobile) displayMobile.textContent = newQty;
+    if (displayDesktop) displayDesktop.textContent = newQty;
+
+    // Trigger custom event for other scripts to listen to
+    const event = new CustomEvent('quantityChanged', { detail: { quantity: newQty } });
+    document.dispatchEvent(event);
+  }
+</script>
+
 {% comment %} Quote form functionality {% endcomment %}
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -1420,6 +1455,56 @@
         }
       });
     }
+  });
+</script>
+
+{% comment %} Fixed bottom price bar scroll behavior {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const priceBar = document.getElementById('fixed-bottom-price-bar');
+    if (!priceBar) return;
+
+    // Show price bar by default
+    priceBar.classList.add('visible');
+
+    let ticking = false;
+
+    function handleScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          const footer = document.querySelector('footer, [data-section-type="footer"]');
+
+          if (footer) {
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const priceBarHeight = priceBar.offsetHeight;
+
+            // Check if footer is visible and would overlap with price bar
+            // Add 20px buffer to hide the bar slightly before it overlaps
+            if (footerRect.top < windowHeight - priceBarHeight + 20) {
+              priceBar.classList.add('hidden-at-footer');
+              priceBar.classList.remove('visible');
+            } else {
+              priceBar.classList.remove('hidden-at-footer');
+              priceBar.classList.add('visible');
+            }
+          }
+
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    }
+
+    // Run on scroll
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Run on page load
+    handleScroll();
+
+    // Run on resize
+    window.addEventListener('resize', handleScroll, { passive: true });
   });
 </script>
 
