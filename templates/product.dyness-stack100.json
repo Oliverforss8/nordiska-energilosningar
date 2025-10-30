@@ -29,7 +29,7 @@
           "type": "upsell_product",
           "settings": {
             "upsell_product": "solinteg",
-            "upsell_variant_id": "",
+            "upsell_variant_id": "Solinteg - med fasbalansering",
             "enable_condition": false,
             "option_index": "1",
             "allowed_values": "",
@@ -258,7 +258,6 @@
       "type": "relaterade-produkter",
       "settings": {
         "title": "Relaterade produkter",
-        "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
