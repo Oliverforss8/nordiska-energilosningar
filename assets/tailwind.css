@@ -617,6 +617,10 @@
   height: 100%
 }
 
+.h-\[32px\] {
+  height: 32px
+}
+
 .max-h-0 {
   max-height: 0px
 }
@@ -705,8 +709,16 @@
   width: 100vw
 }
 
+.w-\[32px\] {
+  width: 32px
+}
+
 .min-w-\[calc\(100\%\/1\.5-20px\*0\.5\)\] {
   min-width: calc(100% / 1.5 - 20px * 0.5)
+}
+
+.min-w-\[20px\] {
+  min-width: 20px
 }
 
 .max-w-7xl {
@@ -1631,6 +1643,10 @@
   line-height: 1.625
 }
 
+.leading-none {
+  line-height: 1
+}
+
 .\!text-\[\#171717\] {
   --tw-text-opacity: 1 !important;
   color: rgb(23 23 23 / var(--tw-text-opacity, 1)) !important
@@ -1876,6 +1892,11 @@
   background-color: rgb(255 255 255 / 0.3)
 }
 
+.hover\:bg-\[\#F6F6F6\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity, 1))
+}
+
 .hover\:text-\[\#171717\]:hover {
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity, 1))
@@ -1923,6 +1944,16 @@
 .focus\:ring-blue-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1))
+}
+
+.active\:scale-95:active {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.active\:opacity-50:active {
+  opacity: 0.5
 }
 
 .disabled\:cursor-not-allowed:disabled {
