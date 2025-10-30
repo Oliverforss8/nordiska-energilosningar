@@ -47,11 +47,7 @@
         "show_installation": true,
         "installation_product": "installation",
         "installation_title": "",
-        "installation_description": "",
-        "green_deduction_1_title": "Grönt avdrag – 1 person",
-        "green_deduction_1_description": "50 % skattereduktion, upp till 50 000 kr",
-        "green_deduction_2_title": "Grönt avdrag – 2 personer",
-        "green_deduction_2_description": "50 % skattereduktion, upp till 100 000 kr"
+        "installation_description": ""
       }
     },
     "banner_bild_xNxJV9": {
@@ -130,7 +126,7 @@
           "type": "specification",
           "settings": {
             "label": "IP-klass",
-            "value": "IP20"
+            "value": "IP65"
           }
         },
         "specification_YxTDDj": {
@@ -170,7 +166,6 @@
       "type": "relaterade-produkter",
       "settings": {
         "title": "Relaterade produkter",
-        "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
