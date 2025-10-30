@@ -239,7 +239,7 @@
         "image": "shopify://shop_images/Namnlos_design_1_27551934-dc00-4e82-9d8f-ddbe75106abc.png",
         "image_position": "left",
         "overlay_opacity": 0,
-        "image_button_text": "",
+        "image_button_text": "Upptäck",
         "image_button_link": "shopify://pages/kampanj-batteri",
         "custom_id": ""
       }
@@ -438,7 +438,6 @@
       "name": "Relaterade produkter",
       "settings": {
         "title": "Våra produkter",
-        "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
