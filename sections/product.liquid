@@ -1328,6 +1328,25 @@
   #main-product-image img {
     transition: opacity 0.3s ease;
   }
+
+  /* Mobile quantity button styles */
+  .quantity-btn-mobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .quantity-btn-mobile:active {
+    transform: scale(0.95);
+  }
+
+  .quantity-btn-mobile span {
+    pointer-events: none;
+  }
 {% endstylesheet %}
 
 <!-- Generate product media data -->
@@ -1359,21 +1378,30 @@
 <script>
   // Define updateQuantity function globally so onclick handlers can access it
   function updateQuantity(change) {
+    console.log('updateQuantity called with change:', change);
+
     const quantityInput = document.getElementById('quantity-input');
     const displayMobile = document.getElementById('quantity-display-mobile');
     const displayDesktop = document.getElementById('quantity-display-desktop');
 
-    if (!quantityInput) return;
+    if (!quantityInput) {
+      console.error('quantity-input not found');
+      return;
+    }
 
     let currentQty = parseInt(quantityInput.value) || 1;
     const min = parseInt(quantityInput.getAttribute('min')) || 1;
     const max = parseInt(quantityInput.getAttribute('max')) || 99;
+
+    console.log('Current:', currentQty, 'Min:', min, 'Max:', max);
 
     // Calculate new quantity
     let newQty = currentQty + change;
 
     // Ensure quantity stays within bounds
     newQty = Math.max(min, Math.min(max, newQty));
+
+    console.log('New quantity:', newQty);
 
     // Update the hidden input and displays
     quantityInput.value = newQty;
@@ -1383,7 +1411,35 @@
     // Trigger custom event for other scripts to listen to
     const event = new CustomEvent('quantityChanged', { detail: { quantity: newQty } });
     document.dispatchEvent(event);
+
+    console.log('Quantity updated successfully');
   }
+
+  // Also add event listeners as a backup
+  document.addEventListener('DOMContentLoaded', function () {
+    const increaseButtons = document.querySelectorAll('.quantity-increase');
+    const decreaseButtons = document.querySelectorAll('.quantity-decrease');
+
+    increaseButtons.forEach((button) => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Increase clicked via event listener');
+        updateQuantity(1);
+      });
+    });
+
+    decreaseButtons.forEach((button) => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Decrease clicked via event listener');
+        updateQuantity(-1);
+      });
+    });
+
+    console.log('Quantity button listeners attached');
+  });
 </script>
 
 {% comment %} Quote form functionality {% endcomment %}
