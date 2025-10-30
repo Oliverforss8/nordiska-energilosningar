@@ -191,7 +191,11 @@
 
       <!-- Carousel navigation (only show on mobile) -->
       <div class="flex flex-row gap-[20px] pl-[20px] pt-[20px] md:hidden">
-        <div class="carousel-prev translate-x-[-1] cursor-pointer">
+        <button
+          type="button"
+          class="carousel-prev flex h-[48px] w-[48px] items-center justify-center rounded-full transition-all active:scale-95"
+          aria-label="Föregående produkt"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26"
@@ -201,8 +205,12 @@
           >
             <path d="M25 10.3915H1M1 10.3915L10.3913 1M1 10.3915L10.3913 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
-        <div class="carousel-next cursor-pointer">
+        </button>
+        <button
+          type="button"
+          class="carousel-next flex h-[48px] w-[48px] items-center justify-center rounded-full transition-all active:scale-95"
+          aria-label="Nästa produkt"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26"
@@ -212,7 +220,7 @@
           >
             <path d="M1 10.3915H25M25 10.3915L15.6087 1M25 10.3915L15.6087 19.7826" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </button>
       </div>
     {% else %}
       <div class="py-8 text-center text-gray-500">
@@ -267,24 +275,31 @@
   .section-relaterade-produkter .carousel-prev,
   .section-relaterade-produkter .carousel-next {
     transition: all 0.2s ease-in-out;
-    border: none;
+    border: 1px solid #171717;
     outline: none;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .section-relaterade-produkter .carousel-prev:hover,
   .section-relaterade-produkter .carousel-next:hover {
+    background: #f6f6f6;
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .section-relaterade-produkter .carousel-prev:active,
   .section-relaterade-produkter .carousel-next:active {
+    background: #e5e5e5;
     transform: scale(0.95);
   }
 
   .section-relaterade-produkter .carousel-prev:disabled,
   .section-relaterade-produkter .carousel-next:disabled {
-    opacity: 0.5;
+    opacity: 0.3;
     cursor: not-allowed;
     transform: none;
   }
@@ -292,7 +307,12 @@
   .section-relaterade-produkter .carousel-prev:disabled:hover,
   .section-relaterade-produkter .carousel-next:disabled:hover {
     transform: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: transparent;
+  }
+
+  .section-relaterade-produkter .carousel-prev svg,
+  .section-relaterade-produkter .carousel-next svg {
+    pointer-events: none;
   }
 
   /* Line clamp for 2 lines */
@@ -305,7 +325,160 @@
   }
 {% endstylesheet %}
 
-<script src="{{ 'related-products.js' | asset_url }}" defer></script>
+<script>
+  (function () {
+    'use strict';
+
+    console.log('Related products carousel script loading...');
+
+    function initCarousel() {
+      // Try multiple selectors to find the carousel
+      const track =
+        document.querySelector('.carousel-track') ||
+        document.querySelector('[class*="relaterade"] .carousel-track') ||
+        document.querySelector('[class*="related"] .carousel-track');
+
+      const prevBtn =
+        document.querySelector('.carousel-prev') ||
+        document.querySelector('[class*="relaterade"] .carousel-prev') ||
+        document.querySelector('[class*="related"] .carousel-prev');
+
+      const nextBtn =
+        document.querySelector('.carousel-next') ||
+        document.querySelector('[class*="relaterade"] .carousel-next') ||
+        document.querySelector('[class*="related"] .carousel-next');
+
+      console.log('Track found:', !!track);
+      console.log('Prev button found:', !!prevBtn);
+      console.log('Next button found:', !!nextBtn);
+
+      if (!track || !prevBtn || !nextBtn) {
+        console.error('Carousel elements not found!');
+        return;
+      }
+
+      const slides = track.querySelectorAll('.product-card');
+      const totalSlides = slides.length;
+
+      console.log('Total slides:', totalSlides);
+
+      if (totalSlides === 0) {
+        console.error('No slides found!');
+        return;
+      }
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const offset = -currentIndex * 100;
+        track.style.transform = `translateX(${offset}%)`;
+
+        // Update button states
+        if (prevBtn) {
+          prevBtn.disabled = currentIndex === 0;
+          prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+        }
+
+        if (nextBtn) {
+          nextBtn.disabled = currentIndex === totalSlides - 1;
+          nextBtn.style.opacity = currentIndex === totalSlides - 1 ? '0.3' : '1';
+        }
+
+        console.log('Moved to slide:', currentIndex + 1, '/', totalSlides);
+      }
+
+      function goToNext(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        console.log('Next button clicked');
+
+        if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+          updateCarousel();
+        }
+      }
+
+      function goToPrev(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        console.log('Prev button clicked');
+
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      }
+
+      // Remove any existing listeners and add new ones
+      const newPrevBtn = prevBtn.cloneNode(true);
+      const newNextBtn = nextBtn.cloneNode(true);
+
+      prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+      nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+
+      newPrevBtn.addEventListener('click', goToPrev, false);
+      newNextBtn.addEventListener('click', goToNext, false);
+
+      console.log('Event listeners attached');
+
+      // Touch support
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      track.addEventListener(
+        'touchstart',
+        function (e) {
+          touchStartX = e.changedTouches[0].screenX;
+        },
+        { passive: true }
+      );
+
+      track.addEventListener(
+        'touchend',
+        function (e) {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        },
+        { passive: true }
+      );
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0 && currentIndex < totalSlides - 1) {
+            currentIndex++;
+            updateCarousel();
+          } else if (diff < 0 && currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+          }
+        }
+      }
+
+      // Initialize
+      updateCarousel();
+
+      console.log('Carousel initialized successfully!');
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+      // DOM already loaded
+      initCarousel();
+    }
+
+    // Also try to initialize after a short delay as backup
+    setTimeout(initCarousel, 500);
+  })();
+</script>
 
 {% schema %}
 {
