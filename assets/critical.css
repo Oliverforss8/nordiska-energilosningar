@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Smooth scroll setup for Lenis */
 
 /* Enhanced smoothness optimizations */
