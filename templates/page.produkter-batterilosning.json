@@ -49,6 +49,11 @@
         "product_5_custom_description": ""
       }
     },
+    "battery_calculator_FWGUdh": {
+      "type": "battery-calculator",
+      "name": "Batterikalkylator",
+      "settings": {}
+    },
     "bild_och_text_knappar_3iKePW": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -420,6 +425,7 @@
     "main",
     "hero_lower_HxUwkQ",
     "product_meny_pyhwqF",
+    "battery_calculator_FWGUdh",
     "bild_och_text_knappar_3iKePW",
     "bild_och_text_knappar_weYcCP",
     "hur_jEzfNm",
