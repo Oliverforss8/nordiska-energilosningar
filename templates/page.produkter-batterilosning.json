@@ -49,16 +49,10 @@
         "product_5_custom_description": ""
       }
     },
-    "text_sektion_V78q7c": {
-      "type": "text-sektion",
-      "name": "Text sektion",
-      "settings": {
-        "title": "Titel",
-        "text": "<p>Text</p>",
-        "button_text": "Knapp text",
-        "button_link": "",
-        "custom_id": ""
-      }
+    "battery_calculator_FWGUdh": {
+      "type": "battery-calculator",
+      "name": "Batterikalkylator",
+      "settings": {}
     },
     "bild_och_text_knappar_3iKePW": {
       "type": "bild-och-text-knappar",
@@ -431,7 +425,7 @@
     "main",
     "hero_lower_HxUwkQ",
     "product_meny_pyhwqF",
-    "text_sektion_V78q7c",
+    "battery_calculator_FWGUdh",
     "bild_och_text_knappar_3iKePW",
     "bild_och_text_knappar_weYcCP",
     "hur_jEzfNm",
