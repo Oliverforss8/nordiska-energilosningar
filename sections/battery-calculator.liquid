@@ -1,0 +1,21 @@
+<div class="page-width">
+  <div class="calculator-wrapper" style="margin: 60px auto; max-width: 1200px;">
+    {% if page.handle == 'vara-batterilosningar' or page.handle == 'kampanj-batteri' %}
+      <iframe 
+        src="https://site-section-magic.lovable.app/calculator" 
+        width="100%" 
+        height="900px" 
+        style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+        title="Batterikalkylator">
+      </iframe>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Battery Calculator",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}
