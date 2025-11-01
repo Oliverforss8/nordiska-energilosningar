@@ -31,8 +31,8 @@
       "type": "text-sektion",
       "name": "Text sektion",
       "settings": {
-        "title": "🔋 Beräkna din batteribesparing - Använd vår kalkylator",
-        "text": "<p>🔋 Beräkna din batteribesparing - Använd vår kalkylator<br/><br/></p>",
+        "title": "Beräkna din besparing - Använd vår kalkylator 🔋",
+        "text": "",
         "button_text": "Batterkalkylator",
         "button_link": "https://site-section-magic.lovable.app/calculator",
         "custom_id": ""
