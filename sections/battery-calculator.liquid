@@ -1,52 +1,51 @@
 <div class="battery-calculator-section">
-  <style>
-    .battery-calculator-section {
-      padding: 60px 20px;
-      background: #f9fafb;
-    }
-    
-    .battery-calculator-container {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    
-    .battery-calculator-iframe {
-      width: 100%;
-      height: 1100px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      background: white;
-    }
-    
-    @media (max-width: 768px) {
-      .battery-calculator-section {
-        padding: 40px 15px;
-      }
-      
-      .battery-calculator-iframe {
-        height: 1300px;
-        border-radius: 8px;
-      }
-    }
-  </style>
-  
-  <div class="battery-calculator-container">
+  <div class="calculator-container">
     <iframe 
       src="https://site-section-magic.lovable.app/calculator" 
-      class="battery-calculator-iframe"
+      class="calculator-iframe"
       title="Batterikalkylator"
       loading="lazy"
-      allowfullscreen>
-    </iframe>
+    ></iframe>
   </div>
 </div>
+
+<style>
+  .battery-calculator-section {
+    width: 100%;
+    padding: 60px 20px;
+    background: var(--color-background, #ffffff);
+  }
+
+  .calculator-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 900px;
+    position: relative;
+  }
+
+  .calculator-iframe {
+    width: 100%;
+    height: 950px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .battery-calculator-section {
+      padding: 40px 16px;
+    }
+    
+    .calculator-iframe {
+      height: 1200px;
+    }
+  }
+</style>
 
 {% schema %}
 {
   "name": "Batterikalkylator",
-  "tag": "section",
-  "class": "battery-calculator-wrapper",
   "settings": [],
   "presets": [
     {
