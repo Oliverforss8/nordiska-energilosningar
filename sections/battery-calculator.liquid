@@ -1,21 +1,57 @@
-<div class="page-width">
-  <div class="calculator-wrapper" style="margin: 60px auto; max-width: 1200px;">
-    {% if page.handle == 'vara-batterilosningar' or page.handle == 'kampanj-batteri' %}
-      <iframe 
-        src="https://site-section-magic.lovable.app/calculator" 
-        width="100%" 
-        height="900px" 
-        style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
-        title="Batterikalkylator">
-      </iframe>
-    {% endif %}
+<div class="battery-calculator-section">
+  <style>
+    .battery-calculator-section {
+      padding: 60px 20px;
+      background: #f9fafb;
+    }
+    
+    .battery-calculator-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .battery-calculator-iframe {
+      width: 100%;
+      height: 1100px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      background: white;
+    }
+    
+    @media (max-width: 768px) {
+      .battery-calculator-section {
+        padding: 40px 15px;
+      }
+      
+      .battery-calculator-iframe {
+        height: 1300px;
+        border-radius: 8px;
+      }
+    }
+  </style>
+  
+  <div class="battery-calculator-container">
+    <iframe 
+      src="https://site-section-magic.lovable.app/calculator" 
+      class="battery-calculator-iframe"
+      title="Batterikalkylator"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "Battery Calculator",
+  "name": "Batterikalkylator",
   "tag": "section",
-  "settings": []
+  "class": "battery-calculator-wrapper",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Batterikalkylator"
+    }
+  ]
 }
 {% endschema %}
