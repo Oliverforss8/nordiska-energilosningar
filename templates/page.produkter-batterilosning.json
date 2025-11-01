@@ -27,17 +27,6 @@
         "button_url": "shopify://pages/offert-forfragan"
       }
     },
-    "text_sektion_3mGHUc": {
-      "type": "text-sektion",
-      "name": "Text sektion",
-      "settings": {
-        "title": "Beräkna din besparing - Använd vår kalkylator 🔋",
-        "text": "",
-        "button_text": "Batterkalkylator",
-        "button_link": "https://site-section-magic.lovable.app/calculator",
-        "custom_id": ""
-      }
-    },
     "product_meny_pyhwqF": {
       "type": "product-meny",
       "name": "Product Menu",
@@ -430,7 +419,6 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "text_sektion_3mGHUc",
     "product_meny_pyhwqF",
     "bild_och_text_knappar_3iKePW",
     "bild_och_text_knappar_weYcCP",
