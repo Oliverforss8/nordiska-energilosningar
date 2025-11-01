@@ -49,6 +49,11 @@
         "product_5_custom_description": ""
       }
     },
+    "custom_section_4BdcaR": {
+      "type": "custom-section",
+      "name": "t:general.custom_section",
+      "settings": {}
+    },
     "bild_och_text_knappar_3iKePW": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -420,6 +425,7 @@
     "main",
     "hero_lower_HxUwkQ",
     "product_meny_pyhwqF",
+    "custom_section_4BdcaR",
     "bild_och_text_knappar_3iKePW",
     "bild_och_text_knappar_weYcCP",
     "hur_jEzfNm",
