@@ -129,6 +129,11 @@
         "description": "<p><strong>Detta är ett maxat batterilager för dig med högt energibehov och höga krav på trygghet och självförsörjning.</strong><br/><br/>Med ett större batterilager maximerar du nyttan av din solel och ökar din självständighet från elnätet. För dig som äger elbil fungerar batteriet dessutom som en energibrygga – vilket möjliggör ännu större flexibilitet och framtidssäkra energilösningar.<br/><br/></p>"
       }
     },
+    "battery_calculator_fDUwhc": {
+      "type": "battery-calculator",
+      "name": "Batterikalkylator",
+      "settings": {}
+    },
     "slider_sektion_qjEhPV": {
       "type": "slider-sektion",
       "blocks": {
@@ -509,6 +514,7 @@
     "paket_qtFeVj",
     "paket_etC3Qr",
     "paket_jUKYhD",
+    "battery_calculator_fDUwhc",
     "slider_sektion_qjEhPV",
     "grid_omraden_BEhDEW",
     "bild_och_text_nVkW73",
