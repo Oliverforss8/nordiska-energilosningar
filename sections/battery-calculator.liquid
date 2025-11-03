@@ -1,42 +1,98 @@
+{% comment %}
+  Battery Calculator - Simple Working Version
+  Place in: sections/battery-calculator.liquid
+{% endcomment %}
+
 <style>
-  .battery-calculator-section{
-    position:relative; z-index:10; isolation:isolate; clear:both;
-    padding:48px 0; background:transparent; overflow:visible;
+  .battery-calc-wrapper {
+    width: 100%;
+    max-width: {{ section.settings.max_width }}px;
+    margin: 40px auto;
+    padding: 0 20px;
   }
-  .battery-calculator-container{max-width:{{ section.settings.max_width }}px;margin:0 auto;padding:0 20px}
-  .battery-calculator-heading{text-align:center;font-size:2rem;font-weight:700;margin-bottom:2rem;color:#1a1a1a}
-  .battery-calculator-iframe-wrapper{width:100%;border-radius:{{ section.settings.corner_radius }}px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.1);background:transparent}
-  .battery-calculator-iframe{width:100%;border:0;display:block}
-  @media (max-width:768px){.battery-calculator-section{padding:32px 0}.battery-calculator-heading{font-size:1.5rem;margin-bottom:1.25rem}}
+  
+  .battery-calc-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .battery-calc-frame {
+    width: 100%;
+    height: 1000px;
+    border: none;
+    border-radius: {{ section.settings.corner_radius }}px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .battery-calc-frame {
+      height: 1400px;
+    }
+  }
 </style>
 
-<div class="battery-calculator-section" role="region" aria-label="Batterikalkylator">
-  <div class="battery-calculator-container">
-    {% if section.settings.show_heading %}<h2 class="battery-calculator-heading">{{ section.settings.heading_text }}</h2>{% endif %}
-    <div class="battery-calculator-iframe-wrapper">
-      <iframe
-        src="{{ section.settings.iframe_url }}?v={{ section.settings.cache_bust }}"
-        class="battery-calculator-iframe"
-        style="height:1000px"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Batterikalkylator"
-      ></iframe>
-    </div>
-  </div>
+<div class="battery-calc-wrapper">
+  {% if section.settings.show_heading %}
+    <h2 class="battery-calc-heading">{{ section.settings.heading_text }}</h2>
+  {% endif %}
+  
+  <iframe 
+    src="{{ section.settings.iframe_url }}"
+    class="battery-calc-frame"
+    loading="lazy"
+    title="Batterikalkylator"
+  ></iframe>
 </div>
 
 {% schema %}
 {
   "name": "Batterikalkylator",
   "settings": [
-    { "type": "checkbox", "id": "show_heading", "label": "Visa rubrik", "default": true },
-    { "type": "text", "id": "heading_text", "label": "Rubriktext", "default": "Batterikalkylator: Beräkna din besparing" },
-    { "type": "text", "id": "iframe_url", "label": "Kalkylator URL", "default": "https://YOUR_APP_URL/calculator" },
-    { "type": "text", "id": "cache_bust", "label": "Version", "default": "v1" },
-    { "type": "range", "id": "max_width", "min": 1200, "max": 1800, "step": 50, "unit": "px", "label": "Max bredd", "default": 1600 },
-    { "type": "range", "id": "corner_radius", "min": 0, "max": 24, "step": 2, "unit": "px", "label": "Hörnradie", "default": 12 }
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Visa rubrik",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Rubrik",
+      "default": "Batterikalkylator: Beräkna din besparing"
+    },
+    {
+      "type": "text",
+      "id": "iframe_url",
+      "label": "URL",
+      "default": "https://0513e955-3db4-4f8a-aa47-693b72cc08b5.lovableproject.com/calculator"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 1200,
+      "max": 1800,
+      "step": 50,
+      "unit": "px",
+      "label": "Max bredd",
+      "default": 1600
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Hörn",
+      "default": 12
+    }
   ],
-  "presets": [{ "name": "Batterikalkylator" }]
+  "presets": [
+    {
+      "name": "Batterikalkylator"
+    }
+  ]
 }
 {% endschema %}
