@@ -1,99 +1,23 @@
-{% comment %}
-  Battery Calculator - Simple Working Version
-  Place in: sections/battery-calculator.liquid
-{% endcomment %}
+<!-- Din rubrik ovanför iframen -->
+<h2>Batterikalkylator</h2>
 
-<style>
-  .battery-calc-wrapper {
-    width: 100%;
-    max-width: {{ section.settings.max_width }}px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  
-  .battery-calc-heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .battery-calc-frame {
-    width: 100%;
-    height: 1000px;
-    border: none;
-    border-radius: {{ section.settings.corner_radius }}px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  @media (max-width: 768px) {
-    .battery-calc-frame {
-      height: 1400px;
-    }
-  }
-</style>
+<!-- Själva iframen som auto-anpassar höjden -->
+<iframe
+  id="ne-embed-calculator"
+  src="https://ditt-projekt.lovable.app/embed/calculator"
+  style="width:100%;border:0;overflow:hidden;"
+  scrolling="no"
+  title="Batterikalkylator"
+></iframe>
 
-<div class="battery-calc-wrapper">
-  {% if section.settings.show_heading %}
-    <h2 class="battery-calc-heading">{{ section.settings.heading_text }}</h2>
-  {% endif %}
-  
-  <iframe 
-    src="{{ section.settings.iframe_url }}"
-    class="battery-calc-frame"
-    loading="lazy"
-    title="Batterikalkylator"
-  ></iframe>
-</div>
-
-{% schema %}
-{
-  "name": "Batterikalkylator",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_heading",
-      "label": "Visa rubrik",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "heading_text",
-      "label": "Rubrik",
-      "default": "Batterikalkylator: Beräkna din besparing"
-    },
-    {
-      "type": "text",
-      "id": "iframe_url",
-      "label": "URL",
-      "default": "https://site-section-magic.lovable.app/calculator?v=4",
-      "info": "Byt till din publicerade Lovable-URL"
-    },
-    {
-      "type": "range",
-      "id": "max_width",
-      "min": 1200,
-      "max": 1800,
-      "step": 50,
-      "unit": "px",
-      "label": "Max bredd",
-      "default": 1600
-    },
-    {
-      "type": "range",
-      "id": "corner_radius",
-      "min": 0,
-      "max": 24,
-      "step": 2,
-      "unit": "px",
-      "label": "Hörn",
-      "default": 12
+<!-- JavaScript som gör iframen flexibel i höjd -->
+<script>
+  (function () {
+    var iframe = document.getElementById('ne-embed-calculator');
+    function onMessage(e) {
+      if (!e || !e.data || e.data.type !== 'EMBED_CALCULATOR_HEIGHT') return;
+      iframe.style.height = (e.data.height || 0) + 'px';
     }
-  ],
-  "presets": [
-    {
-      "name": "Batterikalkylator"
-    }
-  ]
-}
-{% endschema %}
+    window.addEventListener('message', onMessage, false);
+  })();
+</script>
