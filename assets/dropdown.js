@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const dropdown = item.querySelector('.mega-dropdown');
     if (!dropdown) return;
 
-    const categoryItems = dropdown.querySelectorAll('[data-category-item]');
+    const categoryItems = dropdown.querySelectorAll('.dropdown-category[data-category-index]');
+    const productContainers = dropdown.querySelectorAll('.category-products');
 
     // Show dropdown on mouse enter
     item.addEventListener('mouseenter', () => {
@@ -21,8 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
         currentActiveDropdown.style.visibility = 'hidden';
 
         // Reset the previous dropdown's categories
-        const prevCategoryItems = currentActiveDropdown.querySelectorAll('[data-category-item]');
-        resetToFirstItem(prevCategoryItems);
+        const prevCategoryItems = currentActiveDropdown.querySelectorAll('.dropdown-category[data-category-index]');
+        const prevProductContainers = currentActiveDropdown.querySelectorAll('.category-products');
+        resetToFirstItem(prevCategoryItems, prevProductContainers);
       }
 
       // Show current dropdown
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentActiveDropdown = null;
 
         // Reset to first item highlighted when dropdown closes
-        resetToFirstItem(categoryItems);
+        resetToFirstItem(categoryItems, productContainers);
       }, 150); // Reduced delay for faster transitions
     });
 
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
           currentActiveDropdown = null;
 
           // Reset to first item highlighted when dropdown closes
-          resetToFirstItem(categoryItems);
+          resetToFirstItem(categoryItems, productContainers);
         }, 150); // Reduced delay
       });
     }
@@ -77,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Category item hover interactions
     categoryItems.forEach((categoryItem) => {
       categoryItem.addEventListener('mouseenter', () => {
+        const categoryIndex = categoryItem.getAttribute('data-category-index');
+        
         // Remove highlight from all items
         categoryItems.forEach((item) => {
           item.classList.remove('bg-[#F3F1E8]');
@@ -86,6 +90,26 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add highlight to hovered item
         categoryItem.classList.remove('bg-white');
         categoryItem.classList.add('bg-[#F3F1E8]');
+        
+        // Show corresponding products, hide others
+        productContainers.forEach((container) => {
+          const productsIndex = container.getAttribute('data-products-index');
+          if (productsIndex === categoryIndex) {
+            container.style.display = 'block';
+            // Small delay to trigger opacity transition
+            setTimeout(() => {
+              container.classList.add('active');
+            }, 10);
+          } else {
+            container.classList.remove('active');
+            // Hide after opacity transition
+            setTimeout(() => {
+              if (!container.classList.contains('active')) {
+                container.style.display = 'none';
+              }
+            }, 200);
+          }
+        });
       });
     });
 
@@ -95,9 +119,9 @@ document.addEventListener('DOMContentLoaded', function () {
       leftColumn.addEventListener('mouseleave', (e) => {
         // Check if we're not moving to another category item
         const relatedTarget = e.relatedTarget;
-        if (!relatedTarget || !relatedTarget.hasAttribute('data-category-item')) {
+        if (!relatedTarget || !relatedTarget.getAttribute('data-category-index') === null) {
           setTimeout(() => {
-            resetToFirstItem(categoryItems);
+            resetToFirstItem(categoryItems, productContainers);
           }, 50); // Faster reset
         }
       });
@@ -105,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Helper function to reset to first item
-  function resetToFirstItem(categoryItems) {
+  function resetToFirstItem(categoryItems, productContainers) {
     categoryItems.forEach((categoryItem, index) => {
       if (index === 0) {
         categoryItem.classList.remove('bg-white');
@@ -115,5 +139,18 @@ document.addEventListener('DOMContentLoaded', function () {
         categoryItem.classList.add('bg-white');
       }
     });
+    
+    // Reset products to show first category
+    if (productContainers) {
+      productContainers.forEach((container, index) => {
+        if (index === 0) {
+          container.style.display = 'block';
+          container.classList.add('active');
+        } else {
+          container.style.display = 'none';
+          container.classList.remove('active');
+        }
+      });
+    }
   }
 });
