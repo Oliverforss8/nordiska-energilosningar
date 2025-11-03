@@ -1578,6 +1578,10 @@
   padding-left: 10px
 }
 
+.pt-\[5px\] {
+  padding-top: 5px
+}
+
 .text-left {
   text-align: left
 }
@@ -2504,6 +2508,10 @@
 
   .md\:pt-\[60px\] {
     padding-top: 60px
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0px
   }
 
   .md\:text-left {
