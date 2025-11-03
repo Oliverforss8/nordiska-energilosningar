@@ -64,6 +64,9 @@
     {% # Load quote form functionality %}
     <script src="{{ 'quote-form.js' | asset_url }}" defer></script>
 
+    {% # Browser compatibility polyfills %}
+    <script src="{{ 'polyfill.js' | asset_url }}" defer></script>
+
     {% # GSAP core and ScrollTrigger via CDN (kept lightweight) %}
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
