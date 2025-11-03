@@ -94,20 +94,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Show corresponding products, hide others
         productContainers.forEach((container) => {
           const productsIndex = container.getAttribute('data-products-index');
+          
           if (productsIndex === categoryIndex) {
             container.style.display = 'block';
-            // Small delay to trigger opacity transition
-            setTimeout(() => {
-              container.classList.add('active');
-            }, 10);
+            container.classList.add('active');
           } else {
+            container.style.display = 'none';
             container.classList.remove('active');
-            // Hide after opacity transition
-            setTimeout(() => {
-              if (!container.classList.contains('active')) {
-                container.style.display = 'none';
-              }
-            }, 200);
           }
         });
       });

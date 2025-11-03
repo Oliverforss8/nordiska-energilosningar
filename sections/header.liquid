@@ -187,10 +187,10 @@
                     </div>
 
                     <!-- Right Column - Products Grid -->
-                    <div class="flex h-full flex-col gap-[20px]">
+                    <div class="relative flex h-full min-h-[400px] flex-col gap-[20px]">
                       {% for child_link in link.links %}
                         <div
-                          class="category-products {% if forloop.first %}active{% endif %}"
+                          class="category-products absolute inset-0 {% if forloop.first %}active{% endif %}"
                           data-products-index="{{ forloop.index0 }}"
                           style="{% unless forloop.first %}display: none;{% endunless %}"
                         >
@@ -709,14 +709,13 @@
     background-color: white !important;
   }
 
-  /* Product switching transition */
+  /* Product switching - instant */
   .category-products {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
   }
 
   .category-products.active {
-    opacity: 1;
+    pointer-events: auto;
   }
 
   /* Mobile Dropdown Menu Styles */
