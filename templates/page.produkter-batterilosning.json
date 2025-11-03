@@ -54,7 +54,7 @@
       "name": "Batterikalkylator",
       "settings": {
         "show_heading": true,
-        "heading_text": "Batterikalkylator: Beräkna din besparing",
+        "heading_text": "",
         "iframe_url": "https://site-section-magic.lovable.app/embed/calculator",
         "max_width": 1600,
         "corner_radius": 12
