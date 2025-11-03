@@ -787,7 +787,7 @@
       ],
       "name": "Banner med 2 produkter",
       "settings": {
-        "layout_direction": "products_first",
+        "layout_direction": "banner_first",
         "background_color": "#f5f5f5",
         "background_image": "shopify://shop_images/Namnlos_3000_x_2000_px_20.png",
         "overlay_opacity": 35,
