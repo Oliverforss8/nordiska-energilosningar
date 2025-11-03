@@ -1,5 +1,5 @@
 {% comment %}
-  Battery Calculator - Simple Working Version
+  Battery Calculator med auto-höjd
   Place in: sections/battery-calculator.liquid
 {% endcomment %}
 
@@ -20,15 +20,16 @@
   
   .battery-calc-frame {
     width: 100%;
-    height: 1000px;
+    height: 1800px;
     border: none;
     border-radius: {{ section.settings.corner_radius }}px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
   }
   
   @media (max-width: 768px) {
     .battery-calc-frame {
-      height: 1400px;
+      height: 2400px;
     }
   }
 </style>
@@ -39,12 +40,25 @@
   {% endif %}
   
   <iframe 
+    id="batterikalkylator-iframe"
     src="{{ section.settings.iframe_url }}"
     class="battery-calc-frame"
+    scrolling="no"
     loading="lazy"
     title="Batterikalkylator"
   ></iframe>
 </div>
+
+<script>
+(function(){
+  var f = document.getElementById('batterikalkylator-iframe');
+  function onMsg(e){
+    if(!e || !e.data || e.data.type !== 'EMBED_CALCULATOR_HEIGHT') return;
+    if(f){ f.style.height = (e.data.height || 0) + 'px'; }
+  }
+  window.addEventListener('message', onMsg, false);
+})();
+</script>
 
 {% schema %}
 {
@@ -66,8 +80,8 @@
       "type": "text",
       "id": "iframe_url",
       "label": "URL",
-      "default": "https://site-section-magic.lovable.app/calculator?v=4",
-      "info": "Byt till din publicerade Lovable-URL"
+      "default": "https://site-section-magic.lovable.app/embed/calculator?v=6",
+      "info": "Byt till din publicerade Lovable-URL + /embed/calculator"
     },
     {
       "type": "range",
