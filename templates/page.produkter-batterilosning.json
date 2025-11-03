@@ -27,17 +27,6 @@
         "button_url": "shopify://pages/offert-forfragan"
       }
     },
-    "battery_calculator_FWGUdh": {
-      "type": "battery-calculator",
-      "name": "Batterikalkylator",
-      "settings": {
-        "show_heading": true,
-        "heading_text": "",
-        "iframe_url": "https://site-section-magic.lovable.app/calculator",
-        "max_width": 1600,
-        "corner_radius": 12
-      }
-    },
     "bild_och_text_knappar_3iKePW": {
       "type": "bild-och-text-knappar",
       "blocks": {
@@ -403,12 +392,22 @@
         "header_button_text": "Kontakt",
         "header_button_url": "shopify://pages/support-om-oss"
       }
+    },
+    "battery_calculator_YPpPBY": {
+      "type": "battery-calculator",
+      "name": "Batterikalkylator",
+      "settings": {
+        "show_heading": true,
+        "heading_text": "",
+        "iframe_url": "https://site-section-magic.lovable.app/calculator",
+        "max_width": 1600,
+        "corner_radius": 12
+      }
     }
   },
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "battery_calculator_FWGUdh",
     "bild_och_text_knappar_3iKePW",
     "bild_och_text_knappar_weYcCP",
     "hur_jEzfNm",
@@ -416,6 +415,7 @@
     "avdrag_BEUazc",
     "review_dGhe9D",
     "faq_produkt_kNnprQ",
-    "kontakt_form_qiT88c"
+    "kontakt_form_qiT88c",
+    "battery_calculator_YPpPBY"
   ]
 }
