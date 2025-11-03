@@ -73,24 +73,38 @@
     height: 1050px;
   }
 
+  /* Mobile full-screen optimization */
   @media (max-width: 768px) {
     .battery-calculator-section {
-      padding-top: var(--section-padding-top, 40px);
-      padding-bottom: var(--section-padding-bottom, 40px);
+      padding-top: clamp(20px, 4vw, var(--section-padding-top, 40px));
+      padding-bottom: clamp(20px, 4vw, var(--section-padding-bottom, 40px));
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .battery-calculator-heading {
+      margin-bottom: 12px;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: clamp(20px, 5vw, 28px);
     }
 
     .calculator-iframe {
       height: 1200px;
+      border-radius: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
     }
   }
 
-  @media (min-width: 768px) {
+  /* Tablet and up */
+  @media (min-width: 769px) and (max-width: 1199px) {
     .calculator-iframe {
       height: 1150px;
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1200px) and (max-width: 1599px) {
     .calculator-iframe {
       height: 1250px;
     }

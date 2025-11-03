@@ -741,6 +741,11 @@
   width: 100vw
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content
+}
+
 .min-w-\[20px\] {
   min-width: 20px
 }
@@ -1428,6 +1433,11 @@
 .px-\[18px\] {
   padding-left: 18px;
   padding-right: 18px
+}
+
+.px-\[25px\] {
+  padding-left: 25px;
+  padding-right: 25px
 }
 
 .pb-2 {
