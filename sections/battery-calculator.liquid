@@ -1,10 +1,15 @@
-<div class="battery-calculator-section">
-  <div class="calculator-container">
-    <iframe 
-      src="https://site-section-magic.lovable.app/calculator" 
+<div class="battery-calculator-section" style="--calc-max-width: {{ section.settings.max_width }}px; --calc-radius: {{ section.settings.corner_radius }}px;">
+  {% if section.settings.show_heading %}
+    <h2 class="battery-calculator-heading">{{ section.settings.heading_text }}</h2>
+  {% endif %}
+
+  <div class="battery-calculator-wrap">
+    <iframe
+      src="{{ section.settings.iframe_url }}"
       class="calculator-iframe"
       title="Batterikalkylator"
       loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
   </div>
 </div>
@@ -12,41 +17,85 @@
 <style>
   .battery-calculator-section {
     width: 100%;
-    padding: 60px 20px;
-    background: var(--color-background, #ffffff);
+    padding: clamp(32px, 6vw, 80px) 16px;
+    background: var(--color-background, #fff);
   }
-
-  .calculator-container {
+  .battery-calculator-heading {
+    max-width: min(96vw, var(--calc-max-width));
+    margin: 0 auto 16px;
+    font-size: clamp(22px, 3vw, 36px);
+    line-height: 1.2;
+    color: var(--color-foreground, #111);
+    text-align: center;
+    font-weight: 700;
+  }
+  .battery-calculator-wrap {
     width: 100%;
-    max-width: 1400px;
+    max-width: min(96vw, var(--calc-max-width));
     margin: 0 auto;
-    min-height: 900px;
     position: relative;
+    -webkit-overflow-scrolling: touch;
   }
-
   .calculator-iframe {
     width: 100%;
-    height: 950px;
-    border: none;
-    border-radius: 8px;
     display: block;
+    border: none;
+    border-radius: var(--calc-radius, 12px);
+    background: transparent;
+    height: 1050px;
   }
-
-  @media (max-width: 768px) {
-    .battery-calculator-section {
-      padding: 40px 16px;
-    }
-    
-    .calculator-iframe {
-      height: 1200px;
-    }
+  @media (min-width: 768px) {
+    .calculator-iframe { height: 1150px; }
+  }
+  @media (min-width: 1200px) {
+    .calculator-iframe { height: 1250px; }
+  }
+  @media (min-width: 1600px) {
+    .calculator-iframe { height: 1300px; }
   }
 </style>
 
 {% schema %}
 {
   "name": "Batterikalkylator",
-  "settings": [],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Visa rubrik",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Rubrik",
+      "default": "Batterikalkylator: Beräkna din besparing"
+    },
+    {
+      "type": "text",
+      "id": "iframe_url",
+      "label": "Kalkylator-URL",
+      "default": "https://site-section-magic.lovable.app/calculator"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maxbredd (px)",
+      "min": 1200,
+      "max": 1800,
+      "step": 50,
+      "default": 1600
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Hörnradie (px)",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "default": 12
+    }
+  ],
   "presets": [
     {
       "name": "Batterikalkylator"
