@@ -792,7 +792,7 @@
         "background_image": "shopify://shop_images/Namnlos_3000_x_2000_px_20.png",
         "overlay_opacity": 35,
         "header_button_text": "Solis + Dyness",
-        "header_button_url": "shopify://collections/batteri",
+        "header_button_url": "shopify://pages/vara-batterilosningar",
         "heading": "Smart energi till rätt pris",
         "description": "Solis växelriktare i samspel med Dyness batteri ger en pålitlig, effektiv och prisvänlig lösning för ditt hem. Tillsammans skapar de ett stabilt system som maximerar nyttan av din solenergi – dag som natt.",
         "primary_button_text": "Batterier",
