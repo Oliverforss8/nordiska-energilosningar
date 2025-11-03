@@ -27,28 +27,6 @@
         "button_url": "shopify://pages/offert-forfragan"
       }
     },
-    "product_meny_pyhwqF": {
-      "type": "product-meny",
-      "name": "Product Menu",
-      "settings": {
-        "heading": "Våra utvalda batterier",
-        "product_1": "dyness-stack100",
-        "product_1_custom_title": "",
-        "product_1_custom_description": "",
-        "product_2": "dyness-tower-pro",
-        "product_2_custom_title": "",
-        "product_2_custom_description": "",
-        "product_3": "fronius-reserva",
-        "product_3_custom_title": "",
-        "product_3_custom_description": "",
-        "product_4": "sigenergy-1",
-        "product_4_custom_title": "",
-        "product_4_custom_description": "",
-        "product_5": "saj",
-        "product_5_custom_title": "",
-        "product_5_custom_description": ""
-      }
-    },
     "battery_calculator_FWGUdh": {
       "type": "battery-calculator",
       "name": "Batterikalkylator",
@@ -430,7 +408,6 @@
   "order": [
     "main",
     "hero_lower_HxUwkQ",
-    "product_meny_pyhwqF",
     "battery_calculator_FWGUdh",
     "bild_och_text_knappar_3iKePW",
     "bild_och_text_knappar_weYcCP",
