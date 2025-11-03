@@ -76,9 +76,9 @@
         "title": "Bli självförsörjande från mars till oktober",
         "text": "<p>Med ett batterilager kan du lagra överskottsel från dina solceller och använda den när solen gått ner. Det innebär att du kan minska ditt beroende av elnätet och i stort sett vara självförsörjande under mars–oktober. Med ett batteri för villan har du alltid tillgång till din egenproducerade el när den behövs som bäst.</p>",
         "media_type": "image",
-        "image": "shopify://shop_images/685d572388a4c97256af7e92_Greenely-pixii-hembatteri-2.webp",
+        "image": "shopify://shop_images/1024-1280.jpg",
         "image_position": "right",
-        "overlay_opacity": 0,
+        "overlay_opacity": 30,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
@@ -124,7 +124,7 @@
         "media_type": "image",
         "image": "shopify://shop_images/Namnlos_design_2.png",
         "image_position": "left",
-        "overlay_opacity": 0,
+        "overlay_opacity": 30,
         "image_button_text": "",
         "image_button_link": "",
         "custom_id": ""
