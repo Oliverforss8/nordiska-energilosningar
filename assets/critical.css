@@ -6,10 +6,6 @@
   margin: 0;
 }
 
-.calculator-container {
-  height: 50px !important;
-}
-
 body {
   overflow-x: hidden;
 }

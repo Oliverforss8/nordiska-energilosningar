@@ -20,14 +20,14 @@
             {{ block.shopify_attributes }}
           >
             {% if block.settings.image != blank %}
-              <div class="flex w-[200px] items-center justify-center md:h-[84px] md:w-auto">
+              <div class="flex w-[80px] items-center justify-center md:h-[84px] md:w-[200px]">
                 <img
                   src="{{ block.settings.image | image_url: width: 139 }}"
                   alt="{{ block.settings.image.alt | default: block.settings.text }}"
                   width="139"
                   height="321321"
                   loading="lazy"
-                  class=" h-[90px] w-[100px] object-contain"
+                  class="h-[60px] w-[60px] object-contain md:h-[90px] md:w-[100px]"
                 >
               </div>
             {% endif %}
@@ -38,7 +38,7 @@
                 </div>
               {% endif %}
               {% if block.settings.description != blank %}
-                <div class="text pt-[10px] text-[20px] text-[#171717]/80">
+                <div class="text pt-[10px] text-[16px] text-[#171717]/80 md:text-[20px]">
                   {{ block.settings.description }}
                 </div>
               {% endif %}
