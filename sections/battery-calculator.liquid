@@ -1,18 +1,31 @@
-<div class="battery-calculator-section">
+{% liquid
+  assign section_id = section.settings.custom_id | default: section.id
+  assign section_class = 'battery-calculator-section'
+%}
+
+<section
+  id="{{ section_id }}"
+  class="{{ section_class }}"
+  style="
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
   <div class="calculator-container">
-    <iframe 
-      src="https://site-section-magic.lovable.app/calculator" 
+    <iframe
+      src="https://site-section-magic.lovable.app/calculator"
       class="calculator-iframe"
       title="Batterikalkylator"
       loading="lazy"
     ></iframe>
   </div>
-</div>
+</section>
 
-<style>
+{% stylesheet %}
   .battery-calculator-section {
     width: 100%;
-    padding: 60px 20px;
+    padding-top: var(--section-padding-top, 60px);
+    padding-bottom: var(--section-padding-bottom, 60px);
     background: var(--color-background, #ffffff);
   }
 
@@ -34,19 +47,51 @@
 
   @media (max-width: 768px) {
     .battery-calculator-section {
-      padding: 40px 16px;
+      padding-top: var(--section-padding-top, 40px);
+      padding-bottom: var(--section-padding-bottom, 40px);
+      padding-left: 16px;
+      padding-right: 16px;
     }
-    
+
     .calculator-iframe {
       height: 1200px;
     }
   }
-</style>
+{% endstylesheet %}
 
 {% schema %}
 {
   "name": "Batterikalkylator",
-  "settings": [],
+  "tag": "section",
+  "class": "battery-calculator",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID",
+      "info": "Optional custom ID for the section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
   "presets": [
     {
       "name": "Batterikalkylator"
