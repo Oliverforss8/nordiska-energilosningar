@@ -393,8 +393,8 @@
     class="mobile-dropdown layout"
     data-mobile-dropdown
   >
-    <div class="mt-[10px] rounded-[10px] bg-white p-[30px] shadow-lg">
-      <nav class="flex flex-col gap-[8px] bg-white">
+    <div class="mt-[10px] max-h-[calc(100vh-120px)] overflow-y-auto rounded-[10px] bg-white p-[30px] shadow-lg">
+      <nav class="flex flex-col gap-[0px] bg-white">
         {% for link in current_menu.links %}
           {% liquid
             assign has_dropdown = false
@@ -405,7 +405,7 @@
 
           {% if has_dropdown %}
             <!-- Menu item with submenu -->
-            <div class="mobile-nav-item">
+            <div class="mobile-nav-item border-b border-[#E5E5E5]">
               <button
                 class="
                   mobile-nav-button headline1 flex w-full items-center justify-between bg-white
@@ -428,14 +428,47 @@
 
               <!-- Submenu -->
               <div class="mobile-submenu max-h-0 overflow-hidden transition-all duration-300">
-                <div class="flex flex-col gap-[4px] pb-[12px] pl-[20px] pt-[8px]">
+                <div class="flex flex-col gap-[4px] pb-[12px] pl-[15px] pt-[8px]">
                   {% for child_link in link.links %}
-                    <a
-                      href="{{ child_link.url }}"
-                      class="body1 py-[10px] text-[24px] text-[#171717]/90 transition-all duration-200 hover:text-[#171717]"
-                    >
-                      {{ child_link.title }}
-                    </a>
+                    <div class="flex flex-col gap-[6px] border-b border-[#F3F1E8] pb-[10px] last:border-b-0">
+                      <!-- Category link -->
+                      <a
+                        href="{{ child_link.url }}"
+                        class="body1 py-[10px] text-[18px] text-[#171717] transition-opacity hover:opacity-70"
+                      >
+                        {{ child_link.title }}
+                      </a>
+
+                      <!-- Nested products under category -->
+                      {% if child_link.links.size > 0 %}
+                        <div class="ml-[15px] flex flex-col">
+                          {% for nested_link in child_link.links %}
+                            <a
+                              href="{{ nested_link.url }}"
+                              class="group flex flex-row items-center gap-[10px] border-b border-[#F6F6F6] py-[8px] transition-opacity last:border-b-0 hover:opacity-70"
+                            >
+                              {% if nested_link.type == 'product_link'
+                                and nested_link.object.featured_image
+                              %}
+                                <div class="h-[40px] w-[40px] flex-shrink-0 overflow-hidden rounded-[6px]">
+                                  <img
+                                    src="{{ nested_link.object.featured_image | image_url: width: 80 }}"
+                                    alt="{{ nested_link.object.featured_image.alt | default: nested_link.title }}"
+                                    width="40"
+                                    height="40"
+                                    class="h-full w-full object-contain"
+                                    loading="lazy"
+                                  >
+                                </div>
+                              {% endif %}
+                              <span class="body1 flex-1 text-[14px] text-[#171717]/80">
+                                {{ nested_link.title }}
+                              </span>
+                            </a>
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                    </div>
                   {% endfor %}
                 </div>
               </div>
@@ -444,7 +477,7 @@
             <!-- Simple menu item -->
             <a
               href="{{ link.url }}"
-              class="headline1  0 py-[16px] text-[30px] text-[#171717]"
+              class="headline1 border-b border-[#E5E5E5] py-[16px] text-[30px] text-[#171717]"
             >
               {{ link.title }}
             </a>
@@ -682,13 +715,37 @@
   .mobile-dropdown.active {
     opacity: 1;
     visibility: visible;
-
     overflow: visible;
+  }
+
+  /* Smooth scrolling for mobile menu */
+  .mobile-dropdown > div {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar for mobile menu */
+  .mobile-dropdown > div::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .mobile-dropdown > div::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .mobile-dropdown > div::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  .mobile-dropdown > div::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 
   /* Mobile submenu active state */
   .mobile-nav-item.active .mobile-submenu {
-    max-height: 500px;
+    max-height: 2000px;
   }
 
   .mobile-nav-item.active .mobile-submenu-arrow {
