@@ -1,197 +1,42 @@
-{% liquid
-  assign section_id = section.settings.custom_id | default: section.id
-  assign section_class = 'battery-calculator-section'
-%}
+<style>
+  .battery-calculator-section{
+    position:relative; z-index:10; isolation:isolate; clear:both;
+    padding:48px 0; background:transparent; overflow:visible;
+  }
+  .battery-calculator-container{max-width:{{ section.settings.max_width }}px;margin:0 auto;padding:0 20px}
+  .battery-calculator-heading{text-align:center;font-size:2rem;font-weight:700;margin-bottom:2rem;color:#1a1a1a}
+  .battery-calculator-iframe-wrapper{width:100%;border-radius:{{ section.settings.corner_radius }}px;overflow:hidden;box-shadow:0 4px 6px rgba(0,0,0,.1);background:transparent}
+  .battery-calculator-iframe{width:100%;border:0;display:block}
+  @media (max-width:768px){.battery-calculator-section{padding:32px 0}.battery-calculator-heading{font-size:1.5rem;margin-bottom:1.25rem}}
+</style>
 
-<section
-  id="{{ section_id }}"
-  class="{{ section_class }}"
-  style="
-    --section-padding-top: {{ section.settings.padding_top }}px;
-    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
-    --calc-max-width: {{ section.settings.max_width }}px;
-    --calc-radius: {{ section.settings.corner_radius }}px;
-  "
->
-  <div class="calculator-container">
-    {% if section.settings.show_heading %}
-      <h2 class="battery-calculator-heading">{{ section.settings.heading_text }}</h2>
-    {% endif %}
-
-    <div class="battery-calculator-wrap">
+<div class="battery-calculator-section" role="region" aria-label="Batterikalkylator">
+  <div class="battery-calculator-container">
+    {% if section.settings.show_heading %}<h2 class="battery-calculator-heading">{{ section.settings.heading_text }}</h2>{% endif %}
+    <div class="battery-calculator-iframe-wrapper">
       <iframe
-        src="{{ section.settings.iframe_url }}"
-        class="calculator-iframe"
-        title="Batterikalkylator"
+        src="{{ section.settings.iframe_url }}?v={{ section.settings.cache_bust }}"
+        class="battery-calculator-iframe"
+        style="height:1000px"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
+        title="Batterikalkylator"
       ></iframe>
     </div>
   </div>
-</section>
-
-{% stylesheet %}
-  .battery-calculator-section {
-    width: 100%;
-    padding-top: var(--section-padding-top, 60px);
-    padding-bottom: var(--section-padding-bottom, 60px);
-    padding-left: 16px;
-    padding-right: 16px;
-    background: var(--color-background, #ffffff);
-  }
-
-  .calculator-container {
-    width: 100%;
-    max-width: var(--calc-max-width, 1600px);
-    margin: 0 auto;
-  }
-
-  .battery-calculator-heading {
-    max-width: 100%;
-    margin: 0 auto 16px;
-    font-size: clamp(22px, 3vw, 36px);
-    line-height: 1.2;
-    color: var(--color-foreground, #111);
-    text-align: center;
-    font-weight: 700;
-  }
-
-  .battery-calculator-wrap {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .calculator-iframe {
-    width: 100%;
-    display: block;
-    border: none;
-    border-radius: var(--calc-radius, 12px);
-    background: transparent;
-    height: 1050px;
-  }
-
-  /* Mobile full-screen optimization */
-  @media (max-width: 768px) {
-    .battery-calculator-section {
-      padding-top: clamp(20px, 4vw, var(--section-padding-top, 40px));
-      padding-bottom: clamp(20px, 4vw, var(--section-padding-bottom, 40px));
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .battery-calculator-heading {
-      margin-bottom: 12px;
-      padding-left: 16px;
-      padding-right: 16px;
-      font-size: clamp(20px, 5vw, 28px);
-    }
-
-    .calculator-iframe {
-      height: 1200px;
-      border-radius: 0;
-      min-height: 100vh;
-      min-height: 100dvh;
-    }
-  }
-
-  /* Tablet and up */
-  @media (min-width: 769px) and (max-width: 1199px) {
-    .calculator-iframe {
-      height: 1150px;
-    }
-  }
-
-  @media (min-width: 1200px) and (max-width: 1599px) {
-    .calculator-iframe {
-      height: 1250px;
-    }
-  }
-
-  @media (min-width: 1600px) {
-    .calculator-iframe {
-      height: 1300px;
-    }
-  }
-{% endstylesheet %}
+</div>
 
 {% schema %}
 {
   "name": "Batterikalkylator",
-  "tag": "section",
-  "class": "battery-calculator",
   "settings": [
-    {
-      "type": "text",
-      "id": "custom_id",
-      "label": "Custom ID",
-      "info": "Optional custom ID for the section"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_heading",
-      "label": "Visa rubrik",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "heading_text",
-      "label": "Rubrik",
-      "default": "Batterikalkylator: Beräkna din besparing"
-    },
-    {
-      "type": "text",
-      "id": "iframe_url",
-      "label": "Kalkylator-URL",
-      "default": "https://site-section-magic.lovable.app/calculator"
-    },
-    {
-      "type": "range",
-      "id": "max_width",
-      "label": "Maxbredd (px)",
-      "min": 1200,
-      "max": 1800,
-      "step": 50,
-      "default": 1600,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "corner_radius",
-      "label": "Hörnradie (px)",
-      "min": 0,
-      "max": 24,
-      "step": 2,
-      "default": 12,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Padding top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Padding bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "default": 60
-    }
+    { "type": "checkbox", "id": "show_heading", "label": "Visa rubrik", "default": true },
+    { "type": "text", "id": "heading_text", "label": "Rubriktext", "default": "Batterikalkylator: Beräkna din besparing" },
+    { "type": "text", "id": "iframe_url", "label": "Kalkylator URL", "default": "https://YOUR_APP_URL/calculator" },
+    { "type": "text", "id": "cache_bust", "label": "Version", "default": "v1" },
+    { "type": "range", "id": "max_width", "min": 1200, "max": 1800, "step": 50, "unit": "px", "label": "Max bredd", "default": 1600 },
+    { "type": "range", "id": "corner_radius", "min": 0, "max": 24, "step": 2, "unit": "px", "label": "Hörnradie", "default": 12 }
   ],
-  "presets": [
-    {
-      "name": "Batterikalkylator"
-    }
-  ]
+  "presets": [{ "name": "Batterikalkylator" }]
 }
 {% endschema %}
