@@ -52,7 +52,13 @@
     "battery_calculator_FWGUdh": {
       "type": "battery-calculator",
       "name": "Batterikalkylator",
-      "settings": {}
+      "settings": {
+        "show_heading": true,
+        "heading_text": "",
+        "iframe_url": "https://site-section-magic.lovable.app/calculator?v=4",
+        "max_width": 1600,
+        "corner_radius": 12
+      }
     },
     "bild_och_text_knappar_3iKePW": {
       "type": "bild-och-text-knappar",
