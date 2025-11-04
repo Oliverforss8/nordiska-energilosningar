@@ -56,64 +56,64 @@
         "specification_BhAQga": {
           "type": "specification",
           "settings": {
-            "label": "Batterityp",
-            "value": "LFP (LiFePO4)"
+            "label": "Varumärke",
+            "value": "Leapton"
           }
         },
         "specification_ARPRA4": {
           "type": "specification",
           "settings": {
-            "label": "Lagringkapacitet",
-            "value": "15.36 - 76.8 kWh (3-15 moduler)"
+            "label": "Effekt",
+            "value": "450W"
           }
         },
         "specification_GpzCVJ": {
           "type": "specification",
           "settings": {
             "label": "Dimension",
-            "value": "B 591 * D 390 * H 1700mm"
+            "value": "B 1134 * D 30 * H 1762mm"
           }
         },
         "specification_pQFPk4": {
           "type": "specification",
           "settings": {
-            "label": "Antal laddcykler",
-            "value": "≥ 8000"
+            "label": "Vikt",
+            "value": "25 kg"
           }
         },
         "specification_H6YUdb": {
           "type": "specification",
           "settings": {
             "label": "Produktgaranti",
-            "value": "10 år"
+            "value": "25 år"
           }
         },
         "specification_zX3MCJ": {
           "type": "specification",
           "settings": {
-            "label": "C-värde",
-            "value": "1 C"
+            "label": "Voc",
+            "value": "35.88 v"
           }
         },
         "specification_JFJ6Jn": {
           "type": "specification",
           "settings": {
-            "label": "Driftstemperatur",
-            "value": "- 20 – + 55 °C"
+            "label": "Färg",
+            "value": "Svart"
           }
         },
         "specification_k6xA9k": {
           "type": "specification",
           "settings": {
-            "label": "IP-klass",
-            "value": "IP20"
+            "label": "Bakstycke",
+            "value": "Bifacial"
           }
         },
         "specification_cKwGad": {
           "type": "specification",
           "settings": {
-            "label": "Kompatibel med växelriktare",
-            "value": "Solis, Solinteg"
+            "label": "Verkningsgrad",
+            "value": "22.52 %"
           }
         }
       },
@@ -262,7 +262,6 @@
       "type": "relaterade-produkter",
       "settings": {
         "title": "Relaterade produkter",
-        "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
