@@ -154,7 +154,7 @@
         "stack_info": "Stack",
         "description": "Produktbeskrivning här...",
         "button_text": "Produktdatablad",
-        "button_link": "https://dyness.com/Public/Uploads/uploadfile/files/20250318/DynessSTACK100datasheet20250228EN.pdf",
+        "button_link": "https://img.saj-electric.com/file/HS3%20All-in-One%20Solution--%E8%8B%B1%E5%9B%BDEN-0923-20241024062333504.pdf",
         "custom_id": ""
       }
     },
@@ -233,7 +233,6 @@
       "type": "relaterade-produkter",
       "settings": {
         "title": "Relaterade produkter",
-        "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
