@@ -1347,6 +1347,87 @@
   {{ product.variants | json }}
 </script>
 
+{% comment %} Variant selector functionality {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const variantSelects = document.querySelectorAll('.variant-select');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn-bottom');
+    const variantsData = JSON.parse(document.getElementById('product-variants-data').textContent);
+
+    // Function to find matching variant based on selected options
+    function findMatchingVariant() {
+      const selectedOptions = {};
+
+      variantSelects.forEach((select) => {
+        const optionPosition = select.getAttribute('data-option-position');
+        const optionValue = select.value;
+        selectedOptions[optionPosition] = optionValue;
+      });
+
+      // Find variant that matches all selected options
+      const matchingVariant = variantsData.find((variant) => {
+        return Object.keys(selectedOptions).every((position) => {
+          const optionIndex = parseInt(position) - 1;
+          return variant.options[optionIndex] === selectedOptions[position];
+        });
+      });
+
+      return matchingVariant;
+    }
+
+    // Function to update all add to cart buttons with new variant ID
+    function updateAddToCartButtons(variantId) {
+      addToCartButtons.forEach((button) => {
+        button.setAttribute('data-variant-id', variantId);
+      });
+    }
+
+    // Listen to changes on all variant selectors
+    variantSelects.forEach((select) => {
+      select.addEventListener('change', function () {
+        const matchingVariant = findMatchingVariant();
+
+        if (matchingVariant) {
+          console.log('✅ Found matching variant:', matchingVariant.id);
+          updateAddToCartButtons(matchingVariant.id);
+
+          // Update price display
+          const currentPrice = document.getElementById('current-price');
+          const comparePrice = document.getElementById('compare-price');
+
+          if (currentPrice) {
+            currentPrice.textContent = new Intl.NumberFormat('sv-SE', {
+              style: 'currency',
+              currency: 'SEK',
+            }).format(matchingVariant.price / 100);
+          }
+
+          if (comparePrice) {
+            if (
+              matchingVariant.compare_at_price &&
+              matchingVariant.compare_at_price > matchingVariant.price
+            ) {
+              comparePrice.textContent = new Intl.NumberFormat('sv-SE', {
+                style: 'currency',
+                currency: 'SEK',
+              }).format(matchingVariant.compare_at_price / 100);
+              comparePrice.style.display = '';
+            } else {
+              comparePrice.style.display = 'none';
+            }
+          }
+
+          // Trigger custom event for other scripts
+          const event = new CustomEvent('variantChanged', {
+            detail: { variant: matchingVariant },
+          });
+          document.dispatchEvent(event);
+        }
+      });
+    });
+  });
+</script>
+
 {% comment %} Load product.js - handles all product functionality {% endcomment %}
 <script src="{{ 'product.js' | asset_url }}" defer></script>
 
