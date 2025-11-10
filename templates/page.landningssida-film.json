@@ -135,7 +135,7 @@
       "settings": {
         "show_heading": true,
         "heading_text": "",
-        "iframe_url": "https://site-section-magic.lovable.app/embed/calculator?v=6",
+        "iframe_url": "https://site-section-magic.lovable.app/calculator",
         "max_width": 1600,
         "corner_radius": 12
       }
@@ -520,8 +520,8 @@
     "paket_qtFeVj",
     "paket_etC3Qr",
     "paket_jUKYhD",
-    "battery_calculator_fDUwhc",
     "slider_sektion_qjEhPV",
+    "battery_calculator_fDUwhc",
     "grid_omraden_BEhDEW",
     "bild_och_text_nVkW73",
     "hur_BYebNg",

@@ -296,7 +296,7 @@
         "faq_item_m4ckpA": {
           "type": "faq_item",
           "settings": {
-            "question": "Hur lång är garantin på era solpanler?",
+            "question": "Hur lång är garantin på era solpaneler?",
             "button_text": "Solceller",
             "description": "",
             "answer": "<p>Alla våra solceller har en prduktgaranti på 25 år. Utöver det har vi en installationsgaranti på 5 år.</p>"
@@ -328,6 +328,15 @@
             "description": "",
             "answer": "<p><br/>Du får 15 % skattereduktion direkt av oss på fakturan för solceller. Detta dras av automatiskt och kräver ingen hantering från din sida. För batteri och laddbox ligger skattereduktionen på 50%.<br/><br/></p>"
           }
+        },
+        "faq_item_AcbrjU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Vad är din fråga?",
+            "button_text": "Ämne",
+            "description": "",
+            "answer": "<p>Här skriver du svaret på frågan.</p>"
+          }
         }
       },
       "block_order": [
@@ -335,7 +344,8 @@
         "faq_item_m4ckpA",
         "faq_item_X8a8Td",
         "faq_item_HnTQJF",
-        "faq_item_PwyRGE"
+        "faq_item_PwyRGE",
+        "faq_item_AcbrjU"
       ],
       "name": "FAQ produkter",
       "settings": {
