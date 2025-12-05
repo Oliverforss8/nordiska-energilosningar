@@ -32,7 +32,7 @@
           "type": "specification",
           "settings": {
             "label": "Dimension",
-            "value": "B 591 * D 390 * H 1700mm"
+            "value": "B 600* H 500* D 230 mm"
           }
         },
         "specification_pQFPk4": {
@@ -60,21 +60,21 @@
           "type": "specification",
           "settings": {
             "label": "Driftstemperatur",
-            "value": "- 20 – + 55 °C"
+            "value": "-25 ~ +60°C"
           }
         },
         "specification_cKwGad": {
           "type": "specification",
           "settings": {
-            "label": "Kompatibel med växelriktare",
-            "value": "Solis, Solinteg"
+            "label": "Kompatibel med batteri",
+            "value": "Dyness Tower PRO, Dyness STACK100"
           }
         },
         "specification_k6xA9k": {
           "type": "specification",
           "settings": {
             "label": "IP-klass",
-            "value": "IP20"
+            "value": "IP66"
           }
         }
       },
@@ -183,7 +183,6 @@
       "type": "relaterade-produkter",
       "settings": {
         "title": "Relaterade produkter",
-        "button_text": "Se produkt",
         "no_products_message": "Inga relaterade produkter hittades.",
         "custom_id": ""
       }
