@@ -212,13 +212,15 @@ body .shopify-policy__container p {
   line-height: 130%;
 }
 body .shopify-policy__container ul {
-    font-family: 'halyard-display';
-    line-height: 120%;
-    margin: 20px 0 20px;
-    font-size: 1em;
-    font-weight: 300;
+  font-family: 'halyard-display';
+  line-height: 120%;
+  margin: 20px 0 20px;
+  font-size: 1em;
+  font-weight: 300;
 }
 body .shopify-policy__container ul strong {
-    font-weight: 400;
+  font-weight: 400;
 }
-
+body .shopify-policy__container li {
+  margin: 10px 0;
+}
