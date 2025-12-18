@@ -193,11 +193,13 @@ p {
 }
 
 /* Fix: Buttons hover */
-/*button:hover {
+button:hover {
   background: #171717;
   color: #ffffff;
-}*/
-
+}
+button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20px\].py-\[17px\].text-\[\#171717\].transition-all.hover\:opacity-90 {
+    background: #0a00c9 !important;
+}
 
 /* Fix: policy pages – header overlay */
 body .shopify-policy__container {
