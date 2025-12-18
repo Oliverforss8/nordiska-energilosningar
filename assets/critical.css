@@ -195,6 +195,7 @@ p {
 /* Fix: Buttons hover */
 button:hover {
   background: #171717;
+  color: #ffffff;
 }
 
 
