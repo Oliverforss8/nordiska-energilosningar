@@ -222,7 +222,7 @@ button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20
 }
 .knappetikett {
   background-color: var(--color-blue-main) !important;
-  color: var(--color-white);
+  color: var(--color-white)!important;
 }
 
 
