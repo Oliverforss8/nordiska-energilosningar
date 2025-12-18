@@ -21,6 +21,25 @@ iframe {
   will-change: transform;
 }
 
+/* =========================================
+   Brand color tokens – Nordiska Energilösningar
+   ========================================= */
+
+:root {
+  /* Core */
+  --color-blue-main: #0a00c9;
+
+  --color-white: #f9f9fa;
+  --color-gray-light: #dbe2e9;
+  --color-gray: #9baab9;
+  --color-black: #0f232e;
+
+  /* Green palette */
+  --color-green: #67e6a6;
+  --color-green-mid: #96f2c4;
+  --color-green-light: #daf2e6;
+}
+
 /* Optimize text rendering for smooth scrolling */
 body,
 h1,
@@ -193,14 +212,13 @@ p {
 }
 
 /* Fix: Buttons hover */
-button:hover {
-  background: #171717;
-  color: #ffffff;
-}
 button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20px\].py-\[17px\].text-\[\#171717\].transition-all.hover\:opacity-90 {
-    background: #0a00c9 !important;
+    background: var(--color-blue-main) !important;
+    color: var(--color-white);
 }
-
+button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20px\].py-\[17px\].text-\[\#171717\].transition-all.hover\:opacity-90:hover {
+  co
+}
 /* Fix: policy pages – header overlay */
 body .shopify-policy__container {
   padding-top: 180px;
