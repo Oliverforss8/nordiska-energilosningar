@@ -216,8 +216,9 @@ body .shopify-policy__container ul {
     line-height: 120%;
     margin: 20px 0 20px;
     font-size: 1em;
+    font-weight: 300;
 }
 body .shopify-policy__container ul strong {
-    font-weight: 500;
+    font-weight: 400;
 }
 
