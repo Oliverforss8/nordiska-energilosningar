@@ -224,3 +224,7 @@ body .shopify-policy__container ul strong {
 body .shopify-policy__container li {
   margin: 10px 0;
 }
+body .shopify-policy__container a {
+    color: #171717;
+    text-decoration: underline;
+}
