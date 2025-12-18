@@ -193,10 +193,10 @@ p {
 }
 
 /* Fix: Buttons hover */
-button:hover {
+/*button:hover {
   background: #171717;
   color: #ffffff;
-}
+}*/
 
 
 /* Fix: policy pages – header overlay */
