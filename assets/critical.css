@@ -212,7 +212,7 @@ p {
 }
 
 /* Fix: Buttons hover */
-button {
+/*button {
   background: var(--color-blue-main) !important;
   color: var(--color-white);
 }
@@ -220,7 +220,7 @@ button:hover {
   color: var(--color-blue-main) ;
   background: var(--color-white)!important;
 }
-/*.knappetikett {
+.knappetikett {
   background-color: var(--color-blue-main) !important;
   color: var(--color-white)!important;
 }*/
