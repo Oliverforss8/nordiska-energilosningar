@@ -78,7 +78,6 @@
         },
         "bottom_link_column_RpkRmN": {
           "type": "bottom_link_column",
-          "disabled": true,
           "settings": {
             "heading": "",
             "link_1_text": "Leveranspolicy",
