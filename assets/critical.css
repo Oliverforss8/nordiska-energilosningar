@@ -207,3 +207,6 @@ body .shopify-policy__container h2 {
   font-size: 1.5em;
   margin: 20px 0 10px;
 }
+body .shopify-policy__container p {
+  line-height: 120%;
+}
