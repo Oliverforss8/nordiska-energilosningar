@@ -217,8 +217,8 @@ button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20
   color: var(--color-white);
 }
 button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20px\].py-\[17px\].text-\[\#171717\].transition-all.hover\:opacity-90:hover {
-  color: var(--color-blue-main) !important;
-  background: var(--color-white);
+  color: var(--color-blue-main) ;
+  background: var(--color-white)!important;
 }
 /* Fix: policy pages – header overlay */
 body .shopify-policy__container {
