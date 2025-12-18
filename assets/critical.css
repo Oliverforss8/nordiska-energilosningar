@@ -220,6 +220,12 @@ button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20
   color: var(--color-blue-main) ;
   background: var(--color-white)!important;
 }
+.knappetikett {
+  background-color: var(--color-blue-main) !important;
+  color: var(--color-white);
+}
+
+
 /* Fix: policy pages – header overlay */
 body .shopify-policy__container {
   padding-top: 180px;
