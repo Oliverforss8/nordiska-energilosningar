@@ -208,5 +208,10 @@ body .shopify-policy__container h2 {
   margin: 20px 0 10px;
 }
 body .shopify-policy__container p {
-  line-height: 120%;
+  line-height: 130%;
+}
+body .shopify-policy__container ul {
+    font-family: 'halyard-display';
+    line-height: 121%;
+    margin: 20px 0 20px;
 }
