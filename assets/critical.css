@@ -213,11 +213,12 @@ p {
 
 /* Fix: Buttons hover */
 button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20px\].py-\[17px\].text-\[\#171717\].transition-all.hover\:opacity-90 {
-    background: var(--color-blue-main) !important;
-    color: var(--color-white);
+  background: var(--color-blue-main) !important;
+  color: var(--color-white);
 }
 button.knappetikett.flex.flex-row.items-center.gap-\[20px\].rounded-full.px-\[20px\].py-\[17px\].text-\[\#171717\].transition-all.hover\:opacity-90:hover {
-  co
+  color: var(--color-blue-main) !important;
+  background: var(--color-white);
 }
 /* Fix: policy pages – header overlay */
 body .shopify-policy__container {
