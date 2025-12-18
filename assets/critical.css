@@ -212,6 +212,11 @@ body .shopify-policy__container p {
 }
 body .shopify-policy__container ul {
     font-family: 'halyard-display';
-    line-height: 121%;
+    line-height: 120%;
     margin: 20px 0 20px;
+    font-size: 1em;
 }
+body .shopify-policy__container ul strong {
+    font-weight: 500;
+}
+
