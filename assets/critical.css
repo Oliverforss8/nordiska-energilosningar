@@ -196,3 +196,8 @@ p {
 .shopify-policy__container {
   padding-top: 180px;
 }
+.shopify-policy__title h1 {
+    font-family: "halyard-display", sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
+}
