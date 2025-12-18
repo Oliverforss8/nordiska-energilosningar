@@ -192,6 +192,12 @@ p {
   border-radius: 15px;
 }
 
+/* Fix: Buttons hover */
+button:hover {
+  background: #171717;
+}
+
+
 /* Fix: policy pages – header overlay */
 body .shopify-policy__container {
   padding-top: 180px;
