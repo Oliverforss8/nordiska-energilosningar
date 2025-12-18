@@ -191,3 +191,8 @@ p {
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
   border-radius: 15px;
 }
+
+/* Fix: policy pages – header overlay */
+.shopify-policy__container {
+  padding-top: 180px;
+}
