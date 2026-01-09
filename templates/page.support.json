@@ -327,6 +327,16 @@
             "phone": "0738-55 81 92"
           }
         },
+        "team_member_kxMNxV": {
+          "type": "team_member",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2515.jpg",
+            "name": "Attila Widén",
+            "title": "Säljare",
+            "email": "attila@nordiskaenergi.se",
+            "phone": "0723232578"
+          }
+        },
         "team_member_EhfjY4": {
           "type": "team_member",
           "settings": {
@@ -342,6 +352,7 @@
         "team_member_46nLAq",
         "team_member_kR7dki",
         "team_member_ikdbmt",
+        "team_member_kxMNxV",
         "team_member_EhfjY4"
       ],
       "name": "Medarbetare",
