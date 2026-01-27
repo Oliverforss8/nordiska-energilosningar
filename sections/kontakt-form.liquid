@@ -1,5 +1,5 @@
 <section
-  class="contact-form-section layout   py-[60px] md:py-[85px]"
+  class="contact-form-section layout py-[60px] md:py-[85px]"
   id="kontakt"
 >
   {% if section.settings.header_button_url != blank %}
@@ -16,112 +16,152 @@
     {{ section.settings.heading }}
   </h2>
 
-  <div
-    id="success-message"
-    class="hidden rounded-[15px] bg-[#F3F1E8] p-[40px] text-center md:p-[60px]"
-  >
-    <h3 class="headline1 mb-[20px] text-[#171717]">Tack för ditt meddelande!</h3>
-    <p class="body1 text-[#171717]/80">Vi återkommer till dig så snart som möjligt.</p>
-  </div>
+  {%- comment -%}
+    Shopify native contact form:
+    - Success state via form.posted_successfully?
+    - Errors via form.errors
+    - No Formspree / no AJAX submit (more reliable)
+  {%- endcomment -%}
 
-  <form
-    action="https://formspree.io/f/mdkllzwo"
-    method="POST"
-    id="contact-form"
-    class="grid grid-cols-1 gap-x-[20px] md:grid-cols-2"
-  >
-    {% for block in section.blocks %}
-      {% if block.type == 'form_field' %}
-        {% liquid
-          assign field_type = block.settings.field_type | default: 'text'
-          assign field_name = block.settings.name | default: block.settings.label | handleize
-          assign is_required = block.settings.required
-          assign placeholder = block.settings.placeholder | default: ''
-          assign rows = block.settings.rows | default: 4
-          assign pattern = block.settings.pattern
-        %}
-        <div class="flex flex-col col-span-full{% if field_type == 'text' or field_type == 'email' or field_type == 'tel' %} md:col-span-1{% endif %}{% if forloop.index > 2 %} pt-[30px]{% endif %}">
-          <label for="{{ field_name }}" class="body1 mb-[15px] text-[#171717]">
-            {{ block.settings.label }}
-          </label>
-          {% if field_type == 'textarea' %}
-            <textarea
-              id="{{ field_name }}"
-              name="{{ field_name }}"
-              rows="{{ rows }}"
-              {% if is_required %}
-                required
-              {% endif %}
-              class="h-[80px] rounded-full border-0 bg-[#F6F6F6] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              {% if placeholder != blank %}
-                placeholder="{{ placeholder | escape }}"
-              {% endif %}
-            ></textarea>
-          {% else %}
-            <input
-              type="{{ field_type }}"
-              id="{{ field_name }}"
-              name="{{ field_name }}"
-              {% if is_required %}
-                required
-              {% endif %}
-              {% if pattern != blank %}
-                pattern="{{ pattern }}"
-              {% endif %}
-              class="h-[40px] rounded-full border-0 bg-[#F6F6F6] px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              {% if placeholder != blank %}
-                placeholder="{{ placeholder | escape }}"
-              {% endif %}
-            >
-          {% endif %}
+  {% form 'contact', id: 'contact-form', class: 'grid grid-cols-1 gap-x-[20px] md:grid-cols-2' %}
+    {% if form.posted_successfully? %}
+      <div class="col-span-2 rounded-[15px] bg-[#F3F1E8] p-[40px] text-center md:p-[60px]">
+        <h3 class="headline1 mb-[20px] text-[#171717]">Tack för ditt meddelande!</h3>
+        <p class="body1 text-[#171717]/80">Vi återkommer till dig så snart som möjligt.</p>
+      </div>
+    {% else %}
+      {% if form.errors %}
+        <div class="col-span-2 rounded-[15px] bg-[#F3F1E8] p-[20px] md:p-[30px]">
+          <p class="body1 text-[#171717]">
+            Något gick fel. Kontrollera fälten och försök igen.
+          </p>
+          <ul class="body1 mt-[10px] text-[#171717]/80">
+            {% for field in form.errors %}
+              <li>
+                {{ form.errors.translated_fields[field] | capitalize }}: {{ form.errors.messages[field] }}
+              </li>
+            {% endfor %}
+          </ul>
         </div>
       {% endif %}
-    {% endfor %}
-    <div class="col-span-2 flex flex-col py-[50px]">
-      <div class=" body1 flex flex-row gap-[5px] text-[25px] text-[#171717]">
-        Hur kan vi hjälpa dig?
-        <span class=" mt-[5px]  text-[15px] text-[#171717]/80"> Klicka för att välja* </span>
+
+      {% for block in section.blocks %}
+        {% if block.type == 'form_field' %}
+          {% liquid
+            assign field_type = block.settings.field_type | default: 'text'
+            assign field_id = block.settings.name | default: block.settings.label | handleize
+            assign is_required = block.settings.required
+            assign placeholder = block.settings.placeholder | default: ''
+            assign rows = block.settings.rows | default: 4
+            assign pattern = block.settings.pattern
+
+            assign label_down = block.settings.label | downcase
+
+            comment
+              Mappar mot Shopify standardfält när det går:
+              - email -> contact[email]
+              - telefon -> contact[phone]
+              - namn -> contact[name]
+              - övrigt -> contact[<field_id>]
+            endcomment
+
+            assign shopify_name = 'contact[' | append: field_id | append: ']'
+            if field_type == 'email'
+              assign shopify_name = 'contact[email]'
+            elsif label_down contains 'telefon'
+              assign shopify_name = 'contact[phone]'
+            elsif label_down contains 'namn'
+              assign shopify_name = 'contact[name]'
+            endif
+          %}
+
+          <div class="flex flex-col col-span-full{% if field_type == 'text' or field_type == 'email' or field_type == 'tel' %} md:col-span-1{% endif %}{% if forloop.index > 2 %} pt-[30px]{% endif %}">
+            <label for="{{ field_id }}" class="body1 mb-[15px] text-[#171717]">
+              {{ block.settings.label }}
+            </label>
+
+            {% if field_type == 'textarea' %}
+              {%- comment -%}
+                Om någon skapar ett textarea-block som heter "Meddelande" så mappar vi det till contact[body].
+                Annars hamnar det i contact[<field_id>].
+              {%- endcomment -%}
+              {% liquid
+                assign textarea_name = shopify_name
+                if label_down contains 'meddelande'
+                  assign textarea_name = 'contact[body]'
+                endif
+              %}
+              <textarea
+                id="{{ field_id }}"
+                name="{{ textarea_name }}"
+                rows="{{ rows }}"
+                {% if is_required %}required{% endif %}
+                class="h-[80px] rounded-full border-0 bg-[#F6F6F6] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                {% if placeholder != blank %}placeholder="{{ placeholder | escape }}"{% endif %}
+              >{{ form[textarea_name] }}</textarea>
+            {% else %}
+              <input
+                type="{{ field_type }}"
+                id="{{ field_id }}"
+                name="{{ shopify_name }}"
+                {% if is_required %}required{% endif %}
+                {% if pattern != blank %}pattern="{{ pattern }}"{% endif %}
+                class="h-[40px] rounded-full border-0 bg-[#F6F6F6] px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                {% if placeholder != blank %}placeholder="{{ placeholder | escape }}"{% endif %}
+                value="{% if shopify_name == 'contact[email]' %}{{ form.email }}{% elsif shopify_name == 'contact[name]' %}{{ form.name }}{% elsif shopify_name == 'contact[phone]' %}{{ form.phone }}{% endif %}"
+              >
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      <div class="col-span-2 flex flex-col py-[50px]">
+        <div class="body1 flex flex-row gap-[5px] text-[25px] text-[#171717]">
+          Hur kan vi hjälpa dig?
+          <span class="mt-[5px] text-[15px] text-[#171717]/80"> Klicka för att välja* </span>
+        </div>
+        <div class="flex flex-row flex-wrap gap-[10px] pt-[15px]">
+          {% for block in section.blocks %}
+            {% if block.type == 'service_option' %}
+              {% liquid
+                assign service_key = block.settings.service_key | default: block.settings.label | handleize
+              %}
+              <button
+                type="button"
+                class="service-option knappetikett rounded-full bg-[#F6F6F6] p-[13px] font-[300] text-[#171717]"
+                data-service="{{ service_key }}"
+              >
+                {{ block.settings.label | default: 'Tjänst' }}
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {%- comment -%}
+          Spara tjänsteval som ett contact-fält + vi kommer också prefixa meddelandet i JS.
+        {%- endcomment -%}
+        <input type="hidden" name="contact[services]" id="selected-services" value="">
       </div>
-      <div class=" flex flex-row flex-wrap gap-[10px] pt-[15px]">
-        {% for block in section.blocks %}
-          {% if block.type == 'service_option' %}
-            {% liquid
-              assign service_key = block.settings.service_key | default: block.settings.label | handleize
-            %}
-            <button
-              type="button"
-              class="service-option knappetikett rounded-full bg-[#F6F6F6] p-[13px] font-[300] text-[#171717]"
-              data-service="{{ service_key }}"
-            >
-              {{ block.settings.label | default: 'Tjänst' }}
-            </button>
-          {% endif %}
-        {% endfor %}
+
+      <div class="col-span-2 flex flex-col">
+        <label for="message" class="body1 mb-[15px] text-[#171717]"> Meddelande </label>
+        <textarea
+          id="message"
+          name="contact[body]"
+          rows="4"
+          class="h-[80px] rounded-[25px] border-0 bg-[#F6F6F6] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
       </div>
-      <input
-        type="hidden"
-        name="services"
-        id="selected-services"
-        value=""
+
+      <button
+        type="submit"
+        class="knappetikett col-span-2 mt-[30px] w-full rounded-full py-[13px]"
+        style="background: #E9A600;"
       >
-    </div>
-    <div class="col-span-2 flex flex-col">
-      <label for="message" class="body1 mb-[15px] text-[#171717]"> Meddelande </label>
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        class="h-[80px] rounded-[25px] border-0 bg-[#F6F6F6] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      ></textarea>
-    </div>
-    <button
-      type="submit"
-      class="knappetikett col-span-2 mt-[30px] w-full rounded-full py-[13px]"
-      style="background: #E9A600;"
-    >
-      Skicka in
-    </button>
-  </form>
+        Skicka in
+      </button>
+    {% endif %}
+  {% endform %}
 </section>
 
 <script>
@@ -129,15 +169,17 @@
     const serviceButtons = document.querySelectorAll('.service-option, .service-btn');
     const hiddenInput = document.getElementById('selected-services');
     const contactForm = document.getElementById('contact-form');
-    const successMessage = document.getElementById('success-message');
-    let selectedServices = []; // Start with no services selected
+    const messageField = document.getElementById('message');
+
+    if (!contactForm) return;
+
+    let selectedServices = [];
 
     serviceButtons.forEach((button) => {
       button.addEventListener('click', function () {
         const service = this.getAttribute('data-service');
 
         if (this.classList.contains('active')) {
-          // Remove from selection
           this.classList.remove('active');
           this.classList.remove('bg-gradient-to-r');
           this.classList.add('bg-[#F6F6F6]');
@@ -147,7 +189,6 @@
 
           selectedServices = selectedServices.filter((s) => s !== service);
         } else {
-          // Add to selection
           this.classList.add('active');
           this.classList.remove('bg-[#F6F6F6]');
           this.classList.add('font-[400]');
@@ -157,48 +198,20 @@
           selectedServices.push(service);
         }
 
-        // Update hidden input
-        hiddenInput.value = selectedServices.join(', ');
+        if (hiddenInput) hiddenInput.value = selectedServices.join(', ');
       });
     });
 
-    // Handle form submission
-    contactForm.addEventListener('submit', async function (e) {
-      e.preventDefault();
+    // Prefixa meddelandet med valda tjänster vid submit (så det alltid syns i mailet)
+    contactForm.addEventListener('submit', function () {
+      if (!messageField || !hiddenInput) return;
 
-      const formData = new FormData(contactForm);
-      const submitButton = contactForm.querySelector('button[type="submit"]');
-      const originalButtonText = submitButton.textContent;
+      const services = (hiddenInput.value || '').trim();
+      if (!services) return;
 
-      try {
-        // Disable submit button and show loading state
-        submitButton.disabled = true;
-        submitButton.textContent = 'Skickar...';
-
-        // Submit form via AJAX
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            Accept: 'application/json',
-          },
-        });
-
-        if (response.ok) {
-          // Hide form and show success message
-          contactForm.style.display = 'none';
-          successMessage.classList.remove('hidden');
-
-          // Scroll to success message
-          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          throw new Error('Form submission failed');
-        }
-      } catch (error) {
-        // Re-enable button and show error
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-        alert('Ett fel uppstod. Försök igen senare.');
+      const prefix = `Tjänster: ${services}\n\n`;
+      if (!messageField.value.startsWith('Tjänster:')) {
+        messageField.value = prefix + messageField.value;
       }
     });
   });
@@ -247,7 +260,7 @@
           "label": "Typ",
           "options": [
             { "value": "text", "label": "Text" },
-            { "value": "email", "label": "E‑post" },
+            { "value": "email", "label": "E-post" },
             { "value": "tel", "label": "Telefon" },
             { "value": "textarea", "label": "Textarea" }
           ],
