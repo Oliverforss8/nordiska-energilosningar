@@ -31,7 +31,7 @@
           "settings": {
             "heading": "Företag",
             "link_1_text": "Företagsfastighet",
-            "link_1_url": "shopify://metaobjects/foretag/foretag",
+            "link_1_url": "shopify://metaobjects/foretag/foretagslosningar",
             "link_2_text": "Bostadsrättsförening",
             "link_2_url": "shopify://metaobjects/foretag/bostadsrattsforening",
             "link_3_text": "Lantbruk",
