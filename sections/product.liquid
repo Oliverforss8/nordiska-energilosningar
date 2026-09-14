@@ -16,12 +16,7 @@
               id="main-product-image"
               style="transition: opacity 0.3s ease;"
             >
-              {%
-                render 'image',
-                image: product.featured_media,
-                alt: product.featured_media.alt | default: product.title,
-                class: 'image--cover'
-              %}
+              {% render 'image', image: product.featured_media, alt: product.featured_media.alt, default: product.title, class: 'image--cover' %}
             </div>
           {% endif %}
         </div>
@@ -34,12 +29,7 @@
                 data-thumbnail
                 data-media-id="{{ media.id }}"
               >
-                {%
-                  render 'image',
-                  image: media,
-                  alt: media.alt | default: product.title,
-                  class: 'image--cover'
-                %}
+                {% render 'image', image: media, alt: media.alt, default: product.title, class: 'image--cover' %}
               </div>
             {% endfor %}
           </div>
@@ -264,12 +254,7 @@
                               <div class="flex items-center gap-[15px] md:gap-[20px]">
                                 {% if upsell_product.featured_image %}
                                   <div class="h-[60px] w-[60px] flex-shrink-0 overflow-hidden rounded-[10px] bg-[#F6F6F6] md:h-[80px] md:w-[80px]">
-                                    {%
-                                      render 'image',
-                                      image: upsell_product.featured_image,
-                                      alt: upsell_product.featured_image.alt | default: upsell_product.title,
-                                      class: 'image--cover'
-                                    %}
+                                    {% render 'image', image: upsell_product.featured_image, alt: upsell_product.featured_image.alt, default: upsell_product.title, class: 'image--cover' %}
                                   </div>
                                 {% endif %}
                                 <div class="flex-1">
@@ -1791,3 +1776,40 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+                    render 'image',
+                    image: product.featured_media,
+                    alt: product.featured_media.alt | default: product.title,
+                    class: 'image--cover'
+                  %}
+  to: "{% render 'image', image: product.featured_media, alt: product.featured_media.alt,
+    default: product.title, class: 'image--cover' %}"
+  position: 830..961
+- from: |-
+    {%
+                      render 'image',
+                      image: media,
+                      alt: media.alt | default: product.title,
+                      class: 'image--cover'
+                    %}
+  to: "{% render 'image', image: media, alt: media.alt, default: product.title, class:
+    'image--cover' %}"
+  position: 1469..1566
+- from: |-
+    {%
+                                          render 'image',
+                                          image: upsell_product.featured_image,
+                                          alt: upsell_product.featured_image.alt | default: upsell_product.title,
+                                          class: 'image--cover'
+                                        %}
+  to: "{% render 'image', image: upsell_product.featured_image, alt: upsell_product.featured_image.alt,
+    default: upsell_product.title, class: 'image--cover' %}"
+  position: 13572..13724
+{% endcomment %}
